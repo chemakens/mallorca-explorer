@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mallorca Explorer — App Preview</title>
+<style>
+  :root {
+    --azure: #1A73E8;
+    --azure-light: #4A9EF8;
+    --azure-dark: #1557B0;
+    --terracotta: #C8553D;
+    --sand: #F5EDD6;
+    --sand-dark: #E8D9B5;
+    --olive: #5A7A3A;
+    --white: #FFFFFF;
+    --surface: #F8F9FA;
+    --on-surface: #1C1B1F;
+    --outline: #CAC4D0;
+    --nav-bg: #FFFFFF;
+    --card-shadow: 0 2px 8px rgba(0,0,0,0.12);
+    --radius-card: 16px;
+    --radius-chip: 20px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Google Sans', 'Roboto', sans-serif;
+    background: #E8EAF0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px 16px;
+    gap: 32px;
+  }
+
+  h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1C1B1F;
+    letter-spacing: -0.5px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+    color: #49454F;
+    margin-top: 4px;
+  }
+
+  .header {
+    text-align: center;
+  }
+
+  .screens-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1400px;
+  }
+
+  .screen-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .screen-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #49454F;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+
+  /* Phone frame */
+  .phone {
+    width: 360px;
+    height: 780px;
+    background: #111;
+    border-radius: 44px;
+    padding: 12px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.35), inset 0 0 0 2px #333;
+    position: relative;
+  }
+
+  .phone-notch {
+    width: 120px;
+    height: 28px;
+    background: #111;
+    border-radius: 0 0 20px 20px;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .phone-notch::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #222;
+  }
+
+  .screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    overflow: hidden;
+    background: var(--surface);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  /* Status bar */
+  .status-bar {
+    height: 36px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px 0;
+    flex-shrink: 0;
+    z-index: 5;
+  }
+
+  .status-bar.light { color: white; }
+  .status-bar.dark { color: #1C1B1F; }
+
+  .status-time { font-size: 13px; font-weight: 600; }
+  .status-icons { display: flex; gap: 6px; align-items: center; font-size: 11px; }
+
+  /* Bottom nav */
+  .bottom-nav {
+    height: 64px;
+    background: var(--nav-bg);
+    border-top: 1px solid var(--outline);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 8px;
+    flex-shrink: 0;
+  }
+
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    cursor: pointer;
+    padding: 8px 0;
+    color: #79747E;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+  }
+
+  .nav-item.active { color: var(--azure); }
+
+  .nav-icon {
+    width: 44px;
+    height: 28px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  .nav-item.active .nav-icon {
+    background: #D3E4FF;
+  }
+
+  /* ==================== MAP SCREEN ==================== */
+  .map-bg {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    background: #E8F0E9;
+  }
+
+  /* SVG map of Mallorca (simplified) */
+  .map-svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .map-controls {
+    position: absolute;
+    right: 12px;
+    bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .map-btn {
+    width: 44px;
+    height: 44px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  .category-filter {
+    position: absolute;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    padding: 0 12px;
+    display: flex;
+    gap: 8px;
+    overflow: hidden;
+  }
+
+  .chip {
+    height: 32px;
+    padding: 0 12px;
+    border-radius: var(--radius-chip);
+    border: 1.5px solid var(--outline);
+    background: white;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  .chip.selected {
+    background: var(--azure);
+    border-color: var(--azure);
+    color: white;
+  }
+
+  /* Map markers */
+  .marker {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    cursor: pointer;
+  }
+
+  .marker-inner {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    font-size: 14px;
+  }
+
+  .marker.beach { background: var(--azure); }
+  .marker.hiking { background: var(--olive); }
+  .marker.culture { background: var(--terracotta); }
+  .marker.gastronomy { background: #E8A020; }
+
+  /* Cluster */
+  .cluster {
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--azure);
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 2px 8px rgba(26,115,232,0.4);
+    cursor: pointer;
+  }
+
+  /* Top search bar on map */
+  .map-search-bar {
+    position: absolute;
+    top: 44px;
+    left: 12px;
+    right: 12px;
+    height: 48px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    gap: 10px;
+    font-size: 14px;
+    color: #79747E;
+    z-index: 3;
+  }
+
+  /* Bottom sheet */
+  .bottom-sheet {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-radius: 24px 24px 0 0;
+    padding: 12px 16px 16px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+  }
+
+  .sheet-handle {
+    width: 36px;
+    height: 4px;
+    background: var(--outline);
+    border-radius: 2px;
+    margin: 0 auto 12px;
+  }
+
+  .sheet-place-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .sheet-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, #4A9EF8, #1A73E8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+  }
+
+  .sheet-info { flex: 1; }
+  .sheet-title { font-size: 16px; font-weight: 700; color: var(--on-surface); }
+  .sheet-sub { font-size: 12px; color: #79747E; margin-top: 2px; }
+
+  .sheet-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 11px;
+    font-weight: 600;
+    margin-top: 6px;
+  }
+
+  .badge-beach { background: #D3E4FF; color: var(--azure-dark); }
+  .badge-hiking { background: #D8F0C8; color: #2D6A0A; }
+
+  .sheet-btn {
+    margin-top: 12px;
+    width: 100%;
+    height: 40px;
+    background: var(--azure);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  /* ==================== EXPLORE SCREEN ==================== */
+  .explore-content {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .explore-header {
+    background: var(--azure);
+    padding: 12px 16px 20px;
+    color: white;
+  }
+
+  .explore-title { font-size: 22px; font-weight: 700; }
+  .explore-subtitle { font-size: 13px; opacity: 0.85; margin-top: 2px; }
+
+  .search-bar {
+    margin-top: 12px;
+    height: 44px;
+    background: white;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    gap: 8px;
+    color: #79747E;
+    font-size: 14px;
+  }
+
+  .explore-scroll {
+    flex: 1;
+    overflow: hidden;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--on-surface);
+    margin-bottom: 10px;
+  }
+
+  /* Category grid */
+  .cat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+  }
+
+  .cat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+  }
+
+  .cat-icon-wrap {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+  }
+
+  .cat-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: #49454F;
+    text-align: center;
+    letter-spacing: 0.2px;
+  }
+
+  /* Featured itinerary cards row */
+  .cards-row {
+    display: flex;
+    gap: 12px;
+    overflow: hidden;
+  }
+
+  .itin-card {
+    width: 160px;
+    height: 160px;
+    border-radius: var(--radius-card);
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+
+  .itin-card-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+  }
+
+  .itin-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.65));
+    color: white;
+  }
+
+  .itin-card-title { font-size: 12px; font-weight: 700; line-height: 1.3; }
+  .itin-card-meta { font-size: 10px; opacity: 0.85; margin-top: 2px; }
+
+  /* ==================== PLACE DETAIL SCREEN ==================== */
+  .place-photos {
+    height: 220px;
+    background: linear-gradient(135deg, #1E88E5, #0D47A1);
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 72px;
+  }
+
+  .photo-back-btn {
+    position: absolute;
+    top: 44px;
+    left: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .photo-fav-btn {
+    position: absolute;
+    top: 44px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .photo-dots {
+    position: absolute;
+    bottom: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 6px;
+  }
+
+  .photo-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+  }
+
+  .photo-dot.active { background: white; }
+
+  .place-detail-scroll {
+    flex: 1;
+    overflow: hidden;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .place-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .place-name { font-size: 22px; font-weight: 800; color: var(--on-surface); }
+  .place-municipality { font-size: 13px; color: #79747E; margin-top: 2px; }
+
+  .rating-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 8px;
+  }
+
+  .stars { color: #F9A825; font-size: 14px; }
+  .rating-num { font-size: 14px; font-weight: 700; color: var(--on-surface); }
+  .rating-count { font-size: 12px; color: #79747E; }
+
+  .info-card {
+    background: white;
+    border-radius: var(--radius-card);
+    padding: 14px;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--on-surface);
+  }
+
+  .info-icon { font-size: 18px; width: 24px; text-align: center; flex-shrink: 0; }
+  .info-label { font-size: 11px; color: #79747E; }
+
+  .hours-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 600;
+    background: #C8E6C9;
+    color: #2E7D32;
+  }
+
+  .directions-btn {
+    width: 100%;
+    height: 44px;
+    background: var(--azure);
+    color: white;
+    border-radius: 22px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  /* ==================== TRIP BUILDER SCREEN ==================== */
+  .trip-header {
+    background: white;
+    padding: 44px 16px 12px;
+    border-bottom: 1px solid var(--outline);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .trip-header-title { font-size: 20px; font-weight: 700; }
+
+  .trip-scroll {
+    flex: 1;
+    overflow: hidden;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .trip-meta {
+    font-size: 12px;
+    color: #79747E;
+    margin-bottom: 4px;
+  }
+
+  .stop-item {
+    background: white;
+    border-radius: 14px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+
+  .stop-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--azure);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .stop-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    flex-shrink: 0;
+  }
+
+  .stop-info { flex: 1; }
+  .stop-name { font-size: 14px; font-weight: 700; color: var(--on-surface); }
+  .stop-cat { font-size: 11px; color: #79747E; margin-top: 2px; }
+
+  .drag-handle {
+    color: #CAC4D0;
+    font-size: 20px;
+    cursor: grab;
+    flex-shrink: 0;
+  }
+
+  .connector-line {
+    width: 2px;
+    height: 12px;
+    background: var(--outline);
+    margin-left: 26px;
+  }
+
+  .add-stop-btn {
+    border: 2px dashed var(--outline);
+    background: transparent;
+    border-radius: 14px;
+    padding: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--azure);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 4px;
+  }
+
+  .trip-summary-card {
+    background: var(--azure);
+    border-radius: 14px;
+    padding: 14px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .trip-stat { text-align: center; }
+  .trip-stat-num { font-size: 20px; font-weight: 800; }
+  .trip-stat-label { font-size: 10px; opacity: 0.85; margin-top: 2px; }
+
+  /* ==================== ITINERARY DETAIL SCREEN ==================== */
+  .itin-hero {
+    height: 180px;
+    background: linear-gradient(135deg, #43A047, #1B5E20);
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+  }
+
+  .itin-hero-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.6));
+    color: white;
+  }
+
+  .itin-hero-title { font-size: 18px; font-weight: 800; }
+  .itin-hero-meta { font-size: 12px; opacity: 0.9; margin-top: 4px; display: flex; gap: 12px; }
+
+  .itin-scroll {
+    flex: 1;
+    overflow: hidden;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .badges-row { display: flex; gap: 8px; }
+
+  .pill {
+    height: 28px;
+    padding: 0 12px;
+    border-radius: 14px;
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .pill-green { background: #C8E6C9; color: #1B5E20; }
+  .pill-blue { background: #D3E4FF; color: #1557B0; }
+  .pill-orange { background: #FFE0B2; color: #E65100; }
+
+  .timeline-item {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .timeline-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32px;
+    flex-shrink: 0;
+  }
+
+  .timeline-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--azure);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .timeline-line {
+    width: 2px;
+    height: 20px;
+    background: var(--outline);
+    margin-top: 4px;
+  }
+
+  .timeline-content {
+    flex: 1;
+    background: white;
+    border-radius: 12px;
+    padding: 10px 12px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  }
+
+  .timeline-place { font-size: 14px; font-weight: 700; }
+  .timeline-duration { font-size: 11px; color: #79747E; margin-top: 2px; }
+  .timeline-note { font-size: 11px; color: #49454F; margin-top: 4px; font-style: italic; }
+
+  .save-fab {
+    position: absolute;
+    bottom: 80px;
+    right: 16px;
+    height: 48px;
+    padding: 0 20px;
+    background: var(--azure);
+    color: white;
+    border-radius: 24px;
+    border: none;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 12px rgba(26,115,232,0.4);
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🏝 Mallorca Explorer</h1>
+  <p class="subtitle">Android App — UI Preview</p>
+</div>
+
+<div class="screens-row">
+
+  <!-- ===== MAP SCREEN ===== -->
+  <div class="screen-wrapper">
+    <div class="screen-label">Map</div>
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="screen">
+        <div class="status-bar light" style="position:absolute;top:0;left:0;right:0;z-index:5;color:white">
+          <span class="status-time">9:41</span>
+          <span class="status-icons">📶 🔋</span>
+        </div>
+
+        <!-- Map background -->
+        <div class="map-bg">
+          <!-- Simple Mallorca SVG map -->
+          <svg class="map-svg" viewBox="0 0 360 580" xmlns="http://www.w3.org/2000/svg">
+            <!-- Water background -->
+            <rect width="360" height="580" fill="#C8DFED"/>
+            <!-- Road grid (approximate) -->
+            <g stroke="#D4C9B0" stroke-width="1.5" fill="none" opacity="0.6">
+              <line x1="0" y1="220" x2="360" y2="240"/>
+              <line x1="0" y1="300" x2="360" y2="280"/>
+              <line x1="90" y1="0" x2="100" y2="580"/>
+              <line x1="200" y1="0" x2="190" y2="580"/>
+              <line x1="280" y1="0" x2="260" y2="580"/>
+            </g>
+            <!-- Mallorca island shape (simplified polygon) -->
+            <path d="M 40 260
+              Q 50 200 90 165
+              Q 130 130 180 125
+              Q 230 120 275 140
+              Q 310 155 320 185
+              Q 330 215 315 250
+              Q 300 285 270 310
+              Q 240 335 200 350
+              Q 170 360 140 355
+              Q 100 348 70 325
+              Q 45 305 40 280 Z"
+              fill="#D8EBCF" stroke="#B8D4A8" stroke-width="2"/>
+            <!-- Serra de Tramuntana (mountain range) -->
+            <path d="M 55 280 Q 80 240 110 225 Q 140 210 170 215 Q 185 218 190 228"
+              stroke="#8BAF70" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <!-- Palma bay -->
+            <path d="M 130 340 Q 160 360 190 355 Q 210 352 230 340"
+              stroke="#92BFD4" stroke-width="4" fill="none"/>
+            <!-- Roads -->
+            <g stroke="#F5EDD6" stroke-width="2.5" fill="none">
+              <path d="M 160 340 Q 165 290 170 250 Q 175 220 175 215"/>
+              <path d="M 160 340 Q 200 330 240 310 Q 270 295 280 270"/>
+              <path d="M 160 340 Q 130 310 105 270 Q 90 245 88 230"/>
+            </g>
+            <!-- Town dots -->
+            <circle cx="160" cy="340" r="7" fill="#E8A020" stroke="white" stroke-width="1.5"/>
+            <text x="160" y="360" text-anchor="middle" font-size="9" fill="#555">Palma</text>
+            <circle cx="120" cy="235" r="4" fill="#C8553D" stroke="white" stroke-width="1.5"/>
+            <text x="120" y="228" text-anchor="middle" font-size="8" fill="#555">Sóller</text>
+            <circle cx="240" cy="175" r="4" fill="#C8553D" stroke="white" stroke-width="1.5"/>
+            <text x="248" y="170" text-anchor="middle" font-size="8" fill="#555">Alcúdia</text>
+          </svg>
+
+          <!-- Search bar -->
+          <div class="map-search-bar">
+            <span>🔍</span>
+            <span>Search places in Mallorca…</span>
+          </div>
+
+          <!-- Markers -->
+          <div class="marker beach" style="top:38%;left:25%">
+            <div class="marker-inner">🏖</div>
+          </div>
+          <div class="marker beach" style="top:28%;left:65%">
+            <div class="marker-inner">🏖</div>
+          </div>
+          <div class="marker hiking" style="top:25%;left:30%">
+            <div class="marker-inner">🥾</div>
+          </div>
+          <div class="cluster" style="top:18%;left:45%">12</div>
+          <div class="marker culture" style="top:55%;left:42%">
+            <div class="marker-inner">🏛</div>
+          </div>
+          <div class="marker gastronomy" style="top:50%;left:55%">
+            <div class="marker-inner">🍽</div>
+          </div>
+
+          <!-- Map controls -->
+          <div class="map-controls">
+            <div class="map-btn">＋</div>
+            <div class="map-btn">－</div>
+            <div class="map-btn" style="background:var(--azure);color:white">⤓</div>
+          </div>
+
+          <!-- Category filter -->
+          <div class="category-filter">
+            <div class="chip selected">🏖 Beach</div>
+            <div class="chip">🥾 Hiking</div>
+            <div class="chip">🏛 Culture</div>
+          </div>
+
+          <!-- Bottom sheet (peek) -->
+          <div class="bottom-sheet">
+            <div class="sheet-handle"></div>
+            <div class="sheet-place-row">
+              <div class="sheet-thumb">🏖</div>
+              <div class="sheet-info">
+                <div class="sheet-title">Cala Mondragó</div>
+                <div class="sheet-sub">Santanyí • 4.8 ⭐</div>
+                <div class="sheet-badge badge-beach">🏖 Beach</div>
+              </div>
+            </div>
+            <button class="sheet-btn">View Details →</button>
+          </div>
+        </div>
+
+        <div class="bottom-nav">
+          <div class="nav-item active">
+            <div class="nav-icon">🗺</div>
+            <span>Map</span>
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon">🔭</div>
+            <span>Explore</span>
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon">📋</div>
+            <span>My Trips</span>
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon">❤</div>
+            <span>Favorites</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== EXPLORE SCREEN ===== -->
+  <div class="screen-wrapper">
+    <div class="screen-label">Explore</div>
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="screen">
+        <div class="explore-content">
+          <div class="explore-header">
+            <div class="status-bar light" style="padding:0">
+              <span class="status-time">9:41</span>
+              <span class="status-icons" style="color:white">📶 🔋</span>
+            </div>
+            <div class="explore-title">Discover Mallorca</div>
+            <div class="explore-subtitle">150+ places · 6 curated itineraries</div>
+            <div class="search-bar">
+              <span>🔍</span>
+              <span>Beaches, trails, towns…</span>
+            </div>
+          </div>
+
+          <div class="explore-scroll">
+            <!-- Categories -->
+            <div>
+              <div class="section-title">Categories</div>
+              <div class="cat-grid">
+                <div class="cat-item">
+                  <div class="cat-icon-wrap" style="background:#D3E4FF">🏖</div>
+                  <span class="cat-label">Beaches</span>
+                </div>
+                <div class="cat-item">
+                  <div class="cat-icon-wrap" style="background:#D8F0C8">🥾</div>
+                  <span class="cat-label">Hiking</span>
+                </div>
+                <div class="cat-item">
+                  <div class="cat-icon-wrap" style="background:#FFE8D0">🏛</div>
+                  <span class="cat-label">Culture</span>
+                </div>
+                <div class="cat-item">
+                  <div class="cat-icon-wrap" style="background:#FFF0C0">🍽</div>
+                  <span class="cat-label">Food</span>
+                </div>
+                <div class="cat-item">
+                  <div class="cat-icon-wrap" style="background:#F0E0FF">🏘</div>
+                  <span class="cat-label">Towns</span>
+                </div>
+                <div class="cat-item">
+                  <div class="cat-icon-wrap" style="background:#FFE0E8">🌅</div>
+                  <span class="cat-label">Views</span>
+                </div>
+                <div class="cat-item">
+                  <div class="cat-icon-wrap" style="background:#E0F8F0">🧗</div>
+                  <span class="cat-label">Adventure</span>
+                </div>
+                <div class="cat-item">
+                  <div class="cat-icon-wrap" style="background:#E8E8E8">🗺</div>
+                  <span class="cat-label">All</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Itineraries -->
+            <div>
+              <div class="section-title">Featured Itineraries</div>
+              <div class="cards-row">
+                <div class="itin-card">
+                  <div class="itin-card-bg" style="background:linear-gradient(135deg,#1E88E5,#0D47A1)">🏖</div>
+                  <div class="itin-card-overlay">
+                    <div class="itin-card-title">Best Beaches in 3 Days</div>
+                    <div class="itin-card-meta">⏱ 3 days · 8 stops</div>
+                  </div>
+                </div>
+                <div class="itin-card">
+                  <div class="itin-card-bg" style="background:linear-gradient(135deg,#388E3C,#1B5E20)">🏔</div>
+                  <div class="itin-card-overlay">
+                    <div class="itin-card-title">Tramuntana Circuit</div>
+                    <div class="itin-card-meta">⏱ 2 days · 6 stops</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Popular places -->
+            <div>
+              <div class="section-title">Popular Right Now</div>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <div style="background:white;border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 4px rgba(0,0,0,0.08)">
+                  <div style="font-size:28px">🏛</div>
+                  <div style="flex:1">
+                    <div style="font-size:13px;font-weight:700">La Seu Cathedral</div>
+                    <div style="font-size:11px;color:#79747E">Palma · Culture · 4.9 ⭐</div>
+                  </div>
+                  <div style="font-size:18px;color:#CAC4D0">›</div>
+                </div>
+                <div style="background:white;border-radius:12px;padding:10px 12px;display:flex;align-items:center;gap:10px;box-shadow:0 1px 4px rgba(0,0,0,0.08)">
+                  <div style="font-size:28px">🏘</div>
+                  <div style="flex:1">
+                    <div style="font-size:13px;font-weight:700">Valldemossa Village</div>
+                    <div style="font-size:11px;color:#79747E">Valldemossa · Town · 4.7 ⭐</div>
+                  </div>
+                  <div style="font-size:18px;color:#CAC4D0">›</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-nav">
+          <div class="nav-item">
+            <div class="nav-icon">🗺</div>
+            <span>Map</span>
+          </div>
+          <div class="nav-item active">
+            <div class="nav-icon">🔭</div>
+            <span>Explore</span>
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon">📋</div>
+            <span>My Trips</span>
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon">❤</div>
+            <span>Favorites</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PLACE DETAIL SCREEN ===== -->
+  <div class="screen-wrapper">
+    <div class="screen-label">Place Detail</div>
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="screen">
+        <div class="place-photos">
+          <div class="status-bar light" style="position:absolute;top:0;left:0;right:0;z-index:5;color:white;padding-top:8px">
+            <span class="status-time">9:41</span>
+            <span class="status-icons">📶 🔋</span>
+          </div>
+          🏖
+          <div class="photo-back-btn">‹</div>
+          <div class="photo-fav-btn">♡</div>
+          <div class="photo-dots">
+            <div class="photo-dot active"></div>
+            <div class="photo-dot"></div>
+            <div class="photo-dot"></div>
+            <div class="photo-dot"></div>
+          </div>
+        </div>
+
+        <div class="place-detail-scroll">
+          <div>
+            <div class="place-title-row">
+              <div>
+                <div class="place-name">Es Trenc</div>
+                <div class="place-municipality">📍 Campos, Mallorca</div>
+              </div>
+              <div style="background:#D3E4FF;color:#1557B0;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:700">FREE</div>
+            </div>
+            <div class="rating-row">
+              <span class="stars">★★★★★</span>
+              <span class="rating-num">4.9</span>
+              <span class="rating-count">(2.4k reviews)</span>
+            </div>
+            <div style="margin-top:8px;font-size:12px;color:#49454F;line-height:1.5">
+              One of Mallorca's most pristine beaches, featuring crystal-clear turquoise waters and white sand dunes. A protected natural area.
+            </div>
+          </div>
+
+          <div class="info-card">
+            <div class="info-row">
+              <span class="info-icon">🕐</span>
+              <div>
+                <div class="info-label">Hours</div>
+                <div>Open daily · 24 hours <span class="hours-badge">Open now</span></div>
+              </div>
+            </div>
+            <div style="height:1px;background:var(--outline);margin:2px 0"></div>
+            <div class="info-row">
+              <span class="info-icon">🚗</span>
+              <div>
+                <div class="info-label">Getting there</div>
+                <div>45 min from Palma · Paid parking nearby</div>
+              </div>
+            </div>
+            <div style="height:1px;background:var(--outline);margin:2px 0"></div>
+            <div class="info-row">
+              <span class="info-icon">💡</span>
+              <div>
+                <div class="info-label">Tip</div>
+                <div>Arrive before 10am to get a good spot in summer</div>
+              </div>
+            </div>
+          </div>
+
+          <button class="directions-btn">
+            <span>🧭</span> Get Directions
+          </button>
+        </div>
+
+        <div class="bottom-nav" style="border-top:1px solid var(--outline)">
+          <div style="flex:1;display:flex;justify-content:center">
+            <button style="height:40px;padding:0 20px;background:var(--azure);color:white;border-radius:20px;border:none;font-size:13px;font-weight:600;cursor:pointer">+ Add to Trip</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== TRIP BUILDER SCREEN ===== -->
+  <div class="screen-wrapper">
+    <div class="screen-label">Trip Builder</div>
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="screen">
+        <div class="status-bar dark" style="padding-top:8px">
+          <span class="status-time">9:41</span>
+          <span class="status-icons">📶 🔋</span>
+        </div>
+
+        <div class="trip-header">
+          <span style="font-size:22px">‹</span>
+          <div>
+            <div class="trip-header-title">East Coast Discovery</div>
+            <div style="font-size:12px;color:#79747E">My trip · 3 stops</div>
+          </div>
+          <div style="margin-left:auto;font-size:22px;cursor:pointer">⋮</div>
+        </div>
+
+        <div class="trip-scroll">
+          <div class="trip-meta">Drag ⠿ to reorder · Swipe left to remove</div>
+
+          <!-- Stop 1 -->
+          <div class="stop-item">
+            <div class="stop-number">1</div>
+            <div class="stop-thumb" style="background:#D3E4FF">🏛</div>
+            <div class="stop-info">
+              <div class="stop-name">Artà Town</div>
+              <div class="stop-cat">🏘 Town · ~2 hours</div>
+            </div>
+            <div class="drag-handle">⠿</div>
+          </div>
+          <div class="connector-line"></div>
+
+          <!-- Stop 2 -->
+          <div class="stop-item">
+            <div class="stop-number">2</div>
+            <div class="stop-thumb" style="background:#D3E4FF">🏖</div>
+            <div class="stop-info">
+              <div class="stop-name">Cala Mondragó</div>
+              <div class="stop-cat">🏖 Beach · ~3 hours</div>
+            </div>
+            <div class="drag-handle">⠿</div>
+          </div>
+          <div class="connector-line"></div>
+
+          <!-- Stop 3 -->
+          <div class="stop-item">
+            <div class="stop-number">3</div>
+            <div class="stop-thumb" style="background:#FFE0B2">🍽</div>
+            <div class="stop-info">
+              <div class="stop-name">Restaurant Portitxol</div>
+              <div class="stop-cat">🍽 Gastronomy · ~1.5 hours</div>
+            </div>
+            <div class="drag-handle">⠿</div>
+          </div>
+
+          <button class="add-stop-btn">
+            <span style="font-size:20px">＋</span> Add Stop
+          </button>
+
+          <div class="trip-summary-card">
+            <div class="trip-stat">
+              <div class="trip-stat-num">3</div>
+              <div class="trip-stat-label">Stops</div>
+            </div>
+            <div class="trip-stat">
+              <div class="trip-stat-num">~6.5h</div>
+              <div class="trip-stat-label">Duration</div>
+            </div>
+            <div class="trip-stat">
+              <div class="trip-stat-num">42 km</div>
+              <div class="trip-stat-label">Distance</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bottom-nav">
+          <div class="nav-item">
+            <div class="nav-icon">🗺</div>
+            <span>Map</span>
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon">🔭</div>
+            <span>Explore</span>
+          </div>
+          <div class="nav-item active">
+            <div class="nav-icon">📋</div>
+            <span>My Trips</span>
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon">❤</div>
+            <span>Favorites</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== ITINERARY DETAIL SCREEN ===== -->
+  <div class="screen-wrapper">
+    <div class="screen-label">Itinerary Detail</div>
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="screen" style="position:relative">
+        <div class="itin-hero">
+          <div class="status-bar light" style="position:absolute;top:0;left:0;right:0;z-index:5;color:white;padding-top:8px">
+            <span class="status-time">9:41</span>
+            <span class="status-icons">📶 🔋</span>
+          </div>
+          🏔
+          <div style="position:absolute;top:44px;left:16px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center;color:white;font-size:18px">‹</div>
+          <div class="itin-hero-overlay">
+            <div class="itin-hero-title">Tramuntana Mountain Circuit</div>
+            <div class="itin-hero-meta">
+              <span>⏱ 2 days</span>
+              <span>📍 6 stops</span>
+              <span>🥾 Moderate</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="itin-scroll">
+          <div class="badges-row">
+            <div class="pill pill-green">🏔 Hiking</div>
+            <div class="pill pill-blue">Spring · Autumn</div>
+            <div class="pill pill-orange">Moderate</div>
+          </div>
+
+          <div style="font-size:12px;color:#49454F;line-height:1.5">
+            Explore the UNESCO-listed Tramuntana range through ancient olive groves, dramatic sea views, and charming stone villages.
+          </div>
+
+          <div class="section-title" style="font-size:14px">Day 1</div>
+
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="timeline-dot">1</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-place">🏘 Sóller — Start Point</div>
+              <div class="timeline-duration">⏱ ~2 hours</div>
+              <div class="timeline-note">Take the vintage tram from Port de Sóller</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="timeline-dot">2</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-place">🥾 Barranc de Biniaraix</div>
+              <div class="timeline-duration">⏱ ~3 hours</div>
+              <div class="timeline-note">One of Mallorca's most beautiful gorge walks</div>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-left">
+              <div class="timeline-dot">3</div>
+            </div>
+            <div class="timeline-content">
+              <div class="timeline-place">🏘 Fornalutx — Overnight</div>
+              <div class="timeline-duration">⏱ Dinner + stay</div>
+              <div class="timeline-note">One of Spain's most beautiful villages</div>
+            </div>
+          </div>
+        </div>
+
+        <button class="save-fab">📋 Save to My Trips</button>
+
+        <div class="bottom-nav">
+          <div class="nav-item">
+            <div class="nav-icon">🗺</div>
+            <span>Map</span>
+          </div>
+          <div class="nav-item active">
+            <div class="nav-icon">🔭</div>
+            <span>Explore</span>
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon">📋</div>
+            <span>My Trips</span>
+          </div>
+          <div class="nav-item">
+            <div class="nav-icon">❤</div>
+            <span>Favorites</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>

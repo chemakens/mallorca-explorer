@@ -1,0 +1,4 @@
+# Copy this file to local.properties and fill in your keys (do not commit local.properties)
+sdk.dir=/Users/<your-user>/Library/Android/sdk
+MAPTILER_API_KEY=your_maptiler_key_here
+BASE_API_URL=https://api.mallorca-explorer.com/v1/
