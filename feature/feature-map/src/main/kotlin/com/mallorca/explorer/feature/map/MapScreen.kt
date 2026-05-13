@@ -1,8 +1,6 @@
 package com.mallorca.explorer.feature.map
 
-import android.widget.FrameLayout
 import androidx.compose.foundation.background
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -32,6 +30,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.rememberBottomSheetScaffoldState
 import androidx.compose.material3.rememberStandardBottomSheetState
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -39,15 +38,29 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import com.mallorca.explorer.core.domain.model.Category
 import com.mallorca.explorer.core.domain.model.Place
 import com.mallorca.explorer.core.ui.component.OfflineBanner
+import org.maplibre.android.MapLibre
+import org.maplibre.android.WellKnownTileServer
+import org.maplibre.android.camera.CameraPosition
+import org.maplibre.android.camera.CameraUpdateFactory
+import org.maplibre.android.geometry.LatLng
+import org.maplibre.android.maps.MapView
+
+private val MALLORCA_CENTER = LatLng(39.6953, 3.0176)
+private const val DEFAULT_ZOOM = 8.5
+private const val MAP_STYLE_URL = "https://demotiles.maplibre.org/style.json"
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -58,6 +71,46 @@ fun MapScreen(
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
+    // Create and remember MapView at this stable level (outside SubcomposeLayout)
+    val context = LocalContext.current
+    val lifecycleOwner = LocalLifecycleOwner.current
+    val mapView = remember {
+        MapLibre.getInstance(context, "", WellKnownTileServer.MapLibre)
+        MapView(context).apply { onCreate(null) }
+    }
+
+    DisposableEffect(lifecycleOwner) {
+        val observer = LifecycleEventObserver { _, event ->
+            when (event) {
+                Lifecycle.Event.ON_START -> mapView.onStart()
+                Lifecycle.Event.ON_RESUME -> mapView.onResume()
+                Lifecycle.Event.ON_PAUSE -> mapView.onPause()
+                Lifecycle.Event.ON_STOP -> mapView.onStop()
+                Lifecycle.Event.ON_DESTROY -> mapView.onDestroy()
+                else -> {}
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose {
+            lifecycleOwner.lifecycle.removeObserver(observer)
+        }
+    }
+
+    LaunchedEffect(Unit) {
+        mapView.getMapAsync { map ->
+            map.setStyle(MAP_STYLE_URL) {
+                map.moveCamera(
+                    CameraUpdateFactory.newCameraPosition(
+                        CameraPosition.Builder()
+                            .target(MALLORCA_CENTER)
+                            .zoom(DEFAULT_ZOOM)
+                            .build()
+                    )
+                )
+            }
+        }
+    }
+
     val sheetState = rememberStandardBottomSheetState(
         initialValue = if (uiState.selectedPlace != null) SheetValue.PartiallyExpanded else SheetValue.Hidden,
         skipHiddenState = false,
@@ -65,8 +118,7 @@ fun MapScreen(
     val scaffoldState = rememberBottomSheetScaffoldState(bottomSheetState = sheetState)
 
     LaunchedEffect(uiState.selectedPlace) {
-        if (uiState.selectedPlace != null) sheetState.partialExpand()
-        else sheetState.hide()
+        if (uiState.selectedPlace != null) sheetState.partialExpand() else sheetState.hide()
     }
 
     BottomSheetScaffold(
@@ -84,11 +136,9 @@ fun MapScreen(
         modifier = modifier,
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
-            // Map view using AndroidView for MapLibre
-            MallorcaMapView(
-                places = uiState.places,
-                activeCategory = uiState.activeCategory,
-                onMarkerClick = { viewModel.onMarkerTapped(it) },
+            // AndroidView referencing the already-created, lifecycle-bound mapView
+            AndroidView(
+                factory = { mapView },
                 modifier = Modifier.fillMaxSize(),
             )
 
@@ -97,7 +147,6 @@ fun MapScreen(
                 modifier = Modifier.align(Alignment.TopCenter),
             )
 
-            // Category filter chips
             CategoryFilterBar(
                 activeCategory = uiState.activeCategory,
                 onCategorySelected = viewModel::onCategorySelected,
@@ -107,26 +156,6 @@ fun MapScreen(
             )
         }
     }
-}
-
-@Composable
-private fun MallorcaMapView(
-    places: kotlinx.collections.immutable.ImmutableList<Place>,
-    activeCategory: Category?,
-    onMarkerClick: (String) -> Unit,
-    modifier: Modifier = Modifier,
-) {
-    // MapLibre integration via AndroidView
-    AndroidView(
-        factory = { ctx ->
-            // In a real build, create MapLibreMap here
-            FrameLayout(ctx).apply {
-                setBackgroundColor(android.graphics.Color.parseColor("#C8DFED"))
-            }
-        },
-        update = { /* Update markers when places change */ },
-        modifier = modifier,
-    )
 }
 
 @Composable

@@ -79,6 +79,7 @@ class SeedDataWorker @AssistedInject constructor(
         val photo_urls: List<String> = emptyList(), val thumbnail_url: String = "",
         val price_level: String? = null, val rating: Float? = null,
         val review_count: Int = 0, val tips: List<String> = emptyList(),
+        val tags: List<String> = emptyList(),
         val website: String? = null, val phone_number: String? = null,
     ) {
         fun toEntity() = PlaceEntity(
@@ -90,6 +91,7 @@ class SeedDataWorker @AssistedInject constructor(
             priceLevel = price_level?.uppercase(), rating = rating,
             reviewCount = review_count,
             tipsJson = Json.encodeToString(ListSerializer(String.serializer()), tips),
+            tagsJson = Json.encodeToString(ListSerializer(String.serializer()), tags),
             website = website, phoneNumber = phone_number,
             lastUpdatedEpoch = Instant.now().toEpochMilli(),
         )

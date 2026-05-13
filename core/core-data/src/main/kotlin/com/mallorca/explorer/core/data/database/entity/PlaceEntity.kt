@@ -23,5 +23,6 @@ data class PlaceEntity(
     val tipsJson: String,
     val website: String?,
     val phoneNumber: String?,
+    val tagsJson: String,
     val lastUpdatedEpoch: Long,
 )

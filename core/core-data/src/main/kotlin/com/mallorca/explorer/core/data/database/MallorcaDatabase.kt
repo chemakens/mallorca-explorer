@@ -22,7 +22,7 @@ import com.mallorca.explorer.core.data.database.entity.UserTripStopEntity
         UserTripStopEntity::class,
         FavoriteEntity::class,
     ],
-    version = 1,
+    version = 2,
     exportSchema = true,
 )
 abstract class MallorcaDatabase : RoomDatabase() {

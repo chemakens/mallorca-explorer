@@ -18,6 +18,7 @@ object DatabaseModule {
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context): MallorcaDatabase =
         Room.databaseBuilder(context, MallorcaDatabase::class.java, "mallorca_explorer.db")
+            .fallbackToDestructiveMigration()
             .build()
 
     @Provides fun providePlaceDao(db: MallorcaDatabase) = db.placeDao()

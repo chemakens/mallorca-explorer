@@ -32,6 +32,7 @@ fun PlaceEntity.toDomain(): Place = Place(
     nameEs = nameEs,
     description = description,
     category = Category.valueOf(category),
+    subCategories = tagsJson.toStringList(),
     location = LatLng(latitude, longitude),
     address = address,
     municipality = municipality,
@@ -65,6 +66,7 @@ fun Place.toEntity(): PlaceEntity = PlaceEntity(
     tipsJson = tips.toJson(),
     website = website,
     phoneNumber = phoneNumber,
+    tagsJson = subCategories.toJson(),
     lastUpdatedEpoch = lastUpdated.toEpochMilli(),
 )
 
