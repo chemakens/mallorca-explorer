@@ -35,6 +35,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
@@ -195,42 +196,63 @@ private fun ItineraryCard(
 ) {
     Card(
         modifier = modifier
-            .size(width = 160.dp, height = 160.dp)
+            .size(width = 180.dp, height = 260.dp)
             .clickable(onClick = onClick),
         shape = RoundedCornerShape(16.dp),
-        elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 6.dp),
     ) {
         Box {
+            // Hero image — full bleed
+            if (itinerary.coverPhotoUrl.isNotEmpty()) {
+                AsyncImage(
+                    model = itinerary.coverPhotoUrl,
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier.fillMaxSize(),
+                )
+            } else {
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(MaterialTheme.colorScheme.primaryContainer),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(itinerary.category.emoji, style = MaterialTheme.typography.displayMedium)
+                }
+            }
+
+            // Gradient scrim
             Box(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(MaterialTheme.colorScheme.primaryContainer),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(itinerary.category.emoji, style = MaterialTheme.typography.displaySmall)
-            }
+                    .background(
+                        Brush.verticalGradient(
+                            colorStops = arrayOf(
+                                0f to Color.Transparent,
+                                0.5f to Color.Black.copy(alpha = 0.10f),
+                                1f to Color.Black.copy(alpha = 0.78f),
+                            )
+                        )
+                    )
+            )
+
+            // Text overlay
             Column(
                 modifier = Modifier
                     .align(Alignment.BottomStart)
-                    .fillMaxWidth()
-                    .background(
-                        brush = androidx.compose.ui.graphics.Brush.verticalGradient(
-                            listOf(Color.Transparent, Color.Black.copy(alpha = 0.65f))
-                        )
-                    )
-                    .padding(10.dp),
+                    .padding(horizontal = 12.dp, vertical = 12.dp),
             ) {
                 Text(
                     itinerary.title,
-                    style = MaterialTheme.typography.labelMedium,
+                    style = MaterialTheme.typography.labelLarge,
                     fontWeight = FontWeight.Bold,
                     color = Color.White,
                     maxLines = 2,
                 )
                 Text(
-                    "⏱ ${itinerary.durationDays}d · ${itinerary.places.size} stops",
+                    "⏱ ${itinerary.durationDays}d · 📍 ${itinerary.places.size} stops",
                     style = MaterialTheme.typography.labelSmall,
-                    color = Color.White.copy(alpha = 0.85f),
+                    color = Color.White.copy(alpha = 0.9f),
                 )
             }
         }

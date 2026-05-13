@@ -1,126 +1,1391 @@
 {
   "places": [
-    {"id":"es-trenc","name":"Es Trenc","name_es":"Es Trenc","description":"One of Mallorca's most pristine beaches with crystal-clear turquoise waters and white sand dunes. A protected natural area.","category":"BEACH","latitude":39.3467,"longitude":3.0167,"municipality":"Campos","thumbnail_url":"","rating":4.9,"review_count":2400,"tips":["Arrive before 10am in summer","Naturist section at the western end","Parking fills up fast — take the bus from Campos"],"price_level":"FREE"},
-    {"id":"cala-mondrag","name":"Cala Mondragó","name_es":"Cala Mondragó","description":"A beautiful double cove within the Mondragó Natural Park, with calm turquoise waters and a pine forest backdrop.","category":"BEACH","latitude":39.3422,"longitude":3.1917,"municipality":"Santanyí","rating":4.8,"review_count":1800,"tips":["Part of a protected natural park","Walk between the two coves","Great snorkelling around the rocks"],"price_level":"FREE"},
-    {"id":"formentor-beach","name":"Playa de Formentor","name_es":"Playa de Formentor","description":"A legendary beach at the tip of the Formentor peninsula, flanked by pine forests and dramatic cliffs.","category":"BEACH","latitude":39.9400,"longitude":3.2000,"municipality":"Pollença","rating":4.7,"review_count":2100,"tips":["Access by boat from Port de Pollença in peak season","Arrive early — parking is limited","The drive through Cap de Formentor is spectacular"],"price_level":"FREE"},
-    {"id":"cala-deia","name":"Cala Deià","name_es":"Cala Deià","description":"A tiny rocky cove below the artistic village of Deià, beloved by locals and artists.","category":"BEACH","latitude":39.7500,"longitude":2.6517,"municipality":"Deià","rating":4.6,"review_count":900,"tips":["10-minute walk down from Deià village","Get a table at Restaurant Ca's Patro March for seafood","Rocky shore — water shoes recommended"],"price_level":"FREE"},
-    {"id":"cala-pi","name":"Cala Pi","name_es":"Cala Pi","description":"A narrow fjord-like cove with calm, clear water and medieval watchtower ruins above.","category":"BEACH","latitude":39.3617,"longitude":2.8750,"municipality":"Llucmajor","rating":4.7,"review_count":1100,"tips":["Long narrow inlet — perfect for children","Hike up to the watchtower for panoramic views","Limited parking in peak season"],"price_level":"FREE"},
-    {"id":"cala-varques","name":"Cala Varques","name_es":"Cala Varques","description":"Secluded wild beach accessible only by a 20-minute walk through pine forest.","category":"BEACH","latitude":39.5250,"longitude":3.3317,"municipality":"Manacor","rating":4.6,"review_count":650,"tips":["No car access — park at the farm and walk 1.5 km","Bring everything you need — no facilities","Sea caves nearby for snorkellers"],"price_level":"FREE"},
-    {"id":"tramuntana-range","name":"Serra de Tramuntana","name_es":"Serra de Tramuntana","description":"UNESCO World Heritage mountain range running along Mallorca's northwest coast, offering dramatic landscapes and ancient terraced olive groves.","category":"HIKING","latitude":39.8000,"longitude":2.7000,"municipality":"Various","rating":4.9,"review_count":3200,"tips":["The GR221 long-distance trail traverses the entire range","Spring and autumn are best — avoid July/August heat","Mountain refuges (refugis) provide overnight accommodation"],"price_level":"FREE"},
-    {"id":"barranc-biniaraix","name":"Barranc de Biniaraix","name_es":"Barranc de Biniaraix","description":"One of Mallorca's most beautiful walks, following ancient stone steps through a narrow gorge up into the mountains from Sóller.","category":"HIKING","latitude":39.7917,"longitude":2.7167,"municipality":"Sóller","rating":4.8,"review_count":1500,"tips":["Start in Biniaraix village — take bus from Sóller","2-3 hours to reach L'Ofre peak","Stone steps can be slippery when wet"],"price_level":"FREE","tags":["gorge","tramuntana","moderate","stone-steps","classic"]},
-    {"id":"puig-major","name":"Puig Major","name_es":"Puig Major","description":"Mallorca's highest peak at 1,445m, with dramatic views across the island and the Tramuntana range.","category":"HIKING","latitude":39.8117,"longitude":2.7900,"municipality":"Sóller","rating":4.7,"review_count":800,"tips":["Military radar installation at top — access may be restricted","Approach via Sa Calobra road is spectacular","Best views at sunrise"],"price_level":"FREE"},
-    {"id":"sa-calobra","name":"Sa Calobra","name_es":"Sa Calobra","description":"A dramatic cove at the end of a legendary winding mountain road, with access to the Torrent de Pareis canyon.","category":"HIKING","latitude":39.8517,"longitude":2.8000,"municipality":"Escorca","rating":4.8,"review_count":2800,"tips":["The winding road is a classic cycling route","Torrent de Pareis gorge hike requires a guide in summer","Take the boat from Port de Sóller to avoid the road traffic"],"price_level":"FREE"},
-    {"id":"seu-cathedral","name":"La Seu Cathedral","name_es":"Catedral de Mallorca","description":"Mallorca's iconic Gothic cathedral overlooking Palma Bay, with Antoni Gaudí-designed interior elements. One of the largest Gothic cathedrals in Europe.","category":"CULTURE","latitude":39.5672,"longitude":2.6497,"municipality":"Palma","rating":4.9,"review_count":8500,"tips":["Book tickets online to skip queues","The light through the rose window is best in the morning","Visit the museum section for Gaudí's designs"],"price_level":"BUDGET","website":"https://catedraldemallorca.org"},
-    {"id":"bellver-castle","name":"Castell de Bellver","name_es":"Castell de Bellver","description":"A unique circular Gothic castle from the 14th century, set in pine forest above Palma with panoramic bay views.","category":"CULTURE","latitude":39.5736,"longitude":2.6217,"municipality":"Palma","rating":4.7,"review_count":4200,"tips":["Summer concerts held in the courtyard","Walk up through Bellver forest park","Views over the entire bay of Palma"],"price_level":"BUDGET"},
-    {"id":"fundacio-miro","name":"Fundació Pilar i Joan Miró","name_es":"Fundació Pilar i Joan Miró","description":"The studio and foundation of artist Joan Miró, preserving his original workspaces and a permanent collection of his works.","category":"CULTURE","latitude":39.5583,"longitude":2.6167,"municipality":"Palma","rating":4.6,"review_count":2100,"tips":["Miró's actual studio is preserved as he left it","Closed Mondays","Combine with nearby Bellver Castle"],"price_level":"MID"},
-    {"id":"es-baluard","name":"Es Baluard Museum","name_es":"Es Baluard Museu d'Art Modern i Contemporani","description":"Museum of Modern and Contemporary Art built within Palma's 16th-century sea bastions. The permanent collection spans Miró, Picasso, and major Mallorcan artists, with a rooftop terrace overlooking the bay.","category":"CULTURE","latitude":39.5703,"longitude":2.6422,"municipality":"Palma","rating":4.4,"review_count":1800,"tips":["Free entry on Saturdays after 3pm","The rooftop terrace has stunning views over the city walls and bay","Permanent collection includes Miró, Picasso and Antoni Tàpies"],"price_level":"BUDGET","website":"https://esbaluard.org"},
-    {"id":"valldemossa","name":"Valldemossa","name_es":"Valldemossa","description":"One of Mallorca's most beautiful villages, set amid the mountains where Chopin and George Sand spent a winter in the 1830s.","category":"TOWN","latitude":39.7108,"longitude":2.6231,"municipality":"Valldemossa","rating":4.8,"review_count":5600,"tips":["Visit the Royal Carthusian Monastery","Try the local ensaïmades pastries","Busy in peak season — visit early morning"]},
-    {"id":"deia","name":"Deià","name_es":"Deià","description":"A picturesque hillside village beloved by artists and writers, with stone houses cascading down towards the sea.","category":"TOWN","latitude":39.7497,"longitude":2.6472,"municipality":"Deià","rating":4.8,"review_count":3200,"tips":["Robert Graves lived and is buried here — visit his house museum","The village church offers sweeping mountain views","Son Marroig estate is nearby and worth visiting"]},
-    {"id":"soller","name":"Sóller","name_es":"Sóller","description":"A charming orange-grove town in a mountain valley, connected to Palma by a vintage wooden train.","category":"TOWN","latitude":39.7650,"longitude":2.7158,"municipality":"Sóller","rating":4.7,"review_count":4800,"tips":["Ride the vintage tram from Sóller to Port de Sóller","The Modernista bank building on the main square is stunning","Orange and lemon products are the local specialty"]},
-    {"id":"pollenca","name":"Pollença","name_es":"Pollença","description":"A beautiful hillside town with Roman origins, famous for its 365-step Calvari staircase and vibrant Sunday market.","category":"TOWN","latitude":39.8778,"longitude":3.0161,"municipality":"Pollença","rating":4.7,"review_count":3900,"tips":["Climb the Calvari steps at sunset","The Sunday market is one of the island's best","Visit in late July for the famous Moors and Christians festival"]},
-    {"id":"arta","name":"Artà","name_es":"Artà","description":"An unspoilt hilltop town crowned by a fortified sanctuary, with winding streets and a well-preserved old quarter.","category":"TOWN","latitude":39.6994,"longitude":3.3494,"municipality":"Artà","rating":4.6,"review_count":2100,"tips":["Walk up to the Sanctuary of Sant Salvador","The Thursday market is excellent","Visit the Ses Paisses prehistoric settlement nearby"]},
-    {"id":"cap-formentor","name":"Cap de Formentor","name_es":"Cap de Formentor","description":"Mallorca's dramatic northern tip, with a clifftop lighthouse and 360-degree views over the sea.","category":"VIEWPOINT","latitude":39.9658,"longitude":3.2136,"municipality":"Pollença","rating":4.9,"review_count":4100,"tips":["Car access restricted in peak season — take the shuttle bus","The winding road is one of the most scenic in Europe","Arrive at sunrise for the best light"],"price_level":"FREE"},
-    {"id":"mirador-ses-barques","name":"Mirador de Ses Barques","name_es":"Mirador de Ses Barques","description":"A spectacular viewpoint overlooking the Port de Sóller and the entire bay, with a traditional restaurant.","category":"VIEWPOINT","latitude":39.8133,"longitude":2.7217,"municipality":"Sóller","rating":4.6,"review_count":1200,"tips":["Stop here on the drive from Palma to Sóller via the old mountain road","Great place for lunch with views","The old road (not the tunnel) is the scenic route"],"price_level":"FREE"},
-    {"id":"restaurant-mola","name":"Restaurant Es Moli d'en Bou","name_es":"Es Moli d'en Bou","description":"Michelin-starred restaurant in a restored olive oil mill, showcasing contemporary Mallorcan cuisine.","category":"GASTRONOMY","latitude":39.6394,"longitude":3.3500,"municipality":"Sant Llorenç des Cardassar","rating":4.8,"review_count":680,"tips":["Book well in advance — popular year-round","Tasting menu recommended","The wine cellar has excellent local Mallorcan labels"],"price_level":"EXPENSIVE"},
-    {"id":"restaurant-juanito","name":"Bar-Restaurant Juanito","name_es":"Bar-Restaurant Juanito","description":"A beloved local institution in Manacor serving traditional Mallorcan cuisine at honest prices.","category":"GASTRONOMY","latitude":39.5694,"longitude":3.2097,"municipality":"Manacor","rating":4.5,"review_count":1200,"tips":["Try the frito mallorquí (local offal fry-up)","Cash preferred","Arrive early — no reservations and fills quickly"],"price_level":"BUDGET"},
-    {"id":"mercat-santa-catalina","name":"Mercat de Santa Catalina","name_es":"Mercat de Santa Catalina","description":"Palma's vibrant food market neighbourhood, filled with pintxos bars, fresh produce stalls, and wine bars.","category":"GASTRONOMY","latitude":39.5733,"longitude":2.6458,"municipality":"Palma","rating":4.7,"review_count":3400,"tips":["Busiest and best on Friday and Saturday mornings","Many bars open from 8am for breakfast","Try the local sobrassada sausage"],"price_level":"MID"},
-    {"id":"bodega-trevin","name":"Bodega Trevin","name_es":"Bodega Trevin","description":"A traditional Mallorcan winery producing excellent red wines from local Callet and Mantonegro grapes.","category":"GASTRONOMY","latitude":39.6556,"longitude":2.9722,"municipality":"Binissalem","rating":4.5,"review_count":450,"tips":["Binissalem is Mallorca's main wine-producing region","Book a tasting in advance","Combine with a visit to Binissalem village"],"price_level":"MID"},
-    {"id":"coves-drach","name":"Coves del Drac","name_es":"Coves del Drac","description":"Spectacular underground caves containing one of the world's largest underground lakes, with classical music concerts on illuminated boats.","category":"ADVENTURE","latitude":39.5256,"longitude":3.3361,"municipality":"Manacor","rating":4.7,"review_count":6700,"tips":["Book tickets online — queues can be very long","Concert times are fixed — check the schedule","Caves maintain a constant 21°C — bring a layer"],"price_level":"MID","website":"https://covesdeldrach.com"},
-    {"id":"kayak-soller","name":"Kayak Port de Sóller","name_es":"Kayak Port de Sóller","description":"Sea kayaking tours departing from Port de Sóller, exploring sea caves and secluded coves along the Tramuntana coast.","category":"ADVENTURE","latitude":39.7944,"longitude":2.6972,"municipality":"Sóller","rating":4.8,"review_count":890,"tips":["Morning tours recommended for calmer water","Snorkel stops included","Suitable for beginners with instructor"],"price_level":"MID","tags":["kayaking","water","guided","adventure"]},
-    {"id":"cami-des-correu","name":"Camí des Correu","name_es":"Camí des Correu","description":"A historic coastal postal route in the Tramuntana, connecting Estellencs and Banyalbufar along ancient stone paths with dramatic sea cliff views. Part of the GR221 network.","category":"HIKING","latitude":39.6514,"longitude":2.5261,"municipality":"Estellencs","rating":4.7,"review_count":620,"tips":["Best walked west to east (Estellencs → Banyalbufar)","Moderate difficulty — allow 3 hours","Stunning sea views the entire way"],"tags":["tramuntana","coastal","moderate","GR221","historic"]},
-    {"id":"castell-alaro","name":"Castell d'Alaró","name_es":"Castell d'Alaró","description":"A dramatic medieval castle perched on a rocky peak at 822m, surrounded by holm oak forest. Offers panoramic views across the entire Mallorcan plain. The climb is rewarded with a restaurant at the top.","category":"HIKING","latitude":39.7031,"longitude":2.7894,"municipality":"Alaró","rating":4.8,"review_count":2200,"tips":["2-hour climb from Orient or Alaró village","The restaurant at the summit serves excellent traditional food","Sunset views over the entire island are breathtaking — bring a torch for the descent"],"tags":["castle","medieval","panoramic","moderate","summit","history"]},
-    {"id":"puig-ofre","name":"Puig de l'Ofre","name_es":"Puig de l'Ofre","description":"A rewarding Tramuntana summit at 1,093m starting from the Cúber reservoir, climbing through pine and holm oak forest with panoramic views of the Sóller valley and the Tramuntana range.","category":"HIKING","latitude":39.7944,"longitude":2.8122,"municipality":"Sóller","rating":4.7,"review_count":850,"tips":["Park at the Cúber reservoir on the Ma-10 road","3–4 hours round trip — bring plenty of water","The path crosses the Barranc de Biniaraix gorge area"],"tags":["summit","tramuntana","moderate","cuber","views"]},
-    {"id":"puig-tomir","name":"Puig Tomir","name_es":"Puig Tomir","description":"A remote and rewarding summit in the northern Tramuntana at 1,103m. Offers solitude and sweeping views over the Raiguer plain, the Pollença bay and the Serra del Cavall Bernat ridge.","category":"HIKING","latitude":39.8389,"longitude":2.8794,"municipality":"Pollença","rating":4.6,"review_count":480,"tips":["Approach from Binibona or via the old Camí de Lluc","Hard — allow 5–6 hours round trip","Very remote — carry a map and extra water","Rarely crowded even in peak season"],"tags":["summit","tramuntana","hard","remote","north","solitude"]},
-    {"id":"cami-arxiduc","name":"Camí de s'Arxiduc","name_es":"Camí de s'Arxiduc","description":"One of Mallorca's most iconic ridge walks, built by Archduke Ludwig Salvador of Austria in the 19th century above Valldemossa. The path runs along a dramatic cliff edge with extraordinary views of the northwest coast.","category":"HIKING","latitude":39.7217,"longitude":2.6269,"municipality":"Valldemossa","rating":4.9,"review_count":1700,"tips":["Start from Valldemossa village — follow signs to Son Gual","Allow 3–4 hours for the full circuit","The cliff sections are exposed — avoid in high winds or wet conditions","Combine with a visit to Valldemossa village"],"tags":["ridge","archduke","valldemossa","iconic","moderate","views","northwest"]},
-    {"id":"cala-tuent","name":"Cala Tuent","name_es":"Cala Tuent","description":"A secluded pebbly cove nestled beneath the Tramuntana cliffs, accessible by a narrow winding road near Sa Calobra. One of the most peaceful beaches on the north coast, with a tiny 13th-century chapel.","category":"BEACH","latitude":39.8583,"longitude":2.7667,"municipality":"Escorca","rating":4.8,"review_count":1100,"tips":["Access by narrow road — drive slowly or arrive by boat from Port de Sóller","The tiny chapel of Sant Llorenç is worth a visit","Pebble shore — water shoes recommended","Quieter alternative to Sa Calobra"],"price_level":"FREE","tags":["remote","pebble","northcoast","tramuntana","secluded","chapel"]},
-    {"id":"torrent-pareis","name":"Torrent de Pareis","name_es":"Torrent de Pareis","description":"One of the most spectacular natural gorges in the Mediterranean, carving through the Tramuntana mountains for 5km before opening onto Sa Calobra beach. The full descent through the gorge is Mallorca's most thrilling hiking adventure.","category":"ADVENTURE","latitude":39.8511,"longitude":2.8075,"municipality":"Escorca","rating":4.9,"review_count":1300,"tips":["Full descent (7–8h) requires canyoning experience — go with a guide","The gorge mouth at Sa Calobra beach can be enjoyed without hiking","Never enter the gorge if rain is forecast — severe flash flood risk","Bring a wetsuit and helmet for the technical sections"],"tags":["canyon","canyoning","gorge","sacolabra","expert","adventure","spectacular"]},
-    {"id":"cala-marmols","name":"Cala Màrmols","name_es":"Cala Màrmols","description":"One of Mallorca's most remote and pristine beaches, accessible only by a 4km walk across rough terrain or by boat from Colònia de Sant Jordi. Wild and unspoilt with striking white marble rocks.","category":"BEACH","latitude":39.3244,"longitude":3.1294,"municipality":"Ses Salines","rating":4.8,"review_count":430,"tips":["4km rough track each way — allow 2 hours in each direction","Bring all water, food and sun protection — zero facilities","Boat access from Colònia de Sant Jordi is recommended in summer","Named for the white marble (màrmol) rocks on the shore"],"price_level":"FREE","tags":["remote","wild","adventure","southcoast","difficult-access","pristine","marble"]},
-    {"id":"monestir-lluc","name":"Monestir de Lluc","name_es":"Monestir de Lluc","description":"Mallorca's most important pilgrimage site, nestled in a mountain valley in Escorca. The 13th-century monastery is home to the island's patron saint icon — the Black Madonna — and a renowned boys' choir, Els Blauets.","category":"CULTURE","latitude":39.8267,"longitude":2.8883,"municipality":"Escorca","rating":4.8,"review_count":5200,"tips":["Els Blauets choir sings daily at 11:15am and 7pm (except July–August)","Kilometre 0 of the GR221 long-distance trail starts here","Restaurant, café and accommodation available in the monastery buildings","The surrounding mountain forest has excellent short walks"],"price_level":"FREE","website":"https://lluc.net","tags":["monastery","pilgrimage","blackmadonna","choir","tramuntana","GR221","religious"]},
-    {"id":"faro-formentor","name":"Faro de Formentor","name_es":"Far de Formentor","description":"The iconic lighthouse at the very tip of the Formentor peninsula, built in 1863. Surrounded by vertiginous cliffs dropping into the deep blue sea, it is the most photographed spot in Mallorca.","category":"VIEWPOINT","latitude":39.9639,"longitude":3.2208,"municipality":"Pollença","rating":4.9,"review_count":4800,"tips":["Access restricted by car in summer — take shuttle from Port de Pollença","Arrive at sunrise for spectacular light and empty roads","A path continues beyond the lighthouse to an even higher lookout","The drive/cycle along the Formentor road is itself spectacular"],"price_level":"FREE","tags":["lighthouse","formentor","iconic","sunrise","viewpoint","peninsula","dramatic"]},
-    {"id":"sa-foradada","name":"Sa Foradada","name_es":"Sa Foradada","description":"A dramatic rocky peninsula near Deià with a 18-metre natural hole (foradada = pierced) carved by the sea. A 30-minute walk from the Son Marroig estate leads to the tip of the promontory with vertiginous views.","category":"VIEWPOINT","latitude":39.7408,"longitude":2.6136,"municipality":"Deià","rating":4.7,"review_count":980,"tips":["Walk down from Son Marroig estate — 30 min each way on a rough path","The hole is best seen from a boat or from the water","Combined with a visit to Son Marroig makes a great half-day","Take the GR221 section towards Deià for beautiful coastal scenery"],"price_level":"FREE","tags":["rocky","coastal","naturalhole","tramuntana","deia","viewpoint","dramatic"]},
-    {"id":"mirador-es-colomer","name":"Mirador de Es Colomer","name_es":"Mirador de Es Colomer","description":"One of the most dramatic viewpoints on the Formentor peninsula, perching above vertical cliffs with views down onto the rocky islet of Es Colomer and the deep-blue waters of the bay. Easily accessible from the road.","category":"VIEWPOINT","latitude":39.9456,"longitude":3.1944,"municipality":"Pollença","rating":4.8,"review_count":3600,"tips":["Free roadside stop on the Formentor road (Ma-2210)","Access restricted by car in summer — take the shuttle bus","Best light in the morning looking east","Combine with Cap de Formentor drive or cycle"],"price_level":"FREE","tags":["formentor","cliffs","sea","peninsula","iconic","viewpoint","accessible"]},
-    {"id":"mirador-ricardo-roca","name":"Mirador de Ricardo Roca","name_es":"Mirador de Ricardo Roca","description":"A stunning west-coast viewpoint on the Ma-10 road between Estellencs and Andratx, offering one of the most dramatic views of the Tramuntana cliffs plunging into the sea. Named after a local writer.","category":"VIEWPOINT","latitude":39.5969,"longitude":2.4278,"municipality":"Estellencs","rating":4.7,"review_count":1400,"tips":["Easily accessible — large roadside car park on the Ma-10","Best visited in the late afternoon for the warm westerly light","The cliffs drop nearly 400m straight into the sea","A favourite stop on the Andratx–Sóller mountain road"],"price_level":"FREE","tags":["westcoast","cliffs","tramuntana","dramatic","Ma10","sunset","accessible"]},
-    {"id":"mirador-ses-animes","name":"Mirador de Ses Ànimes","name_es":"Mirador de Ses Ànimes","description":"A 16th-century watchtower (Torre des Verger) perched on the edge of a cliff near Banyalbufar, offering panoramic views of the west coast, the Tramuntana cliffs and the distant island of Sa Dragonera. One of the most photogenic spots on the island.","category":"VIEWPOINT","latitude":39.6583,"longitude":2.4956,"municipality":"Banyalbufar","rating":4.8,"review_count":2100,"tips":["Short 10-minute walk from a roadside car park on the Ma-10","The watchtower itself can be climbed for 360° views","Best at sunset when the cliffs glow orange","Very popular — arrive early in summer"],"price_level":"FREE","tags":["watchtower","westcoast","tramuntana","sunset","sadragonera","panoramic","historic"]},
-    {"id":"jardins-alfabia","name":"Jardins d'Alfàbia","name_es":"Jardines de Alfàbia","description":"Historic Moorish-inspired gardens dating from the 12th century, fed by natural springs at the foot of the Tramuntana mountains near the Sóller tunnel. Pergolas draped with wisteria, Arabic water channels and ancient palms create a lush green oasis.","category":"CULTURE","latitude":39.7578,"longitude":2.7333,"municipality":"Bunyola","rating":4.5,"review_count":1600,"tips":["Open daily except Sundays","Combine with a ride on the vintage Sóller train — request a stop at Alfàbia","The manor house interior has original Moorish-influenced furnishings","Best visited in spring when the wisteria is in bloom"],"price_level":"BUDGET","website":"https://jardinesalfabia.com","tags":["moorish","gardens","water","tramuntana","heritage","arabic","historical"]}
+    {
+      "id": "es-trenc",
+      "name": "Es Trenc",
+      "name_es": "Es Trenc",
+      "description": "One of Mallorca's most pristine beaches with crystal-clear turquoise waters and white sand dunes. A protected natural area.",
+      "category": "BEACH",
+      "latitude": 39.3467,
+      "longitude": 3.0167,
+      "municipality": "Campos",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Es_Trenc%2C_Mallorca%2C_the_beach.jpg/960px-Es_Trenc%2C_Mallorca%2C_the_beach.jpg",
+      "rating": 4.9,
+      "review_count": 2400,
+      "tips": [
+        "Arrive before 10am in summer",
+        "Naturist section at the western end",
+        "Parking fills up fast — take the bus from Campos"
+      ],
+      "price_level": "FREE"
+    },
+    {
+      "id": "cala-mondrag",
+      "name": "Cala Mondragó",
+      "name_es": "Cala Mondragó",
+      "description": "A beautiful double cove within the Mondragó Natural Park, with calm turquoise waters and a pine forest backdrop.",
+      "category": "BEACH",
+      "latitude": 39.3422,
+      "longitude": 3.1917,
+      "municipality": "Santanyí",
+      "rating": 4.8,
+      "review_count": 1800,
+      "tips": [
+        "Part of a protected natural park",
+        "Walk between the two coves",
+        "Great snorkelling around the rocks"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Cala_Mondrag%C3%B3_01.jpg/960px-Cala_Mondrag%C3%B3_01.jpg"
+    },
+    {
+      "id": "formentor-beach",
+      "name": "Playa de Formentor",
+      "name_es": "Playa de Formentor",
+      "description": "A legendary beach at the tip of the Formentor peninsula, flanked by pine forests and dramatic cliffs.",
+      "category": "BEACH",
+      "latitude": 39.94,
+      "longitude": 3.2,
+      "municipality": "Pollença",
+      "rating": 4.7,
+      "review_count": 2100,
+      "tips": [
+        "Access by boat from Port de Pollença in peak season",
+        "Arrive early — parking is limited",
+        "The drive through Cap de Formentor is spectacular"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Platja_de_Formentor%2C_Mallorca_Panorama_DSC4816.jpg/960px-Platja_de_Formentor%2C_Mallorca_Panorama_DSC4816.jpg"
+    },
+    {
+      "id": "cala-deia",
+      "name": "Cala Deià",
+      "name_es": "Cala Deià",
+      "description": "A tiny rocky cove below the artistic village of Deià, beloved by locals and artists.",
+      "category": "BEACH",
+      "latitude": 39.75,
+      "longitude": 2.6517,
+      "municipality": "Deià",
+      "rating": 4.6,
+      "review_count": 900,
+      "tips": [
+        "10-minute walk down from Deià village",
+        "Get a table at Restaurant Ca's Patro March for seafood",
+        "Rocky shore — water shoes recommended"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Cala_de_Deya%2C_Mallorca_%2813333783785%29.jpg/960px-Cala_de_Deya%2C_Mallorca_%2813333783785%29.jpg"
+    },
+    {
+      "id": "cala-pi",
+      "name": "Cala Pi",
+      "name_es": "Cala Pi",
+      "description": "A narrow fjord-like cove with calm, clear water and medieval watchtower ruins above.",
+      "category": "BEACH",
+      "latitude": 39.3617,
+      "longitude": 2.875,
+      "municipality": "Llucmajor",
+      "rating": 4.7,
+      "review_count": 1100,
+      "tips": [
+        "Long narrow inlet — perfect for children",
+        "Hike up to the watchtower for panoramic views",
+        "Limited parking in peak season"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Cala_Pi_Luftbild_01.jpg/960px-Cala_Pi_Luftbild_01.jpg"
+    },
+    {
+      "id": "cala-varques",
+      "name": "Cala Varques",
+      "name_es": "Cala Varques",
+      "description": "Secluded wild beach accessible only by a 20-minute walk through pine forest.",
+      "category": "BEACH",
+      "latitude": 39.525,
+      "longitude": 3.3317,
+      "municipality": "Manacor",
+      "rating": 4.6,
+      "review_count": 650,
+      "tips": [
+        "No car access — park at the farm and walk 1.5 km",
+        "Bring everything you need — no facilities",
+        "Sea caves nearby for snorkellers"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Cala_Varques_01.jpg/960px-Cala_Varques_01.jpg"
+    },
+    {
+      "id": "tramuntana-range",
+      "name": "Serra de Tramuntana",
+      "name_es": "Serra de Tramuntana",
+      "description": "UNESCO World Heritage mountain range running along Mallorca's northwest coast, offering dramatic landscapes and ancient terraced olive groves.",
+      "category": "HIKING",
+      "latitude": 39.8,
+      "longitude": 2.7,
+      "municipality": "Various",
+      "rating": 4.9,
+      "review_count": 3200,
+      "tips": [
+        "The GR221 long-distance trail traverses the entire range",
+        "Spring and autumn are best — avoid July/August heat",
+        "Mountain refuges (refugis) provide overnight accommodation"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Serra_de_Tramuntana_Mallorca_2008_02.JPG/960px-Serra_de_Tramuntana_Mallorca_2008_02.JPG"
+    },
+    {
+      "id": "barranc-biniaraix",
+      "name": "Barranc de Biniaraix",
+      "name_es": "Barranc de Biniaraix",
+      "description": "One of Mallorca's most beautiful walks, following ancient stone steps through a narrow gorge up into the mountains from Sóller.",
+      "category": "HIKING",
+      "latitude": 39.7917,
+      "longitude": 2.7167,
+      "municipality": "Sóller",
+      "rating": 4.8,
+      "review_count": 1500,
+      "tips": [
+        "Start in Biniaraix village — take bus from Sóller",
+        "2-3 hours to reach L'Ofre peak",
+        "Stone steps can be slippery when wet"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "gorge",
+        "tramuntana",
+        "moderate",
+        "stone-steps",
+        "classic"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Barranc_de_Biniaraix.jpg/960px-Barranc_de_Biniaraix.jpg"
+    },
+    {
+      "id": "puig-major",
+      "name": "Puig Major",
+      "name_es": "Puig Major",
+      "description": "Mallorca's highest peak at 1,445m, with dramatic views across the island and the Tramuntana range.",
+      "category": "HIKING",
+      "latitude": 39.8117,
+      "longitude": 2.79,
+      "municipality": "Sóller",
+      "rating": 4.7,
+      "review_count": 800,
+      "tips": [
+        "Military radar installation at top — access may be restricted",
+        "Approach via Sa Calobra road is spectacular",
+        "Best views at sunrise"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Blick_zum_Puig_Major.jpg/960px-Blick_zum_Puig_Major.jpg"
+    },
+    {
+      "id": "sa-calobra",
+      "name": "Sa Calobra",
+      "name_es": "Sa Calobra",
+      "description": "A dramatic cove at the end of a legendary winding mountain road, with access to the Torrent de Pareis canyon.",
+      "category": "HIKING",
+      "latitude": 39.8517,
+      "longitude": 2.8,
+      "municipality": "Escorca",
+      "rating": 4.8,
+      "review_count": 2800,
+      "tips": [
+        "The winding road is a classic cycling route",
+        "Torrent de Pareis gorge hike requires a guide in summer",
+        "Take the boat from Port de Sóller to avoid the road traffic"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/La_Calobra%2C_Escorca%2C_Mallorca%2C_Espa%C3%B1a.JPG/960px-La_Calobra%2C_Escorca%2C_Mallorca%2C_Espa%C3%B1a.JPG"
+    },
+    {
+      "id": "seu-cathedral",
+      "name": "La Seu Cathedral",
+      "name_es": "Catedral de Mallorca",
+      "description": "Mallorca's iconic Gothic cathedral overlooking Palma Bay, with Antoni Gaudí-designed interior elements. One of the largest Gothic cathedrals in Europe.",
+      "category": "CULTURE",
+      "latitude": 39.5672,
+      "longitude": 2.6497,
+      "municipality": "Palma",
+      "rating": 4.9,
+      "review_count": 8500,
+      "tips": [
+        "Book tickets online to skip queues",
+        "The light through the rose window is best in the morning",
+        "Visit the museum section for Gaudí's designs"
+      ],
+      "price_level": "BUDGET",
+      "website": "https://catedraldemallorca.org",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Catedral_de_Santa_Maria_%28Palma_de_Mallorca%29_--_03.jpg/960px-Catedral_de_Santa_Maria_%28Palma_de_Mallorca%29_--_03.jpg"
+    },
+    {
+      "id": "bellver-castle",
+      "name": "Castell de Bellver",
+      "name_es": "Castell de Bellver",
+      "description": "A unique circular Gothic castle from the 14th century, set in pine forest above Palma with panoramic bay views.",
+      "category": "CULTURE",
+      "latitude": 39.5736,
+      "longitude": 2.6217,
+      "municipality": "Palma",
+      "rating": 4.7,
+      "review_count": 4200,
+      "tips": [
+        "Summer concerts held in the courtyard",
+        "Walk up through Bellver forest park",
+        "Views over the entire bay of Palma"
+      ],
+      "price_level": "BUDGET",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Castillo_de_Bellver_%28Palma_de_Mallorca%29_--_06.jpg/960px-Castillo_de_Bellver_%28Palma_de_Mallorca%29_--_06.jpg"
+    },
+    {
+      "id": "fundacio-miro",
+      "name": "Fundació Pilar i Joan Miró",
+      "name_es": "Fundació Pilar i Joan Miró",
+      "description": "The studio and foundation of artist Joan Miró, preserving his original workspaces and a permanent collection of his works.",
+      "category": "CULTURE",
+      "latitude": 39.5583,
+      "longitude": 2.6167,
+      "municipality": "Palma",
+      "rating": 4.6,
+      "review_count": 2100,
+      "tips": [
+        "Miró's actual studio is preserved as he left it",
+        "Closed Mondays",
+        "Combine with nearby Bellver Castle"
+      ],
+      "price_level": "MID",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Fundaci%C3%B3_Pilar_i_Joan_Mir%C3%B3_Aussen_1.jpg/960px-Fundaci%C3%B3_Pilar_i_Joan_Mir%C3%B3_Aussen_1.jpg"
+    },
+    {
+      "id": "es-baluard",
+      "name": "Es Baluard Museum",
+      "name_es": "Es Baluard Museu d'Art Modern i Contemporani",
+      "description": "Museum of Modern and Contemporary Art built within Palma's 16th-century sea bastions. The permanent collection spans Miró, Picasso, and major Mallorcan artists, with a rooftop terrace overlooking the bay.",
+      "category": "CULTURE",
+      "latitude": 39.5703,
+      "longitude": 2.6422,
+      "municipality": "Palma",
+      "rating": 4.4,
+      "review_count": 1800,
+      "tips": [
+        "Free entry on Saturdays after 3pm",
+        "The rooftop terrace has stunning views over the city walls and bay",
+        "Permanent collection includes Miró, Picasso and Antoni Tàpies"
+      ],
+      "price_level": "BUDGET",
+      "website": "https://esbaluard.org",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Es_Baluard_01.jpg/960px-Es_Baluard_01.jpg"
+    },
+    {
+      "id": "valldemossa",
+      "name": "Valldemossa",
+      "name_es": "Valldemossa",
+      "description": "One of Mallorca's most beautiful villages, set amid the mountains where Chopin and George Sand spent a winter in the 1830s.",
+      "category": "TOWN",
+      "latitude": 39.7108,
+      "longitude": 2.6231,
+      "municipality": "Valldemossa",
+      "rating": 4.8,
+      "review_count": 5600,
+      "tips": [
+        "Visit the Royal Carthusian Monastery",
+        "Try the local ensaïmades pastries",
+        "Busy in peak season — visit early morning"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Aerial_view_of_the_small_village_of_Valldemossa_in_Mallorca%2C_Spain_%2848001588571%29.jpg/960px-Aerial_view_of_the_small_village_of_Valldemossa_in_Mallorca%2C_Spain_%2848001588571%29.jpg"
+    },
+    {
+      "id": "deia",
+      "name": "Deià",
+      "name_es": "Deià",
+      "description": "A picturesque hillside village beloved by artists and writers, with stone houses cascading down towards the sea.",
+      "category": "TOWN",
+      "latitude": 39.7497,
+      "longitude": 2.6472,
+      "municipality": "Deià",
+      "rating": 4.8,
+      "review_count": 3200,
+      "tips": [
+        "Robert Graves lived and is buried here — visit his house museum",
+        "The village church offers sweeping mountain views",
+        "Son Marroig estate is nearby and worth visiting"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/14-01-23-mallorca-009.jpg/960px-14-01-23-mallorca-009.jpg"
+    },
+    {
+      "id": "soller",
+      "name": "Sóller",
+      "name_es": "Sóller",
+      "description": "A charming orange-grove town in a mountain valley, connected to Palma by a vintage wooden train.",
+      "category": "TOWN",
+      "latitude": 39.765,
+      "longitude": 2.7158,
+      "municipality": "Sóller",
+      "rating": 4.7,
+      "review_count": 4800,
+      "tips": [
+        "Ride the vintage tram from Sóller to Port de Sóller",
+        "The Modernista bank building on the main square is stunning",
+        "Orange and lemon products are the local specialty"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tren_de_Soller.jpg/960px-Tren_de_Soller.jpg"
+    },
+    {
+      "id": "pollenca",
+      "name": "Pollença",
+      "name_es": "Pollença",
+      "description": "A beautiful hillside town with Roman origins, famous for its 365-step Calvari staircase and vibrant Sunday market.",
+      "category": "TOWN",
+      "latitude": 39.8778,
+      "longitude": 3.0161,
+      "municipality": "Pollença",
+      "rating": 4.7,
+      "review_count": 3900,
+      "tips": [
+        "Climb the Calvari steps at sunset",
+        "The Sunday market is one of the island's best",
+        "Visit in late July for the famous Moors and Christians festival"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/The_365_Calvari_Steps.jpg/960px-The_365_Calvari_Steps.jpg"
+    },
+    {
+      "id": "arta",
+      "name": "Artà",
+      "name_es": "Artà",
+      "description": "An unspoilt hilltop town crowned by a fortified sanctuary, with winding streets and a well-preserved old quarter.",
+      "category": "TOWN",
+      "latitude": 39.6994,
+      "longitude": 3.3494,
+      "municipality": "Artà",
+      "rating": 4.6,
+      "review_count": 2100,
+      "tips": [
+        "Walk up to the Sanctuary of Sant Salvador",
+        "The Thursday market is excellent",
+        "Visit the Ses Paisses prehistoric settlement nearby"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Arta_Festung_%2831907483586%29.jpg/960px-Arta_Festung_%2831907483586%29.jpg"
+    },
+    {
+      "id": "cap-formentor",
+      "name": "Cap de Formentor",
+      "name_es": "Cap de Formentor",
+      "description": "Mallorca's dramatic northern tip, with a clifftop lighthouse and 360-degree views over the sea.",
+      "category": "VIEWPOINT",
+      "latitude": 39.9658,
+      "longitude": 3.2136,
+      "municipality": "Pollença",
+      "rating": 4.9,
+      "review_count": 4100,
+      "tips": [
+        "Car access restricted in peak season — take the shuttle bus",
+        "The winding road is one of the most scenic in Europe",
+        "Arrive at sunrise for the best light"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Vista_a%C3%A8ria_de_Formentor.JPG/960px-Vista_a%C3%A8ria_de_Formentor.JPG"
+    },
+    {
+      "id": "mirador-ses-barques",
+      "name": "Mirador de Ses Barques",
+      "name_es": "Mirador de Ses Barques",
+      "description": "A spectacular viewpoint overlooking the Port de Sóller and the entire bay, with a traditional restaurant.",
+      "category": "VIEWPOINT",
+      "latitude": 39.8133,
+      "longitude": 2.7217,
+      "municipality": "Sóller",
+      "rating": 4.6,
+      "review_count": 1200,
+      "tips": [
+        "Stop here on the drive from Palma to Sóller via the old mountain road",
+        "Great place for lunch with views",
+        "The old road (not the tunnel) is the scenic route"
+      ],
+      "price_level": "FREE",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Mirador_de_ses_Barques.jpg/960px-Mirador_de_ses_Barques.jpg"
+    },
+    {
+      "id": "restaurant-mola",
+      "name": "Restaurant Es Moli d'en Bou",
+      "name_es": "Es Moli d'en Bou",
+      "description": "Michelin-starred restaurant in a restored olive oil mill, showcasing contemporary Mallorcan cuisine.",
+      "category": "GASTRONOMY",
+      "latitude": 39.6394,
+      "longitude": 3.35,
+      "municipality": "Sant Llorenç des Cardassar",
+      "rating": 4.8,
+      "review_count": 680,
+      "tips": [
+        "Book well in advance — popular year-round",
+        "Tasting menu recommended",
+        "The wine cellar has excellent local Mallorcan labels"
+      ],
+      "price_level": "EXPENSIVE",
+      "thumbnail_url": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80"
+    },
+    {
+      "id": "restaurant-juanito",
+      "name": "Bar-Restaurant Juanito",
+      "name_es": "Bar-Restaurant Juanito",
+      "description": "A beloved local institution in Manacor serving traditional Mallorcan cuisine at honest prices.",
+      "category": "GASTRONOMY",
+      "latitude": 39.5694,
+      "longitude": 3.2097,
+      "municipality": "Manacor",
+      "rating": 4.5,
+      "review_count": 1200,
+      "tips": [
+        "Try the frito mallorquí (local offal fry-up)",
+        "Cash preferred",
+        "Arrive early — no reservations and fills quickly"
+      ],
+      "price_level": "BUDGET",
+      "thumbnail_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80"
+    },
+    {
+      "id": "mercat-santa-catalina",
+      "name": "Mercat de Santa Catalina",
+      "name_es": "Mercat de Santa Catalina",
+      "description": "Palma's vibrant food market neighbourhood, filled with pintxos bars, fresh produce stalls, and wine bars.",
+      "category": "GASTRONOMY",
+      "latitude": 39.5733,
+      "longitude": 2.6458,
+      "municipality": "Palma",
+      "rating": 4.7,
+      "review_count": 3400,
+      "tips": [
+        "Busiest and best on Friday and Saturday mornings",
+        "Many bars open from 8am for breakfast",
+        "Try the local sobrassada sausage"
+      ],
+      "price_level": "MID",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mercat_de_Santa_Catalina_I.JPG/960px-Mercat_de_Santa_Catalina_I.JPG"
+    },
+    {
+      "id": "bodega-trevin",
+      "name": "Bodega Trevin",
+      "name_es": "Bodega Trevin",
+      "description": "A traditional Mallorcan winery producing excellent red wines from local Callet and Mantonegro grapes.",
+      "category": "GASTRONOMY",
+      "latitude": 39.6556,
+      "longitude": 2.9722,
+      "municipality": "Binissalem",
+      "rating": 4.5,
+      "review_count": 450,
+      "tips": [
+        "Binissalem is Mallorca's main wine-producing region",
+        "Book a tasting in advance",
+        "Combine with a visit to Binissalem village"
+      ],
+      "price_level": "MID",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Estaci%C3%B3_de_Binissalem.JPG/960px-Estaci%C3%B3_de_Binissalem.JPG"
+    },
+    {
+      "id": "coves-drach",
+      "name": "Coves del Drac",
+      "name_es": "Coves del Drac",
+      "description": "Spectacular underground caves containing one of the world's largest underground lakes, with classical music concerts on illuminated boats.",
+      "category": "ADVENTURE",
+      "latitude": 39.5256,
+      "longitude": 3.3361,
+      "municipality": "Manacor",
+      "rating": 4.7,
+      "review_count": 6700,
+      "tips": [
+        "Book tickets online — queues can be very long",
+        "Concert times are fixed — check the schedule",
+        "Caves maintain a constant 21°C — bring a layer"
+      ],
+      "price_level": "MID",
+      "website": "https://covesdeldrach.com",
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/06_Coves_del_Drac%2C_estalagmita.jpg/960px-06_Coves_del_Drac%2C_estalagmita.jpg"
+    },
+    {
+      "id": "kayak-soller",
+      "name": "Kayak Port de Sóller",
+      "name_es": "Kayak Port de Sóller",
+      "description": "Sea kayaking tours departing from Port de Sóller, exploring sea caves and secluded coves along the Tramuntana coast.",
+      "category": "ADVENTURE",
+      "latitude": 39.7944,
+      "longitude": 2.6972,
+      "municipality": "Sóller",
+      "rating": 4.8,
+      "review_count": 890,
+      "tips": [
+        "Morning tours recommended for calmer water",
+        "Snorkel stops included",
+        "Suitable for beginners with instructor"
+      ],
+      "price_level": "MID",
+      "tags": [
+        "kayaking",
+        "water",
+        "guided",
+        "adventure"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cala_Tuent_Mallorca_msu-2018-4063.jpg/960px-Cala_Tuent_Mallorca_msu-2018-4063.jpg"
+    },
+    {
+      "id": "cami-des-correu",
+      "name": "Camí des Correu",
+      "name_es": "Camí des Correu",
+      "description": "A historic coastal postal route in the Tramuntana, connecting Estellencs and Banyalbufar along ancient stone paths with dramatic sea cliff views. Part of the GR221 network.",
+      "category": "HIKING",
+      "latitude": 39.6514,
+      "longitude": 2.5261,
+      "municipality": "Estellencs",
+      "rating": 4.7,
+      "review_count": 620,
+      "tips": [
+        "Best walked west to east (Estellencs → Banyalbufar)",
+        "Moderate difficulty — allow 3 hours",
+        "Stunning sea views the entire way"
+      ],
+      "tags": [
+        "tramuntana",
+        "coastal",
+        "moderate",
+        "GR221",
+        "historic"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Arboces_al_Cam%C3%AD_des_Correu.JPG/960px-Arboces_al_Cam%C3%AD_des_Correu.JPG"
+    },
+    {
+      "id": "castell-alaro",
+      "name": "Castell d'Alaró",
+      "name_es": "Castell d'Alaró",
+      "description": "A dramatic medieval castle perched on a rocky peak at 822m, surrounded by holm oak forest. Offers panoramic views across the entire Mallorcan plain. The climb is rewarded with a restaurant at the top.",
+      "category": "HIKING",
+      "latitude": 39.7031,
+      "longitude": 2.7894,
+      "municipality": "Alaró",
+      "rating": 4.8,
+      "review_count": 2200,
+      "tips": [
+        "2-hour climb from Orient or Alaró village",
+        "The restaurant at the summit serves excellent traditional food",
+        "Sunset views over the entire island are breathtaking — bring a torch for the descent"
+      ],
+      "tags": [
+        "castle",
+        "medieval",
+        "panoramic",
+        "moderate",
+        "summit",
+        "history"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Castell_d%27Alaro.jpg/960px-Castell_d%27Alaro.jpg"
+    },
+    {
+      "id": "puig-ofre",
+      "name": "Puig de l'Ofre",
+      "name_es": "Puig de l'Ofre",
+      "description": "A rewarding Tramuntana summit at 1,093m starting from the Cúber reservoir, climbing through pine and holm oak forest with panoramic views of the Sóller valley and the Tramuntana range.",
+      "category": "HIKING",
+      "latitude": 39.7944,
+      "longitude": 2.8122,
+      "municipality": "Sóller",
+      "rating": 4.7,
+      "review_count": 850,
+      "tips": [
+        "Park at the Cúber reservoir on the Ma-10 road",
+        "3–4 hours round trip — bring plenty of water",
+        "The path crosses the Barranc de Biniaraix gorge area"
+      ],
+      "tags": [
+        "summit",
+        "tramuntana",
+        "moderate",
+        "cuber",
+        "views"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Ofre.jpg/960px-Ofre.jpg"
+    },
+    {
+      "id": "puig-tomir",
+      "name": "Puig Tomir",
+      "name_es": "Puig Tomir",
+      "description": "A remote and rewarding summit in the northern Tramuntana at 1,103m. Offers solitude and sweeping views over the Raiguer plain, the Pollença bay and the Serra del Cavall Bernat ridge.",
+      "category": "HIKING",
+      "latitude": 39.8389,
+      "longitude": 2.8794,
+      "municipality": "Pollença",
+      "rating": 4.6,
+      "review_count": 480,
+      "tips": [
+        "Approach from Binibona or via the old Camí de Lluc",
+        "Hard — allow 5–6 hours round trip",
+        "Very remote — carry a map and extra water",
+        "Rarely crowded even in peak season"
+      ],
+      "tags": [
+        "summit",
+        "tramuntana",
+        "hard",
+        "remote",
+        "north",
+        "solitude"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Puig_Tomir_Mallorca_%28130563855%29.jpeg/960px-Puig_Tomir_Mallorca_%28130563855%29.jpeg"
+    },
+    {
+      "id": "cami-arxiduc",
+      "name": "Camí de s'Arxiduc",
+      "name_es": "Camí de s'Arxiduc",
+      "description": "One of Mallorca's most iconic ridge walks, built by Archduke Ludwig Salvador of Austria in the 19th century above Valldemossa. The path runs along a dramatic cliff edge with extraordinary views of the northwest coast.",
+      "category": "HIKING",
+      "latitude": 39.7217,
+      "longitude": 2.6269,
+      "municipality": "Valldemossa",
+      "rating": 4.9,
+      "review_count": 1700,
+      "tips": [
+        "Start from Valldemossa village — follow signs to Son Gual",
+        "Allow 3–4 hours for the full circuit",
+        "The cliff sections are exposed — avoid in high winds or wet conditions",
+        "Combine with a visit to Valldemossa village"
+      ],
+      "tags": [
+        "ridge",
+        "archduke",
+        "valldemossa",
+        "iconic",
+        "moderate",
+        "views",
+        "northwest"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Valldemossa._Cam%C3%AD_de_l%27Arxiduc._Pla_de_les_Aritges.jpg/960px-Valldemossa._Cam%C3%AD_de_l%27Arxiduc._Pla_de_les_Aritges.jpg"
+    },
+    {
+      "id": "cala-tuent",
+      "name": "Cala Tuent",
+      "name_es": "Cala Tuent",
+      "description": "A secluded pebbly cove nestled beneath the Tramuntana cliffs, accessible by a narrow winding road near Sa Calobra. One of the most peaceful beaches on the north coast, with a tiny 13th-century chapel.",
+      "category": "BEACH",
+      "latitude": 39.8583,
+      "longitude": 2.7667,
+      "municipality": "Escorca",
+      "rating": 4.8,
+      "review_count": 1100,
+      "tips": [
+        "Access by narrow road — drive slowly or arrive by boat from Port de Sóller",
+        "The tiny chapel of Sant Llorenç is worth a visit",
+        "Pebble shore — water shoes recommended",
+        "Quieter alternative to Sa Calobra"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "remote",
+        "pebble",
+        "northcoast",
+        "tramuntana",
+        "secluded",
+        "chapel"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Cala_Tuent_01.jpg/960px-Cala_Tuent_01.jpg"
+    },
+    {
+      "id": "torrent-pareis",
+      "name": "Torrent de Pareis",
+      "name_es": "Torrent de Pareis",
+      "description": "One of the most spectacular natural gorges in the Mediterranean, carving through the Tramuntana mountains for 5km before opening onto Sa Calobra beach. The full descent through the gorge is Mallorca's most thrilling hiking adventure.",
+      "category": "ADVENTURE",
+      "latitude": 39.8511,
+      "longitude": 2.8075,
+      "municipality": "Escorca",
+      "rating": 4.9,
+      "review_count": 1300,
+      "tips": [
+        "Full descent (7–8h) requires canyoning experience — go with a guide",
+        "The gorge mouth at Sa Calobra beach can be enjoyed without hiking",
+        "Never enter the gorge if rain is forecast — severe flash flood risk",
+        "Bring a wetsuit and helmet for the technical sections"
+      ],
+      "tags": [
+        "canyon",
+        "canyoning",
+        "gorge",
+        "sacolabra",
+        "expert",
+        "adventure",
+        "spectacular"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Torrent_de_Pareis_04.jpg/960px-Torrent_de_Pareis_04.jpg"
+    },
+    {
+      "id": "cala-marmols",
+      "name": "Cala Màrmols",
+      "name_es": "Cala Màrmols",
+      "description": "One of Mallorca's most remote and pristine beaches, accessible only by a 4km walk across rough terrain or by boat from Colònia de Sant Jordi. Wild and unspoilt with striking white marble rocks.",
+      "category": "BEACH",
+      "latitude": 39.3244,
+      "longitude": 3.1294,
+      "municipality": "Ses Salines",
+      "rating": 4.8,
+      "review_count": 430,
+      "tips": [
+        "4km rough track each way — allow 2 hours in each direction",
+        "Bring all water, food and sun protection — zero facilities",
+        "Boat access from Colònia de Sant Jordi is recommended in summer",
+        "Named for the white marble (màrmol) rocks on the shore"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "remote",
+        "wild",
+        "adventure",
+        "southcoast",
+        "difficult-access",
+        "pristine",
+        "marble"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Cala_Marmol_-_panoramio.jpg/960px-Cala_Marmol_-_panoramio.jpg"
+    },
+    {
+      "id": "monestir-lluc",
+      "name": "Monestir de Lluc",
+      "name_es": "Monestir de Lluc",
+      "description": "Mallorca's most important pilgrimage site, nestled in a mountain valley in Escorca. The 13th-century monastery is home to the island's patron saint icon — the Black Madonna — and a renowned boys' choir, Els Blauets.",
+      "category": "CULTURE",
+      "latitude": 39.8267,
+      "longitude": 2.8883,
+      "municipality": "Escorca",
+      "rating": 4.8,
+      "review_count": 5200,
+      "tips": [
+        "Els Blauets choir sings daily at 11:15am and 7pm (except July–August)",
+        "Kilometre 0 of the GR221 long-distance trail starts here",
+        "Restaurant, café and accommodation available in the monastery buildings",
+        "The surrounding mountain forest has excellent short walks"
+      ],
+      "price_level": "FREE",
+      "website": "https://lluc.net",
+      "tags": [
+        "monastery",
+        "pilgrimage",
+        "blackmadonna",
+        "choir",
+        "tramuntana",
+        "GR221",
+        "religious"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Escorca_Lluc_-_Santuari_01_ies.jpg/960px-Escorca_Lluc_-_Santuari_01_ies.jpg"
+    },
+    {
+      "id": "faro-formentor",
+      "name": "Faro de Formentor",
+      "name_es": "Far de Formentor",
+      "description": "The iconic lighthouse at the very tip of the Formentor peninsula, built in 1863. Surrounded by vertiginous cliffs dropping into the deep blue sea, it is the most photographed spot in Mallorca.",
+      "category": "VIEWPOINT",
+      "latitude": 39.9639,
+      "longitude": 3.2208,
+      "municipality": "Pollença",
+      "rating": 4.9,
+      "review_count": 4800,
+      "tips": [
+        "Access restricted by car in summer — take shuttle from Port de Pollença",
+        "Arrive at sunrise for spectacular light and empty roads",
+        "A path continues beyond the lighthouse to an even higher lookout",
+        "The drive/cycle along the Formentor road is itself spectacular"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "lighthouse",
+        "formentor",
+        "iconic",
+        "sunrise",
+        "viewpoint",
+        "peninsula",
+        "dramatic"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Far_de_Formentor_-_Majorca_-_01.jpg/960px-Far_de_Formentor_-_Majorca_-_01.jpg"
+    },
+    {
+      "id": "sa-foradada",
+      "name": "Sa Foradada",
+      "name_es": "Sa Foradada",
+      "description": "A dramatic rocky peninsula near Deià with a 18-metre natural hole (foradada = pierced) carved by the sea. A 30-minute walk from the Son Marroig estate leads to the tip of the promontory with vertiginous views.",
+      "category": "VIEWPOINT",
+      "latitude": 39.7408,
+      "longitude": 2.6136,
+      "municipality": "Deià",
+      "rating": 4.7,
+      "review_count": 980,
+      "tips": [
+        "Walk down from Son Marroig estate — 30 min each way on a rough path",
+        "The hole is best seen from a boat or from the water",
+        "Combined with a visit to Son Marroig makes a great half-day",
+        "Take the GR221 section towards Deià for beautiful coastal scenery"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "rocky",
+        "coastal",
+        "naturalhole",
+        "tramuntana",
+        "deia",
+        "viewpoint",
+        "dramatic"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Foradada_sunset_marroig_1.JPG/960px-Foradada_sunset_marroig_1.JPG"
+    },
+    {
+      "id": "mirador-es-colomer",
+      "name": "Mirador de Es Colomer",
+      "name_es": "Mirador de Es Colomer",
+      "description": "One of the most dramatic viewpoints on the Formentor peninsula, perching above vertical cliffs with views down onto the rocky islet of Es Colomer and the deep-blue waters of the bay. Easily accessible from the road.",
+      "category": "VIEWPOINT",
+      "latitude": 39.9456,
+      "longitude": 3.1944,
+      "municipality": "Pollença",
+      "rating": 4.8,
+      "review_count": 3600,
+      "tips": [
+        "Free roadside stop on the Formentor road (Ma-2210)",
+        "Access restricted by car in summer — take the shuttle bus",
+        "Best light in the morning looking east",
+        "Combine with Cap de Formentor drive or cycle"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "formentor",
+        "cliffs",
+        "sea",
+        "peninsula",
+        "iconic",
+        "viewpoint",
+        "accessible"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Mirador_de_Formentor-9344073057.jpg/960px-Mirador_de_Formentor-9344073057.jpg"
+    },
+    {
+      "id": "mirador-ricardo-roca",
+      "name": "Mirador de Ricardo Roca",
+      "name_es": "Mirador de Ricardo Roca",
+      "description": "A stunning west-coast viewpoint on the Ma-10 road between Estellencs and Andratx, offering one of the most dramatic views of the Tramuntana cliffs plunging into the sea. Named after a local writer.",
+      "category": "VIEWPOINT",
+      "latitude": 39.5969,
+      "longitude": 2.4278,
+      "municipality": "Estellencs",
+      "rating": 4.7,
+      "review_count": 1400,
+      "tips": [
+        "Easily accessible — large roadside car park on the Ma-10",
+        "Best visited in the late afternoon for the warm westerly light",
+        "The cliffs drop nearly 400m straight into the sea",
+        "A favourite stop on the Andratx–Sóller mountain road"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "westcoast",
+        "cliffs",
+        "tramuntana",
+        "dramatic",
+        "Ma10",
+        "sunset",
+        "accessible"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Estellencs_%28September_2014%29.jpg/960px-Estellencs_%28September_2014%29.jpg"
+    },
+    {
+      "id": "mirador-ses-animes",
+      "name": "Mirador de Ses Ànimes",
+      "name_es": "Mirador de Ses Ànimes",
+      "description": "A 16th-century watchtower (Torre des Verger) perched on the edge of a cliff near Banyalbufar, offering panoramic views of the west coast, the Tramuntana cliffs and the distant island of Sa Dragonera. One of the most photogenic spots on the island.",
+      "category": "VIEWPOINT",
+      "latitude": 39.6583,
+      "longitude": 2.4956,
+      "municipality": "Banyalbufar",
+      "rating": 4.8,
+      "review_count": 2100,
+      "tips": [
+        "Short 10-minute walk from a roadside car park on the Ma-10",
+        "The watchtower itself can be climbed for 360° views",
+        "Best at sunset when the cliffs glow orange",
+        "Very popular — arrive early in summer"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "watchtower",
+        "westcoast",
+        "tramuntana",
+        "sunset",
+        "sadragonera",
+        "panoramic",
+        "historic"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Torre_des_Verger-pjt1.jpg/960px-Torre_des_Verger-pjt1.jpg"
+    },
+    {
+      "id": "jardins-alfabia",
+      "name": "Jardins d'Alfàbia",
+      "name_es": "Jardines de Alfàbia",
+      "description": "Historic Moorish-inspired gardens dating from the 12th century, fed by natural springs at the foot of the Tramuntana mountains near the Sóller tunnel. Pergolas draped with wisteria, Arabic water channels and ancient palms create a lush green oasis.",
+      "category": "CULTURE",
+      "latitude": 39.7578,
+      "longitude": 2.7333,
+      "municipality": "Bunyola",
+      "rating": 4.5,
+      "review_count": 1600,
+      "tips": [
+        "Open daily except Sundays",
+        "Combine with a ride on the vintage Sóller train — request a stop at Alfàbia",
+        "The manor house interior has original Moorish-influenced furnishings",
+        "Best visited in spring when the wisteria is in bloom"
+      ],
+      "price_level": "BUDGET",
+      "website": "https://jardinesalfabia.com",
+      "tags": [
+        "moorish",
+        "gardens",
+        "water",
+        "tramuntana",
+        "heritage",
+        "arabic",
+        "historical"
+      ],
+      "thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Alfabia_GartenW.jpg/960px-Alfabia_GartenW.jpg"
+    }
   ],
   "itineraries": [
     {
-      "id":"itin-beaches-3d","title":"Best Beaches in 3 Days","description":"Discover Mallorca's finest beaches, from the wild dunes of Es Trenc to the turquoise waters of Formentor.","category":"BEACH","duration_days":3,"cover_photo_url":"","best_seasons":["Spring","Summer"],"tags":["beach","swimming","family"],
-      "stops":[
-        {"place_id":"es-trenc","order":1,"suggested_duration_minutes":180,"note":"Full morning — arrive early for parking","day_number":1},
-        {"place_id":"cala-pi","order":2,"suggested_duration_minutes":120,"note":"Afternoon stop — great snorkelling","day_number":1},
-        {"place_id":"cala-mondrag","order":3,"suggested_duration_minutes":180,"note":"Natural park beach — pack a picnic","day_number":2},
-        {"place_id":"cala-varques","order":4,"suggested_duration_minutes":120,"note":"Wild beach — 20 min walk from parking","day_number":2},
-        {"place_id":"formentor-beach","order":5,"suggested_duration_minutes":180,"note":"Iconic beach — take boat from Port de Pollença","day_number":3},
-        {"place_id":"cala-deia","order":6,"suggested_duration_minutes":90,"note":"Tiny cove — arrive by 9am","day_number":3}
+      "id": "itin-beaches-3d",
+      "title": "Best Beaches in 3 Days",
+      "description": "Discover Mallorca's finest beaches, from the wild dunes of Es Trenc to the turquoise waters of Formentor.",
+      "category": "BEACH",
+      "duration_days": 3,
+      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Es_Trenc%2C_Mallorca%2C_the_beach.jpg/1280px-Es_Trenc%2C_Mallorca%2C_the_beach.jpg",
+      "best_seasons": [
+        "Spring",
+        "Summer"
+      ],
+      "tags": [
+        "beach",
+        "swimming",
+        "family"
+      ],
+      "stops": [
+        {
+          "place_id": "es-trenc",
+          "order": 1,
+          "suggested_duration_minutes": 180,
+          "note": "Full morning — arrive early for parking",
+          "day_number": 1
+        },
+        {
+          "place_id": "cala-pi",
+          "order": 2,
+          "suggested_duration_minutes": 120,
+          "note": "Afternoon stop — great snorkelling",
+          "day_number": 1
+        },
+        {
+          "place_id": "cala-mondrag",
+          "order": 3,
+          "suggested_duration_minutes": 180,
+          "note": "Natural park beach — pack a picnic",
+          "day_number": 2
+        },
+        {
+          "place_id": "cala-varques",
+          "order": 4,
+          "suggested_duration_minutes": 120,
+          "note": "Wild beach — 20 min walk from parking",
+          "day_number": 2
+        },
+        {
+          "place_id": "formentor-beach",
+          "order": 5,
+          "suggested_duration_minutes": 180,
+          "note": "Iconic beach — take boat from Port de Pollença",
+          "day_number": 3
+        },
+        {
+          "place_id": "cala-deia",
+          "order": 6,
+          "suggested_duration_minutes": 90,
+          "note": "Tiny cove — arrive by 9am",
+          "day_number": 3
+        }
       ]
     },
     {
-      "id":"itin-tramuntana-2d","title":"Tramuntana Mountain Circuit","description":"Explore the UNESCO-listed Tramuntana range through ancient olive groves, dramatic sea views, and charming stone villages.","category":"HIKING","duration_days":2,"difficulty":"MODERATE","cover_photo_url":"","best_seasons":["Spring","Autumn"],"tags":["hiking","mountains","villages","UNESCO"],
-      "stops":[
-        {"place_id":"soller","order":1,"suggested_duration_minutes":120,"note":"Take the vintage train from Palma","day_number":1},
-        {"place_id":"barranc-biniaraix","order":2,"suggested_duration_minutes":180,"note":"Gorge walk — 3 hours round trip","day_number":1},
-        {"place_id":"deia","order":3,"suggested_duration_minutes":90,"note":"Overnight in Deià — dinner at Ca's Patro March","day_number":1},
-        {"place_id":"valldemossa","order":4,"suggested_duration_minutes":120,"note":"Visit the Carthusian Monastery","day_number":2},
-        {"place_id":"sa-calobra","order":5,"suggested_duration_minutes":150,"note":"Torrent de Pareis canyon walk","day_number":2},
-        {"place_id":"cap-formentor","order":6,"suggested_duration_minutes":90,"note":"Sunset at the lighthouse","day_number":2}
+      "id": "itin-tramuntana-2d",
+      "title": "Tramuntana Mountain Circuit",
+      "description": "Explore the UNESCO-listed Tramuntana range through ancient olive groves, dramatic sea views, and charming stone villages.",
+      "category": "HIKING",
+      "duration_days": 2,
+      "difficulty": "MODERATE",
+      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/La_Calobra%2C_Escorca%2C_Mallorca%2C_Espa%C3%B1a.JPG/1280px-La_Calobra%2C_Escorca%2C_Mallorca%2C_Espa%C3%B1a.JPG",
+      "best_seasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "tags": [
+        "hiking",
+        "mountains",
+        "villages",
+        "UNESCO"
+      ],
+      "stops": [
+        {
+          "place_id": "soller",
+          "order": 1,
+          "suggested_duration_minutes": 120,
+          "note": "Take the vintage train from Palma",
+          "day_number": 1
+        },
+        {
+          "place_id": "barranc-biniaraix",
+          "order": 2,
+          "suggested_duration_minutes": 180,
+          "note": "Gorge walk — 3 hours round trip",
+          "day_number": 1
+        },
+        {
+          "place_id": "deia",
+          "order": 3,
+          "suggested_duration_minutes": 90,
+          "note": "Overnight in Deià — dinner at Ca's Patro March",
+          "day_number": 1
+        },
+        {
+          "place_id": "valldemossa",
+          "order": 4,
+          "suggested_duration_minutes": 120,
+          "note": "Visit the Carthusian Monastery",
+          "day_number": 2
+        },
+        {
+          "place_id": "sa-calobra",
+          "order": 5,
+          "suggested_duration_minutes": 150,
+          "note": "Torrent de Pareis canyon walk",
+          "day_number": 2
+        },
+        {
+          "place_id": "cap-formentor",
+          "order": 6,
+          "suggested_duration_minutes": 90,
+          "note": "Sunset at the lighthouse",
+          "day_number": 2
+        }
       ]
     },
     {
-      "id":"itin-palma-culture","title":"Palma Cultural Day","description":"A full day exploring Palma's stunning architectural heritage, from Gothic cathedral to contemporary art in the ancient city walls.","category":"CULTURE","duration_days":1,"cover_photo_url":"","best_seasons":["Spring","Autumn","Winter"],"tags":["culture","architecture","art","city"],
-      "stops":[
-        {"place_id":"seu-cathedral","order":1,"suggested_duration_minutes":90,"note":"Morning — book tickets in advance","day_number":1},
-        {"place_id":"es-baluard","order":2,"suggested_duration_minutes":75,"note":"Walk along the old walls from La Seu — free on Saturdays after 3pm","day_number":1},
-        {"place_id":"mercat-santa-catalina","order":3,"suggested_duration_minutes":90,"note":"Lunch in the market neighbourhood","day_number":1},
-        {"place_id":"bellver-castle","order":4,"suggested_duration_minutes":90,"note":"Afternoon — walk up through Bellver forest","day_number":1},
-        {"place_id":"fundacio-miro","order":5,"suggested_duration_minutes":90,"note":"Late afternoon — Miró's preserved studio","day_number":1}
+      "id": "itin-palma-culture",
+      "title": "Palma Cultural Day",
+      "description": "A full day exploring Palma's stunning architectural heritage, from Gothic cathedral to contemporary art in the ancient city walls.",
+      "category": "CULTURE",
+      "duration_days": 1,
+      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Catedral_de_Santa_Maria_%28Palma_de_Mallorca%29_--_03.jpg/1280px-Catedral_de_Santa_Maria_%28Palma_de_Mallorca%29_--_03.jpg",
+      "best_seasons": [
+        "Spring",
+        "Autumn",
+        "Winter"
+      ],
+      "tags": [
+        "culture",
+        "architecture",
+        "art",
+        "city"
+      ],
+      "stops": [
+        {
+          "place_id": "seu-cathedral",
+          "order": 1,
+          "suggested_duration_minutes": 90,
+          "note": "Morning — book tickets in advance",
+          "day_number": 1
+        },
+        {
+          "place_id": "es-baluard",
+          "order": 2,
+          "suggested_duration_minutes": 75,
+          "note": "Walk along the old walls from La Seu — free on Saturdays after 3pm",
+          "day_number": 1
+        },
+        {
+          "place_id": "mercat-santa-catalina",
+          "order": 3,
+          "suggested_duration_minutes": 90,
+          "note": "Lunch in the market neighbourhood",
+          "day_number": 1
+        },
+        {
+          "place_id": "bellver-castle",
+          "order": 4,
+          "suggested_duration_minutes": 90,
+          "note": "Afternoon — walk up through Bellver forest",
+          "day_number": 1
+        },
+        {
+          "place_id": "fundacio-miro",
+          "order": 5,
+          "suggested_duration_minutes": 90,
+          "note": "Late afternoon — Miró's preserved studio",
+          "day_number": 1
+        }
       ]
     },
     {
-      "id":"itin-gastronomy","title":"Mallorcan Gastronomy Tour","description":"Taste the flavours of Mallorca, from the wine country of Binissalem to the food markets of Palma.","category":"GASTRONOMY","duration_days":1,"cover_photo_url":"","best_seasons":["Spring","Autumn"],"tags":["food","wine","market","local"],
-      "stops":[
-        {"place_id":"mercat-santa-catalina","order":1,"suggested_duration_minutes":90,"note":"Morning market breakfast","day_number":1},
-        {"place_id":"bodega-trevin","order":2,"suggested_duration_minutes":90,"note":"Winery tasting — book ahead","day_number":1},
-        {"place_id":"restaurant-juanito","order":3,"suggested_duration_minutes":90,"note":"Traditional Mallorcan lunch","day_number":1},
-        {"place_id":"restaurant-mola","order":4,"suggested_duration_minutes":150,"note":"Michelin-starred dinner — book weeks ahead","day_number":1}
+      "id": "itin-gastronomy",
+      "title": "Mallorcan Gastronomy Tour",
+      "description": "Taste the flavours of Mallorca, from the wine country of Binissalem to the food markets of Palma.",
+      "category": "GASTRONOMY",
+      "duration_days": 1,
+      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mercat_de_Santa_Catalina_I.JPG/1280px-Mercat_de_Santa_Catalina_I.JPG",
+      "best_seasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "tags": [
+        "food",
+        "wine",
+        "market",
+        "local"
+      ],
+      "stops": [
+        {
+          "place_id": "mercat-santa-catalina",
+          "order": 1,
+          "suggested_duration_minutes": 90,
+          "note": "Morning market breakfast",
+          "day_number": 1
+        },
+        {
+          "place_id": "bodega-trevin",
+          "order": 2,
+          "suggested_duration_minutes": 90,
+          "note": "Winery tasting — book ahead",
+          "day_number": 1
+        },
+        {
+          "place_id": "restaurant-juanito",
+          "order": 3,
+          "suggested_duration_minutes": 90,
+          "note": "Traditional Mallorcan lunch",
+          "day_number": 1
+        },
+        {
+          "place_id": "restaurant-mola",
+          "order": 4,
+          "suggested_duration_minutes": 150,
+          "note": "Michelin-starred dinner — book weeks ahead",
+          "day_number": 1
+        }
       ]
     },
     {
-      "id":"itin-east-coast","title":"East Coast Discovery","description":"Explore Mallorca's wild east coast, from prehistoric towns to hidden coves and spectacular sea caves.","category":"BEACH","duration_days":2,"cover_photo_url":"","best_seasons":["Spring","Summer","Autumn"],"tags":["beach","culture","caves","east"],
-      "stops":[
-        {"place_id":"arta","order":1,"suggested_duration_minutes":120,"note":"Medieval hilltop town","day_number":1},
-        {"place_id":"cala-mondrag","order":2,"suggested_duration_minutes":180,"note":"Afternoon beach","day_number":1},
-        {"place_id":"coves-drach","order":3,"suggested_duration_minutes":90,"note":"Dragon Caves underground concert","day_number":2},
-        {"place_id":"cala-varques","order":4,"suggested_duration_minutes":120,"note":"Wild beach — walk through pine forest","day_number":2}
+      "id": "itin-east-coast",
+      "title": "East Coast Discovery",
+      "description": "Explore Mallorca's wild east coast, from prehistoric towns to hidden coves and spectacular sea caves.",
+      "category": "BEACH",
+      "duration_days": 2,
+      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/06_Coves_del_Drac%2C_estalagmita.jpg/1280px-06_Coves_del_Drac%2C_estalagmita.jpg",
+      "best_seasons": [
+        "Spring",
+        "Summer",
+        "Autumn"
+      ],
+      "tags": [
+        "beach",
+        "culture",
+        "caves",
+        "east"
+      ],
+      "stops": [
+        {
+          "place_id": "arta",
+          "order": 1,
+          "suggested_duration_minutes": 120,
+          "note": "Medieval hilltop town",
+          "day_number": 1
+        },
+        {
+          "place_id": "cala-mondrag",
+          "order": 2,
+          "suggested_duration_minutes": 180,
+          "note": "Afternoon beach",
+          "day_number": 1
+        },
+        {
+          "place_id": "coves-drach",
+          "order": 3,
+          "suggested_duration_minutes": 90,
+          "note": "Dragon Caves underground concert",
+          "day_number": 2
+        },
+        {
+          "place_id": "cala-varques",
+          "order": 4,
+          "suggested_duration_minutes": 120,
+          "note": "Wild beach — walk through pine forest",
+          "day_number": 2
+        }
       ]
     },
     {
-      "id":"itin-soller-valley","title":"Sóller Valley Weekend","description":"Spend a weekend in the stunning Sóller valley — vintage trains, mountain walks, village life and seafood.","category":"TOWN","duration_days":2,"cover_photo_url":"","best_seasons":["Spring","Autumn"],"tags":["village","hiking","train","valley"],
-      "stops":[
-        {"place_id":"soller","order":1,"suggested_duration_minutes":120,"note":"Arrive by vintage train from Palma","day_number":1},
-        {"place_id":"mirador-ses-barques","order":2,"suggested_duration_minutes":60,"note":"Viewpoint lunch stop","day_number":1},
-        {"place_id":"kayak-soller","order":3,"suggested_duration_minutes":180,"note":"Afternoon sea kayaking tour","day_number":1},
-        {"place_id":"barranc-biniaraix","order":4,"suggested_duration_minutes":180,"note":"Morning gorge walk","day_number":2},
-        {"place_id":"deia","order":5,"suggested_duration_minutes":90,"note":"Afternoon in Deià village","day_number":2},
-        {"place_id":"cala-deia","order":6,"suggested_duration_minutes":90,"note":"Sunset swim","day_number":2}
+      "id": "itin-soller-valley",
+      "title": "Sóller Valley Weekend",
+      "description": "Spend a weekend in the stunning Sóller valley — vintage trains, mountain walks, village life and seafood.",
+      "category": "TOWN",
+      "duration_days": 2,
+      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tren_de_Soller.jpg/1280px-Tren_de_Soller.jpg",
+      "best_seasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "tags": [
+        "village",
+        "hiking",
+        "train",
+        "valley"
+      ],
+      "stops": [
+        {
+          "place_id": "soller",
+          "order": 1,
+          "suggested_duration_minutes": 120,
+          "note": "Arrive by vintage train from Palma",
+          "day_number": 1
+        },
+        {
+          "place_id": "mirador-ses-barques",
+          "order": 2,
+          "suggested_duration_minutes": 60,
+          "note": "Viewpoint lunch stop",
+          "day_number": 1
+        },
+        {
+          "place_id": "kayak-soller",
+          "order": 3,
+          "suggested_duration_minutes": 180,
+          "note": "Afternoon sea kayaking tour",
+          "day_number": 1
+        },
+        {
+          "place_id": "barranc-biniaraix",
+          "order": 4,
+          "suggested_duration_minutes": 180,
+          "note": "Morning gorge walk",
+          "day_number": 2
+        },
+        {
+          "place_id": "deia",
+          "order": 5,
+          "suggested_duration_minutes": 90,
+          "note": "Afternoon in Deià village",
+          "day_number": 2
+        },
+        {
+          "place_id": "cala-deia",
+          "order": 6,
+          "suggested_duration_minutes": 90,
+          "note": "Sunset swim",
+          "day_number": 2
+        }
       ]
     },
     {
-      "id":"itin-west-coast-miradors","title":"West Coast Mirador Drive","description":"A spectacular day following the dramatic west coast road (Ma-10), stopping at Mallorca's finest clifftop viewpoints from Andratx to Deià with views of the Tramuntana mountains plunging into the sea.","category":"VIEWPOINT","duration_days":1,"cover_photo_url":"","best_seasons":["Spring","Autumn","Winter"],"tags":["viewpoint","westcoast","drive","tramuntana","sunset","miradors"],
-      "stops":[
-        {"place_id":"mirador-ricardo-roca","order":1,"suggested_duration_minutes":45,"note":"First stop heading north on the Ma-10 — dramatic cliff views","day_number":1},
-        {"place_id":"mirador-ses-animes","order":2,"suggested_duration_minutes":60,"note":"Climb the 16th-century watchtower — views to Sa Dragonera","day_number":1},
-        {"place_id":"sa-foradada","order":3,"suggested_duration_minutes":90,"note":"Walk down from Son Marroig to the pierced rock headland","day_number":1},
-        {"place_id":"mirador-ses-barques","order":4,"suggested_duration_minutes":60,"note":"Lunch stop with views over Port de Sóller bay","day_number":1},
-        {"place_id":"cap-formentor","order":5,"suggested_duration_minutes":90,"note":"Late afternoon at the dramatic northern cape","day_number":1}
+      "id": "itin-west-coast-miradors",
+      "title": "West Coast Mirador Drive",
+      "description": "A spectacular day following the dramatic west coast road (Ma-10), stopping at Mallorca's finest clifftop viewpoints from Andratx to Deià with views of the Tramuntana mountains plunging into the sea.",
+      "category": "VIEWPOINT",
+      "duration_days": 1,
+      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Torre_des_Verger-pjt1.jpg/1280px-Torre_des_Verger-pjt1.jpg",
+      "best_seasons": [
+        "Spring",
+        "Autumn",
+        "Winter"
+      ],
+      "tags": [
+        "viewpoint",
+        "westcoast",
+        "drive",
+        "tramuntana",
+        "sunset",
+        "miradors"
+      ],
+      "stops": [
+        {
+          "place_id": "mirador-ricardo-roca",
+          "order": 1,
+          "suggested_duration_minutes": 45,
+          "note": "First stop heading north on the Ma-10 — dramatic cliff views",
+          "day_number": 1
+        },
+        {
+          "place_id": "mirador-ses-animes",
+          "order": 2,
+          "suggested_duration_minutes": 60,
+          "note": "Climb the 16th-century watchtower — views to Sa Dragonera",
+          "day_number": 1
+        },
+        {
+          "place_id": "sa-foradada",
+          "order": 3,
+          "suggested_duration_minutes": 90,
+          "note": "Walk down from Son Marroig to the pierced rock headland",
+          "day_number": 1
+        },
+        {
+          "place_id": "mirador-ses-barques",
+          "order": 4,
+          "suggested_duration_minutes": 60,
+          "note": "Lunch stop with views over Port de Sóller bay",
+          "day_number": 1
+        },
+        {
+          "place_id": "cap-formentor",
+          "order": 5,
+          "suggested_duration_minutes": 90,
+          "note": "Late afternoon at the dramatic northern cape",
+          "day_number": 1
+        }
       ]
     },
     {
-      "id":"itin-formentor-viewpoints","title":"Formentor Peninsula Sunrise","description":"Rise early for the most photogenic viewpoints on the Formentor peninsula — the iconic Es Colomer lookout and the historic lighthouse at the island's northern tip, best seen in the golden morning light.","category":"VIEWPOINT","duration_days":1,"cover_photo_url":"","best_seasons":["Spring","Summer","Autumn"],"tags":["viewpoint","formentor","sunrise","lighthouse","peninsula","iconic"],
-      "stops":[
-        {"place_id":"mirador-es-colomer","order":1,"suggested_duration_minutes":60,"note":"Arrive at sunrise — the cliffs glow orange in early light","day_number":1},
-        {"place_id":"faro-formentor","order":2,"suggested_duration_minutes":75,"note":"The lighthouse at the very tip of the island — follow the path for extra lookouts","day_number":1},
-        {"place_id":"formentor-beach","order":3,"suggested_duration_minutes":120,"note":"Morning swim at legendary Playa de Formentor on the way back","day_number":1}
+      "id": "itin-formentor-viewpoints",
+      "title": "Formentor Peninsula Sunrise",
+      "description": "Rise early for the most photogenic viewpoints on the Formentor peninsula — the iconic Es Colomer lookout and the historic lighthouse at the island's northern tip, best seen in the golden morning light.",
+      "category": "VIEWPOINT",
+      "duration_days": 1,
+      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Far_de_Formentor_-_Majorca_-_01.jpg/1280px-Far_de_Formentor_-_Majorca_-_01.jpg",
+      "best_seasons": [
+        "Spring",
+        "Summer",
+        "Autumn"
+      ],
+      "tags": [
+        "viewpoint",
+        "formentor",
+        "sunrise",
+        "lighthouse",
+        "peninsula",
+        "iconic"
+      ],
+      "stops": [
+        {
+          "place_id": "mirador-es-colomer",
+          "order": 1,
+          "suggested_duration_minutes": 60,
+          "note": "Arrive at sunrise — the cliffs glow orange in early light",
+          "day_number": 1
+        },
+        {
+          "place_id": "faro-formentor",
+          "order": 2,
+          "suggested_duration_minutes": 75,
+          "note": "The lighthouse at the very tip of the island — follow the path for extra lookouts",
+          "day_number": 1
+        },
+        {
+          "place_id": "formentor-beach",
+          "order": 3,
+          "suggested_duration_minutes": 120,
+          "note": "Morning swim at legendary Playa de Formentor on the way back",
+          "day_number": 1
+        }
       ]
     }
   ]

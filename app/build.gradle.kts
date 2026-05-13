@@ -98,6 +98,9 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
 
+    implementation(libs.coil.compose)
+    implementation(libs.okhttp)
+
     implementation(libs.timber)
     implementation(libs.kotlinx.serialization.json)
 
