@@ -19,15 +19,22 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.material.icons.outlined.BookmarkAdd
+import androidx.compose.material.icons.outlined.CheckCircle
+import androidx.compose.material.icons.outlined.Map
+import androidx.compose.material.icons.outlined.RadioButtonUnchecked
+import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
-import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.ModalBottomSheet
 import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -41,6 +48,9 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.ItineraryStop
+import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
+import kotlinx.collections.immutable.ImmutableSet
+import kotlinx.collections.immutable.persistentSetOf
 
 @Composable
 fun ItineraryDetailScreen(
@@ -48,31 +58,143 @@ fun ItineraryDetailScreen(
     onBack: () -> Unit,
     onPlaceClick: (String) -> Unit,
     onSaveToTrip: () -> Unit,
+    onViewOnMap: () -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: ItineraryDetailViewModel = hiltViewModel(),
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     when {
-        uiState.isLoading -> Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-            CircularProgressIndicator()
+        uiState.isLoading -> ItineraryLoadingSkeleton()
+        uiState.itinerary != null -> {
+            ItineraryDetailContent(
+                itinerary = uiState.itinerary!!,
+                visitedPlaceIds = uiState.visitedPlaceIds,
+                supStatus = uiState.supStatus,
+                weatherIsStale = uiState.weatherIsStale,
+                weatherLoadFailed = uiState.weatherLoadFailed,
+                onStopToggle = viewModel::toggleStop,
+                onBack = onBack,
+                onPlaceClick = onPlaceClick,
+                onSaveToTrip = onSaveToTrip,
+                onViewOnMap = onViewOnMap,
+                modifier = modifier,
+            )
+            if (uiState.showQrWelcome) {
+                QrWelcomeSheet(
+                    supStatus = uiState.supStatus,
+                    onDismiss = viewModel::dismissQrWelcome,
+                    onSaveRoute = { viewModel.dismissQrWelcome(); onSaveToTrip() },
+                )
+            }
         }
-        uiState.itinerary != null -> ItineraryDetailContent(
-            itinerary = uiState.itinerary!!,
-            onBack = onBack,
-            onPlaceClick = onPlaceClick,
-            onSaveToTrip = onSaveToTrip,
-            modifier = modifier,
-        )
+        else -> {
+            androidx.compose.foundation.layout.Box(
+                modifier = modifier.fillMaxSize(),
+                contentAlignment = androidx.compose.ui.Alignment.Center,
+            ) {
+                androidx.compose.foundation.layout.Column(
+                    horizontalAlignment = androidx.compose.ui.Alignment.CenterHorizontally,
+                    verticalArrangement = androidx.compose.foundation.layout.Arrangement.spacedBy(12.dp),
+                ) {
+                    Text("🗺️", style = MaterialTheme.typography.displayLarge)
+                    Text(
+                        "Ruta no encontrada",
+                        style = MaterialTheme.typography.titleMedium,
+                        fontWeight = FontWeight.Bold,
+                    )
+                    Text(
+                        "Esta ruta no está disponible.\nVuelve al mapa para explorar otras actividades.",
+                        style = MaterialTheme.typography.bodyMedium,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                    )
+                    Spacer(Modifier.height(8.dp))
+                    Button(onClick = onBack) { Text("Volver al mapa") }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun ItineraryLoadingSkeleton() {
+    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
+        Column(
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            Text("🏄", style = MaterialTheme.typography.displayLarge)
+            Text(
+                "Cargando condiciones del mar...",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            LinearProgressIndicator(modifier = Modifier.width(200.dp))
+        }
+    }
+}
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+private fun QrWelcomeSheet(
+    supStatus: SUPWeatherStatus?,
+    onDismiss: () -> Unit,
+    onSaveRoute: () -> Unit,
+) {
+    ModalBottomSheet(onDismissRequest = onDismiss) {
+        Column(
+            modifier = Modifier.padding(horizontal = 24.dp).padding(bottom = 32.dp),
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            Text(
+                "🏄 Ruta SUP · Cala Sant Vicenç",
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+            )
+            supStatus?.let { status ->
+                Row(
+                    horizontalArrangement = Arrangement.spacedBy(12.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    Text(status.trafficLight.emoji, style = MaterialTheme.typography.headlineMedium)
+                    Column {
+                        Text(status.trafficLight.label, style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                        Text(status.trafficLight.detail, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
+                }
+            }
+            Text(
+                "Guarda esta ruta para consultarla sin conexión o volver mañana.",
+                style = MaterialTheme.typography.bodyMedium,
+                color = MaterialTheme.colorScheme.onSurfaceVariant,
+            )
+            Button(
+                onClick = onSaveRoute,
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(12.dp),
+            ) {
+                Text("Guardar ruta para más tarde")
+            }
+            TextButton(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) {
+                Text("Ahora no")
+            }
+        }
     }
 }
 
 @Composable
 private fun ItineraryDetailContent(
     itinerary: Itinerary,
+    visitedPlaceIds: ImmutableSet<String>,
+    supStatus: SUPWeatherStatus? = null,
+    weatherIsStale: Boolean = false,
+    weatherLoadFailed: Boolean = false,
+    onStopToggle: (String) -> Unit,
     onBack: () -> Unit,
     onPlaceClick: (String) -> Unit,
     onSaveToTrip: () -> Unit,
+    onViewOnMap: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Box(modifier = modifier.fillMaxSize()) {
@@ -113,6 +235,21 @@ private fun ItineraryDetailContent(
             }
 
             Column(modifier = Modifier.padding(16.dp)) {
+
+                // ── BLOQUE 1: Alerta climática SUP (solo si es ruta QR con weather_config) ──
+                if (itinerary.isQrLanding) {
+                    when {
+                        supStatus != null -> SupWeatherAlertCard(
+                            supStatus = supStatus,
+                            tramuntanaNoteEs = itinerary.weatherConfig?.tramuntanaNoteEs ?: "",
+                            caveEntryMaxWaveM = itinerary.weatherConfig?.caveEntryMaxWaveM,
+                            isStale = weatherIsStale,
+                        )
+                        weatherLoadFailed -> OfflineWeatherWarning()
+                    }
+                    Spacer(Modifier.height(16.dp))
+                }
+
                 // Tags/badges
                 if (itinerary.bestSeasons.isNotEmpty() || itinerary.tags.isNotEmpty()) {
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
@@ -127,6 +264,37 @@ private fun ItineraryDetailContent(
                     Spacer(Modifier.height(16.dp))
                 }
 
+                // Progress bar
+                val totalStops = itinerary.places.size
+                val visitedCount = visitedPlaceIds.size
+                if (totalStops > 0) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                    ) {
+                        LinearProgressIndicator(
+                            progress = { visitedCount.toFloat() / totalStops },
+                            modifier = Modifier.weight(1f).height(6.dp).clip(RoundedCornerShape(3.dp)),
+                        )
+                        Text(
+                            "$visitedCount/$totalStops",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.primary,
+                            fontWeight = FontWeight.Bold,
+                        )
+                    }
+                    Spacer(Modifier.height(16.dp))
+                }
+
+                // ── BLOQUE 2: Timeline de ruta SUP (reemplaza stops genéricos si hay waypoints) ──
+                if (itinerary.routeWaypoints.isNotEmpty()) {
+                    Text("Ruta paso a paso", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Spacer(Modifier.height(10.dp))
+                    SupRouteTimeline(waypoints = itinerary.routeWaypoints)
+                    Spacer(Modifier.height(16.dp))
+                }
+
                 // Stops by day
                 val stopsByDay = itinerary.places.groupBy { it.dayNumber }
                 stopsByDay.entries.sortedBy { it.key }.forEach { (day, stops) ->
@@ -137,23 +305,42 @@ private fun ItineraryDetailContent(
                             stop = stop,
                             number = idx + 1,
                             isLast = idx == stops.lastIndex,
+                            isVisited = stop.place.id in visitedPlaceIds,
+                            onToggleVisited = { onStopToggle(stop.place.id) },
                             onClick = { onPlaceClick(stop.place.id) },
                         )
                     }
                     Spacer(Modifier.height(16.dp))
                 }
 
+                // ── BLOQUE 3: CTA comercial (alquiler SUP) ──
+                itinerary.commercialBlock?.let { block ->
+                    Spacer(Modifier.height(8.dp))
+                    SupCommercialBlock(block = block)
+                }
+
                 Spacer(Modifier.height(72.dp))
             }
         }
 
-        // FAB
-        ExtendedFloatingActionButton(
-            onClick = onSaveToTrip,
+        // FABs
+        Row(
             modifier = Modifier.align(Alignment.BottomEnd).padding(16.dp),
-            icon = { Icon(Icons.Outlined.BookmarkAdd, null) },
-            text = { Text("Save to My Trips") },
-        )
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            ExtendedFloatingActionButton(
+                onClick = onViewOnMap,
+                containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
+                icon = { Icon(Icons.Outlined.Map, null) },
+                text = { Text("View on Map") },
+            )
+            ExtendedFloatingActionButton(
+                onClick = onSaveToTrip,
+                icon = { Icon(Icons.Outlined.BookmarkAdd, null) },
+                text = { Text("Save to Trips") },
+            )
+        }
     }
 }
 
@@ -162,13 +349,16 @@ private fun TimelineItem(
     stop: ItineraryStop,
     number: Int,
     isLast: Boolean,
+    isVisited: Boolean,
+    onToggleVisited: () -> Unit,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Row(modifier = modifier.padding(bottom = 8.dp)) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Box(
-                modifier = Modifier.size(32.dp).clip(CircleShape).background(MaterialTheme.colorScheme.primary),
+                modifier = Modifier.size(32.dp).clip(CircleShape)
+                    .background(if (isVisited) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.primary),
                 contentAlignment = Alignment.Center,
             ) {
                 Text("$number", style = MaterialTheme.typography.labelMedium, color = Color.White, fontWeight = FontWeight.Bold)
@@ -184,20 +374,34 @@ private fun TimelineItem(
             elevation = CardDefaults.cardElevation(1.dp),
             onClick = onClick,
         ) {
-            Column(modifier = Modifier.padding(10.dp)) {
-                Text(
-                    "${stop.place.category.emoji} ${stop.place.name}",
-                    style = MaterialTheme.typography.bodyMedium,
-                    fontWeight = FontWeight.SemiBold,
-                )
-                Text(
-                    "⏱ ~${stop.suggestedDurationMinutes / 60}h ${stop.suggestedDurationMinutes % 60}m",
-                    style = MaterialTheme.typography.labelSmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                )
-                stop.note?.let {
-                    Spacer(Modifier.height(4.dp))
-                    Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            Row(
+                modifier = Modifier.padding(10.dp),
+                verticalAlignment = Alignment.Top,
+            ) {
+                Column(modifier = Modifier.weight(1f)) {
+                    Text(
+                        "${stop.place.category.emoji} ${stop.place.name}",
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.SemiBold,
+                        color = if (isVisited) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface,
+                    )
+                    Text(
+                        "⏱ ~${stop.suggestedDurationMinutes / 60}h ${stop.suggestedDurationMinutes % 60}m",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                    stop.note?.let {
+                        Spacer(Modifier.height(4.dp))
+                        Text(it, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                    }
+                }
+                IconButton(onClick = onToggleVisited, modifier = Modifier.size(32.dp)) {
+                    Icon(
+                        if (isVisited) Icons.Outlined.CheckCircle else Icons.Outlined.RadioButtonUnchecked,
+                        contentDescription = "Toggle visited",
+                        tint = if (isVisited) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.size(22.dp),
+                    )
                 }
             }
         }

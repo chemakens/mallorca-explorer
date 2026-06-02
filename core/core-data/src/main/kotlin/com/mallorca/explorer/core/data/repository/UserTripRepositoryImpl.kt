@@ -10,6 +10,7 @@ import com.mallorca.explorer.core.domain.model.UserTripStop
 import com.mallorca.explorer.core.domain.repository.UserTripRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
 import java.time.Instant
@@ -94,8 +95,7 @@ class UserTripRepositoryImpl @Inject constructor(
         userTripDao.deleteStop(tripId, placeId)
 
     override suspend fun reorderStops(tripId: String, orderedPlaceIds: List<String>) {
-        val existing = mutableListOf<UserTripStopEntity>()
-        userTripDao.getStopsForTrip(tripId).collect { existing.addAll(it); return@collect }
+        val existing = userTripDao.getStopsForTrip(tripId).first()
         val reordered = orderedPlaceIds.mapIndexed { idx, placeId ->
             existing.first { it.placeId == placeId }.copy(order = idx)
         }
@@ -103,11 +103,7 @@ class UserTripRepositoryImpl @Inject constructor(
     }
 
     override suspend fun markStopVisited(tripId: String, placeId: String) {
-        var stop: UserTripStopEntity? = null
-        userTripDao.getStopsForTrip(tripId).collect { stops ->
-            stop = stops.find { it.placeId == placeId }
-            return@collect
-        }
+        val stop = userTripDao.getStopsForTrip(tripId).first().find { it.placeId == placeId }
         stop?.let {
             userTripDao.upsertStop(
                 it.copy(isVisited = true, visitedAtEpoch = Instant.now().toEpochMilli())

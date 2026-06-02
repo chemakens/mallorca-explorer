@@ -18,6 +18,7 @@ object DatabaseModule {
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context): MallorcaDatabase =
         Room.databaseBuilder(context, MallorcaDatabase::class.java, "mallorca_explorer.db")
+            .addMigrations(MallorcaDatabase.MIGRATION_8_9, MallorcaDatabase.MIGRATION_9_10, MallorcaDatabase.MIGRATION_10_11)
             .fallbackToDestructiveMigration()
             .build()
 
@@ -25,4 +26,11 @@ object DatabaseModule {
     @Provides fun provideItineraryDao(db: MallorcaDatabase) = db.itineraryDao()
     @Provides fun provideUserTripDao(db: MallorcaDatabase) = db.userTripDao()
     @Provides fun provideFavoriteDao(db: MallorcaDatabase) = db.favoriteDao()
+    @Provides fun provideWeatherDao(db: MallorcaDatabase): com.mallorca.explorer.core.data.database.dao.WeatherDao = db.weatherDao()
+    @Provides fun provideEventDao(db: MallorcaDatabase) = db.eventDao()
+    @Provides fun provideStopProgressDao(db: MallorcaDatabase) = db.stopProgressDao()
+    @Provides fun provideHiddenGemDao(db: MallorcaDatabase) = db.hiddenGemDao()
+    @Provides fun provideDiscountDao(db: MallorcaDatabase) = db.discountDao()
+    @Provides fun provideVisitedPlaceDao(db: MallorcaDatabase) = db.visitedPlaceDao()
+    @Provides fun provideRecentlyViewedDao(db: MallorcaDatabase) = db.recentlyViewedDao()
 }

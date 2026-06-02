@@ -7,6 +7,17 @@ data class Place(
     val name: String,
     val nameEs: String,
     val description: String,
+    val descriptionEs: String = "",
+    val nameDe: String = "",
+    val nameRu: String = "",
+    val nameZh: String = "",
+    val descriptionDe: String = "",
+    val descriptionRu: String = "",
+    val descriptionZh: String = "",
+    val tipsEs: List<String> = emptyList(),
+    val tipsDe: List<String> = emptyList(),
+    val tipsRu: List<String> = emptyList(),
+    val tipsZh: List<String> = emptyList(),
     val category: Category,
     val subCategories: List<String> = emptyList(),
     val location: LatLng,
@@ -21,8 +32,11 @@ data class Place(
     val tips: List<String> = emptyList(),
     val website: String? = null,
     val phoneNumber: String? = null,
+    val ticketUrl: String? = null,
     val isOfflineCached: Boolean = false,
     val isFavorite: Boolean = false,
+    val isVisited: Boolean = false,
+    val distanceKm: Double? = null,
     val lastUpdated: Instant = Instant.now(),
 )
 
@@ -41,4 +55,4 @@ data class OpeningPeriod(
     val closeMinute: Int,
 )
 
-enum class PriceLevel { FREE, BUDGET, MID, EXPENSIVE }
+enum class PriceLevel { FREE, BUDGET, MID, EXPENSIVE, PREMIUM }

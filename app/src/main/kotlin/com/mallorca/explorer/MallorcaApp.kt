@@ -8,8 +8,14 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import coil.ImageLoader
 import coil.ImageLoaderFactory
+import com.mallorca.explorer.core.common.LocaleSource
+import com.mallorca.explorer.core.data.datastore.UserPreferencesDataStore
 import com.mallorca.explorer.core.data.sync.SeedDataWorker
+import com.mallorca.explorer.notification.DailyEventCheckWorker
+import com.mallorca.explorer.notification.createNotificationChannel
 import dagger.hilt.android.HiltAndroidApp
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.runBlocking
 import okhttp3.OkHttpClient
 import timber.log.Timber
 import javax.inject.Inject
@@ -18,6 +24,8 @@ import javax.inject.Inject
 class MallorcaApp : Application(), Configuration.Provider, ImageLoaderFactory {
 
     @Inject lateinit var workerFactory: HiltWorkerFactory
+    @Inject lateinit var prefsDataStore: UserPreferencesDataStore
+    @Inject lateinit var localeSource: LocaleSource
 
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
@@ -40,11 +48,14 @@ class MallorcaApp : Application(), Configuration.Provider, ImageLoaderFactory {
 
     override fun onCreate() {
         super.onCreate()
+        runBlocking { localeSource.setLocale(prefsDataStore.selectedLocale.first()) }
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
         WorkManager.getInstance(this).enqueueUniqueWork(
             "seed_data",
-            ExistingWorkPolicy.KEEP,
+            ExistingWorkPolicy.REPLACE,
             OneTimeWorkRequestBuilder<SeedDataWorker>().build(),
         )
+        createNotificationChannel(this)
+        DailyEventCheckWorker.schedule(this)
     }
 }

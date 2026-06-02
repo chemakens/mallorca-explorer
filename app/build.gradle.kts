@@ -62,6 +62,7 @@ android {
 }
 
 dependencies {
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.0")
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
     implementation(project(":core:core-common"))
@@ -74,12 +75,15 @@ dependencies {
     implementation(project(":feature:feature-itinerary"))
     implementation(project(":feature:feature-trips"))
     implementation(project(":feature:feature-favorites"))
+    implementation(project(":feature:feature-settings"))
+    implementation(project(":feature:feature-gems"))
 
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.material3)
     implementation(libs.compose.material.icons.extended)
     implementation(libs.compose.foundation)
+    implementation(libs.compose.animation)
     implementation(libs.activity.compose)
     implementation(libs.navigation.compose)
     implementation(libs.lifecycle.runtime.ktx)
@@ -94,6 +98,8 @@ dependencies {
     implementation(libs.hilt.work)
     ksp(libs.hilt.compiler.androidx)
     implementation(libs.work.runtime.ktx)
+    implementation(libs.glance.appwidget)
+    implementation(libs.glance.material3)
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
