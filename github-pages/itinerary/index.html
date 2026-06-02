@@ -346,7 +346,7 @@
     var params      = new URLSearchParams(window.location.search);
     var itineraryId = (params.get('itineraryId') || '').trim();
     var SCHEME_URL  = itineraryId
-      ? 'mallorca://itinerary?itineraryId=' + encodeURIComponent(itineraryId)
+      ? 'intent://itinerary?itineraryId=' + encodeURIComponent(itineraryId) + '#Intent;scheme=mallorca;package=com.mallorca.explorer;end'
       : '';
 
     btnManual.href = SCHEME_URL || '#';
