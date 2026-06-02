@@ -16,6 +16,13 @@ data class ItineraryEntity(
     val highlightsJson: String,
     val bestSeasonsJson: String,
     val tagsJson: String,
+    // JSON: {"es":{"title":"…","description":"…","highlights":[…]},"de":{…}}
+    val translationsJson: String = "{}",
+    // SUP/QR extended fields — DB v9
+    val weatherConfigJson: String? = null,
+    val qrEntryPointJson: String? = null,
+    val commercialBlockJson: String? = null,
+    val routeWaypointsJson: String = "[]",
 )
 
 @Entity(tableName = "itinerary_stops", primaryKeys = ["itineraryId", "placeId"])
@@ -25,5 +32,7 @@ data class ItineraryStopEntity(
     val order: Int,
     val suggestedDurationMinutes: Int,
     val note: String?,
+    val noteEs: String? = null,
+    val noteDe: String? = null,
     val dayNumber: Int,
 )

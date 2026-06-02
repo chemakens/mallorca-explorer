@@ -14,6 +14,10 @@ private val LightColorScheme = lightColorScheme(
     secondary = Terracotta,
     onSecondary = NeutralWhite,
     secondaryContainer = TerracottaContainer,
+    onSecondaryContainer = AzureDark,
+    tertiary = OliveGreen,
+    onTertiary = NeutralWhite,
+    tertiaryContainer = OliveContainer,
     background = NeutralSurface,
     surface = NeutralWhite,
     onSurface = NeutralOnSurface,
@@ -23,11 +27,23 @@ private val LightColorScheme = lightColorScheme(
 
 private val DarkColorScheme = darkColorScheme(
     primary = AzureLight,
-    onPrimary = AzureDark,
-    primaryContainer = AzureDark,
+    onPrimary = DarkBackground,
+    primaryContainer = DarkPrimaryContainer,
+    onPrimaryContainer = AzureContainer,
     secondary = Terracotta,
-    background = Color(0xFF1C1B1F),
-    surface = Color(0xFF2B2930),
+    onSecondary = NeutralWhite,
+    secondaryContainer = DarkSecondaryContainer,
+    onSecondaryContainer = DarkOnSecondaryContainer,
+    tertiary = OliveGreen,
+    onTertiary = NeutralWhite,
+    tertiaryContainer = DarkTertiaryContainer,
+    onTertiaryContainer = DarkOnTertiaryContainer,
+    background = DarkBackground,
+    surface = DarkSurface,
+    surfaceVariant = DarkSurfaceVariant,
+    onSurface = DarkOnSurface,
+    onSurfaceVariant = DarkOnSurfaceVariant,
+    outline = DarkOutline,
 )
 
 @Composable
@@ -41,5 +57,3 @@ fun MallorcaTheme(
         content = content,
     )
 }
-
-private fun Color(value: Long) = androidx.compose.ui.graphics.Color(value.toULong())

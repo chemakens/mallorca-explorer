@@ -33,6 +33,9 @@ interface PlaceDao {
     @Upsert
     suspend fun upsert(place: PlaceEntity)
 
+    @Query("DELETE FROM places WHERE id IN (:ids)")
+    suspend fun deleteByIds(ids: List<String>)
+
     @Query("SELECT COUNT(*) FROM places")
     suspend fun count(): Int
 }

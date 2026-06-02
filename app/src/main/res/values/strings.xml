@@ -5,4 +5,6 @@
     <string name="nav_explore">Explore</string>
     <string name="nav_trips">My Trips</string>
     <string name="nav_favorites">Favorites</string>
+    <string name="nav_gems">Gemas</string>
+    <string name="widget_description">Tiempo y estado del paddle surf en Mallorca</string>
 </resources>

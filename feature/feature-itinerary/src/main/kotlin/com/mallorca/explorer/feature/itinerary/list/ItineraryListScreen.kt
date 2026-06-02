@@ -14,8 +14,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.layout.size
+import androidx.compose.ui.draw.clip
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowBack
+import androidx.compose.material.icons.outlined.WorkspacePremium
+import com.mallorca.explorer.core.ui.component.PlaceCard
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -45,6 +49,7 @@ fun ItineraryListScreen(
     category: String?,
     onItineraryClick: (String) -> Unit,
     onBack: () -> Unit,
+    onPlaceClick: (String) -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: ItineraryListViewModel = hiltViewModel(),
 ) {
@@ -66,8 +71,36 @@ fun ItineraryListScreen(
                 .fillMaxSize()
                 .padding(padding),
         ) {
-            items(uiState.itineraries, key = { it.id }) { itin ->
-                ItineraryListItem(itinerary = itin, onClick = { onItineraryClick(itin.id) })
+            // Itineraries section
+            if (uiState.itineraries.isNotEmpty()) {
+                if (uiState.places.isNotEmpty()) {
+                    item {
+                        Text(
+                            "Rutas",
+                            style = MaterialTheme.typography.titleSmall,
+                            color = MaterialTheme.colorScheme.primary,
+                            modifier = Modifier.padding(bottom = 4.dp),
+                        )
+                    }
+                }
+                items(uiState.itineraries, key = { it.id }) { itin ->
+                    ItineraryListItem(itinerary = itin, onClick = { onItineraryClick(itin.id) })
+                }
+            }
+
+            // Places section
+            if (uiState.places.isNotEmpty()) {
+                item {
+                    Text(
+                        "Lugares",
+                        style = MaterialTheme.typography.titleSmall,
+                        color = MaterialTheme.colorScheme.primary,
+                        modifier = Modifier.padding(top = if (uiState.itineraries.isNotEmpty()) 8.dp else 0.dp, bottom = 4.dp),
+                    )
+                }
+                items(uiState.places, key = { it.id }) { place ->
+                    PlaceCard(place = place, onClick = { onPlaceClick(place.id) })
+                }
             }
         }
     }
@@ -79,6 +112,8 @@ private fun ItineraryListItem(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val isPremium = itinerary.tags.any { it == "luxury" || it == "premium" }
+
     Card(
         modifier = modifier
             .fillMaxWidth()
@@ -121,6 +156,33 @@ private fun ItineraryListItem(
                         )
                     )
             )
+
+            // Premium badge
+            if (isPremium) {
+                Row(
+                    modifier = Modifier
+                        .align(Alignment.TopEnd)
+                        .padding(10.dp)
+                        .clip(RoundedCornerShape(20.dp))
+                        .background(Color(0xFFFFD700))
+                        .padding(horizontal = 10.dp, vertical = 5.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(4.dp),
+                ) {
+                    Icon(
+                        Icons.Outlined.WorkspacePremium,
+                        contentDescription = null,
+                        tint = Color(0xFF5C3D00),
+                        modifier = Modifier.size(13.dp),
+                    )
+                    Text(
+                        "PREMIUM",
+                        style = MaterialTheme.typography.labelSmall,
+                        fontWeight = FontWeight.ExtraBold,
+                        color = Color(0xFF5C3D00),
+                    )
+                }
+            }
 
             // Text overlay
             Column(

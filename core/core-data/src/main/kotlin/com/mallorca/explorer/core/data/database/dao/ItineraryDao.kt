@@ -34,6 +34,9 @@ interface ItineraryDao {
         upsertStops(stops)
     }
 
+    @Query("DELETE FROM itinerary_stops WHERE placeId IN (:placeIds)")
+    suspend fun deleteStopsByPlaceIds(placeIds: List<String>)
+
     @Query("SELECT COUNT(*) FROM itineraries")
     suspend fun count(): Int
 }

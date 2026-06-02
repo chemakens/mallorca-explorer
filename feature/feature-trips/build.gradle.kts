@@ -34,5 +34,6 @@ dependencies {
     implementation(libs.hilt.navigation.compose)
     implementation(libs.coil.compose)
     implementation(libs.kotlinx.collections.immutable)
+    implementation(libs.maplibre.android)
     debugImplementation(libs.compose.ui.tooling)
 }

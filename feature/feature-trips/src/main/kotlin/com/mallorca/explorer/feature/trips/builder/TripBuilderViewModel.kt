@@ -70,6 +70,14 @@ class TripBuilderViewModel @Inject constructor(
     fun onShowAddSheet() { showAddSheet.value = true }
     fun onDismissAddSheet() { showAddSheet.value = false; searchQuery.value = "" }
 
+    fun renameTrip(newName: String) {
+        val id = tripId ?: return
+        viewModelScope.launch {
+            val trip = uiState.value.trip ?: return@launch
+            userTripRepository.updateTrip(trip.copy(name = newName))
+        }
+    }
+
     fun onAddPlace(place: Place) {
         val id = tripId ?: return
         viewModelScope.launch {
