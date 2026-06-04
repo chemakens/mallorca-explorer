@@ -4,53 +4,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ruta SUP · Mallorca Explorer</title>
+    <title>Ruta Acantilados de Cavall Bernat · Mallorca Explorer</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        /* ── Carousel ── */
+        .carousel {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .carousel-track {
+            display: flex;
+            height: 100%;
+            transition: transform 0.35s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.45);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .carousel-btn.prev { left: 10px; }
+        .carousel-btn.next { right: 10px; }
+
+        .carousel-dots {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 6px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .dot.active { background: white; }
+
+        /* ── Counter ── */
+        .carousel-counter {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            background: rgba(0,0,0,0.45);
+            color: white;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 12px;
+        }
+
+        /* ── Content ── */
+        .content {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px 16px 40px;
+        }
+
+        .title-block { padding: 16px 0 4px; }
+        .title-block h1 { font-size: 1.3rem; font-weight: 700; line-height: 1.3; }
+        .title-block h2 { font-size: 0.95rem; color: #555; font-weight: 400; margin-top: 4px; }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 12px 0;
+        }
+        .tag {
+            background: #e8f4fd;
+            color: #0077b6;
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 16px 0;
+        }
+        .stat {
+            background: white;
+            border-radius: 10px;
+            padding: 12px 14px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+        }
+        .stat .label { font-size: 0.72rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+        .stat .value { font-size: 1rem; font-weight: 600; margin-top: 2px; }
+
+        .description {
+            background: white;
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+            margin: 16px 0;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        hr { border: none; border-top: 1px solid #e0e0e0; margin: 20px 0; }
+
+        .cta { text-align: center; padding: 10px 0; }
+        .cta p { color: #555; margin-bottom: 14px; font-size: 0.95rem; }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin: 5px;
+        }
+        .btn-primary { background: #00bf63; color: white; }
+        .btn-secondary { background: #1a1a2e; color: white; }
+
+        .note {
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: #aaa;
+            text-align: center;
+        }
+
+        /* ── Map ── */
+        .map-section { margin: 16px 0; }
+        .map-section h3 { font-size: 0.85rem; color: #888; text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 10px; }
+        #map {
+            width: 100%;
+            height: 260px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+        }
+        .stop-label {
+            background: white;
+            border: 2px solid #0077b6;
+            border-radius: 6px;
+            padding: 2px 7px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #0077b6;
+            white-space: nowrap;
+        }
+    </style>
 </head>
 
-<body style="font-family: sans-serif; background-color: #f4f4f9; padding: 20px;">
+<body>
 
-    <header style="text-align: center; padding: 20px;">
-        <h1>Mallorca Explorer 🏄</h1>
-        <h2>Ruta SUP · Norte de Mallorca</h2>
-        <h3>Cala Sant Vicenç · Cala Boquer · Cova Azul</h3>
-    </header>
-
-    <main
-        style="max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <p>Ruta de paddle surf por los acantilados del norte.</p>
-        <p>Condiciones del mar en tiempo real dentro de la app.</p>
-
-        <ul style="list-style-type: none; padding-left: 0; line-height: 2;">
-            <li>📍 Cala Molins, Sant Vicenç</li>
-            <li>⏱ 3 – 4 h</li>
-            <li>📏 ~11 km</li>
-            <li>🌊 Dificultad media</li>
-        </ul>
-
-        <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
-
-        <div style="text-align: center;">
-            <p><strong>Mallorca Explorer está disponible para Android.</strong></p>
-            <p>Descárgala en Google Play para acceder a esta ruta.</p>
-            <p style="color: #666; font-style: italic;">Comprobando si tienes la app instalada…</p>
-
-            <div style="margin-top: 20px;">
-                <a href="https://play.google.com/store"
-                    style="background-color: #00bf63; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 5px;">Descargar
-                    en Google Play</a>
-                <a href="mallorca://itinerary"
-                    style="background-color: #333; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin: 5px;">Ya
-                    tengo la app — abrir manualmente</a>
-            </div>
-
-            <p style="margin-top: 20px; font-size: 0.9em; color: #888;">La app no se detectó instalada. Descárgala
-                gratis para acceder a la ruta.</p>
-            <p style="font-size: 0.9em; color: #888;"><strong>Mallorca Explorer · Solo disponible para Android</strong>
-            </p>
-            <p style="font-size: 0.8em; color: #aaa;">Escanea de nuevo tras instalar para abrir la ruta directamente</p>
+    <!-- Carousel -->
+    <div class="carousel" id="carousel">
+        <div class="carousel-track" id="track">
+            <!-- slides injected by JS -->
         </div>
-    </main>
+        <button class="carousel-btn prev" id="prev">&#8249;</button>
+        <button class="carousel-btn next" id="next">&#8250;</button>
+        <div class="carousel-dots" id="dots"></div>
+        <div class="carousel-counter" id="counter"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <div class="title-block">
+            <h1>Ruta Acantilados de Cavall Bernat y Cueva Azul</h1>
+            <h2>Ruta SUP · Norte de Mallorca</h2>
+        </div>
+
+        <div class="tags">
+            <span class="tag">🏄 SUP</span>
+            <span class="tag">🏖️ Costa</span>
+            <span class="tag">🧗 Acantilados</span>
+            <span class="tag">🟦 Cueva Azul</span>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="label">Distancia</div>
+                <div class="value">~11 km</div>
+            </div>
+            <div class="stat">
+                <div class="label">Duración</div>
+                <div class="value">3 – 4 h</div>
+            </div>
+            <div class="stat">
+                <div class="label">Dificultad</div>
+                <div class="value">🌊 Media</div>
+            </div>
+            <div class="stat">
+                <div class="label">Inicio</div>
+                <div class="value">Cala Molins</div>
+            </div>
+        </div>
+
+        <div class="description">
+            Ruta de paddle surf por los espectaculares acantilados del norte de Mallorca. Desde Cala Sant Vicenç atraviesa Cala Bóquer hasta los imponentes acantilados de Cavall Bernat, terminando en la mágica Cueva Azul.
+        </div>
+
+        <div class="map-section">
+            <h3>Recorrido de la ruta</h3>
+            <div id="map"></div>
+        </div>
+
+        <hr>
+
+        <div class="cta">
+            <p><strong>Abre esta ruta en Mallorca Explorer</strong></p>
+            <a href="https://play.google.com/store" class="btn btn-primary">Descargar en Google Play</a>
+            <a href="mallorca://itinerary?itineraryId=itin-sup-4-calas-sant-vicenc" class="btn btn-secondary">Abrir en la app</a>
+            <p class="note">Mallorca Explorer · Solo disponible para Android</p>
+        </div>
+    </div>
+
+    <script>
+        const BASE = 'https://raw.githubusercontent.com/chemakens/mallorca-explorer/main/app/src/main/assets/images/';
+        const photos = [
+            'itin-sup-cavall-bernat-g1.jpg',
+            'itin-sup-cavall-bernat-g2.jpg',
+            'itin-sup-cavall-bernat-g3.jpg',
+            'itin-sup-cavall-bernat-g4.jpg',
+            'itin-sup-cavall-bernat-g5.jpg',
+            'itin-sup-cavall-bernat-g6.jpg',
+            'itin-sup-cavall-bernat-g7.jpg',
+            'itin-sup-cavall-bernat-g8.jpg',
+            'itin-sup-cavall-bernat-g9.jpg',
+            'itin-sup-cavall-bernat-g10.jpg',
+        ];
+
+        const track = document.getElementById('track');
+        const dotsEl = document.getElementById('dots');
+        const counter = document.getElementById('counter');
+        let current = 0;
+
+        // Build slides
+        photos.forEach((src, i) => {
+            const slide = document.createElement('div');
+            slide.className = 'carousel-slide';
+            const img = document.createElement('img');
+            img.src = BASE + src;
+            img.alt = `Foto ${i + 1}`;
+            img.loading = i === 0 ? 'eager' : 'lazy';
+            slide.appendChild(img);
+            track.appendChild(slide);
+
+            const dot = document.createElement('div');
+            dot.className = 'dot' + (i === 0 ? ' active' : '');
+            dot.addEventListener('click', () => goTo(i));
+            dotsEl.appendChild(dot);
+        });
+
+        function updateUI() {
+            track.style.transform = `translateX(-${current * 100}%)`;
+            document.querySelectorAll('.dot').forEach((d, i) =>
+                d.classList.toggle('active', i === current));
+            counter.textContent = `${current + 1} / ${photos.length}`;
+        }
+
+        function goTo(n) {
+            current = (n + photos.length) % photos.length;
+            updateUI();
+        }
+
+        document.getElementById('prev').addEventListener('click', () => goTo(current - 1));
+        document.getElementById('next').addEventListener('click', () => goTo(current + 1));
+
+        // Swipe
+        let startX = 0;
+        const carousel = document.getElementById('carousel');
+        carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX, { passive: true });
+        carousel.addEventListener('touchend', e => {
+            const dx = e.changedTouches[0].clientX - startX;
+            if (Math.abs(dx) > 40) goTo(current + (dx < 0 ? 1 : -1));
+        });
+
+        updateUI();
+
+        // ── Map ──
+        const stops = [
+            { name: 'Cala Sant Vicenç', lat: 39.9050, lng: 3.0850, num: '1' },
+            { name: 'Cala Bóquer',      lat: 39.9170, lng: 3.0760, num: '2' },
+            { name: 'Cavall Bernat',    lat: 39.9310, lng: 3.0640, num: '3' },
+            { name: 'Cueva Azul',       lat: 39.9390, lng: 3.0590, num: '4' },
+        ];
+
+        const map = L.map('map', { zoomControl: true, scrollWheelZoom: false });
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap',
+            maxZoom: 17
+        }).addTo(map);
+
+        const latlngs = stops.map(s => [s.lat, s.lng]);
+        L.polyline(latlngs, { color: '#FF8C00', weight: 3.5, opacity: 0.9 }).addTo(map);
+
+        stops.forEach(s => {
+            const icon = L.divIcon({
+                className: '',
+                html: `<div style="background:#FF8C00;color:white;width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;border:2px solid white;box-shadow:0 1px 4px rgba(0,0,0,0.3)">${s.num}</div>`,
+                iconSize: [24, 24],
+                iconAnchor: [12, 12],
+            });
+            L.marker([s.lat, s.lng], { icon })
+                .addTo(map)
+                .bindTooltip(s.name, { permanent: false, direction: 'top', className: 'stop-label' });
+        });
+
+        map.fitBounds(L.latLngBounds(latlngs), { padding: [30, 30] });
+    </script>
 
 </body>
-
 </html>
