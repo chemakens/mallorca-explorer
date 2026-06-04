@@ -9,6 +9,7 @@ data class Itinerary(
     val difficulty: Difficulty? = null,
     val places: List<ItineraryStop> = emptyList(),
     val coverPhotoUrl: String = "",
+    val galleryPhotoUrls: List<String> = emptyList(),
     val totalDistanceKm: Float? = null,
     val highlights: List<String> = emptyList(),
     val bestSeasons: List<String> = emptyList(),
