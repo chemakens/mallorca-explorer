@@ -23,6 +23,7 @@ data class ItineraryEntity(
     val qrEntryPointJson: String? = null,
     val commercialBlockJson: String? = null,
     val routeWaypointsJson: String = "[]",
+    val galleryPhotosJson: String = "[]",
 )
 
 @Entity(tableName = "itinerary_stops", primaryKeys = ["itineraryId", "placeId"])

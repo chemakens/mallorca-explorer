@@ -2878,8 +2878,8 @@
       "name_es": "SUP Cala Sant Vicenç",
       "description": "One of Mallorca's most scenic SUP launch points, where three turquoise coves sheltered by dramatic limestone cliffs meet the open sea. The paddle between Cala Molins, Cala Clara and Cala Barques reveals sea caves and underwater arches inaccessible on foot.",
       "category": "ADVENTURE",
-      "latitude": 39.9075,
-      "longitude": 3.068,
+      "latitude": 39.905,
+      "longitude": 3.085,
       "municipality": "Pollença",
       "rating": 4.8,
       "review_count": 340,
@@ -6331,8 +6331,8 @@
       "name_es": "Punta Negra",
       "description": "The dark limestone headland that marks the northern exit of the Cala Sant Vicenç bay. From the water, the contrast between the black rock face and the emerald sea is startling. Rounding this cape opens the full exposure of the Tramuntana cliff coast.",
       "category": "ADVENTURE",
-      "latitude": 39.9118,
-      "longitude": 3.0792,
+      "latitude": 39.915,
+      "longitude": 3.076,
       "municipality": "Pollença",
       "price_level": "FREE",
       "rating": 4.7,
@@ -6382,8 +6382,8 @@
       "name_es": "Cavall Bernat y Coves Blanques",
       "description": "The most dramatic section of the Sant Vicenç coast — towering vertical cliffs of white limestone (coves blanques) rise directly from the sea while the Cavall Bernat peak looms above. The colour contrast between white rock, pine forest and turquoise water is extraordinary and only visible from the water.",
       "category": "ADVENTURE",
-      "latitude": 39.9182,
-      "longitude": 3.0808,
+      "latitude": 39.932,
+      "longitude": 3.065,
       "municipality": "Pollença",
       "price_level": "FREE",
       "rating": 4.9,
@@ -6406,9 +6406,9 @@
         "sup_launch",
         "facing:45"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Rock%20-%20Cala%20Barques.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-cavall-bernat-coves-blanques.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Rock%20-%20Cala%20Barques.jpg?width=800"
+        "file:///android_asset/images/place-cavall-bernat-coves-blanques.jpg"
       ],
       "description_es": "El tramo más dramático de la costa de Sant Vicenç: verticales acantilados de caliza blanca se elevan directamente desde el mar mientras el pico del Cavall Bernat domina sobre ellos.",
       "tips_es": [
@@ -6436,8 +6436,8 @@
       "name_es": "Cueva Larga (Cueva Azul)",
       "description": "A sea cave penetrating more than 40 metres into the limestone cliff face, where the turquoise bioluminescent light from below creates the 'blue cave' effect on the cave walls and ceiling. One of the most spectacular natural phenomena on the Mallorcan north coast — only accessible by flat-water SUP or kayak.",
       "category": "ADVENTURE",
-      "latitude": 39.9155,
-      "longitude": 3.0795,
+      "latitude": 39.938,
+      "longitude": 3.06,
       "municipality": "Pollença",
       "price_level": "FREE",
       "rating": 5.0,
@@ -9646,7 +9646,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/sup-cala-sant-vicenc.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-cavall-bernat-v2.jpg",
       "total_distance_km": 11.0,
       "highlights": [
         "Cueva Azul: 40m sea cave accessible only by SUP",
@@ -9714,8 +9714,8 @@
           "name": "Cala Molins",
           "name_es": "Cala Molins",
           "role": "LAUNCH",
-          "lat": 39.9075,
-          "lng": 3.068,
+          "lat": 39.905,
+          "lng": 3.085,
           "note_es": "Salida. Técnica de remo y calentamiento rumbo norte. La cala más protegida.",
           "distance_from_prev_km": 0.0,
           "icon": "launch"
@@ -9725,8 +9725,8 @@
           "name": "Punta Negra (vía Cala Carbó)",
           "name_es": "Punta Negra (vía Cala Carbó)",
           "role": "WAYPOINT",
-          "lat": 39.9118,
-          "lng": 3.0792,
+          "lat": 39.915,
+          "lng": 3.076,
           "note_es": "Aguas cristalinas. Rodear el cabo con precaución — exposición aumenta aquí.",
           "distance_from_prev_km": 2.2,
           "icon": "headland"
@@ -9736,8 +9736,8 @@
           "name": "Cavall Bernat & Coves Blanques",
           "name_es": "Cavall Bernat y Coves Blanques",
           "role": "WAYPOINT",
-          "lat": 39.9182,
-          "lng": 3.0808,
+          "lat": 39.932,
+          "lng": 3.065,
           "note_es": "Acantilados y cuevas blancas. Pegarse a la base del acantilado para las vistas.",
           "distance_from_prev_km": 1.8,
           "icon": "cliff"
@@ -9747,8 +9747,8 @@
           "name": "Cueva Larga (Cueva Azul)",
           "name_es": "Cueva Larga (Cueva Azul)",
           "role": "WAYPOINT_CONDITIONAL",
-          "lat": 39.9155,
-          "lng": 3.0795,
+          "lat": 39.938,
+          "lng": 3.06,
           "note_es": "Solo entrar si el mar está en calma total. 40m de profundidad. Efecto luz azul interior.",
           "distance_from_prev_km": 1.5,
           "icon": "cave",
@@ -9760,8 +9760,8 @@
           "name": "Vuelta a Cala Molins",
           "name_es": "Vuelta a Cala Molins",
           "role": "FINISH",
-          "lat": 39.9075,
-          "lng": 3.068,
+          "lat": 39.905,
+          "lng": 3.085,
           "note_es": "Regreso. Esnórquel en aguas turquesas y saltos desde los acantilados del lateral.",
           "distance_from_prev_km": 5.5,
           "icon": "finish"
@@ -9837,14 +9837,24 @@
         }
       },
       "image_metadata": {
-        "file": "itin-sup-cavall-bernat-cueva-azul.jpg",
-        "asset_path": "file:///android_asset/images/itin-sup-cavall-bernat-cueva-azul.jpg",
-        "original_filename": "cala sant vicente 7.1.18 - 5.JPG",
+        "file": "itin-sup-cavall-bernat-v2.jpg",
+        "asset_path": "file:///android_asset/images/itin-sup-cavall-bernat-v2.jpg",
+        "original_filename": "cavall bernat.jpg",
         "source": "local_asset",
         "scene": "Vista panorámica de Cala Molins desde el acantilado sur. Agua turquesa cristalina con fondo rocoso visible, kayaks azules en orilla de lanzamiento, carretera costera y montañas de la Tramuntana al fondo.",
         "shoot_date": "2018-01-07",
         "validated": true
-      }
+      },
+      "gallery_photos": [
+        "file:///android_asset/images/itin-sup-cavall-bernat-g1.jpg",
+        "file:///android_asset/images/itin-sup-cavall-bernat-g2.jpg",
+        "file:///android_asset/images/itin-sup-cavall-bernat-g3.jpg",
+        "file:///android_asset/images/itin-sup-cavall-bernat-g5.jpg",
+        "file:///android_asset/images/itin-sup-cavall-bernat-g6.jpg",
+        "file:///android_asset/images/itin-sup-cavall-bernat-g7.jpg",
+        "file:///android_asset/images/itin-sup-cavall-bernat-g8.jpg",
+        "file:///android_asset/images/itin-sup-cavall-bernat-g9.jpg"
+      ]
     }
   ],
   "events": [

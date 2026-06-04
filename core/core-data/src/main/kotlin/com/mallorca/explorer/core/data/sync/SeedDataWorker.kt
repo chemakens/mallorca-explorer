@@ -85,7 +85,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 58
+        const val CURRENT_SEED_VERSION = 69
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -189,6 +189,7 @@ class SeedDataWorker @AssistedInject constructor(
         val qr_entry_point: SeedQrEntryPoint? = null,
         val commercial_block: SeedCommercialBlock? = null,
         val route_waypoints: List<SeedRouteWaypoint> = emptyList(),
+        val gallery_photos: List<String> = emptyList(),
     ) {
         fun toEntity(): ItineraryEntity {
             val j = Json
@@ -207,6 +208,7 @@ class SeedDataWorker @AssistedInject constructor(
                 qrEntryPointJson = qr_entry_point?.let { j.encodeToString(SeedQrEntryPoint.serializer(), it) },
                 commercialBlockJson = commercial_block?.let { j.encodeToString(SeedCommercialBlock.serializer(), it) },
                 routeWaypointsJson = j.encodeToString(ListSerializer(SeedRouteWaypoint.serializer()), route_waypoints),
+                galleryPhotosJson = j.encodeToString(ListSerializer(String.serializer()), gallery_photos),
             )
         }
     }

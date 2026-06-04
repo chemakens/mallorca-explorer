@@ -12,6 +12,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.pager.HorizontalPager
+import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -26,6 +28,10 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.ui.layout.ContentScale
+import coil.compose.AsyncImagePainter
+import coil.compose.SubcomposeAsyncImage
+import coil.compose.SubcomposeAsyncImageContent
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
@@ -197,19 +203,38 @@ private fun ItineraryDetailContent(
     onViewOnMap: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val photoUrls = itinerary.galleryPhotoUrls.ifEmpty {
+        if (itinerary.coverPhotoUrl.isNotEmpty()) listOf(itinerary.coverPhotoUrl) else emptyList()
+    }
+    val pagerState = rememberPagerState { photoUrls.size.coerceAtLeast(1) }
+
     Box(modifier = modifier.fillMaxSize()) {
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .verticalScroll(rememberScrollState()),
-        ) {
-            // Hero section
-            Box(modifier = Modifier.fillMaxWidth().height(200.dp)) {
-                Box(
-                    modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primaryContainer),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Text(itinerary.category.emoji, style = MaterialTheme.typography.displayLarge)
+        Column(modifier = Modifier.fillMaxSize()) {
+            // ── Hero carousel (outside scroll so horizontal swipe works) ──
+            Box(modifier = Modifier.fillMaxWidth().height(260.dp)) {
+                HorizontalPager(state = pagerState, modifier = Modifier.fillMaxSize()) { page ->
+                    if (photoUrls.isNotEmpty()) {
+                        SubcomposeAsyncImage(
+                            model = photoUrls[page],
+                            contentDescription = itinerary.title,
+                            contentScale = ContentScale.Crop,
+                            modifier = Modifier.fillMaxSize(),
+                        ) {
+                            when (painter.state) {
+                                is AsyncImagePainter.State.Error, is AsyncImagePainter.State.Empty ->
+                                    Box(
+                                        modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primaryContainer),
+                                        contentAlignment = Alignment.Center,
+                                    ) { Text(itinerary.category.emoji, style = MaterialTheme.typography.displayLarge) }
+                                else -> SubcomposeAsyncImageContent()
+                            }
+                        }
+                    } else {
+                        Box(
+                            modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primaryContainer),
+                            contentAlignment = Alignment.Center,
+                        ) { Text(itinerary.category.emoji, style = MaterialTheme.typography.displayLarge) }
+                    }
                 }
                 Box(
                     modifier = Modifier.fillMaxSize()
@@ -221,6 +246,22 @@ private fun ItineraryDetailContent(
                         .clip(CircleShape).background(Color.Black.copy(0.4f)),
                 ) {
                     Icon(Icons.Outlined.ArrowBack, "Back", tint = Color.White)
+                }
+                // Dot indicators
+                if (photoUrls.size > 1) {
+                    Row(
+                        modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 44.dp),
+                        horizontalArrangement = Arrangement.spacedBy(6.dp),
+                    ) {
+                        repeat(photoUrls.size) { i ->
+                            Box(
+                                modifier = Modifier
+                                    .size(if (pagerState.currentPage == i) 8.dp else 6.dp)
+                                    .clip(CircleShape)
+                                    .background(if (pagerState.currentPage == i) Color.White else Color.White.copy(alpha = 0.5f)),
+                            )
+                        }
+                    }
                 }
                 Column(
                     modifier = Modifier.align(Alignment.BottomStart).padding(16.dp),
@@ -234,8 +275,13 @@ private fun ItineraryDetailContent(
                 }
             }
 
-            Column(modifier = Modifier.padding(16.dp)) {
-
+            // ── Scrollable content ──
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .verticalScroll(rememberScrollState())
+                    .padding(16.dp),
+            ) {
                 // ── BLOQUE 1: Alerta climática SUP (solo si es ruta QR con weather_config) ──
                 if (itinerary.isQrLanding) {
                     when {

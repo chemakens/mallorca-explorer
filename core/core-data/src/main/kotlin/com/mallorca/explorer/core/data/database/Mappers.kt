@@ -175,6 +175,7 @@ fun ItineraryEntity.toDomain(
             )
         },
         coverPhotoUrl = coverPhotoUrl,
+        galleryPhotoUrls = galleryPhotosJson.toStringList(),
         totalDistanceKm = totalDistanceKm,
         highlights = t?.highlights ?: highlightsJson.toStringList(),
         bestSeasons = bestSeasonsJson.toStringList(),
