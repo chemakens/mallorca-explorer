@@ -9834,6 +9834,36 @@
             "Coves Blanques: cuevas de caliza blanca a nivel del mar",
             "Esnórquel y saltos desde acantilado en Cala Molins"
           ]
+        },
+        "de": {
+          "title": "SUP-Route Cavall Bernat & Blaue Grotte",
+          "description": "Die spektakulärste SUP-Route an der Nordküste Mallorcas. Von Cala Molins paddeln Sie nordwärts vorbei an Cala Carbó, runden das dunkle Kap Punta Negra und folgen den aufragenden weißen Kalksteinfelsen von Cavall Bernat bis zur Cueva Azul — einer Meereshöhle, die von innen türkis leuchtet. Rückweg über den offenen Kanal mit Halt zum Schnorcheln und Klippenspringen bei Cala Molins. 11 km · 3,5–4 Std. auf dem Wasser.",
+          "highlights": [
+            "Cueva Azul: 40 m tiefe Meereshöhle, nur per SUP erreichbar",
+            "Felswände von Cavall Bernat — nur vom Meer aus sichtbar",
+            "Coves Blanques: weiße Kalksteinhöhlen auf Meereshöhe",
+            "Schnorcheln und Klippenspringen zurück an Cala Molins"
+          ]
+        },
+        "ru": {
+          "title": "SUP-маршрут Кавалль-Бернат и Голубая пещера",
+          "description": "Самый впечатляющий SUP-маршрут на северном побережье Майорки. Из бухты Кала-Молинс гребите на север мимо Кала-Карбо, обогните тёмный мыс Пунта-Негра и следуйте вдоль высоких белых известняковых скал Кавалль-Бернат до Куэва-Асуль — морской пещеры, которая светится бирюзой изнутри. Возвращение по открытому каналу с остановкой для сноркелинга и прыжков со скал у Кала-Молинс. 11 км · 3,5–4 ч на воде.",
+          "highlights": [
+            "Куэва-Асуль: морская пещера глубиной 40 м, доступная только на SUP",
+            "Скалы Кавалль-Бернат — видны только с моря",
+            "Кова-Бланка: белые известняковые пещеры у уровня моря",
+            "Сноркелинг и прыжки со скал на обратном пути в Кала-Молинс"
+          ]
+        },
+        "zh": {
+          "title": "SUP路线：卡瓦利·贝尔纳特悬崖与蓝洞",
+          "description": "马略卡岛北海岸最壮观的SUP路线。从卡拉·莫林斯出发，向北划行，途经卡拉·卡尔博，绕过普塔·内格拉暗礁，沿卡瓦利·贝尔纳特高耸的白色石灰岩悬崖前行，直至蓝洞——一个从内部散发出绿松石光芒的海洞。返程途经开阔水道，在卡拉·莫林斯停留浮潜和悬崖跳水。全程11公里，水上时间约3.5至4小时。",
+          "highlights": [
+            "蓝洞：深达40米的海洞，仅可乘SUP进入",
+            "卡瓦利·贝尔纳特悬崖——只能从海上欣赏",
+            "科维斯·布兰克斯：海平面处的白色石灰岩洞穴",
+            "返程在卡拉·莫林斯浮潜与悬崖跳水"
+          ]
         }
       },
       "image_metadata": {
