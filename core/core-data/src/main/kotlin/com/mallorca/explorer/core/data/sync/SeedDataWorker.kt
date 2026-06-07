@@ -24,6 +24,8 @@ import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json
 import timber.log.Timber
 import java.time.Instant
+import java.time.LocalDate
+import java.time.ZoneOffset
 
 @HiltWorker
 class SeedDataWorker @AssistedInject constructor(
@@ -34,6 +36,7 @@ class SeedDataWorker @AssistedInject constructor(
     private val eventDao: EventDao,
     private val discountDao: DiscountDao,
     private val prefsDataStore: UserPreferencesDataStore,
+    private val json: Json,
 ) : CoroutineWorker(context, params) {
 
     override suspend fun doWork(): Result {
@@ -41,7 +44,6 @@ class SeedDataWorker @AssistedInject constructor(
         if (currentVersion >= CURRENT_SEED_VERSION) return Result.success()
 
         return try {
-            val json = Json { ignoreUnknownKeys = true }
             val rawJson = applicationContext.assets.open("seed_data.json")
                 .bufferedReader().use { it.readText() }
             val seedData = json.decodeFromString<SeedData>(rawJson)
@@ -85,7 +87,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 69
+        const val CURRENT_SEED_VERSION = 70
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -240,12 +242,8 @@ class SeedDataWorker @AssistedInject constructor(
         val recurring_day_of_week: Int? = null,
     ) {
         fun toEntity(): EventEntity {
-            fun parseDate(s: String): Long {
-                val parts = s.split("-")
-                val y = parts[0].toLong(); val m = parts[1].toLong(); val d = parts[2].toLong()
-                val days = (y - 1970) * 365 + (y - 1970) / 4 + (m - 1) * 30 + d
-                return days * 86_400_000L
-            }
+            fun parseDate(s: String): Long =
+                LocalDate.parse(s).atStartOfDay(ZoneOffset.UTC).toInstant().toEpochMilli()
             return EventEntity(
                 id = id, title = title, titleEs = title_es,
                 description = description, descriptionEs = description_es,
@@ -269,12 +267,8 @@ class SeedDataWorker @AssistedInject constructor(
         val valid_until: String,
     ) {
         fun toEntity(): DiscountEntity {
-            fun parseDate(s: String): Long {
-                val parts = s.split("-")
-                val y = parts[0].toLong(); val m = parts[1].toLong(); val d = parts[2].toLong()
-                val days = (y - 1970) * 365 + (y - 1970) / 4 + (m - 1) * 30 + d
-                return days * 86_400_000L
-            }
+            fun parseDate(s: String): Long =
+                LocalDate.parse(s).atStartOfDay(ZoneOffset.UTC).toInstant().toEpochMilli()
             return DiscountEntity(
                 id = id, placeId = place_id, partnerName = partner_name,
                 headline = headline, terms = terms, code = code,
