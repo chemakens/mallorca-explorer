@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="map_search_hint">Search secret places…</string>
+    <string name="map_search_close_cd">Close search</string>
+    <string name="map_place_close_cd">Close</string>
+    <string name="map_place_view_detail">View →</string>
+    <string name="map_brand_subtitle">Interactive guide</string>
+    <string name="map_no_places_category">No places in this category</string>
+    <string name="map_zoom_in_cd">Zoom in</string>
+    <string name="map_zoom_out_cd">Zoom out</string>
+    <string name="map_my_location_cd">My location</string>
+    <string name="map_settings_cd">Settings</string>
+</resources>

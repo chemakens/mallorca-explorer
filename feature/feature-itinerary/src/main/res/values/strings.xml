@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="itinerary_not_found_title">Route not found</string>
+    <string name="itinerary_not_found_body">This route is not available.\nGo back to the map to explore other activities.</string>
+    <string name="itinerary_back_to_map">Back to map</string>
+    <string name="itinerary_loading">Loading sea conditions…</string>
+    <string name="itinerary_back_cd">Back</string>
+    <string name="itinerary_save_for_later">Save route for later</string>
+    <string name="itinerary_not_now">Not now</string>
+    <string name="itinerary_step_by_step">Step by step route</string>
+    <string name="itinerary_day">Day %d</string>
+    <string name="itinerary_view_on_map">View on Map</string>
+    <string name="itinerary_save_to_trips">Save to Trips</string>
+    <string name="itinerary_toggle_visited_cd">Toggle visited</string>
+    <string name="itinerary_all">All Itineraries</string>
+    <string name="itinerary_sea_condition">If sea conditions permit</string>
+</resources>

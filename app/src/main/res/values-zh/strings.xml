@@ -5,4 +5,69 @@
     <string name="nav_explore">探索</string>
     <string name="nav_trips">我的行程</string>
     <string name="nav_favorites">收藏</string>
+
+    <!-- feature-map -->
+    <string name="map_search_hint">搜索秘密地点…</string>
+    <string name="map_search_close_cd">关闭搜索</string>
+    <string name="map_place_close_cd">关闭</string>
+    <string name="map_place_view_detail">查看 →</string>
+    <string name="map_brand_subtitle">互动旅游指南</string>
+    <string name="map_no_places_category">此类别中没有地点</string>
+    <string name="map_zoom_in_cd">放大</string>
+    <string name="map_zoom_out_cd">缩小</string>
+    <string name="map_my_location_cd">我的位置</string>
+    <string name="map_settings_cd">设置</string>
+
+    <!-- feature-itinerary -->
+    <string name="itinerary_not_found_title">未找到路线</string>
+    <string name="itinerary_not_found_body">此路线不可用。\n返回地图探索其他活动。</string>
+    <string name="itinerary_back_to_map">返回地图</string>
+    <string name="itinerary_loading">正在加载海况…</string>
+    <string name="itinerary_back_cd">返回</string>
+    <string name="itinerary_save_for_later">保存路线以备后用</string>
+    <string name="itinerary_not_now">暂不保存</string>
+    <string name="itinerary_step_by_step">逐步路线</string>
+    <string name="itinerary_day">第 %d 天</string>
+    <string name="itinerary_view_on_map">在地图上查看</string>
+    <string name="itinerary_save_to_trips">保存到行程</string>
+    <string name="itinerary_toggle_visited_cd">标记为已访问</string>
+    <string name="itinerary_all">所有行程</string>
+    <string name="itinerary_sea_condition">如果海况允许</string>
+
+    <!-- feature-trips -->
+    <string name="trip_new_title">新行程</string>
+    <string name="trip_name_label">行程名称</string>
+    <string name="trip_name_placeholder">例：八月的马略卡</string>
+    <string name="trip_create">创建行程</string>
+    <string name="trip_rename_title">重命名行程</string>
+    <string name="trip_new_name_label">新名称</string>
+    <string name="trip_cancel">取消</string>
+    <string name="trip_save">保存</string>
+    <string name="trip_delete_title">删除行程</string>
+    <string name="trip_delete_body">删除\"%s\"？此操作无法撤销。</string>
+    <string name="trip_delete">删除</string>
+    <string name="trip_my_trips">我的行程</string>
+    <string name="trip_new_fab_cd">新行程</string>
+    <string name="trip_rename_cd">重命名</string>
+    <string name="trip_delete_cd">删除</string>
+    <string name="trip_no_stops">暂无停靠点</string>
+    <string name="trip_add_stop">添加停靠点</string>
+    <string name="trip_tap_to_add">点击添加停靠点来创建行程</string>
+    <string name="trip_remove_stop_cd">移除</string>
+    <string name="trip_drag_reorder_cd">拖动以重新排序</string>
+    <string name="trip_stops_label">停靠点</string>
+    <string name="trip_duration_label">时长</string>
+    <string name="trip_add_place_title">添加停靠点</string>
+    <string name="trip_search_placeholder">搜索地点…</string>
+    <string name="trip_add_to_title">添加到行程</string>
+    <string name="trip_back_cd">返回</string>
+    <string name="trip_existing_trips">现有行程</string>
+    <string name="trip_create_new_title">创建新行程</string>
+    <string name="trip_create_new_subtitle">开始全新行程</string>
+    <string name="trip_add_action">添加</string>
+    <string name="trip_view_map_cd">在地图上查看</string>
+    <string name="trip_rename_trip_cd">重命名行程</string>
+
+    <!-- feature-gems -->
+    <string name="gem_tap_to_discover">点击发现 →</string>
 </resources>

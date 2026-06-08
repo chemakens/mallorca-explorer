@@ -72,6 +72,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -721,7 +722,7 @@ fun MapScreen(
                                     modifier = Modifier.weight(1f),
                                     factory = { ctx ->
                                         EditText(ctx).apply {
-                                            hint = "Buscar lugares secretos..."
+                                            hint = ctx.getString(R.string.map_search_hint)
                                             background = null
                                             isFocusableInTouchMode = true
                                             addTextChangedListener { text ->
@@ -749,7 +750,7 @@ fun MapScreen(
                                     searchText = ""
                                     viewModel.clearSearch()
                                 }) {
-                                    Icon(Icons.Outlined.Close, contentDescription = "Cerrar búsqueda")
+                                    Icon(Icons.Outlined.Close, contentDescription = stringResource(R.string.map_search_close_cd))
                                 }
                             }
                         }
@@ -997,10 +998,10 @@ private fun SelectedPlaceCard(
             }
             Column(horizontalAlignment = Alignment.End) {
                 IconButton(onClick = onDismiss, modifier = Modifier.size(32.dp)) {
-                    Icon(Icons.Outlined.Close, contentDescription = "Cerrar", modifier = Modifier.size(18.dp))
+                    Icon(Icons.Outlined.Close, contentDescription = stringResource(R.string.map_place_close_cd), modifier = Modifier.size(18.dp))
                 }
                 TextButton(onClick = onViewDetail, modifier = Modifier.padding(0.dp)) {
-                    Text("Ver →", style = MaterialTheme.typography.labelMedium)
+                    Text(stringResource(R.string.map_place_view_detail), style = MaterialTheme.typography.labelMedium)
                 }
             }
         }
@@ -1011,9 +1012,9 @@ private fun SelectedPlaceCard(
 private fun ZoomControls(onZoomIn: () -> Unit, onZoomOut: () -> Unit, modifier: Modifier = Modifier) {
     Surface(modifier = modifier.width(40.dp), shape = RoundedCornerShape(8.dp), color = Color.White, shadowElevation = 4.dp) {
         Column {
-            IconButton(onClick = onZoomIn, modifier = Modifier.size(40.dp)) { Icon(Icons.Outlined.Add, "Zoom in", tint = Color(0xFF555555)) }
+            IconButton(onClick = onZoomIn, modifier = Modifier.size(40.dp)) { Icon(Icons.Outlined.Add, stringResource(R.string.map_zoom_in_cd), tint = Color(0xFF555555)) }
             HorizontalDivider(color = Color(0xFFE0E0E0), thickness = 0.5.dp)
-            IconButton(onClick = onZoomOut, modifier = Modifier.size(40.dp)) { Icon(Icons.Outlined.Remove, "Zoom out", tint = Color(0xFF555555)) }
+            IconButton(onClick = onZoomOut, modifier = Modifier.size(40.dp)) { Icon(Icons.Outlined.Remove, stringResource(R.string.map_zoom_out_cd), tint = Color(0xFF555555)) }
         }
     }
 }
@@ -1021,7 +1022,7 @@ private fun ZoomControls(onZoomIn: () -> Unit, onZoomOut: () -> Unit, modifier: 
 @Composable
 private fun MyLocationButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
     FloatingActionButton(onClick = onClick, modifier = modifier.size(44.dp), shape = CircleShape, containerColor = Color.White, contentColor = Color(0xFF1A73E8)) {
-        Icon(Icons.Outlined.MyLocation, "My location", modifier = Modifier.size(22.dp))
+        Icon(Icons.Outlined.MyLocation, stringResource(R.string.map_my_location_cd), modifier = Modifier.size(22.dp))
     }
 }
 
@@ -1034,7 +1035,7 @@ private fun BrandBadge(modifier: Modifier = Modifier) {
             }
             Column(verticalArrangement = Arrangement.spacedBy(1.dp)) {
                 Text("Mallorca Explorer", style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, color = Color(0xFF1C1B1F))
-                Text("Guía interactiva", style = MaterialTheme.typography.labelSmall, color = Color(0xFF79747E))
+                Text(stringResource(R.string.map_brand_subtitle), style = MaterialTheme.typography.labelSmall, color = Color(0xFF79747E))
             }
         }
     }
@@ -1043,7 +1044,7 @@ private fun BrandBadge(modifier: Modifier = Modifier) {
 @Composable
 private fun SettingsButton(onClick: () -> Unit, modifier: Modifier = Modifier) {
     FloatingActionButton(onClick = onClick, modifier = modifier.size(44.dp), shape = CircleShape, containerColor = Color.White, contentColor = Color(0xFF555555)) {
-        Icon(Icons.Outlined.Settings, "Settings", modifier = Modifier.size(22.dp))
+        Icon(Icons.Outlined.Settings, stringResource(R.string.map_settings_cd), modifier = Modifier.size(22.dp))
     }
 }
 
@@ -1096,7 +1097,7 @@ private fun CategoryPlacesSheet(
                 modifier = Modifier.fillMaxWidth().height(120.dp),
                 contentAlignment = Alignment.Center,
             ) {
-                Text("No hay lugares en esta categoría", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                Text(stringResource(R.string.map_no_places_category), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
             }
         } else {
             LazyColumn(

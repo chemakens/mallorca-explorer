@@ -38,8 +38,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.mallorca.explorer.feature.trips.R
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.core.domain.model.UserTrip
@@ -59,12 +61,12 @@ fun TripSelectorScreen(
     if (showNewTripDialog) {
         AlertDialog(
             onDismissRequest = { showNewTripDialog = false },
-            title = { Text("New Trip") },
+            title = { Text(stringResource(R.string.trip_new_title)) },
             text = {
                 OutlinedTextField(
                     value = newTripName,
                     onValueChange = { newTripName = it },
-                    label = { Text("Trip name") },
+                    label = { Text(stringResource(R.string.trip_name_label)) },
                     singleLine = true,
                 )
             },
@@ -77,10 +79,10 @@ fun TripSelectorScreen(
                             newTripName = ""
                         }
                     },
-                ) { Text("Create & Add") }
+                ) { Text(stringResource(R.string.trip_create)) }
             },
             dismissButton = {
-                TextButton(onClick = { showNewTripDialog = false }) { Text("Cancel") }
+                TextButton(onClick = { showNewTripDialog = false }) { Text(stringResource(R.string.trip_cancel)) }
             },
         )
     }
@@ -88,10 +90,10 @@ fun TripSelectorScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Add to Trip") },
+                title = { Text(stringResource(R.string.trip_add_to_title)) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
-                        Icon(Icons.Outlined.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.Outlined.ArrowBack, contentDescription = stringResource(R.string.trip_back_cd))
                     }
                 },
             )
@@ -109,7 +111,7 @@ fun TripSelectorScreen(
             if (!uiState.isLoading && uiState.trips.isNotEmpty()) {
                 item {
                     Text(
-                        "Existing Trips",
+                        stringResource(R.string.trip_existing_trips),
                         style = MaterialTheme.typography.labelLarge,
                         color = MaterialTheme.colorScheme.primary,
                         modifier = Modifier.padding(top = 4.dp),
@@ -157,13 +159,13 @@ private fun NewTripCard(
             Spacer(Modifier.width(12.dp))
             Column {
                 Text(
-                    "Create New Trip",
+                    stringResource(R.string.trip_create_new_title),
                     style = MaterialTheme.typography.bodyLarge,
                     fontWeight = FontWeight.SemiBold,
                     color = MaterialTheme.colorScheme.onPrimaryContainer,
                 )
                 Text(
-                    "Start a fresh itinerary",
+                    stringResource(R.string.trip_create_new_subtitle),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onPrimaryContainer.copy(alpha = 0.75f),
                 )
@@ -209,7 +211,7 @@ private fun TripSelectorCard(
                 )
             }
             Text(
-                "Add",
+                stringResource(R.string.trip_add_action),
                 style = MaterialTheme.typography.labelMedium,
                 color = MaterialTheme.colorScheme.primary,
                 fontWeight = FontWeight.SemiBold,

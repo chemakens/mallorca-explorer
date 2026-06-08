@@ -36,8 +36,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.mallorca.explorer.feature.itinerary.R
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
@@ -58,8 +60,8 @@ fun ItineraryListScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text(uiState.category?.displayName ?: "All Itineraries") },
-                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Outlined.ArrowBack, "Back") } },
+                title = { Text(uiState.category?.displayName ?: stringResource(R.string.itinerary_all)) },
+                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Outlined.ArrowBack, stringResource(R.string.itinerary_back_cd)) } },
             )
         },
         modifier = modifier,
