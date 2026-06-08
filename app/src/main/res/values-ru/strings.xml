@@ -5,6 +5,7 @@
     <string name="nav_explore">Исследовать</string>
     <string name="nav_trips">Мои поездки</string>
     <string name="nav_favorites">Избранное</string>
+    <string name="nav_gems">Жемчужины</string>
 
     <!-- feature-map -->
     <string name="map_search_hint">Поиск тайных мест…</string>
