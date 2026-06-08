@@ -5,4 +5,69 @@
     <string name="nav_explore">Explorar</string>
     <string name="nav_trips">Mis Viajes</string>
     <string name="nav_favorites">Favoritos</string>
+
+    <!-- feature-map -->
+    <string name="map_search_hint">Buscar lugares secretos…</string>
+    <string name="map_search_close_cd">Cerrar búsqueda</string>
+    <string name="map_place_close_cd">Cerrar</string>
+    <string name="map_place_view_detail">Ver →</string>
+    <string name="map_brand_subtitle">Guía interactiva</string>
+    <string name="map_no_places_category">No hay lugares en esta categoría</string>
+    <string name="map_zoom_in_cd">Ampliar</string>
+    <string name="map_zoom_out_cd">Reducir</string>
+    <string name="map_my_location_cd">Mi ubicación</string>
+    <string name="map_settings_cd">Ajustes</string>
+
+    <!-- feature-itinerary -->
+    <string name="itinerary_not_found_title">Ruta no encontrada</string>
+    <string name="itinerary_not_found_body">Esta ruta no está disponible.\nVuelve al mapa para explorar otras actividades.</string>
+    <string name="itinerary_back_to_map">Volver al mapa</string>
+    <string name="itinerary_loading">Cargando condiciones del mar…</string>
+    <string name="itinerary_back_cd">Atrás</string>
+    <string name="itinerary_save_for_later">Guardar ruta para más tarde</string>
+    <string name="itinerary_not_now">Ahora no</string>
+    <string name="itinerary_step_by_step">Ruta paso a paso</string>
+    <string name="itinerary_day">Día %d</string>
+    <string name="itinerary_view_on_map">Ver en el mapa</string>
+    <string name="itinerary_save_to_trips">Guardar en viajes</string>
+    <string name="itinerary_toggle_visited_cd">Marcar como visitado</string>
+    <string name="itinerary_all">Todos los itinerarios</string>
+    <string name="itinerary_sea_condition">Si el mar lo permite</string>
+
+    <!-- feature-trips -->
+    <string name="trip_new_title">Nuevo viaje</string>
+    <string name="trip_name_label">Nombre del viaje</string>
+    <string name="trip_name_placeholder">Ej: Mallorca en agosto</string>
+    <string name="trip_create">Crear viaje</string>
+    <string name="trip_rename_title">Renombrar viaje</string>
+    <string name="trip_new_name_label">Nuevo nombre</string>
+    <string name="trip_cancel">Cancelar</string>
+    <string name="trip_save">Guardar</string>
+    <string name="trip_delete_title">Eliminar viaje</string>
+    <string name="trip_delete_body">¿Eliminar \"%s\"? Esta acción no se puede deshacer.</string>
+    <string name="trip_delete">Eliminar</string>
+    <string name="trip_my_trips">Mis viajes</string>
+    <string name="trip_new_fab_cd">Nuevo viaje</string>
+    <string name="trip_rename_cd">Renombrar</string>
+    <string name="trip_delete_cd">Eliminar</string>
+    <string name="trip_no_stops">Sin paradas aún</string>
+    <string name="trip_add_stop">Añadir parada</string>
+    <string name="trip_tap_to_add">Pulsa Añadir parada para crear tu viaje</string>
+    <string name="trip_remove_stop_cd">Quitar</string>
+    <string name="trip_drag_reorder_cd">Arrastrar para reordenar</string>
+    <string name="trip_stops_label">Paradas</string>
+    <string name="trip_duration_label">Duración</string>
+    <string name="trip_add_place_title">Añadir parada</string>
+    <string name="trip_search_placeholder">Buscar lugar…</string>
+    <string name="trip_add_to_title">Añadir a viaje</string>
+    <string name="trip_back_cd">Atrás</string>
+    <string name="trip_existing_trips">Viajes existentes</string>
+    <string name="trip_create_new_title">Crear nuevo viaje</string>
+    <string name="trip_create_new_subtitle">Empieza un itinerario nuevo</string>
+    <string name="trip_add_action">Añadir</string>
+    <string name="trip_view_map_cd">Ver en el mapa</string>
+    <string name="trip_rename_trip_cd">Renombrar viaje</string>
+
+    <!-- feature-gems -->
+    <string name="gem_tap_to_discover">Toca para descubrir →</string>
 </resources>

@@ -34,8 +34,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.mallorca.explorer.feature.itinerary.R
 import com.mallorca.explorer.core.domain.model.CommercialBlock
 import com.mallorca.explorer.core.domain.model.RouteWaypoint
 import com.mallorca.explorer.core.domain.model.SUPTrafficLight
@@ -307,7 +309,7 @@ private fun SupWaypointRow(
                     if (waypoint.conditional) {
                         SuggestionChip(
                             onClick = {},
-                            label = { Text("Si el mar lo permite", style = MaterialTheme.typography.labelSmall) },
+                            label = { Text(stringResource(R.string.itinerary_sea_condition), style = MaterialTheme.typography.labelSmall) },
                             colors = SuggestionChipDefaults.suggestionChipColors(
                                 containerColor = Color(0xFFFFE0B2),
                             ),

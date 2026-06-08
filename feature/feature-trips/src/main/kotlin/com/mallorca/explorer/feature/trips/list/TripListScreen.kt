@@ -54,11 +54,13 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.mallorca.explorer.feature.trips.R
 import coil.compose.AsyncImage
 import kotlinx.coroutines.delay
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -109,8 +111,8 @@ fun TripListScreen(
                 OutlinedTextField(
                     value = newTripName,
                     onValueChange = { newTripName = it },
-                    label = { Text("Nombre del viaje") },
-                    placeholder = { Text("Ej: Mallorca en agosto") },
+                    label = { Text(stringResource(R.string.trip_name_label)) },
+                    placeholder = { Text(stringResource(R.string.trip_name_placeholder)) },
                     singleLine = true,
                     shape = RoundedCornerShape(14.dp),
                     modifier = Modifier.fillMaxWidth().focusRequester(focus),
@@ -132,7 +134,7 @@ fun TripListScreen(
                 ) {
                     Icon(Icons.Outlined.Add, contentDescription = null)
                     Spacer(Modifier.width(8.dp))
-                    Text("Crear viaje", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.SemiBold)
+                    Text(stringResource(R.string.trip_create), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.SemiBold)
                 }
             }
         }
@@ -151,11 +153,11 @@ fun TripListScreen(
                     .imePadding(),
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
-                Text("Renombrar viaje", style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.trip_rename_title), style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold)
                 OutlinedTextField(
                     value = renameText,
                     onValueChange = { renameText = it },
-                    label = { Text("Nuevo nombre") },
+                    label = { Text(stringResource(R.string.trip_new_name_label)) },
                     singleLine = true,
                     shape = RoundedCornerShape(14.dp),
                     modifier = Modifier.fillMaxWidth().focusRequester(focus),
@@ -167,7 +169,7 @@ fun TripListScreen(
                     TextButton(
                         onClick = { renameTarget = null },
                         modifier = Modifier.weight(1f),
-                    ) { Text("Cancelar") }
+                    ) { Text(stringResource(R.string.trip_cancel)) }
                     Button(
                         onClick = {
                             if (renameText.text.isNotBlank()) {
@@ -178,7 +180,7 @@ fun TripListScreen(
                         enabled = renameText.text.isNotBlank(),
                         modifier = Modifier.weight(1f),
                         shape = RoundedCornerShape(14.dp),
-                    ) { Text("Guardar") }
+                    ) { Text(stringResource(R.string.trip_save)) }
                 }
             }
         }
@@ -188,18 +190,18 @@ fun TripListScreen(
     deleteTarget?.let { trip ->
         AlertDialog(
             onDismissRequest = { deleteTarget = null },
-            title = { Text("Eliminar viaje") },
-            text = { Text("¿Eliminar \"${trip.name}\"? Esta acción no se puede deshacer.") },
+            title = { Text(stringResource(R.string.trip_delete_title)) },
+            text = { Text(stringResource(R.string.trip_delete_body, trip.name)) },
             confirmButton = {
                 TextButton(
                     onClick = {
                         viewModel.deleteTrip(trip.id)
                         deleteTarget = null
                     },
-                ) { Text("Eliminar", color = MaterialTheme.colorScheme.error) }
+                ) { Text(stringResource(R.string.trip_delete), color = MaterialTheme.colorScheme.error) }
             },
             dismissButton = {
-                TextButton(onClick = { deleteTarget = null }) { Text("Cancelar") }
+                TextButton(onClick = { deleteTarget = null }) { Text(stringResource(R.string.trip_cancel)) }
             },
         )
     }
@@ -207,7 +209,7 @@ fun TripListScreen(
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Mis viajes", fontWeight = FontWeight.Bold) },
+                title = { Text(stringResource(R.string.trip_my_trips), fontWeight = FontWeight.Bold) },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.surface,
                 ),
@@ -223,7 +225,7 @@ fun TripListScreen(
                 contentColor = MaterialTheme.colorScheme.onPrimary,
                 shape = CircleShape,
             ) {
-                Icon(Icons.Outlined.Add, contentDescription = "Nuevo viaje", modifier = Modifier.size(28.dp))
+                Icon(Icons.Outlined.Add, contentDescription = stringResource(R.string.trip_new_fab_cd), modifier = Modifier.size(28.dp))
             }
         },
         modifier = modifier,
@@ -373,7 +375,7 @@ private fun TripCard(
                         IconButton(onClick = onRename, modifier = Modifier.size(34.dp)) {
                             Icon(
                                 Icons.Outlined.DriveFileRenameOutline,
-                                contentDescription = "Renombrar",
+                                contentDescription = stringResource(R.string.trip_rename_cd),
                                 tint = Color.White,
                                 modifier = Modifier.size(18.dp),
                             )
@@ -388,7 +390,7 @@ private fun TripCard(
                         IconButton(onClick = onDelete, modifier = Modifier.size(34.dp)) {
                             Icon(
                                 Icons.Outlined.Delete,
-                                contentDescription = "Eliminar",
+                                contentDescription = stringResource(R.string.trip_delete_cd),
                                 tint = Color(0xFFFF6B6B),
                                 modifier = Modifier.size(18.dp),
                             )

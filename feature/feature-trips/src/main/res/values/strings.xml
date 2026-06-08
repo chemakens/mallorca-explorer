@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="trip_new_title">New Trip</string>
+    <string name="trip_name_label">Trip name</string>
+    <string name="trip_name_placeholder">e.g. Mallorca in August</string>
+    <string name="trip_create">Create trip</string>
+    <string name="trip_rename_title">Rename trip</string>
+    <string name="trip_new_name_label">New name</string>
+    <string name="trip_cancel">Cancel</string>
+    <string name="trip_save">Save</string>
+    <string name="trip_delete_title">Delete trip</string>
+    <string name="trip_delete_body">Delete \"%s\"? This action cannot be undone.</string>
+    <string name="trip_delete">Delete</string>
+    <string name="trip_my_trips">My Trips</string>
+    <string name="trip_new_fab_cd">New trip</string>
+    <string name="trip_rename_cd">Rename</string>
+    <string name="trip_delete_cd">Delete</string>
+    <string name="trip_no_stops">No stops yet</string>
+    <string name="trip_add_stop">Add Stop</string>
+    <string name="trip_tap_to_add">Tap Add Stop to build your trip</string>
+    <string name="trip_remove_stop_cd">Remove</string>
+    <string name="trip_drag_reorder_cd">Drag to reorder</string>
+    <string name="trip_stops_label">Stops</string>
+    <string name="trip_duration_label">Duration</string>
+    <string name="trip_add_place_title">Add stop</string>
+    <string name="trip_search_placeholder">Search place…</string>
+    <string name="trip_add_to_title">Add to Trip</string>
+    <string name="trip_back_cd">Back</string>
+    <string name="trip_existing_trips">Existing Trips</string>
+    <string name="trip_create_new_title">Create New Trip</string>
+    <string name="trip_create_new_subtitle">Start a fresh itinerary</string>
+    <string name="trip_add_action">Add</string>
+    <string name="trip_view_map_cd">View on map</string>
+    <string name="trip_rename_trip_cd">Rename trip</string>
+</resources>

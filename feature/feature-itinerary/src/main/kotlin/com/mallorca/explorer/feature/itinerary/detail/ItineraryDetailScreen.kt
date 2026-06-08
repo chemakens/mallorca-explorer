@@ -55,6 +55,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.ItineraryStop
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
+import androidx.compose.ui.res.stringResource
+import com.mallorca.explorer.feature.itinerary.R
 import kotlinx.collections.immutable.ImmutableSet
 import kotlinx.collections.immutable.persistentSetOf
 
@@ -105,18 +107,18 @@ fun ItineraryDetailScreen(
                 ) {
                     Text("🗺️", style = MaterialTheme.typography.displayLarge)
                     Text(
-                        "Ruta no encontrada",
+                        stringResource(R.string.itinerary_not_found_title),
                         style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
                     )
                     Text(
-                        "Esta ruta no está disponible.\nVuelve al mapa para explorar otras actividades.",
+                        stringResource(R.string.itinerary_not_found_body),
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                         textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                     )
                     Spacer(Modifier.height(8.dp))
-                    Button(onClick = onBack) { Text("Volver al mapa") }
+                    Button(onClick = onBack) { Text(stringResource(R.string.itinerary_back_to_map)) }
                 }
             }
         }
@@ -132,7 +134,7 @@ private fun ItineraryLoadingSkeleton() {
         ) {
             Text("🏄", style = MaterialTheme.typography.displayLarge)
             Text(
-                "Cargando condiciones del mar...",
+                stringResource(R.string.itinerary_loading),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -180,10 +182,10 @@ private fun QrWelcomeSheet(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(12.dp),
             ) {
-                Text("Guardar ruta para más tarde")
+                Text(stringResource(R.string.itinerary_save_for_later))
             }
             TextButton(onClick = onDismiss, modifier = Modifier.fillMaxWidth()) {
-                Text("Ahora no")
+                Text(stringResource(R.string.itinerary_not_now))
             }
         }
     }
@@ -245,7 +247,7 @@ private fun ItineraryDetailContent(
                     modifier = Modifier.padding(12.dp).align(Alignment.TopStart)
                         .clip(CircleShape).background(Color.Black.copy(0.4f)),
                 ) {
-                    Icon(Icons.Outlined.ArrowBack, "Back", tint = Color.White)
+                    Icon(Icons.Outlined.ArrowBack, stringResource(R.string.itinerary_back_cd), tint = Color.White)
                 }
                 // Dot indicators
                 if (photoUrls.size > 1) {
@@ -335,7 +337,7 @@ private fun ItineraryDetailContent(
 
                 // ── BLOQUE 2: Timeline de ruta SUP (reemplaza stops genéricos si hay waypoints) ──
                 if (itinerary.routeWaypoints.isNotEmpty()) {
-                    Text("Ruta paso a paso", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.itinerary_step_by_step), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                     Spacer(Modifier.height(10.dp))
                     SupRouteTimeline(waypoints = itinerary.routeWaypoints)
                     Spacer(Modifier.height(16.dp))
@@ -344,7 +346,7 @@ private fun ItineraryDetailContent(
                 // Stops by day
                 val stopsByDay = itinerary.places.groupBy { it.dayNumber }
                 stopsByDay.entries.sortedBy { it.key }.forEach { (day, stops) ->
-                    Text("Day $day", style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.itinerary_day, day), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                     Spacer(Modifier.height(8.dp))
                     stops.sortedBy { it.order }.forEachIndexed { idx, stop ->
                         TimelineItem(
@@ -379,12 +381,12 @@ private fun ItineraryDetailContent(
                 containerColor = MaterialTheme.colorScheme.secondaryContainer,
                 contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
                 icon = { Icon(Icons.Outlined.Map, null) },
-                text = { Text("View on Map") },
+                text = { Text(stringResource(R.string.itinerary_view_on_map)) },
             )
             ExtendedFloatingActionButton(
                 onClick = onSaveToTrip,
                 icon = { Icon(Icons.Outlined.BookmarkAdd, null) },
-                text = { Text("Save to Trips") },
+                text = { Text(stringResource(R.string.itinerary_save_to_trips)) },
             )
         }
     }
@@ -444,7 +446,7 @@ private fun TimelineItem(
                 IconButton(onClick = onToggleVisited, modifier = Modifier.size(32.dp)) {
                     Icon(
                         if (isVisited) Icons.Outlined.CheckCircle else Icons.Outlined.RadioButtonUnchecked,
-                        contentDescription = "Toggle visited",
+                        contentDescription = stringResource(R.string.itinerary_toggle_visited_cd),
                         tint = if (isVisited) MaterialTheme.colorScheme.tertiary else MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.size(22.dp),
                     )

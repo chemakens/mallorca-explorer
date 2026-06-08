@@ -71,10 +71,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.onGloballyPositioned
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalSoftwareKeyboardController
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextRange
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
+import com.mallorca.explorer.feature.trips.R
 import kotlinx.coroutines.delay
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -108,18 +110,18 @@ fun TripBuilderScreen(
         LaunchedEffect(Unit) { delay(300); renameFocus.requestFocus(); keyboard?.show() }
         ModalBottomSheet(onDismissRequest = { showRenameDialog = false }) {
             Column(modifier = Modifier.padding(16.dp).imePadding()) {
-                Text("Rename Trip", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                Text(stringResource(R.string.trip_rename_title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                 Spacer(Modifier.height(16.dp))
                 OutlinedTextField(
                     value = renameText,
                     onValueChange = { renameText = it },
-                    label = { Text("Trip name") },
+                    label = { Text(stringResource(R.string.trip_name_label)) },
                     singleLine = true,
                     modifier = Modifier.fillMaxWidth().focusRequester(renameFocus),
                 )
                 Spacer(Modifier.height(16.dp))
                 Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
-                    TextButton(onClick = { showRenameDialog = false }) { Text("Cancel") }
+                    TextButton(onClick = { showRenameDialog = false }) { Text(stringResource(R.string.trip_cancel)) }
                     Spacer(Modifier.size(8.dp))
                     TextButton(
                         onClick = {
@@ -128,7 +130,7 @@ fun TripBuilderScreen(
                                 showRenameDialog = false
                             }
                         },
-                    ) { Text("Rename") }
+                    ) { Text(stringResource(R.string.trip_rename_cd)) }
                 }
             }
         }
@@ -138,12 +140,12 @@ fun TripBuilderScreen(
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text(uiState.trip?.name ?: "New Trip") },
-                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Outlined.ArrowBack, "Back") } },
+                    title = { Text(uiState.trip?.name ?: stringResource(R.string.trip_new_title)) },
+                    navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.Outlined.ArrowBack, stringResource(R.string.trip_back_cd)) } },
                     actions = {
                         if ((uiState.trip?.stops?.size ?: 0) >= 2) {
                             IconButton(onClick = onViewMap) {
-                                Icon(Icons.Outlined.Map, contentDescription = "Ver en el mapa")
+                                Icon(Icons.Outlined.Map, contentDescription = stringResource(R.string.trip_view_map_cd))
                             }
                         }
                         IconButton(onClick = {
@@ -151,7 +153,7 @@ fun TripBuilderScreen(
                             renameText = TextFieldValue(name, selection = TextRange(0, name.length))
                             showRenameDialog = true
                         }) {
-                            Icon(Icons.Outlined.DriveFileRenameOutline, contentDescription = "Rename trip")
+                            Icon(Icons.Outlined.DriveFileRenameOutline, contentDescription = stringResource(R.string.trip_rename_trip_cd))
                         }
                     },
                 )
@@ -160,7 +162,7 @@ fun TripBuilderScreen(
                 ExtendedFloatingActionButton(
                     onClick = viewModel::onShowAddSheet,
                     icon = { Icon(Icons.Outlined.Add, contentDescription = null) },
-                    text = { Text("Add Stop") },
+                    text = { Text(stringResource(R.string.trip_add_stop)) },
                 )
             },
         ) { padding ->
@@ -188,9 +190,9 @@ fun TripBuilderScreen(
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text("🗺️", style = MaterialTheme.typography.displayMedium)
                         Spacer(Modifier.height(12.dp))
-                        Text("No stops yet", style = MaterialTheme.typography.titleMedium)
+                        Text(stringResource(R.string.trip_no_stops), style = MaterialTheme.typography.titleMedium)
                         Text(
-                            "Tap Add Stop to build your trip",
+                            stringResource(R.string.trip_tap_to_add),
                             style = MaterialTheme.typography.bodySmall,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                         )
@@ -356,11 +358,11 @@ private fun StopItem(
                 )
             }
             IconButton(onClick = onRemove) {
-                Icon(Icons.Outlined.Clear, "Remove", tint = MaterialTheme.colorScheme.error)
+                Icon(Icons.Outlined.Clear, stringResource(R.string.trip_remove_stop_cd), tint = MaterialTheme.colorScheme.error)
             }
             Icon(
                 Icons.Outlined.DragHandle,
-                contentDescription = "Drag to reorder",
+                contentDescription = stringResource(R.string.trip_drag_reorder_cd),
                 tint = if (isDragging) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.outline,
                 modifier = Modifier.draggable(
                     state = draggableState,
@@ -384,8 +386,8 @@ private fun TripSummaryCard(stops: List<UserTripStop>) {
             modifier = Modifier.fillMaxWidth().padding(16.dp),
             horizontalArrangement = Arrangement.SpaceEvenly,
         ) {
-            SummaryItem("${stops.size}", "Stops")
-            SummaryItem("~${totalMin / 60}h", "Duration")
+            SummaryItem("${stops.size}", stringResource(R.string.trip_stops_label))
+            SummaryItem("~${totalMin / 60}h", stringResource(R.string.trip_duration_label))
         }
     }
 }
@@ -408,7 +410,7 @@ private fun AddPlaceSheet(
     Column(modifier = Modifier.fillMaxSize().padding(16.dp).imePadding()) {
         Spacer(Modifier.height(8.dp))
         Text(
-            "Añadir parada",
+            stringResource(R.string.trip_add_place_title),
             style = MaterialTheme.typography.titleMedium,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface,
@@ -419,7 +421,7 @@ private fun AddPlaceSheet(
             onValueChange = onQueryChanged,
             placeholder = {
                 Text(
-                    "Buscar lugar…",
+                    stringResource(R.string.trip_search_placeholder),
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             },

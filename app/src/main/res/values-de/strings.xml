@@ -5,4 +5,69 @@
     <string name="nav_explore">Entdecken</string>
     <string name="nav_trips">Meine Reisen</string>
     <string name="nav_favorites">Favoriten</string>
+
+    <!-- feature-map -->
+    <string name="map_search_hint">Geheime Orte suchen…</string>
+    <string name="map_search_close_cd">Suche schließen</string>
+    <string name="map_place_close_cd">Schließen</string>
+    <string name="map_place_view_detail">Ansehen →</string>
+    <string name="map_brand_subtitle">Interaktiver Reiseführer</string>
+    <string name="map_no_places_category">Keine Orte in dieser Kategorie</string>
+    <string name="map_zoom_in_cd">Vergrößern</string>
+    <string name="map_zoom_out_cd">Verkleinern</string>
+    <string name="map_my_location_cd">Mein Standort</string>
+    <string name="map_settings_cd">Einstellungen</string>
+
+    <!-- feature-itinerary -->
+    <string name="itinerary_not_found_title">Route nicht gefunden</string>
+    <string name="itinerary_not_found_body">Diese Route ist nicht verfügbar.\nGehe zurück zur Karte, um andere Aktivitäten zu entdecken.</string>
+    <string name="itinerary_back_to_map">Zurück zur Karte</string>
+    <string name="itinerary_loading">Meeresbedinungen werden geladen…</string>
+    <string name="itinerary_back_cd">Zurück</string>
+    <string name="itinerary_save_for_later">Route für später speichern</string>
+    <string name="itinerary_not_now">Jetzt nicht</string>
+    <string name="itinerary_step_by_step">Schritt-für-Schritt-Route</string>
+    <string name="itinerary_day">Tag %d</string>
+    <string name="itinerary_view_on_map">Auf der Karte ansehen</string>
+    <string name="itinerary_save_to_trips">In Reisen speichern</string>
+    <string name="itinerary_toggle_visited_cd">Als besucht markieren</string>
+    <string name="itinerary_all">Alle Routen</string>
+    <string name="itinerary_sea_condition">Wenn das Meer es erlaubt</string>
+
+    <!-- feature-trips -->
+    <string name="trip_new_title">Neue Reise</string>
+    <string name="trip_name_label">Reisename</string>
+    <string name="trip_name_placeholder">z. B. Mallorca im August</string>
+    <string name="trip_create">Reise erstellen</string>
+    <string name="trip_rename_title">Reise umbenennen</string>
+    <string name="trip_new_name_label">Neuer Name</string>
+    <string name="trip_cancel">Abbrechen</string>
+    <string name="trip_save">Speichern</string>
+    <string name="trip_delete_title">Reise löschen</string>
+    <string name="trip_delete_body">\"%s\" löschen? Diese Aktion kann nicht rückgängig gemacht werden.</string>
+    <string name="trip_delete">Löschen</string>
+    <string name="trip_my_trips">Meine Reisen</string>
+    <string name="trip_new_fab_cd">Neue Reise</string>
+    <string name="trip_rename_cd">Umbenennen</string>
+    <string name="trip_delete_cd">Löschen</string>
+    <string name="trip_no_stops">Noch keine Stopps</string>
+    <string name="trip_add_stop">Stopp hinzufügen</string>
+    <string name="trip_tap_to_add">Tippe auf Stopp hinzufügen, um deine Reise zu gestalten</string>
+    <string name="trip_remove_stop_cd">Entfernen</string>
+    <string name="trip_drag_reorder_cd">Zum Neuordnen ziehen</string>
+    <string name="trip_stops_label">Stopps</string>
+    <string name="trip_duration_label">Dauer</string>
+    <string name="trip_add_place_title">Stopp hinzufügen</string>
+    <string name="trip_search_placeholder">Ort suchen…</string>
+    <string name="trip_add_to_title">Zur Reise hinzufügen</string>
+    <string name="trip_back_cd">Zurück</string>
+    <string name="trip_existing_trips">Bestehende Reisen</string>
+    <string name="trip_create_new_title">Neue Reise erstellen</string>
+    <string name="trip_create_new_subtitle">Neues Reiseprogramm starten</string>
+    <string name="trip_add_action">Hinzufügen</string>
+    <string name="trip_view_map_cd">Auf der Karte ansehen</string>
+    <string name="trip_rename_trip_cd">Reise umbenennen</string>
+
+    <!-- feature-gems -->
+    <string name="gem_tap_to_discover">Tippen, um zu entdecken →</string>
 </resources>

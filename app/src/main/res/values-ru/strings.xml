@@ -5,4 +5,69 @@
     <string name="nav_explore">Исследовать</string>
     <string name="nav_trips">Мои поездки</string>
     <string name="nav_favorites">Избранное</string>
+
+    <!-- feature-map -->
+    <string name="map_search_hint">Поиск тайных мест…</string>
+    <string name="map_search_close_cd">Закрыть поиск</string>
+    <string name="map_place_close_cd">Закрыть</string>
+    <string name="map_place_view_detail">Просмотр →</string>
+    <string name="map_brand_subtitle">Интерактивный гид</string>
+    <string name="map_no_places_category">Нет мест в этой категории</string>
+    <string name="map_zoom_in_cd">Приблизить</string>
+    <string name="map_zoom_out_cd">Отдалить</string>
+    <string name="map_my_location_cd">Моё местоположение</string>
+    <string name="map_settings_cd">Настройки</string>
+
+    <!-- feature-itinerary -->
+    <string name="itinerary_not_found_title">Маршрут не найден</string>
+    <string name="itinerary_not_found_body">Этот маршрут недоступен.\nВернитесь на карту, чтобы изучить другие возможности.</string>
+    <string name="itinerary_back_to_map">Назад на карту</string>
+    <string name="itinerary_loading">Загрузка морских условий…</string>
+    <string name="itinerary_back_cd">Назад</string>
+    <string name="itinerary_save_for_later">Сохранить маршрут на потом</string>
+    <string name="itinerary_not_now">Не сейчас</string>
+    <string name="itinerary_step_by_step">Маршрут пошагово</string>
+    <string name="itinerary_day">День %d</string>
+    <string name="itinerary_view_on_map">Посмотреть на карте</string>
+    <string name="itinerary_save_to_trips">Сохранить в поездки</string>
+    <string name="itinerary_toggle_visited_cd">Отметить как посещённое</string>
+    <string name="itinerary_all">Все маршруты</string>
+    <string name="itinerary_sea_condition">Если позволяет море</string>
+
+    <!-- feature-trips -->
+    <string name="trip_new_title">Новая поездка</string>
+    <string name="trip_name_label">Название поездки</string>
+    <string name="trip_name_placeholder">Напр.: Майорка в августе</string>
+    <string name="trip_create">Создать поездку</string>
+    <string name="trip_rename_title">Переименовать поездку</string>
+    <string name="trip_new_name_label">Новое название</string>
+    <string name="trip_cancel">Отмена</string>
+    <string name="trip_save">Сохранить</string>
+    <string name="trip_delete_title">Удалить поездку</string>
+    <string name="trip_delete_body">Удалить \"%s\"? Это действие нельзя отменить.</string>
+    <string name="trip_delete">Удалить</string>
+    <string name="trip_my_trips">Мои поездки</string>
+    <string name="trip_new_fab_cd">Новая поездка</string>
+    <string name="trip_rename_cd">Переименовать</string>
+    <string name="trip_delete_cd">Удалить</string>
+    <string name="trip_no_stops">Пока нет остановок</string>
+    <string name="trip_add_stop">Добавить остановку</string>
+    <string name="trip_tap_to_add">Нажмите «Добавить остановку», чтобы создать маршрут</string>
+    <string name="trip_remove_stop_cd">Удалить</string>
+    <string name="trip_drag_reorder_cd">Перетащить для изменения порядка</string>
+    <string name="trip_stops_label">Остановки</string>
+    <string name="trip_duration_label">Продолжительность</string>
+    <string name="trip_add_place_title">Добавить остановку</string>
+    <string name="trip_search_placeholder">Поиск места…</string>
+    <string name="trip_add_to_title">Добавить в поездку</string>
+    <string name="trip_back_cd">Назад</string>
+    <string name="trip_existing_trips">Существующие поездки</string>
+    <string name="trip_create_new_title">Создать новую поездку</string>
+    <string name="trip_create_new_subtitle">Начать новый маршрут</string>
+    <string name="trip_add_action">Добавить</string>
+    <string name="trip_view_map_cd">Посмотреть на карте</string>
+    <string name="trip_rename_trip_cd">Переименовать поездку</string>
+
+    <!-- feature-gems -->
+    <string name="gem_tap_to_discover">Нажмите, чтобы открыть →</string>
 </resources>

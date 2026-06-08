@@ -38,6 +38,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -300,7 +301,7 @@ private fun LockedGemCard(
                     horizontalArrangement = Arrangement.spacedBy(4.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Text("Toca para descubrir →", fontSize = 11.sp, color = GemGold, fontWeight = FontWeight.SemiBold)
+                    Text(stringResource(R.string.gem_tap_to_discover), fontSize = 11.sp, color = GemGold, fontWeight = FontWeight.SemiBold)
                 }
             }
         }
