@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!-- Exclude Room database: contains seed data + user data stored locally only -->
+    <exclude domain="database" path="mallorca_db" />
+    <!-- Exclude DataStore: seed_version must not be restored to avoid skipping re-seed -->
+    <exclude domain="file" path="../datastore/" />
+</full-backup-content>
