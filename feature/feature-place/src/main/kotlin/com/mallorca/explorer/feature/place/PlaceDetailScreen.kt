@@ -739,7 +739,7 @@ private fun SUPTrafficLightCard(
                 ) {
                     Text("⚠️", style = MaterialTheme.typography.bodySmall)
                     Text(
-                        stringResource(R.string.place_sup_gust_warning, status.windGustKnots),
+                        stringResource(R.string.place_sup_gust_warning, status.windGustKnots ?: 0f),
                         style = MaterialTheme.typography.labelSmall,
                         color = Color(0xFFE65100),
                         fontWeight = FontWeight.SemiBold,
