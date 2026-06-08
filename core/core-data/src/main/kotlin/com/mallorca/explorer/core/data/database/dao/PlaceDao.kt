@@ -21,6 +21,9 @@ interface PlaceDao {
         SELECT * FROM places
         WHERE name LIKE '%' || :query || '%'
            OR nameEs LIKE '%' || :query || '%'
+           OR nameDe LIKE '%' || :query || '%'
+           OR nameRu LIKE '%' || :query || '%'
+           OR nameZh LIKE '%' || :query || '%'
            OR municipality LIKE '%' || :query || '%'
         ORDER BY rating DESC
         LIMIT 50
