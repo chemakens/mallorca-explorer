@@ -52,18 +52,16 @@ private data class PlaceSeedDto(
     val tags: List<String> = emptyList(),
 )
 
-private val strListJson = Json { ignoreUnknownKeys = true }
-private val strListSerializer = ListSerializer(String.serializer())
-private fun List<String>.toJson() = strListJson.encodeToString(strListSerializer, this)
-
 @Singleton
 class PlaceRepositoryImpl @Inject constructor(
     private val placeDao: PlaceDao,
     private val apiService: MallorcaApiService,
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    private val json: Json,
 ) : PlaceRepository {
-    
-    private val json = Json { ignoreUnknownKeys = true }
+
+    private val strListSerializer = ListSerializer(String.serializer())
+    private fun List<String>.toJson() = json.encodeToString(strListSerializer, this)
 
     override fun getAllPlaces(): Flow<List<Place>> =
         placeDao.getAllPlaces().map { entities -> entities.map { it.toDomain() } }

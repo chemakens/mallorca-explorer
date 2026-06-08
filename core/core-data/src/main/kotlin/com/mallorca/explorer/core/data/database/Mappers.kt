@@ -29,7 +29,7 @@ import kotlinx.serialization.json.Json
 import java.time.Instant
 import java.util.Locale
 
-private val json = Json { ignoreUnknownKeys = true }
+private val json = Json { ignoreUnknownKeys = true; isLenient = true }
 private val strListSerializer = ListSerializer(String.serializer())
 private fun List<String>.toJson() = json.encodeToString(strListSerializer, this)
 private fun String.toStringList(): List<String> = json.decodeFromString(strListSerializer, this)
