@@ -36,6 +36,17 @@ interface PlaceDao {
     @Upsert
     suspend fun upsert(place: PlaceEntity)
 
+    @Query("""
+        SELECT * FROM places
+        WHERE latitude  BETWEEN :latMin AND :latMax
+          AND longitude BETWEEN :lngMin AND :lngMax
+        ORDER BY rating DESC
+    """)
+    fun getPlacesInBoundingBox(
+        latMin: Double, latMax: Double,
+        lngMin: Double, lngMax: Double,
+    ): Flow<List<PlaceEntity>>
+
     @Query("DELETE FROM places WHERE id IN (:ids)")
     suspend fun deleteByIds(ids: List<String>)
 
