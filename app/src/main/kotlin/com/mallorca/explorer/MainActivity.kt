@@ -7,6 +7,8 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
@@ -18,7 +20,6 @@ import com.mallorca.explorer.navigation.PlaceDetailRoute
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -28,6 +29,7 @@ class MainActivity : ComponentActivity() {
     @Inject lateinit var prefsDataStore: UserPreferencesDataStore
 
     private var navController: NavController? = null
+    private var showOnboarding by mutableStateOf<Boolean?>(null)
 
     // Stores the intent that arrived before the NavController was ready (cold start).
     private var pendingDeepLinkIntent: Intent? = null
@@ -36,17 +38,20 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
 
-        val showOnboarding = runBlocking { !prefsDataStore.onboardingCompleted.first() }
-        if (showOnboarding) {
-            lifecycleScope.launch { prefsDataStore.setOnboardingCompleted() }
-        }
-
         // Capture deep link only on a genuine cold start, not on config changes.
         if (savedInstanceState == null) {
             pendingDeepLinkIntent = intent.takeIf { it.data != null }
         }
 
+        lifecycleScope.launch {
+            val completed = prefsDataStore.onboardingCompleted.first()
+            if (!completed) prefsDataStore.setOnboardingCompleted()
+            showOnboarding = !completed
+        }
+
         setContent {
+            val onboarding = showOnboarding ?: return@setContent
+
             val theme by prefsDataStore.selectedTheme.collectAsStateWithLifecycle(initialValue = "system")
             val darkTheme = when (theme) {
                 "light" -> false
@@ -55,7 +60,7 @@ class MainActivity : ComponentActivity() {
             }
             MallorcaTheme(darkTheme = darkTheme) {
                 MallorcaNavHost(
-                    showOnboarding = showOnboarding,
+                    showOnboarding = onboarding,
                     onNavControllerReady = { nc ->
                         navController = nc
                         pendingDeepLinkIntent?.let { pending ->

@@ -1,4 +1,9 @@
--keep class com.mallorca.explorer.** { *; }
+# Keep @Serializable classes — kotlinx.serialization accesses them by reflection
+-keep @kotlinx.serialization.Serializable class com.mallorca.explorer.** { *; }
+
+# Keep Room entities and DAOs — referenced by generated Room code
+-keep class com.mallorca.explorer.core.data.database.entity.** { *; }
+-keep class com.mallorca.explorer.core.data.database.dao.** { *; }
 
 # Retrofit
 -dontwarn retrofit2.**
