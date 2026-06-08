@@ -25,8 +25,9 @@ class DailyEventCheckWorker @AssistedInject constructor(
         return try {
             val events = getUpcomingEvents().first()
 
-            val tomorrowStart = Calendar.getInstance().apply {
-                add(Calendar.DAY_OF_YEAR, 1)
+            val tomorrow = Calendar.getInstance().apply { add(Calendar.DAY_OF_YEAR, 1) }
+            val tomorrowDayOfWeek = tomorrow.get(Calendar.DAY_OF_WEEK) // 1=Sun … 7=Sat
+            val tomorrowStart = tomorrow.apply {
                 set(Calendar.HOUR_OF_DAY, 0)
                 set(Calendar.MINUTE, 0)
                 set(Calendar.SECOND, 0)
@@ -35,7 +36,9 @@ class DailyEventCheckWorker @AssistedInject constructor(
             val tomorrowEnd = tomorrowStart + TimeUnit.DAYS.toMillis(1)
 
             val tomorrowEvents = events.filter { event ->
-                !event.isRecurring &&
+                if (event.isRecurring)
+                    event.recurringDayOfWeek == tomorrowDayOfWeek
+                else
                     event.startDateEpoch in tomorrowStart until tomorrowEnd
             }
 
