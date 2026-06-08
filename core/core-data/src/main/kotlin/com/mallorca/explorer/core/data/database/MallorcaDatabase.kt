@@ -45,7 +45,7 @@ import com.mallorca.explorer.core.data.database.entity.WeatherCacheEntity
         VisitedPlaceEntity::class,
         RecentlyViewedEntity::class,
     ],
-    version = 12,
+    version = 14,
     exportSchema = true,
 )
 abstract class MallorcaDatabase : RoomDatabase() {
@@ -95,6 +95,30 @@ abstract class MallorcaDatabase : RoomDatabase() {
         val MIGRATION_11_12 = object : Migration(11, 12) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("ALTER TABLE itineraries ADD COLUMN galleryPhotosJson TEXT NOT NULL DEFAULT '[]'")
+            }
+        }
+
+        val MIGRATION_12_13 = object : Migration(12, 13) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.execSQL("ALTER TABLE events ADD COLUMN titleDe TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE events ADD COLUMN titleRu TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE events ADD COLUMN titleZh TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE events ADD COLUMN descriptionDe TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE events ADD COLUMN descriptionRu TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE events ADD COLUMN descriptionZh TEXT NOT NULL DEFAULT ''")
+            }
+        }
+
+        val MIGRATION_13_14 = object : Migration(13, 14) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.execSQL("ALTER TABLE discounts ADD COLUMN headlineEs TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE discounts ADD COLUMN headlineDe TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE discounts ADD COLUMN headlineRu TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE discounts ADD COLUMN headlineZh TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE discounts ADD COLUMN termsEs TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE discounts ADD COLUMN termsDe TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE discounts ADD COLUMN termsRu TEXT NOT NULL DEFAULT ''")
+                database.execSQL("ALTER TABLE discounts ADD COLUMN termsZh TEXT NOT NULL DEFAULT ''")
             }
         }
     }

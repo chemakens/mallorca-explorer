@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="explore_header_title">Discover Mallorca</string>
+    <string name="explore_header_subtitle">%1$d places · %2$d itineraries</string>
+    <string name="explore_search_placeholder">Beaches, trails, towns…</string>
+    <string name="explore_filter_all">All</string>
+    <string name="explore_filter_near_me">📍 Near me</string>
+    <string name="explore_categories_title">Categories</string>
+    <string name="explore_featured_routes_title">Featured Routes</string>
+    <string name="explore_popular_now">Popular now</string>
+    <string name="explore_popular_nearest">Nearest</string>
+    <string name="explore_popular_near_me_rated">Near me · %1$d+ ★</string>
+    <string name="explore_popular_top_rated">Top rated · %1$d+ ★</string>
+    <string name="explore_recently_viewed_title">Recently viewed</string>
+    <string name="explore_no_results">No results</string>
+    <string name="explore_no_results_query">No results for \"%1$s\"</string>
+    <string name="explore_scroll_to_top_cd">Scroll to top</string>
+    <string name="explore_sup_title">SUP Today</string>
+    <string name="explore_sup_full_analysis">Full analysis available in each zone →</string>
+    <string name="explore_events_title">Events in Mallorca</string>
+    <string name="explore_events_no_filter_results">No events with these filters</string>
+    <string name="explore_events_recurring">Every week</string>
+    <string name="explore_events_free">Free</string>
+    <string name="explore_time_filter_all">All</string>
+    <string name="explore_time_filter_this_week">This week</string>
+    <string name="explore_time_filter_this_month">This month</string>
+    <string name="explore_time_filter_next_month">Next month</string>
+    <string name="explore_event_category_market">Market</string>
+    <string name="explore_event_category_festival">Festival</string>
+    <string name="explore_event_category_concert">Concert</string>
+    <string name="explore_event_category_culture">Culture</string>
+    <string name="explore_event_category_sport">Sport</string>
+</resources>

@@ -2,3 +2,5 @@
 sdk.dir=/Users/<your-user>/Library/Android/sdk
 MAPTILER_API_KEY=your_maptiler_key_here
 BASE_API_URL=https://api.mallorca-explorer.com/v1/
+VERSION_CODE=1
+VERSION_NAME=1.0.0

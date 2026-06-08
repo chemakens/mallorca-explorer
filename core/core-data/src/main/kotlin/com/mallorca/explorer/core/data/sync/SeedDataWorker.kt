@@ -17,6 +17,7 @@ import com.mallorca.explorer.core.data.datastore.UserPreferencesDataStore
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
 import kotlinx.coroutines.flow.first
+import kotlinx.serialization.SerializationException
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.builtins.ListSerializer
 import kotlinx.serialization.builtins.MapSerializer
@@ -80,8 +81,14 @@ class SeedDataWorker @AssistedInject constructor(
             prefsDataStore.setSeedVersion(CURRENT_SEED_VERSION)
             Timber.d("Seeded ${seedData.places.size} places, ${seedData.itineraries.size} itineraries, ${seedData.events.size} events (v$CURRENT_SEED_VERSION)")
             Result.success()
+        } catch (e: SerializationException) {
+            Timber.e(e, "Seed JSON is malformed — permanent failure, no retry")
+            Result.failure()
+        } catch (e: IllegalArgumentException) {
+            Timber.e(e, "Seed data contains invalid value — permanent failure, no retry")
+            Result.failure()
         } catch (e: Exception) {
-            Timber.e(e, "Failed to seed data")
+            Timber.e(e, "Failed to seed data — will retry")
             Result.retry()
         }
     }
@@ -228,8 +235,14 @@ class SeedDataWorker @AssistedInject constructor(
         val id: String,
         val title: String,
         val title_es: String = "",
+        val title_de: String = "",
+        val title_ru: String = "",
+        val title_zh: String = "",
         val description: String = "",
         val description_es: String = "",
+        val description_de: String = "",
+        val description_ru: String = "",
+        val description_zh: String = "",
         val category: String,
         val start_date: String,
         val end_date: String? = null,
@@ -246,7 +259,9 @@ class SeedDataWorker @AssistedInject constructor(
                 LocalDate.parse(s).atStartOfDay(ZoneOffset.UTC).toInstant().toEpochMilli()
             return EventEntity(
                 id = id, title = title, titleEs = title_es,
+                titleDe = title_de, titleRu = title_ru, titleZh = title_zh,
                 description = description, descriptionEs = description_es,
+                descriptionDe = description_de, descriptionRu = description_ru, descriptionZh = description_zh,
                 category = category.uppercase(),
                 startDateEpoch = parseDate(start_date),
                 endDateEpoch = end_date?.let { parseDate(it) },
@@ -262,7 +277,15 @@ class SeedDataWorker @AssistedInject constructor(
         val place_id: String,
         val partner_name: String,
         val headline: String,
+        val headline_es: String = "",
+        val headline_de: String = "",
+        val headline_ru: String = "",
+        val headline_zh: String = "",
         val terms: String = "",
+        val terms_es: String = "",
+        val terms_de: String = "",
+        val terms_ru: String = "",
+        val terms_zh: String = "",
         val code: String,
         val valid_until: String,
     ) {
@@ -271,7 +294,13 @@ class SeedDataWorker @AssistedInject constructor(
                 LocalDate.parse(s).atStartOfDay(ZoneOffset.UTC).toInstant().toEpochMilli()
             return DiscountEntity(
                 id = id, placeId = place_id, partnerName = partner_name,
-                headline = headline, terms = terms, code = code,
+                headline = headline,
+                headlineEs = headline_es, headlineDe = headline_de,
+                headlineRu = headline_ru, headlineZh = headline_zh,
+                terms = terms,
+                termsEs = terms_es, termsDe = terms_de,
+                termsRu = terms_ru, termsZh = terms_zh,
+                code = code,
                 validUntilEpoch = parseDate(valid_until),
             )
         }

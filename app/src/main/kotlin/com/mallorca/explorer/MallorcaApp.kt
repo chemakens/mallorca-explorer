@@ -14,9 +14,8 @@ import com.mallorca.explorer.core.data.sync.SeedDataWorker
 import com.mallorca.explorer.notification.DailyEventCheckWorker
 import com.mallorca.explorer.notification.createNotificationChannel
 import dagger.hilt.android.HiltAndroidApp
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.SupervisorJob
+import androidx.lifecycle.ProcessLifecycleOwner
+import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
@@ -49,11 +48,9 @@ class MallorcaApp : Application(), Configuration.Provider, ImageLoaderFactory {
         )
         .build()
 
-    private val appScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
-
     override fun onCreate() {
         super.onCreate()
-        appScope.launch {
+        ProcessLifecycleOwner.get().lifecycleScope.launch {
             localeSource.setLocale(prefsDataStore.selectedLocale.first())
         }
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())

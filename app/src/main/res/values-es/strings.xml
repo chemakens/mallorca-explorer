@@ -71,4 +71,67 @@
 
     <!-- feature-gems -->
     <string name="gem_tap_to_discover">Toca para descubrir →</string>
+
+    <!-- feature-place -->
+    <string name="place_address_label">Dirección</string>
+    <string name="place_get_directions">Cómo llegar</string>
+    <string name="place_add_to_trip">+ Añadir al viaje</string>
+    <string name="place_buy_ticket">Comprar Entrada</string>
+    <string name="place_hidden_gem_unlocked">Hidden Gem desbloqueado</string>
+    <string name="place_beach_conditions_title">Condiciones Ahora</string>
+    <string name="place_flag_red">🔴 Bandera Roja</string>
+    <string name="place_flag_yellow">🟡 Bandera Amarilla</string>
+    <string name="place_flag_green">🟢 Bandera Verde</string>
+    <string name="place_metric_waves">Olas</string>
+    <string name="place_metric_sea">Mar</string>
+    <string name="place_metric_wind">Viento</string>
+    <string name="place_metric_air">Aire</string>
+    <string name="place_discount_code">código</string>
+    <string name="place_sup_title">Semáforo SUP</string>
+    <string name="place_sup_loading">🏄 Cargando semáforo SUP…</string>
+    <string name="place_wind_onshore">Onshore ↑</string>
+    <string name="place_wind_offshore">Offshore ↓</string>
+    <string name="place_wind_cross">Cross ↔</string>
+    <string name="place_sup_gust_warning">Rachas fuertes: %.1f kn — mantente cerca de la orilla</string>
+    <string name="place_sup_offshore_warning">Viento offshore — el viento aleja la tabla de la orilla. No salir hoy.</string>
+    <string name="place_hidden_gem_title">Gema Oculta</string>
+    <string name="place_hidden_gem_body">Este lugar secreto solo lo conocen unos pocos.\nDesbloquea el acceso exclusivo para ver las coordenadas exactas, los tips locales y cómo llegar.</string>
+    <string name="place_hidden_gem_perk_1">📍 Coordenadas GPS exactas</string>
+    <string name="place_hidden_gem_perk_2">🗺 Instrucciones de acceso paso a paso</string>
+    <string name="place_hidden_gem_perk_3">💡 Tips exclusivos de locales</string>
+    <string name="place_hidden_gem_perk_4">📸 Las mejores horas para visitar</string>
+    <string name="place_hidden_gem_unlock">💎  Desbloquear esta Gema</string>
+    <string name="place_hidden_gem_no_subscription">Acceso único · Sin suscripción</string>
+
+    <!-- feature-explore -->
+    <string name="explore_header_title">Descubre Mallorca</string>
+    <string name="explore_header_subtitle">%1$d lugares · %2$d rutas</string>
+    <string name="explore_search_placeholder">Playas, rutas, pueblos…</string>
+    <string name="explore_filter_all">Todos</string>
+    <string name="explore_filter_near_me">📍 Cerca de mí</string>
+    <string name="explore_categories_title">Categorías</string>
+    <string name="explore_featured_routes_title">Rutas destacadas</string>
+    <string name="explore_popular_now">Populares ahora</string>
+    <string name="explore_popular_nearest">Más cercanos</string>
+    <string name="explore_popular_near_me_rated">Cerca de mí · %1$d+ ★</string>
+    <string name="explore_popular_top_rated">Mejor valorados · %1$d+ ★</string>
+    <string name="explore_recently_viewed_title">Vistos recientemente</string>
+    <string name="explore_no_results">Sin resultados</string>
+    <string name="explore_no_results_query">Sin resultados para \"%1$s\"</string>
+    <string name="explore_scroll_to_top_cd">Volver arriba</string>
+    <string name="explore_sup_title">Paddle Surf Hoy</string>
+    <string name="explore_sup_full_analysis">Análisis completo disponible en cada zona →</string>
+    <string name="explore_events_title">Eventos en Mallorca</string>
+    <string name="explore_events_no_filter_results">No hay eventos con estos filtros</string>
+    <string name="explore_events_recurring">Cada semana</string>
+    <string name="explore_events_free">Gratis</string>
+    <string name="explore_time_filter_all">Todos</string>
+    <string name="explore_time_filter_this_week">Esta semana</string>
+    <string name="explore_time_filter_this_month">Este mes</string>
+    <string name="explore_time_filter_next_month">Próximo mes</string>
+    <string name="explore_event_category_market">Mercado</string>
+    <string name="explore_event_category_festival">Festival</string>
+    <string name="explore_event_category_concert">Concierto</string>
+    <string name="explore_event_category_culture">Cultura</string>
+    <string name="explore_event_category_sport">Deporte</string>
 </resources>

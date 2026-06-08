@@ -70,6 +70,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
@@ -155,13 +156,13 @@ fun ExploreScreen(
                 .padding(top = 8.dp),
         ) {
             Text(
-                "Discover Mallorca",
+                stringResource(R.string.explore_header_title),
                 style = MaterialTheme.typography.headlineSmall,
                 color = Color.White,
                 fontWeight = FontWeight.Bold,
             )
             Text(
-                "${uiState.totalPlaceCount} places · ${uiState.featuredItineraries.size} itineraries",
+                stringResource(R.string.explore_header_subtitle, uiState.totalPlaceCount, uiState.featuredItineraries.size),
                 style = MaterialTheme.typography.bodySmall,
                 color = Color.White.copy(alpha = 0.85f),
             )
@@ -175,7 +176,7 @@ fun ExploreScreen(
                 modifier = Modifier.fillMaxWidth(),
                 placeholder = {
                     Text(
-                        "Beaches, trails, towns…",
+                        stringResource(R.string.explore_search_placeholder),
                         color = Color.White.copy(alpha = 0.7f),
                         style = MaterialTheme.typography.bodyLarge,
                     )
@@ -223,7 +224,7 @@ fun ExploreScreen(
                 FilterChip(
                     selected = todosSelected,
                     onClick = { viewModel.setMinRating(null); if (uiState.nearMeEnabled) viewModel.toggleNearMe() },
-                    label = { Text("Todos") },
+                    label = { Text(stringResource(R.string.explore_filter_all)) },
                     colors = FilterChipDefaults.filterChipColors(
                         containerColor = Color.Transparent,
                         labelColor = Color.White,
@@ -283,7 +284,7 @@ fun ExploreScreen(
                 FilterChip(
                     selected = nearMeSelected,
                     onClick = { onNearMeTapped() },
-                    label = { Text("📍 Cerca de mí") },
+                    label = { Text(stringResource(R.string.explore_filter_near_me)) },
                     leadingIcon = if (nearMeSelected) {
                         { Icon(Icons.Outlined.MyLocation, null, modifier = Modifier.size(16.dp), tint = MaterialTheme.colorScheme.primary) }
                     } else null,
@@ -318,8 +319,8 @@ fun ExploreScreen(
                         if (uiState.searchResults.isEmpty()) {
                             EmptyState(
                                 emoji = "🔍",
-                                title = "Sin resultados",
-                                subtitle = "No encontramos nada para \"${uiState.searchQuery}\"",
+                                title = stringResource(R.string.explore_no_results),
+                                subtitle = stringResource(R.string.explore_no_results_query, uiState.searchQuery),
                             )
                         } else {
                             LazyColumn(
@@ -369,7 +370,7 @@ fun ExploreScreen(
                             // Category grid
                             item {
                                 Column(modifier = Modifier.padding(horizontal = 16.dp)) {
-                                    Text("Categorías", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
+                                    Text(stringResource(R.string.explore_categories_title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                                     Spacer(Modifier.height(12.dp))
                                     CategoryGrid(onCategoryClick = onCategoryClick)
                                 }
@@ -379,7 +380,7 @@ fun ExploreScreen(
                                 item {
                                     Column {
                                         Text(
-                                            "Rutas destacadas",
+                                            stringResource(R.string.explore_featured_routes_title),
                                             style = MaterialTheme.typography.titleMedium,
                                             fontWeight = FontWeight.Bold,
                                             modifier = Modifier.padding(horizontal = 16.dp),
@@ -400,14 +401,17 @@ fun ExploreScreen(
                                 }
                             }
                             // Popular / filtered places
-                            val popularTitle = when {
-                                uiState.nearMeEnabled && uiState.minRating != null ->
-                                    "Cerca de mí · ${uiState.minRating!!.toInt()}+ ★"
-                                uiState.nearMeEnabled -> "Más cercanos"
-                                uiState.minRating != null -> "Mejor valorados · ${uiState.minRating!!.toInt()}+ ★"
-                                else -> "Populares ahora"
-                            }
                             item {
+                                val popularTitle = when {
+                                    uiState.nearMeEnabled && uiState.minRating != null ->
+                                        stringResource(R.string.explore_popular_near_me_rated, uiState.minRating!!.toInt())
+                                    uiState.nearMeEnabled ->
+                                        stringResource(R.string.explore_popular_nearest)
+                                    uiState.minRating != null ->
+                                        stringResource(R.string.explore_popular_top_rated, uiState.minRating!!.toInt())
+                                    else ->
+                                        stringResource(R.string.explore_popular_now)
+                                }
                                 Row(
                                     modifier = Modifier.padding(horizontal = 16.dp),
                                     verticalAlignment = Alignment.CenterVertically,
@@ -421,7 +425,7 @@ fun ExploreScreen(
                                     )
                                     if (uiState.popularPlaces.isEmpty() && (uiState.minRating != null || uiState.nearMeEnabled)) {
                                         Text(
-                                            "Sin resultados",
+                                            stringResource(R.string.explore_no_results),
                                             style = MaterialTheme.typography.labelSmall,
                                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                                         )
@@ -457,7 +461,7 @@ fun ExploreScreen(
                                 item {
                                     Column {
                                         Text(
-                                            "Vistos recientemente",
+                                            stringResource(R.string.explore_recently_viewed_title),
                                             style = MaterialTheme.typography.titleMedium,
                                             fontWeight = FontWeight.Bold,
                                             modifier = Modifier.padding(horizontal = 16.dp),
@@ -480,6 +484,7 @@ fun ExploreScreen(
                                     events = uiState.upcomingEvents,
                                     timeFilter = uiState.eventTimeFilter,
                                     categoryFilter = uiState.eventCategoryFilter,
+                                    locale = uiState.locale,
                                     onTimeFilterChange = viewModel::setEventTimeFilter,
                                     onCategoryFilterChange = viewModel::setEventCategoryFilter,
                                 )
@@ -517,7 +522,7 @@ fun ExploreScreen(
                         },
                     shape = CircleShape,
                 ) {
-                    Icon(Icons.Outlined.KeyboardArrowUp, contentDescription = "Volver arriba")
+                    Icon(Icons.Outlined.KeyboardArrowUp, contentDescription = stringResource(R.string.explore_scroll_to_top_cd))
                 }
             }
         }
@@ -657,7 +662,7 @@ private fun SUPSection(weather: WeatherCondition, supPlaces: ImmutableList<Place
     val cardBg = when (light) { SUPTrafficLight.GREEN -> Color(0xFFE8F5E9); SUPTrafficLight.YELLOW -> Color(0xFFFFFDE7); SUPTrafficLight.RED -> Color(0xFFFFEBEE) }
     val accentColor = when (light) { SUPTrafficLight.GREEN -> Color(0xFF2E7D32); SUPTrafficLight.YELLOW -> Color(0xFFF57F17); SUPTrafficLight.RED -> Color(0xFFC62828) }
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(10.dp)) {
-        Row(verticalAlignment = Alignment.CenterVertically) { Text("🏄", style = MaterialTheme.typography.titleMedium); Spacer(Modifier.width(6.dp)); Text("Paddle Surf Hoy", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold) }
+        Row(verticalAlignment = Alignment.CenterVertically) { Text("🏄", style = MaterialTheme.typography.titleMedium); Spacer(Modifier.width(6.dp)); Text(stringResource(R.string.explore_sup_title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold) }
         Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = cardBg), elevation = CardDefaults.cardElevation(0.dp)) {
             Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
@@ -670,7 +675,7 @@ private fun SUPSection(weather: WeatherCondition, supPlaces: ImmutableList<Place
                         Text("💨 ${windDegToCardinal(weather.windDirectionDeg)}", style = MaterialTheme.typography.bodySmall, color = accentColor)
                     }
                 }
-                Text("Análisis completo disponible en cada zona →", style = MaterialTheme.typography.labelSmall, color = accentColor.copy(alpha = 0.75f))
+                Text(stringResource(R.string.explore_sup_full_analysis), style = MaterialTheme.typography.labelSmall, color = accentColor.copy(alpha = 0.75f))
             }
         }
         if (supPlaces.isNotEmpty()) {
@@ -718,6 +723,7 @@ private fun EventsSection(
     events: ImmutableList<Event>,
     timeFilter: EventTimeFilter,
     categoryFilter: EventCategory?,
+    locale: String,
     onTimeFilterChange: (EventTimeFilter) -> Unit,
     onCategoryFilterChange: (EventCategory?) -> Unit,
     modifier: Modifier = Modifier,
@@ -728,14 +734,14 @@ private fun EventsSection(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
-                "Eventos en Mallorca",
+                stringResource(R.string.explore_events_title),
                 style = MaterialTheme.typography.titleMedium,
                 fontWeight = FontWeight.Bold,
                 modifier = Modifier.weight(1f),
             )
             if (events.isEmpty()) {
                 Text(
-                    "Sin resultados",
+                    stringResource(R.string.explore_no_results),
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -747,10 +753,16 @@ private fun EventsSection(
             horizontalArrangement = Arrangement.spacedBy(8.dp),
         ) {
             EventTimeFilter.entries.forEach { filter ->
+                val filterLabel = when (filter) {
+                    EventTimeFilter.ALL        -> stringResource(R.string.explore_time_filter_all)
+                    EventTimeFilter.THIS_WEEK  -> stringResource(R.string.explore_time_filter_this_week)
+                    EventTimeFilter.THIS_MONTH -> stringResource(R.string.explore_time_filter_this_month)
+                    EventTimeFilter.NEXT_MONTH -> stringResource(R.string.explore_time_filter_next_month)
+                }
                 FilterChip(
                     selected = timeFilter == filter,
                     onClick = { onTimeFilterChange(filter) },
-                    label = { Text(filter.label, style = MaterialTheme.typography.labelMedium) },
+                    label = { Text(filterLabel, style = MaterialTheme.typography.labelMedium) },
                 )
             }
         }
@@ -762,13 +774,20 @@ private fun EventsSection(
             FilterChip(
                 selected = categoryFilter == null,
                 onClick = { onCategoryFilterChange(null) },
-                label = { Text("Todos", style = MaterialTheme.typography.labelMedium) },
+                label = { Text(stringResource(R.string.explore_filter_all), style = MaterialTheme.typography.labelMedium) },
             )
             EventCategory.entries.forEach { cat ->
+                val catLabel = when (cat) {
+                    EventCategory.MARKET   -> stringResource(R.string.explore_event_category_market)
+                    EventCategory.FESTIVAL -> stringResource(R.string.explore_event_category_festival)
+                    EventCategory.CONCERT  -> stringResource(R.string.explore_event_category_concert)
+                    EventCategory.CULTURE  -> stringResource(R.string.explore_event_category_culture)
+                    EventCategory.SPORT    -> stringResource(R.string.explore_event_category_sport)
+                }
                 FilterChip(
                     selected = categoryFilter == cat,
                     onClick = { onCategoryFilterChange(if (categoryFilter == cat) null else cat) },
-                    label = { Text("${cat.emoji} ${cat.label}", style = MaterialTheme.typography.labelMedium) },
+                    label = { Text("${cat.emoji} $catLabel", style = MaterialTheme.typography.labelMedium) },
                 )
             }
         }
@@ -778,7 +797,7 @@ private fun EventsSection(
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 items(events, key = { it.id }) { event ->
-                    EventCard(event = event)
+                    EventCard(event = event, locale = locale)
                 }
             }
         } else {
@@ -787,7 +806,7 @@ private fun EventsSection(
                 contentAlignment = Alignment.Center,
             ) {
                 Text(
-                    "No hay eventos con estos filtros",
+                    stringResource(R.string.explore_events_no_filter_results),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -797,21 +816,36 @@ private fun EventsSection(
 }
 
 @Composable
-private fun EventCard(event: Event, modifier: Modifier = Modifier) {
-    val dateStr = remember(event.startDateEpoch) {
-        if (event.isRecurring) "Cada semana"
+private fun EventCard(event: Event, locale: String, modifier: Modifier = Modifier) {
+    val displayTitle = when (locale) {
+        "es" -> event.titleEs.ifEmpty { event.title }
+        "de" -> event.titleDe.ifEmpty { event.title }
+        "ru" -> event.titleRu.ifEmpty { event.title }
+        "zh" -> event.titleZh.ifEmpty { event.title }
+        else -> event.title
+    }
+    val categoryLabel = when (event.category) {
+        EventCategory.MARKET   -> stringResource(R.string.explore_event_category_market)
+        EventCategory.FESTIVAL -> stringResource(R.string.explore_event_category_festival)
+        EventCategory.CONCERT  -> stringResource(R.string.explore_event_category_concert)
+        EventCategory.CULTURE  -> stringResource(R.string.explore_event_category_culture)
+        EventCategory.SPORT    -> stringResource(R.string.explore_event_category_sport)
+    }
+    val recurringLabel = stringResource(R.string.explore_events_recurring)
+    val dateStr = remember(event.startDateEpoch, event.isRecurring, recurringLabel) {
+        if (event.isRecurring) recurringLabel
         else SimpleDateFormat("d MMM", Locale.getDefault()).format(Date(event.startDateEpoch))
     }
     Card(modifier = modifier.width(160.dp), shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
         Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                 Box(modifier = Modifier.size(36.dp).clip(RoundedCornerShape(10.dp)).background(MaterialTheme.colorScheme.primaryContainer), contentAlignment = Alignment.Center) { Text(event.category.emoji, style = MaterialTheme.typography.titleSmall) }
-                Column { Text(event.category.label, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.SemiBold); Text(dateStr, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+                Column { Text(categoryLabel, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.SemiBold); Text(dateStr, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
             }
-            Text(event.titleEs.ifEmpty { event.title }, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, maxLines = 2)
+            Text(displayTitle, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold, maxLines = 2)
             Text(event.municipality, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
             if (event.isFree) {
-                Box(modifier = Modifier.clip(RoundedCornerShape(20.dp)).background(Color(0xFF1B5E20).copy(alpha = 0.12f)).padding(horizontal = 8.dp, vertical = 2.dp)) { Text("Gratis", style = MaterialTheme.typography.labelSmall, color = Color(0xFF2E7D32), fontWeight = FontWeight.Bold) }
+                Box(modifier = Modifier.clip(RoundedCornerShape(20.dp)).background(Color(0xFF1B5E20).copy(alpha = 0.12f)).padding(horizontal = 8.dp, vertical = 2.dp)) { Text(stringResource(R.string.explore_events_free), style = MaterialTheme.typography.labelSmall, color = Color(0xFF2E7D32), fontWeight = FontWeight.Bold) }
             } else {
                 event.price?.let { Text(it, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
             }

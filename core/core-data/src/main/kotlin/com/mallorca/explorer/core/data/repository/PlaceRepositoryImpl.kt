@@ -2,7 +2,6 @@ package com.mallorca.explorer.core.data.repository
 
 import com.mallorca.explorer.core.data.database.dao.PlaceDao
 import com.mallorca.explorer.core.data.database.toDomain
-import com.mallorca.explorer.core.data.database.toEntity
 import com.mallorca.explorer.core.data.network.MallorcaApiService
 import com.mallorca.explorer.core.domain.model.Category
 import com.mallorca.explorer.core.domain.model.LatLng
@@ -61,24 +60,42 @@ class PlaceRepositoryImpl @Inject constructor(
     override suspend fun refreshPlaces() {
         try {
             val dtos = apiService.getPlaces()
+            val nowEpoch = System.currentTimeMillis()
             placeDao.upsertAll(dtos.map { dto ->
-                Place(
+                com.mallorca.explorer.core.data.database.entity.PlaceEntity(
                     id = dto.id,
                     name = dto.name,
                     nameEs = dto.nameEs,
+                    nameDe = dto.nameDe,
+                    nameRu = dto.nameRu,
+                    nameZh = dto.nameZh,
                     description = dto.description,
-                    category = Category.valueOf(dto.category.uppercase()),
-                    location = LatLng(dto.latitude, dto.longitude),
+                    descriptionEs = dto.descriptionEs,
+                    descriptionDe = dto.descriptionDe,
+                    descriptionRu = dto.descriptionRu,
+                    descriptionZh = dto.descriptionZh,
+                    category = dto.category.uppercase(),
+                    latitude = dto.latitude,
+                    longitude = dto.longitude,
                     address = dto.address,
                     municipality = dto.municipality,
-                    photoUrls = dto.photoUrls,
+                    photoUrlsJson = json.encodeToString(strListSerializer, dto.photoUrls),
                     thumbnailUrl = dto.thumbnailUrl,
+                    openingHoursJson = null,
+                    priceLevel = dto.priceLevel,
                     rating = dto.rating,
                     reviewCount = dto.reviewCount,
-                    tips = dto.tips,
+                    tipsJson = json.encodeToString(strListSerializer, dto.tips),
+                    tipsEsJson = json.encodeToString(strListSerializer, dto.tipsEs),
+                    tipsDeJson = json.encodeToString(strListSerializer, dto.tipsDe),
+                    tipsRuJson = json.encodeToString(strListSerializer, dto.tipsRu),
+                    tipsZhJson = json.encodeToString(strListSerializer, dto.tipsZh),
                     website = dto.website,
                     phoneNumber = dto.phoneNumber,
-                ).toEntity()
+                    ticketUrl = dto.ticketUrl,
+                    tagsJson = json.encodeToString(strListSerializer, dto.tags),
+                    lastUpdatedEpoch = nowEpoch,
+                )
             })
         } catch (e: Exception) {
             Timber.w(e, "Failed to refresh places from network")

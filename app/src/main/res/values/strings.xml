@@ -72,4 +72,67 @@
 
     <!-- feature-gems -->
     <string name="gem_tap_to_discover">Tap to discover →</string>
+
+    <!-- feature-place -->
+    <string name="place_address_label">Address</string>
+    <string name="place_get_directions">Get Directions</string>
+    <string name="place_add_to_trip">+ Add to Trip</string>
+    <string name="place_buy_ticket">Buy Ticket</string>
+    <string name="place_hidden_gem_unlocked">Hidden Gem unlocked</string>
+    <string name="place_beach_conditions_title">Current Conditions</string>
+    <string name="place_flag_red">🔴 Red Flag</string>
+    <string name="place_flag_yellow">🟡 Yellow Flag</string>
+    <string name="place_flag_green">🟢 Green Flag</string>
+    <string name="place_metric_waves">Waves</string>
+    <string name="place_metric_sea">Sea</string>
+    <string name="place_metric_wind">Wind</string>
+    <string name="place_metric_air">Air</string>
+    <string name="place_discount_code">code</string>
+    <string name="place_sup_title">SUP Traffic Light</string>
+    <string name="place_sup_loading">🏄 Loading SUP status…</string>
+    <string name="place_wind_onshore">Onshore ↑</string>
+    <string name="place_wind_offshore">Offshore ↓</string>
+    <string name="place_wind_cross">Cross ↔</string>
+    <string name="place_sup_gust_warning">Strong gusts: %.1f kn — stay close to shore</string>
+    <string name="place_sup_offshore_warning">Offshore wind — wind pushes the board away from shore. Do not go out today.</string>
+    <string name="place_hidden_gem_title">Hidden Gem</string>
+    <string name="place_hidden_gem_body">Only a few people know this secret place.\nUnlock exclusive access to see the exact coordinates, local tips and how to get there.</string>
+    <string name="place_hidden_gem_perk_1">📍 Exact GPS coordinates</string>
+    <string name="place_hidden_gem_perk_2">🗺 Step-by-step access instructions</string>
+    <string name="place_hidden_gem_perk_3">💡 Exclusive tips from locals</string>
+    <string name="place_hidden_gem_perk_4">📸 Best times to visit</string>
+    <string name="place_hidden_gem_unlock">💎  Unlock this Gem</string>
+    <string name="place_hidden_gem_no_subscription">One-time access · No subscription</string>
+
+    <!-- feature-explore -->
+    <string name="explore_header_title">Discover Mallorca</string>
+    <string name="explore_header_subtitle">%1$d places · %2$d itineraries</string>
+    <string name="explore_search_placeholder">Beaches, trails, towns…</string>
+    <string name="explore_filter_all">All</string>
+    <string name="explore_filter_near_me">📍 Near me</string>
+    <string name="explore_categories_title">Categories</string>
+    <string name="explore_featured_routes_title">Featured Routes</string>
+    <string name="explore_popular_now">Popular now</string>
+    <string name="explore_popular_nearest">Nearest</string>
+    <string name="explore_popular_near_me_rated">Near me · %1$d+ ★</string>
+    <string name="explore_popular_top_rated">Top rated · %1$d+ ★</string>
+    <string name="explore_recently_viewed_title">Recently viewed</string>
+    <string name="explore_no_results">No results</string>
+    <string name="explore_no_results_query">No results for \"%1$s\"</string>
+    <string name="explore_scroll_to_top_cd">Scroll to top</string>
+    <string name="explore_sup_title">SUP Today</string>
+    <string name="explore_sup_full_analysis">Full analysis available in each zone →</string>
+    <string name="explore_events_title">Events in Mallorca</string>
+    <string name="explore_events_no_filter_results">No events with these filters</string>
+    <string name="explore_events_recurring">Every week</string>
+    <string name="explore_events_free">Free</string>
+    <string name="explore_time_filter_all">All</string>
+    <string name="explore_time_filter_this_week">This week</string>
+    <string name="explore_time_filter_this_month">This month</string>
+    <string name="explore_time_filter_next_month">Next month</string>
+    <string name="explore_event_category_market">Market</string>
+    <string name="explore_event_category_festival">Festival</string>
+    <string name="explore_event_category_concert">Concert</string>
+    <string name="explore_event_category_culture">Culture</string>
+    <string name="explore_event_category_sport">Sport</string>
 </resources>

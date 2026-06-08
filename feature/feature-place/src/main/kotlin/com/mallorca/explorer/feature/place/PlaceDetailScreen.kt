@@ -60,6 +60,7 @@ import androidx.compose.ui.hapticfeedback.HapticFeedbackType
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -163,27 +164,9 @@ private fun PlaceDetailContent(
 ) {
     val context = LocalContext.current
     val haptic = LocalHapticFeedback.current
-    val displayName = when (locale) {
-        "es" -> place.nameEs.ifEmpty { place.name }
-        "de" -> place.nameDe.ifEmpty { place.name }
-        "ru" -> place.nameRu.ifEmpty { place.name }
-        "zh" -> place.nameZh.ifEmpty { place.name }
-        else -> place.name
-    }
-    val displayDescription = when (locale) {
-        "es" -> place.descriptionEs.ifEmpty { place.description }
-        "de" -> place.descriptionDe.ifEmpty { place.description }
-        "ru" -> place.descriptionRu.ifEmpty { place.description }
-        "zh" -> place.descriptionZh.ifEmpty { place.description }
-        else -> place.description
-    }
-    val displayTips = when (locale) {
-        "es" -> place.tipsEs.ifEmpty { place.tips }
-        "de" -> place.tipsDe.ifEmpty { place.tips }
-        "ru" -> place.tipsRu.ifEmpty { place.tips }
-        "zh" -> place.tipsZh.ifEmpty { place.tips }
-        else -> place.tips
-    }
+    val displayName = place.localizedName(locale)
+    val displayDescription = place.localizedDescription(locale)
+    val displayTips = place.localizedTips(locale)
     val scrollState = rememberScrollState()
     var fullscreenPage by remember { mutableStateOf<Int?>(null) }
 
@@ -389,7 +372,7 @@ private fun PlaceDetailContent(
                 ) {
                     Text("💎", style = MaterialTheme.typography.bodySmall)
                     Text(
-                        "Hidden Gem desbloqueado",
+                        stringResource(R.string.place_hidden_gem_unlocked),
                         style = MaterialTheme.typography.labelMedium,
                         color = Color(0xFF6A1B9A),
                         fontWeight = FontWeight.SemiBold,
@@ -413,7 +396,7 @@ private fun PlaceDetailContent(
                 ) {
                     Icon(Icons.Outlined.ConfirmationNumber, contentDescription = null)
                     Spacer(Modifier.size(8.dp))
-                    Text("Comprar Entrada", fontWeight = FontWeight.Bold)
+                    Text(stringResource(R.string.place_buy_ticket), fontWeight = FontWeight.Bold)
                 }
             }
 
@@ -445,7 +428,7 @@ private fun PlaceDetailContent(
                             Row(verticalAlignment = Alignment.Top) {
                                 Text("📍", modifier = Modifier.size(20.dp))
                                 Column(modifier = Modifier.padding(start = 8.dp)) {
-                                    Text(if (locale == "es") "Dirección" else "Address", style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                                    Text(stringResource(R.string.place_address_label), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                     Text(it, style = MaterialTheme.typography.bodySmall)
                                 }
                             }
@@ -466,7 +449,7 @@ private fun PlaceDetailContent(
             if (discounts.isNotEmpty()) {
                 Spacer(Modifier.height(16.dp))
                 discounts.forEach { discount ->
-                    DiscountCard(discount = discount)
+                    DiscountCard(discount = discount, locale = locale)
                     Spacer(Modifier.height(8.dp))
                 }
             }
@@ -483,7 +466,7 @@ private fun PlaceDetailContent(
             ) {
                 Icon(Icons.Outlined.Directions, null)
                 Spacer(Modifier.size(8.dp))
-                Text(if (locale == "es") "Cómo llegar" else "Get Directions")
+                Text(stringResource(R.string.place_get_directions))
             }
 
             Spacer(Modifier.height(8.dp))
@@ -492,7 +475,7 @@ private fun PlaceDetailContent(
                 modifier = Modifier.fillMaxWidth(),
                 colors = ButtonDefaults.outlinedButtonColors(),
             ) {
-                Text(if (locale == "es") "+ Añadir al viaje" else "+ Add to Trip")
+                Text(stringResource(R.string.place_add_to_trip))
             }
         }
     }
@@ -515,10 +498,10 @@ private fun BeachConditionsCard(
     weather: WeatherCondition,
     modifier: Modifier = Modifier,
 ) {
-    val flagColor = when {
-        (weather.waveHeightM ?: 0f) > 1.5f || weather.windKmh > 35f -> Color(0xFFD32F2F) to "🔴 Bandera Roja"
-        (weather.waveHeightM ?: 0f) > 0.8f || weather.windKmh > 20f -> Color(0xFFF57F17) to "🟡 Bandera Amarilla"
-        else -> Color(0xFF388E3C) to "🟢 Bandera Verde"
+    val flagLabel = when {
+        (weather.waveHeightM ?: 0f) > 1.5f || weather.windKmh > 35f -> stringResource(R.string.place_flag_red)
+        (weather.waveHeightM ?: 0f) > 0.8f || weather.windKmh > 20f -> stringResource(R.string.place_flag_yellow)
+        else -> stringResource(R.string.place_flag_green)
     }
 
     Card(
@@ -534,14 +517,14 @@ private fun BeachConditionsCard(
             ) {
                 Text("🌊", style = MaterialTheme.typography.titleMedium)
                 Text(
-                    "Condiciones Ahora",
+                    stringResource(R.string.place_beach_conditions_title),
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF0D47A1),
                 )
                 Spacer(Modifier.weight(1f))
                 Text(
-                    flagColor.second,
+                    flagLabel,
                     style = MaterialTheme.typography.labelMedium,
                     fontWeight = FontWeight.SemiBold,
                 )
@@ -551,13 +534,13 @@ private fun BeachConditionsCard(
                 horizontalArrangement = Arrangement.SpaceEvenly,
             ) {
                 weather.waveHeightM?.let {
-                    BeachMetric(emoji = "🌊", label = "Olas", value = "${"%.1f".format(it)}m")
+                    BeachMetric(emoji = "🌊", label = stringResource(R.string.place_metric_waves), value = "${"%.1f".format(it)}m")
                 }
                 weather.seaTempC?.let {
-                    BeachMetric(emoji = "🌡️", label = "Mar", value = "${it.toInt()}°C")
+                    BeachMetric(emoji = "🌡️", label = stringResource(R.string.place_metric_sea), value = "${it.toInt()}°C")
                 }
-                BeachMetric(emoji = "💨", label = "Viento", value = "${weather.windKmh.toInt()} km/h")
-                BeachMetric(emoji = "🌡️", label = "Aire", value = "${weather.tempC.toInt()}°C")
+                BeachMetric(emoji = "💨", label = stringResource(R.string.place_metric_wind), value = "${weather.windKmh.toInt()} km/h")
+                BeachMetric(emoji = "🌡️", label = stringResource(R.string.place_metric_air), value = "${weather.tempC.toInt()}°C")
             }
         }
     }
@@ -575,8 +558,23 @@ private fun BeachMetric(emoji: String, label: String, value: String) {
 @Composable
 private fun DiscountCard(
     discount: Discount,
+    locale: String,
     modifier: Modifier = Modifier,
 ) {
+    val displayHeadline = when (locale) {
+        "es" -> discount.headlineEs.ifEmpty { discount.headline }
+        "de" -> discount.headlineDe.ifEmpty { discount.headline }
+        "ru" -> discount.headlineRu.ifEmpty { discount.headline }
+        "zh" -> discount.headlineZh.ifEmpty { discount.headline }
+        else -> discount.headline
+    }
+    val displayTerms = when (locale) {
+        "es" -> discount.termsEs.ifEmpty { discount.terms }
+        "de" -> discount.termsDe.ifEmpty { discount.terms }
+        "ru" -> discount.termsRu.ifEmpty { discount.terms }
+        "zh" -> discount.termsZh.ifEmpty { discount.terms }
+        else -> discount.terms
+    }
     Card(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp),
@@ -591,14 +589,14 @@ private fun DiscountCard(
             Text("🎟️", style = MaterialTheme.typography.headlineMedium)
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    discount.headline,
+                    displayHeadline,
                     style = MaterialTheme.typography.bodyMedium,
                     fontWeight = FontWeight.Bold,
                     color = Color(0xFF5C3D00),
                 )
-                if (discount.terms.isNotEmpty()) {
+                if (displayTerms.isNotEmpty()) {
                     Text(
-                        discount.terms,
+                        displayTerms,
                         style = MaterialTheme.typography.labelSmall,
                         color = Color(0xFF795548),
                     )
@@ -618,7 +616,7 @@ private fun DiscountCard(
                         color = Color(0xFF1A1A00),
                     )
                 }
-                Text("código", style = MaterialTheme.typography.labelSmall, color = Color(0xFF795548))
+                Text(stringResource(R.string.place_discount_code), style = MaterialTheme.typography.labelSmall, color = Color(0xFF795548))
             }
         }
     }
@@ -639,7 +637,7 @@ private fun SUPLoadingCard(modifier: Modifier = Modifier) {
         ) {
             CircularProgressIndicator(modifier = Modifier.size(20.dp), strokeWidth = 2.dp)
             Text(
-                "🏄 Cargando semáforo SUP…",
+                stringResource(R.string.place_sup_loading),
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color(0xFF0D47A1),
             )
@@ -678,7 +676,7 @@ private fun SUPTrafficLightCard(
             ) {
                 Text("🏄", style = MaterialTheme.typography.titleMedium)
                 Text(
-                    "Semáforo SUP",
+                    stringResource(R.string.place_sup_title),
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     color = accentColor,
@@ -706,13 +704,13 @@ private fun SUPTrafficLightCard(
             ) {
                 val windDir = windDegToCardinal(status.windDirectionDeg)
                 val windCategoryLabel = when (status.windCategory) {
-                    WindCategory.ONSHORE    -> "Onshore ↑"
-                    WindCategory.OFFSHORE   -> "Offshore ↓"
-                    WindCategory.CROSS_SHORE -> "Cross ↔"
+                    WindCategory.ONSHORE     -> stringResource(R.string.place_wind_onshore)
+                    WindCategory.OFFSHORE    -> stringResource(R.string.place_wind_offshore)
+                    WindCategory.CROSS_SHORE -> stringResource(R.string.place_wind_cross)
                 }
                 BeachMetric(
                     emoji = "💨",
-                    label = "Viento",
+                    label = stringResource(R.string.place_metric_wind),
                     value = "${"%.1f".format(status.windKnots)} kn",
                 )
                 BeachMetric(
@@ -721,10 +719,10 @@ private fun SUPTrafficLightCard(
                     value = windDir,
                 )
                 status.waveHeightM?.let {
-                    BeachMetric(emoji = "🌊", label = "Olas", value = "${"%.1f".format(it)}m")
+                    BeachMetric(emoji = "🌊", label = stringResource(R.string.place_metric_waves), value = "${"%.1f".format(it)}m")
                 }
                 status.seaTempC?.let {
-                    BeachMetric(emoji = "🌡️", label = "Mar", value = "${it.toInt()}°C")
+                    BeachMetric(emoji = "🌡️", label = stringResource(R.string.place_metric_sea), value = "${it.toInt()}°C")
                 }
             }
 
@@ -741,7 +739,7 @@ private fun SUPTrafficLightCard(
                 ) {
                     Text("⚠️", style = MaterialTheme.typography.bodySmall)
                     Text(
-                        "Rachas fuertes: ${"%.1f".format(status.windGustKnots)} kn — mantente cerca de la orilla",
+                        stringResource(R.string.place_sup_gust_warning, status.windGustKnots),
                         style = MaterialTheme.typography.labelSmall,
                         color = Color(0xFFE65100),
                         fontWeight = FontWeight.SemiBold,
@@ -762,7 +760,7 @@ private fun SUPTrafficLightCard(
                 ) {
                     Text("🚨", style = MaterialTheme.typography.bodySmall)
                     Text(
-                        "Viento offshore — el viento aleja la tabla de la orilla. No salir hoy.",
+                        stringResource(R.string.place_sup_offshore_warning),
                         style = MaterialTheme.typography.labelSmall,
                         color = Color(0xFFC62828),
                         fontWeight = FontWeight.SemiBold,
@@ -812,14 +810,14 @@ private fun HiddenGemLockScreen(
             Text("💎", style = MaterialTheme.typography.displayLarge)
 
             Text(
-                "Gema Oculta",
+                stringResource(R.string.place_hidden_gem_title),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = gemGold,
             )
 
             Text(
-                "Este lugar secreto solo lo conocen unos pocos.\nDesbloquea el acceso exclusivo para ver las coordenadas exactas, los tips locales y cómo llegar.",
+                stringResource(R.string.place_hidden_gem_body),
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color.White.copy(alpha = 0.75f),
                 textAlign = androidx.compose.ui.text.style.TextAlign.Center,
@@ -835,10 +833,10 @@ private fun HiddenGemLockScreen(
                 verticalArrangement = Arrangement.spacedBy(10.dp),
             ) {
                 listOf(
-                    "📍 Coordenadas GPS exactas",
-                    "🗺 Instrucciones de acceso paso a paso",
-                    "💡 Tips exclusivos de locales",
-                    "📸 Las mejores horas para visitar",
+                    stringResource(R.string.place_hidden_gem_perk_1),
+                    stringResource(R.string.place_hidden_gem_perk_2),
+                    stringResource(R.string.place_hidden_gem_perk_3),
+                    stringResource(R.string.place_hidden_gem_perk_4),
                 ).forEach { perk ->
                     Row(
                         horizontalArrangement = Arrangement.spacedBy(10.dp),
@@ -855,14 +853,38 @@ private fun HiddenGemLockScreen(
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(14.dp),
             ) {
-                Text("💎  Desbloquear esta Gema", fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodyLarge)
+                Text(stringResource(R.string.place_hidden_gem_unlock), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodyLarge)
             }
 
             Text(
-                "Acceso único · Sin suscripción",
+                stringResource(R.string.place_hidden_gem_no_subscription),
                 style = MaterialTheme.typography.labelSmall,
                 color = Color.White.copy(alpha = 0.4f),
             )
         }
     }
+}
+
+private fun Place.localizedName(locale: String) = when (locale) {
+    "es" -> nameEs.ifEmpty { name }
+    "de" -> nameDe.ifEmpty { name }
+    "ru" -> nameRu.ifEmpty { name }
+    "zh" -> nameZh.ifEmpty { name }
+    else -> name
+}
+
+private fun Place.localizedDescription(locale: String) = when (locale) {
+    "es" -> descriptionEs.ifEmpty { description }
+    "de" -> descriptionDe.ifEmpty { description }
+    "ru" -> descriptionRu.ifEmpty { description }
+    "zh" -> descriptionZh.ifEmpty { description }
+    else -> description
+}
+
+private fun Place.localizedTips(locale: String) = when (locale) {
+    "es" -> tipsEs.ifEmpty { tips }
+    "de" -> tipsDe.ifEmpty { tips }
+    "ru" -> tipsRu.ifEmpty { tips }
+    "zh" -> tipsZh.ifEmpty { tips }
+    else -> tips
 }

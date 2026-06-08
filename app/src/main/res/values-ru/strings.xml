@@ -71,4 +71,67 @@
 
     <!-- feature-gems -->
     <string name="gem_tap_to_discover">Нажмите, чтобы открыть →</string>
+
+    <!-- feature-place -->
+    <string name="place_address_label">Адрес</string>
+    <string name="place_get_directions">Как добраться</string>
+    <string name="place_add_to_trip">+ Добавить в поездку</string>
+    <string name="place_buy_ticket">Купить билет</string>
+    <string name="place_hidden_gem_unlocked">Скрытая жемчужина разблокирована</string>
+    <string name="place_beach_conditions_title">Текущие условия</string>
+    <string name="place_flag_red">🔴 Красный флаг</string>
+    <string name="place_flag_yellow">🟡 Жёлтый флаг</string>
+    <string name="place_flag_green">🟢 Зелёный флаг</string>
+    <string name="place_metric_waves">Волны</string>
+    <string name="place_metric_sea">Море</string>
+    <string name="place_metric_wind">Ветер</string>
+    <string name="place_metric_air">Воздух</string>
+    <string name="place_discount_code">код</string>
+    <string name="place_sup_title">Светофор SUP</string>
+    <string name="place_sup_loading">🏄 Загрузка статуса SUP…</string>
+    <string name="place_wind_onshore">Onshore ↑</string>
+    <string name="place_wind_offshore">Offshore ↓</string>
+    <string name="place_wind_cross">Cross ↔</string>
+    <string name="place_sup_gust_warning">Сильные порывы: %.1f уз — держитесь ближе к берегу</string>
+    <string name="place_sup_offshore_warning">Отжимной ветер — ветер уносит доску от берега. Сегодня не выходить.</string>
+    <string name="place_hidden_gem_title">Скрытая жемчужина</string>
+    <string name="place_hidden_gem_body">Это тайное место знают лишь единицы.\nОткройте эксклюзивный доступ к точным координатам, советам местных жителей и маршруту.</string>
+    <string name="place_hidden_gem_perk_1">📍 Точные GPS-координаты</string>
+    <string name="place_hidden_gem_perk_2">🗺 Пошаговый маршрут</string>
+    <string name="place_hidden_gem_perk_3">💡 Эксклюзивные советы от местных</string>
+    <string name="place_hidden_gem_perk_4">📸 Лучшее время для посещения</string>
+    <string name="place_hidden_gem_unlock">💎  Разблокировать эту жемчужину</string>
+    <string name="place_hidden_gem_no_subscription">Единоразовый доступ · Без подписки</string>
+
+    <!-- feature-explore -->
+    <string name="explore_header_title">Откройте Майорку</string>
+    <string name="explore_header_subtitle">%1$d мест · %2$d маршрутов</string>
+    <string name="explore_search_placeholder">Пляжи, тропы, города…</string>
+    <string name="explore_filter_all">Все</string>
+    <string name="explore_filter_near_me">📍 Рядом со мной</string>
+    <string name="explore_categories_title">Категории</string>
+    <string name="explore_featured_routes_title">Избранные маршруты</string>
+    <string name="explore_popular_now">Популярное сейчас</string>
+    <string name="explore_popular_nearest">Ближайшее</string>
+    <string name="explore_popular_near_me_rated">Рядом · %1$d+ ★</string>
+    <string name="explore_popular_top_rated">Топ по рейтингу · %1$d+ ★</string>
+    <string name="explore_recently_viewed_title">Недавно просмотренные</string>
+    <string name="explore_no_results">Нет результатов</string>
+    <string name="explore_no_results_query">Нет результатов для \"%1$s\"</string>
+    <string name="explore_scroll_to_top_cd">Прокрутить наверх</string>
+    <string name="explore_sup_title">SUP Сегодня</string>
+    <string name="explore_sup_full_analysis">Полный анализ доступен в каждой зоне →</string>
+    <string name="explore_events_title">События на Майорке</string>
+    <string name="explore_events_no_filter_results">Нет событий с этими фильтрами</string>
+    <string name="explore_events_recurring">Каждую неделю</string>
+    <string name="explore_events_free">Бесплатно</string>
+    <string name="explore_time_filter_all">Все</string>
+    <string name="explore_time_filter_this_week">На этой неделе</string>
+    <string name="explore_time_filter_this_month">В этом месяце</string>
+    <string name="explore_time_filter_next_month">В следующем месяце</string>
+    <string name="explore_event_category_market">Рынок</string>
+    <string name="explore_event_category_festival">Фестиваль</string>
+    <string name="explore_event_category_concert">Концерт</string>
+    <string name="explore_event_category_culture">Культура</string>
+    <string name="explore_event_category_sport">Спорт</string>
 </resources>

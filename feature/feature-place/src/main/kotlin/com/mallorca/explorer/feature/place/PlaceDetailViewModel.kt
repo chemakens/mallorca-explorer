@@ -66,20 +66,7 @@ class PlaceDetailViewModel @Inject constructor(
     private val placeId: String = checkNotNull(savedStateHandle["placeId"])
 
     init {
-        android.util.Log.e("MallorcaApp", "ViewModel iniciado, registrando vista para: $placeId")
-
-        viewModelScope.launch {
-            recentlyViewedRepository.recordView(placeId)
-            android.util.Log.d("PlaceDetailVM", ">>> Intentando obtener detalles...")
-
-            try {
-                // placeFlow es el flujo que obtienes de tu usecase
-                val place = getPlaceDetail(placeId)
-                android.util.Log.d("PlaceDetailVM", ">>> Carga exitosa: ${place.hashCode()}")
-            } catch (e: Exception) {
-                android.util.Log.e("PlaceDetailVM", ">>> Error cargando detalle: ${e.message}", e)
-            }
-        }
+        viewModelScope.launch { recentlyViewedRepository.recordView(placeId) }
     }
 
 
