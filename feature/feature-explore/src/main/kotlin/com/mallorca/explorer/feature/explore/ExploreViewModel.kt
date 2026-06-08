@@ -83,10 +83,6 @@ class ExploreViewModel @Inject constructor(
     private val localeSource: LocaleSource,
 ) : ViewModel() {
 
-    init {
-        viewModelScope.launch { placeRepository.loadPlacesFromAssets() }
-    }
-
     val searchQuery = MutableStateFlow("")
     private val _isRefreshing = MutableStateFlow(false)
     private val _refreshTrigger = MutableStateFlow(0)

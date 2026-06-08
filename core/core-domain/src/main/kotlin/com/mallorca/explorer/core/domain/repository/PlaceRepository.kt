@@ -3,7 +3,6 @@ package com.mallorca.explorer.core.domain.repository
 import com.mallorca.explorer.core.domain.model.Category
 import com.mallorca.explorer.core.domain.model.LatLng
 import com.mallorca.explorer.core.domain.model.Place
-import com.mallorca.explorer.core.domain.model.PlaceModel
 import kotlinx.coroutines.flow.Flow
 
 interface PlaceRepository {
@@ -13,5 +12,4 @@ interface PlaceRepository {
     fun searchPlaces(query: String): Flow<List<Place>>
     fun getNearbyPlaces(center: LatLng, radiusKm: Double): Flow<List<Place>>
     suspend fun refreshPlaces()
-    suspend fun loadPlacesFromAssets(): List<PlaceModel>
 }
