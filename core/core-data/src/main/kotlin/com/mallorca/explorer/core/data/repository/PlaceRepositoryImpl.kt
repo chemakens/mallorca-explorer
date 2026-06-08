@@ -43,12 +43,20 @@ class PlaceRepositoryImpl @Inject constructor(
     override fun searchPlaces(query: String): Flow<List<Place>> =
         placeDao.searchPlaces(query).map { entities -> entities.map { it.toDomain() } }
 
-    override fun getNearbyPlaces(center: LatLng, radiusKm: Double): Flow<List<Place>> =
-        placeDao.getAllPlaces().map { entities ->
+    override fun getNearbyPlaces(center: LatLng, radiusKm: Double): Flow<List<Place>> {
+        val latDelta = radiusKm / 111.0
+        val lngDelta = radiusKm / (111.0 * cos(Math.toRadians(center.latitude)))
+        return placeDao.getPlacesInBoundingBox(
+            latMin = center.latitude - latDelta,
+            latMax = center.latitude + latDelta,
+            lngMin = center.longitude - lngDelta,
+            lngMax = center.longitude + lngDelta,
+        ).map { entities ->
             entities.map { it.toDomain() }
                 .filter { haversineKm(center, it.location) <= radiusKm }
                 .sortedBy { haversineKm(center, it.location) }
         }
+    }
 
     override suspend fun refreshPlaces() {
         try {
