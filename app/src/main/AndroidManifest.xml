@@ -20,6 +20,11 @@
         android:localeConfig="@xml/locales_config"
         android:theme="@style/Theme.MallorcaExplorer">
 
+        <!-- Disable Crashlytics data collection in debug builds -->
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="${crashlyticsCollectionEnabled}" />
+
         <!-- Disable default WorkManager init so HiltWorkerFactory can be used -->
         <provider
             android:name="androidx.startup.InitializationProvider"

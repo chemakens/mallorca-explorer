@@ -4,8 +4,14 @@ data class Event(
     val id: String,
     val title: String,
     val titleEs: String,
+    val titleDe: String,
+    val titleRu: String,
+    val titleZh: String,
     val description: String,
     val descriptionEs: String,
+    val descriptionDe: String,
+    val descriptionRu: String,
+    val descriptionZh: String,
     val category: EventCategory,
     val startDateEpoch: Long,
     val endDateEpoch: Long?,
@@ -18,10 +24,10 @@ data class Event(
     val recurringDayOfWeek: Int?,
 )
 
-enum class EventCategory(val emoji: String, val label: String) {
-    MARKET("🛒", "Mercado"),
-    FESTIVAL("🎪", "Festival"),
-    CONCERT("🎵", "Concierto"),
-    CULTURE("🎭", "Cultura"),
-    SPORT("⚽", "Deporte"),
+enum class EventCategory(val emoji: String) {
+    MARKET("🛒"),
+    FESTIVAL("🎪"),
+    CONCERT("🎵"),
+    CULTURE("🎭"),
+    SPORT("⚽"),
 }

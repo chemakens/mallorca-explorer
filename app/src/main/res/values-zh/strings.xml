@@ -71,4 +71,67 @@
 
     <!-- feature-gems -->
     <string name="gem_tap_to_discover">点击发现 →</string>
+
+    <!-- feature-place -->
+    <string name="place_address_label">地址</string>
+    <string name="place_get_directions">如何到达</string>
+    <string name="place_add_to_trip">+ 添加到行程</string>
+    <string name="place_buy_ticket">购买门票</string>
+    <string name="place_hidden_gem_unlocked">隐藏宝藏已解锁</string>
+    <string name="place_beach_conditions_title">当前状况</string>
+    <string name="place_flag_red">🔴 红旗</string>
+    <string name="place_flag_yellow">🟡 黄旗</string>
+    <string name="place_flag_green">🟢 绿旗</string>
+    <string name="place_metric_waves">浪高</string>
+    <string name="place_metric_sea">海温</string>
+    <string name="place_metric_wind">风速</string>
+    <string name="place_metric_air">气温</string>
+    <string name="place_discount_code">代码</string>
+    <string name="place_sup_title">SUP 交通灯</string>
+    <string name="place_sup_loading">🏄 正在加载 SUP 状态…</string>
+    <string name="place_wind_onshore">Onshore ↑</string>
+    <string name="place_wind_offshore">Offshore ↓</string>
+    <string name="place_wind_cross">Cross ↔</string>
+    <string name="place_sup_gust_warning">强阵风：%.1f 节 — 请靠近海岸</string>
+    <string name="place_sup_offshore_warning">离岸风 — 风将板子推离岸边，今天不要出海。</string>
+    <string name="place_hidden_gem_title">隐藏宝藏</string>
+    <string name="place_hidden_gem_body">只有少数人知道这个秘密地点。\n解锁专属访问权限，查看精确坐标、当地提示和到达方式。</string>
+    <string name="place_hidden_gem_perk_1">📍 精确 GPS 坐标</string>
+    <string name="place_hidden_gem_perk_2">🗺 逐步到达说明</string>
+    <string name="place_hidden_gem_perk_3">💡 当地人的独家提示</string>
+    <string name="place_hidden_gem_perk_4">📸 最佳参观时间</string>
+    <string name="place_hidden_gem_unlock">💎  解锁此宝藏</string>
+    <string name="place_hidden_gem_no_subscription">一次性访问 · 无需订阅</string>
+
+    <!-- feature-explore -->
+    <string name="explore_header_title">探索马略卡</string>
+    <string name="explore_header_subtitle">%1$d 个地点 · %2$d 条路线</string>
+    <string name="explore_search_placeholder">海滩、徒步、城镇…</string>
+    <string name="explore_filter_all">全部</string>
+    <string name="explore_filter_near_me">📍 附近</string>
+    <string name="explore_categories_title">分类</string>
+    <string name="explore_featured_routes_title">精选路线</string>
+    <string name="explore_popular_now">现在流行</string>
+    <string name="explore_popular_nearest">最近的</string>
+    <string name="explore_popular_near_me_rated">附近 · %1$d+ ★</string>
+    <string name="explore_popular_top_rated">评分最高 · %1$d+ ★</string>
+    <string name="explore_recently_viewed_title">最近浏览</string>
+    <string name="explore_no_results">无结果</string>
+    <string name="explore_no_results_query">\"%1$s\"没有结果</string>
+    <string name="explore_scroll_to_top_cd">滚动到顶部</string>
+    <string name="explore_sup_title">今日 SUP</string>
+    <string name="explore_sup_full_analysis">每个区域可查看完整分析 →</string>
+    <string name="explore_events_title">马略卡活动</string>
+    <string name="explore_events_no_filter_results">此筛选条件下没有活动</string>
+    <string name="explore_events_recurring">每周</string>
+    <string name="explore_events_free">免费</string>
+    <string name="explore_time_filter_all">全部</string>
+    <string name="explore_time_filter_this_week">本周</string>
+    <string name="explore_time_filter_this_month">本月</string>
+    <string name="explore_time_filter_next_month">下个月</string>
+    <string name="explore_event_category_market">集市</string>
+    <string name="explore_event_category_festival">节日</string>
+    <string name="explore_event_category_concert">音乐会</string>
+    <string name="explore_event_category_culture">文化</string>
+    <string name="explore_event_category_sport">体育</string>
 </resources>

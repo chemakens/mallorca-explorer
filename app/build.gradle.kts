@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.hilt)
     alias(libs.plugins.google.services)
+    alias(libs.plugins.firebase.crashlytics.plugin)
 }
 
 val localProps = Properties().apply {
@@ -23,14 +24,14 @@ android {
         applicationId = "com.mallorca.explorer"
         minSdk = 26
         targetSdk = 35
-        versionCode = 1
-        versionName = "1.0.0"
+        versionCode = localProps.getProperty("VERSION_CODE", "1").toInt()
+        versionName = localProps.getProperty("VERSION_NAME", "1.0.0")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "MAPTILER_API_KEY",
             "\"${localProps.getProperty("MAPTILER_API_KEY", "demo")}\"")
         buildConfigField("String", "BASE_API_URL",
-            "\"${localProps.getProperty("BASE_API_URL", "https://api.mallorca-explorer.com/v1/")}\"")
+            "\"${localProps.getProperty("BASE_API_URL", "")}\"")
     }
 
     buildFeatures {
@@ -41,6 +42,7 @@ android {
     buildTypes {
         debug {
             isDebuggable = true
+            manifestPlaceholders["crashlyticsCollectionEnabled"] = false
         }
         release {
             isMinifyEnabled = true
@@ -49,6 +51,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            manifestPlaceholders["crashlyticsCollectionEnabled"] = true
         }
     }
 
@@ -62,7 +65,6 @@ android {
 }
 
 dependencies {
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.0")
     coreLibraryDesugaring(libs.desugar.jdk.libs)
 
     implementation(project(":core:core-common"))
@@ -87,9 +89,9 @@ dependencies {
     implementation(libs.activity.compose)
     implementation(libs.navigation.compose)
     implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.lifecycle.process)
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.lifecycle.runtime.compose)
-    implementation(project(":core:core-ui"))
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)
@@ -103,6 +105,7 @@ dependencies {
 
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.analytics)
+    implementation(libs.firebase.crashlytics)
 
     implementation(libs.coil.compose)
     implementation(libs.okhttp)

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="place_address_label">Address</string>
+    <string name="place_get_directions">Get Directions</string>
+    <string name="place_add_to_trip">+ Add to Trip</string>
+    <string name="place_buy_ticket">Buy Ticket</string>
+    <string name="place_hidden_gem_unlocked">Hidden Gem unlocked</string>
+    <string name="place_beach_conditions_title">Current Conditions</string>
+    <string name="place_flag_red">🔴 Red Flag</string>
+    <string name="place_flag_yellow">🟡 Yellow Flag</string>
+    <string name="place_flag_green">🟢 Green Flag</string>
+    <string name="place_metric_waves">Waves</string>
+    <string name="place_metric_sea">Sea</string>
+    <string name="place_metric_wind">Wind</string>
+    <string name="place_metric_air">Air</string>
+    <string name="place_discount_code">code</string>
+    <string name="place_sup_title">SUP Traffic Light</string>
+    <string name="place_sup_loading">🏄 Loading SUP status…</string>
+    <string name="place_wind_onshore">Onshore ↑</string>
+    <string name="place_wind_offshore">Offshore ↓</string>
+    <string name="place_wind_cross">Cross ↔</string>
+    <string name="place_sup_gust_warning">Strong gusts: %.1f kn — stay close to shore</string>
+    <string name="place_sup_offshore_warning">Offshore wind — wind pushes the board away from shore. Do not go out today.</string>
+    <string name="place_hidden_gem_title">Hidden Gem</string>
+    <string name="place_hidden_gem_body">Only a few people know this secret place.\nUnlock exclusive access to see the exact coordinates, local tips and how to get there.</string>
+    <string name="place_hidden_gem_perk_1">📍 Exact GPS coordinates</string>
+    <string name="place_hidden_gem_perk_2">🗺 Step-by-step access instructions</string>
+    <string name="place_hidden_gem_perk_3">💡 Exclusive tips from locals</string>
+    <string name="place_hidden_gem_perk_4">📸 Best times to visit</string>
+    <string name="place_hidden_gem_unlock">💎  Unlock this Gem</string>
+    <string name="place_hidden_gem_no_subscription">One-time access · No subscription</string>
+</resources>

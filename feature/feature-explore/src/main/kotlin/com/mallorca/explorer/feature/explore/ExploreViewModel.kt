@@ -43,11 +43,11 @@ import javax.inject.Inject
 private const val MALLORCA_LAT = 39.6
 private const val MALLORCA_LNG = 2.9
 
-enum class EventTimeFilter(val label: String) {
-    ALL("Todos"),
-    THIS_WEEK("Esta semana"),
-    THIS_MONTH("Este mes"),
-    NEXT_MONTH("Próximo mes"),
+enum class EventTimeFilter {
+    ALL,
+    THIS_WEEK,
+    THIS_MONTH,
+    NEXT_MONTH,
 }
 
 data class ExploreUiState(
