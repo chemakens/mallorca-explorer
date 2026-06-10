@@ -1,5 +1,10 @@
 package com.mallorca.explorer.feature.trips.list
 
+import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.togetherWith
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -43,11 +48,13 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Brush
@@ -278,7 +285,39 @@ private fun EmptyTripsState(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(0.dp),
         ) {
-            Text("✈️", style = MaterialTheme.typography.displayLarge)
+            val emptyStateImages = remember {
+                listOf(
+                    "file:///android_asset/images/beach-es-trenc.jpg",
+                    "file:///android_asset/images/hike-cala-estreta.jpg",
+                    "file:///android_asset/images/culture-bellver-castle.jpg",
+                    "file:///android_asset/images/itin-palma-markets.webp",
+                    "file:///android_asset/images/mirador-ses-animes.webp",
+                    "file:///android_asset/images/nature-jardins-alfabia.jpg",
+                    "file:///android_asset/images/hike-puig-ofre.jpg",
+                )
+            }
+            var currentIndex by remember { mutableIntStateOf(0) }
+            LaunchedEffect(Unit) {
+                while (true) {
+                    delay(3000)
+                    currentIndex = (currentIndex + 1) % emptyStateImages.size
+                }
+            }
+            AnimatedContent(
+                targetState = currentIndex,
+                transitionSpec = { fadeIn(tween(800)) togetherWith fadeOut(tween(800)) },
+                label = "emptyStateImage",
+            ) { index ->
+                AsyncImage(
+                    model = emptyStateImages[index],
+                    contentDescription = null,
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(200.dp)
+                        .clip(RoundedCornerShape(16.dp)),
+                )
+            }
             Spacer(Modifier.height(20.dp))
             Text(
                 "¡Planifica tu aventura!",
