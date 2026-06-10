@@ -8002,6 +8002,28 @@
           "note_de": "Nach dem Abspülen der Ausrüstung 10 Minuten in den Ort Pollença fahren und auf dem Hauptplatz ein wohlverdientes Mittagessen genießen. Der Sonntagsmarkt ist besonders empfehlenswert, wenn der Besuch zusammenfällt.",
           "day_number": 1
         }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.9199,
+          "lng": 3.0577
+        },
+        {
+          "order": 2,
+          "lat": 39.9215,
+          "lng": 3.0554
+        },
+        {
+          "order": 3,
+          "lat": 39.9205,
+          "lng": 3.0538
+        },
+        {
+          "order": 4,
+          "lat": 39.9199,
+          "lng": 3.0577
+        }
       ]
     },
     {
@@ -8091,6 +8113,33 @@
           "note_de": "Um das Kap herum und an die Basis der Formentor-Leuchtturmfelsen paddeln — der dramatischste Moment der Expedition. Auf gleichem Küstenweg zurückkehren oder eine Bootsabholung organisieren.",
           "day_number": 1
         }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.9094,
+          "lng": 3.0894
+        },
+        {
+          "order": 2,
+          "lat": 39.92,
+          "lng": 3.115
+        },
+        {
+          "order": 3,
+          "lat": 39.9281,
+          "lng": 3.1393
+        },
+        {
+          "order": 4,
+          "lat": 39.949,
+          "lng": 3.178
+        },
+        {
+          "order": 5,
+          "lat": 39.9619,
+          "lng": 3.2139
+        }
       ]
     },
     {
@@ -8162,6 +8211,28 @@
           "note_es": "Lanza desde la cala sur (Cala Mondragó). Rema hacia el norte por el canal hasta la cala S'Amarador, haz snorkel en el arrecife rocoso de la derecha y regresa con la corriente suave. No se necesita experiencia: las tranquilas aguas del parque son ideales para principiantes.",
           "note_de": "Start von der südlichen Bucht (Cala Mondragó). Durch den Kanal nach Norden zur Bucht S'Amarador paddeln, das Felsriff rechts schnorcheln und mit der leichten Strömung zurücktreiben. Keine Erfahrung notwendig — das ruhige Wasser des Parks ist ideal für Ersteinsteiger.",
           "day_number": 1
+        }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.3493,
+          "lng": 3.189
+        },
+        {
+          "order": 2,
+          "lat": 39.353,
+          "lng": 3.1875
+        },
+        {
+          "order": 3,
+          "lat": 39.3475,
+          "lng": 3.1858
+        },
+        {
+          "order": 4,
+          "lat": 39.3493,
+          "lng": 3.189
         }
       ]
     },
@@ -8235,6 +8306,38 @@
           "note_de": "Start vom S'Arenal-Strand und im Uhrzeigersinn um den Hafen paddeln. Die Westküste entlang an den Fischerhäusern vorbei, hinüber zum Leuchtturmvorgebirge und auf der Ostseite zurück. Das Wasser ist spiegelglatt und der Meeresgrund durchgehend klar sichtbar.",
           "day_number": 1
         }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.4186,
+          "lng": 3.2599
+        },
+        {
+          "order": 2,
+          "lat": 39.4155,
+          "lng": 3.2567
+        },
+        {
+          "order": 3,
+          "lat": 39.4096,
+          "lng": 3.2598
+        },
+        {
+          "order": 4,
+          "lat": 39.4083,
+          "lng": 3.2637
+        },
+        {
+          "order": 5,
+          "lat": 39.414,
+          "lng": 3.265
+        },
+        {
+          "order": 6,
+          "lat": 39.4186,
+          "lng": 3.2599
+        }
       ]
     },
     {
@@ -8306,6 +8409,33 @@
           "note_es": "Lanza desde la playa de Cala Agulla, la más larga y accesible de la zona. Rema hacia el norte, rodeando el cabo junto al acantilado del faro de Capdepera, y luego hacia el sur hasta Cala Mesquida. Regresa por la misma costa. Sal por la mañana: el viento suele aumentar después del mediodía.",
           "note_de": "Start vom Strand Cala Agulla — dem längsten und zugänglichsten Strand der Gegend. Nach Norden paddeln, um das Kap am Capdepera-Leuchtturm vorbei, dann nach Süden zur Cala Mesquida. Auf der gleichen Küste zurückkehren. Morgens fahren — Wind baut sich meist nach Mittag auf.",
           "day_number": 1
+        }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.7112,
+          "lng": 3.4663
+        },
+        {
+          "order": 2,
+          "lat": 39.7135,
+          "lng": 3.472
+        },
+        {
+          "order": 3,
+          "lat": 39.7157,
+          "lng": 3.4775
+        },
+        {
+          "order": 4,
+          "lat": 39.7225,
+          "lng": 3.4525
+        },
+        {
+          "order": 5,
+          "lat": 39.7112,
+          "lng": 3.4663
         }
       ]
     },
@@ -8379,6 +8509,33 @@
           "note_de": "Start vom Hauptstrand von Portals Vells. An der Kliffbasis nach Norden paddeln, in die beiden Meereshöhlen einfahren (für den niedrigen Eingang flach auf das Board legen), dann um das südliche Kap zum einsamen FKK-Strand El Mago. Auf demselben Weg zurück — Gesamtrundkurs ca. 7 km.",
           "day_number": 1
         }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.4722,
+          "lng": 2.52
+        },
+        {
+          "order": 2,
+          "lat": 39.4712,
+          "lng": 2.522
+        },
+        {
+          "order": 3,
+          "lat": 39.466,
+          "lng": 2.518
+        },
+        {
+          "order": 4,
+          "lat": 39.4793,
+          "lng": 2.5165
+        },
+        {
+          "order": 5,
+          "lat": 39.4722,
+          "lng": 2.52
+        }
       ]
     },
     {
@@ -8451,6 +8608,33 @@
           "note_de": "Vom Zentrum des Hauptstrandes starten und im Uhrzeigersinn paddeln. Zuerst zum östlichen Felsenkap (toller Schnorchelspot), über die Bucht zur Bucht Sa Caleta, dann entlang der kieferngesäumten Westküste zurück. Den Bootskanal der Marina weiträumig umfahren.",
           "day_number": 1
         }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.515,
+          "lng": 2.4827
+        },
+        {
+          "order": 2,
+          "lat": 39.518,
+          "lng": 2.459
+        },
+        {
+          "order": 3,
+          "lat": 39.508,
+          "lng": 2.47
+        },
+        {
+          "order": 4,
+          "lat": 39.507,
+          "lng": 2.49
+        },
+        {
+          "order": 5,
+          "lat": 39.515,
+          "lng": 2.4827
+        }
       ]
     },
     {
@@ -8522,6 +8706,33 @@
           "note_es": "Lanza desde el extremo derecho de la playa de Camp de Mar. Rema los 200 m hasta la isla, descansa en la terraza del restaurante y explora las pequeñas calas del otro lado de la isla antes de volver. El agua se mantiene poco profunda y tranquila durante todo el recorrido, perfecta para niños.",
           "note_de": "Vom rechten Ende des Strandes Camp de Mar starten. Die 200 m zur Insel paddeln, auf der Restaurantterrasse rasten, dann die kleinen Buchten auf der anderen Seite der Insel erkunden, bevor es zurückgeht. Das Wasser bleibt durchgehend flach und ruhig — perfekt für Kinder.",
           "day_number": 1
+        }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.5375,
+          "lng": 2.4217
+        },
+        {
+          "order": 2,
+          "lat": 39.5387,
+          "lng": 2.42
+        },
+        {
+          "order": 3,
+          "lat": 39.531,
+          "lng": 2.415
+        },
+        {
+          "order": 4,
+          "lat": 39.5322,
+          "lng": 2.4386
+        },
+        {
+          "order": 5,
+          "lat": 39.5375,
+          "lng": 2.4217
         }
       ]
     },
@@ -8604,6 +8815,33 @@
           "note_de": "Umkehrpunkt bei Portals Vells — die mittelalterlichen Steinbruchhöhlen erkunden und am Strand rasten, bevor es zurückgepaddelt wird. Gesamtdistanz bis hierher ca. 6 km.",
           "day_number": 1
         }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.4933,
+          "lng": 2.4717
+        },
+        {
+          "order": 2,
+          "lat": 39.486,
+          "lng": 2.48
+        },
+        {
+          "order": 3,
+          "lat": 39.4793,
+          "lng": 2.5165
+        },
+        {
+          "order": 4,
+          "lat": 39.4712,
+          "lng": 2.5218
+        },
+        {
+          "order": 5,
+          "lat": 39.4722,
+          "lng": 2.52
+        }
       ]
     },
     {
@@ -8685,6 +8923,38 @@
           "note_de": "Für eine abenteuerlichere Verlängerung einer geführten Kajak- oder SUP-Tour ab Port de Sóller beitreten, um die Meereshöhlen an der Tramuntana-Küste zu erkunden — Abschnitte jenseits der Bucht erfordern Erfahrung auf offener See.",
           "day_number": 1
         }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.7963,
+          "lng": 2.6963
+        },
+        {
+          "order": 2,
+          "lat": 39.7966,
+          "lng": 2.6892
+        },
+        {
+          "order": 3,
+          "lat": 39.7945,
+          "lng": 2.6955
+        },
+        {
+          "order": 4,
+          "lat": 39.8064,
+          "lng": 2.6974
+        },
+        {
+          "order": 5,
+          "lat": 39.8196,
+          "lng": 2.6994
+        },
+        {
+          "order": 6,
+          "lat": 39.7963,
+          "lng": 2.6963
+        }
       ]
     },
     {
@@ -8765,6 +9035,28 @@
           "note_es": "Tras aclarar el equipo, conduce o toma la línea 4 del autobús hasta el centro de Palma. Visita la catedral La Seu y el casco antiguo, un contraste perfecto con la mañana en el agua.",
           "note_de": "Nach dem Abspülen der Ausrüstung mit dem Auto oder Buslinie 4 ins Zentrum von Palma fahren. Die Kathedrale La Seu und die Altstadt besuchen — ein perfekter Kontrast zum Morgen auf dem Wasser.",
           "day_number": 1
+        }
+      ],
+      "route_waypoints": [
+        {
+          "order": 1,
+          "lat": 39.5521,
+          "lng": 2.6066
+        },
+        {
+          "order": 2,
+          "lat": 39.5513,
+          "lng": 2.618
+        },
+        {
+          "order": 3,
+          "lat": 39.5509,
+          "lng": 2.636
+        },
+        {
+          "order": 4,
+          "lat": 39.5696,
+          "lng": 2.6502
         }
       ]
     },
