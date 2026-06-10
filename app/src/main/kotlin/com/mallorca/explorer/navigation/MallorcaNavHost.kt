@@ -1,7 +1,6 @@
 package com.mallorca.explorer.navigation
 
 import androidx.compose.animation.ExperimentalSharedTransitionApi
-import androidx.compose.animation.SharedTransitionLayout
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -25,13 +24,13 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navDeepLink
 import androidx.navigation.toRoute
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.connectivity.ConnectivityViewModel
 import com.mallorca.explorer.core.ui.component.OfflineBanner
 import com.mallorca.explorer.core.ui.transition.LocalAnimatedContentScope
-import com.mallorca.explorer.core.ui.transition.LocalSharedTransitionScope
 import com.mallorca.explorer.feature.explore.ExploreScreen
 import com.mallorca.explorer.feature.gems.GemsScreen
 import com.mallorca.explorer.onboarding.OnboardingScreen
@@ -150,8 +149,6 @@ fun MallorcaNavHost(
             }
         }
     ) { innerPadding ->
-        SharedTransitionLayout {
-            CompositionLocalProvider(LocalSharedTransitionScope provides this) {
                 NavHost(
                     navController = navController,
                     startDestination = if (showOnboarding) OnboardingRoute else MapRoute(),
@@ -221,7 +218,12 @@ fun MallorcaNavHost(
                             )
                         }
                     }
-                    composable<ItineraryDetailRoute> { backStack ->
+                    composable<ItineraryDetailRoute>(
+                        deepLinks = listOf(
+                            navDeepLink { uriPattern = "mallorca://itinerary?itineraryId={itineraryId}" },
+                            navDeepLink { uriPattern = "https://chemakens.github.io/mallorca-explorer-web/itinerary/?itineraryId={itineraryId}" },
+                        )
+                    ) { backStack ->
                         val route = backStack.toRoute<ItineraryDetailRoute>()
                         CompositionLocalProvider(LocalAnimatedContentScope provides this) {
                             ItineraryDetailScreen(
@@ -298,5 +300,3 @@ fun MallorcaNavHost(
                 }
             }
         }
-    }
-}

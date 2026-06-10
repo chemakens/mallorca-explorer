@@ -1,6 +1,7 @@
 package com.mallorca.explorer
 
 import android.content.Intent
+import android.widget.Toast
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -39,8 +40,10 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
 
         // Capture deep link only on a genuine cold start, not on config changes.
+        Timber.d("onCreate: intent.data=${intent.data} savedInstanceState=$savedInstanceState")
         if (savedInstanceState == null) {
             pendingDeepLinkIntent = intent.takeIf { it.data != null }
+            Timber.d("onCreate: pendingDeepLinkIntent=${pendingDeepLinkIntent?.data}")
         }
 
         lifecycleScope.launch {
@@ -64,7 +67,10 @@ class MainActivity : ComponentActivity() {
                     onNavControllerReady = { nc ->
                         navController = nc
                         pendingDeepLinkIntent?.let { pending ->
-                            tryNavigateFromIntent(nc, pending)
+                            lifecycleScope.launch {
+                                kotlinx.coroutines.delay(500)
+                                tryNavigateFromIntent(nc, pending)
+                            }
                             pendingDeepLinkIntent = null
                         }
                     },
@@ -80,7 +86,10 @@ class MainActivity : ComponentActivity() {
         Timber.d("onNewIntent: ${intent.data}")
         val nc = navController
         if (nc != null) {
-            tryNavigateFromIntent(nc, intent)
+            lifecycleScope.launch {
+                kotlinx.coroutines.delay(100)
+                tryNavigateFromIntent(nc, intent)
+            }
         } else {
             // NavController not ready yet; defer until onNavControllerReady fires.
             pendingDeepLinkIntent = intent.takeIf { it.data != null }
@@ -88,12 +97,17 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun tryNavigateFromIntent(nc: NavController, intent: Intent) {
-        val uri = intent.data ?: return
+        val uri = intent.data
+        Timber.d("tryNavigateFromIntent: uri=$uri")
+        Toast.makeText(this, "Deep link: $uri", Toast.LENGTH_LONG).show()
+        if (uri == null) { Timber.d("tryNavigateFromIntent: uri is null, returning"); return }
         val itineraryId = uri.getQueryParameter("itineraryId")
         val placeId = uri.getQueryParameter("placeId")
+        Timber.d("tryNavigateFromIntent: itineraryId=$itineraryId placeId=$placeId")
         when {
-            itineraryId != null -> nc.navigate(ItineraryDetailRoute(itineraryId)) {
-                launchSingleTop = true
+            itineraryId != null -> {
+                Timber.d("tryNavigateFromIntent: navigating to ItineraryDetailRoute($itineraryId)")
+                nc.navigate(ItineraryDetailRoute(itineraryId))
             }
             placeId != null -> nc.navigate(PlaceDetailRoute(placeId)) {
                 launchSingleTop = true
