@@ -1,5 +1,6 @@
 package com.mallorca.explorer.feature.settings
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -21,6 +22,7 @@ import androidx.compose.material.icons.outlined.SettingsBrightness
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
@@ -28,15 +30,19 @@ import androidx.compose.material3.SegmentedButton
 import androidx.compose.material3.SegmentedButtonDefaults
 import androidx.compose.material3.SingleChoiceSegmentedButtonRow
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Switch
+import androidx.compose.material3.SwitchDefaults
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 
@@ -67,6 +73,8 @@ fun SettingsScreen(
 ) {
     val currentLocale by viewModel.currentLocale.collectAsStateWithLifecycle()
     val currentTheme by viewModel.currentTheme.collectAsStateWithLifecycle()
+    val devMode by viewModel.devMode.collectAsStateWithLifecycle()
+    val devTapCount by viewModel.devTapCount.collectAsStateWithLifecycle()
 
     Scaffold(
         topBar = {
@@ -127,6 +135,79 @@ fun SettingsScreen(
                         language = lang,
                         isSelected = currentLocale == lang.code,
                         onClick = { viewModel.changeLanguage(lang.code) },
+                    )
+                }
+            }
+
+            // Developer section — only visible once unlocked
+            if (devMode) {
+                Spacer(Modifier.height(8.dp))
+                HorizontalDivider()
+                Text(
+                    "Desarrollador",
+                    style = MaterialTheme.typography.labelLarge,
+                    color = Color(0xFF6A1B9A),
+                    modifier = Modifier.padding(vertical = 12.dp),
+                )
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 4.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                ) {
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            "🔧 Bypass GPS en gemas",
+                            style = MaterialTheme.typography.bodyLarge,
+                            fontWeight = FontWeight.SemiBold,
+                        )
+                        Text(
+                            "Desbloquea gemas sin verificación de proximidad",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                    Spacer(Modifier.width(12.dp))
+                    Switch(
+                        checked = devMode,
+                        onCheckedChange = { viewModel.setDevMode(it) },
+                        colors = SwitchDefaults.colors(checkedThumbColor = Color(0xFF6A1B9A), checkedTrackColor = Color(0xFF6A1B9A).copy(alpha = 0.4f)),
+                    )
+                }
+            }
+
+            // Version row — tap 7 times to unlock developer mode
+            Spacer(Modifier.height(24.dp))
+            HorizontalDivider()
+            Spacer(Modifier.height(8.dp))
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { viewModel.onVersionTapped() }
+                    .padding(vertical = 12.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
+                Text(
+                    "Mallorca Explorer v${viewModel.versionName}",
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                )
+                if (devTapCount in 1..6) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        "${7 - devTapCount} pasos para activar el modo desarrollador",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = Color(0xFF6A1B9A),
+                        fontSize = 11.sp,
+                    )
+                } else if (devMode) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(
+                        "Modo desarrollador activado",
+                        style = MaterialTheme.typography.labelSmall,
+                        color = Color(0xFF6A1B9A),
+                        fontSize = 11.sp,
                     )
                 }
             }
