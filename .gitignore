@@ -11,3 +11,4 @@ local.properties
 .kotlin/
 **/google-services.json
 gradlew.bat
+app/release/
