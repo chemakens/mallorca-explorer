@@ -603,7 +603,7 @@ fun MapScreen(
             // Base radius at zoom 14 — zoomScaledRadius() scales these down at overview
             val innerRadius = if (isActive) 7.0 else 4.5
             val haloRadius  = if (isActive) 10.0 else 7.0
-            val opacity = if (!isAnyActive || isActive) 1.0 else 0.25
+            val opacity = if (!isAnyActive) 0.0 else if (isActive) 1.0 else 0.25
             route.coords.map { coord ->
                 Feature.fromGeometry(
                     Point.fromLngLat(coord.longitude, coord.latitude),
