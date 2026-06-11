@@ -2594,7 +2594,7 @@
       ],
       "photo_urls": [
         "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Castell%20de%20Capdepera%20asv2023-04.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Capdepera_castle.jpg?width=800"
+        "file:///android_asset/images/place-capdepera-2.jpg"
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Castell%20de%20Capdepera%20asv2023-04.jpg?width=800",
       "description_es": "Pequeña ciudad en lo alto de una colina en el noreste de Mallorca, coronada por el Castell de Capdepera, un castillo gótico del siglo XIV con murallas bien conservadas que encierran toda la cima.",
