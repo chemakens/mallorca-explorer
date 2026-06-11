@@ -617,7 +617,7 @@
         "Try the local ensaïmades pastries",
         "Busy in peak season — visit early morning"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20view%20of%20Valldemossa%20-%20village%20in%20Mallorca%2C%20Spain%20%2848001696993%29.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-valldemossa.jpg",
       "photo_urls": [
         "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20view%20of%20Valldemossa%20-%20village%20in%20Mallorca%2C%20Spain%20%2848001696993%29.jpg?width=800",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Valldemossa_Mallorca.jpg?width=800"
@@ -2219,7 +2219,7 @@
         "culture",
         "architecture"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palma%20de%20Mallorca%20at%20night%20-%202017%2011%2017%20Fernansichten.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-palma-city.jpg",
       "photo_urls": [
         "https://commons.wikimedia.org/wiki/Special:FilePath/Palma%20de%20Mallorca%20at%20night%20-%202017%2011%2017%20Fernansichten.jpg?width=800",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Palma_de_Mallorca_aerial_view.jpg?width=800"
