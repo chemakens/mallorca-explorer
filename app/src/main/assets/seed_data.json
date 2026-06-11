@@ -2221,8 +2221,8 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-palma-city.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Palma%20de%20Mallorca%20at%20night%20-%202017%2011%2017%20Fernansichten.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Palma_de_Mallorca_aerial_view.jpg?width=800"
+        "file:///android_asset/images/place-palma-city.jpg",
+        "file:///android_asset/images/place-palma-city-2.jpg"
       ],
       "description_es": "La vibrante capital de Mallorca, con la majestuosa catedral gótica La Seu, el Castillo de Bellver y un animado casco antiguo de callejuelas, bares de tapas y arquitectura modernista.",
       "tips_es": [
