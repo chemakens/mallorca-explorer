@@ -217,17 +217,25 @@ private fun createGemMysteryBitmap(w: Int): Bitmap {
     val bmp = Bitmap.createBitmap(w, w, Bitmap.Config.ARGB_8888)
     val canvas = Canvas(bmp)
     val r = w / 2f
+    // White outer ring for contrast against any map background
     canvas.drawCircle(r, r, r, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = android.graphics.Color.WHITE
+        style = Paint.Style.FILL
+    })
+    // Gold fill (slightly inset from white border)
+    canvas.drawCircle(r, r, r * 0.85f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = android.graphics.Color.parseColor("#F9A825")
         style = Paint.Style.FILL
     })
-    canvas.drawCircle(r, r, r * 0.68f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+    // Dark purple center
+    canvas.drawCircle(r, r, r * 0.60f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = android.graphics.Color.parseColor("#1A0030")
         style = Paint.Style.FILL
     })
+    // Gold "?" — larger and bolder
     val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = android.graphics.Color.parseColor("#F9A825")
-        textSize = w * 0.42f
+        color = android.graphics.Color.parseColor("#FFD54F")
+        textSize = w * 0.46f
         textAlign = Paint.Align.CENTER
         typeface = android.graphics.Typeface.DEFAULT_BOLD
     }
@@ -405,7 +413,7 @@ fun MapScreen(
                 )
                 // ── Hidden gem mystery pins ──────────────────────────────────
                 style.addSource(GeoJsonSource(GEMS_SOURCE_ID, FeatureCollection.fromFeatures(emptyList())))
-                val gemW = (context.resources.displayMetrics.density * 40).toInt()
+                val gemW = (context.resources.displayMetrics.density * 56).toInt()
                 style.addImage(GEM_ICON_ID, createGemMysteryBitmap(gemW))
                 style.addLayer(
                     SymbolLayer(GEM_MYSTERY_LAYER_ID, GEMS_SOURCE_ID).apply {
@@ -414,10 +422,10 @@ fun MapScreen(
                             PropertyFactory.iconSize(
                                 Expression.interpolate(
                                     Expression.linear(), Expression.zoom(),
-                                    Expression.stop(5,  Expression.literal(0.4f)),
-                                    Expression.stop(10, Expression.literal(0.65f)),
-                                    Expression.stop(13, Expression.literal(0.85f)),
-                                    Expression.stop(18, Expression.literal(1.0f)),
+                                    Expression.stop(5,  Expression.literal(0.55f)),
+                                    Expression.stop(10, Expression.literal(0.80f)),
+                                    Expression.stop(13, Expression.literal(1.0f)),
+                                    Expression.stop(18, Expression.literal(1.2f)),
                                 )
                             ),
                             PropertyFactory.iconAnchor(Property.ICON_ANCHOR_CENTER),
