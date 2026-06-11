@@ -2,6 +2,7 @@ package com.mallorca.explorer.feature.place
 
 import android.content.Intent
 import android.net.Uri
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -124,6 +125,9 @@ fun PlaceDetailScreen(
                 CircularProgressIndicator()
             }
             uiState.isHiddenGem && !uiState.isUnlocked -> HiddenGemLockScreen(
+                municipality = uiState.place?.municipality ?: "",
+                placeLat = uiState.place?.location?.latitude ?: 0.0,
+                placeLng = uiState.place?.location?.longitude ?: 0.0,
                 onBack = onBack,
                 onUnlock = viewModel::onUnlockGem,
             )
@@ -771,20 +775,94 @@ private fun SUPTrafficLightCard(
     }
 }
 
+@Suppress("MissingPermission", "DEPRECATION")
+private fun checkProximityAndUnlock(
+    context: android.content.Context,
+    placeLat: Double,
+    placeLng: Double,
+    onNear: () -> Unit,
+    onFar: (Double) -> Unit,
+    onError: () -> Unit,
+) {
+    val thresholdKm = 0.2
+    try {
+        val lm = context.getSystemService(android.content.Context.LOCATION_SERVICE) as android.location.LocationManager
+        fun evalLocation(loc: android.location.Location) {
+            val dLat = Math.toRadians(placeLat - loc.latitude)
+            val dLng = Math.toRadians(placeLng - loc.longitude)
+            val a = kotlin.math.sin(dLat / 2).let { it * it } +
+                kotlin.math.cos(Math.toRadians(loc.latitude)) *
+                kotlin.math.cos(Math.toRadians(placeLat)) *
+                kotlin.math.sin(dLng / 2).let { it * it }
+            val distKm = 2 * 6371.0 * kotlin.math.atan2(kotlin.math.sqrt(a), kotlin.math.sqrt(1 - a))
+            if (distKm <= thresholdKm) onNear() else onFar(distKm)
+        }
+        val provider = when {
+            lm.isProviderEnabled(android.location.LocationManager.GPS_PROVIDER) -> android.location.LocationManager.GPS_PROVIDER
+            lm.isProviderEnabled(android.location.LocationManager.NETWORK_PROVIDER) -> android.location.LocationManager.NETWORK_PROVIDER
+            else -> null
+        }
+        if (provider != null) {
+            lm.requestSingleUpdate(provider, object : android.location.LocationListener {
+                override fun onLocationChanged(loc: android.location.Location) {
+                    lm.removeUpdates(this)
+                    evalLocation(loc)
+                }
+            }, android.os.Looper.getMainLooper())
+        } else {
+            val last = listOf(android.location.LocationManager.GPS_PROVIDER, android.location.LocationManager.NETWORK_PROVIDER)
+                .firstNotNullOfOrNull { lm.getLastKnownLocation(it) }
+            if (last != null) evalLocation(last) else onError()
+        }
+    } catch (_: Exception) { onError() }
+}
+
 @Composable
 private fun HiddenGemLockScreen(
+    municipality: String,
+    placeLat: Double,
+    placeLng: Double,
     onBack: () -> Unit,
     onUnlock: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val gemPurple = Color(0xFF6A1B9A)
     val gemGold = Color(0xFFF9A825)
+    val context = LocalContext.current
+
+    var isChecking by remember { mutableStateOf(false) }
+    var errorMsg by remember { mutableStateOf<String?>(null) }
+
+    val tooFarTemplate = stringResource(R.string.place_hidden_gem_too_far)
+    val noLocationStr = stringResource(R.string.place_hidden_gem_no_location)
+    val noPermissionStr = stringResource(R.string.place_hidden_gem_no_permission)
+
+    val locationPermissionLauncher = rememberLauncherForActivityResult(
+        androidx.activity.result.contract.ActivityResultContracts.RequestPermission()
+    ) { granted ->
+        if (granted) {
+            checkProximityAndUnlock(
+                context = context,
+                placeLat = placeLat,
+                placeLng = placeLng,
+                onNear = { onUnlock(); isChecking = false },
+                onFar = { distKm ->
+                    val distStr = if (distKm < 1.0) "${(distKm * 1000).toInt()} m" else "${"%.1f".format(distKm)} km"
+                    errorMsg = tooFarTemplate.format(distStr)
+                    isChecking = false
+                },
+                onError = { errorMsg = noLocationStr; isChecking = false },
+            )
+        } else {
+            errorMsg = noPermissionStr
+            isChecking = false
+        }
+    }
 
     Box(
         modifier = modifier
             .fillMaxSize()
             .background(
-                brush = androidx.compose.ui.graphics.Brush.verticalGradient(
+                brush = Brush.verticalGradient(
                     colors = listOf(Color(0xFF1A0030), Color(0xFF2D1B4E), Color(0xFF0D0D1A)),
                 )
             )
@@ -815,6 +893,14 @@ private fun HiddenGemLockScreen(
                 fontWeight = FontWeight.Bold,
                 color = gemGold,
             )
+
+            if (municipality.isNotEmpty()) {
+                Text(
+                    "📍 $municipality",
+                    style = MaterialTheme.typography.titleSmall,
+                    color = Color.White.copy(alpha = 0.6f),
+                )
+            }
 
             Text(
                 stringResource(R.string.place_hidden_gem_body),
@@ -847,13 +933,49 @@ private fun HiddenGemLockScreen(
                 }
             }
 
+            errorMsg?.let { err ->
+                Text(
+                    err,
+                    style = MaterialTheme.typography.bodySmall,
+                    color = Color(0xFFFF6B6B),
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                )
+            }
+
             Button(
-                onClick = onUnlock,
+                onClick = {
+                    errorMsg = null
+                    isChecking = true
+                    val granted = androidx.core.content.ContextCompat.checkSelfPermission(
+                        context, android.Manifest.permission.ACCESS_FINE_LOCATION
+                    ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+                    if (granted) {
+                        checkProximityAndUnlock(
+                            context = context,
+                            placeLat = placeLat,
+                            placeLng = placeLng,
+                            onNear = { onUnlock(); isChecking = false },
+                            onFar = { distKm ->
+                                val distStr = if (distKm < 1.0) "${(distKm * 1000).toInt()} m" else "${"%.1f".format(distKm)} km"
+                                errorMsg = tooFarTemplate.format(distStr)
+                                isChecking = false
+                            },
+                            onError = { errorMsg = noLocationStr; isChecking = false },
+                        )
+                    } else {
+                        locationPermissionLauncher.launch(android.Manifest.permission.ACCESS_FINE_LOCATION)
+                    }
+                },
+                enabled = !isChecking,
                 colors = ButtonDefaults.buttonColors(containerColor = gemGold, contentColor = Color(0xFF1A0030)),
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(14.dp),
             ) {
-                Text(stringResource(R.string.place_hidden_gem_unlock), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodyLarge)
+                if (isChecking) {
+                    Text(stringResource(R.string.place_hidden_gem_checking), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodyLarge)
+                } else {
+                    Text(stringResource(R.string.place_hidden_gem_unlock), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodyLarge)
+                }
             }
 
             Text(

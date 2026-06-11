@@ -22,11 +22,15 @@
     <string name="place_sup_gust_warning">Strong gusts: %.1f kn — stay close to shore</string>
     <string name="place_sup_offshore_warning">Offshore wind — wind pushes the board away from shore. Do not go out today.</string>
     <string name="place_hidden_gem_title">Hidden Gem</string>
-    <string name="place_hidden_gem_body">Only a few people know this secret place.\nUnlock exclusive access to see the exact coordinates, local tips and how to get there.</string>
-    <string name="place_hidden_gem_perk_1">📍 Exact GPS coordinates</string>
-    <string name="place_hidden_gem_perk_2">🗺 Step-by-step access instructions</string>
-    <string name="place_hidden_gem_perk_3">💡 Exclusive tips from locals</string>
-    <string name="place_hidden_gem_perk_4">📸 Best times to visit</string>
-    <string name="place_hidden_gem_unlock">💎  Unlock this Gem</string>
-    <string name="place_hidden_gem_no_subscription">One-time access · No subscription</string>
+    <string name="place_hidden_gem_body">Este lugar secreto solo se revela cuando lo visitas en persona.\nAcércate a menos de 200m y pulsa el botón para desbloquearlo.</string>
+    <string name="place_hidden_gem_perk_1">📍 Coordenadas GPS exactas</string>
+    <string name="place_hidden_gem_perk_2">🗺 Instrucciones de acceso paso a paso</string>
+    <string name="place_hidden_gem_perk_3">💡 Consejos exclusivos de locales</string>
+    <string name="place_hidden_gem_perk_4">📸 Los mejores momentos para visitarlo</string>
+    <string name="place_hidden_gem_unlock">📍 Estoy aquí — Verificar ubicación</string>
+    <string name="place_hidden_gem_checking">Obteniendo ubicación…</string>
+    <string name="place_hidden_gem_too_far">Estás a %s de esta gema. Acércate a menos de 200 m para desbloquearla.</string>
+    <string name="place_hidden_gem_no_location">No se pudo obtener tu ubicación. Activa el GPS e inténtalo de nuevo.</string>
+    <string name="place_hidden_gem_no_permission">Activa el permiso de ubicación para verificar que estás aquí.</string>
+    <string name="place_hidden_gem_no_subscription">Visita el lugar · Sin suscripción</string>
 </resources>

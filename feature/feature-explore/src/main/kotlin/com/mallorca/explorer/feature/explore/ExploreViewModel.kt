@@ -134,7 +134,9 @@ class ExploreViewModel @Inject constructor(
     ) { (itineraries, places, query), (results, weather, events), (visitedIds, recentIds, minRating), (nearMe, userLoc, timeFilter, catFilter) ->
         val visitedSet = visitedIds.toSet()
 
-        val allPlaces = places.map { p -> p.copy(isVisited = p.id in visitedSet) }
+        val allPlaces = places
+            .filter { "hidden_gem" !in it.subCategories }
+            .map { p -> p.copy(isVisited = p.id in visitedSet) }
         val supPlaces = allPlaces.filter { it.subCategories.contains("sup_launch") }
 
         var popularPlaces = allPlaces.filter { !it.subCategories.contains("sup_launch") }
@@ -175,7 +177,9 @@ class ExploreViewModel @Inject constructor(
             popularPlaces = popularPlaces.toImmutableList(),
             supPlaces = supPlaces.toImmutableList(),
             recentPlaces = recentPlaces.toImmutableList(),
-            searchResults = results.map { p -> p.copy(isVisited = p.id in visitedSet) }.toImmutableList(),
+            searchResults = results
+                .filter { "hidden_gem" !in it.subCategories }
+                .map { p -> p.copy(isVisited = p.id in visitedSet) }.toImmutableList(),
             searchQuery = query,
             isSearching = query.isNotBlank(),
             weather = weather,

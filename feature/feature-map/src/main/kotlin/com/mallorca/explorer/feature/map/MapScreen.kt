@@ -174,6 +174,11 @@ private const val PIN_ICON_ID           = "place-pin"
 private const val SELECTED_SOURCE_ID    = "selected-place-source"
 private const val SELECTED_LAYER_ID     = "selected-place-layer"
 
+// Hidden gem mystery pins
+private const val GEMS_SOURCE_ID        = "hidden-gems-source"
+private const val GEM_MYSTERY_LAYER_ID  = "hidden-gems-mystery"
+private const val GEM_ICON_ID           = "gem-mystery-pin"
+
 /**
  * White teardrop/pin on transparent background, suitable for SDF rendering.
  * The icon anchor is BOTTOM so the point sits exactly on the coordinate.
@@ -205,6 +210,33 @@ private fun createPinBitmap(w: Int): Bitmap {
     return bmp
 }
 
+/**
+ * Gold circle with a dark interior and "?" label — used as mystery pin for hidden gems.
+ */
+private fun createGemMysteryBitmap(w: Int): Bitmap {
+    val bmp = Bitmap.createBitmap(w, w, Bitmap.Config.ARGB_8888)
+    val canvas = Canvas(bmp)
+    val r = w / 2f
+    canvas.drawCircle(r, r, r, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = android.graphics.Color.parseColor("#F9A825")
+        style = Paint.Style.FILL
+    })
+    canvas.drawCircle(r, r, r * 0.68f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = android.graphics.Color.parseColor("#1A0030")
+        style = Paint.Style.FILL
+    })
+    val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = android.graphics.Color.parseColor("#F9A825")
+        textSize = w * 0.42f
+        textAlign = Paint.Align.CENTER
+        typeface = android.graphics.Typeface.DEFAULT_BOLD
+    }
+    val bounds = android.graphics.Rect()
+    textPaint.getTextBounds("?", 0, 1, bounds)
+    canvas.drawText("?", r, r - bounds.exactCenterY(), textPaint)
+    return bmp
+}
+
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MapScreen(
@@ -230,6 +262,7 @@ fun MapScreen(
     val mapRef = remember { mutableStateOf<MapLibreMap?>(null) }
     val styleReady = remember { mutableStateOf(false) }
 
+    val onPlaceClickState = rememberUpdatedState(onPlaceClick)
     val onItineraryClickState = rememberUpdatedState(onItineraryClick)
     val currentRoutesState = rememberUpdatedState(uiState.allItineraryRoutes)
 
@@ -370,6 +403,30 @@ fun MapScreen(
                         )
                     }
                 )
+                // ── Hidden gem mystery pins ──────────────────────────────────
+                style.addSource(GeoJsonSource(GEMS_SOURCE_ID, FeatureCollection.fromFeatures(emptyList())))
+                val gemW = (context.resources.displayMetrics.density * 40).toInt()
+                style.addImage(GEM_ICON_ID, createGemMysteryBitmap(gemW))
+                style.addLayer(
+                    SymbolLayer(GEM_MYSTERY_LAYER_ID, GEMS_SOURCE_ID).apply {
+                        setProperties(
+                            PropertyFactory.iconImage(GEM_ICON_ID),
+                            PropertyFactory.iconSize(
+                                Expression.interpolate(
+                                    Expression.linear(), Expression.zoom(),
+                                    Expression.stop(5,  Expression.literal(0.4f)),
+                                    Expression.stop(10, Expression.literal(0.65f)),
+                                    Expression.stop(13, Expression.literal(0.85f)),
+                                    Expression.stop(18, Expression.literal(1.0f)),
+                                )
+                            ),
+                            PropertyFactory.iconAnchor(Property.ICON_ANCHOR_CENTER),
+                            PropertyFactory.iconAllowOverlap(true),
+                            PropertyFactory.iconIgnorePlacement(true),
+                        )
+                    }
+                )
+
                 // Cluster circles — size scales with count
                 style.addLayer(
                     CircleLayer(CLUSTER_LAYER_ID, PLACES_SOURCE_ID).apply {
@@ -465,7 +522,17 @@ fun MapScreen(
                     return@addOnMapClickListener true
                 }
 
-                // 2. Individual place tap → show detail card
+                // 2. Hidden gem tap → navigate to detail lock screen
+                val gemFeatures = map.queryRenderedFeatures(tapPoint, GEM_MYSTERY_LAYER_ID)
+                if (gemFeatures.isNotEmpty()) {
+                    val placeId = gemFeatures[0].getStringProperty("placeId")
+                    if (placeId != null) {
+                        onPlaceClickState.value(placeId)
+                        return@addOnMapClickListener true
+                    }
+                }
+
+                // 3. Individual place tap → show detail card
                 val placeFeatures = map.queryRenderedFeatures(tapPoint, UNCLUSTERED_LAYER_ID)
                 if (placeFeatures.isNotEmpty()) {
                     val placeId = placeFeatures[0].getStringProperty("placeId")
@@ -475,7 +542,7 @@ fun MapScreen(
                     }
                 }
 
-                // 3. Itinerary stop tap → navigate to itinerary detail
+                // 4. Itinerary stop tap → navigate to itinerary detail
                 val hitRadiusPx = 80f
                 var bestId: String? = null
                 var bestDistSq = hitRadiusPx * hitRadiusPx
@@ -608,6 +675,23 @@ fun MapScreen(
                             addProperty("placeId", place.id)
                             addProperty("color", place.category.routeColor())
                         }
+                    )
+                }
+                source.setGeoJson(FeatureCollection.fromFeatures(features))
+            }
+    }
+
+    // Update hidden gem mystery pins when gems change
+    LaunchedEffect(styleReady.value) {
+        if (!styleReady.value) return@LaunchedEffect
+        val map = mapRef.value ?: return@LaunchedEffect
+        snapshotFlow { uiState.hiddenGems }
+            .collect { gems ->
+                val source = map.style?.getSourceAs<GeoJsonSource>(GEMS_SOURCE_ID) ?: return@collect
+                val features = gems.map { gem ->
+                    Feature.fromGeometry(
+                        Point.fromLngLat(gem.location.longitude, gem.location.latitude),
+                        JsonObject().apply { addProperty("placeId", gem.id) }
                     )
                 }
                 source.setGeoJson(FeatureCollection.fromFeatures(features))
