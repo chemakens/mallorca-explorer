@@ -658,7 +658,7 @@
         "The village church offers sweeping mountain views",
         "Son Marroig estate is nearby and worth visiting"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Country%20View%20-%20Deia%20-%20Mallorca%20-%20Spain%20%2814334373757%29.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-deia.jpg",
       "photo_urls": [
         "https://commons.wikimedia.org/wiki/Special:FilePath/Country%20View%20-%20Deia%20-%20Mallorca%20-%20Spain%20%2814334373757%29.jpg?width=800",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Deia_village_Mallorca.jpg?width=800"
@@ -740,7 +740,7 @@
         "The Sunday market is one of the island's best",
         "Visit in late July for the famous Moors and Christians festival"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pollen%C3%A7a.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-pollenca.jpg",
       "photo_urls": [
         "https://commons.wikimedia.org/wiki/Special:FilePath/Pollen%C3%A7a.jpg?width=800",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Pollença_village.jpg?width=800"
@@ -2329,7 +2329,7 @@
         "https://commons.wikimedia.org/wiki/Special:FilePath/View%20over%20Old%20Town%20from%20City%20Walls%20-%20Alcudia%20-%20Mallorca%20-%20Spain%20%2814533948805%29.jpg?width=800",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Alcúdia_old_town.jpg?width=800"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/View%20over%20Old%20Town%20from%20City%20Walls%20-%20Alcudia%20-%20Mallorca%20-%20Spain%20%2814533948805%29.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-alcudia.jpg",
       "description_es": "Perfectamente conservado pueblo medieval amurallado en el norte de Mallorca, fundado por los romanos como Pollentia y rodeado por las únicas murallas urbanas intactas de la isla.",
       "tips_es": [
         "Las murallas medievales están perfectamente conservadas",
@@ -2381,7 +2381,7 @@
       "photo_urls": [
         "https://commons.wikimedia.org/wiki/Special:FilePath/Sineu%202022%2023%20Ayuntamiento.jpg?width=800"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sineu%202022%2023%20Ayuntamiento.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-sineu.jpg",
       "description_es": "El corazón geográfico de Mallorca y su capital histórica de mercado. El animado mercado de los miércoles, el mayor de la isla, convierte el pueblo en un hervidero de productos locales y artesanía.",
       "tips_es": [
         "El mercado del miércoles es el más antiguo e importante de Mallorca",
@@ -2435,7 +2435,7 @@
         "https://commons.wikimedia.org/wiki/Special:FilePath/Banyalbufar%20terraces%201.JPG?width=800",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Banyalbufar_Mallorca.jpg?width=800"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Banyalbufar%20terraces%201.JPG?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-banyalbufar.webp",
       "description_es": "Aferrada a la costa noroeste de la Tramuntana, Banyalbufar es conocida por su extraordinario paisaje de bancales de piedra que descienden en pisos desde la montaña hasta el mar.",
       "tips_es": [
         "Las terrazas de cultivo de la malvasia son las más antiguas de Mallorca",
@@ -2488,7 +2488,7 @@
       "photo_urls": [
         "https://commons.wikimedia.org/wiki/Special:FilePath/Estellencs.jpg?width=800"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Estellencs.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-estellencs.jpg",
       "description_es": "El municipio más pequeño de Mallorca, con apenas 300 habitantes, se aferra a la vertiente marítima de la Serra de Tramuntana entre acantilados y el Mediterráneo abierto.",
       "tips_es": [
         "El pueblo tiene la plaza de toros más pequeña del mundo",
@@ -2542,7 +2542,7 @@
         "https://commons.wikimedia.org/wiki/Special:FilePath/Mol%C3%ADfarineraBinissalem.jpg?width=800",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Binissalem_wine.jpg?width=800"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mol%C3%ADfarineraBinissalem.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-binissalem.jpg",
       "description_es": "La capital vinícola de Mallorca, en el llano agrícola entre Palma e Inca. Binissalem da nombre a la Denominación de Origen más prestigiosa de la isla, con excelentes tintos de uvas autóctonas.",
       "tips_es": [
         "La Feria del Vino en octubre es la más importante de Mallorca",
@@ -2648,7 +2648,7 @@
       "photo_urls": [
         "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca-Calonge-Church-05E.jpg?width=800"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca-Calonge-Church-05E.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-santanyi.jpg",
       "description_es": "Refinada localidad de mercado en el sureste construida con la arenisca color miel que los romanos apreciaban. El mercado del sábado es uno de los más auténticos y concurridos de la isla.",
       "tips_es": [
         "El mercado del sábado alrededor de la iglesia es imprescindible",
@@ -2700,7 +2700,7 @@
       "photo_urls": [
         "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Pere%20-%20Petra%20-%20Memorial%20plaque.jpg?width=800"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Pere%20-%20Petra%20-%20Memorial%20plaque.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-petra.jpg",
       "description_es": "Tranquilo municipio agrícola famoso por ser el lugar de nacimiento de Fray Junípero Serra, el fraile franciscano del siglo XVIII que fundó la cadena de misiones de California.",
       "tips_es": [
         "El Museu Fra Junípero Serra narra la vida del misionero fundador de California",
