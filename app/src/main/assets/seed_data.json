@@ -7059,6 +7059,71 @@
       "name_zh": "",
       "description_zh": "",
       "tips_zh": []
+    },
+    {
+      "id": "gem-mirador-sestaca",
+      "name": "Mirador de S'Estaca",
+      "name_es": "Mirador de S'Estaca",
+      "name_de": "Aussichtspunkt S'Estaca",
+      "name_ru": "Смотровая площадка Са-Эстака",
+      "name_zh": "萨埃斯塔卡观景台",
+      "description": "A secret coastal viewpoint perched on the Tramuntana cliffside above the legendary S'Estaca estate — once home to Archduke Ludwig Salvator and more recently owned by Michael Douglas. The mirador looks straight down onto the estate's stone terraces, olive groves and the turquoise inlet of Caló de S'Estaca below. Reached via a 2 km trail from Port de Valldemossa, it sees almost no tourists despite its jaw-dropping position.",
+      "description_es": "Mirador costero secreto encaramado en los acantilados de la Tramuntana, sobre la legendaria finca de S'Estaca — antigua residencia del Archiduque Luis Salvador y, más recientemente, de Michael Douglas. Desde aquí se contempla en picado la finca con sus terrazas de piedra, olivares centenarios y el turquesa de Caló de S'Estaca. Se llega por un sendero de 2 km desde el Port de Valldemossa, y apenas recibe turistas a pesar de su posición privilegiada.",
+      "description_de": "Ein geheimer Küstenaussichtspunkt auf den Tramuntana-Klippen über dem legendären Anwesen S'Estaca — einst Residenz von Erzherzog Ludwig Salvator und in jüngerer Zeit im Besitz von Michael Douglas. Der Aussichtspunkt bietet einen atemberaubenden Blick auf die Steinterrassen des Anwesens, jahrhundertealte Olivenhaine und die türkisfarbene Bucht Caló de S'Estaca. Erreichbar über einen 2 km langen Pfad vom Port de Valldemossa, kaum von Touristen frequentiert.",
+      "description_ru": "Скрытая прибрежная смотровая площадка на скалах Трамунтаны над легендарным поместьем Са-Эстака — бывшей резиденцией эрцгерцога Людвига Сальватора, а позднее — Майкла Дугласа. С площадки открывается захватывающий вид на каменные террасы усадьбы, вековые оливковые рощи и бирюзовую бухту Каль-де-Са-Эстака. Добраться можно по тропе длиной 2 км от Порт-де-Вальдемоссы — туристы здесь редкость.",
+      "description_zh": "这是一处隐秘的海岸观景台，位于特拉蒙塔纳山脉悬崖之上，俯瞰传奇的萨埃斯塔卡庄园——曾是奥地利大公路德维希·萨尔瓦多的故居，近年来则为迈克尔·道格拉斯所有。从此处可直接俯视庄园的石砌梯田、百年橄榄林和下方卡洛德萨埃斯塔卡湾的碧绿海水。沿波特德巴德莫萨出发，步行约2公里可达，游客极少，景色令人叹为观止。",
+      "category": "VIEWPOINT",
+      "latitude": 39.7297,
+      "longitude": 2.6058,
+      "address": "Camí de S'Estaca",
+      "municipality": "Valldemossa",
+      "rating": 4.9,
+      "review_count": 23,
+      "price_level": "FREE",
+      "tips": [
+        "Park at Port de Valldemossa and follow the coastal path north — no signage, use offline maps",
+        "Best light is early morning when the sea glows and the estate is in shadow below",
+        "Continue 15 minutes further to reach Caló de S'Estaca for a swim in total solitude",
+        "The path is rocky — wear proper footwear"
+      ],
+      "tips_es": [
+        "Aparca en el Port de Valldemossa y sigue el camino costero hacia el norte — sin señalización, usa mapas offline",
+        "La mejor luz es al amanecer, cuando el mar brilla y la finca queda en sombra",
+        "Continúa 15 minutos más hasta Caló de S'Estaca para un baño en total soledad",
+        "El sendero es rocoso — lleva calzado adecuado"
+      ],
+      "tips_de": [
+        "Am Port de Valldemossa parken und dem Küstenpfad nach Norden folgen — keine Beschilderung, Offline-Karte verwenden",
+        "Das beste Licht gibt es am frühen Morgen, wenn das Meer leuchtet und das Anwesen im Schatten liegt",
+        "Weitere 15 Minuten bis Caló de S'Estaca für ein Bad in völliger Einsamkeit",
+        "Der Weg ist felsig — geeignetes Schuhwerk tragen"
+      ],
+      "tips_ru": [
+        "Припаркуйтесь в Порт-де-Вальдемоссе и следуйте по прибрежной тропе на север — указателей нет, используйте офлайн-карты",
+        "Лучший свет — ранним утром, когда море сияет, а поместье остаётся в тени",
+        "Пройдите ещё 15 минут до Каль-де-Са-Эстака, чтобы искупаться в полном уединении",
+        "Тропа каменистая — наденьте подходящую обувь"
+      ],
+      "tips_zh": [
+        "将车停在波特德巴德莫萨，沿海岸小径向北行进——没有路标，请使用离线地图",
+        "清晨光线最佳，海面泛光，庄园仍处于阴影之中",
+        "再走15分钟可到达卡洛德萨埃斯塔卡湾，在完全的宁静中游泳",
+        "小径崎岖，请穿着合适的鞋子"
+      ],
+      "tags": [
+        "hidden_gem",
+        "viewpoint",
+        "coastal",
+        "tramuntana",
+        "hiking",
+        "valldemossa",
+        "archduke",
+        "estate"
+      ],
+      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Estaca_Valldemossa.jpg?width=800",
+      "photo_urls": [
+        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Estaca_Valldemossa.jpg?width=800"
+      ]
     }
   ],
   "itineraries": [
