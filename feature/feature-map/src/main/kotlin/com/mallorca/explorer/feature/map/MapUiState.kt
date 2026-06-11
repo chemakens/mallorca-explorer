@@ -21,6 +21,7 @@ data class MapUiState(
     val places: ImmutableList<Place> = persistentListOf(),
     val hiddenGems: ImmutableList<Place> = persistentListOf(),
     val selectedPlace: Place? = null,
+    val selectedGem: Place? = null,
     val activeCategory: Category? = null,
     val isOffline: Boolean = false,
     val isLoading: Boolean = false,
