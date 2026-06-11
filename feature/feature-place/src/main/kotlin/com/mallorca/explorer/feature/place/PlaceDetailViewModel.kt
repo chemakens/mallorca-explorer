@@ -8,6 +8,7 @@ import com.mallorca.explorer.core.domain.model.Discount
 import com.mallorca.explorer.core.domain.model.Place
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
 import com.mallorca.explorer.core.domain.model.WeatherCondition
+import com.mallorca.explorer.core.data.datastore.UserPreferencesDataStore
 import com.mallorca.explorer.core.domain.repository.HiddenGemRepository
 import com.mallorca.explorer.core.domain.repository.PlaceRepository
 import com.mallorca.explorer.core.domain.repository.RecentlyViewedRepository
@@ -42,6 +43,7 @@ data class PlaceDetailUiState(
     val isHiddenGem: Boolean = false,
     val isUnlocked: Boolean = false,
     val isVisited: Boolean = false,
+    val isDevMode: Boolean = false,
     val isLoading: Boolean = true,
     val error: String? = null,
     val locale: String = "en",
@@ -61,6 +63,7 @@ class PlaceDetailViewModel @Inject constructor(
     private val recentlyViewedRepository: RecentlyViewedRepository,
     private val placeRepository: PlaceRepository,
     private val localeSource: LocaleSource,
+    private val prefsDataStore: UserPreferencesDataStore,
 ) : ViewModel() {
 
     private val placeId: String = checkNotNull(savedStateHandle["placeId"])
@@ -110,7 +113,8 @@ class PlaceDetailViewModel @Inject constructor(
             )
         },
         localeSource.locale,
-    ) { state, locale -> state.copy(locale = locale) }
+        prefsDataStore.devMode,
+    ) { state, locale, isDevMode -> state.copy(locale = locale, isDevMode = isDevMode) }
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),

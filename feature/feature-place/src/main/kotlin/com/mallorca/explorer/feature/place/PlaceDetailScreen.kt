@@ -128,6 +128,7 @@ fun PlaceDetailScreen(
                 municipality = uiState.place?.municipality ?: "",
                 placeLat = uiState.place?.location?.latitude ?: 0.0,
                 placeLng = uiState.place?.location?.longitude ?: 0.0,
+                isDevMode = uiState.isDevMode,
                 onBack = onBack,
                 onUnlock = viewModel::onUnlockGem,
             )
@@ -824,6 +825,7 @@ private fun HiddenGemLockScreen(
     placeLng: Double,
     onBack: () -> Unit,
     onUnlock: () -> Unit,
+    isDevMode: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
     val gemGold = Color(0xFFF9A825)
@@ -975,6 +977,18 @@ private fun HiddenGemLockScreen(
                     Text(stringResource(R.string.place_hidden_gem_checking), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodyLarge)
                 } else {
                     Text(stringResource(R.string.place_hidden_gem_unlock), fontWeight = FontWeight.Bold, style = MaterialTheme.typography.bodyLarge)
+                }
+            }
+
+            if (isDevMode) {
+                OutlinedButton(
+                    onClick = onUnlock,
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(14.dp),
+                    colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF6A1B9A)),
+                    border = androidx.compose.foundation.BorderStroke(1.dp, Color(0xFF6A1B9A)),
+                ) {
+                    Text("🔧 Desbloquear (modo dev)", style = MaterialTheme.typography.bodyMedium)
                 }
             }
 

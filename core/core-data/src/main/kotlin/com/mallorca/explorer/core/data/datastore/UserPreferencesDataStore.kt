@@ -32,6 +32,7 @@ class UserPreferencesDataStore @Inject constructor(
         val LAST_MAP_LNG = doublePreferencesKey("last_map_lng")
         val LOCALE = stringPreferencesKey("locale")
         val THEME = stringPreferencesKey("theme")
+        val DEV_MODE = booleanPreferencesKey("dev_mode")
     }
 
     val onboardingCompleted: Flow<Boolean> = context.dataStore.data.map { it[Keys.ONBOARDING_COMPLETED] ?: false }
@@ -40,6 +41,7 @@ class UserPreferencesDataStore @Inject constructor(
     val lastSyncEpoch: Flow<Long> = context.dataStore.data.map { it[Keys.LAST_SYNC_EPOCH] ?: 0L }
     val selectedLocale: Flow<String> = context.dataStore.data.map { it[Keys.LOCALE] ?: Locale.getDefault().language }
     val selectedTheme: Flow<String> = context.dataStore.data.map { it[Keys.THEME] ?: "system" }
+    val devMode: Flow<Boolean> = context.dataStore.data.map { it[Keys.DEV_MODE] ?: false }
 
     suspend fun setOnboardingCompleted() {
         context.dataStore.edit { it[Keys.ONBOARDING_COMPLETED] = true }
@@ -70,5 +72,9 @@ class UserPreferencesDataStore @Inject constructor(
 
     suspend fun setTheme(theme: String) {
         context.dataStore.edit { it[Keys.THEME] = theme }
+    }
+
+    suspend fun setDevMode(enabled: Boolean) {
+        context.dataStore.edit { it[Keys.DEV_MODE] = enabled }
     }
 }
