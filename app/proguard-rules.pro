@@ -11,6 +11,13 @@
 -keepattributes Signature
 -keepattributes Exceptions
 
+# Keep our Retrofit API service interfaces — Retrofit creates dynamic proxies via reflection
+# and needs the interface methods and their annotations to remain intact after R8 minification
+-keep interface com.mallorca.explorer.core.data.network.** { *; }
+
+# Keep qualifier annotations used for Dagger/Hilt multi-bindings — R8 must not strip them at runtime
+-keep @javax.inject.Qualifier @interface *
+
 # OkHttp
 -dontwarn okhttp3.**
 -keep class okhttp3.** { *; }
