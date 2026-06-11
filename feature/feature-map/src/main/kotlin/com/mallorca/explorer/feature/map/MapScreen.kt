@@ -522,12 +522,12 @@ fun MapScreen(
                     return@addOnMapClickListener true
                 }
 
-                // 2. Hidden gem tap → navigate to detail lock screen
+                // 2. Hidden gem tap → show mystery card (no info revealed)
                 val gemFeatures = map.queryRenderedFeatures(tapPoint, GEM_MYSTERY_LAYER_ID)
                 if (gemFeatures.isNotEmpty()) {
                     val placeId = gemFeatures[0].getStringProperty("placeId")
                     if (placeId != null) {
-                        onPlaceClickState.value(placeId)
+                        viewModel.onGemMarkerTapped(placeId)
                         return@addOnMapClickListener true
                     }
                 }
@@ -955,7 +955,19 @@ fun MapScreen(
             modifier = Modifier.align(Alignment.BottomStart).padding(bottom = 16.dp),
         )
 
-        // Selected place card (when tapping a map marker)
+        // Mystery gem card (when tapping a hidden gem pin — no info revealed)
+        uiState.selectedGem?.let { gem ->
+            GemMysteryCard(
+                municipality = gem.municipality,
+                onDismiss = viewModel::onGemDismissed,
+                onViewDetail = { onPlaceClick(gem.id) },
+                modifier = Modifier
+                    .align(Alignment.BottomCenter)
+                    .padding(horizontal = 16.dp, vertical = 80.dp),
+            )
+        }
+
+        // Selected place card (when tapping a normal map marker)
         uiState.selectedPlace?.let { place ->
             SelectedPlaceCard(
                 place = place,
@@ -1024,6 +1036,67 @@ private fun centerOnUserLocation(context: Context, map: MapLibreMap?) {
 }
 
 // ─── Composables ─────────────────────────────────────────────────────────────
+
+@Composable
+private fun GemMysteryCard(
+    municipality: String,
+    onDismiss: () -> Unit,
+    onViewDetail: () -> Unit,
+    modifier: Modifier = Modifier,
+) {
+    val gemGold = Color(0xFFF9A825)
+    val gemDark = Color(0xFF1A0030)
+    Surface(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(20.dp),
+        shadowElevation = 8.dp,
+        color = gemDark,
+    ) {
+        Row(
+            modifier = Modifier.padding(12.dp),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.spacedBy(12.dp),
+        ) {
+            Box(
+                modifier = Modifier
+                    .size(64.dp)
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(Color(0xFF2D1B4E)),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text("💎", style = MaterialTheme.typography.headlineMedium)
+            }
+            Column(modifier = Modifier.weight(1f)) {
+                Text(
+                    "Gema oculta",
+                    style = MaterialTheme.typography.titleSmall,
+                    fontWeight = FontWeight.Bold,
+                    color = gemGold,
+                )
+                if (municipality.isNotEmpty()) {
+                    Text(
+                        "📍 $municipality",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = Color.White.copy(alpha = 0.6f),
+                    )
+                }
+                Text(
+                    "Visítala para descubrirla",
+                    style = MaterialTheme.typography.labelSmall,
+                    color = Color.White.copy(alpha = 0.4f),
+                )
+            }
+            Column(horizontalAlignment = Alignment.End) {
+                IconButton(onClick = onDismiss, modifier = Modifier.size(32.dp)) {
+                    Icon(Icons.Outlined.Close, contentDescription = "Cerrar", tint = Color.White.copy(alpha = 0.6f), modifier = Modifier.size(18.dp))
+                }
+                TextButton(onClick = onViewDetail, modifier = Modifier.padding(0.dp)) {
+                    Text("Ir al lugar", style = MaterialTheme.typography.labelMedium, color = gemGold)
+                }
+            }
+        }
+    }
+}
 
 @Composable
 private fun SelectedPlaceCard(

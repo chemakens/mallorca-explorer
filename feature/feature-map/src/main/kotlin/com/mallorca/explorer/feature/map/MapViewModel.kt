@@ -46,6 +46,7 @@ class MapViewModel @Inject constructor(
 
     private val activeCategory = MutableStateFlow<Category?>(null)
     private val selectedPlaceId = MutableStateFlow<String?>(null)
+    private val selectedGemId = MutableStateFlow<String?>(null)
     private val activeItineraryId = MutableStateFlow<String?>(null)
     private val previewItineraryId = MutableStateFlow<String?>(null)
     private val _searchQuery = MutableStateFlow("")
@@ -110,8 +111,14 @@ class MapViewModel @Inject constructor(
                 previewItineraryId = previewId,
             )
         },
+        selectedGemId,
         localeSource.locale,
-    ) { state, locale -> state.copy(locale = locale) }
+    ) { state, gemId, locale ->
+        state.copy(
+            selectedGem = gemId?.let { id -> state.hiddenGems.find { it.id == id } },
+            locale = locale,
+        )
+    }
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),
@@ -131,10 +138,21 @@ class MapViewModel @Inject constructor(
     }
 
     fun onMarkerTapped(placeId: String) {
+        selectedGemId.value = null
         selectedPlaceId.value = if (selectedPlaceId.value == placeId) null else placeId
     }
 
-    fun onBottomSheetDismissed() { selectedPlaceId.value = null }
+    fun onGemMarkerTapped(placeId: String) {
+        selectedPlaceId.value = null
+        selectedGemId.value = if (selectedGemId.value == placeId) null else placeId
+    }
+
+    fun onGemDismissed() { selectedGemId.value = null }
+
+    fun onBottomSheetDismissed() {
+        selectedPlaceId.value = null
+        selectedGemId.value = null
+    }
 
     fun onFavoriteToggled(placeId: String) {
         viewModelScope.launch { toggleFavorite(placeId) }
