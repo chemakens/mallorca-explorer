@@ -619,7 +619,7 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-valldemossa.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20view%20of%20Valldemossa%20-%20village%20in%20Mallorca%2C%20Spain%20%2848001696993%29.jpg?width=800",
+        "file:///android_asset/images/place-valldemossa.jpg",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Valldemossa_Mallorca.jpg?width=800"
       ],
       "description_es": "Uno de los pueblos más bellos de Mallorca, en las montañas donde Chopin y George Sand pasaron un invierno memorable en la década de 1830.",
@@ -660,7 +660,7 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-deia.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Country%20View%20-%20Deia%20-%20Mallorca%20-%20Spain%20%2814334373757%29.jpg?width=800",
+        "file:///android_asset/images/place-deia.jpg",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Deia_village_Mallorca.jpg?width=800"
       ],
       "description_es": "Pintoresco pueblo en ladera adorado por artistas y escritores, con casas de piedra que descienden entre olivos y almendros hacia el mar.",
@@ -742,7 +742,7 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-pollenca.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Pollen%C3%A7a.jpg?width=800",
+        "file:///android_asset/images/place-pollenca.jpg",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Pollença_village.jpg?width=800"
       ],
       "description_es": "Hermosa villa con orígenes romanos, famosa por su escalinata del Calvari de 365 peldaños y su animado mercado dominical lleno de artesanía local.",
@@ -2326,7 +2326,7 @@
         "beach-nearby"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/View%20over%20Old%20Town%20from%20City%20Walls%20-%20Alcudia%20-%20Mallorca%20-%20Spain%20%2814533948805%29.jpg?width=800",
+        "file:///android_asset/images/place-alcudia.jpg",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Alcúdia_old_town.jpg?width=800"
       ],
       "thumbnail_url": "file:///android_asset/images/place-alcudia.jpg",
@@ -2379,7 +2379,7 @@
         "livestock-market"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sineu%202022%2023%20Ayuntamiento.jpg?width=800"
+        "file:///android_asset/images/place-sineu.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-sineu.jpg",
       "description_es": "El corazón geográfico de Mallorca y su capital histórica de mercado. El animado mercado de los miércoles, el mayor de la isla, convierte el pueblo en un hervidero de productos locales y artesanía.",
@@ -2432,7 +2432,7 @@
         "dramatic-views"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Banyalbufar%20terraces%201.JPG?width=800",
+        "file:///android_asset/images/place-banyalbufar.webp",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Banyalbufar_Mallorca.jpg?width=800"
       ],
       "thumbnail_url": "file:///android_asset/images/place-banyalbufar.webp",
@@ -2486,7 +2486,7 @@
         "watchtower"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Estellencs.jpg?width=800"
+        "file:///android_asset/images/place-estellencs.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-estellencs.jpg",
       "description_es": "El municipio más pequeño de Mallorca, con apenas 300 habitantes, se aferra a la vertiente marítima de la Serra de Tramuntana entre acantilados y el Mediterráneo abierto.",
@@ -2539,7 +2539,7 @@
         "train"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mol%C3%ADfarineraBinissalem.jpg?width=800",
+        "file:///android_asset/images/place-binissalem.jpg",
         "https://commons.wikimedia.org/wiki/Special:FilePath/Binissalem_wine.jpg?width=800"
       ],
       "thumbnail_url": "file:///android_asset/images/place-binissalem.jpg",
@@ -2646,7 +2646,7 @@
         "beaches-nearby"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca-Calonge-Church-05E.jpg?width=800"
+        "file:///android_asset/images/place-santanyi.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-santanyi.jpg",
       "description_es": "Refinada localidad de mercado en el sureste construida con la arenisca color miel que los romanos apreciaban. El mercado del sábado es uno de los más auténticos y concurridos de la isla.",
@@ -2698,7 +2698,7 @@
         "history"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Pere%20-%20Petra%20-%20Memorial%20plaque.jpg?width=800"
+        "file:///android_asset/images/place-petra.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-petra.jpg",
       "description_es": "Tranquilo municipio agrícola famoso por ser el lugar de nacimiento de Fray Junípero Serra, el fraile franciscano del siglo XVIII que fundó la cadena de misiones de California.",
