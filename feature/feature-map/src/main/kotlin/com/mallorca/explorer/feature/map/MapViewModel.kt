@@ -67,7 +67,9 @@ class MapViewModel @Inject constructor(
     val searchResults: StateFlow<ImmutableList<Place>> = _searchQuery
         .flatMapLatest { query ->
             if (query.length < 2) flowOf(persistentListOf())
-            else placeRepository.searchPlaces(query).map { it.toImmutableList() }
+            else placeRepository.searchPlaces(query).map { places ->
+                places.filter { "hidden_gem" !in it.subCategories }.toImmutableList()
+            }
         }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), persistentListOf())
 
@@ -79,6 +81,9 @@ class MapViewModel @Inject constructor(
                 Triple(itin, all, previewId)
             },
         ) { (placeList, cat, selectedId), isOnline, (itinerary, allItin, previewId) ->
+            val normalPlaces = placeList.filter { "hidden_gem" !in it.subCategories }
+            val hiddenGems = placeList.filter { "hidden_gem" in it.subCategories }
+
             val allItineraryRoutes = allItin.map { itin ->
                 ItineraryRoute(
                     id = itin.id,
@@ -95,7 +100,8 @@ class MapViewModel @Inject constructor(
             }.toImmutableList()
 
             MapUiState(
-                places = placeList.toImmutableList(),
+                places = normalPlaces.toImmutableList(),
+                hiddenGems = hiddenGems.toImmutableList(),
                 selectedPlace = selectedId?.let { id -> placeList.find { it.id == id } },
                 activeCategory = cat,
                 isOffline = !isOnline,
