@@ -217,22 +217,16 @@ private fun createGemMysteryBitmap(w: Int): Bitmap {
     val bmp = Bitmap.createBitmap(w, w, Bitmap.Config.ARGB_8888)
     val canvas = Canvas(bmp)
     val r = w / 2f
-    // White outer ring for contrast against any map background
+    // Gold fill
     canvas.drawCircle(r, r, r, Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = android.graphics.Color.WHITE
-        style = Paint.Style.FILL
-    })
-    // Gold fill (slightly inset from white border)
-    canvas.drawCircle(r, r, r * 0.85f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = android.graphics.Color.parseColor("#F9A825")
         style = Paint.Style.FILL
     })
     // Dark purple center
-    canvas.drawCircle(r, r, r * 0.60f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+    canvas.drawCircle(r, r, r * 0.65f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = android.graphics.Color.parseColor("#1A0030")
         style = Paint.Style.FILL
     })
-    // Gold "?" — larger and bolder
     val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = android.graphics.Color.parseColor("#FFD54F")
         textSize = w * 0.46f
@@ -413,7 +407,7 @@ fun MapScreen(
                 )
                 // ── Hidden gem mystery pins ──────────────────────────────────
                 style.addSource(GeoJsonSource(GEMS_SOURCE_ID, FeatureCollection.fromFeatures(emptyList())))
-                val gemW = (context.resources.displayMetrics.density * 56).toInt()
+                val gemW = (context.resources.displayMetrics.density * 48).toInt()
                 style.addImage(GEM_ICON_ID, createGemMysteryBitmap(gemW))
                 style.addLayer(
                     SymbolLayer(GEM_MYSTERY_LAYER_ID, GEMS_SOURCE_ID).apply {
@@ -422,10 +416,10 @@ fun MapScreen(
                             PropertyFactory.iconSize(
                                 Expression.interpolate(
                                     Expression.linear(), Expression.zoom(),
-                                    Expression.stop(5,  Expression.literal(0.55f)),
-                                    Expression.stop(10, Expression.literal(0.80f)),
-                                    Expression.stop(13, Expression.literal(1.0f)),
-                                    Expression.stop(18, Expression.literal(1.2f)),
+                                    Expression.stop(5,  Expression.literal(0.60f)),
+                                    Expression.stop(10, Expression.literal(0.85f)),
+                                    Expression.stop(13, Expression.literal(1.05f)),
+                                    Expression.stop(18, Expression.literal(1.15f)),
                                 )
                             ),
                             PropertyFactory.iconAnchor(Property.ICON_ANCHOR_CENTER),
@@ -669,41 +663,34 @@ fun MapScreen(
     }
 
     // Update place clustering source when places change
-    LaunchedEffect(styleReady.value) {
+    LaunchedEffect(styleReady.value, uiState.places) {
         if (!styleReady.value) return@LaunchedEffect
         val map = mapRef.value ?: return@LaunchedEffect
-        snapshotFlow { uiState.places }
-            .collect { places ->
-                val source = map.style?.getSourceAs<GeoJsonSource>(PLACES_SOURCE_ID)
-                    ?: return@collect
-                val features = places.map { place ->
-                    Feature.fromGeometry(
-                        Point.fromLngLat(place.location.longitude, place.location.latitude),
-                        JsonObject().apply {
-                            addProperty("placeId", place.id)
-                            addProperty("color", place.category.routeColor())
-                        }
-                    )
+        val source = map.style?.getSourceAs<GeoJsonSource>(PLACES_SOURCE_ID) ?: return@LaunchedEffect
+        val features = uiState.places.map { place ->
+            Feature.fromGeometry(
+                Point.fromLngLat(place.location.longitude, place.location.latitude),
+                JsonObject().apply {
+                    addProperty("placeId", place.id)
+                    addProperty("color", place.category.routeColor())
                 }
-                source.setGeoJson(FeatureCollection.fromFeatures(features))
-            }
+            )
+        }
+        source.setGeoJson(FeatureCollection.fromFeatures(features))
     }
 
     // Update hidden gem mystery pins when gems change
-    LaunchedEffect(styleReady.value) {
+    LaunchedEffect(styleReady.value, uiState.hiddenGems) {
         if (!styleReady.value) return@LaunchedEffect
         val map = mapRef.value ?: return@LaunchedEffect
-        snapshotFlow { uiState.hiddenGems }
-            .collect { gems ->
-                val source = map.style?.getSourceAs<GeoJsonSource>(GEMS_SOURCE_ID) ?: return@collect
-                val features = gems.map { gem ->
-                    Feature.fromGeometry(
-                        Point.fromLngLat(gem.location.longitude, gem.location.latitude),
-                        JsonObject().apply { addProperty("placeId", gem.id) }
-                    )
-                }
-                source.setGeoJson(FeatureCollection.fromFeatures(features))
-            }
+        val source = map.style?.getSourceAs<GeoJsonSource>(GEMS_SOURCE_ID) ?: return@LaunchedEffect
+        val features = uiState.hiddenGems.map { gem ->
+            Feature.fromGeometry(
+                Point.fromLngLat(gem.location.longitude, gem.location.latitude),
+                JsonObject().apply { addProperty("placeId", gem.id) }
+            )
+        }
+        source.setGeoJson(FeatureCollection.fromFeatures(features))
     }
 
     Box(modifier = modifier.fillMaxSize()) {
