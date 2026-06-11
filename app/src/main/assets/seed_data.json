@@ -620,7 +620,7 @@
       "thumbnail_url": "file:///android_asset/images/place-valldemossa.jpg",
       "photo_urls": [
         "file:///android_asset/images/place-valldemossa.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Valldemossa_Mallorca.jpg?width=800"
+        "file:///android_asset/images/place-valldemossa-2.jpg"
       ],
       "description_es": "Uno de los pueblos más bellos de Mallorca, en las montañas donde Chopin y George Sand pasaron un invierno memorable en la década de 1830.",
       "tips_es": [
@@ -661,7 +661,7 @@
       "thumbnail_url": "file:///android_asset/images/place-deia.jpg",
       "photo_urls": [
         "file:///android_asset/images/place-deia.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Deia_village_Mallorca.jpg?width=800"
+        "file:///android_asset/images/place-deia-2.jpg"
       ],
       "description_es": "Pintoresco pueblo en ladera adorado por artistas y escritores, con casas de piedra que descienden entre olivos y almendros hacia el mar.",
       "tips_es": [
@@ -699,10 +699,10 @@
         "The Modernista bank building on the main square is stunning",
         "Orange and lemon products are the local specialty"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20S%C3%B3ller%20town%20asv2023-04%20img4.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-soller.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20S%C3%B3ller%20town%20asv2023-04%20img4.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sóller_train_station.jpg?width=800"
+        "file:///android_asset/images/place-soller.jpg",
+        "file:///android_asset/images/place-soller-2.jpg"
       ],
       "description_es": "Encantador pueblo de naranjales en un valle de montaña, conectado con Palma por un tren de madera vintage que lleva funcionando más de un siglo.",
       "tips_es": [
@@ -743,7 +743,7 @@
       "thumbnail_url": "file:///android_asset/images/place-pollenca.jpg",
       "photo_urls": [
         "file:///android_asset/images/place-pollenca.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Pollença_village.jpg?width=800"
+        "file:///android_asset/images/place-pollenca-2.jpg"
       ],
       "description_es": "Hermosa villa con orígenes romanos, famosa por su escalinata del Calvari de 365 peldaños y su animado mercado dominical lleno de artesanía local.",
       "tips_es": [
@@ -2540,7 +2540,7 @@
       ],
       "photo_urls": [
         "file:///android_asset/images/place-binissalem.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Binissalem_wine.jpg?width=800"
+        "file:///android_asset/images/place-binissalem-2.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-binissalem.jpg",
       "description_es": "La capital vinícola de Mallorca, en el llano agrícola entre Palma e Inca. Binissalem da nombre a la Denominación de Origen más prestigiosa de la isla, con excelentes tintos de uvas autóctonas.",
