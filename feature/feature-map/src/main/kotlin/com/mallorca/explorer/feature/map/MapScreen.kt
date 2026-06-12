@@ -168,8 +168,7 @@ private const val CLUSTER_LAYER_ID      = "cluster-circle"
 private const val CLUSTER_COUNT_LAYER   = "cluster-count"
 private const val UNCLUSTERED_LAYER_ID  = "unclustered-place"
 
-// Pin icon + selected-place overlay
-private const val PIN_ICON_ID           = "place-pin"
+// Selected-place overlay
 private const val SELECTED_SOURCE_ID    = "selected-place-source"
 private const val SELECTED_LAYER_ID     = "selected-place-layer"
 
@@ -177,37 +176,6 @@ private const val SELECTED_LAYER_ID     = "selected-place-layer"
 private const val GEMS_SOURCE_ID        = "hidden-gems-source"
 private const val GEM_MYSTERY_LAYER_ID  = "hidden-gems-mystery"
 private const val GEM_ICON_ID           = "gem-mystery-pin"
-
-/**
- * White teardrop/pin on transparent background, suitable for SDF rendering.
- * The icon anchor is BOTTOM so the point sits exactly on the coordinate.
- * Width × Height = w × (w * 1.35) keeps the classic map-pin proportion.
- */
-private fun createPinBitmap(w: Int): Bitmap {
-    val h = (w * 1.4f).toInt()
-    val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
-    val canvas = Canvas(bmp)
-    val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = android.graphics.Color.WHITE
-        style = Paint.Style.FILL
-    }
-    val r  = w * 0.38f
-    val cx = w * 0.5f
-    val cy = r + w * 0.02f
-
-    // Circle head
-    canvas.drawCircle(cx, cy, r, paint)
-
-    // Tapered shaft
-    val path = Path().apply {
-        moveTo(cx - r * 0.55f, cy + r * 0.60f)
-        lineTo(cx + r * 0.55f, cy + r * 0.60f)
-        lineTo(cx, h.toFloat() - w * 0.03f)
-        close()
-    }
-    canvas.drawPath(path, paint)
-    return bmp
-}
 
 /**
  * Compact gold circle with white border and "?" label — mystery pin for hidden gems.
@@ -335,58 +303,41 @@ fun MapScreen(
 
                 // ── Place pins ───────────────────────────────────────────────
                 style.addSource(GeoJsonSource(PLACES_SOURCE_ID, FeatureCollection.fromFeatures(emptyList())))
-                // Register the SDF pin icon (white teardrop on transparent bg).
-                // SDF = true lets MapLibre re-colorise it per feature via iconColor.
-                val pinW = (context.resources.displayMetrics.density * 28).toInt()
-                style.addImage(PIN_ICON_ID, createPinBitmap(pinW), true)
-
                 style.addLayer(
-                    SymbolLayer(UNCLUSTERED_LAYER_ID, PLACES_SOURCE_ID).apply {
+                    CircleLayer(UNCLUSTERED_LAYER_ID, PLACES_SOURCE_ID).apply {
                         setProperties(
-                            PropertyFactory.iconImage(PIN_ICON_ID),
-                            PropertyFactory.iconColor(Expression.get("color")),
-                            PropertyFactory.iconSize(
+                            PropertyFactory.circleColor(Expression.get("color")),
+                            PropertyFactory.circleRadius(
                                 Expression.interpolate(
                                     Expression.linear(), Expression.zoom(),
-                                    Expression.stop(5,  Expression.literal(0.45f)),
-                                    Expression.stop(8,  Expression.literal(0.60f)),
-                                    Expression.stop(10, Expression.literal(0.75f)),
-                                    Expression.stop(13, Expression.literal(0.92f)),
-                                    Expression.stop(15, Expression.literal(1.02f)),
-                                    Expression.stop(18, Expression.literal(1.12f)),
+                                    Expression.stop(5,  Expression.literal(4f)),
+                                    Expression.stop(10, Expression.literal(5.5f)),
+                                    Expression.stop(14, Expression.literal(7f)),
+                                    Expression.stop(18, Expression.literal(9f)),
                                 )
                             ),
-                            PropertyFactory.iconAnchor(Property.ICON_ANCHOR_BOTTOM),
-                            PropertyFactory.iconAllowOverlap(true),
-                            PropertyFactory.iconIgnorePlacement(true),
-                            PropertyFactory.iconHaloColor("#FFFFFF"),
-                            PropertyFactory.iconHaloWidth(1.0f),
+                            PropertyFactory.circleStrokeColor("#FFFFFF"),
+                            PropertyFactory.circleStrokeWidth(1.5f),
                         )
                     }
                 )
 
                 style.addSource(GeoJsonSource(SELECTED_SOURCE_ID, FeatureCollection.fromFeatures(emptyList())))
                 style.addLayer(
-                    SymbolLayer(SELECTED_LAYER_ID, SELECTED_SOURCE_ID).apply {
+                    CircleLayer(SELECTED_LAYER_ID, SELECTED_SOURCE_ID).apply {
                         setProperties(
-                            PropertyFactory.iconImage(PIN_ICON_ID),
-                            PropertyFactory.iconColor("#FFFFFF"),
-                            PropertyFactory.iconHaloColor("#1565C0"),
-                            PropertyFactory.iconHaloWidth(3.0f),
-                            PropertyFactory.iconSize(
+                            PropertyFactory.circleColor("#FFFFFF"),
+                            PropertyFactory.circleRadius(
                                 Expression.interpolate(
                                     Expression.linear(), Expression.zoom(),
-                                    Expression.stop(5,  Expression.literal(0.55f)),
-                                    Expression.stop(8,  Expression.literal(0.72f)),
-                                    Expression.stop(10, Expression.literal(0.90f)),
-                                    Expression.stop(13, Expression.literal(1.10f)),
-                                    Expression.stop(15, Expression.literal(1.20f)),
-                                    Expression.stop(18, Expression.literal(1.30f)),
+                                    Expression.stop(5,  Expression.literal(6f)),
+                                    Expression.stop(10, Expression.literal(7.5f)),
+                                    Expression.stop(14, Expression.literal(9f)),
+                                    Expression.stop(18, Expression.literal(11f)),
                                 )
                             ),
-                            PropertyFactory.iconAnchor(Property.ICON_ANCHOR_BOTTOM),
-                            PropertyFactory.iconAllowOverlap(true),
-                            PropertyFactory.iconIgnorePlacement(true),
+                            PropertyFactory.circleStrokeColor("#1565C0"),
+                            PropertyFactory.circleStrokeWidth(3f),
                         )
                     }
                 )
