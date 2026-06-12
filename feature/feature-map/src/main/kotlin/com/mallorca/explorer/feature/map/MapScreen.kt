@@ -185,25 +185,25 @@ private const val GEM_ICON_ID           = "gem-mystery-pin"
  * Width × Height = w × (w * 1.35) keeps the classic map-pin proportion.
  */
 private fun createPinBitmap(w: Int): Bitmap {
-    val h = (w * 1.35f).toInt()
+    val h = (w * 1.4f).toInt()
     val bmp = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
     val canvas = Canvas(bmp)
     val paint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = android.graphics.Color.WHITE
         style = Paint.Style.FILL
     }
-    val r   = w * 0.36f        // circle radius
-    val cx  = w * 0.5f         // centre X
-    val cy  = r + w * 0.04f    // circle centre Y (small top margin)
+    val r  = w * 0.38f
+    val cx = w * 0.5f
+    val cy = r + w * 0.02f
 
-    // Circle (head of pin)
+    // Circle head
     canvas.drawCircle(cx, cy, r, paint)
 
-    // Triangle (shaft pointing down)
+    // Tapered shaft
     val path = Path().apply {
-        moveTo(cx - r * 0.62f, cy + r * 0.55f)
-        lineTo(cx + r * 0.62f, cy + r * 0.55f)
-        lineTo(cx, h - w * 0.04f)
+        moveTo(cx - r * 0.55f, cy + r * 0.60f)
+        lineTo(cx + r * 0.55f, cy + r * 0.60f)
+        lineTo(cx, h.toFloat() - w * 0.03f)
         close()
     }
     canvas.drawPath(path, paint)
@@ -211,25 +211,28 @@ private fun createPinBitmap(w: Int): Bitmap {
 }
 
 /**
- * Gold circle with a dark interior and "?" label — used as mystery pin for hidden gems.
+ * Compact gold circle with white border and "?" label — mystery pin for hidden gems.
  */
 private fun createGemMysteryBitmap(w: Int): Bitmap {
     val bmp = Bitmap.createBitmap(w, w, Bitmap.Config.ARGB_8888)
     val canvas = Canvas(bmp)
     val r = w / 2f
+    val inner = r * 0.88f
     // Gold fill
-    canvas.drawCircle(r, r, r, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+    canvas.drawCircle(r, r, inner, Paint(Paint.ANTI_ALIAS_FLAG).apply {
         color = android.graphics.Color.parseColor("#F9A825")
         style = Paint.Style.FILL
     })
-    // Dark purple center
-    canvas.drawCircle(r, r, r * 0.65f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = android.graphics.Color.parseColor("#1A0030")
-        style = Paint.Style.FILL
+    // White border for contrast against any map background
+    canvas.drawCircle(r, r, inner, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+        color = android.graphics.Color.WHITE
+        style = Paint.Style.STROKE
+        strokeWidth = r * 0.18f
     })
+    // Dark "?" for legibility on gold
     val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = android.graphics.Color.parseColor("#FFD54F")
-        textSize = w * 0.46f
+        color = android.graphics.Color.parseColor("#1A0030")
+        textSize = w * 0.48f
         textAlign = Paint.Align.CENTER
         typeface = android.graphics.Typeface.DEFAULT_BOLD
     }
@@ -344,13 +347,9 @@ fun MapScreen(
                 )
                 // Register the SDF pin icon (white teardrop on transparent bg).
                 // SDF = true lets MapLibre re-colorise it per feature via iconColor.
-                val pinW = (context.resources.displayMetrics.density * 48).toInt()
+                val pinW = (context.resources.displayMetrics.density * 28).toInt()
                 style.addImage(PIN_ICON_ID, createPinBitmap(pinW), true)
 
-                // Individual places — SymbolLayer with SDF pin.
-                // iconSize is a multiplier of the native bitmap size.
-                // At zoom 13 size≈0.80 → ~38×51px on a 1x screen, ~19dp on 2x, ~13dp on 3x.
-                // iconAnchor BOTTOM means the pin's point sits on the coordinate.
                 style.addLayer(
                     SymbolLayer(UNCLUSTERED_LAYER_ID, PLACES_SOURCE_ID).apply {
                         setFilter(Expression.not(Expression.has("point_count")))
@@ -360,43 +359,40 @@ fun MapScreen(
                             PropertyFactory.iconSize(
                                 Expression.interpolate(
                                     Expression.linear(), Expression.zoom(),
-                                    Expression.stop(5,  Expression.literal(0.35f)),
-                                    Expression.stop(8,  Expression.literal(0.50f)),
-                                    Expression.stop(10, Expression.literal(0.65f)),
-                                    Expression.stop(13, Expression.literal(0.80f)),
-                                    Expression.stop(15, Expression.literal(0.90f)),
-                                    Expression.stop(18, Expression.literal(1.00f)),
+                                    Expression.stop(5,  Expression.literal(0.45f)),
+                                    Expression.stop(8,  Expression.literal(0.60f)),
+                                    Expression.stop(10, Expression.literal(0.75f)),
+                                    Expression.stop(13, Expression.literal(0.92f)),
+                                    Expression.stop(15, Expression.literal(1.02f)),
+                                    Expression.stop(18, Expression.literal(1.12f)),
                                 )
                             ),
                             PropertyFactory.iconAnchor(Property.ICON_ANCHOR_BOTTOM),
                             PropertyFactory.iconAllowOverlap(true),
                             PropertyFactory.iconIgnorePlacement(true),
-                            // White halo keeps pin readable on any tile colour
                             PropertyFactory.iconHaloColor("#FFFFFF"),
-                            PropertyFactory.iconHaloWidth(1.5f),
+                            PropertyFactory.iconHaloWidth(1.0f),
                         )
                     }
                 )
 
-                // Selected-place overlay source (single feature, updated from LaunchedEffect)
                 style.addSource(GeoJsonSource(SELECTED_SOURCE_ID, FeatureCollection.fromFeatures(emptyList())))
-                // Selected pin: slightly bigger, white body + thick blue halo — clearly distinct
                 style.addLayer(
                     SymbolLayer(SELECTED_LAYER_ID, SELECTED_SOURCE_ID).apply {
                         setProperties(
                             PropertyFactory.iconImage(PIN_ICON_ID),
                             PropertyFactory.iconColor("#FFFFFF"),
                             PropertyFactory.iconHaloColor("#1565C0"),
-                            PropertyFactory.iconHaloWidth(3.5f),
+                            PropertyFactory.iconHaloWidth(3.0f),
                             PropertyFactory.iconSize(
                                 Expression.interpolate(
                                     Expression.linear(), Expression.zoom(),
-                                    Expression.stop(5,  Expression.literal(0.45f)),
-                                    Expression.stop(8,  Expression.literal(0.60f)),
-                                    Expression.stop(10, Expression.literal(0.75f)),
-                                    Expression.stop(13, Expression.literal(0.95f)),
-                                    Expression.stop(15, Expression.literal(1.05f)),
-                                    Expression.stop(18, Expression.literal(1.15f)),
+                                    Expression.stop(5,  Expression.literal(0.55f)),
+                                    Expression.stop(8,  Expression.literal(0.72f)),
+                                    Expression.stop(10, Expression.literal(0.90f)),
+                                    Expression.stop(13, Expression.literal(1.10f)),
+                                    Expression.stop(15, Expression.literal(1.20f)),
+                                    Expression.stop(18, Expression.literal(1.30f)),
                                 )
                             ),
                             PropertyFactory.iconAnchor(Property.ICON_ANCHOR_BOTTOM),
@@ -407,7 +403,7 @@ fun MapScreen(
                 )
                 // ── Hidden gem mystery pins ──────────────────────────────────
                 style.addSource(GeoJsonSource(GEMS_SOURCE_ID, FeatureCollection.fromFeatures(emptyList())))
-                val gemW = (context.resources.displayMetrics.density * 48).toInt()
+                val gemW = (context.resources.displayMetrics.density * 32).toInt()
                 style.addImage(GEM_ICON_ID, createGemMysteryBitmap(gemW))
                 style.addLayer(
                     SymbolLayer(GEM_MYSTERY_LAYER_ID, GEMS_SOURCE_ID).apply {
@@ -416,8 +412,8 @@ fun MapScreen(
                             PropertyFactory.iconSize(
                                 Expression.interpolate(
                                     Expression.linear(), Expression.zoom(),
-                                    Expression.stop(5,  Expression.literal(0.60f)),
-                                    Expression.stop(10, Expression.literal(0.85f)),
+                                    Expression.stop(5,  Expression.literal(0.65f)),
+                                    Expression.stop(10, Expression.literal(0.90f)),
                                     Expression.stop(13, Expression.literal(1.05f)),
                                     Expression.stop(18, Expression.literal(1.15f)),
                                 )
@@ -445,9 +441,9 @@ fun MapScreen(
                             PropertyFactory.circleRadius(
                                 Expression.step(
                                     Expression.get("point_count"),
-                                    Expression.literal(20),
-                                    Expression.stop(10, Expression.literal(26)),
-                                    Expression.stop(30, Expression.literal(32)),
+                                    Expression.literal(16),
+                                    Expression.stop(10, Expression.literal(20)),
+                                    Expression.stop(30, Expression.literal(26)),
                                 )
                             ),
                             PropertyFactory.circleStrokeColor("#FFFFFF"),
@@ -461,7 +457,7 @@ fun MapScreen(
                         setFilter(Expression.has("point_count"))
                         setProperties(
                             PropertyFactory.textField("{point_count_abbreviated}"),
-                            PropertyFactory.textSize(13f),
+                            PropertyFactory.textSize(11f),
                             PropertyFactory.textColor("#FFFFFF"),
                             PropertyFactory.textIgnorePlacement(true),
                             PropertyFactory.textAllowOverlap(true),
