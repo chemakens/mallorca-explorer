@@ -310,14 +310,14 @@ fun MapScreen(
                             PropertyFactory.circleRadius(
                                 Expression.interpolate(
                                     Expression.linear(), Expression.zoom(),
-                                    Expression.stop(5,  Expression.literal(4f)),
-                                    Expression.stop(10, Expression.literal(5.5f)),
-                                    Expression.stop(14, Expression.literal(7f)),
-                                    Expression.stop(18, Expression.literal(9f)),
+                                    Expression.stop(5,  Expression.literal(2.5f)),
+                                    Expression.stop(10, Expression.literal(3.5f)),
+                                    Expression.stop(14, Expression.literal(4.5f)),
+                                    Expression.stop(18, Expression.literal(6f)),
                                 )
                             ),
                             PropertyFactory.circleStrokeColor("#FFFFFF"),
-                            PropertyFactory.circleStrokeWidth(1.5f),
+                            PropertyFactory.circleStrokeWidth(1f),
                         )
                     }
                 )
