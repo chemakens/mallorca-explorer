@@ -102,7 +102,6 @@ import org.maplibre.android.style.layers.LineLayer
 import org.maplibre.android.style.layers.Property
 import org.maplibre.android.style.layers.PropertyFactory
 import org.maplibre.android.style.layers.SymbolLayer
-import org.maplibre.android.style.sources.GeoJsonOptions
 import org.maplibre.android.style.sources.GeoJsonSource
 import org.maplibre.geojson.Feature
 import org.maplibre.geojson.FeatureCollection
@@ -334,17 +333,8 @@ fun MapScreen(
                     }
                 )
 
-                // ── Place clustering ─────────────────────────────────────────
-                style.addSource(
-                    GeoJsonSource(
-                        PLACES_SOURCE_ID,
-                        FeatureCollection.fromFeatures(emptyList()),
-                        GeoJsonOptions()
-                            .withCluster(true)
-                            .withClusterRadius(50)
-                            .withClusterMaxZoom(14),
-                    )
-                )
+                // ── Place pins ───────────────────────────────────────────────
+                style.addSource(GeoJsonSource(PLACES_SOURCE_ID, FeatureCollection.fromFeatures(emptyList())))
                 // Register the SDF pin icon (white teardrop on transparent bg).
                 // SDF = true lets MapLibre re-colorise it per feature via iconColor.
                 val pinW = (context.resources.displayMetrics.density * 28).toInt()
@@ -352,7 +342,6 @@ fun MapScreen(
 
                 style.addLayer(
                     SymbolLayer(UNCLUSTERED_LAYER_ID, PLACES_SOURCE_ID).apply {
-                        setFilter(Expression.not(Expression.has("point_count")))
                         setProperties(
                             PropertyFactory.iconImage(PIN_ICON_ID),
                             PropertyFactory.iconColor(Expression.get("color")),
@@ -425,46 +414,6 @@ fun MapScreen(
                     }
                 )
 
-                // Cluster circles — size scales with count
-                style.addLayer(
-                    CircleLayer(CLUSTER_LAYER_ID, PLACES_SOURCE_ID).apply {
-                        setFilter(Expression.has("point_count"))
-                        setProperties(
-                            PropertyFactory.circleColor(
-                                Expression.step(
-                                    Expression.get("point_count"),
-                                    Expression.color(android.graphics.Color.parseColor("#1565C0")),
-                                    Expression.stop(10, Expression.color(android.graphics.Color.parseColor("#E65100"))),
-                                    Expression.stop(30, Expression.color(android.graphics.Color.parseColor("#C62828"))),
-                                )
-                            ),
-                            PropertyFactory.circleRadius(
-                                Expression.step(
-                                    Expression.get("point_count"),
-                                    Expression.literal(16),
-                                    Expression.stop(10, Expression.literal(20)),
-                                    Expression.stop(30, Expression.literal(26)),
-                                )
-                            ),
-                            PropertyFactory.circleStrokeColor("#FFFFFF"),
-                            PropertyFactory.circleStrokeWidth(2f),
-                        )
-                    }
-                )
-                // Cluster count label
-                style.addLayer(
-                    SymbolLayer(CLUSTER_COUNT_LAYER, PLACES_SOURCE_ID).apply {
-                        setFilter(Expression.has("point_count"))
-                        setProperties(
-                            PropertyFactory.textField("{point_count_abbreviated}"),
-                            PropertyFactory.textSize(11f),
-                            PropertyFactory.textColor("#FFFFFF"),
-                            PropertyFactory.textIgnorePlacement(true),
-                            PropertyFactory.textAllowOverlap(true),
-                        )
-                    }
-                )
-
                 // ── Itinerary stop layers (above places) — zoom-driven scaling ──
                 // Feature property "radius" = target radius at zoom 14.
                 // At lower zooms: shrink to avoid covering coastline features.
@@ -511,16 +460,7 @@ fun MapScreen(
                 val tapScreen = map.projection.toScreenLocation(latLng)
                 val tapPoint = android.graphics.PointF(tapScreen.x, tapScreen.y)
 
-                // 1. Cluster tap → zoom in to expand
-                val clusterFeatures = map.queryRenderedFeatures(tapPoint, CLUSTER_LAYER_ID)
-                if (clusterFeatures.isNotEmpty()) {
-                    map.animateCamera(
-                        CameraUpdateFactory.newLatLngZoom(latLng, map.cameraPosition.zoom + 2.5), 500,
-                    )
-                    return@addOnMapClickListener true
-                }
-
-                // 2. Hidden gem tap → show mystery card (no info revealed)
+                // 1. Hidden gem tap → show mystery card (no info revealed)
                 val gemFeatures = map.queryRenderedFeatures(tapPoint, GEM_MYSTERY_LAYER_ID)
                 if (gemFeatures.isNotEmpty()) {
                     val placeId = gemFeatures[0].getStringProperty("placeId")
@@ -530,7 +470,7 @@ fun MapScreen(
                     }
                 }
 
-                // 3. Individual place tap → show detail card
+                // 2. Individual place tap → show detail card
                 val placeFeatures = map.queryRenderedFeatures(tapPoint, UNCLUSTERED_LAYER_ID)
                 if (placeFeatures.isNotEmpty()) {
                     val placeId = placeFeatures[0].getStringProperty("placeId")
@@ -540,7 +480,7 @@ fun MapScreen(
                     }
                 }
 
-                // 4. Itinerary stop tap → navigate to itinerary detail
+                // 3. Itinerary stop tap → navigate to itinerary detail
                 val hitRadiusPx = 80f
                 var bestId: String? = null
                 var bestDistSq = hitRadiusPx * hitRadiusPx
