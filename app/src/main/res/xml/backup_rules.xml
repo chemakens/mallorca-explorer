@@ -3,5 +3,5 @@
     <!-- Exclude Room database: contains seed data + user data stored locally only -->
     <exclude domain="database" path="mallorca_db" />
     <!-- Exclude DataStore: seed_version must not be restored to avoid skipping re-seed -->
-    <exclude domain="file" path="../datastore/" />
+    <exclude domain="file" path="datastore/" />
 </full-backup-content>
