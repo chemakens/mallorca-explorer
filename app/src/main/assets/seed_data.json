@@ -620,7 +620,8 @@
       "thumbnail_url": "file:///android_asset/images/place-valldemossa.jpg",
       "photo_urls": [
         "file:///android_asset/images/place-valldemossa.jpg",
-        "file:///android_asset/images/place-valldemossa-2.jpg"
+        "file:///android_asset/images/place-valldemossa-2.jpg",
+        "file:///android_asset/images/place-valldemossa-3.jpg"
       ],
       "description_es": "Uno de los pueblos más bellos de Mallorca, en las montañas donde Chopin y George Sand pasaron un invierno memorable en la década de 1830.",
       "tips_es": [
@@ -702,7 +703,9 @@
       "thumbnail_url": "file:///android_asset/images/place-soller.jpg",
       "photo_urls": [
         "file:///android_asset/images/place-soller.jpg",
-        "file:///android_asset/images/place-soller-2.jpg"
+        "file:///android_asset/images/place-soller-2.jpg",
+        "file:///android_asset/images/place-soller-3.jpg",
+        "file:///android_asset/images/place-soller-4.jpg"
       ],
       "description_es": "Encantador pueblo de naranjales en un valle de montaña, conectado con Palma por un tren de madera vintage que lleva funcionando más de un siglo.",
       "tips_es": [
@@ -2222,7 +2225,9 @@
       "thumbnail_url": "file:///android_asset/images/place-palma-city.jpg",
       "photo_urls": [
         "file:///android_asset/images/place-palma-city.jpg",
-        "file:///android_asset/images/place-palma-city-2.jpg"
+        "file:///android_asset/images/place-palma-city-2.jpg",
+        "file:///android_asset/images/place-palma-city-3.jpg",
+        "file:///android_asset/images/place-palma-city-4.jpg"
       ],
       "description_es": "La vibrante capital de Mallorca, con la majestuosa catedral gótica La Seu, el Castillo de Bellver y un animado casco antiguo de callejuelas, bares de tapas y arquitectura modernista.",
       "tips_es": [
@@ -2273,10 +2278,11 @@
         "unesco"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Fornalutx%20in%20majorca%20arp.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Fornalutx_village.jpg?width=800"
+        "file:///android_asset/images/place-fornalutx.jpg",
+        "file:///android_asset/images/place-fornalutx-2.jpg",
+        "file:///android_asset/images/place-fornalutx-3.jpg"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Fornalutx%20in%20majorca%20arp.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-fornalutx.jpg",
       "description_es": "Considerado uno de los pueblos más bellos de España, Fornalutx se asienta sobre el valle de Sóller rodeado de terrazas de naranjos y limoneros, con la silueta dentada del Puig Major de fondo.",
       "tips_es": [
         "Considerado uno de los pueblos más bonitos de España",
@@ -2327,7 +2333,8 @@
       ],
       "photo_urls": [
         "file:///android_asset/images/place-alcudia.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Alcúdia_old_town.jpg?width=800"
+        "file:///android_asset/images/place-alcudia-2.jpg",
+        "file:///android_asset/images/place-alcudia-3.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-alcudia.jpg",
       "description_es": "Perfectamente conservado pueblo medieval amurallado en el norte de Mallorca, fundado por los romanos como Pollentia y rodeado por las únicas murallas urbanas intactas de la isla.",
@@ -2379,7 +2386,9 @@
         "livestock-market"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-sineu.jpg"
+        "file:///android_asset/images/place-sineu.jpg",
+        "file:///android_asset/images/place-sineu-2.jpg",
+        "file:///android_asset/images/place-sineu-3.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-sineu.jpg",
       "description_es": "El corazón geográfico de Mallorca y su capital histórica de mercado. El animado mercado de los miércoles, el mayor de la isla, convierte el pueblo en un hervidero de productos locales y artesanía.",
@@ -2432,10 +2441,10 @@
         "dramatic-views"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-banyalbufar.webp",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Banyalbufar_Mallorca.jpg?width=800"
+        "file:///android_asset/images/place-banyalbufar.jpg",
+        "file:///android_asset/images/place-banyalbufar-2.jpg"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-banyalbufar.webp",
+      "thumbnail_url": "file:///android_asset/images/place-banyalbufar.jpg",
       "description_es": "Aferrada a la costa noroeste de la Tramuntana, Banyalbufar es conocida por su extraordinario paisaje de bancales de piedra que descienden en pisos desde la montaña hasta el mar.",
       "tips_es": [
         "Las terrazas de cultivo de la malvasia son las más antiguas de Mallorca",
@@ -2486,7 +2495,9 @@
         "watchtower"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-estellencs.jpg"
+        "file:///android_asset/images/place-estellencs.jpg",
+        "file:///android_asset/images/place-estellencs-2.jpg",
+        "file:///android_asset/images/place-estellencs-3.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-estellencs.jpg",
       "description_es": "El municipio más pequeño de Mallorca, con apenas 300 habitantes, se aferra a la vertiente marítima de la Serra de Tramuntana entre acantilados y el Mediterráneo abierto.",
@@ -2540,7 +2551,9 @@
       ],
       "photo_urls": [
         "file:///android_asset/images/place-binissalem.jpg",
-        "file:///android_asset/images/place-binissalem-2.jpg"
+        "file:///android_asset/images/place-binissalem-2.jpg",
+        "file:///android_asset/images/place-binissalem-3.jpg",
+        "file:///android_asset/images/place-binissalem-4.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-binissalem.jpg",
       "description_es": "La capital vinícola de Mallorca, en el llano agrícola entre Palma e Inca. Binissalem da nombre a la Denominación de Origen más prestigiosa de la isla, con excelentes tintos de uvas autóctonas.",
@@ -2593,10 +2606,10 @@
         "cala-ratjada"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Castell%20de%20Capdepera%20asv2023-04.jpg?width=800",
+        "file:///android_asset/images/place-capdepera.jpg",
         "file:///android_asset/images/place-capdepera-2.jpg"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Castell%20de%20Capdepera%20asv2023-04.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-capdepera.jpg",
       "description_es": "Pequeña ciudad en lo alto de una colina en el noreste de Mallorca, coronada por el Castell de Capdepera, un castillo gótico del siglo XIV con murallas bien conservadas que encierran toda la cima.",
       "tips_es": [
         "El castillo medieval está abierto al público con vistas espectaculares",
@@ -2646,7 +2659,10 @@
         "beaches-nearby"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-santanyi.jpg"
+        "file:///android_asset/images/place-santanyi.jpg",
+        "file:///android_asset/images/place-santanyi-2.jpg",
+        "file:///android_asset/images/place-santanyi-3.jpg",
+        "file:///android_asset/images/place-santanyi-4.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-santanyi.jpg",
       "description_es": "Refinada localidad de mercado en el sureste construida con la arenisca color miel que los romanos apreciaban. El mercado del sábado es uno de los más auténticos y concurridos de la isla.",
@@ -2698,7 +2714,9 @@
         "history"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-petra.jpg"
+        "file:///android_asset/images/place-petra.jpg",
+        "file:///android_asset/images/place-petra-2.jpg",
+        "file:///android_asset/images/place-petra-3.jpg"
       ],
       "thumbnail_url": "file:///android_asset/images/place-petra.jpg",
       "description_es": "Tranquilo municipio agrícola famoso por ser el lugar de nacimiento de Fray Junípero Serra, el fraile franciscano del siglo XVIII que fundó la cadena de misiones de California.",
