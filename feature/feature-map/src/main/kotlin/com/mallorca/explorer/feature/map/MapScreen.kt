@@ -872,7 +872,7 @@ fun MapScreen(
         ) {
             CategoryPlacesSheet(
                 category = uiState.activeCategory!!,
-                places = uiState.places,
+                places = uiState.categorySheetPlaces,
                 locale = uiState.locale,
                 onPlaceClick = { placeId ->
                     viewModel.onCategorySelected(uiState.activeCategory)
