@@ -84,6 +84,10 @@ class MapViewModel @Inject constructor(
         ) { (placeList, cat, selectedId), isOnline, (itinerary, allItin, previewId) ->
             val normalPlaces = placeList.filter { "hidden_gem" !in it.subCategories }
             val hiddenGems = placeList.filter { "hidden_gem" in it.subCategories }
+            // When a category is active, the sheet shows ALL places in that category
+            // (including hidden gems) so gems like Caló de Moro appear under Beach.
+            // When no category is active, the sheet is not shown so normalPlaces suffices.
+            val categorySheetPlaces = if (cat != null) placeList else normalPlaces
 
             val allItineraryRoutes = allItin.map { itin ->
                 ItineraryRoute(
@@ -102,6 +106,7 @@ class MapViewModel @Inject constructor(
 
             MapUiState(
                 places = normalPlaces.toImmutableList(),
+                categorySheetPlaces = categorySheetPlaces.toImmutableList(),
                 hiddenGems = hiddenGems.toImmutableList(),
                 selectedPlace = selectedId?.let { id -> placeList.find { it.id == id } },
                 activeCategory = cat,

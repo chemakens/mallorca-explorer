@@ -19,6 +19,7 @@ data class ItineraryRoute(
 
 data class MapUiState(
     val places: ImmutableList<Place> = persistentListOf(),
+    val categorySheetPlaces: ImmutableList<Place> = persistentListOf(),
     val hiddenGems: ImmutableList<Place> = persistentListOf(),
     val selectedPlace: Place? = null,
     val selectedGem: Place? = null,

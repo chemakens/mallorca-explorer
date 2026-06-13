@@ -4127,6 +4127,7 @@
         "Combine with nearby Cala Llombards (10 min by car) for a full beach day"
       ],
       "tags": [
+        "hidden_gem",
         "iconic",
         "turquoise-water",
         "cliffs",
@@ -4164,7 +4165,7 @@
       "name": "Cala Agulla",
       "name_es": "Cala Agulla",
       "description": "A wide, sandy arc backed by fragrant pine forest and rolling dunes in the northeast of Mallorca, near the medieval castle town of Capdepera. One of the few large natural beaches in the area that retains a relaxed, crowd-friendly character with clear shallow water perfect for families.",
-      "category": "BEACH",
+      "category": "ADVENTURE",
       "latitude": 39.7225,
       "longitude": 3.4525,
       "municipality": "Capdepera",
@@ -4179,6 +4180,7 @@
         "Less crowded than nearby Cala Mesquida on windy days"
       ],
       "tags": [
+        "hidden_gem",
         "sandy",
         "family-friendly",
         "pine-forest",
