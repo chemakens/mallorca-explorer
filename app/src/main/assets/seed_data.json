@@ -5417,57 +5417,6 @@
       "tips_zh": []
     },
     {
-      "id": "gem-cova-ses-bruixes",
-      "name": "Cova de Ses Bruixes",
-      "name_es": "Cova de Ses Bruixes",
-      "description": "An ancient sea cave carved into the base of the Tramuntana cliffs, accessible only by kayak or swimming through a narrow rock arch at low tide. Inside, the ceiling opens into a cathedral-like chamber with stalactites and turquoise pools lit by refracted light. Known only to local fishermen for centuries.",
-      "category": "ADVENTURE",
-      "latitude": 39.9003,
-      "longitude": 2.9229,
-      "address": "Costa de Sa Calobra",
-      "municipality": "Escorca",
-      "photo_urls": [
-        "file:///android_asset/images/place-cova-ses-bruixes.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sant_Elm_Mallorca.jpg?width=800"
-      ],
-      "thumbnail_url": "file:///android_asset/images/place-cova-ses-bruixes.jpg",
-      "price_level": "FREE",
-      "rating": 5.0,
-      "review_count": 12,
-      "tips": [
-        "Only accessible at low tide — check tide tables before going",
-        "Bring a waterproof torch",
-        "Locals call it 'the witches cave' for the eerie light effects"
-      ],
-      "tags": [
-        "hidden_gem",
-        "cave",
-        "sea",
-        "kayak",
-        "exclusive",
-        "tramuntana"
-      ],
-      "description_es": "Antigua cueva marina en la base de los acantilados de la Tramuntana, accesible solo en kayak o nadando por un estrecho arco de roca. En el interior, el techo se abre en una cámara catedral con estalactitas centenarias.",
-      "tips_es": [
-        "No está señalizado — descarga el mapa offline antes de ir",
-        "La cueva es pequeña pero las formaciones rocosas son impresionantes",
-        "Respeta el entorno — no dejes rastro"
-      ],
-      "name_de": "Geheimtipp: Cova de Ses Bruixes",
-      "description_de": "Unbekannte Höhle mit beeindruckenden Gesteinsformationen – kein Touristenrummel, nur Stille und Natur.",
-      "tips_de": [
-        "Nicht ausgeschildert – Offline-Karte vorher herunterladen",
-        "Die Höhle ist klein, aber die Gesteinsformationen sind beeindruckend",
-        "Natur respektieren – nichts hinterlassen"
-      ],
-      "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
-      "name_zh": "",
-      "description_zh": "",
-      "tips_zh": []
-    },
-    {
       "id": "gem-mirador-sa-trapa",
       "name": "Mirador Secret de Sa Trapa",
       "name_es": "Mirador Secreto de Sa Trapa",
