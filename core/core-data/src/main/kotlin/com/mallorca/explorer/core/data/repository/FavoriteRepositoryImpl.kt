@@ -41,11 +41,6 @@ class FavoriteRepositoryImpl @Inject constructor(
     }
 
     override suspend fun toggleFavorite(placeId: String) {
-        val favIds = favoriteDao.getAllFavoritePlaceIds()
-        // Read current state synchronously via a one-shot query approach
-        favoriteDao.isFavorite(placeId).collect { isFav ->
-            if (isFav) removeFavorite(placeId) else addFavorite(placeId)
-            return@collect
-        }
+        if (favoriteDao.isFavoriteNow(placeId)) removeFavorite(placeId) else addFavorite(placeId)
     }
 }
