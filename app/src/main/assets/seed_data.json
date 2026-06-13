@@ -226,13 +226,13 @@
         "Sea caves nearby for snorkellers"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-cala-varques.avif",
+      "thumbnail_url": "file:///android_asset/images/gem-cala-varques.jpg",
       "tags": [
         "hidden_gem"
       ],
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-varques.avif",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Varques%2020.jpg?width=800"
+        "file:///android_asset/images/gem-cala-varques.jpg",
+        "file:///android_asset/images/gem-cala-varques-2.jpg"
       ],
       "description_es": "Playa salvaje y solitaria accesible solo tras un paseo de 20 minutos por el bosque de pinos, lo que garantiza una experiencia tranquila y natural.",
       "tips_es": [
@@ -4137,9 +4137,10 @@
         "santanyi"
       ],
       "photo_urls": [
-        "file:///android_asset/images/calo-des-moro.jpg"
+        "file:///android_asset/images/gem-calo-des-moro.jpg",
+        "file:///android_asset/images/gem-calo-des-moro-2.jpg"
       ],
-      "thumbnail_url": "file:///android_asset/images/calo-des-moro.jpg",
+      "thumbnail_url": "file:///android_asset/images/gem-calo-des-moro.jpg",
       "description_es": "Una de las calas más fotografiadas de Mallorca: una diminuta joya de arena blanca flanqueada por imponentes acantilados de caliza, con agua que va del esmeralda al turquesa eléctrico.",
       "tips_es": [
         "Una de las fotos más icónicas de Mallorca — espera cola para la foto perfecta",
@@ -4189,10 +4190,9 @@
         "capdepera"
       ],
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-agulla.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Agulla%20-%20Cala%20Molt%C3%B3%2001.jpg?width=800"
+        "file:///android_asset/images/gem-cala-agulla.jpg"
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-agulla.jpg",
+      "thumbnail_url": "file:///android_asset/images/gem-cala-agulla.jpg",
       "description_es": "Amplio arco de arena respaldado por fragante bosque de pinos y dunas en el noreste de Mallorca, cerca de Capdepera. Una de las pocas playas naturales grandes de la zona que conserva su entorno prístino.",
       "tips_es": [
         "La zona de aparcamiento gratuito está a 1 km de la playa",
@@ -5429,10 +5429,10 @@
       "address": "Sa Trapa — Sant Elm",
       "municipality": "Andratx",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Dragonera.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Dragonera_island.jpg?width=800"
+        "file:///android_asset/images/gem-mirador-sa-trapa.jpg",
+        "file:///android_asset/images/gem-mirador-sa-trapa-2.jpg"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Dragonera.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/gem-mirador-sa-trapa.jpg",
       "price_level": "FREE",
       "rating": 5.0,
       "review_count": 6,
@@ -6043,9 +6043,10 @@
       "address": "Camí dels Pintors",
       "municipality": "Deià",
       "photo_urls": [
-        "file:///android_asset/images/beach-llucalcari.jpg"
+        "file:///android_asset/images/gem-cala-llucalcari.jpg",
+        "file:///android_asset/images/gem-cala-llucalcari-2.jpg"
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-llucalcari.jpg",
+      "thumbnail_url": "file:///android_asset/images/gem-cala-llucalcari.jpg",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 620,
@@ -7000,9 +7001,10 @@
         "archduke",
         "estate"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Estaca_Valldemossa.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/gem-mirador-sestaca.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Estaca_Valldemossa.jpg?width=800"
+        "file:///android_asset/images/gem-mirador-sestaca.jpg",
+        "file:///android_asset/images/gem-mirador-sestaca-2.jpg"
       ]
     }
   ],
