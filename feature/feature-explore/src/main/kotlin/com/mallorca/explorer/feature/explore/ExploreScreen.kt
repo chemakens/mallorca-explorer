@@ -3,7 +3,10 @@ package com.mallorca.explorer.feature.explore
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationListener
 import android.location.LocationManager
+import android.os.Looper
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.core.Animatable
@@ -117,15 +120,33 @@ fun ExploreScreen(
         derivedStateOf { listState.firstVisibleItemIndex > 2 }
     }
 
+    @SuppressLint("MissingPermission")
+    fun fetchAndSetLocation(lm: LocationManager) {
+        val cached = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
+            ?: lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
+            ?: lm.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER)
+        if (cached != null) {
+            viewModel.setLocation(cached.latitude, cached.longitude)
+            return
+        }
+        // No cached fix — request a fresh one-shot location
+        val provider = when {
+            lm.isProviderEnabled(LocationManager.GPS_PROVIDER) -> LocationManager.GPS_PROVIDER
+            lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER) -> LocationManager.NETWORK_PROVIDER
+            else -> return
+        }
+        lm.requestSingleUpdate(provider, object : LocationListener {
+            override fun onLocationChanged(location: Location) {
+                viewModel.setLocation(location.latitude, location.longitude)
+            }
+            override fun onProviderDisabled(provider: String) {}
+        }, Looper.getMainLooper())
+    }
+
     val locationLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission()
     ) { granted ->
-        if (granted) {
-            val lm = context.getSystemService(LocationManager::class.java)
-            val loc = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
-                ?: lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
-            if (loc != null) viewModel.setLocation(loc.latitude, loc.longitude)
-        }
+        if (granted) fetchAndSetLocation(context.getSystemService(LocationManager::class.java))
     }
 
     fun onNearMeTapped() {
@@ -136,11 +157,7 @@ fun ExploreScreen(
             if (uiState.nearMeEnabled) {
                 viewModel.toggleNearMe()
             } else {
-                val lm = context.getSystemService(LocationManager::class.java)
-                val loc = lm.getLastKnownLocation(LocationManager.GPS_PROVIDER)
-                    ?: lm.getLastKnownLocation(LocationManager.NETWORK_PROVIDER)
-                if (loc != null) viewModel.setLocation(loc.latitude, loc.longitude)
-                else viewModel.toggleNearMe()
+                fetchAndSetLocation(context.getSystemService(LocationManager::class.java))
             }
         } else {
             locationLauncher.launch(Manifest.permission.ACCESS_FINE_LOCATION)
