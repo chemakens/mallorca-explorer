@@ -662,7 +662,8 @@
       "thumbnail_url": "file:///android_asset/images/place-deia.jpg",
       "photo_urls": [
         "file:///android_asset/images/place-deia.jpg",
-        "file:///android_asset/images/place-deia-2.jpg"
+        "file:///android_asset/images/place-deia-2.jpg",
+        "file:///android_asset/images/place-deia-3.jpg"
       ],
       "description_es": "Pintoresco pueblo en ladera adorado por artistas y escritores, con casas de piedra que descienden entre olivos y almendros hacia el mar.",
       "tips_es": [
