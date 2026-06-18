@@ -7025,8 +7025,10 @@
       "longitude": 2.5081,
       "address": "Ctra. Banyalbufar-Estellencs, km 88,6",
       "municipality": "Banyalbufar",
-      "thumbnail_url": "",
-      "photo_urls": [],
+      "thumbnail_url": "file:///android_asset/images/gem-torre-verger.jpg",
+      "photo_urls": [
+        "file:///android_asset/images/gem-torre-verger.jpg"
+      ],
       "rating": null,
       "review_count": 0,
       "price_level": "FREE",
