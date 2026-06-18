@@ -7027,7 +7027,8 @@
       "municipality": "Banyalbufar",
       "thumbnail_url": "file:///android_asset/images/gem-torre-verger.jpg",
       "photo_urls": [
-        "file:///android_asset/images/gem-torre-verger.jpg"
+        "file:///android_asset/images/gem-torre-verger.jpg",
+        "file:///android_asset/images/gem-torre-verger-2.jpg"
       ],
       "rating": null,
       "review_count": 0,
