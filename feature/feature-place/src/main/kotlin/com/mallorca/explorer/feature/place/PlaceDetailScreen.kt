@@ -192,6 +192,7 @@ private fun PlaceDetailContent(
                         model = place.photoUrls[page],
                         contentDescription = displayName,
                         contentScale = ContentScale.Crop,
+                        alignment = Alignment.TopCenter,
                         modifier = Modifier.fillMaxSize().clickable { fullscreenPage = page },
                     ) {
                         when (painter.state) {
