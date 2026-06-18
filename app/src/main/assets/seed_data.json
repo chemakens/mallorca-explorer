@@ -7007,6 +7007,42 @@
         "file:///android_asset/images/gem-mirador-sestaca.jpg",
         "file:///android_asset/images/gem-mirador-sestaca-2.jpg"
       ]
+    },
+    {
+      "id": "gem-torre-verger",
+      "name": "Torre Verger",
+      "name_es": "",
+      "name_de": "",
+      "name_ru": "",
+      "name_zh": "",
+      "description": "Coastal watchtower built in 1579. Circular in plan, it was the only signal tower in Banyalbufar and part of the Tramuntana coastline defense network. Original battlements and arrow slits are still visible.",
+      "description_es": "Torre de vigilancia costera construida en 1579. De planta circular, era la única torre de señales de Banyalbufar y formaba parte de la red de avistamiento de la Serra de Tramuntana. Conserva restos de matacán y saeteras originales.",
+      "description_de": "Küstenwachturm aus dem Jahr 1579. Der einzige Signalturm von Banyalbufar und Teil des Verteidigungsnetzes entlang der Tramuntana-Küste. Originale Zinnen und Schießscharten sind noch erhalten.",
+      "description_ru": "Прибрежная сторожевая башня, построенная в 1579 году. Имеет круглую форму, была единственной сигнальной башней Баньяльбуфара и частью оборонительной сети вдоль побережья Трамунтаны. Оригинальные зубцы и бойницы сохранились до наших дней.",
+      "description_zh": "建于1579年的沿海瞭望塔。圆形平面设计，是Banyalbufar唯一的信号塔，也是特拉蒙塔纳海岸防御网络的一部分。原始雉堞和箭孔至今仍清晰可见。",
+      "category": "VIEWPOINT",
+      "latitude": 39.6897,
+      "longitude": 2.5081,
+      "address": "Ctra. Banyalbufar-Estellencs, km 88,6",
+      "municipality": "Banyalbufar",
+      "thumbnail_url": "",
+      "photo_urls": [],
+      "rating": null,
+      "review_count": 0,
+      "price_level": "FREE",
+      "tags": [
+        "hidden_gem",
+        "historia",
+        "mirador",
+        "tramuntana",
+        "patrimonio",
+        "senderismo"
+      ],
+      "tips": [],
+      "tips_es": [],
+      "tips_de": [],
+      "tips_ru": [],
+      "tips_zh": []
     }
   ],
   "itineraries": [
