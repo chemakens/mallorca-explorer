@@ -5726,57 +5726,6 @@
       "tips_zh": []
     },
     {
-      "id": "cala-barca-andratx",
-      "name": "Cala Barca",
-      "name_es": "Cala Barca",
-      "description": "A remote southwest-coast cove accessible only by a 30-minute walk or by boat. Dramatic red cliffs frame water that shifts from jade to cobalt depending on the angle of the sun. One of the few beaches on the southwest coast with both shade (pine canopy) and a small freshwater spring nearby.",
-      "category": "BEACH",
-      "latitude": 39.3523,
-      "longitude": 3.1981,
-      "address": "Costa d'Andratx",
-      "municipality": "Andratx",
-      "photo_urls": [
-        "file:///android_asset/images/beach-cala-barca.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Costa_d%27Andratx.jpg?width=800"
-      ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-barca.jpg",
-      "price_level": "FREE",
-      "rating": 4.7,
-      "review_count": 640,
-      "tips": [
-        "Trail starts near Sant Elm — follow the GR221 then branch south",
-        "Red cliffs make for striking photography at sunset",
-        "No facilities whatsoever — self-sufficient visit essential"
-      ],
-      "tags": [
-        "remote",
-        "red-cliffs",
-        "southwest",
-        "walk-in",
-        "wild",
-        "quiet"
-      ],
-      "description_es": "Remota cala de la costa suroeste accesible solo a pie o en barca. Dramáticos acantilados rojos enmarcan un agua que va del jade al cobalto según el ángulo del sol. Sin servicios, solo naturaleza.",
-      "tips_es": [
-        "Cala escondida entre acantilados accesible solo a pie o en barco",
-        "Las aguas son cristalinas y poco profundas — ideal para snorkel",
-        "Los pescadores del puerto de Andratx la utilizan como refugio"
-      ],
-      "name_de": "Cala Barca",
-      "description_de": "Versteckte Bucht zwischen Steilklippen – nur zu Fuß oder per Boot erreichbar mit sehr klarem Wasser.",
-      "tips_de": [
-        "Versteckte Bucht zwischen Klippen, nur zu Fuß oder per Boot",
-        "Außergewöhnlich klares, flaches Wasser ideal zum Schnorcheln",
-        "Fischerboote des Hafens von Andratx nutzen sie als Zuflucht"
-      ],
-      "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
-      "name_zh": "",
-      "description_zh": "",
-      "tips_zh": []
-    },
-    {
       "id": "playa-de-palma",
       "name": "Playa de Palma",
       "name_es": "Playa de Palma",
