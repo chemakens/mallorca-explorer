@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.rememberScrollState
@@ -26,6 +27,7 @@ import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.material.icons.outlined.Directions
 import androidx.compose.material.icons.outlined.Favorite
 import androidx.compose.material.icons.outlined.FavoriteBorder
+import androidx.compose.material.icons.outlined.PhotoCamera
 import androidx.compose.material.icons.outlined.Share
 import androidx.compose.foundation.border
 import androidx.compose.material.icons.outlined.ConfirmationNumber
@@ -72,6 +74,7 @@ import coil.compose.SubcomposeAsyncImage
 import coil.compose.SubcomposeAsyncImageContent
 import com.mallorca.explorer.core.domain.model.Discount
 import com.mallorca.explorer.core.domain.model.Place
+import com.mallorca.explorer.core.domain.model.attributionText
 import com.mallorca.explorer.core.domain.model.SUPTrafficLight
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
 import com.mallorca.explorer.core.domain.model.WeatherCondition
@@ -189,7 +192,7 @@ private fun PlaceDetailContent(
             ) { page ->
                 if (place.photoUrls.isNotEmpty()) {
                     SubcomposeAsyncImage(
-                        model = place.photoUrls[page],
+                        model = place.photoUrls[page].url,
                         contentDescription = displayName,
                         contentScale = ContentScale.Crop,
                         alignment = Alignment.TopCenter,
@@ -321,6 +324,33 @@ private fun PlaceDetailContent(
                                     if (pagerState.currentPage == i) Color.White
                                     else Color.White.copy(alpha = 0.5f)
                                 )
+                        )
+                    }
+                }
+            }
+            // Image attribution overlay
+            if (place.photoUrls.isNotEmpty()) {
+                val attribution = place.photoUrls[pagerState.currentPage].attributionText()
+                if (attribution != null) {
+                    Row(
+                        modifier = Modifier
+                            .align(Alignment.BottomEnd)
+                            .padding(8.dp)
+                            .background(Color.Black.copy(alpha = 0.55f), RoundedCornerShape(6.dp))
+                            .padding(horizontal = 8.dp, vertical = 3.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        Icon(
+                            Icons.Outlined.PhotoCamera,
+                            contentDescription = null,
+                            tint = Color.White,
+                            modifier = Modifier.size(12.dp),
+                        )
+                        Text(
+                            text = attribution,
+                            color = Color.White,
+                            style = MaterialTheme.typography.labelSmall,
                         )
                     }
                 }
@@ -490,7 +520,7 @@ private fun PlaceDetailContent(
     val page = fullscreenPage
     if (page != null && place.photoUrls.isNotEmpty()) {
         PhotoFullscreenViewer(
-            photos = place.photoUrls.toImmutableList(),
+            photos = place.photoUrls.map { it.url }.toImmutableList(),
             initialPage = page,
             onDismiss = { fullscreenPage = null },
         )
