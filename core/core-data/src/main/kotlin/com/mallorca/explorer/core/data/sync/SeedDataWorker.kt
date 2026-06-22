@@ -94,7 +94,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 93
+        const val CURRENT_SEED_VERSION = 94
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -116,6 +116,12 @@ class SeedDataWorker @AssistedInject constructor(
         val discounts: List<SeedDiscount> = emptyList(),
     )
 
+    @Serializable data class SeedPhotoUrl(
+        val url: String,
+        val source: String = "OTHER",
+        val author: String? = null,
+    )
+
     @Serializable data class SeedPlace(
         val id: String, val name: String, val name_es: String = "",
         val description: String = "", val description_es: String = "", val category: String,
@@ -125,33 +131,39 @@ class SeedDataWorker @AssistedInject constructor(
         val tips_ru: List<String> = emptyList(), val tips_zh: List<String> = emptyList(),
         val latitude: Double, val longitude: Double,
         val address: String? = null, val municipality: String = "",
-        val photo_urls: List<String> = emptyList(), val thumbnail_url: String = "",
+        val photo_urls: List<SeedPhotoUrl> = emptyList(), val thumbnail_url: String = "",
         val price_level: String? = null, val rating: Float? = null,
         val review_count: Int = 0, val tips: List<String> = emptyList(),
         val tags: List<String> = emptyList(),
         val website: String? = null, val phone_number: String? = null,
         val ticket_url: String? = null,
     ) {
-        fun toEntity() = PlaceEntity(
-            id = id, name = name, nameEs = name_es, description = description, descriptionEs = description_es,
-            nameDe = name_de, nameRu = name_ru, nameZh = name_zh,
-            descriptionDe = description_de, descriptionRu = description_ru, descriptionZh = description_zh,
-            tipsEsJson = Json.encodeToString(ListSerializer(String.serializer()), tips_es),
-            tipsDeJson = Json.encodeToString(ListSerializer(String.serializer()), tips_de),
-            tipsRuJson = Json.encodeToString(ListSerializer(String.serializer()), tips_ru),
-            tipsZhJson = Json.encodeToString(ListSerializer(String.serializer()), tips_zh),
-            category = category.uppercase(), latitude = latitude, longitude = longitude,
-            address = address, municipality = municipality,
-            photoUrlsJson = Json.encodeToString(ListSerializer(String.serializer()), photo_urls),
-            thumbnailUrl = thumbnail_url, openingHoursJson = null,
-            priceLevel = price_level?.uppercase(), rating = rating,
-            reviewCount = review_count,
-            tipsJson = Json.encodeToString(ListSerializer(String.serializer()), tips),
-            tagsJson = Json.encodeToString(ListSerializer(String.serializer()), tags),
-            website = website, phoneNumber = phone_number,
-            ticketUrl = ticket_url,
-            lastUpdatedEpoch = Instant.now().toEpochMilli(),
-        )
+        fun toEntity(): PlaceEntity {
+            val photoImagesJson = Json.encodeToString(
+                ListSerializer(SeedPhotoUrl.serializer()),
+                photo_urls,
+            )
+            return PlaceEntity(
+                id = id, name = name, nameEs = name_es, description = description, descriptionEs = description_es,
+                nameDe = name_de, nameRu = name_ru, nameZh = name_zh,
+                descriptionDe = description_de, descriptionRu = description_ru, descriptionZh = description_zh,
+                tipsEsJson = Json.encodeToString(ListSerializer(String.serializer()), tips_es),
+                tipsDeJson = Json.encodeToString(ListSerializer(String.serializer()), tips_de),
+                tipsRuJson = Json.encodeToString(ListSerializer(String.serializer()), tips_ru),
+                tipsZhJson = Json.encodeToString(ListSerializer(String.serializer()), tips_zh),
+                category = category.uppercase(), latitude = latitude, longitude = longitude,
+                address = address, municipality = municipality,
+                photoUrlsJson = photoImagesJson,
+                thumbnailUrl = thumbnail_url, openingHoursJson = null,
+                priceLevel = price_level?.uppercase(), rating = rating,
+                reviewCount = review_count,
+                tipsJson = Json.encodeToString(ListSerializer(String.serializer()), tips),
+                tagsJson = Json.encodeToString(ListSerializer(String.serializer()), tags),
+                website = website, phoneNumber = phone_number,
+                ticketUrl = ticket_url,
+                lastUpdatedEpoch = Instant.now().toEpochMilli(),
+            )
+        }
     }
 
     @Serializable data class SeedTranslation(

@@ -23,7 +23,7 @@ data class Place(
     val location: LatLng,
     val address: String? = null,
     val municipality: String,
-    val photoUrls: List<String> = emptyList(),
+    val photoUrls: List<PlaceImage> = emptyList(),
     val thumbnailUrl: String = "",
     val openingHours: OpeningHours? = null,
     val priceLevel: PriceLevel? = null,

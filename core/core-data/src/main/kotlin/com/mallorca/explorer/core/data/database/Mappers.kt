@@ -10,10 +10,12 @@ import com.mallorca.explorer.core.domain.model.Category
 import com.mallorca.explorer.core.domain.model.CommercialBlock
 import com.mallorca.explorer.core.domain.model.Difficulty
 import com.mallorca.explorer.core.domain.model.Favorite
+import com.mallorca.explorer.core.domain.model.ImageSource
 import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.ItineraryStop
 import com.mallorca.explorer.core.domain.model.LatLng
 import com.mallorca.explorer.core.domain.model.Place
+import com.mallorca.explorer.core.domain.model.PlaceImage
 import com.mallorca.explorer.core.domain.model.PriceLevel
 import com.mallorca.explorer.core.domain.model.QrEntryPoint
 import com.mallorca.explorer.core.domain.model.RouteWaypoint
@@ -33,6 +35,30 @@ private val json = Json { ignoreUnknownKeys = true; isLenient = true }
 private val strListSerializer = ListSerializer(String.serializer())
 private fun List<String>.toJson() = json.encodeToString(strListSerializer, this)
 private fun String.toStringList(): List<String> = json.decodeFromString(strListSerializer, this)
+
+@Serializable
+private data class PlaceImageJson(
+    val url: String,
+    val source: String = "OTHER",
+    val author: String? = null,
+)
+
+private val placeImageListSerializer = ListSerializer(PlaceImageJson.serializer())
+
+private fun List<PlaceImage>.toPhotoJson(): String =
+    json.encodeToString(placeImageListSerializer, map { PlaceImageJson(it.url, it.source.name, it.author) })
+
+private fun String.toPlaceImageList(): List<PlaceImage> = runCatching {
+    json.decodeFromString(placeImageListSerializer, this).map {
+        PlaceImage(it.url, runCatching { ImageSource.valueOf(it.source.uppercase()) }.getOrDefault(ImageSource.OTHER), it.author)
+    }
+}.getOrElse {
+    runCatching { json.decodeFromString(strListSerializer, this).map { PlaceImage(url = it) } }
+        .getOrDefault(emptyList())
+}
+
+internal fun List<String>.toPlaceImageJson(): String =
+    json.encodeToString(placeImageListSerializer, map { PlaceImageJson(url = it) })
 
 @Serializable
 private data class ItineraryTranslation(
@@ -96,7 +122,7 @@ fun PlaceEntity.toDomain(): Place = Place(
     location = LatLng(latitude, longitude),
     address = address,
     municipality = municipality,
-    photoUrls = photoUrlsJson.toStringList(),
+    photoUrls = photoUrlsJson.toPlaceImageList(),
     thumbnailUrl = thumbnailUrl,
     priceLevel = priceLevel?.let { runCatching { PriceLevel.valueOf(it) }.getOrNull() },
     rating = rating,
@@ -133,7 +159,7 @@ fun Place.toEntity(): PlaceEntity = PlaceEntity(
     longitude = location.longitude,
     address = address,
     municipality = municipality,
-    photoUrlsJson = photoUrls.toJson(),
+    photoUrlsJson = photoUrls.toPhotoJson(),
     thumbnailUrl = thumbnailUrl,
     openingHoursJson = null,
     priceLevel = priceLevel?.name,

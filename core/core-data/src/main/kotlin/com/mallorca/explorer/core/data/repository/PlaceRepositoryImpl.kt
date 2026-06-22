@@ -2,6 +2,7 @@ package com.mallorca.explorer.core.data.repository
 
 import com.mallorca.explorer.core.data.database.dao.PlaceDao
 import com.mallorca.explorer.core.data.database.toDomain
+import com.mallorca.explorer.core.data.database.toPlaceImageJson
 import com.mallorca.explorer.core.data.network.MallorcaApiService
 import com.mallorca.explorer.core.domain.model.Category
 import com.mallorca.explorer.core.domain.model.LatLng
@@ -79,7 +80,7 @@ class PlaceRepositoryImpl @Inject constructor(
                     longitude = dto.longitude,
                     address = dto.address,
                     municipality = dto.municipality,
-                    photoUrlsJson = json.encodeToString(strListSerializer, dto.photoUrls),
+                    photoUrlsJson = dto.photoUrls.toPlaceImageJson(),
                     thumbnailUrl = dto.thumbnailUrl,
                     openingHoursJson = null,
                     priceLevel = dto.priceLevel,
