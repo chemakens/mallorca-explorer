@@ -155,6 +155,42 @@
       "tips_zh": []
     },
     {
+      "id": "cala-figuera-formentor",
+      "name": "Cala Figuera (Formentor)",
+      "name_es": "Cala Figuera (Formentor)",
+      "name_de": "Cala Figuera (Formentor)",
+      "description": "A secluded rocky cove tucked into the base of the Cap de Formentor cliffs, just minutes from the lighthouse. Reachable by a short trail from the lighthouse car park or by boat from Port de Pollença, it rewards with crystal-clear turquoise water and dramatic limestone walls. Far quieter than Platja de Formentor, it's best visited early morning before the tour boats arrive.",
+      "description_es": "Una recóndita cala rocosa encajada al pie de los acantilados del Cap de Formentor, a pocos minutos del faro. Se llega por un corto sendero desde el aparcamiento del faro o en barco desde Port de Pollença. Premia con aguas turquesas y paredes de caliza imponentes. Mucho más tranquila que la Platja de Formentor; visítala a primera hora antes de que lleguen los barcos turísticos.",
+      "category": "BEACH",
+      "latitude": 39.9558,
+      "longitude": 3.2041,
+      "municipality": "Pollença",
+      "address": null,
+      "photo_urls": [],
+      "thumbnail_url": "",
+      "tags": [
+        "hidden",
+        "rocky",
+        "snorkeling",
+        "boat-access",
+        "formentor",
+        "secluded"
+      ],
+      "tips": [
+        "Access on foot via a 20-min trail from the lighthouse car park, or by boat from Port de Pollença",
+        "Arrive early — tour boats start arriving around 10am",
+        "Rocky entry — water shoes recommended"
+      ],
+      "tips_es": [
+        "Acceso a pie por un sendero de 20 min desde el aparcamiento del faro, o en barco desde Port de Pollença",
+        "Llega temprano — los barcos turísticos empiezan a llegar hacia las 10h",
+        "Entrada rocosa — se recomiendan escarpines"
+      ],
+      "rating": 4.6,
+      "review_count": 210,
+      "price_level": null
+    },
+    {
       "id": "cala-deia",
       "name": "Cala Deià",
       "name_es": "Cala Deià",
@@ -7796,11 +7832,11 @@
           "day_number": 3
         },
         {
-          "place_id": "cala-deia",
+          "place_id": "cala-figuera-formentor",
           "order": 6,
           "suggested_duration_minutes": 90,
-          "note": "Tiny cove — arrive by 9am",
-          "note_es": "Cala diminuta — llega antes de las 9h",
+          "note": "Hidden cove near the lighthouse — 20-min walk from the car park",
+          "note_es": "Cala escondida junto al faro — 20 min a pie desde el aparcamiento",
           "note_de": "Winzige Bucht — vor 9 Uhr ankommen",
           "day_number": 3
         }
