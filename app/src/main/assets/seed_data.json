@@ -121,8 +121,17 @@
       "thumbnail_url": "file:///android_asset/images/sup-formentor.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-formentor.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-formentor.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/beach-formentor-pexels.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/beach-formentor-aetib.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
       "description_es": "Playa legendaria en el extremo de la Península de Formentor, flanqueada por bosques de pinos y acantilados dramáticos que caen directamente al mar.",
@@ -165,8 +174,12 @@
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20de%20Deya%2C%20Mallorca%20%2813333935885%29.jpg?width=800",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20de%20Deya%2C%20Mallorca%20%2813333935885%29.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-deia.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-deia-2.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Pequeña cala rocosa al pie del pueblo artístico de Deià, muy querida por lugareños y artistas por su carácter íntimo y sus aguas cristalinas.",
@@ -209,12 +222,16 @@
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja%20de%20Cala%20Pi%202.JPG?width=800",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja%20de%20Cala%20Pi%202.JPG?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-pi.jpg",
+          "source": "MINE"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Pi.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-pi-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-pi-3.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Cala estrecha en forma de fiordo con agua tranquila y cristalina, presidida por las ruinas de una torre medieval de vigilancia costera.",
@@ -260,12 +277,12 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/gem-cala-varques.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-varques.jpg",
+          "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/gem-cala-varques-2.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-varques-2.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Playa salvaje y solitaria accesible solo tras un paseo de 20 minutos por el bosque de pinos, lo que garantiza una experiencia tranquila y natural.",
@@ -3107,11 +3124,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-puerto-valldemossa.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20view%20of%20Port%20de%20Valldemossa%20in%20Mallorca%2C%20Spain%20%2848001713716%29.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-puerto-valldemossa-2.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Pequeño e idílico puerto pesquero al que se llega por una de las carreteras más dramáticas y estrechas de la isla. Casas de piedra sobre acantilados, una pequeña playa de canto rodado y agua cristalina.",
@@ -4513,8 +4530,8 @@
       ],
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20de%20Cala%20Pi%202.JPG?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-calas-sur-llucmajor.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20de%20Cala%20Pi%202.JPG?width=800",
@@ -4683,16 +4700,12 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-mesquida.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-mesquida.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Mesquida.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Mesquida_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-mesquida-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-mesquida.webp",
@@ -4746,15 +4759,15 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-cala-llombards.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pastellfarben%20002%202015%2006%2008.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-llombards-2.jpg",
+          "source": "MINE"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Llombards_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-llombards-pexels.jpg",
+          "source": "PEXELS"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-llombards.jpg",
@@ -4808,16 +4821,12 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-playa-muro.avif",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-playa-muro.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/16-02-22-Playa-de-Muro-Mallorca-RalfR%20RR26398.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_de_Muro.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-playa-muro-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-playa-muro.avif",
@@ -4872,10 +4881,14 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-cala-salmunia.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
-          "url": "https://images.unsplash.com/photo-1651492653276-44bc28424180?w=800&fm=jpg&q=80",
+          "url": "file:///android_asset/images/beach-cala-salmunia-2.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-salmunia-unsplash.jpg",
           "source": "UNSPLASH"
         }
       ],
@@ -4931,15 +4944,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-portals-vells.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20coves%2C%20caves%20and%20beaches%20-%20panoramio.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portals_Vells_beach.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-portals-vells-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-portals-vells.jpg",
@@ -4993,12 +5002,12 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-magraner.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-magraner.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Magraner%2003.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-magraner-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-magraner.webp",
@@ -6041,12 +6050,16 @@
       "municipality": "Santanyí",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-figuera.png",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-figuera.jpg",
+          "source": "UNSPLASH"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Figuera%2C%20Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-figuera-2.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-figuera-3.jpg",
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-figuera.png",
@@ -6098,11 +6111,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-cala-santanyi.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Santany%C3%AD.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-santanyi-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-santanyi.jpg",
@@ -6154,15 +6167,12 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-cala-millor.jpg",
-          "source": "OTHER"
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Millor%20Son%20Servera%2001.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Millor_beach.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-millor-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-millor.jpg",
@@ -6214,16 +6224,12 @@
       "municipality": "Sóller",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-port-soller.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-port-soller.jpg",
+          "source": "PEXELS"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Port%20Soller%20Sunset%20%281%20-%201%29%20%2814559075024%29.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Sóller.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-port-soller-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-port-soller.webp",
@@ -6275,12 +6281,12 @@
       "municipality": "Manacor",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-romantica.avif",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-romantica.jpg",
+          "source": "UNSPLASH"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Rom%C3%A0ntica.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-romantica-2.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-romantica.avif",
@@ -6332,12 +6338,12 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-playa-de-palma.avif",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-playa-de-palma.jpg",
+          "source": "PEXELS"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_de_Palma_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-playa-de-palma-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-playa-de-palma.avif",
@@ -6390,11 +6396,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-illetes.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Playa%20de%20Illetes%20%28Mallorca%29%20%2818377602942%29.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-illetes-2.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-illetes.jpg",
@@ -6448,15 +6454,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-cala-dor.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20d%27Or%20y%20Porto%20Petro%2C%20en%20Santa%C3%B1%C3%AD%20%28Baleares%2C%20Espa%C3%B1a%29.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_d%27Or_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-dor-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-dor.jpg",
@@ -6508,8 +6510,12 @@
       "municipality": "Calvià",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peguera%20Mallorca%202013.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-peguera.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/beach-peguera-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peguera%20Mallorca%202013.jpg?width=800",
@@ -6562,15 +6568,12 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-sant-elm.jpg",
-          "source": "OTHER"
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja%20de%20Sant%20Elm%20%28Andratx%29%20-%201.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sant_Elm_Sa_Dragonera.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-sant-elm-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-sant-elm.jpg",
@@ -6622,12 +6625,13 @@
       "municipality": "Deià",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/gem-cala-llucalcari.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-llucalcari.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/gem-cala-llucalcari-2.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/beach-cala-llucalcari-2.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/gem-cala-llucalcari.jpg",
@@ -7040,8 +7044,8 @@
       "thumbnail_url": "https://images.unsplash.com/photo-U6khpQUuypc?auto=format&fit=crop&w=800&h=600&q=80",
       "photo_urls": [
         {
-          "url": "https://images.unsplash.com/photo-U6khpQUuypc?auto=format&fit=crop&w=1600&h=900&q=80",
-          "source": "UNSPLASH"
+          "url": "file:///android_asset/images/beach-cala-antena.jpg",
+          "source": "PEXELS"
         }
       ],
       "tags": [
@@ -7091,7 +7095,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/cala-virgili.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         }
       ],
       "tags": [
@@ -7141,7 +7145,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/cala-marcal.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         }
       ],
       "tags": [
@@ -7190,8 +7194,12 @@
       "thumbnail_url": "https://images.unsplash.com/photo-Qk0VIFs0NcM?auto=format&fit=crop&w=800&h=600&q=80",
       "photo_urls": [
         {
-          "url": "https://images.unsplash.com/photo-Qk0VIFs0NcM?auto=format&fit=crop&w=1600&h=900&q=80",
-          "source": "UNSPLASH"
+          "url": "file:///android_asset/images/beach-ses-covetes.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/beach-ses-covetes-2.jpg",
+          "source": "MINE"
         }
       ],
       "tags": [
@@ -7241,6 +7249,10 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/es-carbo.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/es-carbo-2.jpg",
           "source": "MINE"
         }
       ],
@@ -7292,7 +7304,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/arenal-sa-rapita.jpg",
-          "source": "OTHER"
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/arenal-sa-rapita-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "tags": [
@@ -7341,8 +7357,8 @@
       "thumbnail_url": "file:///android_asset/images/cala-vinyes.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-vinyes.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/cala-vinyes.jpg",
+          "source": "PEXELS"
         }
       ],
       "tags": [
@@ -7392,7 +7408,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/cap-falco.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "tags": [
