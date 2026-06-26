@@ -4631,15 +4631,15 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/gem-calo-des-moro.jpg",
-          "source": "PEXELS"
+          "url": "file:///android_asset/images/gem-calo-des-moro-pixabay.jpg",
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/gem-calo-des-moro-2.jpg",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/gem-calo-des-moro.jpg",
+      "thumbnail_url": "file:///android_asset/images/gem-calo-des-moro-pixabay.jpg",
       "description_es": "Una de las calas más fotografiadas de Mallorca: una diminuta joya de arena blanca flanqueada por imponentes acantilados de caliza, con agua que va del esmeralda al turquesa eléctrico.",
       "tips_es": [
         "Una de las fotos más icónicas de Mallorca — espera cola para la foto perfecta",
@@ -8120,7 +8120,7 @@
       "description": "Explore Mallorca's wild east coast, from prehistoric towns to hidden coves and spectacular sea caves.",
       "category": "BEACH",
       "duration_days": 2,
-      "cover_photo_url": "file:///android_asset/images/beach-cala-varques.avif",
+      "cover_photo_url": "file:///android_asset/images/itin-east-coast-cover.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
