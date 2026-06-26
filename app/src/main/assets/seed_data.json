@@ -166,8 +166,17 @@
       "longitude": 3.2041,
       "municipality": "Pollença",
       "address": null,
-      "photo_urls": [],
-      "thumbnail_url": "",
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/beach-cala-figuera-formentor.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-figuera-formentor-2.jpg",
+          "source": "PEXELS"
+        }
+      ],
+      "thumbnail_url": "file:///android_asset/images/beach-cala-figuera-formentor.jpg",
       "tags": [
         "hidden",
         "rocky",
