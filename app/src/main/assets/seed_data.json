@@ -19,10 +19,14 @@
       ],
       "price_level": "FREE",
       "photo_urls": [
-        "file:///android_asset/images/beach-es-trenc.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Es_Trenc.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Es_Trenc_Mallorca.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Platja_des_Trenc.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-es-trenc.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/beach-es-trenc-pexels.jpg",
+          "source": "PEXELS"
+        }
       ],
       "description_es": "Una de las playas más vírgenes de Mallorca, con aguas turquesas cristalinas y dunas de arena blanca. Espacio natural protegido con acceso regulado para preservar su entorno único.",
       "tips_es": [
@@ -61,9 +65,21 @@
         "Great snorkelling around the rocks"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/sup-cala-mondrag.webp",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-mondrag.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-cala-mondrag.webp"
+        {
+          "url": "file:///android_asset/images/beach-cala-mondrag.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-mondrag-aetib.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-mondrag-pixabay.jpg",
+          "source": "PIXABAY"
+        }
       ],
       "description_es": "Hermosa cala doble dentro del Parque Natural de Mondragó, con aguas tranquilas color turquesa y un telón de fondo de bosque de pinos mediterráneo.",
       "tips_es": [
@@ -104,7 +120,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/sup-formentor.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-formentor.jpg"
+        {
+          "url": "file:///android_asset/images/sup-formentor.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Playa legendaria en el extremo de la Península de Formentor, flanqueada por bosques de pinos y acantilados dramáticos que caen directamente al mar.",
       "tips_es": [
@@ -145,7 +164,10 @@
       "price_level": "FREE",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20de%20Deya%2C%20Mallorca%20%2813333935885%29.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20de%20Deya%2C%20Mallorca%20%2813333935885%29.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20de%20Deya%2C%20Mallorca%20%2813333935885%29.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Pequeña cala rocosa al pie del pueblo artístico de Deià, muy querida por lugareños y artistas por su carácter íntimo y sus aguas cristalinas.",
       "tips_es": [
@@ -186,8 +208,14 @@
       "price_level": "FREE",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja%20de%20Cala%20Pi%202.JPG?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Platja%20de%20Cala%20Pi%202.JPG?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Pi.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja%20de%20Cala%20Pi%202.JPG?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Pi.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Cala estrecha en forma de fiordo con agua tranquila y cristalina, presidida por las ruinas de una torre medieval de vigilancia costera.",
       "tips_es": [
@@ -231,8 +259,14 @@
         "hidden_gem"
       ],
       "photo_urls": [
-        "file:///android_asset/images/gem-cala-varques.jpg",
-        "file:///android_asset/images/gem-cala-varques-2.jpg"
+        {
+          "url": "file:///android_asset/images/gem-cala-varques.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/gem-cala-varques-2.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Playa salvaje y solitaria accesible solo tras un paseo de 20 minutos por el bosque de pinos, lo que garantiza una experiencia tranquila y natural.",
       "tips_es": [
@@ -273,8 +307,14 @@
       "price_level": "FREE",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana_Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Sierra declarada Patrimonio Mundial de la UNESCO que recorre la costa noroeste de Mallorca, con paisajes dramáticos, pueblos de montaña y antiguas terrazas de olivos.",
       "tips_es": [
@@ -322,8 +362,14 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barranc_de_Biniaraix.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Barranc_de_Biniaraix.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Biniaraix_Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barranc_de_Biniaraix.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biniaraix_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Uno de los paseos más hermosos de Mallorca, siguiendo antiguos escalones de piedra por una estrecha garganta hasta las montañas desde Sóller.",
       "tips_es": [
@@ -364,8 +410,14 @@
       "price_level": "FREE",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Major%20Mallorca.JPG?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Major%20Mallorca.JPG?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Major%20Mallorca.JPG?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El pico más alto de Mallorca con 1.445 m, con vistas dramáticas sobre toda la isla y la Serra de Tramuntana.",
       "tips_es": [
@@ -406,8 +458,14 @@
       "price_level": "FREE",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Calobra%2006.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Calobra%2006.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Calobra_Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Calobra%2006.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Calobra_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Espectacular cala al final de la legendaria carretera de montaña en espiral, con acceso al impresionante cañón del Torrent de Pareis.",
       "tips_es": [
@@ -450,8 +508,14 @@
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%20de%20Santa%20Mar%C3%ADa%2C%20Palma%20de%20Mallorca%2C%20Espa%C3%B1a%2C%202022-10-06%2C%20DD%2016-18%20HDR.jpg?width=800",
       "ticket_url": "https://catedraldemallorca.org/visita/",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%20de%20Santa%20Mar%C3%ADa%2C%20Palma%20de%20Mallorca%2C%20Espa%C3%B1a%2C%202022-10-06%2C%20DD%2016-18%20HDR.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Palma_Cathedral_facade.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%20de%20Santa%20Mar%C3%ADa%2C%20Palma%20de%20Mallorca%2C%20Espa%C3%B1a%2C%202022-10-06%2C%20DD%2016-18%20HDR.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palma_Cathedral_facade.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "La icónica catedral gótica de Mallorca con vistas sobre la Bahía de Palma, con elementos interiores diseñados por Antoni Gaudí. Una de las catedrales góticas más grandes de Europa.",
       "tips_es": [
@@ -493,8 +557,14 @@
       "thumbnail_url": "file:///android_asset/images/culture-bellver-castle.jpg",
       "ticket_url": "https://castelldebellver.palma.es/en/tickets",
       "photo_urls": [
-        "file:///android_asset/images/culture-bellver-castle.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Castell_de_Bellver_aeri.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/culture-bellver-castle.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castell_de_Bellver_aeri.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Singular castillo gótico circular del siglo XIV, enclavado en un bosque de pinos sobre Palma con vistas panorámicas a la bahía.",
       "tips_es": [
@@ -536,7 +606,10 @@
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miro%27s%20Studio%20Sert%20-%20Palma%20de%20Mallorca.jpg?width=800",
       "ticket_url": "https://miromallorca.com/en/visit/",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Miro%27s%20Studio%20Sert%20-%20Palma%20de%20Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miro%27s%20Studio%20Sert%20-%20Palma%20de%20Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El estudio y fundación del artista Joan Miró, que conserva sus espacios de trabajo originales y una colección permanente de sus obras.",
       "tips_es": [
@@ -579,7 +652,10 @@
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Es%20Baluard%20Palma.jpg?width=800",
       "ticket_url": "https://www.esbaluard.org/en/visit/",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Es%20Baluard%20Palma.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Es%20Baluard%20Palma.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Museo de Arte Moderno y Contemporáneo ubicado en los bastiones del siglo XVI de Palma. La colección permanente incluye obras de Miró, Picasso y grandes artistas mallorquines, con terraza panorámica sobre la bahía.",
       "tips_es": [
@@ -619,9 +695,18 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-valldemossa.jpg",
       "photo_urls": [
-        "file:///android_asset/images/place-valldemossa.jpg",
-        "file:///android_asset/images/place-valldemossa-2.jpg",
-        "file:///android_asset/images/place-valldemossa-3.jpg"
+        {
+          "url": "file:///android_asset/images/place-valldemossa.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-valldemossa-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-valldemossa-3.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Uno de los pueblos más bellos de Mallorca, en las montañas donde Chopin y George Sand pasaron un invierno memorable en la década de 1830.",
       "tips_es": [
@@ -661,9 +746,18 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-deia.jpg",
       "photo_urls": [
-        "file:///android_asset/images/place-deia.jpg",
-        "file:///android_asset/images/place-deia-2.jpg",
-        "file:///android_asset/images/place-deia-3.jpg"
+        {
+          "url": "file:///android_asset/images/place-deia.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-deia-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-deia-3.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Pintoresco pueblo en ladera adorado por artistas y escritores, con casas de piedra que descienden entre olivos y almendros hacia el mar.",
       "tips_es": [
@@ -703,10 +797,22 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-soller.jpg",
       "photo_urls": [
-        "file:///android_asset/images/place-soller.jpg",
-        "file:///android_asset/images/place-soller-2.jpg",
-        "file:///android_asset/images/place-soller-3.jpg",
-        "file:///android_asset/images/place-soller-4.jpg"
+        {
+          "url": "file:///android_asset/images/place-soller.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-soller-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-soller-3.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-soller-4.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Encantador pueblo de naranjales en un valle de montaña, conectado con Palma por un tren de madera vintage que lleva funcionando más de un siglo.",
       "tips_es": [
@@ -746,8 +852,14 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-pollenca.jpg",
       "photo_urls": [
-        "file:///android_asset/images/place-pollenca.jpg",
-        "file:///android_asset/images/place-pollenca-2.jpg"
+        {
+          "url": "file:///android_asset/images/place-pollenca.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-pollenca-2.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Hermosa villa con orígenes romanos, famosa por su escalinata del Calvari de 365 peldaños y su animado mercado dominical lleno de artesanía local.",
       "tips_es": [
@@ -788,9 +900,18 @@
       "price_level": "FREE",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Far_de_Formentor.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Formentor_peninsula.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Far_de_Formentor.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Formentor_peninsula.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El dramático extremo norte de Mallorca, con un faro en lo alto del acantilado y vistas de 360 grados sobre el Mediterráneo y las montañas.",
       "tips_es": [
@@ -831,7 +952,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/mirador-ses-barques.jpg",
       "photo_urls": [
-        "file:///android_asset/images/mirador-ses-barques.jpg"
+        {
+          "url": "file:///android_asset/images/mirador-ses-barques.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Espectacular mirador con vistas al Port de Sóller y a toda la bahía, con un restaurante tradicional que sirve cocina mallorquina.",
       "tips_es": [
@@ -872,7 +996,10 @@
       "price_level": "EXPENSIVE",
       "thumbnail_url": "https://images.unsplash.com/photo-1750943082452-c714763f73b2?w=800&fm=jpg&q=80",
       "photo_urls": [
-        "https://images.unsplash.com/photo-1750943082452-c714763f73b2?w=800&fm=jpg&q=80"
+        {
+          "url": "https://images.unsplash.com/photo-1750943082452-c714763f73b2?w=800&fm=jpg&q=80",
+          "source": "UNSPLASH"
+        }
       ],
       "description_es": "Restaurante con estrella Michelin en un molino de aceite restaurado, que muestra lo mejor de la cocina mallorquina contemporánea.",
       "tips_es": [
@@ -913,7 +1040,10 @@
       "price_level": "BUDGET",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Institución local en Manacor que sirve cocina mallorquina tradicional a precios honestos desde hace décadas.",
       "tips_es": [
@@ -954,7 +1084,10 @@
       "price_level": "MID",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat.de.Santa.Catalina.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat.de.Santa.Catalina.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat.de.Santa.Catalina.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El animado barrio del mercado de Palma, lleno de bares de pintxos, puestos de productos frescos y bares de vinos de ambiente auténtico.",
       "tips_es": [
@@ -995,8 +1128,14 @@
       "price_level": "MID",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca-Celler%20cooperatiu%20de%20Felanitx-05E.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca-Celler%20cooperatiu%20de%20Felanitx-05E.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Binissalem_Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca-Celler%20cooperatiu%20de%20Felanitx-05E.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Binissalem_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Bodega mallorquina tradicional que produce excelentes vinos tintos con uvas locales Callet y Mantonegro de viñedos propios.",
       "tips_es": [
@@ -1038,8 +1177,14 @@
       "website": "https://covesdeldrach.com",
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Martel%20Lake%20Coves%20del%20Drac%20Porto%20Cristo%20Mallorca.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Martel%20Lake%20Coves%20del%20Drac%20Porto%20Cristo%20Mallorca.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Coves_del_Drac_interior.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Martel%20Lake%20Coves%20del%20Drac%20Porto%20Cristo%20Mallorca.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coves_del_Drac_interior.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Espectaculares cuevas subterráneas que albergan uno de los lagos subterráneos más grandes del mundo, con conciertos de música clásica en barcas iluminadas.",
       "tips_es": [
@@ -1086,8 +1231,14 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Sóller_beach.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Sóller_beach.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Excursiones en kayak de mar desde el Port de Sóller, explorando cuevas marinas y calas solitarias por la costa de la Tramuntana.",
       "tips_es": [
@@ -1134,7 +1285,10 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Histórico camino postal costero en la Tramuntana que conecta Estellencs y Banyalbufar por senderos de piedra con dramáticas vistas a los acantilados. Parte de la red GR221.",
       "tips_es": [
@@ -1182,8 +1336,14 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castell%20d%27Alaro%201.JPG?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Castell%20d%27Alaro%201.JPG?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Alaró_castle_Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castell%20d%27Alaro%201.JPG?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alaró_castle_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Dramático castillo medieval encaramado en un pico rocoso a 822 m, rodeado de bosque de encinas. Vistas panorámicas sobre toda la llanura mallorquina y un restaurante en la cima.",
       "tips_es": [
@@ -1230,8 +1390,14 @@
       ],
       "thumbnail_url": "file:///android_asset/images/hike-puig-ofre.jpg",
       "photo_urls": [
-        "file:///android_asset/images/hike-puig-ofre.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20de%20l%27Ofre.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/hike-puig-ofre.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20de%20l%27Ofre.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Recompensante cumbre de la Tramuntana a 1.093 m desde el embalse de Cúber, a través de bosque de pinos y encinas con vistas panorámicas del valle de Sóller.",
       "tips_es": [
@@ -1280,7 +1446,10 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Tomir.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Tomir.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Tomir.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Cumbre remota y recompensante en el norte de la Tramuntana a 1.103 m. Ofrece soledad y amplias vistas sobre la llanura del Raiguer y la bahía de Pollença.",
       "tips_es": [
@@ -1330,8 +1499,14 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valldemossa.%20Cam%C3%AD%20de%20l%27Arxiduc.%20Puig%20Caragol%C3%AD.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Valldemossa.%20Cam%C3%AD%20de%20l%27Arxiduc.%20Puig%20Caragol%C3%AD.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valldemossa.%20Cam%C3%AD%20de%20l%27Arxiduc.%20Puig%20Caragol%C3%AD.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Uno de los paseos de cresta más icónicos de Mallorca, construido por el Archiduque Luis Salvador de Austria en el siglo XIX sobre Valldemossa, con vistas extraordinarias.",
       "tips_es": [
@@ -1379,10 +1554,18 @@
         "secluded",
         "chapel"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-tuent.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent_Mallorca.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-tuent.jpg",
+          "source": "AETIB",
+          "author": "Walter Obiol"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-tuent-2.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        }
       ],
       "description_es": "Cala de guijarros enclavada bajo los acantilados de la Tramuntana, accesible por una carretera sinuosa cerca de Sa Calobra. Una de las más tranquilas de la costa norte, con una pequeña capilla del siglo XIII.",
       "tips_es": [
@@ -1430,10 +1613,16 @@
         "adventure",
         "spectacular"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Torrent%20de%20Pareis%20asv2023-04%20img1.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/hike-torrent-pareis.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Torrent%20de%20Pareis%20asv2023-04%20img1.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Calobra.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/hike-torrent-pareis.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/hike-torrent-pareis-2.jpg",
+          "source": "PEXELS"
+        }
       ],
       "description_es": "Uno de los barrancos naturales más espectaculares del Mediterráneo, que corta las montañas de la Tramuntana durante 5 km antes de abrirse en la playa de Sa Calobra.",
       "tips_es": [
@@ -1482,9 +1671,16 @@
         "pristine",
         "marble"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Marmol%20-%20panoramio.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-marmols.jpeg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Marmol%20-%20panoramio.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-marmols.jpeg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-marmols-2.jpeg",
+          "source": "MINE"
+        }
       ],
       "description_es": "Una de las playas más remotas y vírgenes de Mallorca, accesible solo a pie tras 4 km por terreno duro o en barca. Salvaje e incontaminada, con llamativas rocas de mármol blanco.",
       "tips_es": [
@@ -1537,8 +1733,14 @@
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Escorca_Lluc_-_Santuari_01_ies.jpg?width=800",
       "ticket_url": "https://www.lluc.net/es/visita",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Escorca_Lluc_-_Santuari_01_ies.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Lluc_monastery_Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Escorca_Lluc_-_Santuari_01_ies.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lluc_monastery_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El lugar de peregrinación más importante de Mallorca, en un valle de montaña de Escorca. El monasterio del siglo XIII alberga la Virgen Negra, patrona de la isla, y un afamado coro de niños.",
       "tips_es": [
@@ -1589,8 +1791,14 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Far%20de%20Formentor%20-%20Majorca%20-%2002.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Far%20de%20Formentor%20-%20Majorca%20-%2002.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Far%20de%20Formentor%20-%20Majorca%20-%2002.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El icónico faro en el extremo de la Península de Formentor, construido en 1863. Rodeado de acantilados vertiginosos sobre el azul profundo, es el punto más fotografiado de Mallorca.",
       "tips_es": [
@@ -1641,7 +1849,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/mirador-sa-foradada-sunset.jpg",
       "photo_urls": [
-        "file:///android_asset/images/mirador-sa-foradada-sunset.jpg"
+        {
+          "url": "file:///android_asset/images/mirador-sa-foradada-sunset.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Dramática península rocosa cerca de Deià con un agujero natural de 18 metros excavado por el mar. Un paseo de 30 minutos desde la finca Son Marroig conduce al extremo del promontorio con vistas vertiginosas.",
       "tips_es": [
@@ -1692,7 +1903,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/mirador-ricardo-roca.jpg",
       "photo_urls": [
-        "file:///android_asset/images/mirador-ricardo-roca.jpg"
+        {
+          "url": "file:///android_asset/images/mirador-ricardo-roca.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Impresionante mirador en la costa oeste sobre la carretera Ma-10, con una de las vistas más dramáticas de los acantilados de la Tramuntana sobre el mar. Nombrado en honor a un escritor local.",
       "tips_es": [
@@ -1743,8 +1957,14 @@
       ],
       "thumbnail_url": "file:///android_asset/images/mirador-ses-animes.webp",
       "photo_urls": [
-        "file:///android_asset/images/mirador-ses-animes.webp",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_des_Verger.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/mirador-ses-animes.webp",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_des_Verger.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Atalaya del siglo XVI (Torre des Verger) en lo alto de un acantilado cerca de Banyalbufar, con vistas panorámicas sobre la costa oeste y la isla de Sa Dragonera.",
       "tips_es": [
@@ -1797,7 +2017,10 @@
       "thumbnail_url": "file:///android_asset/images/nature-jardins-alfabia.jpg",
       "ticket_url": "https://jardinesalfabia.com/es/visita/",
       "photo_urls": [
-        "file:///android_asset/images/nature-jardins-alfabia.jpg"
+        {
+          "url": "file:///android_asset/images/nature-jardins-alfabia.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Jardines históricos de inspiración morisca del siglo XII, alimentados por manantiales naturales al pie de la Tramuntana. Pérgolas de glicinas, canales de agua árabes y una impresionante avenida de palmeras.",
       "tips_es": [
@@ -1849,7 +2072,10 @@
         "art-collection"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/054%20Can%20Prunera%2C%20c.%20Lluna%2090%20%28S%C3%B3ller%29%2C%20porta%20modernista.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/054%20Can%20Prunera%2C%20c.%20Lluna%2090%20%28S%C3%B3ller%29%2C%20porta%20modernista.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/054%20Can%20Prunera%2C%20c.%20Lluna%2090%20%28S%C3%B3ller%29%2C%20porta%20modernista.jpg?width=800",
       "ticket_url": "https://canprunera.com/en/visit/",
@@ -1903,7 +2129,10 @@
         "exhibitions"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/004%20Can%20Morell%2C%20o%20Casal%20Solleric%2C%20passeig%20del%20Born%2027%20%28Palma%29.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/004%20Can%20Morell%2C%20o%20Casal%20Solleric%2C%20passeig%20del%20Born%2027%20%28Palma%29.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/004%20Can%20Morell%2C%20o%20Casal%20Solleric%2C%20passeig%20del%20Born%2027%20%28Palma%29.jpg?width=800",
       "description_es": "Imponente palacio barroco mallorquín del siglo XVIII en el Passeig del Born, construido en 1763. Hoy es el principal centro de arte contemporáneo de Palma.",
@@ -1958,7 +2187,10 @@
         "old-town"
       ],
       "photo_urls": [
-        "file:///android_asset/images/culture-juan-march.jpg"
+        {
+          "url": "file:///android_asset/images/culture-juan-march.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/culture-juan-march.jpg",
       "description_es": "Colección de arte español del siglo XX en un palacio mallorquín restaurado del siglo XVII. La colección permanente reúne obras de Picasso, Miró, Dalí y Saura.",
@@ -2012,7 +2244,10 @@
         "old-town"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Majorque%20Palma%20Carrer%20Portella%20Museu%20Mallorca%20-%20panoramio.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Majorque%20Palma%20Carrer%20Portella%20Museu%20Mallorca%20-%20panoramio.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Majorque%20Palma%20Carrer%20Portella%20Museu%20Mallorca%20-%20panoramio.jpg?width=800",
       "ticket_url": "https://www.illesbalears.travel/es/mallorca/museo-de-mallorca",
@@ -2066,7 +2301,10 @@
         "community"
       ],
       "photo_urls": [
-        "file:///android_asset/images/culture-misericordia.jpg"
+        {
+          "url": "file:///android_asset/images/culture-misericordia.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/culture-misericordia.jpg",
       "description_es": "Gran centro de arte y cultura contemporánea en los claustros de un antiguo hospicio del siglo XVII en el centro de Palma. El vasto patio interior acoge exposiciones y conciertos al aire libre.",
@@ -2121,7 +2359,10 @@
         "19th-century"
       ],
       "photo_urls": [
-        "file:///android_asset/images/culture-teatre-principal.jpg"
+        {
+          "url": "file:///android_asset/images/culture-teatre-principal.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/culture-teatre-principal.jpg",
       "ticket_url": "https://www.teatreprincipal.com/es/entrades",
@@ -2175,7 +2416,10 @@
         "cathedral"
       ],
       "photo_urls": [
-        "file:///android_asset/images/culture-museu-diocesa.jpg"
+        {
+          "url": "file:///android_asset/images/culture-museu-diocesa.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/culture-museu-diocesa.jpg",
       "ticket_url": "https://www.museuartsacredemallorca.org/visita/horarios-y-tarifas",
@@ -2225,10 +2469,22 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-palma-city.jpg",
       "photo_urls": [
-        "file:///android_asset/images/place-palma-city.jpg",
-        "file:///android_asset/images/place-palma-city-2.jpg",
-        "file:///android_asset/images/place-palma-city-3.jpg",
-        "file:///android_asset/images/place-palma-city-4.jpg"
+        {
+          "url": "file:///android_asset/images/place-palma-city.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-palma-city-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-palma-city-3.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-palma-city-4.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "La vibrante capital de Mallorca, con la majestuosa catedral gótica La Seu, el Castillo de Bellver y un animado casco antiguo de callejuelas, bares de tapas y arquitectura modernista.",
       "tips_es": [
@@ -2279,9 +2535,18 @@
         "unesco"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-fornalutx.jpg",
-        "file:///android_asset/images/place-fornalutx-2.jpg",
-        "file:///android_asset/images/place-fornalutx-3.jpg"
+        {
+          "url": "file:///android_asset/images/place-fornalutx.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-fornalutx-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-fornalutx-3.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/place-fornalutx.jpg",
       "description_es": "Considerado uno de los pueblos más bellos de España, Fornalutx se asienta sobre el valle de Sóller rodeado de terrazas de naranjos y limoneros, con la silueta dentada del Puig Major de fondo.",
@@ -2333,9 +2598,18 @@
         "beach-nearby"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-alcudia.jpg",
-        "file:///android_asset/images/place-alcudia-2.jpg",
-        "file:///android_asset/images/place-alcudia-3.jpg"
+        {
+          "url": "file:///android_asset/images/place-alcudia.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-alcudia-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-alcudia-3.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/place-alcudia.jpg",
       "description_es": "Perfectamente conservado pueblo medieval amurallado en el norte de Mallorca, fundado por los romanos como Pollentia y rodeado por las únicas murallas urbanas intactas de la isla.",
@@ -2387,9 +2661,18 @@
         "livestock-market"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-sineu.jpg",
-        "file:///android_asset/images/place-sineu-2.jpg",
-        "file:///android_asset/images/place-sineu-3.jpg"
+        {
+          "url": "file:///android_asset/images/place-sineu.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-sineu-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-sineu-3.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/place-sineu.jpg",
       "description_es": "El corazón geográfico de Mallorca y su capital histórica de mercado. El animado mercado de los miércoles, el mayor de la isla, convierte el pueblo en un hervidero de productos locales y artesanía.",
@@ -2442,8 +2725,14 @@
         "dramatic-views"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-banyalbufar.jpg",
-        "file:///android_asset/images/place-banyalbufar-2.jpg"
+        {
+          "url": "file:///android_asset/images/place-banyalbufar.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-banyalbufar-2.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/place-banyalbufar.jpg",
       "description_es": "Aferrada a la costa noroeste de la Tramuntana, Banyalbufar es conocida por su extraordinario paisaje de bancales de piedra que descienden en pisos desde la montaña hasta el mar.",
@@ -2496,9 +2785,18 @@
         "watchtower"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-estellencs.jpg",
-        "file:///android_asset/images/place-estellencs-2.jpg",
-        "file:///android_asset/images/place-estellencs-3.jpg"
+        {
+          "url": "file:///android_asset/images/place-estellencs.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-estellencs-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-estellencs-3.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/place-estellencs.jpg",
       "description_es": "El municipio más pequeño de Mallorca, con apenas 300 habitantes, se aferra a la vertiente marítima de la Serra de Tramuntana entre acantilados y el Mediterráneo abierto.",
@@ -2551,10 +2849,22 @@
         "train"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-binissalem.jpg",
-        "file:///android_asset/images/place-binissalem-2.jpg",
-        "file:///android_asset/images/place-binissalem-3.jpg",
-        "file:///android_asset/images/place-binissalem-4.jpg"
+        {
+          "url": "file:///android_asset/images/place-binissalem.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-binissalem-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-binissalem-3.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-binissalem-4.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/place-binissalem.jpg",
       "description_es": "La capital vinícola de Mallorca, en el llano agrícola entre Palma e Inca. Binissalem da nombre a la Denominación de Origen más prestigiosa de la isla, con excelentes tintos de uvas autóctonas.",
@@ -2607,8 +2917,14 @@
         "cala-ratjada"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-capdepera.jpg",
-        "file:///android_asset/images/place-capdepera-2.jpg"
+        {
+          "url": "file:///android_asset/images/place-capdepera.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-capdepera-2.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/place-capdepera.jpg",
       "description_es": "Pequeña ciudad en lo alto de una colina en el noreste de Mallorca, coronada por el Castell de Capdepera, un castillo gótico del siglo XIV con murallas bien conservadas que encierran toda la cima.",
@@ -2660,10 +2976,22 @@
         "beaches-nearby"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-santanyi.jpg",
-        "file:///android_asset/images/place-santanyi-2.jpg",
-        "file:///android_asset/images/place-santanyi-3.jpg",
-        "file:///android_asset/images/place-santanyi-4.jpg"
+        {
+          "url": "file:///android_asset/images/place-santanyi.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-santanyi-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-santanyi-3.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-santanyi-4.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/place-santanyi.jpg",
       "description_es": "Refinada localidad de mercado en el sureste construida con la arenisca color miel que los romanos apreciaban. El mercado del sábado es uno de los más auténticos y concurridos de la isla.",
@@ -2715,9 +3043,18 @@
         "history"
       ],
       "photo_urls": [
-        "file:///android_asset/images/place-petra.jpg",
-        "file:///android_asset/images/place-petra-2.jpg",
-        "file:///android_asset/images/place-petra-3.jpg"
+        {
+          "url": "file:///android_asset/images/place-petra.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-petra-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-petra-3.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/place-petra.jpg",
       "description_es": "Tranquilo municipio agrícola famoso por ser el lugar de nacimiento de Fray Junípero Serra, el fraile franciscano del siglo XVIII que fundó la cadena de misiones de California.",
@@ -2768,8 +3105,14 @@
       ],
       "thumbnail_url": "file:///android_asset/images/beach-puerto-valldemossa.jpg",
       "photo_urls": [
-        "file:///android_asset/images/beach-puerto-valldemossa.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20view%20of%20Port%20de%20Valldemossa%20in%20Mallorca%2C%20Spain%20%2848001713716%29.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-puerto-valldemossa.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial%20view%20of%20Port%20de%20Valldemossa%20in%20Mallorca%2C%20Spain%20%2848001713716%29.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Pequeño e idílico puerto pesquero al que se llega por una de las carreteras más dramáticas y estrechas de la isla. Casas de piedra sobre acantilados, una pequeña playa de canto rodado y agua cristalina.",
       "tips_es": [
@@ -2817,9 +3160,12 @@
         "photogenic",
         "cove"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/gem-calo-sestaca.jpg",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/gem-calo-sestaca.jpg",
+          "source": "PIXABAY"
+        }
       ],
       "description_es": "Mágica cala de pescadores con características casetas de botes de piedra que parecen emerger del acantilado. El agua cristalina brilla en tonos de esmeralda y turquesa profundos.",
       "tips_es": [
@@ -2869,7 +3215,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/mirador-estaca.jpg",
       "photo_urls": [
-        "file:///android_asset/images/mirador-estaca.jpg"
+        {
+          "url": "file:///android_asset/images/mirador-estaca.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Espectacular mirador costero cerca de la legendaria finca S'Estaca, antaño propiedad de Michael Douglas. Un camino secreto revela vistas dramáticas de la costa salvaje de la Tramuntana.",
       "tips_es": [
@@ -2921,7 +3270,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-cala-sant-vicenc.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-cala-sant-vicenc.jpg"
+        {
+          "url": "file:///android_asset/images/sup-cala-sant-vicenc.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Uno de los puntos de lanzamiento de SUP más pintorescos de Mallorca, donde tres calas turquesas protegidas por acantilados de caliza se encuentran con el mar abierto.",
       "tips_es": [
@@ -2974,8 +3326,14 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollença_Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollença_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "La amplia y protegida bahía de Port de Pollença es la base ideal para expediciones avanzadas de SUP por la costa de la Península de Formentor.",
       "tips_es": [
@@ -3028,7 +3386,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-portocolom.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-portocolom.jpg"
+        {
+          "url": "file:///android_asset/images/sup-portocolom.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El puerto natural de Portocolom es uno de los mejores puntos de Mallorca para practicar SUP para principiantes, con agua protegida, coloridas casas de pescadores y visibilidad excepcional.",
       "tips_es": [
@@ -3081,7 +3442,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-cala-ratjada.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-cala-ratjada.jpg"
+        {
+          "url": "file:///android_asset/images/sup-cala-ratjada.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El rudo cabo noreste de Mallorca ofrece un emocionante circuito de SUP intermedio conectando las calas alrededor de Cala Ratjada, con vistas de Menorca en los días claros.",
       "tips_es": [
@@ -3134,7 +3498,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-portals-vells.webp",
       "photo_urls": [
-        "file:///android_asset/images/sup-portals-vells.webp"
+        {
+          "url": "file:///android_asset/images/sup-portals-vells.webp",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Uno de los destinos de SUP más dramáticos de Mallorca: tres calas solitarias protegidas por altos acantilados arbolados, con cuevas de cantera medieval y agua cristalina.",
       "tips_es": [
@@ -3187,7 +3554,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-santa-ponsa.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-santa-ponsa.jpg"
+        {
+          "url": "file:///android_asset/images/sup-santa-ponsa.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "La amplia y protegida bahía de Santa Ponsa ofrece condiciones ideales para el SUP para principiantes, con arena blanca y fácil acceso a islotes y calas ocultas.",
       "tips_es": [
@@ -3240,7 +3610,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-camp-de-mar.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-camp-de-mar.jpg"
+        {
+          "url": "file:///android_asset/images/sup-camp-de-mar.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Encantador punto de SUP para principiantes cerca de Andratx, con playa de arena blanca y agua excepcionalmente calmada. El destaque es llegar paleteando hasta la pequeña isla frente a la costa.",
       "tips_es": [
@@ -3293,7 +3666,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-port-adriano.webp",
       "photo_urls": [
-        "file:///android_asset/images/sup-port-adriano.webp"
+        {
+          "url": "file:///android_asset/images/sup-port-adriano.webp",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Desde la icónica marina de lujo diseñada por Philippe Starck, esta ruta de SUP explora la salvaje costa de caliza entre Port Adriano y Portals Vells con cuevas marinas y acantilados.",
       "tips_es": [
@@ -3346,7 +3722,10 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "La bahía circular y protegida de Port de Sóller, rodeada por montañas de la Tramuntana que se sumergen en el mar, es uno de los escenarios de SUP más espectaculares de Mallorca.",
       "tips_es": [
@@ -3399,7 +3778,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-cala-major.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-cala-major.jpg"
+        {
+          "url": "file:///android_asset/images/sup-cala-major.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Sencilla ruta de SUP urbana por la costa de Palma desde Cala Major. Paletea junto al elegante Palacio de Marivent y disfruta de vistas únicas de la ciudad desde el agua.",
       "tips_es": [
@@ -3452,7 +3834,10 @@
       ],
       "thumbnail_url": "https://images.unsplash.com/photo-1774838231308-72e6792f7ab8?w=800&fm=jpg&q=80",
       "photo_urls": [
-        "https://images.unsplash.com/photo-1774838231308-72e6792f7ab8?w=800&fm=jpg&q=80"
+        {
+          "url": "https://images.unsplash.com/photo-1774838231308-72e6792f7ab8?w=800&fm=jpg&q=80",
+          "source": "UNSPLASH"
+        }
       ],
       "description_es": "Empresa de alquiler de supercoches en Motorworld Mallorca, con experiencias de conducción en Ferrari, Lamborghini, McLaren y Porsche por las carreteras más espectaculares de la isla.",
       "tips_es": [
@@ -3504,7 +3889,10 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Institución mallorquina desde 1972 y el restaurante de parrilla de carbón definitivo de la Playa de Palma. Carnes y pescados a la brasa en un ambiente mediterráneo animado y familiar.",
       "tips_es": [
@@ -3556,7 +3944,10 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lomo_de_cerdo_a_la_brasa.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Lomo_de_cerdo_a_la_brasa.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lomo_de_cerdo_a_la_brasa.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Desde 1976, uno de los restaurantes más queridos de Génova, el pueblo en las alturas de Palma. Carnes a la piedra, pescado fresco y platos clásicos mallorquines en un ambiente acogedor.",
       "tips_es": [
@@ -3608,7 +3999,10 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Camp_de_Mar_Mallorca.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Camp_de_Mar_Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Camp_de_Mar_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Uno de los escenarios gastronómicos más únicos de Mallorca: un restaurante en un pequeño islote frente a la playa de Camp de Mar, al que se llega por una pasarela de madera sobre el mar.",
       "tips_es": [
@@ -3659,7 +4053,10 @@
       ],
       "thumbnail_url": "https://images.unsplash.com/photo-1752245072335-a4ca4ef01431?w=800&fm=jpg&q=80",
       "photo_urls": [
-        "https://images.unsplash.com/photo-1752245072335-a4ca4ef01431?w=800&fm=jpg&q=80"
+        {
+          "url": "https://images.unsplash.com/photo-1752245072335-a4ca4ef01431?w=800&fm=jpg&q=80",
+          "source": "UNSPLASH"
+        }
       ],
       "description_es": "Favorito local dentro del hipódromo de Son Pardo en las afueras de Palma. El legendario bufé lleva décadas atrayendo a familias mallorquinas con cocina local abundante y de calidad.",
       "tips_es": [
@@ -3710,7 +4107,10 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Querido restaurante de bufé local en Son Ferriol, junto al Hospital Son Llàtzer. Generosas bandejas de paella, fideuà, carnes a la brasa y guisos mallorquines a precios honestos.",
       "tips_es": [
@@ -3762,7 +4162,10 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sobrassada%20en%20budell%20natural.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sobrassada%20en%20budell%20natural.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sobrassada%20en%20budell%20natural.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Institución centenaria de Génova, hoy una de las pizzerías más queridas de Palma. Las pizzas napolitanas se elaboran con masa de fermentación larga y se hornean en horno de leña.",
       "tips_es": [
@@ -3814,8 +4217,14 @@
       ],
       "thumbnail_url": "file:///android_asset/images/hike-port-canonge.webp",
       "photo_urls": [
-        "file:///android_asset/images/hike-port-canonge.webp",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Kalkofen%20zwischen%20Banyalbufar%20und%20Port%20des%20Canonge%20II.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/hike-port-canonge.webp",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalkofen%20zwischen%20Banyalbufar%20und%20Port%20des%20Canonge%20II.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Diminuto y perfectamente conservado puerto pesquero al pie de los acantilados de la Tramuntana. Accesible solo a pie por bosque de pinos o por mar, es uno de los más secretos y auténticos de la isla.",
       "tips_es": [
@@ -3867,8 +4276,14 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-faro-ses-salines.jpg",
       "photo_urls": [
-        "file:///android_asset/images/place-faro-ses-salines.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Far%20des%20Cap%20Salines%2002.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/place-faro-ses-salines.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Far%20des%20Cap%20Salines%2002.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El faro más meridional de Mallorca, en un promontorio de caliza sobre aguas cristalinas. Punto de partida del sendero costero salvaje hacia las calas más vírgenes del sur de la isla.",
       "tips_es": [
@@ -3921,7 +4336,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/salt-des-freu-cascada.jpg",
       "photo_urls": [
-        "file:///android_asset/images/salt-des-freu-cascada.jpg"
+        {
+          "url": "file:///android_asset/images/salt-des-freu-cascada.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Dramática ruta de cañón por el estrecho barranco de Sa Fosca, donde se vadea agua esmeralda entre paredes de caliza. Una de las excursiones más aventureras y gratificantes de Mallorca.",
       "tips_es": [
@@ -3975,8 +4393,14 @@
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Foradada%20%28Na%20Foradada%29%2C%202.jpg?width=800",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Foradada%20%28Na%20Foradada%29%2C%202.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Foradada.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Foradada%20%28Na%20Foradada%29%2C%202.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Foradada.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Dramática península rocosa cerca de Deià con un agujero natural de 18 metros excavado por el mar. Un paseo de 30 minutos desde la finca Son Marroig conduce al extremo del promontorio con vistas vertiginosas.",
       "tips_es": [
@@ -4030,7 +4454,10 @@
         "romantic"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Port%20Soller%20Sunset%20%281%20-%201%29%20%2814559075024%29.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Port%20Soller%20Sunset%20%281%20-%201%29%20%2814559075024%29.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Port%20Soller%20Sunset%20%281%20-%201%29%20%2814559075024%29.jpg?width=800",
       "description_es": "Singular beach club excavado en antiguas canteras de marès en la costa sur, usadas para construir la Catedral de Palma. La plataforma mira al oeste sobre el mar abierto, ofrece uno de los mejores atardeceres de la isla.",
@@ -4085,7 +4512,10 @@
         "swimming"
       ],
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20de%20Cala%20Pi%202.JPG?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20de%20Cala%20Pi%202.JPG?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20de%20Cala%20Pi%202.JPG?width=800",
       "description_es": "Serie de calas rocosas salvajes e incontaminadas a lo largo de la costa sur entre Cala Blava y Cala Pi. Ofrecen agua cristalina y poco profunda, roca natural y soledad casi garantizada.",
@@ -4138,8 +4568,14 @@
         "santanyi"
       ],
       "photo_urls": [
-        "file:///android_asset/images/gem-calo-des-moro.jpg",
-        "file:///android_asset/images/gem-calo-des-moro-2.jpg"
+        {
+          "url": "file:///android_asset/images/gem-calo-des-moro.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/gem-calo-des-moro-2.jpg",
+          "source": "PEXELS"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/gem-calo-des-moro.jpg",
       "description_es": "Una de las calas más fotografiadas de Mallorca: una diminuta joya de arena blanca flanqueada por imponentes acantilados de caliza, con agua que va del esmeralda al turquesa eléctrico.",
@@ -4191,7 +4627,10 @@
         "capdepera"
       ],
       "photo_urls": [
-        "file:///android_asset/images/gem-cala-agulla.jpg"
+        {
+          "url": "file:///android_asset/images/gem-cala-agulla.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/gem-cala-agulla.jpg",
       "description_es": "Amplio arco de arena respaldado por fragante bosque de pinos y dunas en el noreste de Mallorca, cerca de Capdepera. Una de las pocas playas naturales grandes de la zona que conserva su entorno prístino.",
@@ -4243,9 +4682,18 @@
         "capdepera"
       ],
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-mesquida.webp",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Mesquida.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Mesquida_Mallorca.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-mesquida.webp",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Mesquida.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Mesquida_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-mesquida.webp",
       "description_es": "Amplia media luna de arena dorada con un sistema de dunas protegido, una de las mejores playas naturales de Mallorca. La brisa del este la hace favorita de los bodyboarders y amantes del viento.",
@@ -4296,9 +4744,18 @@
         "southeast"
       ],
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-llombards.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Pastellfarben%20002%202015%2006%2008.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Llombards_Mallorca.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-llombards.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Pastellfarben%20002%202015%2006%2008.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Llombards_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-llombards.jpg",
       "description_es": "Cala de bolsillo en el sureste de Mallorca enmarcada por acantilados ocres y coloridas casas de pescadores. La bahía protegida tiene agua de color verde azulado intenso sobre fondo de arena y guijarros.",
@@ -4350,9 +4807,18 @@
         "watersports"
       ],
       "photo_urls": [
-        "file:///android_asset/images/beach-playa-muro.avif",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/16-02-22-Playa-de-Muro-Mallorca-RalfR%20RR26398.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_de_Muro.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-playa-muro.avif",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/16-02-22-Playa-de-Muro-Mallorca-RalfR%20RR26398.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_de_Muro.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-playa-muro.avif",
       "description_es": "Arco de seis kilómetros de arena blanca y agua cristalina en la protegida Bahía de Alcúdia, una de las playas naturales más largas de la isla. Respaldada por bosque de pinos y la marisma de S'Albufera.",
@@ -4404,8 +4870,14 @@
         "no-facilities"
       ],
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-salmunia.jpg",
-        "https://images.unsplash.com/photo-1651492653276-44bc28424180?w=800&fm=jpg&q=80"
+        {
+          "url": "file:///android_asset/images/beach-cala-salmunia.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://images.unsplash.com/photo-1651492653276-44bc28424180?w=800&fm=jpg&q=80",
+          "source": "UNSPLASH"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-salmunia.jpg",
       "description_es": "Cala salvaje y solitaria entre los cabos del extremo sureste, accesible solo por un camino de tierra y empinados escalones. Coloridas casetas de botes tradicionales se aferran a los acantilados.",
@@ -4457,9 +4929,18 @@
         "multiple-coves"
       ],
       "photo_urls": [
-        "file:///android_asset/images/beach-portals-vells.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20coves%2C%20caves%20and%20beaches%20-%20panoramio.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Portals_Vells_beach.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-portals-vells.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20coves%2C%20caves%20and%20beaches%20-%20panoramio.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Portals_Vells_beach.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-portals-vells.jpg",
       "description_es": "Conjunto de tres íntimas calas de arena en el extremo sur de la costa de Calvià, excavadas en suaves acantilados de arenisca. Destaca por las antiguas cuevas-iglesias talladas en la roca por marineros medievales.",
@@ -4511,8 +4992,14 @@
         "no-facilities"
       ],
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-magraner.webp",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Magraner%2003.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-magraner.webp",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Magraner%2003.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-magraner.webp",
       "description_es": "Prístina cala salvaje en la costa este accesible solo tras un paseo de 30 minutos por el acantilado. Pinos en voladizo y acantilados ocres crean una atmósfera de refugio secreto lejos del turismo masivo.",
@@ -4546,7 +5033,10 @@
       "address": "Puig de Randa, s/n",
       "municipality": "Algaida",
       "photo_urls": [
-        "file:///android_asset/images/puig-de-randa.webp"
+        {
+          "url": "file:///android_asset/images/puig-de-randa.webp",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/puig-de-randa.webp",
       "price_level": "FREE",
@@ -4594,7 +5084,10 @@
       "address": "Ctra. Valldemossa-Deia, km 26",
       "municipality": "Deia",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Son%20Marroig%20panoramic%202.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Son%20Marroig%20panoramic%202.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Son%20Marroig%20panoramic%202.jpg?width=800",
       "price_level": "LOW",
@@ -4643,7 +5136,10 @@
       "address": "Carretera de Puigpunyent",
       "municipality": "Palma",
       "photo_urls": [
-        "file:///android_asset/images/mirador-na-burguesa.avif"
+        {
+          "url": "file:///android_asset/images/mirador-na-burguesa.avif",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/mirador-na-burguesa.avif",
       "price_level": "FREE",
@@ -4691,8 +5187,14 @@
       "address": "Cap de Formentor",
       "municipality": "Pollenca",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Talaia_d'Albercutx.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Talaia_d'Albercutx.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Talaia_d'Albercutx.jpg?width=800",
       "price_level": "FREE",
@@ -4741,7 +5243,10 @@
       "address": "Cami del Puig de Maria",
       "municipality": "Pollenca",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Puig_de_Maria_Pollen%C3%A7a.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig_de_Maria_Pollen%C3%A7a.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig_de_Maria_Pollen%C3%A7a.jpg?width=800",
       "price_level": "FREE",
@@ -4789,7 +5294,10 @@
       "address": "Puig de Sant Salvador",
       "municipality": "Felanitx",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/2014%2003%2014%20253%20San%20Salvador%20Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014%2003%2014%20253%20San%20Salvador%20Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014%2003%2014%20253%20San%20Salvador%20Mallorca.jpg?width=800",
       "price_level": "FREE",
@@ -4838,7 +5346,10 @@
       "address": "MA-10, km 96",
       "municipality": "Banyalbufar",
       "photo_urls": [
-        "file:///android_asset/images/mirador-coll-gramola.jpg"
+        {
+          "url": "file:///android_asset/images/mirador-coll-gramola.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/mirador-coll-gramola.jpg",
       "price_level": "FREE",
@@ -4887,7 +5398,10 @@
       "address": "Plaça de l'Olivar, s/n",
       "municipality": "Palma",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado%20del%20Olivar.%20Palma%20de%20Mallorca.%20-%20panoramio.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado%20del%20Olivar.%20Palma%20de%20Mallorca.%20-%20panoramio.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado%20del%20Olivar.%20Palma%20de%20Mallorca.%20-%20panoramio.jpg?width=800",
       "price_level": "LOW",
@@ -4936,7 +5450,10 @@
       "address": "Carrer dels Hostals, 10",
       "municipality": "Palma",
       "photo_urls": [
-        "https://images.unsplash.com/photo-1561385945-c99789cd12d1?w=800&fm=jpg&q=80"
+        {
+          "url": "https://images.unsplash.com/photo-1561385945-c99789cd12d1?w=800&fm=jpg&q=80",
+          "source": "UNSPLASH"
+        }
       ],
       "thumbnail_url": "https://images.unsplash.com/photo-1561385945-c99789cd12d1?w=800&fm=jpg&q=80",
       "price_level": "MODERATE",
@@ -4986,7 +5503,10 @@
       "address": "Plaça de Pere Garau, s/n",
       "municipality": "Palma",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat%20Pere%20Garau.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat%20Pere%20Garau.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat%20Pere%20Garau.jpg?width=800",
       "price_level": "FREE",
@@ -5035,7 +5555,10 @@
       "address": "Passeig Maritim",
       "municipality": "Palma",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Paseo%20del%20Borne%20-%20Palma%20de%20Mallorca%2001.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paseo%20del%20Borne%20-%20Palma%20de%20Mallorca%2001.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paseo%20del%20Borne%20-%20Palma%20de%20Mallorca%2001.jpg?width=800",
       "price_level": "FREE",
@@ -5084,7 +5607,10 @@
       "address": "Plaça de Sa Mercat, s/n",
       "municipality": "Sineu",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sineu%20-%20market%20day%20-%20panoramio%20%2817%29.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sineu%20-%20market%20day%20-%20panoramio%20%2817%29.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sineu%20-%20market%20day%20-%20panoramio%20%2817%29.jpg?width=800",
       "price_level": "FREE",
@@ -5133,7 +5659,10 @@
       "address": "Port de Pollença — Carrer Verge del Carme",
       "municipality": "Pollença",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Boquer.JPG?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Boquer.JPG?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Boquer.JPG?width=800",
       "price_level": "FREE",
@@ -5182,8 +5711,14 @@
       "address": "Ctra. de Formentor, km 14",
       "municipality": "Pollença",
       "photo_urls": [
-        "file:///android_asset/images/hike-cala-murta.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Murta%20%28Porto%20Christo%29%20op%20Mallorca.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/hike-cala-murta.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Murta%20%28Porto%20Christo%29%20op%20Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/hike-cala-murta.jpg",
       "price_level": "FREE",
@@ -5232,7 +5767,10 @@
       "address": "Sa Calobra",
       "municipality": "Escorca",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent.jpg?width=800",
       "price_level": "FREE",
@@ -5281,7 +5819,10 @@
       "address": "Porto Cristo — Cami de Cala Varques",
       "municipality": "Manacor",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Varques.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Varques.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Varques.jpg?width=800",
       "price_level": "FREE",
@@ -5330,8 +5871,14 @@
       "address": "Parc Natural de Llevant — Colonia de Sant Pere",
       "municipality": "Artà",
       "photo_urls": [
-        "file:///android_asset/images/hike-cala-estreta.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Estreta%2004.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/hike-cala-estreta.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Estreta%2004.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/hike-cala-estreta.jpg",
       "price_level": "FREE",
@@ -5380,8 +5927,14 @@
       "address": "Camí de Sa Talaia — Alcúdia",
       "municipality": "Alcúdia",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Coll%20baix%20beach%20a.JPG?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Platja_de_Coll_Baix_Mallorca.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coll%20baix%20beach%20a.JPG?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja_de_Coll_Baix_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coll%20baix%20beach%20a.JPG?width=800",
       "price_level": "FREE",
@@ -5430,8 +5983,14 @@
       "address": "Sa Trapa — Sant Elm",
       "municipality": "Andratx",
       "photo_urls": [
-        "file:///android_asset/images/gem-mirador-sa-trapa.jpg",
-        "file:///android_asset/images/gem-mirador-sa-trapa-2.jpg"
+        {
+          "url": "file:///android_asset/images/gem-mirador-sa-trapa.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/gem-mirador-sa-trapa-2.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/gem-mirador-sa-trapa.jpg",
       "price_level": "FREE",
@@ -5481,8 +6040,14 @@
       "address": "Cala Figuera, s/n",
       "municipality": "Santanyí",
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-figuera.png",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Figuera%2C%20Mallorca.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-figuera.png",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Figuera%2C%20Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-figuera.png",
       "price_level": "FREE",
@@ -5531,8 +6096,14 @@
       "address": "Cala Santanyí, s/n",
       "municipality": "Santanyí",
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-santanyi.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Santany%C3%AD.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-santanyi.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Santany%C3%AD.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-santanyi.jpg",
       "price_level": "LOW",
@@ -5581,9 +6152,18 @@
       "address": "Passeig Marítim de Cala Millor",
       "municipality": "Sant Llorenç des Cardassar",
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-millor.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Millor%20Son%20Servera%2001.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Millor_beach.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-millor.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Millor%20Son%20Servera%2001.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Millor_beach.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-millor.jpg",
       "price_level": "LOW",
@@ -5633,9 +6213,18 @@
       "address": "Passeig en Repic",
       "municipality": "Sóller",
       "photo_urls": [
-        "file:///android_asset/images/beach-port-soller.webp",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Port%20Soller%20Sunset%20%281%20-%201%29%20%2814559075024%29.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Sóller.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-port-soller.webp",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Port%20Soller%20Sunset%20%281%20-%201%29%20%2814559075024%29.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Sóller.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-port-soller.webp",
       "price_level": "FREE",
@@ -5685,8 +6274,14 @@
       "address": "Cala Romántica, s/n",
       "municipality": "Manacor",
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-romantica.avif",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Rom%C3%A0ntica.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-romantica.avif",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Rom%C3%A0ntica.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-romantica.avif",
       "price_level": "FREE",
@@ -5736,8 +6331,14 @@
       "address": "Passeig Marítim de S'Arenal",
       "municipality": "Palma",
       "photo_urls": [
-        "file:///android_asset/images/beach-playa-de-palma.avif",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_de_Palma_Mallorca.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-playa-de-palma.avif",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Playa_de_Palma_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-playa-de-palma.avif",
       "price_level": "FREE",
@@ -5787,8 +6388,14 @@
       "address": "Carretera d'Illetes",
       "municipality": "Calvià",
       "photo_urls": [
-        "file:///android_asset/images/beach-illetes.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Playa%20de%20Illetes%20%28Mallorca%29%20%2818377602942%29.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-illetes.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Playa%20de%20Illetes%20%28Mallorca%29%20%2818377602942%29.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-illetes.jpg",
       "price_level": "LOW",
@@ -5839,9 +6446,18 @@
       "address": "Avinguda de Bélgica",
       "municipality": "Santanyí",
       "photo_urls": [
-        "file:///android_asset/images/beach-cala-dor.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20d%27Or%20y%20Porto%20Petro%2C%20en%20Santa%C3%B1%C3%AD%20%28Baleares%2C%20Espa%C3%B1a%29.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_d%27Or_Mallorca.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-cala-dor.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20d%27Or%20y%20Porto%20Petro%2C%20en%20Santa%C3%B1%C3%AD%20%28Baleares%2C%20Espa%C3%B1a%29.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_d%27Or_Mallorca.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-dor.jpg",
       "price_level": "FREE",
@@ -5891,7 +6507,10 @@
       "address": "Avinguda de Peguera",
       "municipality": "Calvià",
       "photo_urls": [
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Peguera%20Mallorca%202013.jpg?width=800"
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peguera%20Mallorca%202013.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peguera%20Mallorca%202013.jpg?width=800",
       "price_level": "FREE",
@@ -5941,9 +6560,18 @@
       "address": "Carrer de la Mar",
       "municipality": "Andratx",
       "photo_urls": [
-        "file:///android_asset/images/beach-sant-elm.jpg",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Platja%20de%20Sant%20Elm%20%28Andratx%29%20-%201.jpg?width=800",
-        "https://commons.wikimedia.org/wiki/Special:FilePath/Sant_Elm_Sa_Dragonera.jpg?width=800"
+        {
+          "url": "file:///android_asset/images/beach-sant-elm.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja%20de%20Sant%20Elm%20%28Andratx%29%20-%201.jpg?width=800",
+          "source": "OTHER"
+        },
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sant_Elm_Sa_Dragonera.jpg?width=800",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-sant-elm.jpg",
       "price_level": "FREE",
@@ -5993,8 +6621,14 @@
       "address": "Camí dels Pintors",
       "municipality": "Deià",
       "photo_urls": [
-        "file:///android_asset/images/gem-cala-llucalcari.jpg",
-        "file:///android_asset/images/gem-cala-llucalcari-2.jpg"
+        {
+          "url": "file:///android_asset/images/gem-cala-llucalcari.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/gem-cala-llucalcari-2.jpg",
+          "source": "OTHER"
+        }
       ],
       "thumbnail_url": "file:///android_asset/images/gem-cala-llucalcari.jpg",
       "price_level": "FREE",
@@ -6081,7 +6715,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/avenc-de-son-pou.jpg",
       "photo_urls": [
-        "file:///android_asset/images/avenc-de-son-pou.jpg"
+        {
+          "url": "file:///android_asset/images/avenc-de-son-pou.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Una de las maravillas naturales más espectaculares de Mallorca: una colosal dolina de caliza cuya bóveda está perforada por una claraboya que inunda el suelo de la cueva con haces de luz.",
       "tips_es": [
@@ -6134,7 +6771,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/la-comuna-bunyola.jpg",
       "photo_urls": [
-        "file:///android_asset/images/la-comuna-bunyola.jpg"
+        {
+          "url": "file:///android_asset/images/la-comuna-bunyola.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Bosque comunal protegido sobre el pueblo de Bunyola donde los bosques de encinas esconden restos de carboneras tradicionales. La cresta cimera recompensa con amplias vistas del valle de Sóller y Palma.",
       "tips_es": [
@@ -6185,7 +6825,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-punta-negra.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-punta-negra.jpg"
+        {
+          "url": "file:///android_asset/images/sup-punta-negra.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El cabo oscuro de caliza que marca la salida norte de la bahía de Cala Sant Vicenç. Desde el agua, el contraste entre la cara de roca negra y el mar esmeralda es de una belleza impactante.",
       "tips_es": [
@@ -6239,7 +6882,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/place-cavall-bernat-coves-blanques.jpg",
       "photo_urls": [
-        "file:///android_asset/images/place-cavall-bernat-coves-blanques.jpg"
+        {
+          "url": "file:///android_asset/images/place-cavall-bernat-coves-blanques.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "El tramo más dramático de la costa de Sant Vicenç: verticales acantilados de caliza blanca se elevan directamente desde el mar mientras el pico del Cavall Bernat domina sobre ellos.",
       "tips_es": [
@@ -6295,7 +6941,10 @@
       ],
       "thumbnail_url": "file:///android_asset/images/sup-cueva-azul.jpg",
       "photo_urls": [
-        "file:///android_asset/images/sup-cueva-azul.jpg"
+        {
+          "url": "file:///android_asset/images/sup-cueva-azul.jpg",
+          "source": "OTHER"
+        }
       ],
       "description_es": "Cueva marina de más de 40 metros de profundidad donde la luz turquesa desde abajo crea el efecto de 'cueva azul' en las paredes y el techo. Una de las experiencias de kayak más memorables de Mallorca.",
       "tips_es": [
@@ -6338,7 +6987,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/torre-cala-embasset.jpg",
       "photo_urls": [
-        "file:///android_asset/images/torre-cala-embasset.jpg"
+        {
+          "url": "file:///android_asset/images/torre-cala-embasset.jpg",
+          "source": "OTHER"
+        }
       ],
       "tags": [
         "circular",
@@ -6387,7 +7039,10 @@
       "price_level": "FREE",
       "thumbnail_url": "https://images.unsplash.com/photo-U6khpQUuypc?auto=format&fit=crop&w=800&h=600&q=80",
       "photo_urls": [
-        "https://images.unsplash.com/photo-U6khpQUuypc?auto=format&fit=crop&w=1600&h=900&q=80"
+        {
+          "url": "https://images.unsplash.com/photo-U6khpQUuypc?auto=format&fit=crop&w=1600&h=900&q=80",
+          "source": "UNSPLASH"
+        }
       ],
       "tags": [
         "snorkelling",
@@ -6434,7 +7089,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/cala-virgili.jpg",
       "photo_urls": [
-        "file:///android_asset/images/cala-virgili.jpg"
+        {
+          "url": "file:///android_asset/images/cala-virgili.jpg",
+          "source": "OTHER"
+        }
       ],
       "tags": [
         "hidden",
@@ -6481,7 +7139,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/cala-marcal.jpg",
       "photo_urls": [
-        "file:///android_asset/images/cala-marcal.jpg"
+        {
+          "url": "file:///android_asset/images/cala-marcal.jpg",
+          "source": "OTHER"
+        }
       ],
       "tags": [
         "family-friendly",
@@ -6528,7 +7189,10 @@
       "price_level": "FREE",
       "thumbnail_url": "https://images.unsplash.com/photo-Qk0VIFs0NcM?auto=format&fit=crop&w=800&h=600&q=80",
       "photo_urls": [
-        "https://images.unsplash.com/photo-Qk0VIFs0NcM?auto=format&fit=crop&w=1600&h=900&q=80"
+        {
+          "url": "https://images.unsplash.com/photo-Qk0VIFs0NcM?auto=format&fit=crop&w=1600&h=900&q=80",
+          "source": "UNSPLASH"
+        }
       ],
       "tags": [
         "natural-park",
@@ -6575,7 +7239,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/es-carbo.jpg",
       "photo_urls": [
-        "file:///android_asset/images/es-carbo.jpg"
+        {
+          "url": "file:///android_asset/images/es-carbo.jpg",
+          "source": "MINE"
+        }
       ],
       "tags": [
         "isolated",
@@ -6623,7 +7290,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/arenal-sa-rapita.jpg",
       "photo_urls": [
-        "file:///android_asset/images/arenal-sa-rapita.jpg"
+        {
+          "url": "file:///android_asset/images/arenal-sa-rapita.jpg",
+          "source": "OTHER"
+        }
       ],
       "tags": [
         "family-friendly",
@@ -6670,7 +7340,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/cala-vinyes.webp",
       "photo_urls": [
-        "file:///android_asset/images/cala-vinyes.webp"
+        {
+          "url": "file:///android_asset/images/cala-vinyes.webp",
+          "source": "OTHER"
+        }
       ],
       "tags": [
         "pine-trees",
@@ -6717,7 +7390,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/cap-falco.jpg",
       "photo_urls": [
-        "file:///android_asset/images/cap-falco.jpg"
+        {
+          "url": "file:///android_asset/images/cap-falco.jpg",
+          "source": "OTHER"
+        }
       ],
       "tags": [
         "hidden",
@@ -6765,7 +7441,10 @@
       "price_level": "FREE",
       "thumbnail_url": "https://images.unsplash.com/photo-lsMPGJzUa5E?auto=format&fit=crop&w=800&h=600&q=80",
       "photo_urls": [
-        "https://images.unsplash.com/photo-lsMPGJzUa5E?auto=format&fit=crop&w=1600&h=900&q=80"
+        {
+          "url": "https://images.unsplash.com/photo-lsMPGJzUa5E?auto=format&fit=crop&w=1600&h=900&q=80",
+          "source": "UNSPLASH"
+        }
       ],
       "tags": [
         "reservoir",
@@ -6814,7 +7493,10 @@
       "price_level": "EXPENSIVE",
       "thumbnail_url": "file:///android_asset/images/mhares-sea-club.jpg",
       "photo_urls": [
-        "file:///android_asset/images/mhares-sea-club.jpg"
+        {
+          "url": "file:///android_asset/images/mhares-sea-club.jpg",
+          "source": "OTHER"
+        }
       ],
       "tags": [
         "sunset",
@@ -6862,7 +7544,10 @@
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/mirador-des-colomer.webp",
       "photo_urls": [
-        "file:///android_asset/images/mirador-des-colomer.webp"
+        {
+          "url": "file:///android_asset/images/mirador-des-colomer.webp",
+          "source": "OTHER"
+        }
       ],
       "tags": [
         "viewpoint",
@@ -6953,8 +7638,14 @@
       ],
       "thumbnail_url": "file:///android_asset/images/gem-mirador-sestaca.jpg",
       "photo_urls": [
-        "file:///android_asset/images/gem-mirador-sestaca.jpg",
-        "file:///android_asset/images/gem-mirador-sestaca-2.jpg"
+        {
+          "url": "file:///android_asset/images/gem-mirador-sestaca.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/gem-mirador-sestaca-2.jpg",
+          "source": "OTHER"
+        }
       ]
     },
     {
@@ -6976,8 +7667,14 @@
       "municipality": "Banyalbufar",
       "thumbnail_url": "file:///android_asset/images/gem-torre-verger.jpg",
       "photo_urls": [
-        "file:///android_asset/images/gem-torre-verger.jpg",
-        "file:///android_asset/images/gem-torre-verger-2.jpg"
+        {
+          "url": "file:///android_asset/images/gem-torre-verger.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/gem-torre-verger-2.jpg",
+          "source": "OTHER"
+        }
       ],
       "rating": null,
       "review_count": 0,
