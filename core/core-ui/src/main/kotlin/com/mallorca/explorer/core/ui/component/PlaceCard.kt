@@ -56,7 +56,7 @@ fun PlaceCard(
         ) {
             Box {
                 AsyncImage(
-                    model = place.thumbnailUrl.ifEmpty { null },
+                    model = place.thumbnailUrl.ifEmpty { place.photoUrls.firstOrNull()?.url },
                     contentDescription = displayName,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.size(64.dp).clip(RoundedCornerShape(10.dp)),
