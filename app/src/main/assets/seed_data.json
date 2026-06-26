@@ -367,15 +367,15 @@
         "Mountain refuges (refugis) provide overnight accommodation"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-tramuntana-range.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-tramuntana-range.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-tramuntana-range-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Sierra declarada Patrimonio Mundial de la UNESCO que recorre la costa noroeste de Mallorca, con paisajes dramáticos, pueblos de montaña y antiguas terrazas de olivos.",
@@ -422,15 +422,15 @@
         "stone-steps",
         "classic"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barranc_de_Biniaraix.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-barranc-biniaraix.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Barranc_de_Biniaraix.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-barranc-biniaraix.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Biniaraix_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-barranc-biniaraix-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Uno de los paseos más hermosos de Mallorca, siguiendo antiguos escalones de piedra por una estrecha garganta hasta las montañas desde Sóller.",
@@ -470,15 +470,16 @@
         "Best views at sunrise"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Major%20Mallorca.JPG?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-puig-major.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Major%20Mallorca.JPG?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-puig-major.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-puig-major-2.jpg",
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
         }
       ],
       "description_es": "El pico más alto de Mallorca con 1.445 m, con vistas dramáticas sobre toda la isla y la Serra de Tramuntana.",
@@ -518,15 +519,16 @@
         "Take the boat from Port de Sóller to avoid the road traffic"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Calobra%2006.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-sa-calobra.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Calobra%2006.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sa-calobra.jpg",
+          "source": "AETIB",
+          "author": "Pedro Coll"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Calobra_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sa-calobra-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Espectacular cala al final de la legendaria carretera de montaña en espiral, con acceso al impresionante cañón del Torrent de Pareis.",
@@ -1345,11 +1347,15 @@
         "GR221",
         "historic"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-cami-des-correu.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-cami-des-correu.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-cami-des-correu-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Histórico camino postal costero en la Tramuntana que conecta Estellencs y Banyalbufar por senderos de piedra con dramáticas vistas a los acantilados. Parte de la red GR221.",
@@ -1396,15 +1402,16 @@
         "summit",
         "history"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castell%20d%27Alaro%201.JPG?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-castell-alaro.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castell%20d%27Alaro%201.JPG?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-castell-alaro.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Alaró_castle_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-castell-alaro-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Dramático castillo medieval encaramado en un pico rocoso a 822 m, rodeado de bosque de encinas. Vistas panorámicas sobre toda la llanura mallorquina y un restaurante en la cima.",
@@ -1450,15 +1457,17 @@
         "cuber",
         "views"
       ],
-      "thumbnail_url": "file:///android_asset/images/hike-puig-ofre.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-puig-ofre.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/hike-puig-ofre.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-puig-ofre.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20de%20l%27Ofre.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-puig-ofre-2.jpg",
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
         }
       ],
       "description_es": "Recompensante cumbre de la Tramuntana a 1.093 m desde el embalse de Cúber, a través de bosque de pinos y encinas con vistas panorámicas del valle de Sóller.",
@@ -1559,15 +1568,15 @@
         "views",
         "northwest"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valldemossa.%20Cam%C3%AD%20de%20l%27Arxiduc.%20Puig%20Caragol%C3%AD.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-cami-arxiduc.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Valldemossa.%20Cam%C3%AD%20de%20l%27Arxiduc.%20Puig%20Caragol%C3%AD.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-cami-arxiduc.jpg",
+          "source": "PEXELS"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Serra_de_Tramuntana.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-cami-arxiduc-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Uno de los paseos de cresta más icónicos de Mallorca, construido por el Archiduque Luis Salvador de Austria en el siglo XIX sobre Valldemossa, con vistas extraordinarias.",
@@ -1909,11 +1918,15 @@
         "viewpoint",
         "dramatic"
       ],
-      "thumbnail_url": "file:///android_asset/images/mirador-sa-foradada-sunset.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-sa-foradada.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mirador-sa-foradada-sunset.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sa-foradada.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-sa-foradada-2.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Dramática península rocosa cerca de Deià con un agujero natural de 18 metros excavado por el mar. Un paseo de 30 minutos desde la finca Son Marroig conduce al extremo del promontorio con vistas vertiginosas.",
@@ -4277,15 +4290,16 @@
         "shaded",
         "northwest"
       ],
-      "thumbnail_url": "file:///android_asset/images/hike-port-canonge.webp",
+      "thumbnail_url": "file:///android_asset/images/place-hike-port-des-canonge.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/hike-port-canonge.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-hike-port-des-canonge.jpg",
+          "source": "AETIB",
+          "author": "Jaume Pallicer"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalkofen%20zwischen%20Banyalbufar%20und%20Port%20des%20Canonge%20II.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-hike-port-des-canonge-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Diminuto y perfectamente conservado puerto pesquero al pie de los acantilados de la Tramuntana. Accesible solo a pie por bosque de pinos o por mar, es uno de los más secretos y auténticos de la isla.",
@@ -4340,7 +4354,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-faro-ses-salines.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Far%20des%20Cap%20Salines%2002.jpg?width=800",
@@ -4396,11 +4410,15 @@
         "moderate-hard",
         "water"
       ],
-      "thumbnail_url": "file:///android_asset/images/salt-des-freu-cascada.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-salt-des-freu.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/salt-des-freu-cascada.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-salt-des-freu.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/place-salt-des-freu-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Dramática ruta de cañón por el estrecho barranco de Sa Fosca, donde se vadea agua esmeralda entre paredes de caliza. Una de las excursiones más aventureras y gratificantes de Mallorca.",
@@ -5714,11 +5732,16 @@
       "municipality": "Pollença",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Boquer.JPG?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-ruta-cala-boquer.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-ruta-cala-boquer-2.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Boquer.JPG?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-boquer.jpg",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 2340,
@@ -5766,15 +5789,15 @@
       "municipality": "Pollença",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/hike-cala-murta.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-ruta-cala-murta.jpg",
+          "source": "PIXABAY"
         },
         {
           "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Murta%20%28Porto%20Christo%29%20op%20Mallorca.jpg?width=800",
           "source": "OTHER"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/hike-cala-murta.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-murta.jpg",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 1180,
@@ -5822,11 +5845,16 @@
       "municipality": "Escorca",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-ruta-cala-tuent.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        },
+        {
+          "url": "file:///android_asset/images/place-ruta-cala-tuent-2.jpg",
+          "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Tuent.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-tuent.jpg",
       "price_level": "FREE",
       "rating": 4.5,
       "review_count": 860,
@@ -5874,11 +5902,15 @@
       "municipality": "Manacor",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Varques.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-ruta-cala-varques.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-ruta-cala-varques-2.jpg",
+          "source": "MINE"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala_Varques.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-varques.jpg",
       "price_level": "FREE",
       "rating": 4.5,
       "review_count": 1920,
@@ -5926,15 +5958,16 @@
       "municipality": "Artà",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/hike-cala-estreta.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-ruta-cala-estreta.jpg",
+          "source": "AETIB"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Estreta%2004.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-ruta-cala-estreta-2.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/hike-cala-estreta.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-estreta.jpg",
       "price_level": "FREE",
       "rating": 4.8,
       "review_count": 720,
@@ -5982,15 +6015,15 @@
       "municipality": "Alcúdia",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coll%20baix%20beach%20a.JPG?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-ruta-coll-baix.jpg",
+          "source": "PEXELS"
         },
         {
           "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja_de_Coll_Baix_Mallorca.jpg?width=800",
           "source": "OTHER"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coll%20baix%20beach%20a.JPG?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-ruta-coll-baix.jpg",
       "price_level": "FREE",
       "rating": 4.9,
       "review_count": 1560,
@@ -6762,11 +6795,11 @@
         "easy-moderate",
         "natural-wonder"
       ],
-      "thumbnail_url": "file:///android_asset/images/avenc-de-son-pou.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-avenc-de-son-pou.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/avenc-de-son-pou.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-avenc-de-son-pou.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Una de las maravillas naturales más espectaculares de Mallorca: una colosal dolina de caliza cuya bóveda está perforada por una claraboya que inunda el suelo de la cueva con haces de luz.",
@@ -6818,11 +6851,11 @@
         "easy-moderate",
         "oak-forest"
       ],
-      "thumbnail_url": "file:///android_asset/images/la-comuna-bunyola.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-la-comuna-bunyola.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/la-comuna-bunyola.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-la-comuna-bunyola.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Bosque comunal protegido sobre el pueblo de Bunyola donde los bosques de encinas esconden restos de carboneras tradicionales. La cresta cimera recompensa con amplias vistas del valle de Sóller y Palma.",
