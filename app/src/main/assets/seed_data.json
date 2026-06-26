@@ -118,7 +118,7 @@
         "The drive through Cap de Formentor is spectacular"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/sup-formentor.jpg",
+      "thumbnail_url": "file:///android_asset/images/beach-formentor.jpg",
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-formentor.jpg",
@@ -171,7 +171,7 @@
         "Rocky shore — water shoes recommended"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20de%20Deya%2C%20Mallorca%20%2813333935885%29.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-deia.jpg",
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-cala-deia.jpg",
@@ -219,7 +219,7 @@
         "Limited parking in peak season"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja%20de%20Cala%20Pi%202.JPG?width=800",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-pi.jpg",
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-cala-pi.jpg",
@@ -271,7 +271,7 @@
         "Sea caves nearby for snorkellers"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/gem-cala-varques.jpg",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-varques.jpg",
       "tags": [
         "hidden_gem"
       ],
@@ -4534,7 +4534,7 @@
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre%20de%20Cala%20Pi%202.JPG?width=800",
+      "thumbnail_url": "file:///android_asset/images/beach-calas-sur-llucmajor.jpg",
       "description_es": "Serie de calas rocosas salvajes e incontaminadas a lo largo de la costa sur entre Cala Blava y Cala Pi. Ofrecen agua cristalina y poco profunda, roca natural y soledad casi garantizada.",
       "tips_es": [
         "Zona poco conocida con calas vírgenes de difícil acceso",
@@ -4708,7 +4708,7 @@
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-mesquida.webp",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-mesquida.jpg",
       "description_es": "Amplia media luna de arena dorada con un sistema de dunas protegido, una de las mejores playas naturales de Mallorca. La brisa del este la hace favorita de los bodyboarders y amantes del viento.",
       "tips_es": [
         "Playa grande con espacio incluso en temporada alta",
@@ -4829,7 +4829,7 @@
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-playa-muro.avif",
+      "thumbnail_url": "file:///android_asset/images/beach-playa-muro.jpg",
       "description_es": "Arco de seis kilómetros de arena blanca y agua cristalina en la protegida Bahía de Alcúdia, una de las playas naturales más largas de la isla. Respaldada por bosque de pinos y la marisma de S'Albufera.",
       "tips_es": [
         "Parte del Parque Natural de s'Albufera — observa aves en el camino",
@@ -5010,7 +5010,7 @@
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-magraner.webp",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-magraner.jpg",
       "description_es": "Prístina cala salvaje en la costa este accesible solo tras un paseo de 30 minutos por el acantilado. Pinos en voladizo y acantilados ocres crean una atmósfera de refugio secreto lejos del turismo masivo.",
       "tips_es": [
         "Solo accesible a pie — 30 minutos desde la carretera",
@@ -6062,7 +6062,7 @@
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-figuera.png",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-figuera.jpg",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 3240,
@@ -6232,7 +6232,7 @@
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-port-soller.webp",
+      "thumbnail_url": "file:///android_asset/images/beach-port-soller.jpg",
       "price_level": "FREE",
       "rating": 4.5,
       "review_count": 2920,
@@ -6289,7 +6289,7 @@
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-romantica.avif",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-romantica.jpg",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 1480,
@@ -6346,7 +6346,7 @@
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-playa-de-palma.avif",
+      "thumbnail_url": "file:///android_asset/images/beach-playa-de-palma.jpg",
       "price_level": "FREE",
       "rating": 4.1,
       "review_count": 18400,
@@ -6518,7 +6518,7 @@
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Peguera%20Mallorca%202013.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/beach-peguera.jpg",
       "price_level": "FREE",
       "rating": 4.3,
       "review_count": 3140,
@@ -6634,7 +6634,7 @@
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/gem-cala-llucalcari.jpg",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-llucalcari.jpg",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 620,
@@ -7041,7 +7041,7 @@
         "Access via staircase from Cales de Mallorca resort"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "https://images.unsplash.com/photo-U6khpQUuypc?auto=format&fit=crop&w=800&h=600&q=80",
+      "thumbnail_url": "file:///android_asset/images/beach-cala-antena.jpg",
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-cala-antena.jpg",
@@ -7191,7 +7191,7 @@
         "No shade — bring your own umbrella"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "https://images.unsplash.com/photo-Qk0VIFs0NcM?auto=format&fit=crop&w=800&h=600&q=80",
+      "thumbnail_url": "file:///android_asset/images/beach-ses-covetes.jpg",
       "photo_urls": [
         {
           "url": "file:///android_asset/images/beach-ses-covetes.jpg",
@@ -7354,7 +7354,7 @@
         "Parking on the roadside above the beach"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/cala-vinyes.webp",
+      "thumbnail_url": "file:///android_asset/images/cala-vinyes.jpg",
       "photo_urls": [
         {
           "url": "file:///android_asset/images/cala-vinyes.jpg",
