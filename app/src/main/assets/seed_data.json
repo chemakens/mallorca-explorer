@@ -4471,15 +4471,15 @@
         "cala",
         "iconic"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Foradada%20%28Na%20Foradada%29%2C%202.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-sa-foradada-hike.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa%20Foradada%20%28Na%20Foradada%29%2C%202.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sa-foradada-hike.jpg",
+          "source": "MINE"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sa_Foradada.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sa-foradada-hike-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Dramática península rocosa cerca de Deià con un agujero natural de 18 metros excavado por el mar. Un paseo de 30 minutos desde la finca Son Marroig conduce al extremo del promontorio con vistas vertiginosas.",
@@ -7891,7 +7891,7 @@
       "category": "HIKING",
       "duration_days": 2,
       "difficulty": "MODERATE",
-      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/La_Calobra%2C_Escorca%2C_Mallorca%2C_Espa%C3%B1a.JPG/1280px-La_Calobra%2C_Escorca%2C_Mallorca%2C_Espa%C3%B1a.JPG",
+      "cover_photo_url": "file:///android_asset/images/itin-tramuntana-2d-cover.jpg",
       "best_seasons": [
         "Spring",
         "Autumn"
@@ -7979,6 +7979,10 @@
           "note_de": "Sonnenuntergang am Leuchtturm",
           "day_number": 2
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-tramuntana-2d-gallery-1.jpg",
+        "file:///android_asset/images/itin-tramuntana-2d-gallery-2.jpg"
       ]
     },
     {
@@ -10176,7 +10180,7 @@
       "category": "HIKING",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/hike-port-canonge.webp",
+      "cover_photo_url": "file:///android_asset/images/itin-cami-port-canonge-cover.jpg",
       "total_distance_km": 5.8,
       "highlights": [
         "Shaded trail through Aleppo pine forest",
@@ -10254,6 +10258,9 @@
           "note_de": "Der Abstieg durch Kiefernschatten mit Meeresblick, roten Tonformationen und einem ruhigen Hafen am Ende. Rückweg auf demselben Pfad.",
           "day_number": 1
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-cami-port-canonge-gallery-1.jpg"
       ]
     },
     {
@@ -10263,7 +10270,7 @@
       "category": "HIKING",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Cala_Marmol_-_panoramio.jpg/960px-Cala_Marmol_-_panoramio.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-cala-marmols-faro-cover.jpg",
       "total_distance_km": 8.4,
       "highlights": [
         "Wild clifftop coastal path with no facilities",
@@ -10341,6 +10348,9 @@
           "note_de": "Cala Màrmols: weißer Marmorfelsen, absolute Einsamkeit und das türkisfarbene Wasser der Südküste. Schnorchel, 2L Wasser pro Person und geschlossene Schuhe für das felsige Ufer mitbringen. Rückweg auf demselben Weg.",
           "day_number": 1
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-cala-marmols-faro-gallery-1.jpg"
       ]
     },
     {
@@ -10605,7 +10615,7 @@
       "category": "HIKING",
       "duration_days": 1,
       "difficulty": "HARD",
-      "cover_photo_url": "file:///android_asset/images/hike-cala-estreta.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-northeast-wild-cover.jpg",
       "total_distance_km": 80.0,
       "highlights": [
         "Cala Estreta — one of the least-visited beaches on the island",
@@ -10655,6 +10665,9 @@
           "note": "Afternoon scramble — arrive for sunset on the ridge",
           "note_es": "Escalada de tarde — llega para el atardecer en la cresta"
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-northeast-wild-gallery-1.jpg"
       ]
     },
     {
