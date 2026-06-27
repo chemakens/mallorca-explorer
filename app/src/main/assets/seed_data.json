@@ -962,19 +962,15 @@
         "Arrive at sunrise for the best light"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-cap-formentor.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-cap-formentor.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Far_de_Formentor.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Formentor_peninsula.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-cap-formentor-2.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "El dramático extremo norte de Mallorca, con un faro en lo alto del acantilado y vistas de 360 grados sobre el Mediterráneo y las montañas.",
@@ -1860,15 +1856,15 @@
         "peninsula",
         "dramatic"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Far%20de%20Formentor%20-%20Majorca%20-%2002.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-faro-formentor.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Far%20de%20Formentor%20-%20Majorca%20-%2002.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-faro-formentor.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-faro-formentor-2.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "El icónico faro en el extremo de la Península de Formentor, construido en 1863. Rodeado de acantilados vertiginosos sobre el azul profundo, es el punto más fotografiado de Mallorca.",
@@ -1976,11 +1972,11 @@
         "sunset",
         "accessible"
       ],
-      "thumbnail_url": "file:///android_asset/images/mirador-ricardo-roca.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-mirador-ricardo-roca.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mirador-ricardo-roca.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mirador-ricardo-roca.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Impresionante mirador en la costa oeste sobre la carretera Ma-10, con una de las vistas más dramáticas de los acantilados de la Tramuntana sobre el mar. Nombrado en honor a un escritor local.",
@@ -2030,15 +2026,16 @@
         "panoramic",
         "historic"
       ],
-      "thumbnail_url": "file:///android_asset/images/mirador-ses-animes.webp",
+      "thumbnail_url": "file:///android_asset/images/place-mirador-ses-animes.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mirador-ses-animes.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mirador-ses-animes.jpg",
+          "source": "AETIB",
+          "author": "Walter Obiol"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Torre_des_Verger.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mirador-ses-animes-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Atalaya del siglo XVI (Torre des Verger) en lo alto de un acantilado cerca de Banyalbufar, con vistas panorámicas sobre la costa oeste y la isla de Sa Dragonera.",
@@ -4535,11 +4532,15 @@
       ],
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Port%20Soller%20Sunset%20%281%20-%201%29%20%2814559075024%29.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mhares-sea-club-sunset.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-2.jpg",
+          "source": "MINE"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca%20Port%20Soller%20Sunset%20%281%20-%201%29%20%2814559075024%29.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-mhares-sea-club-sunset.jpg",
       "description_es": "Singular beach club excavado en antiguas canteras de marès en la costa sur, usadas para construir la Catedral de Palma. La plataforma mira al oeste sobre el mar abierto, ofrece uno de los mejores atardeceres de la isla.",
       "tips_es": [
         "Las sesiones de atardecer comienzan sobre las 18h en verano",
@@ -5106,11 +5107,15 @@
       "municipality": "Algaida",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/puig-de-randa.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-puig-de-randa.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/place-puig-de-randa-2.jpg",
+          "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/puig-de-randa.webp",
+      "thumbnail_url": "file:///android_asset/images/place-puig-de-randa.jpg",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 1840,
@@ -5157,11 +5162,16 @@
       "municipality": "Deia",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Son%20Marroig%20panoramic%202.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-son-marroig.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/place-son-marroig-2.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Son%20Marroig%20panoramic%202.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-son-marroig.jpg",
       "price_level": "LOW",
       "rating": 4.6,
       "review_count": 2200,
@@ -5209,11 +5219,11 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mirador-na-burguesa.avif",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mirador-na-burguesa.jpg",
+          "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/mirador-na-burguesa.avif",
+      "thumbnail_url": "file:///android_asset/images/place-mirador-na-burguesa.jpg",
       "price_level": "FREE",
       "rating": 4.4,
       "review_count": 980,
@@ -5260,15 +5270,15 @@
       "municipality": "Pollenca",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Talaia_d'Albercutx.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-talaia-albercutx.jpg",
+          "source": "UNSPLASH"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cap_de_Formentor.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-talaia-albercutx-2.jpg",
+          "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Talaia_d'Albercutx.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-talaia-albercutx.jpg",
       "price_level": "FREE",
       "rating": 4.8,
       "review_count": 760,
@@ -5316,11 +5326,17 @@
       "municipality": "Pollenca",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig_de_Maria_Pollen%C3%A7a.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-puig-de-maria.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        },
+        {
+          "url": "file:///android_asset/images/place-puig-de-maria-2.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig_de_Maria_Pollen%C3%A7a.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-puig-de-maria.jpg",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 1430,
@@ -5367,11 +5383,16 @@
       "municipality": "Felanitx",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014%2003%2014%20253%20San%20Salvador%20Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-santuari-sant-salvador.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        },
+        {
+          "url": "file:///android_asset/images/place-santuari-sant-salvador-2.jpg",
+          "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/2014%2003%2014%20253%20San%20Salvador%20Mallorca.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-santuari-sant-salvador.jpg",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 2650,
@@ -5419,11 +5440,16 @@
       "municipality": "Banyalbufar",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mirador-coll-gramola.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mirador-coll-gramola.jpg",
+          "source": "UNSPLASH"
+        },
+        {
+          "url": "file:///android_asset/images/place-mirador-coll-gramola-2.jpg",
+          "source": "AETIB",
+          "author": "Walter Obiol"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/mirador-coll-gramola.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-mirador-coll-gramola.jpg",
       "price_level": "FREE",
       "rating": 4.5,
       "review_count": 540,
@@ -7533,11 +7559,15 @@
         "Combine with a drive along the full Ma-10 route"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "https://images.unsplash.com/photo-lsMPGJzUa5E?auto=format&fit=crop&w=800&h=600&q=80",
+      "thumbnail_url": "file:///android_asset/images/place-gorg-blau.jpg",
       "photo_urls": [
         {
-          "url": "https://images.unsplash.com/photo-lsMPGJzUa5E?auto=format&fit=crop&w=1600&h=900&q=80",
-          "source": "UNSPLASH"
+          "url": "file:///android_asset/images/place-gorg-blau.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/place-gorg-blau-2.jpg",
+          "source": "MINE"
         }
       ],
       "tags": [
@@ -7636,11 +7666,15 @@
         "Combine with the drive along Cap de Formentor road"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/mirador-des-colomer.webp",
+      "thumbnail_url": "file:///android_asset/images/place-mirador-des-colomer.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mirador-des-colomer.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mirador-des-colomer.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-mirador-des-colomer-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "tags": [
@@ -8323,7 +8357,7 @@
       "description": "A spectacular day following the dramatic west coast road (Ma-10), stopping at Mallorca's finest clifftop viewpoints from Andratx to Deià with views of the Tramuntana mountains plunging into the sea.",
       "category": "VIEWPOINT",
       "duration_days": 1,
-      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/Torre_des_Verger-pjt1.jpg/1280px-Torre_des_Verger-pjt1.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-west-coast-miradors-cover.jpg",
       "best_seasons": [
         "Spring",
         "Autumn",
@@ -8405,6 +8439,10 @@
           "note_de": "Später Nachmittag am dramatischen Nordkap",
           "day_number": 1
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-west-coast-miradors-cover.jpg",
+        "file:///android_asset/images/itin-west-coast-miradors-gallery-1.jpg"
       ]
     },
     {
@@ -8413,7 +8451,7 @@
       "description": "Rise early for the most photogenic viewpoints on the Formentor peninsula — the iconic Es Colomer lookout and the historic lighthouse at the island's northern tip, best seen in the golden morning light.",
       "category": "VIEWPOINT",
       "duration_days": 1,
-      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Far_de_Formentor_-_Majorca_-_01.jpg/1280px-Far_de_Formentor_-_Majorca_-_01.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-formentor-viewpoints-cover.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -8477,6 +8515,10 @@
           "note_de": "Morgendliches Schwimmen am legendären Playa de Formentor auf dem Rückweg",
           "day_number": 1
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-formentor-viewpoints-cover.jpg",
+        "file:///android_asset/images/itin-formentor-viewpoints-gallery-1.jpg"
       ]
     },
     {
@@ -10435,7 +10477,7 @@
       "category": "VIEWPOINT",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/puig-maria-01.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sacred-hilltops-cover.jpg",
       "total_distance_km": 95.0,
       "highlights": [
         "Puig de Randa's view over the entire central plain",
@@ -10486,6 +10528,10 @@
           "note": "30-min hike to finish the day — stunning bay views at golden hour",
           "note_es": "Sube 30 min para terminar el día — vistas espectaculares de la bahía"
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-sacred-hilltops-cover.jpg",
+        "file:///android_asset/images/itin-sacred-hilltops-gallery-1.jpg"
       ]
     },
     {
