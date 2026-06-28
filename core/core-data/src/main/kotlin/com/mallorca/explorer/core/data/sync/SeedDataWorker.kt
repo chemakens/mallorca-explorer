@@ -53,6 +53,8 @@ class SeedDataWorker @AssistedInject constructor(
             // upsertAll never removes rows, so this explicit step is required.
             placeDao.deleteByIds(DELETED_PLACE_IDS)
             itineraryDao.deleteStopsByPlaceIds(DELETED_PLACE_IDS)
+            itineraryDao.deleteStopsByItineraryIds(DELETED_ITINERARY_IDS)
+            itineraryDao.deleteByIds(DELETED_ITINERARY_IDS)
 
             placeDao.upsertAll(seedData.places.map { it.toEntity() })
 
@@ -94,7 +96,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 114
+        const val CURRENT_SEED_VERSION = 115
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -106,6 +108,11 @@ class SeedDataWorker @AssistedInject constructor(
             "gem-bassa-de-can-coll",
             "gem-font-de-la-vila",
             "gem-cova-ses-bruixes",
+        )
+
+        // Itineraries removed from seed_data.json that must be deleted from the local DB.
+        val DELETED_ITINERARY_IDS = listOf(
+            "itin-gastronomy",
         )
     }
 

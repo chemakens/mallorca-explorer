@@ -37,6 +37,12 @@ interface ItineraryDao {
     @Query("DELETE FROM itinerary_stops WHERE placeId IN (:placeIds)")
     suspend fun deleteStopsByPlaceIds(placeIds: List<String>)
 
+    @Query("DELETE FROM itinerary_stops WHERE itineraryId IN (:itineraryIds)")
+    suspend fun deleteStopsByItineraryIds(itineraryIds: List<String>)
+
+    @Query("DELETE FROM itineraries WHERE id IN (:ids)")
+    suspend fun deleteByIds(ids: List<String>)
+
     @Query("SELECT COUNT(*) FROM itineraries")
     suspend fun count(): Int
 }
