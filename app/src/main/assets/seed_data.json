@@ -7837,6 +7837,52 @@
       "tips_de": [],
       "tips_ru": [],
       "tips_zh": []
+    },
+    {
+      "id": "mercat-1930",
+      "name": "Mercat 1930",
+      "name_es": "Mercat 1930",
+      "name_de": "Mercat 1930",
+      "name_ru": "",
+      "name_zh": "",
+      "description": "Palma's waterfront gourmet food hall, set inside a striking 1930s Art Deco building on the Paseo Marítimo. Around fourteen curated stalls bring together the best of Mallorcan and international street food — Iberian ham carving, fresh tapas, Asian bao buns, craft burgers, seafood skewers and artisan desserts — all in a stylish open space with views towards the bay.",
+      "description_es": "Mercado gastronómico en el Paseo Marítimo de Palma, instalado en el histórico edificio Art Decó del antiguo Gran Hotel Mediterráneo. Unos catorce puestos reúnen lo mejor de la gastronomía mallorquina e internacional: jamón ibérico, tapas, comida asiática, hamburguesas artesanas, mariscos y postres, con ambiente animado y vistas a la bahía.",
+      "description_de": "Gastronomische Markthalle direkt am Paseo Marítimo, untergebracht in einem prächtigen Art-Déco-Gebäude aus den 1930er Jahren. Rund vierzehn Stände bieten iberischen Schinken, Tapas, asiatische Bao-Brötchen, Craft-Burger und Desserts — Street Food mit Meerblick.",
+      "description_ru": "",
+      "description_zh": "",
+      "category": "GASTRONOMY",
+      "latitude": 39.5665,
+      "longitude": 2.633,
+      "address": "Av. de Gabriel Roca, 33",
+      "municipality": "Palma",
+      "price_level": "MID",
+      "rating": 4.5,
+      "review_count": 890,
+      "tips": [
+        "Open from noon daily, busiest Thursday to Sunday evenings",
+        "No reservation needed — pay per stall",
+        "Combines well with a walk along the Paseo Marítimo"
+      ],
+      "tips_es": [
+        "Abierto desde mediodía todos los días, con más ambiente de jueves a domingo por la noche",
+        "Sin reserva — se paga puesto a puesto",
+        "Ideal combinarlo con un paseo por el Paseo Marítimo"
+      ],
+      "tips_de": [
+        "Täglich ab Mittag geöffnet, donnerstags bis sonntags abends am belebtesten",
+        "Keine Reservierung nötig — an jedem Stand separat bezahlen",
+        "Lässt sich gut mit einem Spaziergang am Paseo Marítimo verbinden"
+      ],
+      "tips_ru": [],
+      "tips_zh": [],
+      "tags": [
+        "market",
+        "streetfood",
+        "gourmet",
+        "waterfront"
+      ],
+      "thumbnail_url": "",
+      "photo_urls": []
     }
   ],
   "itineraries": [
@@ -8127,84 +8173,6 @@
         "file:///android_asset/images/itin-palma-culture-gallery-1.jpg",
         "file:///android_asset/images/itin-palma-culture-gallery-2.jpg",
         "file:///android_asset/images/itin-palma-culture-gallery-3.jpg"
-      ]
-    },
-    {
-      "id": "itin-gastronomy",
-      "title": "Mallorcan Gastronomy Tour",
-      "description": "Taste the flavours of Mallorca, from the wine country of Binissalem to the food markets of Palma.",
-      "category": "GASTRONOMY",
-      "duration_days": 1,
-      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Mercat_de_Santa_Catalina_I.JPG/1280px-Mercat_de_Santa_Catalina_I.JPG",
-      "best_seasons": [
-        "Spring",
-        "Autumn"
-      ],
-      "tags": [
-        "food",
-        "wine",
-        "market",
-        "local"
-      ],
-      "translations": {
-        "es": {
-          "title": "Ruta Gastronómica Mallorquina",
-          "description": "Saborea los sabores de Mallorca, desde la región vinícola de Binissalem hasta los mercados de alimentación de Palma.",
-          "highlights": []
-        },
-        "de": {
-          "title": "Mallorcas Gastronomie-Tour",
-          "description": "Erleben Sie die Aromen Mallorcas, vom Weinland Binissalem bis zu den Lebensmittelmärkten Palmas.",
-          "highlights": []
-        },
-        "zh": {
-          "title": "马略卡美食之旅",
-          "description": "品味马略卡的风味，从比尼萨勒姆葡萄酒产区到帕尔马食品市场。",
-          "highlights": []
-        },
-        "ru": {
-          "title": "Гастрономический тур по Мальорке",
-          "description": "Попробуйте вкусы Мальорки — от виноградников Бинисалема до продовольственных рынков Пальмы.",
-          "highlights": []
-        }
-      },
-      "stops": [
-        {
-          "place_id": "mercat-santa-catalina",
-          "order": 1,
-          "suggested_duration_minutes": 90,
-          "note": "Morning market breakfast",
-          "note_es": "Desayuno en el mercado matutino",
-          "note_de": "Frühstück auf dem Morgenmarkt",
-          "day_number": 1
-        },
-        {
-          "place_id": "bodega-trevin",
-          "order": 2,
-          "suggested_duration_minutes": 90,
-          "note": "Winery tasting — book ahead",
-          "note_es": "Cata de vinos en la bodega — reservar con antelación",
-          "note_de": "Weinprobe in der Bodega — im Voraus buchen",
-          "day_number": 1
-        },
-        {
-          "place_id": "restaurant-juanito",
-          "order": 3,
-          "suggested_duration_minutes": 90,
-          "note": "Traditional Mallorcan lunch",
-          "note_es": "Almuerzo mallorquín tradicional",
-          "note_de": "Traditionelles mallorquinisches Mittagessen",
-          "day_number": 1
-        },
-        {
-          "place_id": "restaurant-mola",
-          "order": 4,
-          "suggested_duration_minutes": 150,
-          "note": "Michelin-starred dinner — book weeks ahead",
-          "note_es": "Cena con estrella Michelin — reservar semanas antes",
-          "note_de": "Michelin-Sterne-Dinner — Wochen im Voraus buchen",
-          "day_number": 1
-        }
       ]
     },
     {
@@ -10677,6 +10645,14 @@
           "suggested_duration_minutes": 90,
           "note": "Finish with vermouth in the neighbourhood — the real Palma",
           "note_es": "Termina con vermut en el barrio — la Palma de verdad"
+        },
+        {
+          "place_id": "mercat-1930",
+          "order": 5,
+          "day_number": 1,
+          "suggested_duration_minutes": 90,
+          "note": "Waterfront food hall for a relaxed late lunch — tapas, Iberian ham and craft burgers with views of the bay",
+          "note_es": "Mercado junto al mar para un almuerzo relajado — tapas, jamón ibérico y hamburguesas artesanas con vistas a la bahía"
         }
       ]
     },
