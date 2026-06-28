@@ -1049,50 +1049,6 @@
       "tips_zh": []
     },
     {
-      "id": "restaurant-juanito",
-      "name": "Bar-Restaurant Juanito",
-      "name_es": "Bar-Restaurant Juanito",
-      "description": "A beloved local institution in Manacor serving traditional Mallorcan cuisine at honest prices.",
-      "category": "GASTRONOMY",
-      "latitude": 39.9053,
-      "longitude": 3.0775,
-      "municipality": "Pollença",
-      "rating": 4.5,
-      "review_count": 1200,
-      "tips": [
-        "Try the frito mallorquí (local offal fry-up)",
-        "Cash preferred",
-        "Arrive early — no reservations and fills quickly"
-      ],
-      "price_level": "BUDGET",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800",
-      "photo_urls": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800",
-          "source": "OTHER"
-        }
-      ],
-      "description_es": "Institución local en Manacor que sirve cocina mallorquina tradicional a precios honestos desde hace décadas.",
-      "tips_es": [
-        "Famoso por sus croquetas caseras y el pan con sobrasada",
-        "Solo efectivo — lleva moneda local",
-        "Llega pronto ya que la cola se forma rápidamente"
-      ],
-      "name_de": "Bar-Restaurant Juanito",
-      "description_de": "Kultige lokale Institution in Manacor, bekannt für authentische mallorquinische Hausmannskost zu fairen Preisen. Seit Jahrzehnten Liebling der Einheimischen.",
-      "tips_de": [
-        "Berühmt für hausgemachte Kroketten und Pan amb sobrassada",
-        "Nur Bargeld – lokale Währung mitbringen",
-        "Früh kommen, da Schlangen sich schnell bilden"
-      ],
-      "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
-      "name_zh": "",
-      "description_zh": "",
-      "tips_zh": []
-    },
-    {
       "id": "mercat-santa-catalina",
       "name": "Mercat de Santa Catalina",
       "name_es": "Mercat de Santa Catalina",
