@@ -8621,7 +8621,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/sup-cala-sant-vicenc.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-sant-vicenc.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -8723,7 +8723,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "HARD",
-      "cover_photo_url": "file:///android_asset/images/sup-formentor.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-formentor.jpg",
       "best_seasons": [
         "Spring",
         "Summer"
@@ -8839,7 +8839,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/sup-cala-mondrag.webp",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-mondrag.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -8933,7 +8933,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/sup-portocolom.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-portocolom.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9037,7 +9037,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/sup-cala-ratjada.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-cala-ratjada.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9136,7 +9136,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/sup-portals-vells.webp",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-portals-vells.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9226,6 +9226,9 @@
           "lat": 39.4722,
           "lng": 2.52
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-sup-portals-vells-2.jpg"
       ]
     },
     {
@@ -9235,7 +9238,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/sup-santa-ponsa.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-santa-ponsa.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9334,7 +9337,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/sup-camp-de-mar.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-camp-de-mar.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9433,7 +9436,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/sup-port-adriano.webp",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-port-adriano.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9541,7 +9544,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Cala_Tuent_Mallorca_msu-2018-4063.jpg/960px-Cala_Tuent_Mallorca_msu-2018-4063.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-soller.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9654,7 +9657,7 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/sup-cala-major.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-sup-cala-major.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
