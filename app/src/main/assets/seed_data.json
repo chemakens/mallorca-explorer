@@ -2391,11 +2391,11 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/culture-misericordia.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-centro-cultural-misericordia.jpg",
+          "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/culture-misericordia.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-centro-cultural-misericordia.jpg",
       "description_es": "Gran centro de arte y cultura contemporánea en los claustros de un antiguo hospicio del siglo XVII en el centro de Palma. El vasto patio interior acoge exposiciones y conciertos al aire libre.",
       "tips_es": [
         "Las exposiciones cambian regularmente — consulta la web",
