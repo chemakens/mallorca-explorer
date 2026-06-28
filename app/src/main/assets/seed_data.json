@@ -569,16 +569,17 @@
       ],
       "price_level": "BUDGET",
       "website": "https://catedraldemallorca.org",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%20de%20Santa%20Mar%C3%ADa%2C%20Palma%20de%20Mallorca%2C%20Espa%C3%B1a%2C%202022-10-06%2C%20DD%2016-18%20HDR.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-seu-cathedral.jpg",
       "ticket_url": "https://catedraldemallorca.org/visita/",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Catedral%20de%20Santa%20Mar%C3%ADa%2C%20Palma%20de%20Mallorca%2C%20Espa%C3%B1a%2C%202022-10-06%2C%20DD%2016-18%20HDR.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-seu-cathedral.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Palma_Cathedral_facade.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-seu-cathedral-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "La icónica catedral gótica de Mallorca con vistas sobre la Bahía de Palma, con elementos interiores diseñados por Antoni Gaudí. Una de las catedrales góticas más grandes de Europa.",
@@ -618,16 +619,17 @@
         "Views over the entire bay of Palma"
       ],
       "price_level": "BUDGET",
-      "thumbnail_url": "file:///android_asset/images/culture-bellver-castle.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-bellver-castle.jpg",
       "ticket_url": "https://castelldebellver.palma.es/en/tickets",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/culture-bellver-castle.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-bellver-castle.jpg",
+          "source": "PEXELS"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Castell_de_Bellver_aeri.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-bellver-castle-2.jpg",
+          "source": "AETIB",
+          "author": "Pedro Coll"
         }
       ],
       "description_es": "Singular castillo gótico circular del siglo XIV, enclavado en un bosque de pinos sobre Palma con vistas panorámicas a la bahía.",
@@ -667,12 +669,16 @@
         "Combine with nearby Bellver Castle"
       ],
       "price_level": "MID",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miro%27s%20Studio%20Sert%20-%20Palma%20de%20Mallorca.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-fundacio-miro.jpg",
       "ticket_url": "https://miromallorca.com/en/visit/",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Miro%27s%20Studio%20Sert%20-%20Palma%20de%20Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-fundacio-miro.jpg",
+          "source": "UNSPLASH"
+        },
+        {
+          "url": "file:///android_asset/images/place-fundacio-miro-2.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "El estudio y fundación del artista Joan Miró, que conserva sus espacios de trabajo originales y una colección permanente de sus obras.",
@@ -713,12 +719,17 @@
       ],
       "price_level": "BUDGET",
       "website": "https://esbaluard.org",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Es%20Baluard%20Palma.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-es-baluard.jpg",
       "ticket_url": "https://www.esbaluard.org/en/visit/",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Es%20Baluard%20Palma.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-es-baluard.jpg",
+          "source": "AETIB",
+          "author": "Jaume Capella"
+        },
+        {
+          "url": "file:///android_asset/images/place-es-baluard-2.jpg",
+          "source": "UNSPLASH"
         }
       ],
       "description_es": "Museo de Arte Moderno y Contemporáneo ubicado en los bastiones del siglo XVI de Palma. La colección permanente incluye obras de Miró, Picasso y grandes artistas mallorquines, con terraza panorámica sobre la bahía.",
@@ -1235,15 +1246,15 @@
       ],
       "price_level": "MID",
       "website": "https://covesdeldrach.com",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Martel%20Lake%20Coves%20del%20Drac%20Porto%20Cristo%20Mallorca.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-coves-drach.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Martel%20Lake%20Coves%20del%20Drac%20Porto%20Cristo%20Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-coves-drach.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Coves_del_Drac_interior.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-coves-drach-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Espectaculares cuevas subterráneas que albergan uno de los lagos subterráneos más grandes del mundo, con conciertos de música clásica en barcas iluminadas.",
@@ -1797,16 +1808,18 @@
         "GR221",
         "religious"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Escorca_Lluc_-_Santuari_01_ies.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-monestir-lluc.jpg",
       "ticket_url": "https://www.lluc.net/es/visita",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Escorca_Lluc_-_Santuari_01_ies.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-monestir-lluc.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lluc_monastery_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-monestir-lluc-2.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
       "description_es": "El lugar de peregrinación más importante de Mallorca, en un valle de montaña de Escorca. El monasterio del siglo XIII alberga la Virgen Negra, patrona de la isla, y un afamado coro de niños.",
@@ -2086,12 +2099,12 @@
         "arabic",
         "historical"
       ],
-      "thumbnail_url": "file:///android_asset/images/nature-jardins-alfabia.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-jardins-alfabia.jpg",
       "ticket_url": "https://jardinesalfabia.com/es/visita/",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/nature-jardins-alfabia.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-jardins-alfabia.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Jardines históricos de inspiración morisca del siglo XII, alimentados por manantiales naturales al pie de la Tramuntana. Pérgolas de glicinas, canales de agua árabes y una impresionante avenida de palmeras.",
@@ -2145,11 +2158,12 @@
       ],
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/054%20Can%20Prunera%2C%20c.%20Lluna%2090%20%28S%C3%B3ller%29%2C%20porta%20modernista.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-can-prunera-soller.jpg",
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/054%20Can%20Prunera%2C%20c.%20Lluna%2090%20%28S%C3%B3ller%29%2C%20porta%20modernista.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-can-prunera-soller.jpg",
       "ticket_url": "https://canprunera.com/en/visit/",
       "description_es": "Mansión modernista perfectamente conservada en el corazón de Sóller, construida en 1911 con el mobiliario original, vitrales y techos pintados de la familia Prunera.",
       "tips_es": [
@@ -2202,11 +2216,12 @@
       ],
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/004%20Can%20Morell%2C%20o%20Casal%20Solleric%2C%20passeig%20del%20Born%2027%20%28Palma%29.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-casal-solleric-palma.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/004%20Can%20Morell%2C%20o%20Casal%20Solleric%2C%20passeig%20del%20Born%2027%20%28Palma%29.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-casal-solleric-palma.jpg",
       "description_es": "Imponente palacio barroco mallorquín del siglo XVIII en el Passeig del Born, construido en 1763. Hoy es el principal centro de arte contemporáneo de Palma.",
       "tips_es": [
         "El palacio está en el Paseo del Borne, en el corazón de Palma",
@@ -2260,11 +2275,12 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/culture-juan-march.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-fundacio-juan-march-palma.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/culture-juan-march.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-fundacio-juan-march-palma.jpg",
       "description_es": "Colección de arte español del siglo XX en un palacio mallorquín restaurado del siglo XVII. La colección permanente reúne obras de Picasso, Miró, Dalí y Saura.",
       "tips_es": [
         "La colección incluye obras de Picasso, Miró y Dalí",
@@ -2317,11 +2333,12 @@
       ],
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Majorque%20Palma%20Carrer%20Portella%20Museu%20Mallorca%20-%20panoramio.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-museu-de-mallorca.jpg",
+          "source": "AETIB",
+          "author": "Jaume Capella"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Majorque%20Palma%20Carrer%20Portella%20Museu%20Mallorca%20-%20panoramio.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-museu-de-mallorca.jpg",
       "ticket_url": "https://www.illesbalears.travel/es/mallorca/museo-de-mallorca",
       "description_es": "Instalado en un palacio renacentista del siglo XVI en el casco antiguo de Palma, alberga la colección arqueológica y de bellas artes más importante de la isla, desde la prehistoria hasta el siglo XIX.",
       "tips_es": [
@@ -2432,11 +2449,11 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/culture-teatre-principal.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-teatre-principal-palma.jpg",
+          "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/culture-teatre-principal.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-teatre-principal-palma.jpg",
       "ticket_url": "https://www.teatreprincipal.com/es/entrades",
       "description_es": "La gran ópera de Mallorca, inaugurada en 1860 y restaurada a su esplendor neoclásico original. Sede de ópera, ballet y conciertos sinfónicos durante toda la temporada cultural.",
       "tips_es": [
@@ -2489,11 +2506,11 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/culture-museu-diocesa.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-museu-art-sacre-palma.jpg",
+          "source": "UNSPLASH"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/culture-museu-diocesa.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-museu-art-sacre-palma.jpg",
       "ticket_url": "https://www.museuartsacredemallorca.org/visita/horarios-y-tarifas",
       "description_es": "Enclavado en el Palacio Episcopal junto a La Seu, alberga una de las mejores colecciones de pintura gótica sobre tabla mallorquina existentes, con obras del siglo XIII al XVIII.",
       "tips_es": [
@@ -8025,7 +8042,7 @@
       "description": "A full day exploring Palma's stunning architectural heritage, from Gothic cathedral to contemporary art in the ancient city walls.",
       "category": "CULTURE",
       "duration_days": 1,
-      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Catedral_de_Santa_Maria_%28Palma_de_Mallorca%29_--_03.jpg/1280px-Catedral_de_Santa_Maria_%28Palma_de_Mallorca%29_--_03.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-palma-culture-cover.jpg",
       "best_seasons": [
         "Spring",
         "Autumn",
@@ -8105,6 +8122,11 @@
           "note_de": "Später Nachmittag — Mirós erhaltenes Atelier",
           "day_number": 1
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-palma-culture-gallery-1.jpg",
+        "file:///android_asset/images/itin-palma-culture-gallery-2.jpg",
+        "file:///android_asset/images/itin-palma-culture-gallery-3.jpg"
       ]
     },
     {
@@ -8528,7 +8550,7 @@
       "category": "CULTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-palma-soller.jpg",
+      "cover_photo_url": "file:///android_asset/images/itin-palma-soller-cover.jpg",
       "total_distance_km": 100.0,
       "highlights": [
         "Valldemossa Carthusian Monastery — Chopin museum & potato pastry",
@@ -8695,6 +8717,10 @@
           "note_de": "Schnelle Rückkehr in die Hauptstadt durch den Sóller-Tunnel (Maut, Ma-11). Distanz: ≈ 30 km, 25 Min.",
           "day_number": 1
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-palma-soller-gallery-1.jpg",
+        "file:///android_asset/images/itin-palma-soller-gallery-2.jpg"
       ]
     },
     {
