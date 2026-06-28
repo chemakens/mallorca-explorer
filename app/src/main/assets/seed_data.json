@@ -619,17 +619,17 @@
         "Views over the entire bay of Palma"
       ],
       "price_level": "BUDGET",
-      "thumbnail_url": "file:///android_asset/images/place-bellver-castle-2.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-bellver-castle.jpg",
       "ticket_url": "https://castelldebellver.palma.es/en/tickets",
       "photo_urls": [
+        {
+          "url": "file:///android_asset/images/place-bellver-castle.jpg",
+          "source": "PEXELS"
+        },
         {
           "url": "file:///android_asset/images/place-bellver-castle-2.jpg",
           "source": "AETIB",
           "author": "Pedro Coll"
-        },
-        {
-          "url": "file:///android_asset/images/place-bellver-castle.jpg",
-          "source": "PEXELS"
         }
       ],
       "description_es": "Singular castillo gótico circular del siglo XIV, enclavado en un bosque de pinos sobre Palma con vistas panorámicas a la bahía.",
