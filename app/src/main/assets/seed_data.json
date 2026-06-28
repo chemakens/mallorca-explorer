@@ -3840,11 +3840,11 @@
         "terrace",
         "traditional"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-rest-can-torrat.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-rest-can-torrat.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Institución mallorquina desde 1972 y el restaurante de parrilla de carbón definitivo de la Playa de Palma. Carnes y pescados a la brasa en un ambiente mediterráneo animado y familiar.",
@@ -3895,11 +3895,15 @@
         "terrace",
         "seafood"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lomo_de_cerdo_a_la_brasa.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-rest-can-pedro-genova.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Lomo_de_cerdo_a_la_brasa.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-rest-can-pedro-genova.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-rest-can-pedro-genova-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Desde 1976, uno de los restaurantes más queridos de Génova, el pueblo en las alturas de Palma. Carnes a la piedra, pescado fresco y platos clásicos mallorquines en un ambiente acogedor.",
@@ -3950,11 +3954,15 @@
         "paella",
         "views"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Camp_de_Mar_Mallorca.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-rest-illeta-camp-de-mar.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Camp_de_Mar_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-rest-illeta-camp-de-mar.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-rest-illeta-camp-de-mar-2.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Uno de los escenarios gastronómicos más únicos de Mallorca: un restaurante en un pequeño islote frente a la playa de Camp de Mar, al que se llega por una pasarela de madera sobre el mar.",
@@ -5485,6 +5493,10 @@
         {
           "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat%20Pere%20Garau.jpg?width=800",
           "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-mercat-pere-garau-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat%20Pere%20Garau.jpg?width=800",
@@ -5535,11 +5547,15 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paseo%20del%20Borne%20-%20Palma%20de%20Mallorca%2001.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mercat-artesanal-palma.jpg",
+          "source": "AETIB"
+        },
+        {
+          "url": "file:///android_asset/images/place-mercat-artesanal-palma-2.jpg",
+          "source": "AETIB"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paseo%20del%20Borne%20-%20Palma%20de%20Mallorca%2001.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-mercat-artesanal-palma.jpg",
       "price_level": "FREE",
       "rating": 4.2,
       "review_count": 890,
@@ -5587,11 +5603,11 @@
       "municipality": "Sineu",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sineu%20-%20market%20day%20-%20panoramio%20%2817%29.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mercat-gastronomic-sineu.jpg",
+          "source": "UNSPLASH"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sineu%20-%20market%20day%20-%20panoramio%20%2817%29.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-mercat-gastronomic-sineu.jpg",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 1740,
@@ -7496,11 +7512,11 @@
         "Smart casual dress code required"
       ],
       "price_level": "EXPENSIVE",
-      "thumbnail_url": "file:///android_asset/images/mhares-sea-club.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-mhares-sea-club.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mhares-sea-club.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mhares-sea-club.jpg",
+          "source": "MINE"
         }
       ],
       "tags": [
