@@ -1065,11 +1065,15 @@
         "Try the local sobrassada sausage"
       ],
       "price_level": "MID",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat.de.Santa.Catalina.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-mercat-santa-catalina.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat.de.Santa.Catalina.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mercat-santa-catalina.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-mercat-santa-catalina-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "El animado barrio del mercado de Palma, lleno de bares de pintxos, puestos de productos frescos y bares de vinos de ambiente auténtico.",
@@ -4012,11 +4016,15 @@
         "local",
         "lechona"
       ],
-      "thumbnail_url": "https://images.unsplash.com/photo-1752245072335-a4ca4ef01431?w=800&fm=jpg&q=80",
+      "thumbnail_url": "file:///android_asset/images/place-rest-sa-curva-hipodromo.jpg",
       "photo_urls": [
         {
-          "url": "https://images.unsplash.com/photo-1752245072335-a4ca4ef01431?w=800&fm=jpg&q=80",
-          "source": "UNSPLASH"
+          "url": "file:///android_asset/images/place-rest-sa-curva-hipodromo.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-rest-sa-curva-hipodromo-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Favorito local dentro del hipódromo de Son Pardo en las afueras de Palma. El legendario bufé lleva décadas atrayendo a familias mallorquinas con cocina local abundante y de calidad.",
@@ -4066,11 +4074,15 @@
         "paella",
         "accessible"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-rest-matias-son-ferriol.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paella_de_mariscos.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-rest-matias-son-ferriol.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-rest-matias-son-ferriol-2.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Querido restaurante de bufé local en Son Ferriol, junto al Hospital Son Llàtzer. Generosas bandejas de paella, fideuà, carnes a la brasa y guisos mallorquines a precios honestos.",
@@ -4121,11 +4133,15 @@
         "bohemian",
         "paambooli"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sobrassada%20en%20budell%20natural.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-rest-sa-ximbomba-genova.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Sobrassada%20en%20budell%20natural.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-rest-sa-ximbomba-genova.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-rest-sa-ximbomba-genova-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Institución centenaria de Génova, hoy una de las pizzerías más queridas de Palma. Las pizzas napolitanas se elaboran con masa de fermentación larga y se hornean en horno de leña.",
@@ -5386,11 +5402,16 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado%20del%20Olivar.%20Palma%20de%20Mallorca.%20-%20panoramio.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mercat-olivar.jpg",
+          "source": "UNSPLASH"
+        },
+        {
+          "url": "file:///android_asset/images/place-mercat-olivar-2.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercado%20del%20Olivar.%20Palma%20de%20Mallorca.%20-%20panoramio.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-mercat-olivar.jpg",
       "price_level": "LOW",
       "rating": 4.4,
       "review_count": 3820,
@@ -5438,11 +5459,15 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "https://images.unsplash.com/photo-1561385945-c99789cd12d1?w=800&fm=jpg&q=80",
-          "source": "UNSPLASH"
+          "url": "file:///android_asset/images/place-mercat-san-juan.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-mercat-san-juan-2.jpg",
+          "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "https://images.unsplash.com/photo-1561385945-c99789cd12d1?w=800&fm=jpg&q=80",
+      "thumbnail_url": "file:///android_asset/images/place-mercat-san-juan.jpg",
       "price_level": "MODERATE",
       "rating": 4.5,
       "review_count": 2140,
@@ -5491,15 +5516,15 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat%20Pere%20Garau.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-mercat-pere-garau.jpg",
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/place-mercat-pere-garau-2.jpg",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mercat%20Pere%20Garau.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-mercat-pere-garau.jpg",
       "price_level": "FREE",
       "rating": 4.3,
       "review_count": 1260,
@@ -5605,6 +5630,11 @@
         {
           "url": "file:///android_asset/images/place-mercat-gastronomic-sineu.jpg",
           "source": "UNSPLASH"
+        },
+        {
+          "url": "file:///android_asset/images/place-mercat-gastronomic-sineu-2.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-mercat-gastronomic-sineu.jpg",
@@ -7761,8 +7791,17 @@
         "gourmet",
         "waterfront"
       ],
-      "thumbnail_url": "",
-      "photo_urls": []
+      "thumbnail_url": "file:///android_asset/images/place-mercat-1930.jpg",
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/place-mercat-1930.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-mercat-1930-2.jpg",
+          "source": "PEXELS"
+        }
+      ]
     }
   ],
   "itineraries": [
@@ -10467,7 +10506,7 @@
       "category": "GASTRONOMY",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/itin-palma-markets.webp",
+      "cover_photo_url": "file:///android_asset/images/itin-palma-markets.jpg",
       "total_distance_km": 5.0,
       "highlights": [
         "Fresh fish at l'Olivar before 9am",
@@ -10534,6 +10573,9 @@
           "note": "Waterfront food hall for a relaxed late lunch — tapas, Iberian ham and craft burgers with views of the bay",
           "note_es": "Mercado junto al mar para un almuerzo relajado — tapas, jamón ibérico y hamburguesas artesanas con vistas a la bahía"
         }
+      ],
+      "gallery_photos": [
+        "file:///android_asset/images/itin-palma-markets-2.jpg"
       ]
     },
     {
