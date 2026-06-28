@@ -336,7 +336,7 @@ private fun ItineraryDetailContent(
                 }
 
                 // ── BLOQUE 2: Timeline de ruta SUP (reemplaza stops genéricos si hay waypoints) ──
-                if (itinerary.routeWaypoints.isNotEmpty()) {
+                if (itinerary.routeWaypoints.any { it.name.isNotBlank() }) {
                     Text(stringResource(R.string.itinerary_step_by_step), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                     Spacer(Modifier.height(10.dp))
                     SupRouteTimeline(waypoints = itinerary.routeWaypoints)
