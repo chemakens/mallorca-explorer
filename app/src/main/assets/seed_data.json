@@ -1049,50 +1049,6 @@
       "tips_zh": []
     },
     {
-      "id": "restaurant-mola",
-      "name": "Restaurant Es Moli d'en Bou",
-      "name_es": "Es Moli d'en Bou",
-      "description": "Michelin-starred restaurant in a restored olive oil mill, showcasing contemporary Mallorcan cuisine.",
-      "category": "GASTRONOMY",
-      "latitude": 39.5808,
-      "longitude": 3.3771,
-      "municipality": "Sant Llorenç des Cardassar",
-      "rating": 4.8,
-      "review_count": 680,
-      "tips": [
-        "Book well in advance — popular year-round",
-        "Tasting menu recommended",
-        "The wine cellar has excellent local Mallorcan labels"
-      ],
-      "price_level": "EXPENSIVE",
-      "thumbnail_url": "https://images.unsplash.com/photo-1750943082452-c714763f73b2?w=800&fm=jpg&q=80",
-      "photo_urls": [
-        {
-          "url": "https://images.unsplash.com/photo-1750943082452-c714763f73b2?w=800&fm=jpg&q=80",
-          "source": "UNSPLASH"
-        }
-      ],
-      "description_es": "Restaurante con estrella Michelin en un molino de aceite restaurado, que muestra lo mejor de la cocina mallorquina contemporánea.",
-      "tips_es": [
-        "Reserva con meses de antelación para el menú degustación",
-        "El chef Joan Mora trabaja con productores locales de Mallorca",
-        "El maridaje de vinos mallorquines es excepcional"
-      ],
-      "name_de": "Restaurant Es Moli d'en Bou",
-      "description_de": "Mit einem Michelin-Stern ausgezeichnetes Restaurant inmitten der Tramuntana. Küchenchef Joan Mora verbindet mallorquinische Traditionen mit zeitgenössischer Haute Cuisine.",
-      "tips_de": [
-        "Menü-Degustationen Monate im Voraus buchen",
-        "Küchenchef Joan Mora arbeitet mit lokalen Erzeugern",
-        "Die Weinbegleitung mit mallorquinischen Weinen ist hervorragend"
-      ],
-      "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
-      "name_zh": "",
-      "description_zh": "",
-      "tips_zh": []
-    },
-    {
       "id": "restaurant-juanito",
       "name": "Bar-Restaurant Juanito",
       "name_es": "Bar-Restaurant Juanito",
@@ -1172,54 +1128,6 @@
         "Markt von Montag bis Samstag morgens geöffnet",
         "Die Bars ringsum servieren authentische mallorquinische Frühstücke",
         "Das Viertel hat das beste Gastroangebot Palmas"
-      ],
-      "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
-      "name_zh": "",
-      "description_zh": "",
-      "tips_zh": []
-    },
-    {
-      "id": "bodega-trevin",
-      "name": "Bodega Trevin",
-      "name_es": "Bodega Trevin",
-      "description": "A traditional Mallorcan winery producing excellent red wines from local Callet and Mantonegro grapes.",
-      "category": "GASTRONOMY",
-      "latitude": 39.6556,
-      "longitude": 2.9722,
-      "municipality": "Binissalem",
-      "rating": 4.5,
-      "review_count": 450,
-      "tips": [
-        "Binissalem is Mallorca's main wine-producing region",
-        "Book a tasting in advance",
-        "Combine with a visit to Binissalem village"
-      ],
-      "price_level": "MID",
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca-Celler%20cooperatiu%20de%20Felanitx-05E.jpg?width=800",
-      "photo_urls": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Mallorca-Celler%20cooperatiu%20de%20Felanitx-05E.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Binissalem_Mallorca.jpg?width=800",
-          "source": "OTHER"
-        }
-      ],
-      "description_es": "Bodega mallorquina tradicional que produce excelentes vinos tintos con uvas locales Callet y Mantonegro de viñedos propios.",
-      "tips_es": [
-        "Las visitas incluyen cata de vino y aceite de oliva mallorquín",
-        "El Manto Negro es la variedad tinta más representativa de Mallorca",
-        "Llama con antelación para reservar visita guiada"
-      ],
-      "name_de": "Weingut Trevin",
-      "description_de": "Traditionsweingut mit eigenen Rebflächen, das die autochthonen Sorten Mallorcas wie Manto Negro und Prensal Blanc produziert. Führungen und Weinproben auf Anfrage.",
-      "tips_de": [
-        "Führungen mit Wein- und Olivenölverkostung inbegriffen",
-        "Manto Negro ist die typische Rotweinsorte Mallorcas",
-        "Im Voraus für geführte Touren anrufen"
       ],
       "name_ru": "",
       "description_ru": "",
