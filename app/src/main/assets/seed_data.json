@@ -3281,15 +3281,15 @@
         "sup_launch",
         "facing:0"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-sup-port-pollenca.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollensa.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-port-pollenca.jpg",
+          "source": "PIXABAY"
         },
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Pollença_Mallorca.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-port-pollenca-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "La amplia y protegida bahía de Port de Pollença es la base ideal para expediciones avanzadas de SUP por la costa de la Península de Formentor.",
@@ -6858,11 +6858,11 @@
         "sup_launch",
         "facing:45"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-punta-negra.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-punta-negra-sant-vicenc.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-punta-negra.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-punta-negra-sant-vicenc.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "El cabo oscuro de caliza que marca la salida norte de la bahía de Cala Sant Vicenç. Desde el agua, el contraste entre la cara de roca negra y el mar esmeralda es de una belleza impactante.",
@@ -6919,7 +6919,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-cavall-bernat-coves-blanques.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         }
       ],
       "description_es": "El tramo más dramático de la costa de Sant Vicenç: verticales acantilados de caliza blanca se elevan directamente desde el mar mientras el pico del Cavall Bernat domina sobre ellos.",
@@ -6974,11 +6974,11 @@
         "sup_launch",
         "facing:45"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-cueva-azul.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-cueva-larga-azul-sant-vicenc.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-cueva-azul.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-cueva-larga-azul-sant-vicenc.jpg",
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Cueva marina de más de 40 metros de profundidad donde la luz turquesa desde abajo crea el efecto de 'cueva azul' en las paredes y el techo. Una de las experiencias de kayak más memorables de Mallorca.",
@@ -8777,9 +8777,14 @@
       "cover_photo": {
         "url": "file:///android_asset/images/itin-sup-sant-vicenc.jpg",
         "source": "AETIB",
-        "author": "Manuela Muñoz"
+        "author": "Pedro Coll"
       },
-      "gallery_photos": []
+      "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-sant-vicenc-2.jpg",
+          "source": "PEXELS"
+        }
+      ]
     },
     {
       "id": "itin-sup-formentor",
@@ -9104,9 +9109,14 @@
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-sup-portocolom.jpg",
-        "source": "PEXELS"
+        "source": "PIXABAY"
       },
-      "gallery_photos": []
+      "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-portocolom-2.jpg",
+          "source": "PEXELS"
+        }
+      ]
     },
     {
       "id": "itin-sup-cala-ratjada",
@@ -9210,7 +9220,12 @@
         "source": "AETIB",
         "author": "Eduardo Miralles"
       },
-      "gallery_photos": []
+      "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-cala-ratjada-2.jpg",
+          "source": "PEXELS"
+        }
+      ]
     },
     {
       "id": "itin-sup-portals-vells",
@@ -9317,7 +9332,7 @@
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-sup-portals-vells.jpg",
-        "source": "PIXABAY"
+        "source": "PEXELS"
       }
     },
     {
@@ -9421,7 +9436,12 @@
         "url": "file:///android_asset/images/itin-sup-santa-ponsa.jpg",
         "source": "PEXELS"
       },
-      "gallery_photos": []
+      "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-santa-ponsa-2.jpg",
+          "source": "PEXELS"
+        }
+      ]
     },
     {
       "id": "itin-sup-camp-de-mar",
@@ -9524,7 +9544,12 @@
         "url": "file:///android_asset/images/itin-sup-camp-de-mar.jpg",
         "source": "MINE"
       },
-      "gallery_photos": []
+      "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-camp-de-mar-2.jpg",
+          "source": "PEXELS"
+        }
+      ]
     },
     {
       "id": "itin-sup-port-adriano",
@@ -9636,7 +9661,12 @@
         "url": "file:///android_asset/images/itin-sup-port-adriano.jpg",
         "source": "PIXABAY"
       },
-      "gallery_photos": []
+      "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-port-adriano-2.jpg",
+          "source": "PEXELS"
+        }
+      ]
     },
     {
       "id": "itin-sup-soller",
@@ -9753,7 +9783,12 @@
         "url": "file:///android_asset/images/itin-sup-soller.jpg",
         "source": "AETIB"
       },
-      "gallery_photos": []
+      "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-soller-2.jpg",
+          "source": "PEXELS"
+        }
+      ]
     },
     {
       "id": "itin-sup-cala-major",
@@ -9861,7 +9896,12 @@
         "source": "AETIB",
         "author": "Pedro Coll"
       },
-      "gallery_photos": []
+      "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-cala-major-2.jpg",
+          "source": "PEXELS"
+        }
+      ]
     },
     {
       "id": "itin-lrt-paseo-maritimo",
@@ -11064,41 +11104,33 @@
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g1.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-2.jpg",
+          "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g2.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-3.jpg",
+          "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g3.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-4.jpg",
+          "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g5.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-5.jpg",
+          "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g6.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-6.jpg",
+          "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g7.jpg",
-          "source": "OTHER"
-        },
-        {
-          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g8.jpg",
-          "source": "OTHER"
-        },
-        {
-          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g9.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-7.jpg",
+          "source": "PEXELS"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-cavall-bernat-v2.jpg",
-        "source": "OTHER"
+        "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc.jpg",
+        "source": "UNSPLASH"
       }
     }
   ],
