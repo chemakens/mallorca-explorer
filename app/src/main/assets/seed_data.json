@@ -3414,11 +3414,11 @@
         "sup_launch",
         "facing:225"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-portals-vells.webp",
+      "thumbnail_url": "file:///android_asset/images/place-sup-portals-vells.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-portals-vells.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-portals-vells.jpg",
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/place-sup-portals-vells-2.jpg",
@@ -3654,11 +3654,15 @@
         "sup_launch",
         "facing:315"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-sup-soller.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-soller.jpg",
+          "source": "AETIB"
+        },
+        {
+          "url": "file:///android_asset/images/place-sup-soller-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "La bahía circular y protegida de Port de Sóller, rodeada por montañas de la Tramuntana que se sumergen en el mar, es uno de los escenarios de SUP más espectaculares de Mallorca.",
