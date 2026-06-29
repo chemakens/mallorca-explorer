@@ -1025,7 +1025,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/mirador-ses-barques.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "description_es": "Espectacular mirador con vistas al Port de Sóller y a toda la bahía, con un restaurante tradicional que sirve cocina mallorquina.",
@@ -11553,5 +11553,6 @@
       "code": "TORRAT-APP",
       "valid_until": "2026-09-30"
     }
-  ]
+  ],
+  "CURRENT_SEED_VERSION": 130
 }
