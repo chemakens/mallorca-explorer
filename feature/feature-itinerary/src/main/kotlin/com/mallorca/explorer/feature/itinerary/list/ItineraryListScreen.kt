@@ -126,9 +126,9 @@ private fun ItineraryListItem(
     ) {
         Box {
             // Hero image — full bleed
-            if (itinerary.coverPhotoUrl.isNotEmpty()) {
+            if (itinerary.coverPhoto.url.isNotEmpty()) {
                 AsyncImage(
-                    model = itinerary.coverPhotoUrl,
+                    model = itinerary.coverPhoto.url,
                     contentDescription = null,
                     contentScale = ContentScale.Crop,
                     modifier = Modifier.fillMaxSize(),

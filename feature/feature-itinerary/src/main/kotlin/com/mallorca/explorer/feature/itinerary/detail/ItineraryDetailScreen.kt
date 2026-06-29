@@ -21,6 +21,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.material.icons.outlined.BookmarkAdd
+import androidx.compose.material.icons.outlined.PhotoCamera
 import androidx.compose.material.icons.outlined.CheckCircle
 import androidx.compose.material.icons.outlined.Map
 import androidx.compose.material.icons.outlined.RadioButtonUnchecked
@@ -55,6 +56,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.ItineraryStop
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
+import com.mallorca.explorer.core.domain.model.attributionText
 import androidx.compose.ui.res.stringResource
 import com.mallorca.explorer.feature.itinerary.R
 import kotlinx.collections.immutable.ImmutableSet
@@ -205,19 +207,19 @@ private fun ItineraryDetailContent(
     onViewOnMap: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
-    val photoUrls = itinerary.galleryPhotoUrls.ifEmpty {
-        if (itinerary.coverPhotoUrl.isNotEmpty()) listOf(itinerary.coverPhotoUrl) else emptyList()
+    val photos = itinerary.galleryPhotos.ifEmpty {
+        if (itinerary.coverPhoto.url.isNotEmpty()) listOf(itinerary.coverPhoto) else emptyList()
     }
-    val pagerState = rememberPagerState { photoUrls.size.coerceAtLeast(1) }
+    val pagerState = rememberPagerState { photos.size.coerceAtLeast(1) }
 
     Box(modifier = modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxSize()) {
             // ── Hero carousel (outside scroll so horizontal swipe works) ──
             Box(modifier = Modifier.fillMaxWidth().height(260.dp)) {
                 HorizontalPager(state = pagerState, modifier = Modifier.fillMaxSize()) { page ->
-                    if (photoUrls.isNotEmpty()) {
+                    if (photos.isNotEmpty()) {
                         SubcomposeAsyncImage(
-                            model = photoUrls[page],
+                            model = photos[page].url,
                             contentDescription = itinerary.title,
                             contentScale = ContentScale.Crop,
                             modifier = Modifier.fillMaxSize(),
@@ -249,13 +251,37 @@ private fun ItineraryDetailContent(
                 ) {
                     Icon(Icons.Outlined.ArrowBack, stringResource(R.string.itinerary_back_cd), tint = Color.White)
                 }
+                // Attribution overlay (AETIB requirement)
+                photos.getOrNull(pagerState.currentPage)?.attributionText()?.let { attribution ->
+                    Row(
+                        modifier = Modifier
+                            .align(Alignment.BottomEnd)
+                            .padding(8.dp)
+                            .background(Color.Black.copy(alpha = 0.55f), RoundedCornerShape(6.dp))
+                            .padding(horizontal = 8.dp, vertical = 3.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(4.dp),
+                    ) {
+                        Icon(
+                            Icons.Outlined.PhotoCamera,
+                            contentDescription = null,
+                            tint = Color.White,
+                            modifier = Modifier.size(12.dp),
+                        )
+                        Text(
+                            text = attribution,
+                            color = Color.White,
+                            style = MaterialTheme.typography.labelSmall,
+                        )
+                    }
+                }
                 // Dot indicators
-                if (photoUrls.size > 1) {
+                if (photos.size > 1) {
                     Row(
                         modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 44.dp),
                         horizontalArrangement = Arrangement.spacedBy(6.dp),
                     ) {
-                        repeat(photoUrls.size) { i ->
+                        repeat(photos.size) { i ->
                             Box(
                                 modifier = Modifier
                                     .size(if (pagerState.currentPage == i) 8.dp else 6.dp)

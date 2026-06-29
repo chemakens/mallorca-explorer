@@ -96,7 +96,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 122
+        const val CURRENT_SEED_VERSION = 123
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -212,7 +212,7 @@ class SeedDataWorker @AssistedInject constructor(
     @Serializable data class SeedItinerary(
         val id: String, val title: String, val description: String = "",
         val category: String, val duration_days: Int = 1,
-        val difficulty: String? = null, val cover_photo_url: String = "",
+        val difficulty: String? = null, val cover_photo: SeedPhotoUrl = SeedPhotoUrl(""),
         val total_distance_km: Float? = null,
         val highlights: List<String> = emptyList(),
         val best_seasons: List<String> = emptyList(),
@@ -223,7 +223,7 @@ class SeedDataWorker @AssistedInject constructor(
         val qr_entry_point: SeedQrEntryPoint? = null,
         val commercial_block: SeedCommercialBlock? = null,
         val route_waypoints: List<SeedRouteWaypoint> = emptyList(),
-        val gallery_photos: List<String> = emptyList(),
+        val gallery_photos: List<SeedPhotoUrl> = emptyList(),
     ) {
         fun toEntity(): ItineraryEntity {
             val j = Json
@@ -232,7 +232,8 @@ class SeedDataWorker @AssistedInject constructor(
             return ItineraryEntity(
                 id = id, title = title, description = description,
                 category = category.uppercase(), durationDays = duration_days,
-                difficulty = difficulty?.uppercase(), coverPhotoUrl = cover_photo_url,
+                difficulty = difficulty?.uppercase(),
+                coverPhotoUrl = j.encodeToString(SeedPhotoUrl.serializer(), cover_photo),
                 totalDistanceKm = total_distance_km,
                 highlightsJson = j.encodeToString(ListSerializer(String.serializer()), highlights),
                 bestSeasonsJson = j.encodeToString(ListSerializer(String.serializer()), best_seasons),
@@ -242,7 +243,7 @@ class SeedDataWorker @AssistedInject constructor(
                 qrEntryPointJson = qr_entry_point?.let { j.encodeToString(SeedQrEntryPoint.serializer(), it) },
                 commercialBlockJson = commercial_block?.let { j.encodeToString(SeedCommercialBlock.serializer(), it) },
                 routeWaypointsJson = j.encodeToString(ListSerializer(SeedRouteWaypoint.serializer()), route_waypoints),
-                galleryPhotosJson = j.encodeToString(ListSerializer(String.serializer()), gallery_photos),
+                galleryPhotosJson = j.encodeToString(ListSerializer(SeedPhotoUrl.serializer()), gallery_photos),
             )
         }
     }

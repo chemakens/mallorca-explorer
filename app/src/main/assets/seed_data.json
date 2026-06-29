@@ -7815,7 +7815,6 @@
       "description": "Discover Mallorca's finest beaches, from the wild dunes of Es Trenc to the turquoise waters of Formentor.",
       "category": "BEACH",
       "duration_days": 3,
-      "cover_photo_url": "file:///android_asset/images/itin-beaches-3d-cover.jpg",
       "best_seasons": [
         "Spring",
         "Summer"
@@ -7902,7 +7901,12 @@
           "note_de": "Winzige Bucht — vor 9 Uhr ankommen",
           "day_number": 3
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-beaches-3d-cover.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-tramuntana-2d",
@@ -7911,7 +7915,6 @@
       "category": "HIKING",
       "duration_days": 2,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-tramuntana-2d-cover.jpg",
       "best_seasons": [
         "Spring",
         "Autumn"
@@ -8001,9 +8004,19 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-tramuntana-2d-gallery-1.jpg",
-        "file:///android_asset/images/itin-tramuntana-2d-gallery-2.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-tramuntana-2d-gallery-1.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-tramuntana-2d-gallery-2.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-tramuntana-2d-cover.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-palma-culture",
@@ -8011,7 +8024,6 @@
       "description": "A full day exploring Palma's stunning architectural heritage, from Gothic cathedral to contemporary art in the ancient city walls.",
       "category": "CULTURE",
       "duration_days": 1,
-      "cover_photo_url": "file:///android_asset/images/itin-palma-culture-cover.jpg",
       "best_seasons": [
         "Spring",
         "Autumn",
@@ -8093,10 +8105,23 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-palma-culture-gallery-1.jpg",
-        "file:///android_asset/images/itin-palma-culture-gallery-2.jpg",
-        "file:///android_asset/images/itin-palma-culture-gallery-3.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-palma-culture-gallery-1.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-palma-culture-gallery-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-palma-culture-gallery-3.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-palma-culture-cover.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-east-coast",
@@ -8104,7 +8129,6 @@
       "description": "Explore Mallorca's wild east coast, from prehistoric towns to hidden coves and spectacular sea caves.",
       "category": "BEACH",
       "duration_days": 2,
-      "cover_photo_url": "file:///android_asset/images/itin-east-coast-cover.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -8166,7 +8190,12 @@
           "note_de": "Wilder Strand — Weg durch Pinienwald",
           "day_number": 2
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-east-coast-cover.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-soller-valley",
@@ -8174,7 +8203,6 @@
       "description": "Spend a weekend in the stunning Sóller valley — vintage trains, mountain walks, village life and seafood.",
       "category": "TOWN",
       "duration_days": 2,
-      "cover_photo_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tren_de_Soller.jpg/1280px-Tren_de_Soller.jpg",
       "best_seasons": [
         "Spring",
         "Autumn"
@@ -8262,7 +8290,12 @@
           "note_de": "Abendliches Schwimmen beim Sonnenuntergang",
           "day_number": 2
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tren_de_Soller.jpg/1280px-Tren_de_Soller.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-west-coast-miradors",
@@ -8270,7 +8303,6 @@
       "description": "A spectacular day following the dramatic west coast road (Ma-10), stopping at Mallorca's finest clifftop viewpoints from Andratx to Deià with views of the Tramuntana mountains plunging into the sea.",
       "category": "VIEWPOINT",
       "duration_days": 1,
-      "cover_photo_url": "file:///android_asset/images/itin-west-coast-miradors-cover.jpg",
       "best_seasons": [
         "Spring",
         "Autumn",
@@ -8354,9 +8386,19 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-west-coast-miradors-cover.jpg",
-        "file:///android_asset/images/itin-west-coast-miradors-gallery-1.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-west-coast-miradors-cover.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-west-coast-miradors-gallery-1.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-west-coast-miradors-cover.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-formentor-viewpoints",
@@ -8364,7 +8406,6 @@
       "description": "Rise early for the most photogenic viewpoints on the Formentor peninsula — the iconic Es Colomer lookout and the historic lighthouse at the island's northern tip, best seen in the golden morning light.",
       "category": "VIEWPOINT",
       "duration_days": 1,
-      "cover_photo_url": "file:///android_asset/images/itin-formentor-viewpoints-cover.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -8430,9 +8471,19 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-formentor-viewpoints-cover.jpg",
-        "file:///android_asset/images/itin-formentor-viewpoints-gallery-1.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-formentor-viewpoints-cover.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-formentor-viewpoints-gallery-1.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-formentor-viewpoints-cover.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-palma-soller",
@@ -8441,7 +8492,6 @@
       "category": "CULTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-palma-soller-cover.jpg",
       "total_distance_km": 100.0,
       "highlights": [
         "Valldemossa Carthusian Monastery — Chopin museum & potato pastry",
@@ -8610,9 +8660,19 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-palma-soller-gallery-1.jpg",
-        "file:///android_asset/images/itin-palma-soller-gallery-2.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-palma-soller-gallery-1.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-palma-soller-gallery-2.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-palma-soller-cover.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-sup-sant-vicenc",
@@ -8621,7 +8681,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-sant-vicenc.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -8714,7 +8773,13 @@
           "lat": 39.9199,
           "lng": 3.0577
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-sant-vicenc.jpg",
+        "source": "AETIB",
+        "author": "Manuela Muñoz"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sup-formentor",
@@ -8723,7 +8788,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "HARD",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-formentor.jpg",
       "best_seasons": [
         "Spring",
         "Summer"
@@ -8830,7 +8894,12 @@
           "lat": 39.9619,
           "lng": 3.2139
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-formentor.jpg",
+        "source": "PIXABAY"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sup-mondrag",
@@ -8839,7 +8908,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-mondrag.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -8924,7 +8992,13 @@
           "lat": 39.3493,
           "lng": 3.189
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-mondrag.jpg",
+        "source": "AETIB",
+        "author": "Eduardo Miralles"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sup-portocolom",
@@ -8933,7 +9007,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-portocolom.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9028,7 +9101,12 @@
           "lat": 39.4186,
           "lng": 3.2599
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-portocolom.jpg",
+        "source": "PEXELS"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sup-cala-ratjada",
@@ -9037,7 +9115,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-cala-ratjada.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9127,7 +9204,13 @@
           "lat": 39.7112,
           "lng": 3.4663
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-cala-ratjada.jpg",
+        "source": "AETIB",
+        "author": "Eduardo Miralles"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sup-portals-vells",
@@ -9136,7 +9219,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-portals-vells.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9228,8 +9310,15 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-sup-portals-vells-2.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-sup-portals-vells-2.jpg",
+          "source": "PEXELS"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-portals-vells.jpg",
+        "source": "PIXABAY"
+      }
     },
     {
       "id": "itin-sup-santa-ponsa",
@@ -9238,7 +9327,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-santa-ponsa.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9328,7 +9416,12 @@
           "lat": 39.515,
           "lng": 2.4827
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-santa-ponsa.jpg",
+        "source": "PEXELS"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sup-camp-de-mar",
@@ -9337,7 +9430,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-camp-de-mar.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9427,7 +9519,12 @@
           "lat": 39.5375,
           "lng": 2.4217
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-camp-de-mar.jpg",
+        "source": "MINE"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sup-port-adriano",
@@ -9436,7 +9533,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-port-adriano.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9535,7 +9631,12 @@
           "lat": 39.4722,
           "lng": 2.52
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-port-adriano.jpg",
+        "source": "PIXABAY"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sup-soller",
@@ -9544,7 +9645,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-soller.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9648,7 +9748,12 @@
           "lat": 39.7963,
           "lng": 2.6963
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-soller.jpg",
+        "source": "AETIB"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sup-cala-major",
@@ -9657,7 +9762,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-cala-major.jpg",
       "best_seasons": [
         "Spring",
         "Summer",
@@ -9751,7 +9855,13 @@
           "lat": 39.5696,
           "lng": 2.6502
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-cala-major.jpg",
+        "source": "AETIB",
+        "author": "Pedro Coll"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-lrt-paseo-maritimo",
@@ -9760,7 +9870,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/lrt-paseo-maritimo.jpg",
       "total_distance_km": 21.0,
       "best_seasons": [
         "Spring",
@@ -9838,7 +9947,12 @@
           "note_de": "Die Paseo-Marítimo-Runde: Kathedrale La Seu, Sa Llotja (Kaufmannsbörse 15. Jh.), die Superjacht-Marina und Schloss Bellver auf dem Hügel. 21 km purer urbaner Luxus.",
           "day_number": 1
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/lrt-paseo-maritimo.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-lrt-tramuntana-oeste",
@@ -9847,7 +9961,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/lrt-tramontana-oeste.jpg",
       "total_distance_km": 90.0,
       "best_seasons": [
         "Spring",
@@ -9933,7 +10046,12 @@
           "note_de": "Der dramatischste Aussichtspunkt der Route: 400 Meter senkrechte Klippen, die ins tiefblaue Meer fallen. Den Audi am Straßenparkplatz abstellen und die Aussicht genießen — das ist der perfekte Schuss der Westküste.",
           "day_number": 1
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/lrt-tramontana-oeste.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-lrt-tramuntana-norte",
@@ -9942,7 +10060,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/lrt-tramontana-norte.jpg",
       "total_distance_km": 150.0,
       "best_seasons": [
         "Spring",
@@ -10028,7 +10145,12 @@
           "note_de": "Pollença: durch den Ort fahren und wenn möglich zum Calvari-Aussichtspunkt hinauf. Der Abstieg zur Bucht, mit dem unter der Motorhaube auftauchenden Meer, ist einer der Signature-Momente der Route.",
           "day_number": 1
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/lrt-tramontana-norte.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-lrt-sierra-tramuntana",
@@ -10037,7 +10159,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "HARD",
-      "cover_photo_url": "file:///android_asset/images/lrt-sierra-tramuntana.jpg",
       "total_distance_km": 213.0,
       "best_seasons": [
         "Spring",
@@ -10133,7 +10254,12 @@
           "note_de": "Valldemossa: die Kartause besuchen, wo Chopin und George Sand den Winter 1838–39 verbrachten. Die Kopfsteinpflasterstraßen wirken mit dem davor geparkten McLaren noch kinematographischer. Das traditionelle Coca de Patata-Gebäck nicht verpassen.",
           "day_number": 1
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/lrt-sierra-tramuntana.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-cami-port-canonge",
@@ -10142,7 +10268,6 @@
       "category": "HIKING",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/itin-cami-port-canonge-cover.jpg",
       "total_distance_km": 5.8,
       "highlights": [
         "Shaded trail through Aleppo pine forest",
@@ -10222,8 +10347,15 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-cami-port-canonge-gallery-1.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-cami-port-canonge-gallery-1.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-cami-port-canonge-cover.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-cala-marmols-faro",
@@ -10232,7 +10364,6 @@
       "category": "HIKING",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-cala-marmols-faro-cover.jpg",
       "total_distance_km": 8.4,
       "highlights": [
         "Wild clifftop coastal path with no facilities",
@@ -10312,8 +10443,15 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-cala-marmols-faro-gallery-1.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-cala-marmols-faro-gallery-1.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-cala-marmols-faro-cover.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-south-secret-coves",
@@ -10322,7 +10460,6 @@
       "category": "BEACH",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/gem-calo-des-moro-pixabay.jpg",
       "total_distance_km": 45.0,
       "highlights": [
         "Cala Figuera at dawn with fishermen",
@@ -10388,7 +10525,12 @@
           "note": "Sunset viewpoint above the cove — arrive by 5pm",
           "note_es": "Mirador al atardecer sobre la cala — llega antes de las 17h"
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/gem-calo-des-moro-pixabay.jpg",
+        "source": "PIXABAY"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-sacred-hilltops",
@@ -10397,7 +10539,6 @@
       "category": "VIEWPOINT",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/itin-sacred-hilltops-cover.jpg",
       "total_distance_km": 95.0,
       "highlights": [
         "Puig de Randa's view over the entire central plain",
@@ -10450,9 +10591,19 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-sacred-hilltops-cover.jpg",
-        "file:///android_asset/images/itin-sacred-hilltops-gallery-1.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-sacred-hilltops-cover.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sacred-hilltops-gallery-1.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sacred-hilltops-cover.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-hidden-gems-day",
@@ -10461,7 +10612,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "HARD",
-      "cover_photo_url": "",
       "total_distance_km": 120.0,
       "highlights": [
         "A sea cave only reachable by kayak",
@@ -10504,7 +10654,12 @@
           "note": "Sunset finish — the unreported great view of the island",
           "note_es": "Final al atardecer — la gran vista desconocida de la isla"
         }
-      ]
+      ],
+      "cover_photo": {
+        "url": "",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
     },
     {
       "id": "itin-palma-markets",
@@ -10513,7 +10668,6 @@
       "category": "GASTRONOMY",
       "duration_days": 1,
       "difficulty": "EASY",
-      "cover_photo_url": "file:///android_asset/images/itin-palma-markets.jpg",
       "total_distance_km": 5.0,
       "highlights": [
         "Fresh fish at l'Olivar before 9am",
@@ -10582,11 +10736,27 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-palma-markets-2.jpg",
-        "file:///android_asset/images/itin-palma-markets-3.jpg",
-        "file:///android_asset/images/itin-palma-markets-4.jpg",
-        "file:///android_asset/images/itin-palma-markets-5.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-palma-markets-2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-palma-markets-3.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-palma-markets-4.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-palma-markets-5.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-palma-markets.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-northeast-wild",
@@ -10595,7 +10765,6 @@
       "category": "HIKING",
       "duration_days": 1,
       "difficulty": "HARD",
-      "cover_photo_url": "file:///android_asset/images/itin-northeast-wild-cover.jpg",
       "total_distance_km": 80.0,
       "highlights": [
         "Cala Estreta — one of the least-visited beaches on the island",
@@ -10647,8 +10816,15 @@
         }
       ],
       "gallery_photos": [
-        "file:///android_asset/images/itin-northeast-wild-gallery-1.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-northeast-wild-gallery-1.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-northeast-wild-cover.jpg",
+        "source": "OTHER"
+      }
     },
     {
       "id": "itin-sup-4-calas-sant-vicenc",
@@ -10658,7 +10834,6 @@
       "category": "ADVENTURE",
       "duration_days": 1,
       "difficulty": "MODERATE",
-      "cover_photo_url": "file:///android_asset/images/itin-sup-cavall-bernat-v2.jpg",
       "total_distance_km": 11.0,
       "highlights": [
         "Cueva Azul: 40m sea cave accessible only by SUP",
@@ -10888,15 +11063,43 @@
         "validated": true
       },
       "gallery_photos": [
-        "file:///android_asset/images/itin-sup-cavall-bernat-g1.jpg",
-        "file:///android_asset/images/itin-sup-cavall-bernat-g2.jpg",
-        "file:///android_asset/images/itin-sup-cavall-bernat-g3.jpg",
-        "file:///android_asset/images/itin-sup-cavall-bernat-g5.jpg",
-        "file:///android_asset/images/itin-sup-cavall-bernat-g6.jpg",
-        "file:///android_asset/images/itin-sup-cavall-bernat-g7.jpg",
-        "file:///android_asset/images/itin-sup-cavall-bernat-g8.jpg",
-        "file:///android_asset/images/itin-sup-cavall-bernat-g9.jpg"
-      ]
+        {
+          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g1.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g2.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g3.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g5.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g6.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g7.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g8.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-cavall-bernat-g9.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/itin-sup-cavall-bernat-v2.jpg",
+        "source": "OTHER"
+      }
     }
   ],
   "events": [

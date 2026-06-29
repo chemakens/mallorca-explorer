@@ -48,6 +48,12 @@ private val placeImageListSerializer = ListSerializer(PlaceImageJson.serializer(
 private fun List<PlaceImage>.toPhotoJson(): String =
     json.encodeToString(placeImageListSerializer, map { PlaceImageJson(it.url, it.source.name, it.author) })
 
+private fun String.toPlaceImage(): PlaceImage = runCatching {
+    json.decodeFromString<PlaceImageJson>(this).let {
+        PlaceImage(it.url, runCatching { ImageSource.valueOf(it.source.uppercase()) }.getOrDefault(ImageSource.OTHER), it.author)
+    }
+}.getOrElse { PlaceImage(url = this) }
+
 private fun String.toPlaceImageList(): List<PlaceImage> = runCatching {
     json.decodeFromString(placeImageListSerializer, this).map {
         PlaceImage(it.url, runCatching { ImageSource.valueOf(it.source.uppercase()) }.getOrDefault(ImageSource.OTHER), it.author)
@@ -200,8 +206,8 @@ fun ItineraryEntity.toDomain(
                 dayNumber = stop.dayNumber,
             )
         },
-        coverPhotoUrl = coverPhotoUrl,
-        galleryPhotoUrls = galleryPhotosJson.toStringList(),
+        coverPhoto = coverPhotoUrl.toPlaceImage(),
+        galleryPhotos = galleryPhotosJson.toPlaceImageList(),
         totalDistanceKm = totalDistanceKm,
         highlights = t?.highlights ?: highlightsJson.toStringList(),
         bestSeasons = bestSeasonsJson.toStringList(),

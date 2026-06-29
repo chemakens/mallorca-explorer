@@ -650,8 +650,8 @@ private fun ItineraryCard(itinerary: Itinerary, onClick: () -> Unit, modifier: M
     ) {
         val isPremium = itinerary.tags.any { it == "luxury" || it == "premium" }
         Box {
-            if (itinerary.coverPhotoUrl.isNotEmpty()) {
-                AsyncImage(model = itinerary.coverPhotoUrl, contentDescription = null, contentScale = ContentScale.Crop, modifier = Modifier.fillMaxSize())
+            if (itinerary.coverPhoto.url.isNotEmpty()) {
+                AsyncImage(model = itinerary.coverPhoto.url, contentDescription = null, contentScale = ContentScale.Crop, modifier = Modifier.fillMaxSize())
             } else {
                 Box(modifier = Modifier.fillMaxSize().background(MaterialTheme.colorScheme.primaryContainer), contentAlignment = Alignment.Center) {
                     Text(itinerary.category.emoji, style = MaterialTheme.typography.displayMedium)
