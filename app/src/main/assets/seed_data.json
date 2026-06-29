@@ -7006,11 +7006,19 @@
         "Parking at Avinguda de La Trapa, Sant Elm"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/torre-cala-embasset.jpg",
+      "thumbnail_url": "file:///android_asset/images/cala-en-basset.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/torre-cala-embasset.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/cala-en-basset.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cala-en-basset-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cala-en-basset-3.jpg",
+          "source": "MINE"
         }
       ],
       "tags": [
