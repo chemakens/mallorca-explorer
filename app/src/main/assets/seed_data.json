@@ -1146,60 +1146,6 @@
       "tips_zh": []
     },
     {
-      "id": "kayak-soller",
-      "name": "Kayak Port de Sóller",
-      "name_es": "Kayak Port de Sóller",
-      "description": "Sea kayaking tours departing from Port de Sóller, exploring sea caves and secluded coves along the Tramuntana coast.",
-      "category": "ADVENTURE",
-      "latitude": 39.7967,
-      "longitude": 2.6961,
-      "municipality": "Sóller",
-      "rating": 4.8,
-      "review_count": 890,
-      "tips": [
-        "Morning tours recommended for calmer water",
-        "Snorkel stops included",
-        "Suitable for beginners with instructor"
-      ],
-      "price_level": "MID",
-      "tags": [
-        "kayaking",
-        "water",
-        "guided",
-        "adventure"
-      ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800",
-      "photo_urls": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_S%C3%B3ller.jpg?width=800",
-          "source": "OTHER"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Port_de_Sóller_beach.jpg?width=800",
-          "source": "OTHER"
-        }
-      ],
-      "description_es": "Excursiones en kayak de mar desde el Port de Sóller, explorando cuevas marinas y calas solitarias por la costa de la Tramuntana.",
-      "tips_es": [
-        "Las excursiones al atardecer son las más populares — reserva con días de antelación",
-        "Se requiere cierto nivel de forma física para las rutas más largas",
-        "El snorkel incluido muestra cuevas y fondos marinos espectaculares"
-      ],
-      "name_de": "Kajak Port de Sóller",
-      "description_de": "Seekajaktouren ab dem Hafen von Sóller entlang der Tramuntana-Küste. Höhlenbesichtigungen, Schnorcheln und atemberaubende Klippen inklusive.",
-      "tips_de": [
-        "Sonnenuntergangstouren am beliebtesten – Tage im Voraus buchen",
-        "Längere Routen erfordern gute Fitness",
-        "Schnorcheln in Höhlen und vor Felswänden inklusive"
-      ],
-      "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
-      "name_zh": "",
-      "description_zh": "",
-      "tips_zh": []
-    },
-    {
       "id": "cami-des-correu",
       "name": "Camí des Correu",
       "name_es": "Camí des Correu",
@@ -8255,17 +8201,8 @@
           "day_number": 1
         },
         {
-          "place_id": "kayak-soller",
-          "order": 3,
-          "suggested_duration_minutes": 180,
-          "note": "Afternoon sea kayaking tour",
-          "note_es": "Tour en kayak de mar por la tarde",
-          "note_de": "Nachmittägliche Seekajaktour",
-          "day_number": 1
-        },
-        {
           "place_id": "barranc-biniaraix",
-          "order": 4,
+          "order": 3,
           "suggested_duration_minutes": 180,
           "note": "Morning gorge walk",
           "note_es": "Paseo matutino por el barranco",
@@ -8274,7 +8211,7 @@
         },
         {
           "place_id": "deia",
-          "order": 5,
+          "order": 4,
           "suggested_duration_minutes": 90,
           "note": "Afternoon in Deià village",
           "note_es": "Tarde en el pueblo de Deià",
@@ -8283,7 +8220,7 @@
         },
         {
           "place_id": "cala-deia",
-          "order": 6,
+          "order": 5,
           "suggested_duration_minutes": 90,
           "note": "Sunset swim",
           "note_es": "Baño al atardecer",
@@ -9745,15 +9682,6 @@
           "note": "Launch from Platja d'en Repic. Paddle west to the lighthouse at the mouth of the bay, hug the north cliff base to find hidden coves, then cross back across the harbour to the southern shore. The full circuit is around 6 km — go in the morning for glassy conditions.",
           "note_es": "Lanza desde la Platja d'en Repic. Rema hacia el oeste hasta el faro a la entrada del puerto, sigue el pie del acantilado norte para encontrar calas escondidas y luego cruza de vuelta al otro lado del puerto hasta la orilla sur. El circuito completo es de unos 6 km: ve por la mañana para encontrar el agua en calma.",
           "note_de": "Start von der Platja d'en Repic. Nach Westen zum Leuchtturm an der Buchtmündung paddeln, entlang der nördlichen Kliffbasis versteckte Buchten suchen, dann zurück über den Hafen zur Südseite. Der Gesamtrundkurs beträgt ca. 6 km — morgens für spiegelglatte Bedingungen starten.",
-          "day_number": 1
-        },
-        {
-          "place_id": "kayak-soller",
-          "order": 2,
-          "suggested_duration_minutes": 60,
-          "note": "For a more adventurous extension, join a guided kayak or SUP tour departing from Port de Sóller to explore the sea caves along the Tramuntana coast — sections beyond the bay require open-sea experience.",
-          "note_es": "Para una extensión más aventurera, únete a una excursión guiada en kayak o SUP que sale de Port de Sóller para explorar las cuevas marinas de la costa de la Tramuntana — los tramos más allá del puerto requieren experiencia en mar abierto.",
-          "note_de": "Für eine abenteuerlichere Verlängerung einer geführten Kajak- oder SUP-Tour ab Port de Sóller beitreten, um die Meereshöhlen an der Tramuntana-Küste zu erkunden — Abschnitte jenseits der Bucht erfordern Erfahrung auf offener See.",
           "day_number": 1
         }
       ],
