@@ -8269,10 +8269,65 @@
         }
       ],
       "cover_photo": {
-        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Tren_de_Soller.jpg/1280px-Tren_de_Soller.jpg",
-        "source": "OTHER"
+        "url": "file:///android_asset/images/itin-soller-valley.jpg",
+        "source": "AETIB",
+        "author": "Eduardo Miralles"
       },
-      "gallery_photos": []
+      "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-soller-valley.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-2.jpg",
+          "source": "AETIB"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-3.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-4.jpg",
+          "source": "AETIB",
+          "author": "Pedro Coll"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-5.jpg",
+          "source": "AETIB",
+          "author": "Gaspar Valero"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-6.jpg",
+          "source": "AETIB"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-7.jpg",
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-8.jpg",
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-9.jpg",
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-10.jpg",
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
+        },
+        {
+          "url": "file:///android_asset/images/itin-soller-valley-11.jpg",
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
+        }
+      ]
     },
     {
       "id": "itin-west-coast-miradors",
