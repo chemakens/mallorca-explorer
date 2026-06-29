@@ -98,7 +98,7 @@ class MapViewModel @Inject constructor(
                         .sortedWith(compareBy({ it.dayNumber }, { it.order }))
                         .map { it.place.location }
                         .toImmutableList(),
-                    coverPhotoUrl = itin.coverPhotoUrl,
+                    coverPhotoUrl = itin.coverPhoto.url,
                     category = itin.category,
                     durationDays = itin.durationDays,
                 )
