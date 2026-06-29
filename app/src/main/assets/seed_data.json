@@ -8781,6 +8781,11 @@
       },
       "gallery_photos": [
         {
+          "url": "file:///android_asset/images/itin-sup-sant-vicenc.jpg",
+          "source": "AETIB",
+          "author": "Pedro Coll"
+        },
+        {
           "url": "file:///android_asset/images/itin-sup-sant-vicenc-2.jpg",
           "source": "PEXELS"
         }
@@ -9221,6 +9226,11 @@
         "author": "Eduardo Miralles"
       },
       "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-cala-ratjada.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        },
         {
           "url": "file:///android_asset/images/itin-sup-cala-ratjada-2.jpg",
           "source": "PEXELS"
@@ -9785,6 +9795,10 @@
       },
       "gallery_photos": [
         {
+          "url": "file:///android_asset/images/itin-sup-soller.jpg",
+          "source": "AETIB"
+        },
+        {
           "url": "file:///android_asset/images/itin-sup-soller-2.jpg",
           "source": "PEXELS"
         }
@@ -9897,6 +9911,11 @@
         "author": "Pedro Coll"
       },
       "gallery_photos": [
+        {
+          "url": "file:///android_asset/images/itin-sup-cala-major.jpg",
+          "source": "AETIB",
+          "author": "Pedro Coll"
+        },
         {
           "url": "file:///android_asset/images/itin-sup-cala-major-2.jpg",
           "source": "PEXELS"
