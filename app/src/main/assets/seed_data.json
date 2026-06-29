@@ -3171,11 +3171,16 @@
         "sup_launch",
         "facing:45"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-cala-sant-vicenc.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-sup-sant-vicenc.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-cala-sant-vicenc.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-sant-vicenc.jpg",
+          "source": "AETIB",
+          "author": "Gaspar Monroig"
+        },
+        {
+          "url": "file:///android_asset/images/place-sup-sant-vicenc-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Uno de los puntos de lanzamiento de SUP más pintorescos de Mallorca, donde tres calas turquesas protegidas por acantilados de caliza se encuentran con el mar abierto.",
@@ -3287,11 +3292,16 @@
         "sup_launch",
         "facing:90"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-portocolom.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-sup-portocolom.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-portocolom.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-portocolom.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        },
+        {
+          "url": "file:///android_asset/images/place-sup-portocolom-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "El puerto natural de Portocolom es uno de los mejores puntos de Mallorca para practicar SUP para principiantes, con agua protegida, coloridas casas de pescadores y visibilidad excepcional.",
@@ -3343,11 +3353,16 @@
         "sup_launch",
         "facing:45"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-cala-ratjada.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-sup-cala-ratjada.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-cala-ratjada.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-cala-ratjada.jpg",
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
+        },
+        {
+          "url": "file:///android_asset/images/place-sup-cala-ratjada-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "El rudo cabo noreste de Mallorca ofrece un emocionante circuito de SUP intermedio conectando las calas alrededor de Cala Ratjada, con vistas de Menorca en los días claros.",
@@ -3404,6 +3419,10 @@
         {
           "url": "file:///android_asset/images/sup-portals-vells.webp",
           "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/place-sup-portals-vells-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Uno de los destinos de SUP más dramáticos de Mallorca: tres calas solitarias protegidas por altos acantilados arbolados, con cuevas de cantera medieval y agua cristalina.",
@@ -3455,11 +3474,15 @@
         "sup_launch",
         "facing:180"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-santa-ponsa.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-sup-santa-ponsa.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-santa-ponsa.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-santa-ponsa.jpg",
+          "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/place-sup-santa-ponsa-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "La amplia y protegida bahía de Santa Ponsa ofrece condiciones ideales para el SUP para principiantes, con arena blanca y fácil acceso a islotes y calas ocultas.",
@@ -3511,11 +3534,15 @@
         "sup_launch",
         "facing:200"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-camp-de-mar.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-sup-camp-de-mar.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-camp-de-mar.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-camp-de-mar.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-sup-camp-de-mar-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Encantador punto de SUP para principiantes cerca de Andratx, con playa de arena blanca y agua excepcionalmente calmada. El destaque es llegar paleteando hasta la pequeña isla frente a la costa.",
@@ -3567,11 +3594,15 @@
         "sup_launch",
         "facing:190"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-port-adriano.webp",
+      "thumbnail_url": "file:///android_asset/images/place-sup-port-adriano.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-port-adriano.webp",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-port-adriano.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/place-sup-port-adriano-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Desde la icónica marina de lujo diseñada por Philippe Starck, esta ruta de SUP explora la salvaje costa de caliza entre Port Adriano y Portals Vells con cuevas marinas y acantilados.",
@@ -3679,11 +3710,16 @@
         "sup_launch",
         "facing:175"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-cala-major.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-sup-cala-major.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-cala-major.jpg",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-sup-cala-major.jpg",
+          "source": "AETIB",
+          "author": "Pedro Coll"
+        },
+        {
+          "url": "file:///android_asset/images/place-sup-cala-major-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Sencilla ruta de SUP urbana por la costa de Palma desde Cala Major. Paletea junto al elegante Palacio de Marivent y disfruta de vistas únicas de la ciudad desde el agua.",
