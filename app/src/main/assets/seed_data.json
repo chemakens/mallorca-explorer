@@ -1336,11 +1336,15 @@
         "north",
         "solitude"
       ],
-      "thumbnail_url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Tomir.jpg?width=800",
+      "thumbnail_url": "file:///android_asset/images/place-puig-tomir.jpg",
       "photo_urls": [
         {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Puig%20Tomir.jpg?width=800",
-          "source": "OTHER"
+          "url": "file:///android_asset/images/place-puig-tomir.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/place-puig-tomir-2.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Cumbre remota y recompensante en el norte de la Tramuntana a 1.103 m. Ofrece soledad y amplias vistas sobre la llanura del Raiguer y la bahía de Pollença.",
@@ -4242,7 +4246,8 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-faro-ses-salines.jpg",
-          "source": "PEXELS"
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         }
       ],
       "description_es": "El faro más meridional de Mallorca, en un promontorio de caliza sobre aguas cristalinas. Punto de partida del sendero costero salvaje hacia las calas más vírgenes del sur de la isla.",
