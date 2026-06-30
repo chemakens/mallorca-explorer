@@ -772,15 +772,15 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-valldemossa.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-valldemossa-2.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-valldemossa-3.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         }
       ],
       "description_es": "Uno de los pueblos más bellos de Mallorca, en las montañas donde Chopin y George Sand pasaron un invierno memorable en la década de 1830.",
@@ -823,15 +823,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-deia.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         },
         {
           "url": "file:///android_asset/images/place-deia-2.jpg",
-          "source": "OTHER"
-        },
-        {
-          "url": "file:///android_asset/images/place-deia-3.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "description_es": "Pintoresco pueblo en ladera adorado por artistas y escritores, con casas de piedra que descienden entre olivos y almendros hacia el mar.",
@@ -929,11 +925,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-pollenca.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-pollenca-2.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         }
       ],
       "description_es": "Hermosa villa con orígenes romanos, famosa por su escalinata del Calvari de 365 peldaños y su animado mercado dominical lleno de artesanía local.",
@@ -2378,15 +2374,15 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-palma-city.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-palma-city-2.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-palma-city-3.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-palma-city-4.jpg",
@@ -2570,15 +2566,15 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-sineu.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-sineu-2.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-sineu-3.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-sineu.jpg",
@@ -2694,11 +2690,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-estellencs.jpg",
-          "source": "OTHER"
+          "source": "UNSPLASH"
         },
         {
           "url": "file:///android_asset/images/place-estellencs-2.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-estellencs-3.jpg",
@@ -2758,15 +2754,15 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-binissalem.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/place-binissalem-2.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/place-binissalem-3.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/place-binissalem-4.jpg",
@@ -2826,11 +2822,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-capdepera.jpg",
-          "source": "OTHER"
+          "source": "UNSPLASH"
         },
         {
           "url": "file:///android_asset/images/place-capdepera-2.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-capdepera.jpg",
@@ -2885,19 +2881,19 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-santanyi.jpg",
-          "source": "OTHER"
+          "source": "UNSPLASH"
         },
         {
           "url": "file:///android_asset/images/place-santanyi-2.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/place-santanyi-3.jpg",
-          "source": "OTHER"
+          "source": "UNSPLASH"
         },
         {
           "url": "file:///android_asset/images/place-santanyi-4.jpg",
-          "source": "OTHER"
+          "source": "UNSPLASH"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-santanyi.jpg",
@@ -2952,11 +2948,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-petra.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-petra-2.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-petra-3.jpg",
