@@ -4243,10 +4243,6 @@
         {
           "url": "file:///android_asset/images/place-faro-ses-salines.jpg",
           "source": "PEXELS"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Far%20des%20Cap%20Salines%2002.jpg?width=800",
-          "source": "OTHER"
         }
       ],
       "description_es": "El faro más meridional de Mallorca, en un promontorio de caliza sobre aguas cristalinas. Punto de partida del sendero costero salvaje hacia las calas más vírgenes del sur de la isla.",
@@ -5730,10 +5726,6 @@
         {
           "url": "file:///android_asset/images/place-ruta-cala-murta.jpg",
           "source": "PIXABAY"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Cala%20Murta%20%28Porto%20Christo%29%20op%20Mallorca.jpg?width=800",
-          "source": "OTHER"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-ruta-cala-murta.jpg",
@@ -5956,10 +5948,6 @@
         {
           "url": "file:///android_asset/images/place-ruta-coll-baix.jpg",
           "source": "PEXELS"
-        },
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Platja_de_Coll_Baix_Mallorca.jpg?width=800",
-          "source": "OTHER"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-ruta-coll-baix.jpg",
