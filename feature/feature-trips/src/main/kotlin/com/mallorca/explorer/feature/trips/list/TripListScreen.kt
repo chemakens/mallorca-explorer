@@ -287,13 +287,13 @@ private fun EmptyTripsState(
         ) {
             val emptyStateImages = remember {
                 listOf(
-                    "file:///android_asset/images/beach-es-trenc.jpg",
-                    "file:///android_asset/images/hike-cala-estreta.jpg",
-                    "file:///android_asset/images/culture-bellver-castle.jpg",
-                    "file:///android_asset/images/itin-palma-markets.webp",
-                    "file:///android_asset/images/mirador-ses-animes.webp",
-                    "file:///android_asset/images/nature-jardins-alfabia.jpg",
-                    "file:///android_asset/images/hike-puig-ofre.jpg",
+                    "file:///android_asset/images/trips-carousel-1.jpg", // PEXELS — Catedral La Seu, Palma
+                    "file:///android_asset/images/trips-carousel-2.jpg", // UNSPLASH — Castillo de Bellver, Palma
+                    "file:///android_asset/images/trips-carousel-3.jpg", // PIXABAY — Cartuja de Valldemossa
+                    "file:///android_asset/images/trips-carousel-4.jpg", // MINE — Sa Foradada al atardecer
+                    "file:///android_asset/images/trips-carousel-5.jpg", // PIXABAY — velero Mallorca
+                    "file:///android_asset/images/trips-carousel-6.jpg", // PEXELS — Cala Barques, Sant Vicenç
+                    "file:///android_asset/images/trips-carousel-7.jpg", // PIXABAY — tapas Mallorca
                 )
             }
             var currentIndex by remember { mutableIntStateOf(0) }
