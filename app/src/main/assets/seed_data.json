@@ -870,19 +870,22 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-soller.jpg",
-          "source": "OTHER"
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
           "url": "file:///android_asset/images/place-soller-2.jpg",
-          "source": "OTHER"
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
           "url": "file:///android_asset/images/place-soller-3.jpg",
-          "source": "OTHER"
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
         },
         {
           "url": "file:///android_asset/images/place-soller-4.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "description_es": "Encantador pueblo de naranjales en un valle de montaña, conectado con Palma por un tren de madera vintage que lleva funcionando más de un siglo.",
@@ -2440,15 +2443,16 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-fornalutx.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-fornalutx-2.jpg",
-          "source": "OTHER"
+          "source": "UNSPLASH"
         },
         {
           "url": "file:///android_asset/images/place-fornalutx-3.jpg",
-          "source": "OTHER"
+          "source": "AETIB",
+          "author": "Giorgio Gatti"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-fornalutx.jpg",
@@ -2503,15 +2507,15 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-alcudia.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-alcudia-2.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/place-alcudia-3.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-alcudia.jpg",
@@ -2630,11 +2634,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-banyalbufar.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/place-banyalbufar-2.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-banyalbufar.jpg",
