@@ -25,7 +25,6 @@ import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -60,30 +59,29 @@ fun GemsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
-    Scaffold(modifier = modifier) { padding ->
-        LazyColumn(
-            contentPadding = PaddingValues(
-                top = padding.calculateTopPadding(),
-                bottom = padding.calculateBottomPadding() + 16.dp,
-            ),
-        ) {
-            item { GemsHeader(uiState.unlockedCount, uiState.totalCount) }
+    // No Scaffold here: the parent NavHost already reserves top/bottom insets,
+    // wrapping this in its own Scaffold would re-apply safeDrawing padding
+    // and double the gap above the header.
+    LazyColumn(
+        modifier = modifier,
+        contentPadding = PaddingValues(bottom = 16.dp),
+    ) {
+        item { GemsHeader(uiState.unlockedCount, uiState.totalCount) }
 
-            if (!uiState.isLoading) {
-                items(uiState.gems, key = { it.place.id }) { gem ->
-                    if (gem.isUnlocked) {
-                        UnlockedGemCard(
-                            place = gem.place,
-                            onClick = { onGemClick(gem.place.id) },
-                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
-                        )
-                    } else {
-                        LockedGemCard(
-                            place = gem.place,
-                            onClick = { onGemClick(gem.place.id) },
-                            modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
-                        )
-                    }
+        if (!uiState.isLoading) {
+            items(uiState.gems, key = { it.place.id }) { gem ->
+                if (gem.isUnlocked) {
+                    UnlockedGemCard(
+                        place = gem.place,
+                        onClick = { onGemClick(gem.place.id) },
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
+                    )
+                } else {
+                    LockedGemCard(
+                        place = gem.place,
+                        onClick = { onGemClick(gem.place.id) },
+                        modifier = Modifier.padding(horizontal = 16.dp, vertical = 6.dp),
+                    )
                 }
             }
         }
