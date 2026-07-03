@@ -78,6 +78,10 @@ fun PhotoFullscreenViewer(
                     model = photos[page],
                     contentDescription = null,
                     contentScale = ContentScale.Fit,
+                    // Matches the TopCenter crop used for the carousel thumbnail in
+                    // PlaceDetailScreen so the subject stays anchored to the same edge
+                    // when opening the fullscreen view.
+                    alignment = Alignment.TopCenter,
                     modifier = Modifier
                         .fillMaxSize()
                         .transformable(transformableState)
