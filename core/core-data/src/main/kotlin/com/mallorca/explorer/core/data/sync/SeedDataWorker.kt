@@ -96,7 +96,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 136
+        const val CURRENT_SEED_VERSION = 137
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -112,12 +112,23 @@ class SeedDataWorker @AssistedInject constructor(
             "restaurant-mola",
             "restaurant-juanito",
             "kayak-soller",
+            "gtrentals-motorworld",
         )
 
         // Itineraries removed from seed_data.json that must be deleted from the local DB.
         val DELETED_ITINERARY_IDS = listOf(
             "itin-gastronomy",
+            "itin-lrt-paseo-maritimo",
+            "itin-lrt-tramuntana-oeste",
+            "itin-lrt-tramuntana-norte",
+            "itin-lrt-sierra-tramuntana",
         )
+
+        // NOTE: "disc-gtrentals-2026" was archived out of seed_data.json along with
+        // gtrentals-motorworld and its itin-lrt-* itineraries above, but there is no
+        // DELETED_DISCOUNT_IDS mechanism — discountDao only ever upserts, never deletes.
+        // Existing installs will keep this orphaned discount row until a deletion
+        // path for discounts is added.
     }
 
     @Serializable data class SeedData(

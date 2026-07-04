@@ -1,0 +1,471 @@
+{
+  "archived_places": [
+    {
+      "id": "gtrentals-motorworld",
+      "name": "GTRentals – Motorworld Mallorca",
+      "name_es": "GTRentals – Motorworld Mallorca",
+      "description": "Supercar rental company based at Motorworld Mallorca, offering curated road trip experiences across the island in Ferrari, Lamborghini, McLaren and Porsche models. Every route comes with a co-pilot instructor, fuel included and zero deposit required.",
+      "category": "ADVENTURE",
+      "latitude": 39.5585,
+      "longitude": 2.7011,
+      "municipality": "Palma",
+      "rating": 4.9,
+      "review_count": 620,
+      "tips": [
+        "Minimum age 25 — valid driving licence required",
+        "No deposit required — fuel always included",
+        "Routes subject to weather and vehicle availability",
+        "Book in advance during peak season — fleet is limited"
+      ],
+      "price_level": "PREMIUM",
+      "website": "https://gtrentals.com",
+      "tags": [
+        "luxury",
+        "supercar",
+        "roadtrip",
+        "ferrari",
+        "lamborghini",
+        "mclaren",
+        "adventure",
+        "premium"
+      ],
+      "thumbnail_url": "https://images.unsplash.com/photo-1774838231308-72e6792f7ab8?w=800&fm=jpg&q=80",
+      "photo_urls": [
+        {
+          "url": "https://images.unsplash.com/photo-1774838231308-72e6792f7ab8?w=800&fm=jpg&q=80",
+          "source": "UNSPLASH"
+        }
+      ],
+      "description_es": "Empresa de alquiler de supercoches en Motorworld Mallorca, con experiencias de conducción en Ferrari, Lamborghini, McLaren y Porsche por las carreteras más espectaculares de la isla.",
+      "tips_es": [
+        "Reserva con antelación especialmente en verano",
+        "El circuito de Motorworld es espectacular para pruebas de coches",
+        "El seguro a todo riesgo está incluido en el precio"
+      ],
+      "name_de": "GTRentals – Motorworld Mallorca",
+      "description_de": "Supersportwagen-Verleih auf dem Motorworld-Gelände Mallorca. Lamborghini, Ferrari und Porsche für unvergessliche Ausfahrten über die Insel.",
+      "tips_de": [
+        "Im Voraus buchen, besonders im Sommer",
+        "Die Motorworld-Rennstrecke ist spektakulär zum Testen der Fahrzeuge",
+        "Vollkaskoversicherung ist im Preis inbegriffen"
+      ],
+      "name_ru": "",
+      "description_ru": "",
+      "tips_ru": [],
+      "name_zh": "",
+      "description_zh": "",
+      "tips_zh": []
+    }
+  ],
+  "archived_itineraries": [
+    {
+      "id": "itin-lrt-paseo-maritimo",
+      "title": "Luxury Road Trip: Paseo Marítimo",
+      "description": "Take the wheel of a Ferrari 488 GTB and tear along Palma's legendary seafront boulevard. La Seu cathedral, the medieval Lonja building, a harbour lined with superyachts and the silhouette of Bellver Castle — all framed through the windscreen of a 660 hp V8. The most glamorous urban driving experience in the Balearics.",
+      "category": "ADVENTURE",
+      "duration_days": 1,
+      "difficulty": "EASY",
+      "total_distance_km": 21.0,
+      "best_seasons": [
+        "Spring",
+        "Summer",
+        "Autumn",
+        "Winter"
+      ],
+      "tags": [
+        "luxury",
+        "supercar",
+        "roadtrip",
+        "palma",
+        "ferrari",
+        "premium",
+        "adventure"
+      ],
+      "translations": {
+        "es": {
+          "title": "Ruta de Superdeportivos: Paseo Marítimo",
+          "description": "Toma el volante de un Ferrari 488 GTB y recorre el legendario Paseo Marítimo de Palma. La Catedral de la Seu, la medieval Lonja del siglo XV, un puerto flanqueado de superyates y la silueta del Castillo de Bellver — todo enmarcado a través del parabrisas de un V8 de 660 cv. La experiencia de conducción urbana más glamurosa de las Baleares.",
+          "highlights": [
+            "Ferrari 488 GTB con instructor copiloto incluido",
+            "Catedral La Seu y Castillo de Bellver visibles desde el coche",
+            "21 km por el paseo más exclusivo de Mallorca",
+            "Gasolina incluida · Sin fianza · Solo +25 años"
+          ]
+        },
+        "de": {
+          "title": "Supersportwagen-Tour: Paseo Marítimo",
+          "description": "Nehmen Sie das Steuer eines Ferrari 488 GTB und rasen Sie entlang Palmas legendärem Strandpromenade. Die Kathedrale La Seu, das mittelalterliche Lonja-Gebäude aus dem 15. Jahrhundert, ein von Superyachten gesäumter Hafen und die Silhouette des Bellver-Schlosses — alles durch die Windschutzscheibe eines 660-PS-V8 gerahmt.",
+          "highlights": [
+            "Ferrari 488 GTB mit Co-Pilot-Instruktor inklusive",
+            "Kathedrale La Seu und Bellver-Schloss vom Auto aus sichtbar",
+            "21 km auf Palmas exklusivstem Boulevard",
+            "Benzin inklusive · Keine Kaution · Nur +25 Jahre"
+          ]
+        },
+        "zh": {
+          "title": "豪华自驾游：海滨大道",
+          "description": "驾驶法拉利488 GTB驰骋帕尔马传奇海滨大道。拉塞乌大教堂、中世纪洛哈商业交易所、停满超级游艇的港口以及贝尔韦尔城堡的剪影——一切都通过一辆660马力V8发动机的挡风玻璃呈现。巴利阿里群岛最迷人的城市驾驶体验。",
+          "highlights": [
+            "含副驾教练的法拉利488 GTB",
+            "从车内可见拉塞乌大教堂和贝尔韦尔城堡",
+            "沿马略卡最尊贵大道行驶21公里",
+            "含油费 · 无押金 · 仅限25岁以上"
+          ]
+        },
+        "ru": {
+          "title": "Роскошное автопутешествие: Пасео Маритимо",
+          "description": "Сядьте за руль Ferrari 488 GTB и промчитесь по легендарному набережному бульвару Пальмы. Собор Ла-Сеу, средневековое здание Лохи XV века, гавань с супер-яхтами и силуэт замка Бельвер — всё это через лобовое стекло V8 мощностью 660 л.с. Самое гламурное городское вождение на Балеарских островах.",
+          "highlights": [
+            "Ferrari 488 GTB с инструктором-штурманом в комплекте",
+            "Собор Ла-Сеу и замок Бельвер видны из автомобиля",
+            "21 км по самому эксклюзивному бульвару Мальорки",
+            "Бензин включён · Без залога · Только +25 лет"
+          ]
+        }
+      },
+      "stops": [
+        {
+          "place_id": "gtrentals-motorworld",
+          "order": 1,
+          "suggested_duration_minutes": 15,
+          "note": "Pick up your Ferrari at GTRentals Motorworld. Briefing with your co-pilot instructor — controls, route and safety. Fuel is already full.",
+          "note_es": "Recoge tu Ferrari en GTRentals Motorworld. Briefing con tu instructor copiloto — mandos, ruta y seguridad. El depósito ya está lleno.",
+          "note_de": "Ferrari bei GTRentals Motorworld abholen. Briefing mit Co-Pilot-Instruktor — Bedienelemente, Route und Sicherheit. Tank bereits voll.",
+          "day_number": 1
+        },
+        {
+          "place_id": "palma-city",
+          "order": 2,
+          "suggested_duration_minutes": 60,
+          "note": "The Paseo Marítimo circuit: Cathedral La Seu, Sa Llotja (15th-century merchants' exchange), the superyacht marina and Bellver Castle on the hill. 21 km of pure urban luxury.",
+          "note_es": "El circuito del Paseo Marítimo: Catedral La Seu, Sa Llotja (lonja del siglo XV), la marina de superyates y el Castillo de Bellver en la colina. 21 km de lujo urbano puro.",
+          "note_de": "Die Paseo-Marítimo-Runde: Kathedrale La Seu, Sa Llotja (Kaufmannsbörse 15. Jh.), die Superjacht-Marina und Schloss Bellver auf dem Hügel. 21 km purer urbaner Luxus.",
+          "day_number": 1
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/lrt-paseo-maritimo.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
+    },
+    {
+      "id": "itin-lrt-tramuntana-oeste",
+      "title": "Luxury Road Trip: Tramuntana Oeste",
+      "description": "An Audi R8 V10 Spyder on the Ma-10 coastal road is the definition of freedom. Drop the roof, pick up speed out of Esporles and let the engine howl echo off the cliffs of Banyalbufar. The terraced vineyards tumbling into turquoise water, the crystal coves of Estellencs and the 400-metre clifftop drop at Mirador de Ricardo Roca — this is the west coast at its most dramatic.",
+      "category": "ADVENTURE",
+      "duration_days": 1,
+      "difficulty": "MODERATE",
+      "total_distance_km": 90.0,
+      "best_seasons": [
+        "Spring",
+        "Summer",
+        "Autumn"
+      ],
+      "tags": [
+        "luxury",
+        "supercar",
+        "roadtrip",
+        "tramuntana",
+        "audi",
+        "premium",
+        "adventure"
+      ],
+      "translations": {
+        "es": {
+          "title": "Ruta de Superdeportivos: Tramuntana Oeste",
+          "description": "Un Audi R8 V10 Spyder en la Ma-10 costera es la definición de libertad. Baja la capota, toma velocidad a la salida de Esporles y deja que el rugido del motor resuene entre los acantilados de Banyalbufar. Los viñedos en terrazas que caen hacia el agua turquesa, las calas cristalinas de Estellencs y la caída de 400 metros del Mirador de Ricardo Roca — esta es la costa oeste en su momento más espectacular.",
+          "highlights": [
+            "Audi R8 V10 Spyder descapotable — capota abierta en toda la ruta",
+            "Terrazas de Banyalbufar y calas de Estellencs",
+            "Mirador de Ricardo Roca: 400 m de acantilado sobre el Mediterráneo",
+            "Gasolina incluida · Sin fianza · Solo +25 años"
+          ]
+        },
+        "de": {
+          "title": "Supersportwagen-Tour: Tramuntana West",
+          "description": "Ein Audi R8 V10 Spyder auf der Küstenstraße Ma-10 ist die Definition von Freiheit. Verdeck öffnen, nach Esporles beschleunigen und das Motorengeräusch von den Klippen Banyalbufars widerhallen lassen. Die terrassierten Weinberge, die ins türkisfarbene Wasser fallen, die Kristallbuchten von Estellencs und der 400-Meter-Klippenabfall am Mirador de Ricardo Roca.",
+          "highlights": [
+            "Audi R8 V10 Spyder Cabrio — offenes Verdeck auf der gesamten Strecke",
+            "Terrassen von Banyalbufar und Buchten von Estellencs",
+            "Mirador de Ricardo Roca: 400 m Klippe über dem Mittelmeer",
+            "Benzin inklusive · Keine Kaution · Nur +25 Jahre"
+          ]
+        },
+        "zh": {
+          "title": "豪华自驾游：西特拉蒙塔纳",
+          "description": "奥迪R8 V10 Spyder在Ma-10海岸公路上就是自由的定义。敞开车顶，从埃斯波莱斯加速驶出，让发动机的轰鸣声在班亚尔布法尔的悬崖上回响。层叠葡萄园倾泻入碧绿海水、埃斯特伦斯的水晶海湾以及里卡多·罗卡瞭望台的400米悬崖——这就是西海岸最壮观的时刻。",
+          "highlights": [
+            "奥迪R8 V10 Spyder敞篷——全程开篷行驶",
+            "班亚尔布法尔梯田与埃斯特伦斯海湾",
+            "里卡多·罗卡瞭望台：地中海上方400米悬崖",
+            "含油费 · 无押金 · 仅限25岁以上"
+          ]
+        },
+        "ru": {
+          "title": "Роскошное автопутешествие: Трамунтана Запад",
+          "description": "Audi R8 V10 Spyder на прибрежной дороге Ma-10 — это воплощение свободы. Откройте крышу, разгонитесь из Эспорлеса и дайте звуку двигателя отразиться от скал Баньяльбуфара. Террасированные виноградники, спускающиеся к бирюзовой воде, кристальные бухты Эстелленса и обрыв высотой 400 метров у смотровой площадки Рикардо Рока — западное побережье в самом драматичном виде.",
+          "highlights": [
+            "Audi R8 V10 Spyder кабриолет — открытая крыша на всём маршруте",
+            "Террасы Баньяльбуфара и бухты Эстелленса",
+            "Мирадор-де-Рикардо-Рока: 400 м обрыва над Средиземным морем",
+            "Бензин включён · Без залога · Только +25 лет"
+          ]
+        }
+      },
+      "stops": [
+        {
+          "place_id": "gtrentals-motorworld",
+          "order": 1,
+          "suggested_duration_minutes": 15,
+          "note": "Pick up the Audi R8 V10 Spyder at Motorworld. Roof down from the moment you leave — the route begins.",
+          "note_es": "Recoge el Audi R8 V10 Spyder en Motorworld. Capota abajo desde el primer momento — la ruta comienza.",
+          "note_de": "Den Audi R8 V10 Spyder bei Motorworld abholen. Verdeck sofort öffnen — die Route beginnt.",
+          "day_number": 1
+        },
+        {
+          "place_id": "mirador-ses-animes",
+          "order": 2,
+          "suggested_duration_minutes": 20,
+          "note": "First major stop: the Torre des Verger watchtower at Mirador de Ses Ànimes — a 16th-century clifftop tower with the west coast laid out below. Perfect photo stop with the R8.",
+          "note_es": "Primera parada importante: la torre de vigilancia Torre des Verger en el Mirador de Ses Ànimes — una torre del siglo XVI en el borde del acantilado con la costa oeste a los pies. Parada fotográfica perfecta con el R8.",
+          "note_de": "Erster wichtiger Stopp: der Wachturm Torre des Verger am Mirador de Ses Ànimes — ein Klippenturm aus dem 16. Jahrhundert mit der Westküste zu Füßen. Perfekter Foto-Stopp mit dem R8.",
+          "day_number": 1
+        },
+        {
+          "place_id": "mirador-ricardo-roca",
+          "order": 3,
+          "suggested_duration_minutes": 20,
+          "note": "The route's most dramatic viewpoint: 400-metre sheer cliffs falling into the deep blue sea. Park the Audi at the roadside car park and take in the view — this is the money shot of the west coast.",
+          "note_es": "El mirador más dramático de la ruta: acantilados de 400 metros que caen en picado al mar azul oscuro. Aparca el Audi en el área al lado de la carretera y contempla la vista — esta es la foto definitiva de la costa oeste.",
+          "note_de": "Der dramatischste Aussichtspunkt der Route: 400 Meter senkrechte Klippen, die ins tiefblaue Meer fallen. Den Audi am Straßenparkplatz abstellen und die Aussicht genießen — das ist der perfekte Schuss der Westküste.",
+          "day_number": 1
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/lrt-tramontana-oeste.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
+    },
+    {
+      "id": "itin-lrt-tramuntana-norte",
+      "title": "Luxury Road Trip: Tramuntana Norte",
+      "description": "A Lamborghini Huracán Evo threading through the cobbled streets of Fornalutx is an image that stays with you. The 150-kilometre northern loop connects Alcúdia's Roman walled city, the sweeping sea views on the road to Pollença, the valley town of Sóller and finally the jaw-dropping contrast of 720 hp of Italian engineering against 600-year-old mountain stone.",
+      "category": "ADVENTURE",
+      "duration_days": 1,
+      "difficulty": "MODERATE",
+      "total_distance_km": 150.0,
+      "best_seasons": [
+        "Spring",
+        "Summer",
+        "Autumn"
+      ],
+      "tags": [
+        "luxury",
+        "supercar",
+        "roadtrip",
+        "tramuntana",
+        "lamborghini",
+        "premium",
+        "adventure"
+      ],
+      "translations": {
+        "es": {
+          "title": "Ruta de Superdeportivos: Tramuntana Norte",
+          "description": "Un Lamborghini Huracán Evo serpenteando por los adoquines de Fornalutx es una imagen que no se olvida. El bucle norte de 150 kilómetros conecta la ciudad amurallada romana de Alcúdia, las amplias vistas al mar en la carretera hacia Pollença, el pueblo del valle de Sóller y finalmente el contraste impactante de 720 cv de ingeniería italiana frente a la piedra de montaña de 600 años.",
+          "highlights": [
+            "Lamborghini Huracán Evo — el superdeportivo más fotografiado de la ruta",
+            "Murallas romanas de Alcúdia y pueblo de Fornalutx",
+            "Vistas al mar desde la carretera Pollença–Alcúdia",
+            "Gasolina incluida · Sin fianza · Solo +25 años"
+          ]
+        },
+        "de": {
+          "title": "Supersportwagen-Tour: Tramuntana Nord",
+          "description": "Ein Lamborghini Huracán Evo, der sich durch die Kopfsteinpflasterstraßen von Fornalutx schlängelt, ist ein Bild, das bleibt. Die 150-Kilometer-Nordschleife verbindet Alcúdias römische Stadtmauer, die weiten Meerblicke auf der Straße nach Pollença, das Talstädtchen Sóller und schließlich den atemberaubenden Kontrast von 720 PS italienischer Ingenieurskunst vor 600 Jahre altem Bergstein.",
+          "highlights": [
+            "Lamborghini Huracán Evo — der meistfotografierte Supersportwagen der Tour",
+            "Römische Stadtmauern von Alcúdia und Dorf Fornalutx",
+            "Meerblick von der Straße Pollença–Alcúdia",
+            "Benzin inklusive · Keine Kaution · Nur +25 Jahre"
+          ]
+        },
+        "zh": {
+          "title": "豪华自驾游：北特拉蒙塔纳",
+          "description": "兰博基尼Huracán Evo穿越福纳鲁奇鹅卵石街道的画面令人难忘。150公里的北部环线连接阿尔库迪亚罗马古城墙、波伦萨路上的开阔海景、索耶尔谷地小镇，最终是720马力意大利工程学与600年历史山石之间令人叹为观止的反差。",
+          "highlights": [
+            "兰博基尼Huracán Evo——路线上被拍照最多的超跑",
+            "阿尔库迪亚罗马城墙和福纳鲁奇村庄",
+            "波伦萨至阿尔库迪亚公路上的海景",
+            "含油费 · 无押金 · 仅限25岁以上"
+          ]
+        },
+        "ru": {
+          "title": "Роскошное автопутешествие: Трамунтана Север",
+          "description": "Lamborghini Huracán Evo, петляющий по мощёным улочкам Форналуча, — образ, который остаётся в памяти. 150-километровая северная петля соединяет римский укреплённый город Алькудию, широкие морские виды на дороге к Польенсе, долинный городок Сольер и наконец ошеломляющий контраст 720 л.с. итальянской инженерии с 600-летним горным камнем.",
+          "highlights": [
+            "Lamborghini Huracán Evo — самый фотографируемый суперкар маршрута",
+            "Римские городские стены Алькудии и деревня Форналуч",
+            "Морские виды с дороги Польенса–Алькудия",
+            "Бензин включён · Без залога · Только +25 лет"
+          ]
+        }
+      },
+      "stops": [
+        {
+          "place_id": "gtrentals-motorworld",
+          "order": 1,
+          "suggested_duration_minutes": 15,
+          "note": "Collect the Lamborghini Huracán Evo. Co-pilot instructor joins for the full route.",
+          "note_es": "Recoge el Lamborghini Huracán Evo. El instructor copiloto te acompaña durante toda la ruta.",
+          "note_de": "Den Lamborghini Huracán Evo abholen. Co-Pilot-Instruktor begleitet die gesamte Route.",
+          "day_number": 1
+        },
+        {
+          "place_id": "soller",
+          "order": 2,
+          "suggested_duration_minutes": 45,
+          "note": "Sóller: park the Lamborghini on the main square beside the Art Nouveau train station — arguably the most photogenic car park in Mallorca. Walk the market street and have a freshly squeezed orange juice from the local groves.",
+          "note_es": "Sóller: aparca el Lamborghini en la plaza mayor junto a la estación de tren modernista — posiblemente el aparcamiento más fotogénico de Mallorca. Pasea por la calle comercial y toma un zumo de naranja recién exprimido de los huertos locales.",
+          "note_de": "Sóller: den Lamborghini auf dem Hauptplatz neben dem Jugendstil-Bahnhof parken — wohl der fotogenste Parkplatz Mallorcas. Durch die Einkaufsstraße schlendern und frisch gepressten Orangensaft aus den hiesigen Hainen trinken.",
+          "day_number": 1
+        },
+        {
+          "place_id": "pollenca",
+          "order": 3,
+          "suggested_duration_minutes": 30,
+          "note": "Pollença: drive through the town and up to the Calvari viewpoint if time allows. The descent into the bay with the sea appearing below the bonnet is one of the route's signature moments.",
+          "note_es": "Pollença: recorre el pueblo y sube al mirador del Calvari si el tiempo lo permite. El descenso hacia la bahía con el mar apareciendo bajo el capó es uno de los momentos emblema de la ruta.",
+          "note_de": "Pollença: durch den Ort fahren und wenn möglich zum Calvari-Aussichtspunkt hinauf. Der Abstieg zur Bucht, mit dem unter der Motorhaube auftauchenden Meer, ist einer der Signature-Momente der Route.",
+          "day_number": 1
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/lrt-tramontana-norte.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
+    },
+    {
+      "id": "itin-lrt-sierra-tramuntana",
+      "title": "Luxury Road Trip: Sierra Tramuntana",
+      "description": "The definitive Mallorcan driving experience: 213 km of UNESCO World Heritage roads in a McLaren 720S. From Alcúdia to the monastery of Lluc, down the impossible corkscrew of Sa Calobra, through Sóller, past the artists' houses of Deià, the Chopin cells of Valldemossa and finally into Andratx at golden hour. Every kilometre is worth a photograph.",
+      "category": "ADVENTURE",
+      "duration_days": 1,
+      "difficulty": "HARD",
+      "total_distance_km": 213.0,
+      "best_seasons": [
+        "Spring",
+        "Summer",
+        "Autumn"
+      ],
+      "tags": [
+        "luxury",
+        "supercar",
+        "roadtrip",
+        "tramuntana",
+        "mclaren",
+        "premium",
+        "adventure",
+        "UNESCO"
+      ],
+      "translations": {
+        "es": {
+          "title": "Ruta de Superdeportivos: Sierra Tramuntana",
+          "description": "La experiencia de conducción definitiva en Mallorca: 213 km de carreteras Patrimonio de la Humanidad a bordo de un McLaren 720S. Desde Alcúdia hasta el monasterio de Lluc, por el imposible tirabuzón de Sa Calobra, a través de Sóller, junto a las casas de artistas de Deià, las celdas de Chopin en Valldemossa y finalmente hasta Andratx a la hora dorada. Cada kilómetro vale una fotografía.",
+          "highlights": [
+            "McLaren 720S — la experiencia de conducción definitiva de la isla",
+            "Sa Calobra: la carretera más espectacular del Mediterráneo",
+            "Monasterio de Lluc, Deià, Valldemossa y Andratx en una sola jornada",
+            "Gasolina incluida · Sin fianza · Solo +25 años"
+          ]
+        },
+        "de": {
+          "title": "Supersportwagen-Tour: Sierra Tramuntana",
+          "description": "Das ultimative Fahrerlebnis auf Mallorca: 213 km UNESCO-Welterbestraßen in einem McLaren 720S. Von Alcúdia zum Kloster Lluc, durch den unmöglichen Korkenzieher von Sa Calobra, durch Sóller, an den Künstlerhäusern von Deià vorbei, die Chopin-Zellen von Valldemossa und schließlich zur goldenen Stunde nach Andratx. Jeder Kilometer ist ein Foto wert.",
+          "highlights": [
+            "McLaren 720S — das ultimative Fahrerlebnis der Insel",
+            "Sa Calobra: die spektakulärste Straße des Mittelmeers",
+            "Kloster Lluc, Deià, Valldemossa und Andratx an einem Tag",
+            "Benzin inklusive · Keine Kaution · Nur +25 Jahre"
+          ]
+        },
+        "zh": {
+          "title": "豪华自驾游：特拉蒙塔纳山脉",
+          "description": "终极马略卡驾驶体验：驾驶迈凯伦720S行驶213公里的联合国教科文组织世界遗产公路。从阿尔库迪亚到利乌克修道院，穿越萨卡洛布拉不可思议的螺旋山路，经过索耶尔，掠过戴亚艺术家故居，穿越瓦尔德莫萨肖邦的修道院小室，最终在黄金时刻抵达安德拉奇。每一公里都值得拍照留念。",
+          "highlights": [
+            "迈凯伦720S——岛上终极驾驶体验",
+            "萨卡洛布拉：地中海最壮观的公路",
+            "一天之内游览利乌克修道院、戴亚、瓦尔德莫萨和安德拉奇",
+            "含油费 · 无押金 · 仅限25岁以上"
+          ]
+        },
+        "ru": {
+          "title": "Роскошное автопутешествие: Сьерра Трамунтана",
+          "description": "Окончательный опыт вождения на Мальорке: 213 км дорог Всемирного наследия ЮНЕСКО на McLaren 720S. Из Алькудии к монастырю Льюк, вниз по невероятному штопору Са-Калобры, через Сольер, мимо художественных домов Деи, кельи Шопена в Вальдемоссе и наконец в Андрач в золотой час. Каждый километр стоит фотографии.",
+          "highlights": [
+            "McLaren 720S — окончательный опыт вождения на острове",
+            "Са-Калобра: самая захватывающая дорога Средиземноморья",
+            "Монастырь Льюк, Дея, Вальдемосса и Андрач за один день",
+            "Бензин включён · Без залога · Только +25 лет"
+          ]
+        }
+      },
+      "stops": [
+        {
+          "place_id": "gtrentals-motorworld",
+          "order": 1,
+          "suggested_duration_minutes": 15,
+          "note": "Collect the McLaren 720S — the apex predator of the GTRentals fleet. Full briefing before the most demanding route on the island.",
+          "note_es": "Recoge el McLaren 720S — el depredador ápex de la flota de GTRentals. Briefing completo antes de la ruta más exigente de la isla.",
+          "note_de": "Den McLaren 720S abholen — das Raubtier der GTRentals-Flotte. Vollständiges Briefing vor der anspruchsvollsten Route der Insel.",
+          "day_number": 1
+        },
+        {
+          "place_id": "monestir-lluc",
+          "order": 2,
+          "suggested_duration_minutes": 30,
+          "note": "The monastery of Lluc — spiritual heart of Mallorca and the natural midpoint of the route. Brief stop to stretch and take in the mountain silence before the Sa Calobra descent.",
+          "note_es": "El Monasterio de Lluc — corazón espiritual de Mallorca y punto central natural de la ruta. Parada breve para estirarse y absorber el silencio de la montaña antes del descenso a Sa Calobra.",
+          "note_de": "Das Kloster Lluc — spirituelles Herz Mallorcas und natürlicher Mittelpunkt der Route. Kurzer Stopp zum Dehnen und Einatmen der Bergstille vor dem Sa-Calobra-Abstieg.",
+          "day_number": 1
+        },
+        {
+          "place_id": "deia",
+          "order": 3,
+          "suggested_duration_minutes": 30,
+          "note": "Deià: one of the most beautiful villages in Spain, beloved by writers and artists. Park on the hillside and walk 5 minutes into the stone village. The views down to Cala Deià from the church terrace are outstanding.",
+          "note_es": "Deià: uno de los pueblos más bonitos de España, querido por escritores y artistas. Aparca en la ladera y camina 5 minutos hasta el pueblo de piedra. Las vistas hacia Cala Deià desde la terraza de la iglesia son excepcionales.",
+          "note_de": "Deià: eines der schönsten Dörfer Spaniens, geliebt von Schriftstellern und Künstlern. An der Hangseite parken und 5 Minuten ins Steindorf laufen. Die Aussichten auf Cala Deià von der Kirchenterrasse sind hervorragend.",
+          "day_number": 1
+        },
+        {
+          "place_id": "valldemossa",
+          "order": 4,
+          "suggested_duration_minutes": 45,
+          "note": "Valldemossa: visit the Carthusian monastery where Chopin and George Sand spent the winter of 1838–39. The cobbled streets look even more cinematic with the McLaren parked outside. Don't miss the traditional coca de patata pastry.",
+          "note_es": "Valldemossa: visita la Cartuja donde Chopin y George Sand pasaron el invierno de 1838–39. Las calles adoquinadas quedan aún más cinematográficas con el McLaren aparcado fuera. No te vayas sin probar la coca de patata tradicional.",
+          "note_de": "Valldemossa: die Kartause besuchen, wo Chopin und George Sand den Winter 1838–39 verbrachten. Die Kopfsteinpflasterstraßen wirken mit dem davor geparkten McLaren noch kinematographischer. Das traditionelle Coca de Patata-Gebäck nicht verpassen.",
+          "day_number": 1
+        }
+      ],
+      "cover_photo": {
+        "url": "file:///android_asset/images/lrt-sierra-tramuntana.jpg",
+        "source": "OTHER"
+      },
+      "gallery_photos": []
+    }
+  ],
+  "archived_discounts": [
+    {
+      "id": "disc-gtrentals-2026",
+      "place_id": "gtrentals-motorworld",
+      "partner_name": "GTRentals Motorworld",
+      "headline": "5% dto. en alquiler de superdeportivo",
+      "terms": "Reserva mínima 4 horas. Válido cualquier día del año. No aplicable a Ferrari 812.",
+      "code": "MALLORCA5",
+      "valid_until": "2026-12-31"
+    }
+  ]
+}
