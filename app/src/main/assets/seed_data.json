@@ -2385,11 +2385,13 @@
         },
         {
           "url": "file:///android_asset/images/place-palma-city-3.jpg",
-          "source": "PIXABAY"
+          "source": "PIXABAY",
+          "heroFocalY": 0.363
         },
         {
           "url": "file:///android_asset/images/place-palma-city-4.jpg",
-          "source": "OTHER"
+          "source": "OTHER",
+          "heroFocalY": 0.2898
         }
       ],
       "description_es": "La vibrante capital de Mallorca, con la majestuosa catedral gótica La Seu, el Castillo de Bellver y un animado casco antiguo de callejuelas, bares de tapas y arquitectura modernista.",
@@ -2698,7 +2700,8 @@
         },
         {
           "url": "file:///android_asset/images/place-estellencs-2.jpg",
-          "source": "PIXABAY"
+          "source": "PIXABAY",
+          "heroFocalY": 0.4886
         },
         {
           "url": "file:///android_asset/images/place-estellencs-3.jpg",
@@ -2889,11 +2892,13 @@
         },
         {
           "url": "file:///android_asset/images/place-santanyi-2.jpg",
-          "source": "PEXELS"
+          "source": "PEXELS",
+          "heroFocalY": 0.6557
         },
         {
           "url": "file:///android_asset/images/place-santanyi-3.jpg",
-          "source": "UNSPLASH"
+          "source": "UNSPLASH",
+          "heroFocalY": 0.9911
         },
         {
           "url": "file:///android_asset/images/place-santanyi-4.jpg",
@@ -7537,7 +7542,8 @@
         },
         {
           "url": "file:///android_asset/images/place-mhares-sea-club-2.jpg",
-          "source": "PEXELS"
+          "source": "PEXELS",
+          "heroFocalY": 0.6099
         }
       ],
       "tags": [

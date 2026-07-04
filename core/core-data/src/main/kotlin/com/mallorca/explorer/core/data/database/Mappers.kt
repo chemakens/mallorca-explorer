@@ -41,22 +41,23 @@ private data class PlaceImageJson(
     val url: String,
     val source: String = "OTHER",
     val author: String? = null,
+    val heroFocalY: Float? = null,
 )
 
 private val placeImageListSerializer = ListSerializer(PlaceImageJson.serializer())
 
 private fun List<PlaceImage>.toPhotoJson(): String =
-    json.encodeToString(placeImageListSerializer, map { PlaceImageJson(it.url, it.source.name, it.author) })
+    json.encodeToString(placeImageListSerializer, map { PlaceImageJson(it.url, it.source.name, it.author, it.heroFocalY) })
 
 private fun String.toPlaceImage(): PlaceImage = runCatching {
     json.decodeFromString<PlaceImageJson>(this).let {
-        PlaceImage(it.url, runCatching { ImageSource.valueOf(it.source.uppercase()) }.getOrDefault(ImageSource.OTHER), it.author)
+        PlaceImage(it.url, runCatching { ImageSource.valueOf(it.source.uppercase()) }.getOrDefault(ImageSource.OTHER), it.author, it.heroFocalY)
     }
 }.getOrElse { PlaceImage(url = this) }
 
 private fun String.toPlaceImageList(): List<PlaceImage> = runCatching {
     json.decodeFromString(placeImageListSerializer, this).map {
-        PlaceImage(it.url, runCatching { ImageSource.valueOf(it.source.uppercase()) }.getOrDefault(ImageSource.OTHER), it.author)
+        PlaceImage(it.url, runCatching { ImageSource.valueOf(it.source.uppercase()) }.getOrDefault(ImageSource.OTHER), it.author, it.heroFocalY)
     }
 }.getOrElse {
     runCatching { json.decodeFromString(strListSerializer, this).map { PlaceImage(url = it) } }

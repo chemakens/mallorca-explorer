@@ -96,7 +96,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 135
+        const val CURRENT_SEED_VERSION = 136
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -131,6 +131,7 @@ class SeedDataWorker @AssistedInject constructor(
         val url: String,
         val source: String = "OTHER",
         val author: String? = null,
+        val heroFocalY: Float? = null,
     )
 
     @Serializable data class SeedPlace(

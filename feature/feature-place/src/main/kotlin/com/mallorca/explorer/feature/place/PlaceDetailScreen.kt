@@ -53,6 +53,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
@@ -197,11 +198,17 @@ private fun PlaceDetailContent(
                 modifier = Modifier.fillMaxSize(),
             ) { page ->
                 if (place.photoUrls.isNotEmpty()) {
+                    val heroFocalY = place.photoUrls[page].heroFocalY
+                    val heroAlignment = if (heroFocalY != null) {
+                        BiasAlignment(horizontalBias = 0f, verticalBias = 2f * heroFocalY - 1f)
+                    } else {
+                        Alignment.TopCenter
+                    }
                     SubcomposeAsyncImage(
                         model = place.photoUrls[page].url,
                         contentDescription = displayName,
                         contentScale = ContentScale.Crop,
-                        alignment = Alignment.TopCenter,
+                        alignment = heroAlignment,
                         modifier = Modifier.fillMaxSize().clickable { fullscreenPage = page },
                     ) {
                         when (painter.state) {
