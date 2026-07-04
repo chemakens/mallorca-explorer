@@ -10383,8 +10383,8 @@
         }
       ],
       "cover_photo": {
-        "url": "",
-        "source": "OTHER"
+        "url": "file:///android_asset/images/itin-hidden-gems-day-cover.jpg",
+        "source": "PEXELS"
       },
       "gallery_photos": []
     },
