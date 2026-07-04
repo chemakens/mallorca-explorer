@@ -2965,7 +2965,7 @@
         },
         {
           "url": "file:///android_asset/images/place-petra-3.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-petra.jpg",
@@ -3129,7 +3129,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/mirador-estaca.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "description_es": "Espectacular mirador costero cerca de la legendaria finca S'Estaca, antaño propiedad de Michael Douglas. Un camino secreto revela vistas dramáticas de la costa salvaje de la Tramuntana.",
@@ -4551,7 +4551,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/gem-cala-agulla.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/gem-cala-agulla.jpg",
@@ -5953,11 +5953,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/gem-mirador-sa-trapa.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         },
         {
           "url": "file:///android_asset/images/gem-mirador-sa-trapa-2.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/gem-mirador-sa-trapa.jpg",
@@ -7636,11 +7636,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/gem-mirador-sestaca.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         },
         {
           "url": "file:///android_asset/images/gem-mirador-sestaca-2.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ]
     },
@@ -7665,11 +7665,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/gem-torre-verger.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         },
         {
           "url": "file:///android_asset/images/gem-torre-verger-2.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "rating": null,
