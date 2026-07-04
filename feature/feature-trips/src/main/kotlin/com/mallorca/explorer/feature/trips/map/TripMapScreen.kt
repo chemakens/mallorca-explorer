@@ -183,6 +183,7 @@ fun TripMapScreen(
 ) {
     val trip by viewModel.trip.collectAsStateWithLifecycle()
     val stops = trip?.stops ?: emptyList()
+    val selectedStopId by viewModel.selectedStopId.collectAsStateWithLifecycle()
 
     val context = LocalContext.current
     val lifecycleOwner = LocalLifecycleOwner.current
@@ -252,7 +253,12 @@ fun TripMapScreen(
                         PropertyFactory.iconAllowOverlap(true),
                         PropertyFactory.iconIgnorePlacement(true),
                         PropertyFactory.iconAnchor(Property.ICON_ANCHOR_CENTER),
-                        PropertyFactory.iconSize(1f),
+                        // TODO: the data-driven iconSize expression isn't rendering the size
+                        // change visually — icons stay a fixed size regardless of the
+                        // per-feature "iconSize" property below. Pending fix: redesign with
+                        // two layers (base + highlighted) and toggle visibility via setFilter()
+                        // instead of relying on a per-feature numeric property.
+                        PropertyFactory.iconSize(Expression.get("iconSize")),
                     )
                 })
             }
@@ -283,6 +289,7 @@ fun TripMapScreen(
             ).apply {
                 addStringProperty("icon", "stop-${idx + 1}")
                 addStringProperty("placeId", stop.place.id)
+                addNumberProperty("iconSize", 1.0)
             }
         }
         (style.getSource(STOPS_SOURCE) as? GeoJsonSource)
@@ -313,6 +320,23 @@ fun TripMapScreen(
         }
     }
 
+    // Update marker sizes whenever the selected stop changes (no photo reload needed)
+    LaunchedEffect(styleRef.value, selectedStopId, stops) {
+        val style = styleRef.value ?: return@LaunchedEffect
+        if (stops.isEmpty()) return@LaunchedEffect
+        val features = stops.mapIndexed { idx, stop ->
+            Feature.fromGeometry(
+                Point.fromLngLat(stop.place.location.longitude, stop.place.location.latitude)
+            ).apply {
+                addStringProperty("icon", "stop-${idx + 1}")
+                addStringProperty("placeId", stop.place.id)
+                addNumberProperty("iconSize", if (stop.place.id == selectedStopId) 1.4 else 1.0)
+            }
+        }
+        (style.getSource(STOPS_SOURCE) as? GeoJsonSource)
+            ?.setGeoJson(FeatureCollection.fromFeatures(features))
+    }
+
     BottomSheetScaffold(
         scaffoldState = scaffoldState,
         sheetPeekHeight = 80.dp,
@@ -320,7 +344,9 @@ fun TripMapScreen(
         sheetContent = {
             StopsBottomSheet(
                 stops = stops,
+                selectedStopId = selectedStopId,
                 onStopClick = { stop ->
+                    viewModel.selectStop(stop.place.id)
                     mapRef.value?.animateCamera(
                         CameraUpdateFactory.newLatLng(
                             LatLng(stop.place.location.latitude, stop.place.location.longitude)
@@ -407,6 +433,7 @@ private fun ZoomButton(
 @Composable
 private fun StopsBottomSheet(
     stops: List<com.mallorca.explorer.core.domain.model.UserTripStop>,
+    selectedStopId: String?,
     onStopClick: (com.mallorca.explorer.core.domain.model.UserTripStop) -> Unit,
 ) {
     Column(modifier = Modifier.fillMaxWidth()) {
@@ -450,17 +477,27 @@ private fun StopsBottomSheet(
                 modifier = Modifier.fillMaxWidth(),
             ) {
                 itemsIndexed(stops) { idx, stop ->
+                    val isSelected = stop.place.id == selectedStopId
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
                             .clickable { onStopClick(stop) }
+                            .then(
+                                if (isSelected) Modifier.background(
+                                    MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.4f)
+                                ) else Modifier
+                            )
                             .padding(horizontal = 20.dp, vertical = 12.dp),
                         verticalAlignment = Alignment.CenterVertically,
                     ) {
                         Box(
                             modifier = Modifier
-                                .size(28.dp)
-                                .background(MaterialTheme.colorScheme.primary, CircleShape),
+                                .size(if (isSelected) 32.dp else 28.dp)
+                                .background(
+                                    if (isSelected) MaterialTheme.colorScheme.primary
+                                    else MaterialTheme.colorScheme.primary.copy(alpha = 0.6f),
+                                    CircleShape,
+                                ),
                             contentAlignment = Alignment.Center,
                         ) {
                             Text(
@@ -475,7 +512,7 @@ private fun StopsBottomSheet(
                             Text(
                                 stop.place.name,
                                 style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.SemiBold,
+                                fontWeight = if (isSelected) FontWeight.Bold else FontWeight.SemiBold,
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis,
                             )
