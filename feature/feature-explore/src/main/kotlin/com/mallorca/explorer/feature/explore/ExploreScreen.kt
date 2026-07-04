@@ -129,10 +129,11 @@ fun ExploreScreen(
             viewModel.setLocation(cached.latitude, cached.longitude)
             return
         }
-        // No cached fix — request a fresh one-shot location
+        // No cached fix — request a fresh one-shot location.
+        // NETWORK responds in seconds (and works in emulator); GPS is slow cold-start.
         val provider = when {
-            lm.isProviderEnabled(LocationManager.GPS_PROVIDER) -> LocationManager.GPS_PROVIDER
             lm.isProviderEnabled(LocationManager.NETWORK_PROVIDER) -> LocationManager.NETWORK_PROVIDER
+            lm.isProviderEnabled(LocationManager.GPS_PROVIDER) -> LocationManager.GPS_PROVIDER
             else -> return
         }
         lm.requestSingleUpdate(provider, object : LocationListener {
