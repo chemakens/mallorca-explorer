@@ -51,6 +51,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -82,6 +83,7 @@ import org.maplibre.geojson.Feature
 import org.maplibre.geojson.FeatureCollection
 import org.maplibre.geojson.LineString
 import org.maplibre.geojson.Point
+import com.mallorca.explorer.feature.trips.R
 
 private const val MAP_STYLE_URL = "https://tiles.openfreemap.org/styles/bright"
 private const val STOPS_SOURCE  = "trip-stops"
@@ -444,14 +446,14 @@ private fun StopsBottomSheet(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(
-                "Paradas del viaje",
+                stringResource(R.string.trip_map_stops_title),
                 style = MaterialTheme.typography.titleSmall,
                 fontWeight = FontWeight.Bold,
             )
             Spacer(Modifier.weight(1f))
             if (stops.isNotEmpty()) {
                 Text(
-                    "${stops.size} ${if (stops.size == 1) "parada" else "paradas"}",
+                    "${stops.size} ${if (stops.size == 1) stringResource(R.string.trip_map_stop_singular) else stringResource(R.string.trip_map_stop_plural)}",
                     style = MaterialTheme.typography.labelSmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -467,7 +469,7 @@ private fun StopsBottomSheet(
                 contentAlignment = Alignment.Center,
             ) {
                 Text(
-                    "Sin paradas todavía",
+                    stringResource(R.string.trip_no_stops),
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

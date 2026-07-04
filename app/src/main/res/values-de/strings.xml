@@ -71,6 +71,11 @@
 
     <!-- feature-gems -->
     <string name="gem_tap_to_discover">Tippen, um zu entdecken →</string>
+    <string name="gems_screen_title">Geheimtipps</string>
+    <string name="gems_screen_subtitle">Geheime Orte, die nur Einheimische kennen</string>
+    <string name="gems_progress">%1$d / %2$d entdeckt</string>
+    <string name="gems_unlocked_label">💎 Entdeckt</string>
+    <string name="gems_locked_label">Geheimtipp</string>
 
     <!-- feature-place -->
     <string name="place_address_label">Adresse</string>
@@ -113,8 +118,8 @@
     <string name="explore_featured_routes_title">Ausgewählte Routen</string>
     <string name="explore_popular_now">Jetzt beliebt</string>
     <string name="explore_popular_nearest">Nächste</string>
-    <string name="explore_popular_near_me_rated">In meiner Nähe · %1$d+ ★</string>
-    <string name="explore_popular_top_rated">Top bewertet · %1$d+ ★</string>
+    <string name="explore_popular_near_me_rated">In meiner Nähe · %1$s+ ★</string>
+    <string name="explore_popular_top_rated">Top bewertet · %1$s+ ★</string>
     <string name="explore_recently_viewed_title">Zuletzt angesehen</string>
     <string name="explore_no_results">Keine Ergebnisse</string>
     <string name="explore_no_results_query">Keine Ergebnisse für \"%1$s\"</string>
@@ -134,4 +139,78 @@
     <string name="explore_event_category_concert">Konzert</string>
     <string name="explore_event_category_culture">Kultur</string>
     <string name="explore_event_category_sport">Sport</string>
+    <!-- Place categories -->
+    <string name="category_beach">Strand</string>
+    <string name="category_hiking">Wandern</string>
+    <string name="category_culture">Kultur</string>
+    <string name="category_gastronomy">Gastronomie</string>
+    <string name="category_town">Stadt</string>
+    <string name="category_viewpoint">Aussichtspunkt</string>
+    <string name="category_adventure">Abenteuer</string>
+    <!-- Weather banner -->
+    <string name="weather_banner_sunny">Sonniger Tag · %1$d°C — ideal für Strand und Abenteuer</string>
+    <string name="weather_banner_rainy">Regen erwartet — Kultur und Gastronomie empfohlen</string>
+    <string name="weather_banner_windy">Starker Wind — heute keine Küstenrouten</string>
+    <string name="weather_banner_hot">%1$d°C — perfekt für Strand und Aussichtspunkte</string>
+    <string name="weather_banner_mild">%1$d°C bewölkt — ideal zum Wandern und in Dörfern</string>
+    <!-- SUP traffic light -->
+    <string name="sup_label_green">Spiegelglättes Meer — Ideal</string>
+    <string name="sup_detail_green">Perfekte Bedingungen für alle Levels</string>
+    <string name="sup_label_yellow">Vorsicht</string>
+    <string name="sup_detail_yellow">Moderate Erfahrung. In Ufernähe bleiben</string>
+    <string name="sup_label_red">Nicht Empfohlen</string>
+    <string name="sup_detail_red">Gefährliche Bedingungen heute</string>
+
+    <!-- widget (new) -->
+    <string name="widget_description">Meer- und Paddle-Surf-Bedingungen auf Mallorca</string>
+
+    <!-- feature-trips (new) -->
+    <string name="trip_new_sheet_title">✈️ Neue Reise</string>
+    <string name="trip_new_sheet_subtitle">Gib deinem Mallorca-Abenteuer einen Namen</string>
+    <string name="trip_empty_title">Plane dein Abenteuer!</string>
+    <string name="trip_empty_subtitle">Erstelle personalisierte Reisen, speichere die Orte, die du besuchen möchtest, und organisiere jeden Tag deines Mallorca-Urlaubs.</string>
+    <string name="trip_empty_cta">✈️  Meine erste Reise erstellen</string>
+    <string name="trip_place_singular">Ort</string>
+    <string name="trip_place_plural">Orte</string>
+    <string name="trip_map_stops_title">Reise-Stopps</string>
+    <string name="trip_map_stop_singular">Stopp</string>
+    <string name="trip_map_stop_plural">Stopps</string>
+
+    <!-- feature-favorites (new) -->
+    <string name="favorites_empty_title">Noch keine Favoriten</string>
+    <string name="favorites_empty_subtitle">Entdecke Orte und tippe ♡, um sie hier zu speichern</string>
+
+    <!-- feature-map (new) -->
+    <string name="map_gem_locked_hint">Besuche es, um es zu entdecken</string>
+    <string name="map_go_to_place">Zum Ort gehen</string>
+    <string name="map_route_stop_singular_banner">1 Stopp · Route eingezeichnet</string>
+    <string name="map_route_stops_banner">%1$d Stopps · Route eingezeichnet</string>
+
+    <!-- feature-itinerary (new) -->
+    <string name="itinerary_save_offline_body">Speichere diese Route, um sie offline zu nutzen oder morgen zurückzukehren.</string>
+
+    <!-- feature-itinerary SUP (new) -->
+    <string name="sup_offline_data_warning">Offline-Daten — können mehr als 30 Min. alt sein</string>
+    <string name="sup_gust_warning_format">Böen %1$.1f kt (+%2$d%%)</string>
+    <string name="sup_discount_format">🏷 %1$d%% Rabatt · Code: %2$s</string>
+
+    <!-- feature-place share (new) -->
+    <string name="place_share_prefix">Schau dir diesen Ort auf Mallorca an! 🌴\n</string>
+    <string name="place_share_open_in_app">In der App öffnen:</string>
+
+    <!-- notifications (new) -->
+    <string name="notification_channel_name">Mallorca Veranstaltungen</string>
+    <string name="notification_channel_desc">Erinnerungen für Veranstaltungen, die morgen stattfinden</string>
+    <string name="notification_title_prefix">Morgen auf Mallorca: %s</string>
+
+    <!-- onboarding (new) -->
+    <string name="onboarding_page1_title">Entdecke Mallorca</string>
+    <string name="onboarding_page1_subtitle">Mehr als 100 Strände, Wanderwege, mittelalterliche Dörfer und Orte, die du in keinem Reiseführer findest.</string>
+    <string name="onboarding_page2_title">SUP-Ampel</string>
+    <string name="onboarding_page2_subtitle">Paddle-Surf-Bedingungen in Echtzeit. Wind, Wellen und Meerestemperatur, bevor du rausgehst.</string>
+    <string name="onboarding_page3_title">Hidden Gems</string>
+    <string name="onboarding_page3_subtitle">Geheime Orte, die sich beim persönlichen Besuch erschließen. Gehöre zu den wenigen, die das Beste der Insel kennen.</string>
+    <string name="onboarding_btn_start">Los geht\'s!</string>
+    <string name="onboarding_btn_next">Weiter</string>
+    <string name="onboarding_btn_skip">Überspringen</string>
 </resources>

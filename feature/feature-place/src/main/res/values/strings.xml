@@ -33,4 +33,6 @@
     <string name="place_hidden_gem_no_location">No se pudo obtener tu ubicación. Activa el GPS e inténtalo de nuevo.</string>
     <string name="place_hidden_gem_no_permission">Activa el permiso de ubicación para verificar que estás aquí.</string>
     <string name="place_hidden_gem_no_subscription">Visita el lugar · Sin suscripción</string>
+    <string name="place_share_prefix">Check out this place in Mallorca! 🌴\n</string>
+    <string name="place_share_open_in_app">Open in app:</string>
 </resources>

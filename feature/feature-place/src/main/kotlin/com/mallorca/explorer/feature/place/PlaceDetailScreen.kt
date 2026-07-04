@@ -81,7 +81,6 @@ import com.mallorca.explorer.core.domain.model.SUPTrafficLight
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
 import com.mallorca.explorer.core.domain.model.WeatherCondition
 import com.mallorca.explorer.core.domain.model.WindCategory
-import com.mallorca.explorer.core.domain.model.windDegToCardinal
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
@@ -257,6 +256,8 @@ private fun PlaceDetailContent(
                 Icon(Icons.Outlined.ArrowBack, "Back", tint = Color.White)
             }
             // Share + Favorite buttons
+            val sharePrefix = stringResource(R.string.place_share_prefix)
+            val shareOpenInApp = stringResource(R.string.place_share_open_in_app)
             Column(
                 modifier = Modifier
                     .align(Alignment.TopEnd)
@@ -266,11 +267,11 @@ private fun PlaceDetailContent(
                 IconButton(
                     onClick = {
                         val text = buildString {
-                            append("¡Mira este lugar en Mallorca! 🌴\n")
+                            append(sharePrefix)
                             append("📍 $displayName — ${place.municipality}\n")
                             place.rating?.let { append("⭐ ${"%.1f".format(it)}\n") }
                             append("\nhttps://maps.google.com/?q=${place.location.latitude},${place.location.longitude}")
-                            append("\n\nAbrirlo en la app: mallorca://place?placeId=${place.id}")
+                            append("\n\n$shareOpenInApp mallorca://place?placeId=${place.id}")
                         }
                         val intent = Intent(Intent.ACTION_SEND).apply {
                             type = "text/plain"
@@ -757,7 +758,7 @@ private fun SUPTrafficLightCard(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceEvenly,
             ) {
-                val windDir = windDegToCardinal(status.windDirectionDeg)
+                val windDir = windCardinal(status.windDirectionDeg, LocalContext.current.resources.configuration.locales.get(0).language)
                 val windCategoryLabel = when (status.windCategory) {
                     WindCategory.ONSHORE     -> stringResource(R.string.place_wind_onshore)
                     WindCategory.OFFSHORE    -> stringResource(R.string.place_wind_offshore)
@@ -1073,4 +1074,13 @@ private fun Place.localizedTips(locale: String) = when (locale) {
     "ru" -> tipsRu.ifEmpty { tips }
     "zh" -> tipsZh.ifEmpty { tips }
     else -> tips
+}
+
+private fun windCardinal(deg: Int, locale: String): String {
+    val i = ((deg + 22.5) / 45).toInt() % 8
+    return when (locale) {
+        "es" -> listOf("N", "NE", "E", "SE", "S", "SO", "O", "NO")[i]
+        "de" -> listOf("N", "NO", "O", "SO", "S", "SW", "W", "NW")[i]
+        else -> listOf("N", "NE", "E", "SE", "S", "SW", "W", "NW")[i]
+    }
 }

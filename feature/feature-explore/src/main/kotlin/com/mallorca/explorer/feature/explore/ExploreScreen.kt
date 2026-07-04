@@ -91,7 +91,7 @@ import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.Place
 import com.mallorca.explorer.core.domain.model.SUPTrafficLight
 import com.mallorca.explorer.core.domain.model.WeatherCondition
-import com.mallorca.explorer.core.domain.model.windDegToCardinal
+import com.mallorca.explorer.core.domain.model.WeatherSummary
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -420,13 +420,16 @@ fun ExploreScreen(
                             }
                             // Popular / filtered places
                             item {
+                                val ratingStr = uiState.minRating?.let { r ->
+                                    if (r % 1f == 0f) r.toInt().toString() else r.toString()
+                                } ?: ""
                                 val popularTitle = when {
                                     uiState.nearMeEnabled && uiState.minRating != null ->
-                                        stringResource(R.string.explore_popular_near_me_rated, uiState.minRating!!.toInt())
+                                        stringResource(R.string.explore_popular_near_me_rated, ratingStr)
                                     uiState.nearMeEnabled ->
                                         stringResource(R.string.explore_popular_nearest)
                                     uiState.minRating != null ->
-                                        stringResource(R.string.explore_popular_top_rated, uiState.minRating!!.toInt())
+                                        stringResource(R.string.explore_popular_top_rated, ratingStr)
                                     else ->
                                         stringResource(R.string.explore_popular_now)
                                 }
@@ -632,7 +635,7 @@ private fun CategoryGrid(
                             Text(cat.emoji, style = MaterialTheme.typography.titleLarge)
                         }
                         Spacer(Modifier.height(4.dp))
-                        Text(cat.displayName, style = MaterialTheme.typography.labelSmall)
+                        Text(categoryLabel(cat), style = MaterialTheme.typography.labelSmall)
                     }
                 }
             }
@@ -679,6 +682,16 @@ private fun SUPSection(weather: WeatherCondition, supPlaces: ImmutableList<Place
     val light: SUPTrafficLight = when { windKnots > 10f -> SUPTrafficLight.RED; windKnots > 5f -> SUPTrafficLight.YELLOW; else -> SUPTrafficLight.GREEN }
     val cardBg = when (light) { SUPTrafficLight.GREEN -> Color(0xFFE8F5E9); SUPTrafficLight.YELLOW -> Color(0xFFFFFDE7); SUPTrafficLight.RED -> Color(0xFFFFEBEE) }
     val accentColor = when (light) { SUPTrafficLight.GREEN -> Color(0xFF2E7D32); SUPTrafficLight.YELLOW -> Color(0xFFF57F17); SUPTrafficLight.RED -> Color(0xFFC62828) }
+    val supLabel = when (light) {
+        SUPTrafficLight.GREEN  -> stringResource(R.string.sup_label_green)
+        SUPTrafficLight.YELLOW -> stringResource(R.string.sup_label_yellow)
+        SUPTrafficLight.RED    -> stringResource(R.string.sup_label_red)
+    }
+    val supDetail = when (light) {
+        SUPTrafficLight.GREEN  -> stringResource(R.string.sup_detail_green)
+        SUPTrafficLight.YELLOW -> stringResource(R.string.sup_detail_yellow)
+        SUPTrafficLight.RED    -> stringResource(R.string.sup_detail_red)
+    }
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(10.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) { Text("🏄", style = MaterialTheme.typography.titleMedium); Spacer(Modifier.width(6.dp)); Text(stringResource(R.string.explore_sup_title), style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold) }
         Card(modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = cardBg), elevation = CardDefaults.cardElevation(0.dp)) {
@@ -686,11 +699,11 @@ private fun SUPSection(weather: WeatherCondition, supPlaces: ImmutableList<Place
                 Row(modifier = Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween) {
                     Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(6.dp)) {
                         Text(light.emoji, style = MaterialTheme.typography.headlineSmall)
-                        Column { Text(light.label, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold, color = accentColor); Text(light.detail, style = MaterialTheme.typography.bodySmall, color = accentColor) }
+                        Column { Text(supLabel, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold, color = accentColor); Text(supDetail, style = MaterialTheme.typography.bodySmall, color = accentColor) }
                     }
                     Column(horizontalAlignment = Alignment.End) {
                         Text("${"%.1f".format(windKnots)} kn", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold, color = accentColor)
-                        Text("💨 ${windDegToCardinal(weather.windDirectionDeg)}", style = MaterialTheme.typography.bodySmall, color = accentColor)
+                        Text("💨 ${windCardinal(weather.windDirectionDeg, locale)}", style = MaterialTheme.typography.bodySmall, color = accentColor)
                     }
                 }
                 Text(stringResource(R.string.explore_sup_full_analysis), style = MaterialTheme.typography.labelSmall, color = accentColor.copy(alpha = 0.75f))
@@ -718,17 +731,24 @@ private fun SUPSection(weather: WeatherCondition, supPlaces: ImmutableList<Place
 @Composable
 private fun WeatherBanner(weather: WeatherCondition, modifier: Modifier = Modifier) {
     val recommended = weather.recommendedCategories
+    val bannerText = when (weather.summary) {
+        WeatherSummary.SUNNY -> stringResource(R.string.weather_banner_sunny, weather.tempC.toInt())
+        WeatherSummary.RAINY -> stringResource(R.string.weather_banner_rainy)
+        WeatherSummary.WINDY -> stringResource(R.string.weather_banner_windy)
+        WeatherSummary.HOT   -> stringResource(R.string.weather_banner_hot, weather.tempC.toInt())
+        WeatherSummary.MILD  -> stringResource(R.string.weather_banner_mild, weather.tempC.toInt())
+    }
     Card(modifier = modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.secondaryContainer), elevation = CardDefaults.cardElevation(defaultElevation = 0.dp)) {
         Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
                 Text(weather.bannerEmoji, style = MaterialTheme.typography.headlineSmall)
-                Text(weather.bannerText, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSecondaryContainer, modifier = Modifier.weight(1f))
+                Text(bannerText, style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSecondaryContainer, modifier = Modifier.weight(1f))
             }
             Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                 recommended.take(3).forEach { cat ->
                     Row(modifier = Modifier.clip(RoundedCornerShape(20.dp)).background(MaterialTheme.colorScheme.primary.copy(alpha = 0.15f)).padding(horizontal = 10.dp, vertical = 4.dp), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(4.dp)) {
                         Text(cat.emoji, style = MaterialTheme.typography.labelSmall)
-                        Text(cat.displayName, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.SemiBold)
+                        Text(categoryLabel(cat), style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.primary, fontWeight = FontWeight.SemiBold)
                     }
                 }
             }
@@ -868,5 +888,25 @@ private fun EventCard(event: Event, locale: String, modifier: Modifier = Modifie
                 event.price?.let { Text(it, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
             }
         }
+    }
+}
+
+@Composable
+private fun categoryLabel(cat: Category): String = when (cat) {
+    Category.BEACH      -> stringResource(R.string.category_beach)
+    Category.HIKING     -> stringResource(R.string.category_hiking)
+    Category.CULTURE    -> stringResource(R.string.category_culture)
+    Category.GASTRONOMY -> stringResource(R.string.category_gastronomy)
+    Category.TOWN       -> stringResource(R.string.category_town)
+    Category.VIEWPOINT  -> stringResource(R.string.category_viewpoint)
+    Category.ADVENTURE  -> stringResource(R.string.category_adventure)
+}
+
+private fun windCardinal(deg: Int, locale: String): String {
+    val i = ((deg + 22.5) / 45).toInt() % 8
+    return when (locale) {
+        "es" -> listOf("N", "NE", "E", "SE", "S", "SO", "O", "NO")[i]
+        "de" -> listOf("N", "NO", "O", "SO", "S", "SW", "W", "NW")[i]
+        else -> listOf("N", "NE", "E", "SE", "S", "SW", "W", "NW")[i]
     }
 }

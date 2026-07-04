@@ -43,7 +43,6 @@ import com.mallorca.explorer.core.domain.model.RouteWaypoint
 import com.mallorca.explorer.core.domain.model.SUPTrafficLight
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
 import com.mallorca.explorer.core.domain.model.WaypointRole
-import com.mallorca.explorer.core.domain.model.windDegToCardinal
 
 // ─── BLOQUE 1: ALERTA CLIMÁTICA ──────────────────────────────────────────────
 
@@ -136,7 +135,7 @@ fun SupWeatherAlertCard(
                     ) {
                         Text("⏱", style = MaterialTheme.typography.bodySmall)
                         Text(
-                            "Datos sin conexión — pueden tener más de 30 min",
+                            stringResource(R.string.sup_offline_data_warning),
                             style = MaterialTheme.typography.bodySmall,
                             color = Color(0xFF757575),
                             fontWeight = FontWeight.Medium,
@@ -150,7 +149,7 @@ fun SupWeatherAlertCard(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                 ) {
                     WindChip("💨 ${String.format("%.1f", supStatus.windKnots)} kt", textColor, bgColor, borderColor)
-                    WindChip("↗ ${windDegToCardinal(supStatus.windDirectionDeg)}", textColor, bgColor, borderColor)
+                    WindChip("↗ ${windCardinal(supStatus.windDirectionDeg, LocalContext.current.resources.configuration.locales.get(0).language)}", textColor, bgColor, borderColor)
                     supStatus.waveHeightM?.let { WindChip("🌊 ${String.format("%.1f", it)} m", textColor, bgColor, borderColor) }
                     supStatus.seaTempC?.let { WindChip("🌡 ${it.toInt()}°C", textColor, bgColor, borderColor) }
                 }
@@ -168,7 +167,7 @@ fun SupWeatherAlertCard(
                     ) {
                         Text("⚡", style = MaterialTheme.typography.bodySmall)
                         Text(
-                            "Ráfagas ${String.format("%.1f", supStatus.windGustKnots)} kt (+${((supStatus.windGustKnots!! / supStatus.windKnots - 1) * 100).toInt()}%)",
+                            stringResource(R.string.sup_gust_warning_format, supStatus.windGustKnots!!, ((supStatus.windGustKnots!! / supStatus.windKnots - 1) * 100).toInt()),
                             style = MaterialTheme.typography.bodySmall,
                             color = Color(0xFFE65100),
                             fontWeight = FontWeight.Medium,
@@ -381,7 +380,7 @@ fun SupCommercialBlock(
                     )
                     if (block.discountPct > 0) {
                         Text(
-                            "🏷 ${block.discountPct}% dto · código: ${block.discountCode}",
+                            stringResource(R.string.sup_discount_format, block.discountPct, block.discountCode),
                             style = MaterialTheme.typography.labelSmall,
                             color = Color(0xFFFFD54F),
                             fontWeight = FontWeight.Medium,
@@ -447,5 +446,14 @@ fun SupCommercialBlock(
                 )
             }
         }
+    }
+}
+
+private fun windCardinal(deg: Int, locale: String): String {
+    val i = ((deg + 22.5) / 45).toInt() % 8
+    return when (locale) {
+        "es" -> listOf("N", "NE", "E", "SE", "S", "SO", "O", "NO")[i]
+        "de" -> listOf("N", "NO", "O", "SO", "S", "SW", "W", "NW")[i]
+        else -> listOf("N", "NE", "E", "SE", "S", "SW", "W", "NW")[i]
     }
 }

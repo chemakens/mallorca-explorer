@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_favorites">Favorites</string>
+    <string name="favorites_empty_title">No favourites yet</string>
+    <string name="favorites_empty_subtitle">Explore places and tap ♡ to save them here</string>
+</resources>

@@ -10,7 +10,6 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
 import com.mallorca.explorer.core.domain.model.WeatherSummary
-import com.mallorca.explorer.core.domain.model.windDegToCardinal
 import com.mallorca.explorer.core.domain.usecase.weather.GetWeatherForLocation
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
@@ -54,7 +53,7 @@ class WidgetRefreshWorker @AssistedInject constructor(
                     prefs.toMutablePreferences().apply {
                         this[MallorcaWidget.PREF_TEMP_C]        = weather.tempC.toInt()
                         this[MallorcaWidget.PREF_WIND_KNOTS]    = windKnots
-                        this[MallorcaWidget.PREF_WIND_DIR]      = windDegToCardinal(weather.windDirectionDeg)
+                        this[MallorcaWidget.PREF_WIND_DIR]      = windCardinal(weather.windDirectionDeg, context.resources.configuration.locales.get(0).language)
                         this[MallorcaWidget.PREF_SUP_STATUS]    = supStatus
                         this[MallorcaWidget.PREF_WEATHER_EMOJI] = weatherEmoji
                         this[MallorcaWidget.PREF_UPDATED_EPOCH] = System.currentTimeMillis()
@@ -77,5 +76,14 @@ class WidgetRefreshWorker @AssistedInject constructor(
                 OneTimeWorkRequestBuilder<WidgetRefreshWorker>().build(),
             )
         }
+    }
+}
+
+private fun windCardinal(deg: Int, locale: String): String {
+    val i = ((deg + 22.5) / 45).toInt() % 8
+    return when (locale) {
+        "es" -> listOf("N", "NE", "E", "SE", "S", "SO", "O", "NO")[i]
+        "de" -> listOf("N", "NO", "O", "SO", "S", "SW", "W", "NW")[i]
+        else -> listOf("N", "NE", "E", "SE", "S", "SW", "W", "NW")[i]
     }
 }

@@ -32,4 +32,14 @@
     <string name="trip_add_action">Add</string>
     <string name="trip_view_map_cd">View on map</string>
     <string name="trip_rename_trip_cd">Rename trip</string>
+    <string name="trip_new_sheet_title">✈️ New Trip</string>
+    <string name="trip_new_sheet_subtitle">Name your Mallorcan adventure</string>
+    <string name="trip_empty_title">Plan your adventure!</string>
+    <string name="trip_empty_subtitle">Create personalised trips, save the places you want to visit and organise each day of your Mallorca escape.</string>
+    <string name="trip_empty_cta">✈️  Create my first trip</string>
+    <string name="trip_place_singular">place</string>
+    <string name="trip_place_plural">places</string>
+    <string name="trip_map_stops_title">Trip stops</string>
+    <string name="trip_map_stop_singular">stop</string>
+    <string name="trip_map_stop_plural">stops</string>
 </resources>

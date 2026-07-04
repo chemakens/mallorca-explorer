@@ -14,4 +14,8 @@
     <string name="itinerary_toggle_visited_cd">Toggle visited</string>
     <string name="itinerary_all">All Itineraries</string>
     <string name="itinerary_sea_condition">If sea conditions permit</string>
+    <string name="itinerary_save_offline_body">Save this route to consult it offline or come back tomorrow.</string>
+    <string name="sup_offline_data_warning">Offline data — may be more than 30 min old</string>
+    <string name="sup_gust_warning_format">Gusts %1$.1f kt (+%2$d%%)</string>
+    <string name="sup_discount_format">🏷 %1$d%% off · code: %2$s</string>
 </resources>

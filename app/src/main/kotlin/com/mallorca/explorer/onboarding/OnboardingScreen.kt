@@ -35,6 +35,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.res.stringResource
+import com.mallorca.explorer.R
 import kotlinx.coroutines.launch
 
 private data class OnboardingPage(
@@ -44,32 +46,31 @@ private data class OnboardingPage(
     val gradientColors: List<Color>,
 )
 
-private val pages = listOf(
-    OnboardingPage(
-        emoji = "🌴",
-        title = "Descubre Mallorca",
-        subtitle = "Más de 100 playas, rutas de senderismo, pueblos medievales y rincones que no encontrarás en ninguna guía.",
-        gradientColors = listOf(Color(0xFF0077B6), Color(0xFF023E8A)),
-    ),
-    OnboardingPage(
-        emoji = "🏄",
-        title = "Semáforo SUP",
-        subtitle = "Condiciones de paddle surf en tiempo real. Viento, olas y temperatura del mar antes de salir al agua.",
-        gradientColors = listOf(Color(0xFF2EC4B6), Color(0xFF0077B6)),
-    ),
-    OnboardingPage(
-        emoji = "💎",
-        title = "Hidden Gems",
-        subtitle = "Lugares secretos que se desbloquean al visitarlos en persona. Sé de los pocos que conocen lo mejor de la isla.",
-        gradientColors = listOf(Color(0xFF6A1B9A), Color(0xFF2EC4B6)),
-    ),
-)
-
 @Composable
 fun OnboardingScreen(
     onComplete: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
+    val pages = listOf(
+        OnboardingPage(
+            emoji = "🌴",
+            title = stringResource(R.string.onboarding_page1_title),
+            subtitle = stringResource(R.string.onboarding_page1_subtitle),
+            gradientColors = listOf(Color(0xFF0077B6), Color(0xFF023E8A)),
+        ),
+        OnboardingPage(
+            emoji = "🏄",
+            title = stringResource(R.string.onboarding_page2_title),
+            subtitle = stringResource(R.string.onboarding_page2_subtitle),
+            gradientColors = listOf(Color(0xFF2EC4B6), Color(0xFF0077B6)),
+        ),
+        OnboardingPage(
+            emoji = "💎",
+            title = stringResource(R.string.onboarding_page3_title),
+            subtitle = stringResource(R.string.onboarding_page3_subtitle),
+            gradientColors = listOf(Color(0xFF6A1B9A), Color(0xFF2EC4B6)),
+        ),
+    )
     val pagerState = rememberPagerState { pages.size }
     val scope = rememberCoroutineScope()
     val isLastPage = pagerState.currentPage == pages.lastIndex
@@ -160,7 +161,7 @@ fun OnboardingScreen(
                 ),
             ) {
                 Text(
-                    if (isLastPage) "¡Empezar!" else "Siguiente",
+                    if (isLastPage) stringResource(R.string.onboarding_btn_start) else stringResource(R.string.onboarding_btn_next),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                 )
@@ -170,7 +171,7 @@ fun OnboardingScreen(
             if (!isLastPage) {
                 TextButton(onClick = onComplete) {
                     Text(
-                        "Omitir",
+                        stringResource(R.string.onboarding_btn_skip),
                         color = Color.White.copy(alpha = 0.7f),
                         style = MaterialTheme.typography.bodyMedium,
                     )

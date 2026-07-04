@@ -180,7 +180,7 @@ private fun QrWelcomeSheet(
                 }
             }
             Text(
-                "Guarda esta ruta para consultarla sin conexión o volver mañana.",
+                stringResource(R.string.itinerary_save_offline_body),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )

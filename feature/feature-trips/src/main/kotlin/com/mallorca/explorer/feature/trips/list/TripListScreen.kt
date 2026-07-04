@@ -106,12 +106,12 @@ fun TripListScreen(
                 verticalArrangement = Arrangement.spacedBy(16.dp),
             ) {
                 Text(
-                    "✈️ Nuevo viaje",
+                    stringResource(R.string.trip_new_sheet_title),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                 )
                 Text(
-                    "Ponle un nombre a tu aventura mallorquina",
+                    stringResource(R.string.trip_new_sheet_subtitle),
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
@@ -320,14 +320,14 @@ private fun EmptyTripsState(
             }
             Spacer(Modifier.height(20.dp))
             Text(
-                "¡Planifica tu aventura!",
+                stringResource(R.string.trip_empty_title),
                 style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
             )
             Spacer(Modifier.height(10.dp))
             Text(
-                "Crea viajes personalizados, guarda los lugares que quieres visitar y organiza cada día de tu escapada a Mallorca.",
+                stringResource(R.string.trip_empty_subtitle),
                 style = MaterialTheme.typography.bodyMedium,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                 textAlign = TextAlign.Center,
@@ -343,7 +343,7 @@ private fun EmptyTripsState(
                 contentPadding = PaddingValues(horizontal = 24.dp),
             ) {
                 Text(
-                    "✈️  Crear mi primer viaje",
+                    stringResource(R.string.trip_empty_cta),
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.Bold,
                 )
@@ -455,8 +455,8 @@ private fun TripCard(
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Text(
-                    text = if (trip.stopCount == 0) "Sin paradas aún"
-                           else "📍 ${trip.stopCount} ${if (trip.stopCount == 1) "lugar" else "lugares"}",
+                    text = if (trip.stopCount == 0) stringResource(R.string.trip_no_stops)
+                           else "📍 ${trip.stopCount} ${if (trip.stopCount == 1) stringResource(R.string.trip_place_singular) else stringResource(R.string.trip_place_plural)}",
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )

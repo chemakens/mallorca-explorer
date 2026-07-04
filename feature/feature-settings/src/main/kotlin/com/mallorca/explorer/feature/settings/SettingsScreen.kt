@@ -52,8 +52,6 @@ private val LANGUAGES = listOf(
     Language("en", "🇬🇧", "English", "English"),
     Language("es", "🇪🇸", "Spanish", "Español"),
     Language("de", "🇩🇪", "German", "Deutsch"),
-    Language("zh", "🇨🇳", "Chinese", "中文"),
-    Language("ru", "🇷🇺", "Russian", "Русский"),
 )
 
 private data class ThemeOption(val value: String, val label: String, val icon: ImageVector)

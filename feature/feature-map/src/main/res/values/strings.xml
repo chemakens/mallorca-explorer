@@ -10,4 +10,8 @@
     <string name="map_zoom_out_cd">Zoom out</string>
     <string name="map_my_location_cd">My location</string>
     <string name="map_settings_cd">Settings</string>
+    <string name="map_gem_locked_hint">Visit to discover it</string>
+    <string name="map_go_to_place">Go to place</string>
+    <string name="map_route_stop_singular_banner">1 stop · route plotted</string>
+    <string name="map_route_stops_banner">%1$d stops · route plotted</string>
 </resources>

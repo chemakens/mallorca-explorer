@@ -14,11 +14,13 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.core.ui.component.EmptyState
 import com.mallorca.explorer.core.ui.component.PlaceCard
+import com.mallorca.explorer.feature.favorites.R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,14 +32,14 @@ fun FavoritesScreen(
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
     Scaffold(
-        topBar = { TopAppBar(title = { Text("Favorites") }) },
+        topBar = { TopAppBar(title = { Text(stringResource(R.string.nav_favorites)) }) },
         modifier = modifier,
     ) { padding ->
         if (uiState.places.isEmpty() && !uiState.isLoading) {
             EmptyState(
                 emoji = "💙",
-                title = "Aún no tienes favoritos",
-                subtitle = "Explora lugares y pulsa ♡ para guardarlos aquí",
+                title = stringResource(R.string.favorites_empty_title),
+                subtitle = stringResource(R.string.favorites_empty_subtitle),
                 modifier = Modifier.padding(padding),
             )
         } else {

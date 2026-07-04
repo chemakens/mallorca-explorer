@@ -606,7 +606,7 @@ fun MapScreen(
             ) {
                 Text("🔍", style = MaterialTheme.typography.bodyMedium)
                 Text(
-                    if (searchText.isEmpty()) "Buscar lugares secretos..." else searchText,
+                    if (searchText.isEmpty()) stringResource(R.string.map_search_hint) else searchText,
                     style = MaterialTheme.typography.bodyMedium,
                     color = if (searchText.isEmpty()) Color.Gray else Color(0xFF1C1B1F),
                     maxLines = 1,
@@ -963,7 +963,7 @@ private fun GemMysteryCard(
                     )
                 }
                 Text(
-                    "Visítala para descubrirla",
+                    stringResource(R.string.map_gem_locked_hint),
                     style = MaterialTheme.typography.labelSmall,
                     color = Color.White.copy(alpha = 0.4f),
                 )
@@ -973,7 +973,7 @@ private fun GemMysteryCard(
                     Icon(Icons.Outlined.Close, contentDescription = "Cerrar", tint = Color.White.copy(alpha = 0.6f), modifier = Modifier.size(18.dp))
                 }
                 TextButton(onClick = onViewDetail, modifier = Modifier.padding(0.dp)) {
-                    Text("Ir al lugar", style = MaterialTheme.typography.labelMedium, color = gemGold)
+                    Text(stringResource(R.string.map_go_to_place), style = MaterialTheme.typography.labelMedium, color = gemGold)
                 }
             }
         }
@@ -1094,7 +1094,12 @@ private fun ItineraryRouteBanner(title: String, stopCount: Int, onDismiss: () ->
             Text("🗺", style = MaterialTheme.typography.bodyMedium)
             Column(modifier = Modifier.weight(1f)) {
                 Text(title, style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.Bold, color = Color.White, maxLines = 1)
-                Text("$stopCount stops · ruta trazada", style = MaterialTheme.typography.labelSmall, color = Color.White.copy(alpha = 0.8f))
+                val stopsText = if (stopCount == 1) {
+                    stringResource(R.string.map_route_stop_singular_banner)
+                } else {
+                    stringResource(R.string.map_route_stops_banner, stopCount)
+                }
+                Text(stopsText, style = MaterialTheme.typography.labelSmall, color = Color.White.copy(alpha = 0.8f))
             }
             IconButton(onClick = onDismiss, modifier = Modifier.size(28.dp)) {
                 Icon(Icons.Outlined.Close, "Dismiss", tint = Color.White)

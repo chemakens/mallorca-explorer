@@ -105,13 +105,13 @@ private fun GemsHeader(unlockedCount: Int, totalCount: Int) {
         ) {
             Text("💎", fontSize = 48.sp)
             Text(
-                "Gemas Ocultas",
+                stringResource(R.string.gems_screen_title),
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 color = GemGold,
             )
             Text(
-                "Lugares secretos que solo los locales conocen",
+                stringResource(R.string.gems_screen_subtitle),
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color.White.copy(alpha = 0.7f),
             )
@@ -124,7 +124,7 @@ private fun GemsHeader(unlockedCount: Int, totalCount: Int) {
                     .padding(horizontal = 16.dp, vertical = 6.dp),
             ) {
                 Text(
-                    "$unlockedCount / $totalCount descubiertas",
+                    stringResource(R.string.gems_progress, unlockedCount, totalCount),
                     style = MaterialTheme.typography.labelMedium,
                     color = GemGold,
                     fontWeight = FontWeight.SemiBold,
@@ -220,7 +220,7 @@ private fun UnlockedGemCard(
                     horizontalArrangement = Arrangement.spacedBy(3.dp),
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    Text("💎 Descubierta", fontSize = 11.sp, color = GemAccent, fontWeight = FontWeight.SemiBold)
+                    Text(stringResource(R.string.gems_unlocked_label), fontSize = 11.sp, color = GemAccent, fontWeight = FontWeight.SemiBold)
                 }
             }
         }
@@ -281,7 +281,7 @@ private fun LockedGemCard(
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 Text(
-                    "Gema secreta",
+                    stringResource(R.string.gems_locked_label),
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     color = Color.White.copy(alpha = 0.5f),

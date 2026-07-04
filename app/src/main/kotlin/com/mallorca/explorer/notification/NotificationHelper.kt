@@ -16,10 +16,10 @@ const val CHANNEL_ID = "mallorca_events"
 fun createNotificationChannel(context: Context) {
     val channel = NotificationChannel(
         CHANNEL_ID,
-        "Eventos en Mallorca",
+        context.getString(R.string.notification_channel_name),
         NotificationManager.IMPORTANCE_DEFAULT,
     ).apply {
-        description = "Recordatorios de eventos que ocurren mañana"
+        description = context.getString(R.string.notification_channel_desc)
     }
     val manager = context.getSystemService(NotificationManager::class.java)
     manager.createNotificationChannel(channel)
@@ -37,12 +37,12 @@ fun sendEventNotification(context: Context, event: Event, notifId: Int) {
     )
 
     val title = event.titleEs.ifEmpty { event.title }
-    val priceText = if (event.isFree) "Gratis" else event.price ?: ""
+    val priceText = if (event.isFree) context.getString(R.string.explore_events_free) else event.price ?: ""
     val body = "${event.category.emoji} ${event.municipality}${if (priceText.isNotEmpty()) " · $priceText" else ""}"
 
     val notification = NotificationCompat.Builder(context, CHANNEL_ID)
         .setSmallIcon(R.drawable.ic_notification)
-        .setContentTitle("Mañana en Mallorca: $title")
+        .setContentTitle(context.getString(R.string.notification_title_prefix, title))
         .setContentText(body)
         .setStyle(NotificationCompat.BigTextStyle().bigText(body))
         .setContentIntent(pendingIntent)
