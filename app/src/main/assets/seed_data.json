@@ -25,7 +25,7 @@
         },
         {
           "url": "file:///android_asset/images/beach-es-trenc-pexels.jpg",
-          "source": "PEXELS"
+          "source": "PIXABAY"
         }
       ],
       "description_es": "Una de las playas más vírgenes de Mallorca, con aguas turquesas cristalinas y dunas de arena blanca. Espacio natural protegido con acceso regulado para preservar su entorno único.",
@@ -173,7 +173,8 @@
         },
         {
           "url": "file:///android_asset/images/beach-cala-figuera-formentor.jpg",
-          "source": "PEXELS"
+          "source": "AETIB",
+          "author": "Walter Obiol"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-figuera-formentor-2.jpg",
@@ -827,7 +828,12 @@
         },
         {
           "url": "file:///android_asset/images/place-deia-2.jpg",
-          "source": "MINE"
+          "source": "AETIB",
+          "author": "Pep Vicens"
+        },
+        {
+          "url": "file:///android_asset/images/place-deia-3.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "Pintoresco pueblo en ladera adorado por artistas y escritores, con casas de piedra que descienden entre olivos y almendros hacia el mar.",
@@ -1117,7 +1123,8 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-coves-drach.jpg",
-          "source": "PIXABAY"
+          "source": "AETIB",
+          "author": "Jaume Capella"
         },
         {
           "url": "file:///android_asset/images/place-coves-drach-2.jpg",
@@ -2390,7 +2397,7 @@
         },
         {
           "url": "file:///android_asset/images/place-palma-city-4.jpg",
-          "source": "OTHER",
+          "source": "PIXABAY",
           "heroFocalY": 0.2898
         }
       ],
@@ -2576,7 +2583,8 @@
         },
         {
           "url": "file:///android_asset/images/place-sineu-2.jpg",
-          "source": "PIXABAY"
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
           "url": "file:///android_asset/images/place-sineu-3.jpg",
@@ -2705,7 +2713,7 @@
         },
         {
           "url": "file:///android_asset/images/place-estellencs-3.jpg",
-          "source": "OTHER"
+          "source": "UNSPLASH"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-estellencs.jpg",
@@ -2765,15 +2773,18 @@
         },
         {
           "url": "file:///android_asset/images/place-binissalem-2.jpg",
-          "source": "PEXELS"
+          "source": "AETIB",
+          "author": "Eduardo Miralles"
         },
         {
           "url": "file:///android_asset/images/place-binissalem-3.jpg",
-          "source": "PEXELS"
+          "source": "AETIB",
+          "author": "Mallorca Video"
         },
         {
           "url": "file:///android_asset/images/place-binissalem-4.jpg",
-          "source": "OTHER"
+          "source": "AETIB",
+          "author": "Mallorca Video"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-binissalem.jpg",
@@ -6188,7 +6199,7 @@
         },
         {
           "url": "file:///android_asset/images/beach-port-soller-2.jpg",
-          "source": "PEXELS"
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-port-soller.jpg",
@@ -6417,7 +6428,7 @@
         },
         {
           "url": "file:///android_asset/images/beach-cala-dor-2.jpg",
-          "source": "PEXELS"
+          "source": "UNSPLASH"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-dor.jpg",
@@ -7355,66 +7366,6 @@
       "tips_zh": []
     },
     {
-      "id": "cala-llamp",
-      "name": "Cala Llamp",
-      "name_es": "Cala Llamp",
-      "description": "A secluded cove between Camp de Mar and Port d'Andratx with some of the clearest water on the island's southwest coast. The beach club perched above the natural rock platforms offers a pool, sunbeds and tiki parasols — a rare combination of wild cala and civilised comfort.",
-      "category": "BEACH",
-      "latitude": 39.5316,
-      "longitude": 2.3869,
-      "municipality": "Andratx",
-      "rating": 4.6,
-      "review_count": 534,
-      "price_level": "PAID",
-      "thumbnail_url": "file:///android_asset/images/cala-llamp-yo10.jpg",
-      "tips": [
-        "Access via a narrow road from Camp de Mar — arrive early in summer",
-        "The beach club has a pool, sunbeds and a restaurant with sea views",
-        "The natural rock platforms are ideal for snorkelling"
-      ],
-      "photo_urls": [
-        {
-          "url": "file:///android_asset/images/cala-llamp-yo7.jpg",
-          "source": "MINE"
-        },
-        {
-          "url": "file:///android_asset/images/cala-llamp-yo12.jpg",
-          "source": "MINE"
-        },
-        {
-          "url": "file:///android_asset/images/cala-llamp-yo10.jpg",
-          "source": "MINE"
-        }
-      ],
-      "tags": [
-        "beach",
-        "beach-club",
-        "swimming",
-        "hidden",
-        "natural-pool",
-        "southwest"
-      ],
-      "description_es": "Una cala recogida entre Camp de Mar y Port d'Andratx con algunas de las aguas más cristalinas de la costa suroeste. El beach club sobre las plataformas rocosas naturales ofrece piscina, tumbonas y parasoles tiki — una combinación única de cala salvaje y comodidad.",
-      "tips_es": [
-        "Acceso por carretera estrecha desde Camp de Mar — llega temprano en verano",
-        "El beach club tiene piscina, tumbonas y restaurante con vistas al mar",
-        "Las plataformas de roca natural son ideales para el snórkel"
-      ],
-      "name_de": "Cala Llamp",
-      "description_de": "Eine abgelegene Bucht zwischen Camp de Mar und Port d'Andratx mit kristallklarem Wasser. Der Beach Club über den natürlichen Felsplattformen bietet Pool, Liegen und Tiki-Sonnenschirme.",
-      "tips_de": [
-        "Zufahrt über schmale Straße ab Camp de Mar — im Sommer früh ankommen",
-        "Beach Club mit Pool, Liegen und Restaurant mit Meerblick",
-        "Die natürlichen Felsplattformen eignen sich ideal zum Schnorcheln"
-      ],
-      "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
-      "name_zh": "",
-      "description_zh": "",
-      "tips_zh": []
-    },
-    {
       "id": "cap-falco",
       "name": "Cala Cap Falcó",
       "name_es": "Cala Cap Falcó",
@@ -7803,6 +7754,66 @@
           "source": "PEXELS"
         }
       ]
+    },
+    {
+      "id": "cala-llamp",
+      "name": "Cala Llamp",
+      "name_es": "Cala Llamp",
+      "description": "A secluded cove between Camp de Mar and Port d'Andratx with some of the clearest water on the island's southwest coast. The beach club perched above the natural rock platforms offers a pool, sunbeds and tiki parasols — a rare combination of wild cala and civilised comfort.",
+      "category": "BEACH",
+      "latitude": 39.5316,
+      "longitude": 2.3869,
+      "municipality": "Andratx",
+      "rating": 4.6,
+      "review_count": 534,
+      "price_level": "PAID",
+      "thumbnail_url": "file:///android_asset/images/cala-llamp-yo10.jpg",
+      "tips": [
+        "Access via a narrow road from Camp de Mar — arrive early in summer",
+        "The beach club has a pool, sunbeds and a restaurant with sea views",
+        "The natural rock platforms are ideal for snorkelling"
+      ],
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/cala-llamp-yo7.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cala-llamp-yo12.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cala-llamp-yo10.jpg",
+          "source": "MINE"
+        }
+      ],
+      "tags": [
+        "beach",
+        "beach-club",
+        "swimming",
+        "hidden",
+        "natural-pool",
+        "southwest"
+      ],
+      "description_es": "Una cala recogida entre Camp de Mar y Port d'Andratx con algunas de las aguas más cristalinas de la costa suroeste. El beach club sobre las plataformas rocosas naturales ofrece piscina, tumbonas y parasoles tiki — una combinación única de cala salvaje y comodidad.",
+      "tips_es": [
+        "Acceso por carretera estrecha desde Camp de Mar — llega temprano en verano",
+        "El beach club tiene piscina, tumbonas y restaurante con vistas al mar",
+        "Las plataformas de roca natural son ideales para el snórkel"
+      ],
+      "name_de": "Cala Llamp",
+      "description_de": "Eine abgelegene Bucht zwischen Camp de Mar und Port d'Andratx mit kristallklarem Wasser. Der Beach Club über den natürlichen Felsplattformen bietet Pool, Liegen und Tiki-Sonnenschirme.",
+      "tips_de": [
+        "Zufahrt über schmale Straße ab Camp de Mar — im Sommer früh ankommen",
+        "Beach Club mit Pool, Liegen und Restaurant mit Meerblick",
+        "Die natürlichen Felsplattformen eignen sich ideal zum Schnorcheln"
+      ],
+      "name_ru": "",
+      "description_ru": "",
+      "tips_ru": [],
+      "name_zh": "",
+      "description_zh": "",
+      "tips_zh": []
     }
   ],
   "itineraries": [
@@ -7901,7 +7912,7 @@
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-beaches-3d-cover.jpg",
-        "source": "OTHER"
+        "source": "MINE"
       },
       "gallery_photos": []
     },
@@ -8003,16 +8014,16 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-tramuntana-2d-gallery-1.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/itin-tramuntana-2d-gallery-2.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-tramuntana-2d-cover.jpg",
-        "source": "OTHER"
+        "source": "PIXABAY"
       }
     },
     {
@@ -8104,20 +8115,20 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-palma-culture-gallery-1.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/itin-palma-culture-gallery-2.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/itin-palma-culture-gallery-3.jpg",
-          "source": "OTHER"
+          "source": "UNSPLASH"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-palma-culture-cover.jpg",
-        "source": "OTHER"
+        "source": "PIXABAY"
       }
     },
     {
@@ -8190,7 +8201,7 @@
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-east-coast-cover.jpg",
-        "source": "OTHER"
+        "source": "MINE"
       },
       "gallery_photos": []
     },
@@ -8431,16 +8442,16 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-west-coast-miradors-cover.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/itin-west-coast-miradors-gallery-1.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-west-coast-miradors-cover.jpg",
-        "source": "OTHER"
+        "source": "PEXELS"
       }
     },
     {
@@ -8516,16 +8527,16 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-formentor-viewpoints-cover.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/itin-formentor-viewpoints-gallery-1.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-formentor-viewpoints-cover.jpg",
-        "source": "OTHER"
+        "source": "PEXELS"
       }
     },
     {
@@ -8705,16 +8716,17 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-palma-soller-gallery-1.jpg",
-          "source": "OTHER"
+          "source": "AETIB",
+          "author": "Pep Vicens"
         },
         {
           "url": "file:///android_asset/images/itin-palma-soller-gallery-2.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-palma-soller-cover.jpg",
-        "source": "OTHER"
+        "source": "PIXABAY"
       }
     },
     {
@@ -10044,12 +10056,12 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-cami-port-canonge-gallery-1.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-cami-port-canonge-cover.jpg",
-        "source": "OTHER"
+        "source": "PEXELS"
       }
     },
     {
@@ -10140,12 +10152,12 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-cala-marmols-faro-gallery-1.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-cala-marmols-faro-cover.jpg",
-        "source": "OTHER"
+        "source": "PEXELS"
       }
     },
     {
@@ -10288,16 +10300,16 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-sacred-hilltops-cover.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/itin-sacred-hilltops-gallery-1.jpg",
-          "source": "OTHER"
+          "source": "PIXABAY"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-sacred-hilltops-cover.jpg",
-        "source": "OTHER"
+        "source": "PIXABAY"
       }
     },
     {
@@ -10453,24 +10465,24 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-palma-markets-2.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/itin-palma-markets-3.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/itin-palma-markets-4.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/itin-palma-markets-5.jpg",
-          "source": "OTHER"
+          "source": "PEXELS"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-palma-markets.jpg",
-        "source": "OTHER"
+        "source": "PIXABAY"
       }
     },
     {
@@ -10533,12 +10545,12 @@
       "gallery_photos": [
         {
           "url": "file:///android_asset/images/itin-northeast-wild-gallery-1.jpg",
-          "source": "OTHER"
+          "source": "MINE"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-northeast-wild-cover.jpg",
-        "source": "OTHER"
+        "source": "PEXELS"
       }
     },
     {

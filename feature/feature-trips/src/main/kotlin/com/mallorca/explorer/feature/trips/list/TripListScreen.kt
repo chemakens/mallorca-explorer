@@ -293,7 +293,7 @@ private fun EmptyTripsState(
                     "file:///android_asset/images/trips-carousel-4.jpg", // MINE — Sa Foradada al atardecer
                     "file:///android_asset/images/trips-carousel-5.jpg", // PIXABAY — velero Mallorca
                     "file:///android_asset/images/trips-carousel-6.jpg", // PEXELS — Cala Barques, Sant Vicenç
-                    "file:///android_asset/images/trips-carousel-7.jpg", // PIXABAY — tapas Mallorca
+                    "file:///android_asset/images/trips-carousel-7.jpg", // MINE — tapas restaurante pesquero
                 )
             }
             var currentIndex by remember { mutableIntStateOf(0) }
