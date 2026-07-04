@@ -1,5 +1,6 @@
 package com.mallorca.explorer.feature.place
 
+import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -83,6 +84,11 @@ import com.mallorca.explorer.core.domain.model.windDegToCardinal
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
+
+// Ticket purchase has no real checkout/monetization flow behind it yet, so the
+// button is hidden for now. place.ticketUrl is kept intact in seed_data.json so
+// this can be flipped back on once real ticketing is implemented.
+private const val SHOW_TICKET_BUTTON = false
 
 @Composable
 fun PlaceDetailScreen(
@@ -417,22 +423,28 @@ private fun PlaceDetailContent(
             }
 
             // Ticket purchase button
-            place.ticketUrl?.let { url ->
-                Spacer(Modifier.height(16.dp))
-                Button(
-                    onClick = {
-                        context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
-                    },
-                    modifier = Modifier.fillMaxWidth(),
-                    colors = ButtonDefaults.buttonColors(
-                        containerColor = Color(0xFFE65100),
-                        contentColor = Color.White,
-                    ),
-                    shape = RoundedCornerShape(12.dp),
-                ) {
-                    Icon(Icons.Outlined.ConfirmationNumber, contentDescription = null)
-                    Spacer(Modifier.size(8.dp))
-                    Text(stringResource(R.string.place_buy_ticket), fontWeight = FontWeight.Bold)
+            if (SHOW_TICKET_BUTTON) {
+                place.ticketUrl?.let { url ->
+                    Spacer(Modifier.height(16.dp))
+                    Button(
+                        onClick = {
+                            try {
+                                context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                            } catch (e: ActivityNotFoundException) {
+                                // No app available to handle the ticket URL.
+                            }
+                        },
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = Color(0xFFE65100),
+                            contentColor = Color.White,
+                        ),
+                        shape = RoundedCornerShape(12.dp),
+                    ) {
+                        Icon(Icons.Outlined.ConfirmationNumber, contentDescription = null)
+                        Spacer(Modifier.size(8.dp))
+                        Text(stringResource(R.string.place_buy_ticket), fontWeight = FontWeight.Bold)
+                    }
                 }
             }
 

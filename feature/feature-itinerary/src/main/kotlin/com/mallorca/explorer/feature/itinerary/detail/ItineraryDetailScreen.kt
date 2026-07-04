@@ -62,6 +62,11 @@ import com.mallorca.explorer.feature.itinerary.R
 import kotlinx.collections.immutable.ImmutableSet
 import kotlinx.collections.immutable.persistentSetOf
 
+// The commercial block CTA has no real, non-placeholder partner data behind it yet
+// (the only seeded entry uses a dummy phone number), so it's hidden for now.
+// itinerary.commercialBlock is kept intact in seed_data.json for when this is reactivated.
+private const val SHOW_COMMERCIAL_BLOCK = false
+
 @Composable
 fun ItineraryDetailScreen(
     itineraryId: String,
@@ -388,9 +393,11 @@ private fun ItineraryDetailContent(
                 }
 
                 // ── BLOQUE 3: CTA comercial (alquiler SUP) ──
-                itinerary.commercialBlock?.let { block ->
-                    Spacer(Modifier.height(8.dp))
-                    SupCommercialBlock(block = block)
+                if (SHOW_COMMERCIAL_BLOCK) {
+                    itinerary.commercialBlock?.let { block ->
+                        Spacer(Modifier.height(8.dp))
+                        SupCommercialBlock(block = block)
+                    }
                 }
 
                 Spacer(Modifier.height(72.dp))
