@@ -7355,6 +7355,66 @@
       "tips_zh": []
     },
     {
+      "id": "cala-llamp",
+      "name": "Cala Llamp",
+      "name_es": "Cala Llamp",
+      "description": "A secluded cove between Camp de Mar and Port d'Andratx with some of the clearest water on the island's southwest coast. The beach club perched above the natural rock platforms offers a pool, sunbeds and tiki parasols — a rare combination of wild cala and civilised comfort.",
+      "category": "BEACH",
+      "latitude": 39.5316,
+      "longitude": 2.3869,
+      "municipality": "Andratx",
+      "rating": 4.6,
+      "review_count": 534,
+      "price_level": "PAID",
+      "thumbnail_url": "file:///android_asset/images/cala-llamp-yo10.jpg",
+      "tips": [
+        "Access via a narrow road from Camp de Mar — arrive early in summer",
+        "The beach club has a pool, sunbeds and a restaurant with sea views",
+        "The natural rock platforms are ideal for snorkelling"
+      ],
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/cala-llamp-yo7.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cala-llamp-yo12.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cala-llamp-yo10.jpg",
+          "source": "MINE"
+        }
+      ],
+      "tags": [
+        "beach",
+        "beach-club",
+        "swimming",
+        "hidden",
+        "natural-pool",
+        "southwest"
+      ],
+      "description_es": "Una cala recogida entre Camp de Mar y Port d'Andratx con algunas de las aguas más cristalinas de la costa suroeste. El beach club sobre las plataformas rocosas naturales ofrece piscina, tumbonas y parasoles tiki — una combinación única de cala salvaje y comodidad.",
+      "tips_es": [
+        "Acceso por carretera estrecha desde Camp de Mar — llega temprano en verano",
+        "El beach club tiene piscina, tumbonas y restaurante con vistas al mar",
+        "Las plataformas de roca natural son ideales para el snórkel"
+      ],
+      "name_de": "Cala Llamp",
+      "description_de": "Eine abgelegene Bucht zwischen Camp de Mar und Port d'Andratx mit kristallklarem Wasser. Der Beach Club über den natürlichen Felsplattformen bietet Pool, Liegen und Tiki-Sonnenschirme.",
+      "tips_de": [
+        "Zufahrt über schmale Straße ab Camp de Mar — im Sommer früh ankommen",
+        "Beach Club mit Pool, Liegen und Restaurant mit Meerblick",
+        "Die natürlichen Felsplattformen eignen sich ideal zum Schnorcheln"
+      ],
+      "name_ru": "",
+      "description_ru": "",
+      "tips_ru": [],
+      "name_zh": "",
+      "description_zh": "",
+      "tips_zh": []
+    },
+    {
       "id": "cap-falco",
       "name": "Cala Cap Falcó",
       "name_es": "Cala Cap Falcó",
@@ -10243,9 +10303,9 @@
     {
       "id": "itin-hidden-gems-day",
       "title": "Hidden Gems of Mallorca",
-      "description": "An exclusive day unlocking three of the island's most secret places — places that don't appear on any tourist map, known only to those who have earned access. Each stop requires the app's gem unlock.",
+      "description": "A two-day journey combining one of the island's best-kept secrets with three southwest coast highlights: a secret cliffside viewpoint, a defensive tower with views over Sa Dragonera after a pleasant walk, the calm Sant Elm beach for a relaxing swim in those same waters, and a beach club with a natural pool to end the day.",
       "category": "ADVENTURE",
-      "duration_days": 1,
+      "duration_days": 2,
       "difficulty": "HARD",
       "total_distance_km": 120.0,
       "highlights": [
@@ -10268,26 +10328,46 @@
       "translations": {
         "es": {
           "title": "Gemas Ocultas de Mallorca",
-          "description": "Un día exclusivo desbloqueando tres de los lugares más secretos de la isla — lugares que no aparecen en ningún mapa turístico, conocidos solo por quienes se han ganado el acceso.",
+          "description": "Una experiencia repartida en dos días que combina uno de los secretos mejor guardados de la isla con tres lugares de la costa suroeste: un mirador secreto sobre el mar, una torre de defensa con vistas a Sa Dragonera tras un paseo agradable, la tranquila playa de Sant Elm para un baño relajante junto a esas mismas aguas, y un beach club con piscina natural para cerrar el día.",
+          "highlights": []
+        },
+        "de": {
+          "description": "Eine zweitägige Reise, die einen der bestgehüteten Geheimtipps der Insel mit drei Highlights der Südwestküste kombiniert: ein geheimer Aussichtspunkt über dem Meer, ein Verteidigungsturm mit Blick auf Sa Dragonera nach einem angenehmen Spaziergang, der ruhige Strand von Sant Elm für ein entspannendes Bad in denselben Gewässern, und ein Beach Club mit natürlichem Pool zum Tagesabschluss.",
           "highlights": []
         }
       },
       "stops": [
         {
-          "place_id": "gem-cova-ses-bruixes",
-          "order": 1,
-          "day_number": 1,
-          "suggested_duration_minutes": 150,
-          "note": "Morning kayak — check tide tables the night before",
-          "note_es": "Kayak matutino — consulta las mareas la noche anterior"
-        },
-        {
           "place_id": "gem-mirador-sa-trapa",
-          "order": 3,
+          "order": 1,
           "day_number": 1,
           "suggested_duration_minutes": 120,
           "note": "Sunset finish — the unreported great view of the island",
           "note_es": "Final al atardecer — la gran vista desconocida de la isla"
+        },
+        {
+          "place_id": "playa-sant-elm",
+          "order": 2,
+          "day_number": 1,
+          "suggested_duration_minutes": 90,
+          "note": "Rest stop after the mirador — calm waters perfect for a swim before heading back",
+          "note_es": "Parada de descanso tras el mirador — aguas tranquilas perfectas para un baño antes de volver"
+        },
+        {
+          "place_id": "cala-en-basset",
+          "order": 3,
+          "day_number": 2,
+          "suggested_duration_minutes": 120,
+          "note": "Allow 2 hours for the circular route — the tower has the best views of Sa Dragonera",
+          "note_es": "Reserva 2 horas para la ruta circular — la torre tiene las mejores vistas de Sa Dragonera"
+        },
+        {
+          "place_id": "cala-llamp",
+          "order": 4,
+          "day_number": 2,
+          "suggested_duration_minutes": 180,
+          "note": "End the day at the beach club — the natural sea pool is perfect for a swim",
+          "note_es": "Termina el día en el beach club — la piscina natural de agua de mar es perfecta para un baño"
         }
       ],
       "cover_photo": {
