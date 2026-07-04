@@ -77,9 +77,10 @@ class PlaceDetailViewModel @Inject constructor(
 
     @OptIn(ExperimentalCoroutinesApi::class)
     private val weatherFlow = placeFlow.flatMapLatest { place ->
-        val isSUP = place?.subCategories?.contains("sup_launch") == true
-        if (place?.category == Category.BEACH || isSUP) {
-            getWeatherForLocation(place!!.location.latitude, place.location.longitude, includeMarine = isSUP)
+        if (place == null) return@flatMapLatest flowOf(null)
+        val isSUP = place.subCategories.contains("sup_launch")
+        if (place.category == Category.BEACH || isSUP) {
+            getWeatherForLocation(place.location.latitude, place.location.longitude, includeMarine = isSUP)
         } else {
             flowOf(null)
         }
