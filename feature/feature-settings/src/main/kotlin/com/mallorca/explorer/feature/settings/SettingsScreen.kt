@@ -45,6 +45,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import com.mallorca.explorer.core.data.BuildConfig
 
 private data class Language(val code: String, val flag: String, val name: String, val nativeName: String)
 
@@ -137,8 +138,8 @@ fun SettingsScreen(
                 }
             }
 
-            // Developer section — only visible once unlocked
-            if (devMode) {
+            // Developer section — debug builds only, and only once unlocked
+            if (BuildConfig.DEBUG && devMode) {
                 Spacer(Modifier.height(8.dp))
                 HorizontalDivider()
                 Text(
@@ -191,7 +192,7 @@ fun SettingsScreen(
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
-                if (devTapCount in 1..6) {
+                if (BuildConfig.DEBUG && devTapCount in 1..6) {
                     Spacer(Modifier.height(4.dp))
                     Text(
                         "${7 - devTapCount} pasos para activar el modo desarrollador",
@@ -199,7 +200,7 @@ fun SettingsScreen(
                         color = Color(0xFF6A1B9A),
                         fontSize = 11.sp,
                     )
-                } else if (devMode) {
+                } else if (BuildConfig.DEBUG && devMode) {
                     Spacer(Modifier.height(4.dp))
                     Text(
                         "Modo desarrollador activado",

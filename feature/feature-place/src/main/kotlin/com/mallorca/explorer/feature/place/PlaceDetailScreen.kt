@@ -79,6 +79,7 @@ import com.mallorca.explorer.core.domain.model.Place
 import com.mallorca.explorer.core.domain.model.attributionText
 import com.mallorca.explorer.core.domain.model.SUPTrafficLight
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
+import com.mallorca.explorer.core.data.BuildConfig
 import com.mallorca.explorer.core.domain.model.WeatherCondition
 import com.mallorca.explorer.core.domain.model.WindCategory
 import kotlinx.collections.immutable.ImmutableList
@@ -1031,7 +1032,7 @@ private fun HiddenGemLockScreen(
                 }
             }
 
-            if (isDevMode) {
+            if (BuildConfig.DEBUG && isDevMode) {
                 OutlinedButton(
                     onClick = onUnlock,
                     modifier = Modifier.fillMaxWidth(),
