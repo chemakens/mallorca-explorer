@@ -7712,7 +7712,8 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/gem-costa-de-la-calma.jpg",
-          "source": "MINE"
+          "source": "MINE",
+          "heroFocalY": 0.3348
         },
         {
           "url": "file:///android_asset/images/gem-costa-de-la-calma-2.jpg",
