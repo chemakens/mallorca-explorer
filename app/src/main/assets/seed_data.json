@@ -7701,6 +7701,56 @@
       "tips_zh": []
     },
     {
+      "id": "gem-costa-de-la-calma",
+      "name": "Costa de la Calma",
+      "name_es": "Costa de la Calma",
+      "description": "Costa de la Calma offers calm and natural beauty between Santa Ponça and Peguera, just 30 minutes from Palma. Its highlight is Cala Blanca beach, a small, open, rocky cove with clear waters ideal for a swim followed by sunbathing. At sunset, the area becomes one of Calvià's most special spots — perfect for watching the sun go down with a tinto de verano in hand.",
+      "category": "BEACH",
+      "latitude": 39.522936,
+      "longitude": 2.466547,
+      "municipality": "Calvià",
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/gem-costa-de-la-calma.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/gem-costa-de-la-calma-2.jpg",
+          "source": "MINE",
+          "heroFocalY": 0.4626
+        }
+      ],
+      "thumbnail_url": "file:///android_asset/images/gem-costa-de-la-calma.jpg",
+      "price_level": "FREE",
+      "rating": 4.9,
+      "review_count": 8,
+      "tips": [
+        "Best enjoyed at sunset with a tinto de verano",
+        "Cala Blanca is rocky — bring water shoes",
+        "Only 30 minutes from Palma, easy to combine with Peguera or Santa Ponça"
+      ],
+      "tags": ["hidden_gem", "beach", "sunset", "southwest"],
+      "description_es": "Costa de la Calma reparte tranquilidad y belleza natural entre Santa Ponça y Peguera, a solo 30 minutos de Palma. Su punto fuerte es la Playa de Cala Blanca, una pequeña cala rocosa y abierta al mar, con aguas transparentes ideales para un chapuzón y un rato de sol después. Al atardecer, la zona se convierte en uno de los rincones más especiales de Calvià — perfecta para ver la puesta de sol con un tinto de verano en la mano.",
+      "tips_es": [
+        "El mejor momento es al atardecer, con un tinto de verano en la mano",
+        "Cala Blanca es rocosa, lleva calzado de baño",
+        "A solo 30 minutos de Palma, fácil combinar con Peguera o Santa Ponça"
+      ],
+      "name_de": "Costa de la Calma",
+      "description_de": "Costa de la Calma bietet Ruhe und natürliche Schönheit zwischen Santa Ponça und Peguera, nur 30 Minuten von Palma entfernt. Der Höhepunkt ist der Strand Cala Blanca, eine kleine, offene, felsige Bucht mit klarem Wasser — ideal zum Schwimmen und anschließenden Sonnenbaden. Bei Sonnenuntergang wird dieser Ort zu einem der schönsten Ecken von Calvià — perfekt, um mit einem Tinto de Verano in der Hand den Sonnenuntergang zu genießen.",
+      "tips_de": [
+        "Am schönsten bei Sonnenuntergang mit einem Tinto de Verano",
+        "Cala Blanca ist felsig — Badeschuhe empfehlenswert",
+        "Nur 30 Minuten von Palma entfernt, gut mit Peguera oder Santa Ponça kombinierbar"
+      ],
+      "name_ru": "",
+      "description_ru": "",
+      "tips_ru": [],
+      "name_zh": "",
+      "description_zh": "",
+      "tips_zh": []
+    },
+    {
       "id": "mercat-1930",
       "name": "Mercat 1930",
       "name_es": "Mercat 1930",
