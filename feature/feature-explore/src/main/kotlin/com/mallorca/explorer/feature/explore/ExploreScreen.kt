@@ -258,11 +258,11 @@ fun ExploreScreen(
                         selectedBorderWidth = 0.dp,
                     ),
                 )
-                val rating3Selected = uiState.minRating == 3f
+                val rating3Selected = uiState.minRating == 4.5f
                 FilterChip(
                     selected = rating3Selected,
-                    onClick = { viewModel.setMinRating(if (rating3Selected) null else 3f) },
-                    label = { Text("3+ ★") },
+                    onClick = { viewModel.setMinRating(if (rating3Selected) null else 4.5f) },
+                    label = { Text("4.5+ ★") },
                     colors = FilterChipDefaults.filterChipColors(
                         containerColor = Color.Transparent,
                         labelColor = Color.White,
@@ -278,11 +278,11 @@ fun ExploreScreen(
                         selectedBorderWidth = 0.dp,
                     ),
                 )
-                val rating4Selected = uiState.minRating == 4f
+                val rating4Selected = uiState.minRating == 4.8f
                 FilterChip(
                     selected = rating4Selected,
-                    onClick = { viewModel.setMinRating(if (rating4Selected) null else 4f) },
-                    label = { Text("4+ ★") },
+                    onClick = { viewModel.setMinRating(if (rating4Selected) null else 4.8f) },
+                    label = { Text("4.8+ ★") },
                     colors = FilterChipDefaults.filterChipColors(
                         containerColor = Color.Transparent,
                         labelColor = Color.White,
