@@ -16,6 +16,13 @@ val localProps = Properties().apply {
     if (f.exists()) load(f.inputStream())
 }
 
+// VERSION_CODE/VERSION_NAME have no safe default — a silent fallback would let a release
+// build ship as versionCode 1, which Play Store would then reject (or worse, silently
+// downgrade an existing install). Fail loudly instead if local.properties is incomplete.
+fun requiredLocalProp(key: String): String =
+    localProps.getProperty(key)
+        ?: error("Missing '$key' in local.properties (rootProject) — required to build")
+
 android {
     namespace = "com.mallorca.explorer"
     compileSdk = 35
@@ -24,8 +31,8 @@ android {
         applicationId = "com.mallorca.explorer"
         minSdk = 26
         targetSdk = 35
-        versionCode = localProps.getProperty("VERSION_CODE", "1").toInt()
-        versionName = localProps.getProperty("VERSION_NAME", "1.0.1")
+        versionCode = requiredLocalProp("VERSION_CODE").toInt()
+        versionName = requiredLocalProp("VERSION_NAME")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "MAPTILER_API_KEY",
