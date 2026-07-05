@@ -6,7 +6,6 @@ import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.Paint
-import android.graphics.Path
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
@@ -178,28 +177,44 @@ private const val GEM_MYSTERY_LAYER_ID  = "hidden-gems-mystery"
 private const val GEM_ICON_ID           = "gem-mystery-pin"
 
 /**
- * Compact gold circle with white border and "?" label — mystery pin for hidden gems.
+ * Faceted gem artwork (res/drawable-nodpi/gem_mystery_base.png) with a solid "?" overlaid —
+ * mystery pin for hidden gems. The source PNG's transparent margin is trimmed so the gem's
+ * ink fills the icon box the same way the previous circle did, at the same 32dp footprint.
  */
-private fun createGemMysteryBitmap(w: Int): Bitmap {
+private fun createGemMysteryBitmap(w: Int, context: Context): Bitmap {
+    val source = android.graphics.BitmapFactory.decodeResource(context.resources, R.drawable.gem_mystery_base)
+
+    val pixels = IntArray(source.width * source.height)
+    source.getPixels(pixels, 0, source.width, 0, 0, source.width, source.height)
+    var minX = source.width; var maxX = 0; var minY = source.height; var maxY = 0
+    for (y in 0 until source.height) {
+        for (x in 0 until source.width) {
+            if ((pixels[y * source.width + x] ushr 24) and 0xFF > 10) {
+                if (x < minX) minX = x
+                if (x > maxX) maxX = x
+                if (y < minY) minY = y
+                if (y > maxY) maxY = y
+            }
+        }
+    }
+    val trimmed = Bitmap.createBitmap(source, minX, minY, maxX - minX + 1, maxY - minY + 1)
+
     val bmp = Bitmap.createBitmap(w, w, Bitmap.Config.ARGB_8888)
     val canvas = Canvas(bmp)
     val r = w / 2f
-    val inner = r * 0.88f
-    // Gold fill
-    canvas.drawCircle(r, r, inner, Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = android.graphics.Color.parseColor("#F9A825")
-        style = Paint.Style.FILL
-    })
-    // White border for contrast against any map background
-    canvas.drawCircle(r, r, inner, Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = android.graphics.Color.WHITE
-        style = Paint.Style.STROKE
-        strokeWidth = r * 0.18f
-    })
-    // Dark "?" for legibility on gold
+
+    // Scale so the gem's ink fills ~90% of the box — same visual weight as the original circle.
+    val fillRatio = 0.90f
+    val scale = (w * fillRatio) / maxOf(trimmed.width, trimmed.height).toFloat()
+    val destW = (trimmed.width * scale).toInt()
+    val destH = (trimmed.height * scale).toInt()
+    val scaledGem = Bitmap.createScaledBitmap(trimmed, destW, destH, true)
+    canvas.drawBitmap(scaledGem, r - destW / 2f, r - destH / 2f, Paint(Paint.ANTI_ALIAS_FLAG))
+
+    // Solid black "?" directly on the artwork, no badge behind it
     val textPaint = Paint(Paint.ANTI_ALIAS_FLAG).apply {
-        color = android.graphics.Color.parseColor("#1A0030")
-        textSize = w * 0.48f
+        color = android.graphics.Color.parseColor("#0A0A0A")
+        textSize = w * 0.38f
         textAlign = Paint.Align.CENTER
         typeface = android.graphics.Typeface.DEFAULT_BOLD
     }
@@ -344,7 +359,7 @@ fun MapScreen(
                 // ── Hidden gem mystery pins ──────────────────────────────────
                 style.addSource(GeoJsonSource(GEMS_SOURCE_ID, FeatureCollection.fromFeatures(emptyList())))
                 val gemW = (context.resources.displayMetrics.density * 32).toInt()
-                style.addImage(GEM_ICON_ID, createGemMysteryBitmap(gemW))
+                style.addImage(GEM_ICON_ID, createGemMysteryBitmap(gemW, context))
                 style.addLayer(
                     SymbolLayer(GEM_MYSTERY_LAYER_ID, GEMS_SOURCE_ID).apply {
                         setProperties(
