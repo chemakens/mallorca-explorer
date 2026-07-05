@@ -5035,7 +5035,7 @@
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-son-marroig.jpg",
-      "price_level": "LOW",
+      "price_level": "BUDGET",
       "rating": 4.6,
       "review_count": 2200,
       "tips": [
@@ -5370,7 +5370,7 @@
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-mercat-olivar.jpg",
-      "price_level": "LOW",
+      "price_level": "BUDGET",
       "rating": 4.4,
       "review_count": 3820,
       "tips": [
@@ -5426,7 +5426,7 @@
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-mercat-san-juan.jpg",
-      "price_level": "MODERATE",
+      "price_level": "MID",
       "rating": 4.5,
       "review_count": 2140,
       "tips": [
@@ -6105,7 +6105,7 @@
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-santanyi.jpg",
-      "price_level": "LOW",
+      "price_level": "BUDGET",
       "rating": 4.5,
       "review_count": 2870,
       "tips": [
@@ -6162,7 +6162,7 @@
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-millor.jpg",
-      "price_level": "LOW",
+      "price_level": "BUDGET",
       "rating": 4.3,
       "review_count": 5680,
       "tips": [
@@ -6390,7 +6390,7 @@
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-illetes.jpg",
-      "price_level": "LOW",
+      "price_level": "BUDGET",
       "rating": 4.5,
       "review_count": 4320,
       "tips": [
@@ -7833,7 +7833,7 @@
       "municipality": "Andratx",
       "rating": 4.6,
       "review_count": 534,
-      "price_level": "PAID",
+      "price_level": "MID",
       "thumbnail_url": "file:///android_asset/images/cala-llamp-yo10.jpg",
       "tips": [
         "Access via a narrow road from Camp de Mar — arrive early in summer",
