@@ -5681,7 +5681,7 @@
       "id": "ruta-cala-murta",
       "name": "Ruta a Cala Murta",
       "name_es": "Ruta a Cala Murta",
-      "description": "A moderately demanding coastal trail through dense Aleppo pine forest on the Formentor peninsula, leading to one of its most sheltered and pristine coves. The deep green of the pines against turquoise water makes it one of the most photogenic hikes on the island.",
+      "description": "A moderately demanding coastal trail through dense Aleppo pine forest on the Formentor peninsula, leading to one of Mallorca's most sheltered and pristine coves. The deep green of the pines against the turquoise water makes it one of the island's most photogenic hikes. A roughly 6 km round trip from the Font de la Cala car park, about 2 hours total.",
       "category": "HIKING",
       "latitude": 39.9217,
       "longitude": 3.1467,
@@ -5690,7 +5690,11 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-ruta-cala-murta.jpg",
-          "source": "PIXABAY"
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-ruta-cala-murta-2.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-ruta-cala-murta.jpg",
@@ -5699,28 +5703,29 @@
       "review_count": 1180,
       "tips": [
         "Park at the Font de la Cala car park",
-        "Route is 6 km round trip, 2 hours",
-        "Cala has no facilities — pack everything in and out"
+        "6 km round trip, about 2 hours",
+        "No facilities at the cove — bring everything you need"
       ],
       "tags": [
         "moderate",
         "pine-forest",
         "formentor",
         "pristine",
-        "photography"
+        "photography",
+        "hidden_gem"
       ],
-      "description_es": "Exigente sendero costero por el denso bosque de pinos de la Península de Formentor, hasta una de sus calas más protegidas y vírgenes. El verde intenso de los pinos sobre el turquesa crea imágenes imposibles.",
+      "description_es": "Un sendero costero exigente que atraviesa el denso pinar de la península de Formentor, hasta una de las calas más recogidas y vírgenes de Mallorca. El verde intenso de los pinos sobre el turquesa del mar la convierte en una de las rutas más fotogénicas de la isla. Ruta circular de unos 6 km desde el aparcamiento de Font de la Cala, unas 2 horas ida y vuelta.",
       "tips_es": [
-        "Ruta circular desde el Port de Pollença",
-        "El sendero atraviesa una zona forestal con sombra agradable",
-        "La cala es pequeña pero muy recogida — llega temprano"
+        "Aparca en Font de la Cala",
+        "Ruta circular de 6 km, unas 2 horas",
+        "La cala no tiene servicios — lleva todo lo necesario"
       ],
       "name_de": "Wanderung Cala Murta",
-      "description_de": "Rundwanderung ab Port de Pollença durch schattenreichen Kiefernwald zu einer intimen Bucht.",
+      "description_de": "Ein anspruchsvoller Küstenpfad durch dichten Aleppo-Kiefernwald auf der Halbinsel Formentor, der zu einer der geschütztesten und ursprünglichsten Buchten Mallorcas führt. Das satte Grün der Kiefern vor dem türkisfarbenen Wasser macht ihn zu einer der fotogensten Wanderungen der Insel. Rundweg von rund 6 km ab dem Parkplatz Font de la Cala, etwa 2 Stunden gesamt.",
       "tips_de": [
-        "Rundwanderung ab Port de Pollença",
-        "Der Pfad führt durch schattenreichen Waldbereich",
-        "Die Bucht ist klein aber sehr geschützt – früh ankommen"
+        "Parken am Font de la Cala",
+        "6 km Rundweg, etwa 2 Stunden",
+        "Keine Einrichtungen an der Bucht — alles selbst mitbringen"
       ],
       "name_ru": "",
       "description_ru": "",
