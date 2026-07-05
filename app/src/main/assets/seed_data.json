@@ -4353,9 +4353,9 @@
     },
     {
       "id": "mhares-sea-club-sunset",
-      "name": "Mhares Sea Club – Sunset at Playa Delta",
-      "name_es": "Mhares Sea Club – Atardecer en Playa Delta",
-      "description": "A unique beach club carved into ancient marès stone quarries on the south coast of Mallorca, used to build Palma Cathedral. The platform faces west-southwest across open sea, making it one of the most spectacular sunset-watching spots on the island. Sip a cocktail from the sunlounger as the sky turns pink and gold over the Mediterranean.",
+      "name": "Playa del Delta",
+      "name_es": "Playa del Delta",
+      "description": "In Llucmajor, uneven coastal rocks form natural saltwater pools that fill and drain with the tides, with varying depths across the area. It's an ideal spot for young children, since many of these pools are shallow enough for calm, wave-free bathing. The rocky bottom is uneven, so water shoes are recommended, and since there are no facilities nearby, bring everything you need. The clear waters also make it popular for snorkelling. Park near Mhares Sea Club and follow the trail down to the beach.",
       "category": "VIEWPOINT",
       "latitude": 39.451,
       "longitude": 2.7428,
@@ -4365,11 +4365,9 @@
       "review_count": 1340,
       "price_level": "MID",
       "tips": [
-        "Reserve a sunlounger in advance — it fills up fast in summer",
-        "Golden hour starts around 19:30 in spring and 21:00 in August",
-        "The club is built into old marès quarry terraces — explore the rock platforms",
-        "Combine with a swim at Playa Delta right below the club",
-        "Arrive 1 hour before sunset to get the best spot"
+        "Bring water shoes — the seabed is rocky and uneven",
+        "No facilities on site, bring everything you need",
+        "Great for young kids thanks to its shallow pools"
       ],
       "tags": [
         "sunset",
@@ -4380,7 +4378,8 @@
         "cocktails",
         "quarry",
         "mediterranean",
-        "romantic"
+        "romantic",
+        "hidden_gem"
       ],
       "photo_urls": [
         {
@@ -4390,21 +4389,33 @@
         {
           "url": "file:///android_asset/images/place-mhares-sea-club-sunset-2.jpg",
           "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-4.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-5.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-mhares-sea-club-sunset.jpg",
-      "description_es": "Singular beach club excavado en antiguas canteras de marès en la costa sur, usadas para construir la Catedral de Palma. La plataforma mira al oeste sobre el mar abierto, ofrece uno de los mejores atardeceres de la isla.",
+      "description_es": "En Llucmajor, la forma irregular de las rocas costeras crea piscinas naturales de agua salada que se llenan y vacían con las mareas, con distintas profundidades según la zona. Es un lugar ideal para ir con niños pequeños, ya que muchas de estas pozas apenas cubren, permitiendo un baño tranquilo y sin oleaje. El fondo es rocoso e irregular, así que conviene llevar calzado de agua, y como la zona no tiene ningún servicio, hay que llevarlo todo. Las aguas cristalinas también la hacen popular para el esnórquel. Se accede aparcando en la zona de Mhares Sea Club y siguiendo el sendero hasta la playa.",
       "tips_es": [
-        "Las sesiones de atardecer comienzan sobre las 18h en verano",
-        "Reserva con días de antelación — las mesas tienen vistas limitadas",
-        "El cóctel de bienvenida está incluido en muchos paquetes"
+        "Lleva calzado de agua — el fondo es rocoso e irregular",
+        "No hay servicios en la zona, lleva todo lo necesario",
+        "Ideal para niños pequeños por sus pozas poco profundas"
       ],
-      "name_de": "Mhares Sea Club – Sonnenuntergang",
-      "description_de": "Exklusiver Beach Club an der Ostküste mit Sonnenuntergangs-Sessions. Cocktails, Musik und spektakulärer Meerblick.",
+      "name_de": "Playa del Delta",
+      "description_de": "In Llucmajor bilden die unebenen Küstenfelsen natürliche Salzwasserbecken, die sich mit den Gezeiten füllen und leeren, mit unterschiedlichen Tiefen je nach Bereich. Der Ort eignet sich hervorragend für kleine Kinder, da viele Becken flach genug für ein ruhiges, wellenfreies Bad sind. Der felsige Untergrund ist uneben — Wasserschuhe werden empfohlen — und da es keinerlei Einrichtungen gibt, sollte man alles Nötige mitbringen. Das klare Wasser macht den Ort auch beliebt zum Schnorcheln. Parken kann man bei Mhares Sea Club und von dort dem Pfad zum Strand folgen.",
       "tips_de": [
-        "Sonnenuntergangs-Sessions beginnen um ca. 18 Uhr im Sommer",
-        "Tage im Voraus reservieren – Plätze mit Meerblick sind begrenzt",
-        "Begrüßungscocktail in vielen Paketen inbegriffen"
+        "Wasserschuhe mitbringen — der Meeresboden ist felsig und uneben",
+        "Keine Einrichtungen vor Ort, alles Nötige mitbringen",
+        "Ideal für kleine Kinder dank flacher Becken"
       ],
       "name_ru": "",
       "description_ru": "",
