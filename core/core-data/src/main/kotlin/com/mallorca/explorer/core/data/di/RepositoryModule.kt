@@ -6,6 +6,8 @@ import com.mallorca.explorer.core.common.MainDispatcher
 import com.mallorca.explorer.core.data.repository.DiscountRepositoryImpl
 import com.mallorca.explorer.core.data.repository.RecentlyViewedRepositoryImpl
 import com.mallorca.explorer.core.data.repository.VisitedPlaceRepositoryImpl
+import com.mallorca.explorer.core.data.firebase.EventRemoteDataSource
+import com.mallorca.explorer.core.data.firebase.FirestoreEventDataSource
 import com.mallorca.explorer.core.data.repository.EventRepositoryImpl
 import com.mallorca.explorer.core.data.repository.FavoriteRepositoryImpl
 import com.mallorca.explorer.core.data.repository.HiddenGemRepositoryImpl
@@ -55,6 +57,9 @@ abstract class RepositoryModule {
 
     @Binds @Singleton
     abstract fun bindEventRepository(impl: EventRepositoryImpl): EventRepository
+
+    @Binds @Singleton
+    abstract fun bindEventRemoteDataSource(impl: FirestoreEventDataSource): EventRemoteDataSource
 
     @Binds @Singleton
     abstract fun bindStopProgressRepository(impl: StopProgressRepositoryImpl): StopProgressRepository

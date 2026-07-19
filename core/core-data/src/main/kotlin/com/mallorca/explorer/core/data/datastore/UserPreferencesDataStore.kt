@@ -28,6 +28,7 @@ class UserPreferencesDataStore @Inject constructor(
         val IS_SEEDED = booleanPreferencesKey("is_seeded")
         val SEED_VERSION = intPreferencesKey("seed_version")
         val LAST_SYNC_EPOCH = longPreferencesKey("last_sync_epoch")
+        val EVENTS_LAST_SYNCED_EPOCH = longPreferencesKey("events_last_synced_epoch")
         val LAST_MAP_LAT = doublePreferencesKey("last_map_lat")
         val LAST_MAP_LNG = doublePreferencesKey("last_map_lng")
         val LOCALE = stringPreferencesKey("locale")
@@ -39,6 +40,7 @@ class UserPreferencesDataStore @Inject constructor(
     val isSeeded: Flow<Boolean> = context.dataStore.data.map { it[Keys.IS_SEEDED] ?: false }
     val seedVersion: Flow<Int> = context.dataStore.data.map { it[Keys.SEED_VERSION] ?: 0 }
     val lastSyncEpoch: Flow<Long> = context.dataStore.data.map { it[Keys.LAST_SYNC_EPOCH] ?: 0L }
+    val eventsLastSyncedEpoch: Flow<Long> = context.dataStore.data.map { it[Keys.EVENTS_LAST_SYNCED_EPOCH] ?: 0L }
     val selectedLocale: Flow<String> = context.dataStore.data.map { it[Keys.LOCALE] ?: Locale.getDefault().language }
     val selectedTheme: Flow<String> = context.dataStore.data.map { it[Keys.THEME] ?: "system" }
     val devMode: Flow<Boolean> = context.dataStore.data.map { it[Keys.DEV_MODE] ?: false }
@@ -57,6 +59,10 @@ class UserPreferencesDataStore @Inject constructor(
 
     suspend fun setLastSyncEpoch(epoch: Long) {
         context.dataStore.edit { it[Keys.LAST_SYNC_EPOCH] = epoch }
+    }
+
+    suspend fun setEventsLastSyncedEpoch(epoch: Long) {
+        context.dataStore.edit { it[Keys.EVENTS_LAST_SYNCED_EPOCH] = epoch }
     }
 
     suspend fun setLastMapPosition(lat: Double, lng: Double) {

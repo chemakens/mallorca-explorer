@@ -4,6 +4,7 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
+import androidx.room.Transaction
 import com.mallorca.explorer.core.data.database.entity.EventEntity
 import kotlinx.coroutines.flow.Flow
 
@@ -14,4 +15,16 @@ interface EventDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertAll(events: List<EventEntity>)
+
+    @Query("DELETE FROM events WHERE id IN (:ids)")
+    suspend fun deleteByIds(ids: List<String>)
+
+    @Query("DELETE FROM events")
+    suspend fun deleteAll()
+
+    @Transaction
+    suspend fun replaceAll(events: List<EventEntity>) {
+        deleteAll()
+        upsertAll(events)
+    }
 }
