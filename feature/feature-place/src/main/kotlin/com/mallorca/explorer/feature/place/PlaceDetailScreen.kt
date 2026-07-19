@@ -49,6 +49,7 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.spring
 import androidx.compose.foundation.gestures.detectHorizontalDragGestures
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -829,6 +830,8 @@ private fun SUPTrafficLightCard(
     }
 }
 
+private const val GEM_UNLOCK_RADIUS_KM = 0.2
+
 @Suppress("MissingPermission", "DEPRECATION")
 private fun checkProximityAndUnlock(
     context: android.content.Context,
@@ -838,7 +841,7 @@ private fun checkProximityAndUnlock(
     onFar: (Double) -> Unit,
     onError: () -> Unit,
 ) {
-    val thresholdKm = 0.2
+    val thresholdKm = GEM_UNLOCK_RADIUS_KM
     try {
         val lm = context.getSystemService(android.content.Context.LOCATION_SERVICE) as android.location.LocationManager
         fun evalLocation(loc: android.location.Location) {
@@ -891,22 +894,40 @@ private fun HiddenGemLockScreen(
     val noLocationStr = stringResource(R.string.place_hidden_gem_no_location)
     val noPermissionStr = stringResource(R.string.place_hidden_gem_no_permission)
 
+    fun attemptUnlock(showErrors: Boolean) {
+        checkProximityAndUnlock(
+            context = context,
+            placeLat = placeLat,
+            placeLng = placeLng,
+            onNear = { onUnlock(); isChecking = false },
+            onFar = { distKm ->
+                isChecking = false
+                if (showErrors) {
+                    val distStr = if (distKm < 1.0) "${(distKm * 1000).toInt()} m" else "${"%.1f".format(distKm)} km"
+                    errorMsg = tooFarTemplate.format(distStr)
+                }
+            },
+            onError = {
+                isChecking = false
+                if (showErrors) errorMsg = noLocationStr
+            },
+        )
+    }
+
+    // Silent auto-unlock: one-shot location read on screen open, only when permission is
+    // already granted. Never prompts for permission here — that stays tied to the button tap.
+    LaunchedEffect(placeLat, placeLng) {
+        val granted = androidx.core.content.ContextCompat.checkSelfPermission(
+            context, android.Manifest.permission.ACCESS_FINE_LOCATION
+        ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+        if (granted) attemptUnlock(showErrors = false)
+    }
+
     val locationPermissionLauncher = rememberLauncherForActivityResult(
         androidx.activity.result.contract.ActivityResultContracts.RequestPermission()
     ) { granted ->
         if (granted) {
-            checkProximityAndUnlock(
-                context = context,
-                placeLat = placeLat,
-                placeLng = placeLng,
-                onNear = { onUnlock(); isChecking = false },
-                onFar = { distKm ->
-                    val distStr = if (distKm < 1.0) "${(distKm * 1000).toInt()} m" else "${"%.1f".format(distKm)} km"
-                    errorMsg = tooFarTemplate.format(distStr)
-                    isChecking = false
-                },
-                onError = { errorMsg = noLocationStr; isChecking = false },
-            )
+            attemptUnlock(showErrors = true)
         } else {
             errorMsg = noPermissionStr
             isChecking = false
@@ -1005,18 +1026,7 @@ private fun HiddenGemLockScreen(
                         context, android.Manifest.permission.ACCESS_FINE_LOCATION
                     ) == android.content.pm.PackageManager.PERMISSION_GRANTED
                     if (granted) {
-                        checkProximityAndUnlock(
-                            context = context,
-                            placeLat = placeLat,
-                            placeLng = placeLng,
-                            onNear = { onUnlock(); isChecking = false },
-                            onFar = { distKm ->
-                                val distStr = if (distKm < 1.0) "${(distKm * 1000).toInt()} m" else "${"%.1f".format(distKm)} km"
-                                errorMsg = tooFarTemplate.format(distStr)
-                                isChecking = false
-                            },
-                            onError = { errorMsg = noLocationStr; isChecking = false },
-                        )
+                        attemptUnlock(showErrors = true)
                     } else {
                         locationPermissionLauncher.launch(android.Manifest.permission.ACCESS_FINE_LOCATION)
                     }

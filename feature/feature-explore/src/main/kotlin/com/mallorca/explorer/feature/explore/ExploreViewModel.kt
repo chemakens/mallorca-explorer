@@ -9,6 +9,7 @@ import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.LatLng
 import com.mallorca.explorer.core.domain.model.Place
 import com.mallorca.explorer.core.domain.model.WeatherCondition
+import com.mallorca.explorer.core.domain.repository.HiddenGemRepository
 import com.mallorca.explorer.core.domain.repository.ItineraryRepository
 import com.mallorca.explorer.core.domain.repository.PlaceRepository
 import com.mallorca.explorer.core.domain.repository.RecentlyViewedRepository
@@ -75,6 +76,7 @@ data class ExploreUiState(
 class ExploreViewModel @Inject constructor(
     private val placeRepository: PlaceRepository,
     private val itineraryRepository: ItineraryRepository,
+    private val hiddenGemRepository: HiddenGemRepository,
     private val searchPlaces: SearchPlaces,
     private val getWeatherForLocation: GetWeatherForLocation,
     private val getUpcomingEvents: GetUpcomingEvents,
@@ -131,11 +133,12 @@ class ExploreViewModel @Inject constructor(
         combine(_nearMeEnabled, _userLocation, _eventTimeFilter, _eventCategoryFilter) { nearMe, loc, timeFilter, catFilter ->
             EventFilters(nearMe, loc, timeFilter, catFilter)
         },
-    ) { (itineraries, places, query), (results, weather, events), (visitedIds, recentIds, minRating), (nearMe, userLoc, timeFilter, catFilter) ->
+        hiddenGemRepository.getUnlockedGemIds(),
+    ) { (itineraries, places, query), (results, weather, events), (visitedIds, recentIds, minRating), (nearMe, userLoc, timeFilter, catFilter), unlockedGemIds ->
         val visitedSet = visitedIds.toSet()
 
         val allPlaces = places
-            .filter { "hidden_gem" !in it.subCategories }
+            .filter { "hidden_gem" !in it.subCategories || it.id in unlockedGemIds }
             .map { p -> p.copy(isVisited = p.id in visitedSet) }
         val supPlaces = allPlaces.filter { it.subCategories.contains("sup_launch") }
 
@@ -178,7 +181,7 @@ class ExploreViewModel @Inject constructor(
             supPlaces = supPlaces.toImmutableList(),
             recentPlaces = recentPlaces.toImmutableList(),
             searchResults = results
-                .filter { "hidden_gem" !in it.subCategories }
+                .filter { "hidden_gem" !in it.subCategories || it.id in unlockedGemIds }
                 .map { p -> p.copy(isVisited = p.id in visitedSet) }.toImmutableList(),
             searchQuery = query,
             isSearching = query.isNotBlank(),

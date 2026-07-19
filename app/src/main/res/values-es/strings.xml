@@ -71,8 +71,10 @@
 
     <!-- feature-gems -->
     <string name="gem_tap_to_discover">Toca para descubrir →</string>
+    <string name="gem_auto_unlock_hint">📍 Auto-desbloqueo por proximidad</string>
     <string name="gems_screen_title">Gemas Ocultas</string>
     <string name="gems_screen_subtitle">Lugares secretos que solo los locales conocen</string>
+    <string name="gems_screen_geo_hint">Acércate a 200 metros para desbloquearlas automáticamente</string>
     <string name="gems_progress">%1$d / %2$d descubiertas</string>
     <string name="gems_unlocked_label">💎 Descubierta</string>
     <string name="gems_locked_label">Gema secreta</string>

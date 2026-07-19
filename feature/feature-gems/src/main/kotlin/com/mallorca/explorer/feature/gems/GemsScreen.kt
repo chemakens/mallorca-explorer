@@ -115,6 +115,11 @@ private fun GemsHeader(unlockedCount: Int, totalCount: Int) {
                 style = MaterialTheme.typography.bodyMedium,
                 color = Color.White.copy(alpha = 0.7f),
             )
+            Text(
+                stringResource(R.string.gems_screen_geo_hint),
+                style = MaterialTheme.typography.labelSmall,
+                color = Color.White.copy(alpha = 0.5f),
+            )
             Spacer(Modifier.height(4.dp))
             // Progress pill
             Box(
@@ -245,13 +250,13 @@ private fun LockedGemCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(100.dp),
+                .height(116.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             // Mystery thumbnail
             Box(
                 modifier = Modifier
-                    .size(100.dp)
+                    .size(116.dp)
                     .clip(RoundedCornerShape(topStart = 16.dp, bottomStart = 16.dp))
                     .background(Brush.radialGradient(listOf(GemMid, GemDark))),
                 contentAlignment = Alignment.Center,
@@ -301,6 +306,11 @@ private fun LockedGemCard(
                 ) {
                     Text(stringResource(R.string.gem_tap_to_discover), fontSize = 11.sp, color = GemGold, fontWeight = FontWeight.SemiBold)
                 }
+                Text(
+                    stringResource(R.string.gem_auto_unlock_hint),
+                    fontSize = 10.sp,
+                    color = Color.White.copy(alpha = 0.4f),
+                )
             }
         }
     }

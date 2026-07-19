@@ -55,6 +55,7 @@ class SeedDataWorker @AssistedInject constructor(
             itineraryDao.deleteStopsByPlaceIds(DELETED_PLACE_IDS)
             itineraryDao.deleteStopsByItineraryIds(DELETED_ITINERARY_IDS)
             itineraryDao.deleteByIds(DELETED_ITINERARY_IDS)
+            eventDao.deleteByIds(DELETED_EVENT_IDS)
 
             placeDao.upsertAll(seedData.places.map { it.toEntity() })
 
@@ -96,7 +97,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 147
+        const val CURRENT_SEED_VERSION = 148
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -122,6 +123,15 @@ class SeedDataWorker @AssistedInject constructor(
             "itin-lrt-tramuntana-oeste",
             "itin-lrt-tramuntana-norte",
             "itin-lrt-sierra-tramuntana",
+        )
+
+        // Events removed from seed_data.json (past events, duplicates) that must be
+        // deleted from the local DB — upsertAll never removes rows on its own.
+        val DELETED_EVENT_IDS = listOf(
+            "event-mallorca-live-2026",
+            "event-sant-joan-2026",
+            "event-triatlon-alcudia-2026",
+            "event-copa-rey-vela-2026",
         )
 
         // NOTE: "disc-gtrentals-2026" was archived out of seed_data.json along with

@@ -6,6 +6,7 @@ import com.mallorca.explorer.core.common.LocaleSource
 import com.mallorca.explorer.core.data.sync.NetworkMonitor
 import com.mallorca.explorer.core.domain.model.Category
 import com.mallorca.explorer.core.domain.model.Place
+import com.mallorca.explorer.core.domain.repository.HiddenGemRepository
 import com.mallorca.explorer.core.domain.repository.ItineraryRepository
 import com.mallorca.explorer.core.domain.repository.PlaceRepository
 import com.mallorca.explorer.core.domain.usecase.favorite.ToggleFavorite
@@ -39,6 +40,7 @@ internal fun Category.routeColor(): String = when (this) {
 class MapViewModel @Inject constructor(
     private val placeRepository: PlaceRepository,
     private val itineraryRepository: ItineraryRepository,
+    private val hiddenGemRepository: HiddenGemRepository,
     private val toggleFavorite: ToggleFavorite,
     private val localeSource: LocaleSource,
     networkMonitor: NetworkMonitor,
@@ -118,10 +120,14 @@ class MapViewModel @Inject constructor(
         },
         selectedGemId,
         localeSource.locale,
-    ) { state, gemId, locale ->
+        hiddenGemRepository.getUnlockedGemIds(),
+    ) { state, gemId, locale, unlockedIds ->
         state.copy(
             selectedGem = gemId?.let { id -> state.hiddenGems.find { it.id == id } },
             locale = locale,
+            categorySheetPlaces = state.categorySheetPlaces
+                .filter { "hidden_gem" !in it.subCategories || it.id in unlockedIds }
+                .toImmutableList(),
         )
     }
         .stateIn(
