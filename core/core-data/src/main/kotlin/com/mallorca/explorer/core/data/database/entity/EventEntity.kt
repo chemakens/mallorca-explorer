@@ -26,4 +26,5 @@ data class EventEntity(
     val imageUrl: String?,
     val isRecurring: Boolean,
     val recurringDayOfWeek: Int?,
+    val websiteUrl: String? = null,
 )

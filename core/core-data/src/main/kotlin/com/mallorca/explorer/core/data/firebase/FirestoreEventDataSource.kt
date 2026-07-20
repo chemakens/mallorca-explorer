@@ -54,6 +54,7 @@ class FirestoreEventDataSource @Inject constructor(
             imageUrl = getString("image_url"),
             isRecurring = getBoolean("is_recurring") ?: false,
             recurringDayOfWeek = getLong("recurring_day_of_week")?.toInt(),
+            websiteUrl = getString("website_url"),
         )
     } catch (e: Exception) {
         Timber.w(e, "Skipping malformed Firestore event document: $id")

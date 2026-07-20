@@ -21,6 +21,7 @@
     <string name="explore_events_no_filter_results">No events with these filters</string>
     <string name="explore_events_recurring">Every week</string>
     <string name="explore_events_free">Free</string>
+    <string name="explore_event_more_info">More info</string>
     <string name="explore_time_filter_all">All</string>
     <string name="explore_time_filter_this_week">This week</string>
     <string name="explore_time_filter_this_month">This month</string>

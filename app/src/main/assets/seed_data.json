@@ -10969,7 +10969,8 @@
       "municipality": "Palma",
       "address": "Real Club Náutico, Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://realgcnautico.com"
     },
     {
       "id": "event-pollenca-classics-2026",
@@ -10985,7 +10986,8 @@
       "is_free": false,
       "price": "25–60€",
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://festivalpollenca.com"
     },
     {
       "id": "event-sant-bartomeu-soller-2026",
@@ -11030,7 +11032,8 @@
       "is_free": false,
       "price": "35€/día",
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://electrobeachfestival.es"
     },
     {
       "id": "event-cine-fresca-palma-2026",
@@ -11062,7 +11065,8 @@
       "is_free": false,
       "price": "15–40€ por ruta",
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://mallorcawalkingfestival.com"
     },
     {
       "id": "event-fira-tardor-inca-2026",
@@ -11184,7 +11188,8 @@
       "municipality": "Porreres",
       "is_free": false,
       "price": "Desde 35€",
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://mobofest.org"
     },
     {
       "id": "event-banyalbujazz-2026",
@@ -11200,7 +11205,8 @@
       "municipality": "Banyalbufar",
       "is_free": false,
       "price": "Desde 15€",
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://banyalbujazz.com"
     },
     {
       "id": "event-atlantida-film-fest-2026",
@@ -11231,7 +11237,8 @@
       "end_date": "2026-08-02",
       "municipality": "Pollença",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://pollensa.com/es/que-hacer/ferias-y-fiestas/la-patrona"
     },
     {
       "id": "event-port-adriano-music-2026",
@@ -11369,7 +11376,8 @@
       "end_date": "2026-11-19",
       "municipality": "Inca",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://dijousbo.com"
     },
     {
       "id": "event-mercado-navidad-palma-2026",

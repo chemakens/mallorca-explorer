@@ -2,10 +2,13 @@ package com.mallorca.explorer.feature.explore
 
 import android.Manifest
 import android.annotation.SuppressLint
+import android.content.ActivityNotFoundException
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.Location
 import android.location.LocationListener
 import android.location.LocationManager
+import android.net.Uri
 import android.os.Looper
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -39,6 +42,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Clear
 import androidx.compose.material.icons.outlined.KeyboardArrowUp
 import androidx.compose.material.icons.outlined.MyLocation
+import androidx.compose.material.icons.outlined.OpenInNew
 import androidx.compose.material.icons.outlined.Search
 import androidx.compose.material.icons.outlined.WorkspacePremium
 import androidx.compose.material3.Card
@@ -54,6 +58,7 @@ import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.material3.pulltorefresh.PullToRefreshBox
@@ -75,6 +80,7 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.core.content.ContextCompat
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -855,6 +861,7 @@ private fun EventsSection(
 
 @Composable
 private fun EventCard(event: Event, locale: String, modifier: Modifier = Modifier) {
+    val context = LocalContext.current
     val displayTitle = when (locale) {
         "es" -> event.titleEs.ifEmpty { event.title }
         "de" -> event.titleDe.ifEmpty { event.title }
@@ -886,6 +893,28 @@ private fun EventCard(event: Event, locale: String, modifier: Modifier = Modifie
                 Box(modifier = Modifier.clip(RoundedCornerShape(20.dp)).background(Color(0xFF1B5E20).copy(alpha = 0.12f)).padding(horizontal = 8.dp, vertical = 2.dp)) { Text(stringResource(R.string.explore_events_free), style = MaterialTheme.typography.labelSmall, color = Color(0xFF2E7D32), fontWeight = FontWeight.Bold) }
             } else {
                 event.price?.let { Text(it, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant) }
+            }
+            event.websiteUrl?.let { url ->
+                TextButton(
+                    onClick = {
+                        try {
+                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                        } catch (e: ActivityNotFoundException) {
+                            // No app available to handle the event website URL.
+                        }
+                    },
+                    contentPadding = PaddingValues(horizontal = 0.dp, vertical = 0.dp),
+                    modifier = Modifier.fillMaxWidth(),
+                ) {
+                    Icon(Icons.Outlined.OpenInNew, contentDescription = null, modifier = Modifier.size(14.dp))
+                    Spacer(Modifier.size(4.dp))
+                    Text(
+                        stringResource(R.string.explore_event_more_info),
+                        style = MaterialTheme.typography.labelSmall,
+                        maxLines = 1,
+                        overflow = TextOverflow.Ellipsis,
+                    )
+                }
             }
         }
     }

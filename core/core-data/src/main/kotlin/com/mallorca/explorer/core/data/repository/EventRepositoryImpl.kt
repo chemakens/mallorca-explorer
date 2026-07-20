@@ -57,6 +57,7 @@ class EventRepositoryImpl @Inject constructor(
                     imageUrl = e.imageUrl,
                     isRecurring = e.isRecurring,
                     recurringDayOfWeek = e.recurringDayOfWeek,
+                    websiteUrl = e.websiteUrl,
                 )
             }
         }

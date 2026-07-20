@@ -97,7 +97,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 149
+        const val CURRENT_SEED_VERSION = 150
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -302,6 +302,7 @@ class SeedDataWorker @AssistedInject constructor(
         val image_url: String? = null,
         val is_recurring: Boolean = false,
         val recurring_day_of_week: Int? = null,
+        val website_url: String? = null,
     ) {
         fun toEntity(): EventEntity {
             fun parseDate(s: String): Long =
@@ -317,6 +318,7 @@ class SeedDataWorker @AssistedInject constructor(
                 municipality = municipality, address = address,
                 isFree = is_free, price = price, imageUrl = image_url,
                 isRecurring = is_recurring, recurringDayOfWeek = recurring_day_of_week,
+                websiteUrl = website_url,
             )
         }
     }

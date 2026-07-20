@@ -22,6 +22,7 @@ data class Event(
     val imageUrl: String?,
     val isRecurring: Boolean,
     val recurringDayOfWeek: Int?,
+    val websiteUrl: String?,
 )
 
 enum class EventCategory(val emoji: String) {
