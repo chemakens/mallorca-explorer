@@ -12,3 +12,4 @@ local.properties
 **/google-services.json
 gradlew.bat
 app/release/
+node_modules/
