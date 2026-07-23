@@ -5,6 +5,8 @@
     <string name="place_add_to_trip">+ Add to Trip</string>
     <string name="place_buy_ticket">Buy Ticket</string>
     <string name="place_hidden_gem_unlocked">Hidden Gem unlocked</string>
+    <string name="place_hidden_gem_protection_message">🌿 This is a secret place. Please don\'t share the exact location online — help keep it hidden for future explorers.</string>
+    <string name="place_hidden_gem_protection_dismiss">Got it</string>
     <string name="place_beach_conditions_title">Current Conditions</string>
     <string name="place_flag_red">🔴 Red Flag</string>
     <string name="place_flag_yellow">🟡 Yellow Flag</string>

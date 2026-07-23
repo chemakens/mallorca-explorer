@@ -85,6 +85,8 @@
     <string name="place_add_to_trip">+ Añadir al viaje</string>
     <string name="place_buy_ticket">Comprar Entrada</string>
     <string name="place_hidden_gem_unlocked">Hidden Gem desbloqueado</string>
+    <string name="place_hidden_gem_protection_message">🌿 Este es un lugar secreto. Por favor, no compartas la ubicación exacta online — ayúdanos a mantenerlo escondido para futuros exploradores.</string>
+    <string name="place_hidden_gem_protection_dismiss">Entendido</string>
     <string name="place_beach_conditions_title">Condiciones Ahora</string>
     <string name="place_flag_red">🔴 Bandera Roja</string>
     <string name="place_flag_yellow">🟡 Bandera Amarilla</string>
