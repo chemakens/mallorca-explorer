@@ -861,7 +861,7 @@ private fun SUPTrafficLightCard(
 
 private const val GEM_UNLOCK_RADIUS_KM = 0.2
 
-@Suppress("MissingPermission", "DEPRECATION")
+@Suppress("MissingPermission")
 private fun checkProximityAndUnlock(
     context: android.content.Context,
     placeLat: Double,
@@ -870,36 +870,36 @@ private fun checkProximityAndUnlock(
     onFar: (Double) -> Unit,
     onError: () -> Unit,
 ) {
-    val thresholdKm = GEM_UNLOCK_RADIUS_KM
+    fun evalLocation(loc: android.location.Location) {
+        val dLat = Math.toRadians(placeLat - loc.latitude)
+        val dLng = Math.toRadians(placeLng - loc.longitude)
+        val a = kotlin.math.sin(dLat / 2).let { it * it } +
+            kotlin.math.cos(Math.toRadians(loc.latitude)) *
+            kotlin.math.cos(Math.toRadians(placeLat)) *
+            kotlin.math.sin(dLng / 2).let { it * it }
+        val distKm = 2 * 6371.0 * kotlin.math.atan2(kotlin.math.sqrt(a), kotlin.math.sqrt(1 - a))
+        if (distKm <= GEM_UNLOCK_RADIUS_KM) onNear() else onFar(distKm)
+    }
+
     try {
-        val lm = context.getSystemService(android.content.Context.LOCATION_SERVICE) as android.location.LocationManager
-        fun evalLocation(loc: android.location.Location) {
-            val dLat = Math.toRadians(placeLat - loc.latitude)
-            val dLng = Math.toRadians(placeLng - loc.longitude)
-            val a = kotlin.math.sin(dLat / 2).let { it * it } +
-                kotlin.math.cos(Math.toRadians(loc.latitude)) *
-                kotlin.math.cos(Math.toRadians(placeLat)) *
-                kotlin.math.sin(dLng / 2).let { it * it }
-            val distKm = 2 * 6371.0 * kotlin.math.atan2(kotlin.math.sqrt(a), kotlin.math.sqrt(1 - a))
-            if (distKm <= thresholdKm) onNear() else onFar(distKm)
-        }
-        val provider = when {
-            lm.isProviderEnabled(android.location.LocationManager.GPS_PROVIDER) -> android.location.LocationManager.GPS_PROVIDER
-            lm.isProviderEnabled(android.location.LocationManager.NETWORK_PROVIDER) -> android.location.LocationManager.NETWORK_PROVIDER
-            else -> null
-        }
-        if (provider != null) {
-            lm.requestSingleUpdate(provider, object : android.location.LocationListener {
-                override fun onLocationChanged(loc: android.location.Location) {
-                    lm.removeUpdates(this)
-                    evalLocation(loc)
-                }
-            }, android.os.Looper.getMainLooper())
-        } else {
-            val last = listOf(android.location.LocationManager.GPS_PROVIDER, android.location.LocationManager.NETWORK_PROVIDER)
-                .firstNotNullOfOrNull { lm.getLastKnownLocation(it) }
-            if (last != null) evalLocation(last) else onError()
-        }
+        // Fused client blends GPS, WiFi and cell-tower positioning automatically —
+        // PRIORITY_BALANCED_POWER_ACCURACY favors network signals over GPS, which
+        // works indoors and doesn't need a GPS fix just to check "am I near this place".
+        val client = com.google.android.gms.location.LocationServices.getFusedLocationProviderClient(context)
+        val cancellationSource = com.google.android.gms.tasks.CancellationTokenSource()
+        client.getCurrentLocation(
+            com.google.android.gms.location.Priority.PRIORITY_BALANCED_POWER_ACCURACY,
+            cancellationSource.token,
+        ).addOnSuccessListener { location ->
+            if (location != null) {
+                evalLocation(location)
+            } else {
+                // No fresh fix (e.g. all radios cold) — fall back to the last known location.
+                client.lastLocation
+                    .addOnSuccessListener { last -> if (last != null) evalLocation(last) else onError() }
+                    .addOnFailureListener { onError() }
+            }
+        }.addOnFailureListener { onError() }
     } catch (_: Exception) { onError() }
 }
 
