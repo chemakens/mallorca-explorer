@@ -7,6 +7,14 @@
     <string name="place_hidden_gem_unlocked">Hidden Gem unlocked</string>
     <string name="place_hidden_gem_protection_message">🌿 This is a secret place. Please don\'t share the exact location online — help keep it hidden for future explorers.</string>
     <string name="place_hidden_gem_protection_dismiss">Got it</string>
+    <string name="place_hidden_gem_code_title">Explorer\'s Code of Conduct</string>
+    <string name="place_hidden_gem_code_subtitle">Before you discover hidden gems, please commit to these principles</string>
+    <string name="place_hidden_gem_code_rule_1">🌿 Leave no trace — take only photos, leave only footprints</string>
+    <string name="place_hidden_gem_code_rule_2">🔇 Respect the silence — keep noise to a minimum</string>
+    <string name="place_hidden_gem_code_rule_3">📵 Don\'t share coordinates — keep these places secret online</string>
+    <string name="place_hidden_gem_code_rule_4">🚧 Respect private property — some gems border private land</string>
+    <string name="place_hidden_gem_code_rule_5">🌊 Protect nature — don\'t disturb wildlife or vegetation</string>
+    <string name="place_hidden_gem_code_accept">I commit to these principles 💎</string>
     <string name="place_beach_conditions_title">Current Conditions</string>
     <string name="place_flag_red">🔴 Red Flag</string>
     <string name="place_flag_yellow">🟡 Yellow Flag</string>

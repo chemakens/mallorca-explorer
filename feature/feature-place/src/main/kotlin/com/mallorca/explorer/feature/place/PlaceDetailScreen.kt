@@ -169,6 +169,8 @@ fun PlaceDetailScreen(
                 placeLat = uiState.place?.location?.latitude ?: 0.0,
                 placeLng = uiState.place?.location?.longitude ?: 0.0,
                 isDevMode = uiState.isDevMode,
+                codeAccepted = uiState.isExplorerCodeAccepted,
+                onAcceptCode = viewModel::onExplorerCodeAccepted,
                 onBack = onBack,
                 onUnlock = viewModel::onUnlockGem,
             )
@@ -909,6 +911,8 @@ private fun HiddenGemLockScreen(
     onBack: () -> Unit,
     onUnlock: () -> Unit,
     isDevMode: Boolean = false,
+    codeAccepted: Boolean = false,
+    onAcceptCode: () -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val gemGold = Color(0xFFF9A825)
@@ -916,6 +920,17 @@ private fun HiddenGemLockScreen(
 
     var isChecking by remember { mutableStateOf(false) }
     var errorMsg by remember { mutableStateOf<String?>(null) }
+    var showCodeOfConduct by remember { mutableStateOf(false) }
+    var pendingUnlockAction by remember { mutableStateOf<(() -> Unit)?>(null) }
+
+    fun requireCodeThen(action: () -> Unit) {
+        if (codeAccepted) {
+            action()
+        } else {
+            pendingUnlockAction = action
+            showCodeOfConduct = true
+        }
+    }
 
     val tooFarTemplate = stringResource(R.string.place_hidden_gem_too_far)
     val noLocationStr = stringResource(R.string.place_hidden_gem_no_location)
@@ -943,11 +958,13 @@ private fun HiddenGemLockScreen(
 
     // Silent auto-unlock: one-shot location read on screen open, only when permission is
     // already granted. Never prompts for permission here — that stays tied to the button tap.
-    LaunchedEffect(placeLat, placeLng) {
+    // Skipped entirely until the explorer's code of conduct has been accepted at least once
+    // via an explicit unlock attempt — this passive check never surfaces that screen itself.
+    LaunchedEffect(placeLat, placeLng, codeAccepted) {
         val granted = androidx.core.content.ContextCompat.checkSelfPermission(
             context, android.Manifest.permission.ACCESS_FINE_LOCATION
         ) == android.content.pm.PackageManager.PERMISSION_GRANTED
-        if (granted) attemptUnlock(showErrors = false)
+        if (granted && codeAccepted) attemptUnlock(showErrors = false)
     }
 
     val locationPermissionLauncher = rememberLauncherForActivityResult(
@@ -1047,15 +1064,17 @@ private fun HiddenGemLockScreen(
 
             Button(
                 onClick = {
-                    errorMsg = null
-                    isChecking = true
-                    val granted = androidx.core.content.ContextCompat.checkSelfPermission(
-                        context, android.Manifest.permission.ACCESS_FINE_LOCATION
-                    ) == android.content.pm.PackageManager.PERMISSION_GRANTED
-                    if (granted) {
-                        attemptUnlock(showErrors = true)
-                    } else {
-                        locationPermissionLauncher.launch(android.Manifest.permission.ACCESS_FINE_LOCATION)
+                    requireCodeThen {
+                        errorMsg = null
+                        isChecking = true
+                        val granted = androidx.core.content.ContextCompat.checkSelfPermission(
+                            context, android.Manifest.permission.ACCESS_FINE_LOCATION
+                        ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+                        if (granted) {
+                            attemptUnlock(showErrors = true)
+                        } else {
+                            locationPermissionLauncher.launch(android.Manifest.permission.ACCESS_FINE_LOCATION)
+                        }
                     }
                 },
                 enabled = !isChecking,
@@ -1072,7 +1091,7 @@ private fun HiddenGemLockScreen(
 
             if (BuildConfig.DEBUG && isDevMode) {
                 OutlinedButton(
-                    onClick = onUnlock,
+                    onClick = { requireCodeThen(onUnlock) },
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(14.dp),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF6A1B9A)),
@@ -1087,6 +1106,99 @@ private fun HiddenGemLockScreen(
                 style = MaterialTheme.typography.labelSmall,
                 color = Color.White.copy(alpha = 0.4f),
             )
+        }
+    }
+
+    if (showCodeOfConduct) {
+        ExplorerCodeOfConductScreen(
+            onAccept = {
+                onAcceptCode()
+                showCodeOfConduct = false
+                pendingUnlockAction?.invoke()
+                pendingUnlockAction = null
+            },
+            onDismissRequest = { showCodeOfConduct = false },
+        )
+    }
+}
+
+@Composable
+private fun ExplorerCodeOfConductScreen(
+    onAccept: () -> Unit,
+    onDismissRequest: () -> Unit,
+) {
+    val gemGold = Color(0xFFF9A825)
+
+    androidx.compose.ui.window.Dialog(
+        onDismissRequest = onDismissRequest,
+        properties = androidx.compose.ui.window.DialogProperties(usePlatformDefaultWidth = false),
+    ) {
+        Box(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(
+                    brush = Brush.verticalGradient(
+                        colors = listOf(Color(0xFF1A0030), Color(0xFF2D1B4E), Color(0xFF0D0D1A)),
+                    )
+                ),
+        ) {
+            Column(
+                modifier = Modifier
+                    .align(Alignment.Center)
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 32.dp, vertical = 24.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(20.dp),
+            ) {
+                Text("💎", style = MaterialTheme.typography.displayLarge)
+
+                Text(
+                    stringResource(R.string.place_hidden_gem_code_title),
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold,
+                    color = gemGold,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                )
+
+                Text(
+                    stringResource(R.string.place_hidden_gem_code_subtitle),
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = Color.White.copy(alpha = 0.75f),
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                )
+
+                Column(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clip(RoundedCornerShape(16.dp))
+                        .background(Color.White.copy(alpha = 0.07f))
+                        .padding(16.dp),
+                    verticalArrangement = Arrangement.spacedBy(14.dp),
+                ) {
+                    listOf(
+                        stringResource(R.string.place_hidden_gem_code_rule_1),
+                        stringResource(R.string.place_hidden_gem_code_rule_2),
+                        stringResource(R.string.place_hidden_gem_code_rule_3),
+                        stringResource(R.string.place_hidden_gem_code_rule_4),
+                        stringResource(R.string.place_hidden_gem_code_rule_5),
+                    ).forEach { rule ->
+                        Text(rule, style = MaterialTheme.typography.bodyMedium, color = Color.White.copy(alpha = 0.9f))
+                    }
+                }
+
+                Button(
+                    onClick = onAccept,
+                    colors = ButtonDefaults.buttonColors(containerColor = gemGold, contentColor = Color(0xFF1A0030)),
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(14.dp),
+                ) {
+                    Text(
+                        stringResource(R.string.place_hidden_gem_code_accept),
+                        fontWeight = FontWeight.Bold,
+                        style = MaterialTheme.typography.bodyLarge,
+                    )
+                }
+            }
         }
     }
 }

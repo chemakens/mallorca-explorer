@@ -44,6 +44,7 @@ data class PlaceDetailUiState(
     val isUnlocked: Boolean = false,
     val isVisited: Boolean = false,
     val isDevMode: Boolean = false,
+    val isExplorerCodeAccepted: Boolean = false,
     val isLoading: Boolean = true,
     val error: String? = null,
     val locale: String = "en",
@@ -115,7 +116,10 @@ class PlaceDetailViewModel @Inject constructor(
         },
         localeSource.locale,
         prefsDataStore.devMode,
-    ) { state, locale, isDevMode -> state.copy(locale = locale, isDevMode = isDevMode) }
+        prefsDataStore.explorerCodeAccepted,
+    ) { state, locale, isDevMode, isExplorerCodeAccepted ->
+        state.copy(locale = locale, isDevMode = isDevMode, isExplorerCodeAccepted = isExplorerCodeAccepted)
+    }
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5_000),
@@ -132,5 +136,9 @@ class PlaceDetailViewModel @Inject constructor(
 
     fun onUnlockGem() {
         viewModelScope.launch { unlockGem(placeId) }
+    }
+
+    fun onExplorerCodeAccepted() {
+        viewModelScope.launch { prefsDataStore.setExplorerCodeAccepted() }
     }
 }

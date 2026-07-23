@@ -34,6 +34,7 @@ class UserPreferencesDataStore @Inject constructor(
         val LOCALE = stringPreferencesKey("locale")
         val THEME = stringPreferencesKey("theme")
         val DEV_MODE = booleanPreferencesKey("dev_mode")
+        val EXPLORER_CODE_ACCEPTED = booleanPreferencesKey("explorer_code_accepted")
     }
 
     val onboardingCompleted: Flow<Boolean> = context.dataStore.data.map { it[Keys.ONBOARDING_COMPLETED] ?: false }
@@ -44,6 +45,7 @@ class UserPreferencesDataStore @Inject constructor(
     val selectedLocale: Flow<String> = context.dataStore.data.map { it[Keys.LOCALE] ?: Locale.getDefault().language }
     val selectedTheme: Flow<String> = context.dataStore.data.map { it[Keys.THEME] ?: "system" }
     val devMode: Flow<Boolean> = context.dataStore.data.map { it[Keys.DEV_MODE] ?: false }
+    val explorerCodeAccepted: Flow<Boolean> = context.dataStore.data.map { it[Keys.EXPLORER_CODE_ACCEPTED] ?: false }
 
     suspend fun setOnboardingCompleted() {
         context.dataStore.edit { it[Keys.ONBOARDING_COMPLETED] = true }
@@ -82,5 +84,9 @@ class UserPreferencesDataStore @Inject constructor(
 
     suspend fun setDevMode(enabled: Boolean) {
         context.dataStore.edit { it[Keys.DEV_MODE] = enabled }
+    }
+
+    suspend fun setExplorerCodeAccepted() {
+        context.dataStore.edit { it[Keys.EXPLORER_CODE_ACCEPTED] = true }
     }
 }

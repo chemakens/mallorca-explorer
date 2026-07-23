@@ -87,6 +87,14 @@
     <string name="place_hidden_gem_unlocked">Hidden Gem desbloqueado</string>
     <string name="place_hidden_gem_protection_message">🌿 Este es un lugar secreto. Por favor, no compartas la ubicación exacta online — ayúdanos a mantenerlo escondido para futuros exploradores.</string>
     <string name="place_hidden_gem_protection_dismiss">Entendido</string>
+    <string name="place_hidden_gem_code_title">Código del Explorador</string>
+    <string name="place_hidden_gem_code_subtitle">Antes de descubrir gemas ocultas, comproméntete con estos principios</string>
+    <string name="place_hidden_gem_code_rule_1">🌿 No dejes rastro — lleva solo fotos, deja solo huellas</string>
+    <string name="place_hidden_gem_code_rule_2">🔇 Respeta el silencio — mantén el ruido al mínimo</string>
+    <string name="place_hidden_gem_code_rule_3">📵 No compartas coordenadas — mantén estos lugares secretos online</string>
+    <string name="place_hidden_gem_code_rule_4">🚧 Respeta la propiedad privada — algunas gemas lindan con terreno privado</string>
+    <string name="place_hidden_gem_code_rule_5">🌊 Protege la naturaleza — no molestes la fauna ni la vegetación</string>
+    <string name="place_hidden_gem_code_accept">Me comprometo con estos principios 💎</string>
     <string name="place_beach_conditions_title">Condiciones Ahora</string>
     <string name="place_flag_red">🔴 Bandera Roja</string>
     <string name="place_flag_yellow">🟡 Bandera Amarilla</string>
