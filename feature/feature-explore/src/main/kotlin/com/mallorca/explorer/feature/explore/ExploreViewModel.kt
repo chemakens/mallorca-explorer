@@ -9,6 +9,7 @@ import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.LatLng
 import com.mallorca.explorer.core.domain.model.Place
 import com.mallorca.explorer.core.domain.model.WeatherCondition
+import com.mallorca.explorer.core.domain.repository.AnalyticsRepository
 import com.mallorca.explorer.core.domain.repository.HiddenGemRepository
 import com.mallorca.explorer.core.domain.repository.ItineraryRepository
 import com.mallorca.explorer.core.domain.repository.PlaceRepository
@@ -32,6 +33,7 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flowOf
+import kotlinx.coroutines.flow.onEach
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
@@ -83,6 +85,7 @@ class ExploreViewModel @Inject constructor(
     private val visitedPlaceRepository: VisitedPlaceRepository,
     private val recentlyViewedRepository: RecentlyViewedRepository,
     private val localeSource: LocaleSource,
+    private val analyticsRepository: AnalyticsRepository,
 ) : ViewModel() {
 
     val searchQuery = MutableStateFlow("")
@@ -97,6 +100,7 @@ class ExploreViewModel @Inject constructor(
     @OptIn(FlowPreview::class)
     private val searchResults = searchQuery
         .debounce(300)
+        .onEach { query -> if (query.isNotBlank()) analyticsRepository.logSearchPerformed(query) }
         .flatMapLatest { query ->
             if (query.isBlank()) flowOf(emptyList())
             else searchPlaces(query)
@@ -225,6 +229,10 @@ class ExploreViewModel @Inject constructor(
             delay(1_500)
             _isRefreshing.value = false
         }
+    }
+
+    fun onEventMoreInfoClicked(event: Event) {
+        analyticsRepository.logEventMoreInfoClicked(event.id, event.title)
     }
 
     private fun haversineKm(a: LatLng, b: LatLng): Double {

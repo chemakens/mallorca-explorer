@@ -513,6 +513,7 @@ fun ExploreScreen(
                                     locale = uiState.locale,
                                     onTimeFilterChange = viewModel::setEventTimeFilter,
                                     onCategoryFilterChange = viewModel::setEventCategoryFilter,
+                                    onMoreInfoClicked = viewModel::onEventMoreInfoClicked,
                                 )
                             }
                         }
@@ -769,6 +770,7 @@ private fun EventsSection(
     locale: String,
     onTimeFilterChange: (EventTimeFilter) -> Unit,
     onCategoryFilterChange: (EventCategory?) -> Unit,
+    onMoreInfoClicked: (Event) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(12.dp)) {
@@ -840,7 +842,7 @@ private fun EventsSection(
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
             ) {
                 items(events, key = { it.id }) { event ->
-                    EventCard(event = event, locale = locale)
+                    EventCard(event = event, locale = locale, onMoreInfoClicked = onMoreInfoClicked)
                 }
             }
         } else {
@@ -859,7 +861,7 @@ private fun EventsSection(
 }
 
 @Composable
-private fun EventCard(event: Event, locale: String, modifier: Modifier = Modifier) {
+private fun EventCard(event: Event, locale: String, onMoreInfoClicked: (Event) -> Unit, modifier: Modifier = Modifier) {
     val context = LocalContext.current
     val displayTitle = when (locale) {
         "es" -> event.titleEs.ifEmpty { event.title }
@@ -904,6 +906,7 @@ private fun EventCard(event: Event, locale: String, modifier: Modifier = Modifie
                         .clip(RoundedCornerShape(20.dp))
                         .background(MaterialTheme.colorScheme.primary.copy(alpha = 0.12f))
                         .clickable(role = Role.Button) {
+                            onMoreInfoClicked(event)
                             try {
                                 context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
                             } catch (e: ActivityNotFoundException) {

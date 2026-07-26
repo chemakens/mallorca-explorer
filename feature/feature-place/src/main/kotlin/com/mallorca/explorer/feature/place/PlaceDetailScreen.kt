@@ -120,6 +120,18 @@ fun PlaceDetailScreen(
         }
     }
 
+    var hasLoggedView by remember { mutableStateOf(false) }
+    LaunchedEffect(uiState.place, uiState.isHiddenGem, uiState.isUnlocked) {
+        if (uiState.place != null && !hasLoggedView) {
+            if (uiState.isHiddenGem && !uiState.isUnlocked) {
+                viewModel.onGemViewed()
+            } else {
+                viewModel.onPlaceViewed()
+            }
+            hasLoggedView = true
+        }
+    }
+
     if (showProtectionDialog) {
         AlertDialog(
             onDismissRequest = { showProtectionDialog = false },
@@ -909,7 +921,7 @@ private fun HiddenGemLockScreen(
     placeLat: Double,
     placeLng: Double,
     onBack: () -> Unit,
-    onUnlock: () -> Unit,
+    onUnlock: (String) -> Unit,
     isDevMode: Boolean = false,
     codeAccepted: Boolean = false,
     onAcceptCode: () -> Unit = {},
@@ -941,7 +953,10 @@ private fun HiddenGemLockScreen(
             context = context,
             placeLat = placeLat,
             placeLng = placeLng,
-            onNear = { onUnlock(); isChecking = false },
+            onNear = {
+                onUnlock(if (showErrors) "manual" else "proximity")
+                isChecking = false
+            },
             onFar = { distKm ->
                 isChecking = false
                 if (showErrors) {
@@ -1091,7 +1106,7 @@ private fun HiddenGemLockScreen(
 
             if (BuildConfig.DEBUG && isDevMode) {
                 OutlinedButton(
-                    onClick = { requireCodeThen(onUnlock) },
+                    onClick = { requireCodeThen { onUnlock("manual") } },
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(14.dp),
                     colors = ButtonDefaults.outlinedButtonColors(contentColor = Color(0xFF6A1B9A)),

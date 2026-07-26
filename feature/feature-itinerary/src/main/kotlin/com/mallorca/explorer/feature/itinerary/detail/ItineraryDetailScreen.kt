@@ -43,7 +43,11 @@ import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -79,6 +83,16 @@ fun ItineraryDetailScreen(
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
+    var hasLoggedView by remember { mutableStateOf(false) }
+    LaunchedEffect(uiState.itinerary) {
+        if (uiState.itinerary != null && !hasLoggedView) {
+            viewModel.onItineraryViewed()
+            hasLoggedView = true
+        }
+    }
+
+    val handleSaveToTrip = { viewModel.onSaveToTripClicked(); onSaveToTrip() }
+
     when {
         uiState.isLoading -> ItineraryLoadingSkeleton()
         uiState.itinerary != null -> {
@@ -91,7 +105,7 @@ fun ItineraryDetailScreen(
                 onStopToggle = viewModel::toggleStop,
                 onBack = onBack,
                 onPlaceClick = onPlaceClick,
-                onSaveToTrip = onSaveToTrip,
+                onSaveToTrip = handleSaveToTrip,
                 onViewOnMap = onViewOnMap,
                 modifier = modifier,
             )
@@ -99,7 +113,7 @@ fun ItineraryDetailScreen(
                 QrWelcomeSheet(
                     supStatus = uiState.supStatus,
                     onDismiss = viewModel::dismissQrWelcome,
-                    onSaveRoute = { viewModel.dismissQrWelcome(); onSaveToTrip() },
+                    onSaveRoute = { viewModel.dismissQrWelcome(); handleSaveToTrip() },
                 )
             }
         }

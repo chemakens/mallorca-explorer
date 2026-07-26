@@ -3,6 +3,7 @@ package com.mallorca.explorer.core.data.di
 import com.mallorca.explorer.core.common.DefaultDispatcher
 import com.mallorca.explorer.core.common.IoDispatcher
 import com.mallorca.explorer.core.common.MainDispatcher
+import com.mallorca.explorer.core.data.repository.AnalyticsRepositoryImpl
 import com.mallorca.explorer.core.data.repository.DiscountRepositoryImpl
 import com.mallorca.explorer.core.data.repository.RecentlyViewedRepositoryImpl
 import com.mallorca.explorer.core.data.repository.VisitedPlaceRepositoryImpl
@@ -16,6 +17,7 @@ import com.mallorca.explorer.core.data.repository.PlaceRepositoryImpl
 import com.mallorca.explorer.core.data.repository.StopProgressRepositoryImpl
 import com.mallorca.explorer.core.data.repository.UserTripRepositoryImpl
 import com.mallorca.explorer.core.data.repository.WeatherRepositoryImpl
+import com.mallorca.explorer.core.domain.repository.AnalyticsRepository
 import com.mallorca.explorer.core.domain.repository.DiscountRepository
 import com.mallorca.explorer.core.domain.repository.RecentlyViewedRepository
 import com.mallorca.explorer.core.domain.repository.VisitedPlaceRepository
@@ -75,6 +77,9 @@ abstract class RepositoryModule {
 
     @Binds @Singleton
     abstract fun bindRecentlyViewedRepository(impl: RecentlyViewedRepositoryImpl): RecentlyViewedRepository
+
+    @Binds @Singleton
+    abstract fun bindAnalyticsRepository(impl: AnalyticsRepositoryImpl): AnalyticsRepository
 
     companion object {
         @Provides @IoDispatcher

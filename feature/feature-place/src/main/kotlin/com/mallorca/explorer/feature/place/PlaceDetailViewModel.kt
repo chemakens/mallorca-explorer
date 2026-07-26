@@ -9,6 +9,7 @@ import com.mallorca.explorer.core.domain.model.Place
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
 import com.mallorca.explorer.core.domain.model.WeatherCondition
 import com.mallorca.explorer.core.data.datastore.UserPreferencesDataStore
+import com.mallorca.explorer.core.domain.repository.AnalyticsRepository
 import com.mallorca.explorer.core.domain.repository.HiddenGemRepository
 import com.mallorca.explorer.core.domain.repository.PlaceRepository
 import com.mallorca.explorer.core.domain.repository.RecentlyViewedRepository
@@ -65,6 +66,7 @@ class PlaceDetailViewModel @Inject constructor(
     private val placeRepository: PlaceRepository,
     private val localeSource: LocaleSource,
     private val prefsDataStore: UserPreferencesDataStore,
+    private val analyticsRepository: AnalyticsRepository,
 ) : ViewModel() {
 
     private val placeId: String = checkNotNull(savedStateHandle["placeId"])
@@ -134,11 +136,26 @@ class PlaceDetailViewModel @Inject constructor(
         viewModelScope.launch { visitedPlaceRepository.toggleVisited(placeId) }
     }
 
-    fun onUnlockGem() {
-        viewModelScope.launch { unlockGem(placeId) }
+    fun onUnlockGem(unlockMethod: String) {
+        viewModelScope.launch {
+            unlockGem(placeId)
+            val place = uiState.value.place
+            analyticsRepository.logGemUnlocked(placeId, place?.municipality ?: "", unlockMethod)
+        }
     }
 
     fun onExplorerCodeAccepted() {
         viewModelScope.launch { prefsDataStore.setExplorerCodeAccepted() }
+        analyticsRepository.logGemCodeAccepted(placeId)
+    }
+
+    fun onGemViewed() {
+        val place = uiState.value.place
+        analyticsRepository.logGemViewed(placeId, place?.municipality ?: "")
+    }
+
+    fun onPlaceViewed() {
+        val place = uiState.value.place ?: return
+        analyticsRepository.logPlaceViewed(placeId, place.category.name)
     }
 }

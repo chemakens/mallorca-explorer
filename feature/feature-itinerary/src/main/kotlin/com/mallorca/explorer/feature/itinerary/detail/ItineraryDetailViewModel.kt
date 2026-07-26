@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
 import com.mallorca.explorer.core.domain.model.WeatherCondition
+import com.mallorca.explorer.core.domain.repository.AnalyticsRepository
 import com.mallorca.explorer.core.domain.repository.StopProgressRepository
 import com.mallorca.explorer.core.domain.usecase.itinerary.GetItineraryById
 import com.mallorca.explorer.core.domain.usecase.weather.GetSUPWeatherStatus
@@ -44,6 +45,7 @@ class ItineraryDetailViewModel @Inject constructor(
     private val stopProgressRepository: StopProgressRepository,
     private val getWeatherForLocation: GetWeatherForLocation,
     private val getSUPWeatherStatus: GetSUPWeatherStatus,
+    private val analyticsRepository: AnalyticsRepository,
 ) : ViewModel() {
 
     private val itineraryId: String = checkNotNull(savedStateHandle["itineraryId"])
@@ -87,4 +89,14 @@ class ItineraryDetailViewModel @Inject constructor(
     }
 
     fun dismissQrWelcome() { _qrWelcomeDismissed.value = true }
+
+    fun onItineraryViewed() {
+        val itinerary = uiState.value.itinerary ?: return
+        analyticsRepository.logItineraryViewed(itinerary.id, itinerary.title, itinerary.durationDays)
+    }
+
+    fun onSaveToTripClicked() {
+        val itinerary = uiState.value.itinerary ?: return
+        analyticsRepository.logItinerarySaveClicked(itinerary.id, itinerary.title, itinerary.durationDays)
+    }
 }
