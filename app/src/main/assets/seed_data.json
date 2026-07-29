@@ -630,7 +630,8 @@
         },
         {
           "url": "file:///android_asset/images/place-bellver-castle.jpg",
-          "source": "PEXELS"
+          "source": "AETIB",
+          "author": "Pedro Coll"
         }
       ],
       "description_es": "Singular castillo gótico circular del siglo XIV, enclavado en un bosque de pinos sobre Palma con vistas panorámicas a la bahía.",
@@ -1407,7 +1408,11 @@
         },
         {
           "url": "file:///android_asset/images/place-cami-arxiduc-2.jpg",
-          "source": "PIXABAY"
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-cami-arxiduc-3.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Uno de los paseos de cresta más icónicos de Mallorca, construido por el Archiduque Luis Salvador de Austria en el siglo XIX sobre Valldemossa, con vistas extraordinarias.",
@@ -4208,6 +4213,10 @@
           "url": "file:///android_asset/images/place-faro-ses-salines.jpg",
           "source": "AETIB",
           "author": "Eduardo Miralles"
+        },
+        {
+          "url": "file:///android_asset/images/place-faro-ses-salines-2.jpg",
+          "source": "PEXELS"
         }
       ],
       "description_es": "El faro más meridional de Mallorca, en un promontorio de caliza sobre aguas cristalinas. Punto de partida del sendero costero salvaje hacia las calas más vírgenes del sur de la isla.",
@@ -4514,11 +4523,15 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/gem-calo-des-moro-pixabay.jpg",
-          "source": "PIXABAY"
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/gem-calo-des-moro-2.jpg",
           "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/gem-calo-des-moro-3.jpg",
+          "source": "PIXABAY"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/gem-calo-des-moro-pixabay.jpg",
@@ -5644,7 +5657,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-ruta-cala-boquer.jpg",
-          "source": "PEXELS"
+          "source": "MINE"
         },
         {
           "url": "file:///android_asset/images/place-ruta-cala-boquer-2.jpg",
@@ -5763,7 +5776,8 @@
         },
         {
           "url": "file:///android_asset/images/place-ruta-cala-tuent-2.jpg",
-          "source": "PEXELS"
+          "source": "AETIB",
+          "author": "Walter Obiol"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-ruta-cala-tuent.jpg",
@@ -7692,7 +7706,7 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/gem-torre-verger.jpg",
-          "source": "MINE"
+          "source": "PIXABAY"
         },
         {
           "url": "file:///android_asset/images/gem-torre-verger-2.jpg",
@@ -11920,5 +11934,5 @@
       "valid_until": "2026-09-30"
     }
   ],
-  "CURRENT_SEED_VERSION": 134
+  "CURRENT_SEED_VERSION": 135
 }
