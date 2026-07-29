@@ -97,7 +97,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 151
+        const val CURRENT_SEED_VERSION = 153
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -114,6 +114,7 @@ class SeedDataWorker @AssistedInject constructor(
             "restaurant-juanito",
             "kayak-soller",
             "gtrentals-motorworld",
+            "gem-mirador-sestaca",
         )
 
         // Itineraries removed from seed_data.json that must be deleted from the local DB.
