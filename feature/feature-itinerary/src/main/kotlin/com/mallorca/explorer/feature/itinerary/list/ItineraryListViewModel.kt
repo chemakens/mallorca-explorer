@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.mallorca.explorer.core.domain.model.Category
 import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.Place
+import com.mallorca.explorer.core.domain.repository.HiddenGemRepository
 import com.mallorca.explorer.core.domain.repository.ItineraryRepository
 import com.mallorca.explorer.core.domain.usecase.place.GetPlacesByCategory
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -30,6 +31,7 @@ class ItineraryListViewModel @Inject constructor(
     savedStateHandle: SavedStateHandle,
     itineraryRepository: ItineraryRepository,
     getPlacesByCategory: GetPlacesByCategory,
+    hiddenGemRepository: HiddenGemRepository,
 ) : ViewModel() {
 
     private val categoryName: String? = savedStateHandle["category"]
@@ -48,11 +50,13 @@ class ItineraryListViewModel @Inject constructor(
         flowOf(emptyList())
 
     val uiState: StateFlow<ItineraryListUiState> = combine(
-        itinerariesFlow, placesFlow
-    ) { itineraries, places ->
+        itinerariesFlow, placesFlow, hiddenGemRepository.getUnlockedGemIds(),
+    ) { itineraries, places, unlockedGemIds ->
         ItineraryListUiState(
             itineraries = itineraries.toImmutableList(),
-            places = places.toImmutableList(),
+            places = places
+                .filter { "hidden_gem" !in it.subCategories || it.id in unlockedGemIds }
+                .toImmutableList(),
             category = category,
         )
     }.stateIn(
