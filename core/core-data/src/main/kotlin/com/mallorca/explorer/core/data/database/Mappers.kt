@@ -81,7 +81,7 @@ private data class ItineraryWeatherConfig(
     val fetch_lat: Double = 0.0, val fetch_lng: Double = 0.0,
     val beach_facing_deg: Int = 0, val max_safe_wind_knots: Float = 10f,
     val max_safe_gust_knots: Float = 14f, val tramuntana_warning: Boolean = false,
-    val tramuntana_note_es: String = "", val cave_entry_max_wave_m: Float? = null,
+    val tramuntana_note: String = "", val tramuntana_note_es: String = "", val tramuntana_note_de: String = "", val cave_entry_max_wave_m: Float? = null,
     val cave_entry_max_wind_knots: Float? = null,
 )
 
@@ -101,10 +101,11 @@ private data class ItineraryCommercialBlock(
 
 @Serializable
 private data class ItineraryRouteWaypoint(
-    val order: Int = 0, val name: String = "", val role: String = "WAYPOINT",
-    val lat: Double = 0.0, val lng: Double = 0.0, val note_es: String = "",
+    val order: Int = 0, val name: String = "", val name_es: String = "", val name_de: String = "", val role: String = "WAYPOINT",
+    val lat: Double = 0.0, val lng: Double = 0.0,
+    val note: String = "", val note_es: String = "", val note_de: String = "",
     val distance_from_prev_km: Float = 0f, val conditional: Boolean = false,
-    val condition_note_es: String = "",
+    val condition_note: String = "", val condition_note_es: String = "", val condition_note_de: String = "",
 )
 
 private val waypointListSerializer = ListSerializer(ItineraryRouteWaypoint.serializer())
@@ -217,7 +218,7 @@ fun ItineraryEntity.toDomain(
             runCatching { json.decodeFromString<ItineraryWeatherConfig>(it) }.getOrNull()
         }?.let { c ->
             SupWeatherConfig(c.fetch_lat, c.fetch_lng, c.beach_facing_deg, c.max_safe_wind_knots,
-                c.max_safe_gust_knots, c.tramuntana_warning, c.tramuntana_note_es,
+                c.max_safe_gust_knots, c.tramuntana_warning, c.tramuntana_note, c.tramuntana_note_es, c.tramuntana_note_de,
                 c.cave_entry_max_wave_m, c.cave_entry_max_wind_knots)
         },
         qrEntryPoint = qrEntryPointJson?.let {
@@ -231,8 +232,9 @@ fun ItineraryEntity.toDomain(
         },
         routeWaypoints = runCatching { json.decodeFromString(waypointListSerializer, routeWaypointsJson) }
             .getOrDefault(emptyList()).map { w ->
-                RouteWaypoint(w.order, w.name, runCatching { WaypointRole.valueOf(w.role) }.getOrDefault(WaypointRole.WAYPOINT),
-                    w.lat, w.lng, w.note_es, w.distance_from_prev_km, w.conditional, w.condition_note_es)
+                RouteWaypoint(w.order, w.name, w.name_es, w.name_de, runCatching { WaypointRole.valueOf(w.role) }.getOrDefault(WaypointRole.WAYPOINT),
+                    w.lat, w.lng, w.note, w.note_es, w.note_de, w.distance_from_prev_km, w.conditional,
+                    w.condition_note, w.condition_note_es, w.condition_note_de)
             },
     )
 }

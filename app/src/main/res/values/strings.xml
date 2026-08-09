@@ -171,6 +171,8 @@
     <string name="sup_detail_yellow">Moderate experience. Stay close to shore</string>
     <string name="sup_label_red">Not Recommended</string>
     <string name="sup_detail_red">Dangerous conditions today</string>
+    <string name="sup_cave_ok">Blue Cave: entry conditions OK</string>
+    <string name="sup_cave_warning">Blue Cave: DO NOT enter today — swell > %1$sm</string>
 
     <!-- feature-trips (new) -->
     <string name="trip_new_sheet_title">✈️ New Trip</string>
@@ -212,12 +214,12 @@
     <string name="notification_title_prefix">Tomorrow in Mallorca: %s</string>
 
     <!-- onboarding (new) -->
-    <string name="onboarding_page1_title">Discover Mallorca</string>
-    <string name="onboarding_page1_subtitle">Over 100 beaches, hiking trails, medieval villages and corners you won\'t find in any guide.</string>
-    <string name="onboarding_page2_title">SUP Traffic Light</string>
-    <string name="onboarding_page2_subtitle">Real-time paddle surf conditions. Wind, waves and sea temperature before you head out.</string>
-    <string name="onboarding_page3_title">Hidden Gems</string>
-    <string name="onboarding_page3_subtitle">Secret places that unlock when you visit them in person. Be among the few who know the best of the island.</string>
+    <string name="onboarding_page1_title">Welcome to Mallorca Explorer</string>
+    <string name="onboarding_page1_subtitle">Discover the island like a local</string>
+    <string name="onboarding_page2_title">Plan from home</string>
+    <string name="onboarding_page2_subtitle">Explore events, routes and itineraries before you arrive</string>
+    <string name="onboarding_page3_title">Find local gems</string>
+    <string name="onboarding_page3_subtitle">Unique places that only locals know</string>
     <string name="onboarding_btn_start">Let\'s go!</string>
     <string name="onboarding_btn_next">Next</string>
     <string name="onboarding_btn_skip">Skip</string>

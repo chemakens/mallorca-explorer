@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sup_cave_ok">Cueva Azul: condiciones de entrada OK</string>
+    <string name="sup_cave_warning">Cueva Azul: NO entrar hoy — oleaje > %1$sm</string>
+    <string name="sup_label_green">Mar Espejo — Ideal</string>
+    <string name="sup_detail_green">Condiciones perfectas para todos los niveles</string>
+    <string name="sup_label_yellow">Precaución</string>
+    <string name="sup_detail_yellow">Experiencia moderada. No alejarse de la costa</string>
+    <string name="sup_label_red">No Recomendado</string>
+    <string name="sup_detail_red">Condiciones peligrosas hoy</string>
+</resources>

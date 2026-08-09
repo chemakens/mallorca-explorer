@@ -1,15 +1,20 @@
 package com.mallorca.explorer
 
+import android.Manifest
 import android.content.Intent
 import android.widget.Toast
 import android.os.Bundle
 import androidx.activity.ComponentActivity
+import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.isSystemInDarkTheme
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
@@ -18,6 +23,7 @@ import com.mallorca.explorer.core.ui.theme.MallorcaTheme
 import com.mallorca.explorer.navigation.ItineraryDetailRoute
 import com.mallorca.explorer.navigation.MallorcaNavHost
 import com.mallorca.explorer.navigation.PlaceDetailRoute
+import com.mallorca.explorer.notification.DailyEventCheckWorker
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -54,6 +60,26 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             val onboarding = showOnboarding ?: return@setContent
+
+            val notificationLauncher = rememberLauncherForActivityResult(
+                ActivityResultContracts.RequestPermission()
+            ) { granted ->
+                if (granted) {
+                    DailyEventCheckWorker.schedule(this@MainActivity)
+                }
+            }
+
+            LaunchedEffect(Unit) {
+                val hasPermission = ContextCompat.checkSelfPermission(
+                    this@MainActivity, Manifest.permission.POST_NOTIFICATIONS
+                ) == android.content.pm.PackageManager.PERMISSION_GRANTED
+
+                if (!hasPermission && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+                    notificationLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
+                } else if (hasPermission) {
+                    DailyEventCheckWorker.schedule(this@MainActivity)
+                }
+            }
 
             val theme by prefsDataStore.selectedTheme.collectAsStateWithLifecycle(initialValue = "system")
             val darkTheme = when (theme) {

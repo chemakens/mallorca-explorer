@@ -11,7 +11,6 @@ import coil.ImageLoaderFactory
 import com.mallorca.explorer.core.common.LocaleSource
 import com.mallorca.explorer.core.data.datastore.UserPreferencesDataStore
 import com.mallorca.explorer.core.data.sync.SeedDataWorker
-import com.mallorca.explorer.notification.DailyEventCheckWorker
 import com.mallorca.explorer.notification.createNotificationChannel
 import dagger.hilt.android.HiltAndroidApp
 import androidx.lifecycle.ProcessLifecycleOwner
@@ -60,6 +59,5 @@ class MallorcaApp : Application(), Configuration.Provider, ImageLoaderFactory {
             OneTimeWorkRequestBuilder<SeedDataWorker>().build(),
         )
         createNotificationChannel(this)
-        DailyEventCheckWorker.schedule(this)
     }
 }

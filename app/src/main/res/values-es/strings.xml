@@ -172,6 +172,8 @@
     <string name="sup_detail_yellow">Experiencia moderada. No alejarse de la costa</string>
     <string name="sup_label_red">No Recomendado</string>
     <string name="sup_detail_red">Condiciones peligrosas hoy</string>
+    <string name="sup_cave_ok">Cueva Azul: condiciones de entrada OK</string>
+    <string name="sup_cave_warning">Cueva Azul: NO entrar hoy — oleaje > %1$sm</string>
 
     <!-- widget (new) -->
     <string name="widget_description">Tiempo y estado del paddle surf en Mallorca</string>
@@ -216,12 +218,12 @@
     <string name="notification_title_prefix">Mañana en Mallorca: %s</string>
 
     <!-- onboarding (new) -->
-    <string name="onboarding_page1_title">Descubre Mallorca</string>
-    <string name="onboarding_page1_subtitle">Más de 100 playas, rutas de senderismo, pueblos medievales y rincones que no encontrarás en ninguna guía.</string>
-    <string name="onboarding_page2_title">Semáforo SUP</string>
-    <string name="onboarding_page2_subtitle">Condiciones de paddle surf en tiempo real. Viento, olas y temperatura del mar antes de salir al agua.</string>
-    <string name="onboarding_page3_title">Hidden Gems</string>
-    <string name="onboarding_page3_subtitle">Lugares secretos que se desbloquean al visitarlos en persona. Sé de los pocos que conocen lo mejor de la isla.</string>
+    <string name="onboarding_page1_title">Bienvenido a Mallorca Explorer</string>
+    <string name="onboarding_page1_subtitle">Descubre la isla como un local</string>
+    <string name="onboarding_page2_title">Planifica desde casa</string>
+    <string name="onboarding_page2_subtitle">Explora eventos, rutas e itinerarios antes de llegar</string>
+    <string name="onboarding_page3_title">Encuentra gemas locales</string>
+    <string name="onboarding_page3_subtitle">Lugares únicos que solo conocen los locales</string>
     <string name="onboarding_btn_start">¡Empezar!</string>
     <string name="onboarding_btn_next">Siguiente</string>
     <string name="onboarding_btn_skip">Omitir</string>

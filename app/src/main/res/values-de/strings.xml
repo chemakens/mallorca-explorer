@@ -172,6 +172,8 @@
     <string name="sup_detail_yellow">Moderate Erfahrung. In Ufernähe bleiben</string>
     <string name="sup_label_red">Nicht Empfohlen</string>
     <string name="sup_detail_red">Gefährliche Bedingungen heute</string>
+    <string name="sup_cave_ok">Blaue Höhle: Eintrittsbedingungen OK</string>
+    <string name="sup_cave_warning">Blaue Höhle: NICHT betreten heute — Wellengang > %1$sm</string>
 
     <!-- widget (new) -->
     <string name="widget_description">Meer- und Paddle-Surf-Bedingungen auf Mallorca</string>
@@ -216,12 +218,12 @@
     <string name="notification_title_prefix">Morgen auf Mallorca: %s</string>
 
     <!-- onboarding (new) -->
-    <string name="onboarding_page1_title">Entdecke Mallorca</string>
-    <string name="onboarding_page1_subtitle">Mehr als 100 Strände, Wanderwege, mittelalterliche Dörfer und Orte, die du in keinem Reiseführer findest.</string>
-    <string name="onboarding_page2_title">SUP-Ampel</string>
-    <string name="onboarding_page2_subtitle">Paddle-Surf-Bedingungen in Echtzeit. Wind, Wellen und Meerestemperatur, bevor du rausgehst.</string>
-    <string name="onboarding_page3_title">Hidden Gems</string>
-    <string name="onboarding_page3_subtitle">Geheime Orte, die sich beim persönlichen Besuch erschließen. Gehöre zu den wenigen, die das Beste der Insel kennen.</string>
+    <string name="onboarding_page1_title">Willkommen bei Mallorca Explorer</string>
+    <string name="onboarding_page1_subtitle">Entdecke die Insel wie ein Einheimischer</string>
+    <string name="onboarding_page2_title">Plane von zu Hause</string>
+    <string name="onboarding_page2_subtitle">Entdecke Veranstaltungen, Routen und Reiserouten vor deiner Ankunft</string>
+    <string name="onboarding_page3_title">Finde lokale Schätze</string>
+    <string name="onboarding_page3_subtitle">Einzigartige Orte, die nur Einheimische kennen</string>
     <string name="onboarding_btn_start">Los geht\'s!</string>
     <string name="onboarding_btn_next">Weiter</string>
     <string name="onboarding_btn_skip">Überspringen</string>

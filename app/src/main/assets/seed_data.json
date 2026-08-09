@@ -7675,13 +7675,16 @@
       "photo_urls": [
         {
           "url": "file:///android_asset/images/gem-costa-de-la-calma.jpg",
-          "source": "MINE",
-          "heroFocalY": 0.3348
+          "source": "MINE"
         },
         {
           "url": "file:///android_asset/images/gem-costa-de-la-calma-2.jpg",
           "source": "MINE",
           "heroFocalY": 0.347
+        },
+        {
+          "url": "file:///android_asset/images/gem-costa-de-la-calma-3.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/gem-costa-de-la-calma.jpg",
@@ -7693,7 +7696,12 @@
         "Cala Blanca is rocky — bring water shoes",
         "Only 30 minutes from Palma, easy to combine with Peguera or Santa Ponça"
       ],
-      "tags": ["hidden_gem", "beach", "sunset", "southwest"],
+      "tags": [
+        "hidden_gem",
+        "beach",
+        "sunset",
+        "southwest"
+      ],
       "description_es": "Costa de la Calma reparte tranquilidad y belleza natural entre Santa Ponça y Peguera, a solo 30 minutos de Palma. Su punto fuerte es la Playa de Cala Blanca, una pequeña cala rocosa y abierta al mar, con aguas transparentes ideales para un chapuzón y un rato de sol después. Al atardecer, la zona se convierte en uno de los rincones más especiales de Calvià — perfecta para ver la puesta de sol con un tinto de verano en la mano.",
       "tips_es": [
         "El mejor momento es al atardecer, con un tinto de verano en la mano",
@@ -7828,6 +7836,25 @@
       "name_zh": "",
       "description_zh": "",
       "tips_zh": []
+    },
+    {
+      "id": "cala-boquer",
+      "name": "Cala Boquer",
+      "name_es": "Cala Boquer",
+      "category": "BEACH",
+      "latitude": 39.9228,
+      "longitude": 3.0897,
+      "description": "Virgin cove with rounded stones surrounded by Cavall Bernat cliffs (360m). Sandy bottom 2-3m deep, ideal for anchoring. Also accessible on foot from Port de Pollença (2.7 km).",
+      "description_es": "Cala virgen de cantos rodados rodeada por los acantilados del Cavall Bernat (360m). Aguas con fondo arenoso a 2-3m de profundidad, ideales para fondear. También accesible a pie desde Port de Pollença (2,7 km).",
+      "municipality": "Pollença",
+      "difficulty": "EASY",
+      "tags": [
+        "beach",
+        "hiking",
+        "swimming"
+      ],
+      "description_de": "Unberührte Bucht mit Rundsteinen, umgeben von den Cavall Bernat Klippen (360m). Sandiger Grund 2-3m tief, ideal zum Ankern. Auch zu Fuß von Port de Pollença erreichbar (2,7 km).",
+      "name_de": "Cala Boquer"
     }
   ],
   "itineraries": [
@@ -10615,7 +10642,9 @@
         "tramuntana_warning": true,
         "tramuntana_note_es": "La tramontana sube bruscamente después del mediodía. Salida obligatoria entre 07:00 y 09:30.",
         "cave_entry_max_wave_m": 0.3,
-        "cave_entry_max_wind_knots": 8
+        "cave_entry_max_wind_knots": 8,
+        "tramuntana_note": "Tramontana rises sharply after noon. Mandatory departure between 07:00 and 09:30.",
+        "tramuntana_note_de": "Tramontana steigt nach Mittag stark an. Abfahrt zwischen 07:00 und 09:30 Uhr obligatorisch."
       },
       "weather_api_data": {
         "__doc": "Runtime-only. Populated by WeatherRepositoryImpl + GetSUPWeatherStatus. Never persisted.",
@@ -10646,53 +10675,85 @@
           "lng": 3.0574,
           "note_es": "Salida. Técnica de remo y calentamiento rumbo norte. La cala más protegida.",
           "distance_from_prev_km": 0.0,
-          "icon": "launch"
+          "icon": "launch",
+          "note": "Launch. Paddle technique and warm-up heading north. The most sheltered cove.",
+          "note_de": "Start. Paddeltechnik und Aufwärmen Richtung Norden. Die geschützteste Bucht.",
+          "name_de": "Cala Molins"
         },
         {
           "order": 2,
-          "name": "Punta Negra (vía Cala Carbó)",
+          "name": "Punta Negra (via Cala Carbó)",
           "name_es": "Punta Negra (vía Cala Carbó)",
           "role": "WAYPOINT",
           "lat": 39.93,
           "lng": 3.0724,
           "note_es": "Aguas cristalinas. Rodear el cabo con precaución — exposición aumenta aquí.",
           "distance_from_prev_km": 2.2,
-          "icon": "headland"
+          "icon": "headland",
+          "note": "Crystal clear waters. Round the cape with caution — exposure increases here.",
+          "note_de": "Kristallklares Wasser. Das Kap vorsichtig umrunden — die Exposition nimmt hier zu.",
+          "name_de": "Punta Negra (über Cala Carbó)"
         },
         {
           "order": 3,
-          "name": "Cavall Bernat & Coves Blanques",
+          "name": "Cavall Bernat & White Caves",
           "name_es": "Cavall Bernat y Coves Blanques",
           "role": "WAYPOINT",
           "lat": 39.927,
           "lng": 3.085,
           "note_es": "Acantilados y cuevas blancas. Pegarse a la base del acantilado para las vistas.",
           "distance_from_prev_km": 1.8,
-          "icon": "cliff"
+          "icon": "cliff",
+          "note": "Cliffs and white caves. Stick close to the cliff base for the views.",
+          "note_de": "Klippen und weiße Höhlen. An der Klippenbasis bleiben für die Aussicht.",
+          "name_de": "Cavall Bernat & Coves Blanques"
         },
         {
           "order": 4,
+          "name": "Cala Boquer",
+          "role": "WAYPOINT",
+          "lat": 39.9228,
+          "lng": 3.0897,
+          "distance_from_prev_km": 1.3,
+          "note_es": "Cala virgen protegida por el Cavall Bernat. Fondeo arenoso 2-3m. Parada de descanso antes de la cueva.",
+          "conditional": false,
+          "condition_note_es": "",
+          "note": "Virgin cove sheltered by Cavall Bernat. Sandy anchoring 2-3m. Rest stop before the cave.",
+          "note_de": "Unberührte Bucht, geschützt vom Cavall Bernat. Sandiger Ankergrund 2-3m. Rastplatz vor der Höhle.",
+          "name_es": "Cala Boquer",
+          "name_de": "Cala Boquer"
+        },
+        {
+          "order": 5,
           "name": "Cueva Larga (Cueva Azul)",
           "name_es": "Cueva Larga (Cueva Azul)",
           "role": "WAYPOINT_CONDITIONAL",
           "lat": 39.933,
           "lng": 3.0975,
-          "note_es": "Solo entrar si el mar está en calma total. 40m de profundidad. Efecto luz azul interior.",
-          "distance_from_prev_km": 1.5,
+          "note_es": "Solo entrar si el mar está en calma total. 40m de profundidad. Efecto luz azul interior.. Se encuentra a 500m de Cala Boquer, entrando en la cala a mano izquierda. La entrada no se ve desde la superficie — hay que sumergirse un momento para encontrarla, aunque la tabla de SUP puede pasar si las condiciones del mar lo permiten.",
+          "distance_from_prev_km": 1.2,
           "icon": "cave",
           "conditional": true,
-          "condition_note_es": "Solo accesible con mar en calma (oleaje < 0,3m y viento < 8 kt)"
+          "condition_note_es": "Solo accesible con mar en calma (oleaje < 0,3m y viento < 8 kt)",
+          "note": "Only enter if the sea is completely calm. 40m deep. Blue light effect inside.. Located 500m from Cala Boquer — enter the cove and look left. The entrance is not visible from the surface; you need to duck briefly underwater to find it, though the SUP board can be passed through if conditions allow.",
+          "note_de": "Nur bei völlig ruhigem Meer betreten. 40m tief. Blaues Licht-Effekt innen.. Liegt 500m von Cala Boquer entfernt — in die Bucht einfahren und links schauen. Der Eingang ist von der Oberfläche nicht sichtbar; man muss kurz abtauchen, um ihn zu finden, obwohl das SUP-Board bei ruhigem Meer durchgeschoben werden kann.",
+          "condition_note": "Only accessible in calm sea conditions (swell < 0.3m and wind < 8 kt)",
+          "condition_note_de": "Nur bei völlig ruhigem Meer zugänglich (Wellengang < 0,3 m und Wind < 8 kt)",
+          "name_de": "Cueva Larga (Cueva Azul)"
         },
         {
-          "order": 5,
-          "name": "Vuelta a Cala Molins",
+          "order": 6,
+          "name": "Return to Cala Molins",
           "name_es": "Vuelta a Cala Molins",
           "role": "FINISH",
           "lat": 39.9199,
           "lng": 3.0574,
           "note_es": "Regreso. Esnórquel en aguas turquesas y saltos desde los acantilados del lateral.",
           "distance_from_prev_km": 5.5,
-          "icon": "finish"
+          "icon": "finish",
+          "note": "Return. Snorkeling in turquoise waters and cliff jumps from the sides.",
+          "note_de": "Rückkehr. Schnorcheln in türkisfarbenem Wasser und Klippensprünge von den Seiten.",
+          "name_de": "Rückkehr nach Cala Molins"
         }
       ],
       "commercial_block": {
@@ -10717,7 +10778,8 @@
           "day_number": 1,
           "suggested_duration_minutes": 30,
           "note": "Launch from Cala Molins. Basic paddle technique and warm-up. Head north.",
-          "note_es": "Salida desde Cala Molins. Técnicas básicas de remo y calentamiento. Rumbo norte."
+          "note_es": "Salida desde Cala Molins. Técnicas básicas de remo y calentamiento. Rumbo norte.",
+          "note_de": "Start von Cala Molins. Grundlegende Paddeltechnik und Aufwärmen. Kurs nach Norden."
         },
         {
           "place_id": "punta-negra-sant-vicenc",
@@ -10725,7 +10787,8 @@
           "day_number": 1,
           "suggested_duration_minutes": 45,
           "note": "Crystal-clear waters past Cala Carbó. Round Punta Negra with caution — wind exposure increases sharply.",
-          "note_es": "Aguas cristalinas pasando Cala Carbó. Rodear Punta Negra con precaución — la exposición al viento aumenta aquí."
+          "note_es": "Aguas cristalinas pasando Cala Carbó. Rodear Punta Negra con precaución — la exposición al viento aumenta aquí.",
+          "note_de": "Kristallklares Wasser nach Cala Carbó. Umrunden Sie Punta Negra vorsichtig — die Windexposition nimmt hier stark zu."
         },
         {
           "place_id": "cavall-bernat-coves-blanques",
@@ -10733,23 +10796,35 @@
           "day_number": 1,
           "suggested_duration_minutes": 40,
           "note": "Paddle close to the base of the white limestone cliffs. The Cavall Bernat peak towers above. Views only possible from the sea.",
-          "note_es": "Rema pegado a la base de los acantilados de caliza blanca. El pico de Cavall Bernat domina desde arriba. Vistas imposibles desde tierra."
+          "note_es": "Rema pegado a la base de los acantilados de caliza blanca. El pico de Cavall Bernat domina desde arriba. Vistas imposibles desde tierra.",
+          "note_de": "Paddeln Sie nah an der Basis der weißen Kalksteinklippen. Der Gipfel des Cavall Bernat ragt darüber auf. Aussichten nur vom Meer aus möglich."
+        },
+        {
+          "place_id": "cala-boquer",
+          "order": 4,
+          "day_number": 1,
+          "suggested_duration_minutes": 20,
+          "note": "Virgin cove sheltered by Cavall Bernat. Sandy anchoring 2-3m. Rest stop before the cave.",
+          "note_es": "Cala virgen protegida por el Cavall Bernat. Fondeo arenoso 2-3m. Parada de descanso antes de la cueva.",
+          "note_de": "Unberührte Bucht, geschützt vom Cavall Bernat. Sandiger Ankergrund 2-3m. Rastplatz vor der Höhle."
         },
         {
           "place_id": "cueva-larga-azul-sant-vicenc",
-          "order": 4,
+          "order": 5,
           "day_number": 1,
           "suggested_duration_minutes": 35,
-          "note": "Enter the Cueva Azul ONLY if sea is flat (< 0.3m swell). 40m deep. Switch off torches to see the blue bioluminescent light.",
-          "note_es": "Entra en la Cueva Azul SOLO si el mar está en calma total (oleaje < 0,3m). 40m de profundidad. Apaga las linternas para ver el efecto luz azul interior."
+          "note": "Enter the Cueva Azul ONLY if sea is flat (< 0.3m swell). 40m deep. Switch off torches to see the blue bioluminescent light. 500m from Cala Boquer, on the left side.",
+          "note_es": "Entra en la Cueva Azul SOLO si el mar está en calma total (oleaje < 0,3m). 40m de profundidad. Apaga las linternas para ver el efecto luz azul interior. A 500m de Cala Boquer, entrando a mano izquierda.",
+          "note_de": "Betreten Sie die Cueva Azul NUR bei ruhiger See (< 0,3m Wellengang). 40m tief. Schalten Sie die Taschenlampen aus, um das blau biolumineszente Licht zu sehen. 500m von Cala Boquer entfernt, auf der linken Seite."
         },
         {
           "place_id": "sup-sant-vicenc",
-          "order": 5,
+          "order": 6,
           "day_number": 1,
           "suggested_duration_minutes": 60,
           "note": "Return to Cala Molins. Snorkel the turquoise waters and jump from the side cliffs. Celebrate with a swim.",
-          "note_es": "Regreso a Cala Molins. Esnórquel en aguas turquesas y saltos desde los acantilados laterales. El merecido baño final."
+          "note_es": "Regreso a Cala Molins. Esnórquel en aguas turquesas y saltos desde los acantilados laterales. El merecido baño final.",
+          "note_de": "Rückkehr nach Cala Molins. Schnorcheln im türkisfarbenen Wasser und Sprünge von den Seitenklippen. Feiern Sie mit einem Bad."
         }
       ],
       "translations": {
@@ -10814,24 +10889,40 @@
         },
         {
           "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-4.jpg",
-          "source": "PEXELS"
+          "source": "MINE"
         },
         {
           "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-5.jpg",
-          "source": "PEXELS"
+          "source": "MINE"
         },
         {
           "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-6.jpg",
-          "source": "PEXELS"
+          "source": "MINE"
         },
         {
           "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-7.jpg",
-          "source": "PEXELS"
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-8.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-9.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-10.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-11.jpg",
+          "source": "MINE"
         }
       ],
       "cover_photo": {
         "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc.jpg",
-        "source": "UNSPLASH"
+        "source": "MINE"
       }
     }
   ],

@@ -29,6 +29,7 @@ import androidx.compose.material3.SuggestionChip
 import androidx.compose.material3.SuggestionChipDefaults
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -82,11 +83,19 @@ fun OfflineWeatherWarning(modifier: Modifier = Modifier) {
 @Composable
 fun SupWeatherAlertCard(
     supStatus: SUPWeatherStatus,
+    tramuntanaNote: String = "",
     tramuntanaNoteEs: String = "",
+    tramuntanaNoteDe: String = "",
     caveEntryMaxWaveM: Float? = null,
     isStale: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
+    val locale = LocalConfiguration.current.locales[0].language
+    val tramuntanaText = when (locale) {
+        "de" -> tramuntanaNoteDe.ifBlank { tramuntanaNoteEs.ifBlank { tramuntanaNote } }
+        "es" -> tramuntanaNoteEs.ifBlank { tramuntanaNote }
+        else -> tramuntanaNote.ifBlank { tramuntanaNoteEs }
+    }
     val (bgColor, borderColor, textColor) = when (supStatus.trafficLight) {
         SUPTrafficLight.GREEN  -> Triple(Color(0xFFE8F5E9), Color(0xFF4CAF50), Color(0xFF1B5E20))
         SUPTrafficLight.YELLOW -> Triple(Color(0xFFFFF8E1), Color(0xFFFFB300), Color(0xFFE65100))
@@ -109,13 +118,21 @@ fun SupWeatherAlertCard(
                     Text(supStatus.trafficLight.emoji, style = MaterialTheme.typography.headlineSmall)
                     Column {
                         Text(
-                            supStatus.trafficLight.label,
+                            when (supStatus.trafficLight) {
+                                SUPTrafficLight.GREEN -> stringResource(R.string.sup_label_green)
+                                SUPTrafficLight.YELLOW -> stringResource(R.string.sup_label_yellow)
+                                SUPTrafficLight.RED -> stringResource(R.string.sup_label_red)
+                            },
                             style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             color = textColor,
                         )
                         Text(
-                            supStatus.trafficLight.detail,
+                            when (supStatus.trafficLight) {
+                                SUPTrafficLight.GREEN -> stringResource(R.string.sup_detail_green)
+                                SUPTrafficLight.YELLOW -> stringResource(R.string.sup_detail_yellow)
+                                SUPTrafficLight.RED -> stringResource(R.string.sup_detail_red)
+                            },
                             style = MaterialTheme.typography.bodySmall,
                             color = textColor.copy(alpha = 0.8f),
                         )
@@ -192,7 +209,8 @@ fun SupWeatherAlertCard(
                     ) {
                         Text(if (caveOk) "🟢" else "🔴", style = MaterialTheme.typography.bodySmall)
                         Text(
-                            if (caveOk) "Cueva Azul: condiciones de entrada OK" else "Cueva Azul: NO entrar hoy — oleaje > ${maxWave}m",
+                            if (caveOk) stringResource(R.string.sup_cave_ok) 
+                            else stringResource(R.string.sup_cave_warning, maxWave),
                             style = MaterialTheme.typography.bodySmall,
                             color = caveColor,
                             fontWeight = FontWeight.Medium,
@@ -201,7 +219,7 @@ fun SupWeatherAlertCard(
                 }
 
                 // ── Tramuntana warning ──
-                if (tramuntanaNoteEs.isNotBlank()) {
+                if (tramuntanaText.isNotBlank()) {
                     Row(
                         modifier = Modifier
                             .fillMaxWidth()
@@ -213,7 +231,7 @@ fun SupWeatherAlertCard(
                     ) {
                         Text("⚠", style = MaterialTheme.typography.bodySmall)
                         Text(
-                            "Tramontana: $tramuntanaNoteEs",
+                            "Tramontana: $tramuntanaText",
                             style = MaterialTheme.typography.bodySmall,
                             color = Color(0xFFE65100),
                         )
@@ -262,11 +280,33 @@ private fun SupWaypointRow(
     isLast: Boolean,
     modifier: Modifier = Modifier,
 ) {
+    val locale = LocalConfiguration.current.locales[0].language
     val (dotColor, dotEmoji) = when (waypoint.role) {
         WaypointRole.LAUNCH             -> Color(0xFF2196F3) to "🏄"
         WaypointRole.WAYPOINT           -> Color(0xFF1976D2) to "📍"
         WaypointRole.WAYPOINT_CONDITIONAL -> Color(0xFFFF9800) to "🔵"
         WaypointRole.FINISH             -> Color(0xFF4CAF50) to "🏁"
+    }
+
+    // Select note based on locale
+    val note = when (locale) {
+        "de" -> waypoint.noteDe.ifBlank { waypoint.noteEs.ifBlank { waypoint.note } }
+        "es" -> waypoint.noteEs.ifBlank { waypoint.note }
+        else -> waypoint.note.ifBlank { waypoint.noteEs }
+    }
+
+    // Select condition note based on locale
+    val conditionNote = when (locale) {
+        "de" -> waypoint.conditionNoteDe.ifBlank { waypoint.conditionNoteEs.ifBlank { waypoint.conditionNote } }
+        "es" -> waypoint.conditionNoteEs.ifBlank { waypoint.conditionNote }
+        else -> waypoint.conditionNote.ifBlank { waypoint.conditionNoteEs }
+    }
+
+    // Select waypoint name based on locale
+    val waypointName = when (locale) {
+        "de" -> waypoint.nameDe.ifBlank { waypoint.nameEs.ifBlank { waypoint.name } }
+        "es" -> waypoint.nameEs.ifBlank { waypoint.name }
+        else -> waypoint.name.ifBlank { waypoint.nameEs }
     }
 
     Row(modifier = modifier.fillMaxWidth()) {
@@ -301,7 +341,7 @@ private fun SupWaypointRow(
                     horizontalArrangement = Arrangement.spacedBy(6.dp),
                 ) {
                     Text(
-                        "$stepNumber. ${waypoint.name}",
+                        "$stepNumber. $waypointName",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.SemiBold,
                     )
@@ -327,19 +367,19 @@ private fun SupWaypointRow(
                     }
                 }
 
-                if (waypoint.noteEs.isNotBlank()) {
+                if (note.isNotBlank()) {
                     Spacer(Modifier.height(4.dp))
                     Text(
-                        waypoint.noteEs,
+                        note,
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                 }
 
-                if (waypoint.conditional && waypoint.conditionNoteEs.isNotBlank()) {
+                if (waypoint.conditional && conditionNote.isNotBlank()) {
                     Spacer(Modifier.height(4.dp))
                     Text(
-                        "⚠ ${waypoint.conditionNoteEs}",
+                        "⚠ $conditionNote",
                         style = MaterialTheme.typography.labelSmall,
                         color = Color(0xFFE65100),
                         fontWeight = FontWeight.Medium,

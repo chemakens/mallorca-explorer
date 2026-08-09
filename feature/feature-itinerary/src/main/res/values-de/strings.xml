@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sup_cave_ok">Blaue Höhle: Eintrittsbedingungen OK</string>
+    <string name="sup_cave_warning">Blaue Höhle: NICHT betreten heute — Wellengang > %1$sm</string>
+    <string name="sup_label_green">Spiegelglättes Meer — Ideal</string>
+    <string name="sup_detail_green">Perfekte Bedingungen für alle Levels</string>
+    <string name="sup_label_yellow">Vorsicht</string>
+    <string name="sup_detail_yellow">Moderate Erfahrung. In Ufernähe bleiben</string>
+    <string name="sup_label_red">Nicht Empfohlen</string>
+    <string name="sup_detail_red">Gefährliche Bedingungen heute</string>
+</resources>

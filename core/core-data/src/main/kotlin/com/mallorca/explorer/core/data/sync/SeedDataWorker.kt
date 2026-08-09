@@ -97,7 +97,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 153
+        const val CURRENT_SEED_VERSION = 164
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -210,7 +210,7 @@ class SeedDataWorker @AssistedInject constructor(
         val fetch_lat: Double = 0.0, val fetch_lng: Double = 0.0,
         val beach_facing_deg: Int = 0, val max_safe_wind_knots: Float = 10f,
         val max_safe_gust_knots: Float = 14f, val tramuntana_warning: Boolean = false,
-        val tramuntana_note_es: String = "", val cave_entry_max_wave_m: Float? = null,
+        val tramuntana_note: String = "", val tramuntana_note_es: String = "", val tramuntana_note_de: String = "", val cave_entry_max_wave_m: Float? = null,
         val cave_entry_max_wind_knots: Float? = null,
     )
 
@@ -227,10 +227,11 @@ class SeedDataWorker @AssistedInject constructor(
     )
 
     @Serializable data class SeedRouteWaypoint(
-        val order: Int = 0, val name: String = "", val role: String = "WAYPOINT",
-        val lat: Double = 0.0, val lng: Double = 0.0, val note_es: String = "",
+        val order: Int = 0, val name: String = "", val name_es: String = "", val name_de: String = "", val role: String = "WAYPOINT",
+        val lat: Double = 0.0, val lng: Double = 0.0,
+        val note: String = "", val note_es: String = "", val note_de: String = "",
         val distance_from_prev_km: Float = 0f, val conditional: Boolean = false,
-        val condition_note_es: String = "",
+        val condition_note: String = "", val condition_note_es: String = "", val condition_note_de: String = "",
     )
 
     @Serializable data class SeedItinerary(

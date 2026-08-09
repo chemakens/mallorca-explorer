@@ -40,7 +40,9 @@ data class SupWeatherConfig(
     val maxSafeWindKnots: Float,
     val maxSafeGustKnots: Float,
     val tramuntanaWarning: Boolean,
+    val tramuntanaNote: String,
     val tramuntanaNoteEs: String,
+    val tramuntanaNoteDe: String,
     val caveEntryMaxWaveM: Float? = null,
     val caveEntryMaxWindKnots: Float? = null,
 )
@@ -68,13 +70,19 @@ data class CommercialBlock(
 data class RouteWaypoint(
     val order: Int,
     val name: String,
+    val nameEs: String,
+    val nameDe: String,
     val role: WaypointRole,
     val lat: Double,
     val lng: Double,
+    val note: String,
     val noteEs: String,
+    val noteDe: String,
     val distanceFromPrevKm: Float,
     val conditional: Boolean = false,
+    val conditionNote: String = "",
     val conditionNoteEs: String = "",
+    val conditionNoteDe: String = "",
 )
 
 enum class WaypointRole { LAUNCH, WAYPOINT, WAYPOINT_CONDITIONAL, FINISH }

@@ -18,4 +18,12 @@
     <string name="sup_offline_data_warning">Offline data — may be more than 30 min old</string>
     <string name="sup_gust_warning_format">Gusts %1$.1f kt (+%2$d%%)</string>
     <string name="sup_discount_format">🏷 %1$d%% off · code: %2$s</string>
+    <string name="sup_cave_ok">Blue Cave: entry conditions OK</string>
+    <string name="sup_cave_warning">Blue Cave: DO NOT enter today — swell > %1$sm</string>
+    <string name="sup_label_green">Flat Sea — Ideal</string>
+    <string name="sup_detail_green">Perfect conditions for all levels</string>
+    <string name="sup_label_yellow">Caution</string>
+    <string name="sup_detail_yellow">Moderate experience. Stay close to shore</string>
+    <string name="sup_label_red">Not Recommended</string>
+    <string name="sup_detail_red">Dangerous conditions today</string>
 </resources>

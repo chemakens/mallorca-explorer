@@ -55,6 +55,7 @@ import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.LocalConfiguration
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.core.domain.model.Itinerary
@@ -316,7 +317,8 @@ private fun ItineraryDetailContent(
                     Text(itinerary.title, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = Color.White)
                     Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                         Text("⏱ ${itinerary.durationDays}d", style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f))
-                        Text("📍 ${itinerary.places.size} stops", style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f))
+                        val stopCount = if (itinerary.routeWaypoints.isNotEmpty()) itinerary.routeWaypoints.size else itinerary.places.size
+                        Text("📍 $stopCount stops", style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f))
                         itinerary.difficulty?.let { Text("🥾 ${it.name.lowercase().replaceFirstChar { c -> c.uppercase() }}", style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f)) }
                     }
                 }
@@ -334,7 +336,9 @@ private fun ItineraryDetailContent(
                     when {
                         supStatus != null -> SupWeatherAlertCard(
                             supStatus = supStatus,
+                            tramuntanaNote = itinerary.weatherConfig?.tramuntanaNote ?: "",
                             tramuntanaNoteEs = itinerary.weatherConfig?.tramuntanaNoteEs ?: "",
+                            tramuntanaNoteDe = itinerary.weatherConfig?.tramuntanaNoteDe ?: "",
                             caveEntryMaxWaveM = itinerary.weatherConfig?.caveEntryMaxWaveM,
                             isStale = weatherIsStale,
                         )
@@ -345,8 +349,30 @@ private fun ItineraryDetailContent(
 
                 // Tags/badges
                 if (itinerary.bestSeasons.isNotEmpty() || itinerary.tags.isNotEmpty()) {
+                    val locale = LocalConfiguration.current.locales[0].language
+                    val translateSeason: (String) -> String = { season ->
+                        when (locale) {
+                            "es" -> when (season) {
+                                "Spring" -> "Primavera"
+                                "Summer" -> "Verano"
+                                "Autumn" -> "Otoño"
+                                "Winter" -> "Invierno"
+                                else -> season
+                            }
+                            "de" -> when (season) {
+                                "Spring" -> "Frühling"
+                                "Summer" -> "Sommer"
+                                "Autumn" -> "Herbst"
+                                "Winter" -> "Winter"
+                                else -> season
+                            }
+                            else -> season // EN por defecto
+                        }
+                    }
                     Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                        itinerary.bestSeasons.forEach { SuggestionChip(onClick = {}, label = { Text(it, style = MaterialTheme.typography.labelSmall) }) }
+                        itinerary.bestSeasons.forEach { season -> 
+                            SuggestionChip(onClick = {}, label = { Text(translateSeason(season), style = MaterialTheme.typography.labelSmall) }) 
+                        }
                     }
                     Spacer(Modifier.height(8.dp))
                 }

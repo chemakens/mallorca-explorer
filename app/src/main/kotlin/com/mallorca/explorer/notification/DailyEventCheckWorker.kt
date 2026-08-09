@@ -71,7 +71,6 @@ class DailyEventCheckWorker @AssistedInject constructor(
                 repeatIntervalTimeUnit = TimeUnit.DAYS,
             ).setInitialDelay(initialDelay, TimeUnit.MILLISECONDS)
              .build()
-
             WorkManager.getInstance(context).enqueueUniquePeriodicWork(
                 WORK_NAME,
                 ExistingPeriodicWorkPolicy.KEEP,
