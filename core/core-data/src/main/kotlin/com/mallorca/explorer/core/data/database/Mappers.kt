@@ -100,6 +100,12 @@ private data class ItineraryCommercialBlock(
 )
 
 @Serializable
+private data class ItineraryPolylinePoint(
+    val lat: Double = 0.0,
+    val lng: Double = 0.0,
+)
+
+@Serializable
 private data class ItineraryRouteWaypoint(
     val order: Int = 0, val name: String = "", val name_es: String = "", val name_de: String = "", val role: String = "WAYPOINT",
     val lat: Double = 0.0, val lng: Double = 0.0,
@@ -109,6 +115,7 @@ private data class ItineraryRouteWaypoint(
 )
 
 private val waypointListSerializer = ListSerializer(ItineraryRouteWaypoint.serializer())
+private val polylinePointListSerializer = ListSerializer(ItineraryPolylinePoint.serializer())
 
 private fun parseTranslations(json_str: String): Map<String, ItineraryTranslation> =
     runCatching { json.decodeFromString(translationMapSerializer, json_str) }.getOrDefault(emptyMap())
@@ -236,6 +243,8 @@ fun ItineraryEntity.toDomain(
                     w.lat, w.lng, w.note, w.note_es, w.note_de, w.distance_from_prev_km, w.conditional,
                     w.condition_note, w.condition_note_es, w.condition_note_de)
             },
+        routePolylinePoints = runCatching { json.decodeFromString(polylinePointListSerializer, routePolylinePointsJson) }
+            .getOrDefault(emptyList()).map { p -> LatLng(p.lat, p.lng) },
     )
 }
 

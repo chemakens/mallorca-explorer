@@ -7,11 +7,18 @@ import com.mallorca.explorer.core.domain.model.Place
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 
+data class RouteWaypointMarker(
+    val name: String,
+    val location: LatLng,
+    val order: Int,
+)
+
 data class ItineraryRoute(
     val id: String,
     val title: String,
     val color: String,
     val coords: ImmutableList<LatLng>,
+    val waypoints: ImmutableList<RouteWaypointMarker>,
     val coverPhotoUrl: String,
     val category: Category,
     val durationDays: Int,

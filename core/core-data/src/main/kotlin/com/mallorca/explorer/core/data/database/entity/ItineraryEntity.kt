@@ -23,6 +23,7 @@ data class ItineraryEntity(
     val qrEntryPointJson: String? = null,
     val commercialBlockJson: String? = null,
     val routeWaypointsJson: String = "[]",
+    val routePolylinePointsJson: String = "[]",
     val galleryPhotosJson: String = "[]",
 )
 

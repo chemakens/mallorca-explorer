@@ -446,26 +446,55 @@ fun MapScreen(
                     }
                 }
 
-                // 3. Itinerary stop tap → navigate to itinerary detail
+                // 3. Itinerary waypoint/stop tap → show waypoint name or navigate to itinerary detail
                 val hitRadiusPx = 80f
                 var bestId: String? = null
+                var bestWaypointName: String? = null
                 var bestDistSq = hitRadiusPx * hitRadiusPx
                 var nearbyCount = 0
 
                 for (route in currentRoutesState.value) {
-                    for (coord in route.coords) {
-                        val markerScreen = map.projection.toScreenLocation(
-                            org.maplibre.android.geometry.LatLng(coord.latitude, coord.longitude)
-                        )
-                        val dx = tapScreen.x - markerScreen.x
-                        val dy = tapScreen.y - markerScreen.y
-                        val distSq = dx * dx + dy * dy
-                        if (distSq < bestDistSq) { bestDistSq = distSq; bestId = route.id }
-                        if (distSq < 120f * 120f) nearbyCount++
+                    // Check waypoints first (they have names)
+                    if (route.waypoints.isNotEmpty()) {
+                        for (wp in route.waypoints) {
+                            val markerScreen = map.projection.toScreenLocation(
+                                org.maplibre.android.geometry.LatLng(wp.location.latitude, wp.location.longitude)
+                            )
+                            val dx = tapScreen.x - markerScreen.x
+                            val dy = tapScreen.y - markerScreen.y
+                            val distSq = dx * dx + dy * dy
+                            if (distSq < bestDistSq) {
+                                bestDistSq = distSq
+                                bestId = route.id
+                                bestWaypointName = wp.name
+                            }
+                            if (distSq < 120f * 120f) nearbyCount++
+                        }
+                    } else {
+                        // Fall back to coords if no waypoints
+                        for (coord in route.coords) {
+                            val markerScreen = map.projection.toScreenLocation(
+                                org.maplibre.android.geometry.LatLng(coord.latitude, coord.longitude)
+                            )
+                            val dx = tapScreen.x - markerScreen.x
+                            val dy = tapScreen.y - markerScreen.y
+                            val distSq = dx * dx + dy * dy
+                            if (distSq < bestDistSq) { bestDistSq = distSq; bestId = route.id }
+                            if (distSq < 120f * 120f) nearbyCount++
+                        }
                     }
                 }
 
                 when {
+                    bestId != null && bestWaypointName != null -> {
+                        // Show waypoint name in toast
+                        android.widget.Toast.makeText(
+                            context,
+                            bestWaypointName,
+                            android.widget.Toast.LENGTH_SHORT
+                        ).show()
+                        true
+                    }
                     bestId != null -> {
                         map.animateCamera(
                             CameraUpdateFactory.newLatLngZoom(latLng, maxOf(map.cameraPosition.zoom, 12.0)), 350,
@@ -501,31 +530,37 @@ fun MapScreen(
         val activeId = uiState.activeItinerary?.id
         val isAnyActive = activeId != null
 
-        // Stop markers
-        val features = uiState.allItineraryRoutes.flatMap { route ->
-            val isActive = route.id == activeId
-            // Base radius at zoom 14 — zoomScaledRadius() scales these down at overview
-            val innerRadius = if (isActive) 7.0 else 4.5
-            val haloRadius  = if (isActive) 10.0 else 7.0
-            val opacity = if (!isAnyActive) 0.0 else if (isActive) 1.0 else 0.25
-            route.coords.map { coord ->
+        // Stop markers - only show for the active itinerary
+        val activeRoute = uiState.allItineraryRoutes.find { it.id == activeId }
+        val features = if (activeRoute != null) {
+            // Prefer waypoints over coords for marker placement
+            val markersData = if (activeRoute.waypoints.isNotEmpty()) {
+                activeRoute.waypoints.map { wp -> Triple(wp.location, wp.name, wp.order) }
+            } else {
+                activeRoute.coords.mapIndexed { index, coord -> Triple(coord, "", index + 1) }
+            }
+
+            markersData.map { (location, name, order) ->
                 Feature.fromGeometry(
-                    Point.fromLngLat(coord.longitude, coord.latitude),
+                    Point.fromLngLat(location.longitude, location.latitude),
                     JsonObject().apply {
-                        addProperty("itineraryId", route.id)
-                        addProperty("color", route.color)
-                        addProperty("radius", innerRadius)
-                        addProperty("haloRadius", haloRadius)
-                        addProperty("opacity", opacity)
-                        addProperty("shadowOpacity", opacity * 0.15)
+                        addProperty("itineraryId", activeRoute.id)
+                        addProperty("color", activeRoute.color)
+                        addProperty("radius", 7.0)
+                        addProperty("haloRadius", 10.0)
+                        addProperty("opacity", 1.0)
+                        addProperty("shadowOpacity", 0.15)
+                        addProperty("waypointName", name)
+                        addProperty("waypointOrder", order)
                     }
                 )
             }
+        } else {
+            emptyList()
         }
         stopsSource.setGeoJson(FeatureCollection.fromFeatures(features))
 
         // Route line: draw ordered polyline for active itinerary
-        val activeRoute = uiState.allItineraryRoutes.find { it.id == activeId }
         if (activeRoute != null && activeRoute.coords.size >= 2) {
             val lineCoords = activeRoute.coords.map { Point.fromLngLat(it.longitude, it.latitude) }
             val routeFeature = Feature.fromGeometry(

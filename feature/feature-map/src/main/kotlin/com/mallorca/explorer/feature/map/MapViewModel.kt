@@ -96,10 +96,38 @@ class MapViewModel @Inject constructor(
                     id = itin.id,
                     title = itin.title,
                     color = itin.category.routeColor(),
-                    coords = itin.places
-                        .sortedWith(compareBy({ it.dayNumber }, { it.order }))
-                        .map { it.place.location }
-                        .toImmutableList(),
+                    coords = if (itin.routePolylinePoints.isNotEmpty()) {
+                        // Use exact polyline from KML/GPX if available
+                        itin.routePolylinePoints.toImmutableList()
+                    } else if (itin.routeWaypoints.isNotEmpty()) {
+                        // Use route waypoints if available (SUP routes)
+                        itin.routeWaypoints
+                            .sortedBy { it.order }
+                            .map { com.mallorca.explorer.core.domain.model.LatLng(it.lat, it.lng) }
+                            .toImmutableList()
+                    } else {
+                        // Fall back to connecting places in order
+                        itin.places
+                            .sortedWith(compareBy({ it.dayNumber }, { it.order }))
+                            .map { it.place.location }
+                            .toImmutableList()
+                    },
+                    waypoints = if (itin.routeWaypoints.isNotEmpty()) {
+                        // Build waypoint markers from routeWaypoints
+                        itin.routeWaypoints
+                            .sortedBy { it.order }
+                            .map { wp ->
+                                RouteWaypointMarker(
+                                    name = wp.nameEs.ifBlank { wp.name },
+                                    location = com.mallorca.explorer.core.domain.model.LatLng(wp.lat, wp.lng),
+                                    order = wp.order
+                                )
+                            }
+                            .toImmutableList()
+                    } else {
+                        // No waypoints for place-based itineraries
+                        persistentListOf()
+                    },
                     coverPhotoUrl = itin.coverPhoto.url,
                     category = itin.category,
                     durationDays = itin.durationDays,

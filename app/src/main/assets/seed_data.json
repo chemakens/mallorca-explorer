@@ -4580,7 +4580,6 @@
         "Less crowded than nearby Cala Mesquida on windy days"
       ],
       "tags": [
-        "hidden_gem",
         "sandy",
         "family-friendly",
         "pine-forest",
@@ -5661,16 +5660,24 @@
       "municipality": "Pollença",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-ruta-cala-boquer.jpg",
+          "url": "file:///android_asset/images/hiking-yo-mia15.jpg",
+          "source": "MINE",
+          "heroFocalY": 0.35
+        },
+        {
+          "url": "file:///android_asset/images/hiking-yo-mia16.jpg",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-ruta-cala-boquer-2.jpg",
-          "source": "AETIB",
-          "author": "Eduardo Miralles"
+          "url": "file:///android_asset/images/hiking-yo-mia17.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/hiking-yo-mia10.jpg",
+          "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-boquer.jpg",
+      "thumbnail_url": "file:///android_asset/images/hiking-yo-mia15.jpg",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 2340,
@@ -6865,8 +6872,8 @@
       "name_es": "Cavall Bernat y Coves Blanques",
       "description": "The most dramatic section of the Sant Vicenç coast — towering vertical cliffs of white limestone (coves blanques) rise directly from the sea while the Cavall Bernat peak looms above. The colour contrast between white rock, pine forest and turquoise water is extraordinary and only visible from the water.",
       "category": "ADVENTURE",
-      "latitude": 39.9323,
-      "longitude": 3.0608,
+      "latitude": 39.92594,
+      "longitude": 3.07952,
       "municipality": "Pollença",
       "price_level": "FREE",
       "rating": 4.9,
@@ -6922,8 +6929,8 @@
       "name_es": "Cueva Larga (Cueva Azul)",
       "description": "A sea cave penetrating more than 40 metres into the limestone cliff face, where the turquoise bioluminescent light from below creates the 'blue cave' effect on the cave walls and ceiling. One of the most spectacular natural phenomena on the Mallorcan north coast — only accessible by flat-water SUP or kayak.",
       "category": "ADVENTURE",
-      "latitude": 39.933,
-      "longitude": 3.0975,
+      "latitude": 39.9285123,
+      "longitude": 3.0995516,
       "municipality": "Pollença",
       "price_level": "FREE",
       "rating": 5.0,
@@ -6946,13 +6953,25 @@
         "advanced",
         "conditional",
         "sup_launch",
-        "facing:45"
+        "facing:45",
+        "hidden_gem"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-cueva-larga-azul-sant-vicenc.jpg",
+      "thumbnail_url": "file:///android_asset/images/cueva-azul-exterior.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-cueva-larga-azul-sant-vicenc.jpg",
-          "source": "PIXABAY"
+          "url": "file:///android_asset/images/cueva-azul-exterior.jpg",
+          "source": "MINE",
+          "heroFocalY": 0.35
+        },
+        {
+          "url": "file:///android_asset/images/cueva-azul-interior-1.jpg",
+          "source": "MINE",
+          "heroFocalY": 0.3
+        },
+        {
+          "url": "file:///android_asset/images/cueva-azul-interior-2.jpg",
+          "source": "MINE",
+          "heroFocalY": 0.35
         }
       ],
       "description_es": "Cueva marina de más de 40 metros de profundidad donde la luz turquesa desde abajo crea el efecto de 'cueva azul' en las paredes y el techo. Una de las experiencias de kayak más memorables de Mallorca.",
@@ -6973,7 +6992,13 @@
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "hidden_gem_description": "Only accessible by sea in kayak or SUP. A marine cave over 40m deep where turquoise light creates a magical effect from inside. Not suitable for people with reduced mobility or without open water experience.",
+      "hidden_gem_description_es": "Solo accesible por mar en kayak o SUP. Una cueva marina de más de 40m de profundidad donde la luz turquesa crea un efecto mágico desde dentro. No apta para personas con movilidad reducida o sin experiencia en aguas abiertas.",
+      "hidden_gem_description_de": "Nur per Kajak oder SUP vom Meer aus erreichbar. Eine Meereshöhle von über 40m Tiefe, in der türkisfarbenes Licht von innen einen magischen Effekt erzeugt. Nicht geeignet für Personen mit eingeschränkter Mobilität.",
+      "cover": "file:///android_asset/images/cueva-azul-exterior.jpg",
+      "lat": 39.9285123,
+      "lon": 3.0995516
     },
     {
       "id": "cala-en-basset",
@@ -7842,8 +7867,8 @@
       "name": "Cala Boquer",
       "name_es": "Cala Boquer",
       "category": "BEACH",
-      "latitude": 39.9228,
-      "longitude": 3.0897,
+      "latitude": 39.9290388,
+      "longitude": 3.0946593,
       "description": "Virgin cove with rounded stones surrounded by Cavall Bernat cliffs (360m). Sandy bottom 2-3m deep, ideal for anchoring. Also accessible on foot from Port de Pollença (2.7 km).",
       "description_es": "Cala virgen de cantos rodados rodeada por los acantilados del Cavall Bernat (360m). Aguas con fondo arenoso a 2-3m de profundidad, ideales para fondear. También accesible a pie desde Port de Pollença (2,7 km).",
       "municipality": "Pollença",
@@ -7854,7 +7879,19 @@
         "swimming"
       ],
       "description_de": "Unberührte Bucht mit Rundsteinen, umgeben von den Cavall Bernat Klippen (360m). Sandiger Grund 2-3m tief, ideal zum Ankern. Auch zu Fuß von Port de Pollença erreichbar (2,7 km).",
-      "name_de": "Cala Boquer"
+      "name_de": "Cala Boquer",
+      "thumbnail_url": "file:///android_asset/images/place-cala-boquer-new.jpg",
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/place-cala-boquer-new.jpg",
+          "source": "MINE",
+          "heroFocalY": 0.7
+        }
+      ],
+      "cover": "file:///android_asset/images/place-cala-boquer-new.jpg",
+      "heroFocalY": 0.7,
+      "lat": 39.9290388,
+      "lon": 3.0946593
     }
   ],
   "itineraries": [
@@ -10671,8 +10708,8 @@
           "name": "Cala Molins",
           "name_es": "Cala Molins",
           "role": "LAUNCH",
-          "lat": 39.9199,
-          "lng": 3.0574,
+          "lat": 39.919911,
+          "lng": 3.057912,
           "note_es": "Salida. Técnica de remo y calentamiento rumbo norte. La cala más protegida.",
           "distance_from_prev_km": 0.0,
           "icon": "launch",
@@ -10685,8 +10722,8 @@
           "name": "Punta Negra (via Cala Carbó)",
           "name_es": "Punta Negra (vía Cala Carbó)",
           "role": "WAYPOINT",
-          "lat": 39.93,
-          "lng": 3.0724,
+          "lat": 39.922679,
+          "lng": 3.068681,
           "note_es": "Aguas cristalinas. Rodear el cabo con precaución — exposición aumenta aquí.",
           "distance_from_prev_km": 2.2,
           "icon": "headland",
@@ -10699,8 +10736,8 @@
           "name": "Cavall Bernat & White Caves",
           "name_es": "Cavall Bernat y Coves Blanques",
           "role": "WAYPOINT",
-          "lat": 39.927,
-          "lng": 3.085,
+          "lat": 39.92594,
+          "lng": 3.07952,
           "note_es": "Acantilados y cuevas blancas. Pegarse a la base del acantilado para las vistas.",
           "distance_from_prev_km": 1.8,
           "icon": "cliff",
@@ -10712,8 +10749,8 @@
           "order": 4,
           "name": "Cala Boquer",
           "role": "WAYPOINT",
-          "lat": 39.9228,
-          "lng": 3.0897,
+          "lat": 39.92876,
+          "lng": 3.09595,
           "distance_from_prev_km": 1.3,
           "note_es": "Cala virgen protegida por el Cavall Bernat. Fondeo arenoso 2-3m. Parada de descanso antes de la cueva.",
           "conditional": false,
@@ -10728,8 +10765,8 @@
           "name": "Cueva Larga (Cueva Azul)",
           "name_es": "Cueva Larga (Cueva Azul)",
           "role": "WAYPOINT_CONDITIONAL",
-          "lat": 39.933,
-          "lng": 3.0975,
+          "lat": 39.92976,
+          "lng": 3.1008,
           "note_es": "Solo entrar si el mar está en calma total. 40m de profundidad. Efecto luz azul interior.. Se encuentra a 500m de Cala Boquer, entrando en la cala a mano izquierda. La entrada no se ve desde la superficie — hay que sumergirse un momento para encontrarla, aunque la tabla de SUP puede pasar si las condiciones del mar lo permiten.",
           "distance_from_prev_km": 1.2,
           "icon": "cave",
@@ -10746,8 +10783,8 @@
           "name": "Return to Cala Molins",
           "name_es": "Vuelta a Cala Molins",
           "role": "FINISH",
-          "lat": 39.9199,
-          "lng": 3.0574,
+          "lat": 39.919911,
+          "lng": 3.057912,
           "note_es": "Regreso. Esnórquel en aguas turquesas y saltos desde los acantilados del lateral.",
           "distance_from_prev_km": 5.5,
           "icon": "finish",
@@ -10923,7 +10960,70 @@
       "cover_photo": {
         "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc.jpg",
         "source": "MINE"
-      }
+      },
+      "route_polyline_points": [
+        {
+          "lat": 39.9203869,
+          "lng": 3.0577096
+        },
+        {
+          "lat": 39.9239414,
+          "lng": 3.0675373
+        },
+        {
+          "lat": 39.9259453,
+          "lng": 3.0795214
+        },
+        {
+          "lat": 39.9364759,
+          "lng": 3.0930826
+        },
+        {
+          "lat": 39.9358836,
+          "lng": 3.1034681
+        },
+        {
+          "lat": 39.9297629,
+          "lng": 3.1008074
+        },
+        {
+          "lat": 39.928644,
+          "lng": 3.0966875
+        }
+      ],
+      "gallery": [
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-2.jpg"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-3.jpg"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-4.jpg"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-5.jpg"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-6.jpg"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-7.jpg"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-8.jpg"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-9.jpg"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-10.jpg"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-11.jpg"
+        }
+      ],
+      "cover": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc.jpg"
     }
   ],
   "events": [
@@ -11958,5 +12058,5 @@
       "valid_until": "2026-09-30"
     }
   ],
-  "CURRENT_SEED_VERSION": 135
+  "CURRENT_SEED_VERSION": 185
 }

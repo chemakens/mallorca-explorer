@@ -18,6 +18,7 @@ data class Itinerary(
     val qrEntryPoint: QrEntryPoint? = null,
     val commercialBlock: CommercialBlock? = null,
     val routeWaypoints: List<RouteWaypoint> = emptyList(),
+    val routePolylinePoints: List<LatLng> = emptyList(),
 ) {
     val isQrLanding: Boolean get() = qrEntryPoint != null
     val isSUPRoute: Boolean get() = weatherConfig != null

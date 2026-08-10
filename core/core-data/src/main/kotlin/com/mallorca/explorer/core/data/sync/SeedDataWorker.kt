@@ -97,7 +97,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 164
+        const val CURRENT_SEED_VERSION = 185
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -234,6 +234,11 @@ class SeedDataWorker @AssistedInject constructor(
         val condition_note: String = "", val condition_note_es: String = "", val condition_note_de: String = "",
     )
 
+    @Serializable data class SeedPolylinePoint(
+        val lat: Double = 0.0,
+        val lng: Double = 0.0,
+    )
+
     @Serializable data class SeedItinerary(
         val id: String, val title: String, val description: String = "",
         val category: String, val duration_days: Int = 1,
@@ -248,6 +253,7 @@ class SeedDataWorker @AssistedInject constructor(
         val qr_entry_point: SeedQrEntryPoint? = null,
         val commercial_block: SeedCommercialBlock? = null,
         val route_waypoints: List<SeedRouteWaypoint> = emptyList(),
+        val route_polyline_points: List<SeedPolylinePoint> = emptyList(),
         val gallery_photos: List<SeedPhotoUrl> = emptyList(),
     ) {
         fun toEntity(): ItineraryEntity {
@@ -268,6 +274,7 @@ class SeedDataWorker @AssistedInject constructor(
                 qrEntryPointJson = qr_entry_point?.let { j.encodeToString(SeedQrEntryPoint.serializer(), it) },
                 commercialBlockJson = commercial_block?.let { j.encodeToString(SeedCommercialBlock.serializer(), it) },
                 routeWaypointsJson = j.encodeToString(ListSerializer(SeedRouteWaypoint.serializer()), route_waypoints),
+                routePolylinePointsJson = j.encodeToString(ListSerializer(SeedPolylinePoint.serializer()), route_polyline_points),
                 galleryPhotosJson = j.encodeToString(ListSerializer(SeedPhotoUrl.serializer()), gallery_photos),
             )
         }
