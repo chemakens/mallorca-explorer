@@ -7915,31 +7915,7 @@
         "fiestas",
         "village"
       ],
-      "website_url": "https://thecalendarmallorca.com/es/"
-    },
-    {
-      "id": "event-fira-pobla-coenta-2026",
-      "type": "event",
-      "name": "Fira Sa Pobla Coenta (Spicy Food Festival)",
-      "name_es": "Fira Sa Pobla Coenta (Festival Gastronómico Picante)",
-      "name_de": "Fira Sa Pobla Coenta (Scharfes Gastronomie-Fest)",
-      "description": "Sa Pobla's unique spicy food festival celebrating Mallorca's red pepper harvest. Features a spicy food competition, gastronomy stalls, live music and local products.",
-      "description_es": "El singular festival gastronómico picante de Sa Pobla que celebra la cosecha del pimiento rojo mallorquín. Incluye concurso de comida picante, puestos gastronómicos, música en vivo y productos locales.",
-      "description_de": "Sa Poblas einzigartiges scharfes Gastronomie-Festival, das die mallorquinische Paprikaernte feiert. Mit Scharf-Kochwettbewerb, Gastronomiestände, Live-Musik und lokalen Produkten.",
-      "location": "Sa Pobla, Mallorca",
-      "location_es": "Sa Pobla, Mallorca",
-      "start_date_epoch": 1789171200000,
-      "end_date_epoch": 1789171200000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "gastronomy",
-        "food",
-        "local"
-      ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://thecalendarmallorca.com/es/events/festes-de-sant-bartomeu-valldemossa/"
     },
     {
       "id": "event-es-vermar-binissalem-2026",
@@ -7952,8 +7928,8 @@
       "description_de": "Mallorcas geliebtes Weinlesefestival im Herzen des Weinanbaugebiets der Insel. Genießen Sie Weinverkostungen, traditionelles Traubentreten, Live-Musik, lokale Essensstände und eine lebhafte Dorfatmosphäre.",
       "location": "Binissalem, Mallorca",
       "location_es": "Binissalem, Mallorca",
-      "start_date_epoch": 1789776000000,
-      "end_date_epoch": 1789862400000,
+      "start_date_epoch": 1788566400000,
+      "end_date_epoch": 1790640000000,
       "is_recurring": false,
       "category": "FESTIVAL",
       "price_tier": "FREE",
@@ -7964,7 +7940,7 @@
         "traditional",
         "gastronomy"
       ],
-      "website_url": "https://www.mallorcacarhirecompany.com/mallorca-events-2026/"
+      "website_url": "https://bravobaleares.com/lx-festa-des-vermar/"
     },
     {
       "id": "event-feria-sant-miquel-felanitx-2026",
@@ -8012,7 +7988,7 @@
         "festival",
         "talks"
       ],
-      "website_url": "https://thecalendarmallorca.com/es/"
+      "website_url": "https://flemfestival.com/en/"
     },
     {
       "id": "event-feria-alcudia-2026",
@@ -8037,7 +8013,7 @@
         "traditional",
         "roman"
       ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://bravobaleares.com/en/fair-holiday-in-alcudia/"
     },
     {
       "id": "event-novena-beethoven-palma-2026",
@@ -8061,7 +8037,7 @@
         "beethoven",
         "orchestra"
       ],
-      "website_url": "https://thecalendarmallorca.com/es/"
+      "website_url": "https://www.auditoriumpalma.com"
     },
     {
       "id": "event-fira-botifarro-sant-joan-2026",
@@ -8085,7 +8061,7 @@
         "traditional",
         "local"
       ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://www.seemallorca.com/events/festa-d-es-botifarro-sausage-festival-sant-joan-711651"
     },
     {
       "id": "event-fira-dolca-esporles-2026",
@@ -8110,7 +8086,7 @@
         "pastry",
         "local"
       ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://bravobaleares.com/en/fira-dolca-2/"
     },
     {
       "id": "event-feria-llampuga-capdepera-2026",
@@ -8121,10 +8097,10 @@
       "description": "Capdepera's gastronomic festival celebrating the llampuga (mahi-mahi), the iconic Mediterranean fish of autumn. Sample traditional recipes, fresh seafood and local products in the northeast's most scenic town.",
       "description_es": "El festival gastronómico de Capdepera que celebra la llampuga, el icónico pescado mediterráneo del otoño. Degusta recetas tradicionales, marisco fresco y productos locales en el pueblo más pintoresco del noreste.",
       "description_de": "Capdeperas gastronomisches Festival zu Ehren der Lampuke, dem ikonischen mediterranen Herbstfisch. Probieren Sie traditionelle Rezepte, frische Meeresfrüchte und lokale Produkte.",
-      "location": "Capdepera, Mallorca",
-      "location_es": "Capdepera, Mallorca",
+      "location": "Cala Ratjada, Capdepera, Mallorca",
+      "location_es": "Cala Ratjada, Capdepera, Mallorca",
       "start_date_epoch": 1791590400000,
-      "end_date_epoch": 1791590400000,
+      "end_date_epoch": 1791763200000,
       "is_recurring": false,
       "category": "FESTIVAL",
       "price_tier": "FREE",
@@ -8135,7 +8111,7 @@
         "seafood",
         "local"
       ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://visitcapdepera.com/mostra-de-la-llampuga-2/"
     },
     {
       "id": "event-feria-serra-tramuntana-2026",
@@ -8160,7 +8136,7 @@
         "traditional",
         "crafts"
       ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://mallorcactiva.cat/es/evento/xxvi-feria-de-la-serra-de-tramuntana-escorca/"
     },
     {
       "id": "event-feria-oliva-caimari-2026",
@@ -8185,7 +8161,7 @@
         "tramuntana",
         "local"
       ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://www.illesbalears.travel/en/mallorca/events-fira-de-loliva-de-caimari"
     },
     {
       "id": "event-feria-miel-llubi-2026",
@@ -8210,7 +8186,7 @@
         "local",
         "gastronomy"
       ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://km0plademallorca.com/recurso/feria-de-la-miel/"
     },
     {
       "id": "event-feria-sant-tomas-sineu-2026",
@@ -8236,7 +8212,7 @@
         "local",
         "culture"
       ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://bravobaleares.com/en/matanza-and-saint-thomas-day/"
     }
   ],
   "itineraries": [
@@ -12468,5 +12444,5 @@
       "valid_until": "2026-09-30"
     }
   ],
-  "CURRENT_SEED_VERSION": 186
+  "CURRENT_SEED_VERSION": 187
 }
