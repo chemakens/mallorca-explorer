@@ -10963,32 +10963,32 @@
       },
       "route_polyline_points": [
         {
-          "lat": 39.9203869,
-          "lng": 3.0577096
+          "lat": 39.9201528,
+          "lng": 3.0595975
         },
         {
-          "lat": 39.9239414,
-          "lng": 3.0675373
+          "lat": 39.9242997,
+          "lng": 3.067408
         },
         {
           "lat": 39.9259453,
           "lng": 3.0795214
         },
         {
-          "lat": 39.9364759,
-          "lng": 3.0930826
+          "lat": 39.9366733,
+          "lng": 3.0943589
         },
         {
-          "lat": 39.9358836,
-          "lng": 3.1034681
+          "lat": 39.9354558,
+          "lng": 3.1034569
         },
         {
-          "lat": 39.9297629,
-          "lng": 3.1008074
+          "lat": 39.9285123,
+          "lng": 3.0995516
         },
         {
-          "lat": 39.928644,
-          "lng": 3.0966875
+          "lat": 39.9290388,
+          "lng": 3.0946593
         }
       ],
       "gallery": [
@@ -11023,7 +11023,72 @@
           "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-11.jpg"
         }
       ],
-      "cover": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc.jpg"
+      "cover": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc.jpg",
+      "waypoints": [
+        {
+          "order": 1,
+          "name": "Cala Molins",
+          "name_es": "Cala Molins",
+          "description": "Inicio de la ruta",
+          "lat": 39.9201528,
+          "lng": 3.0595975
+        },
+        {
+          "order": 2,
+          "name": "Punta Negra",
+          "name_es": "Punta Negra",
+          "description": "Punta negra",
+          "lat": 39.9239414,
+          "lng": 3.0675373
+        },
+        {
+          "order": 3,
+          "name": "Cavall Bernat",
+          "name_es": "Cavall Bernat & Coves Blanques",
+          "description": "Cavall Bernat & White caves",
+          "lat": 39.9259453,
+          "lng": 3.0795214
+        },
+        {
+          "order": 4,
+          "name": "Cueva Azul",
+          "name_es": "Cueva Azul",
+          "description": "Cueva azul",
+          "lat": 39.9285123,
+          "lng": 3.0995516
+        },
+        {
+          "order": 5,
+          "name": "Cala Bóquer",
+          "name_es": "Cala Bóquer",
+          "description": "Destino final",
+          "lat": 39.9290388,
+          "lng": 3.0946593
+        }
+      ],
+      "title_en": "Cavall Bernat Cliffs & Blue Cave SUP Route",
+      "title_de": "SUP-Route Cavall Bernat & Blaue Höhle",
+      "description_es": "La ruta de SUP más espectacular de la costa norte de Mallorca. Desde Cala Molins, rema hacia el norte pasando por Cala Carbó, rodea el oscuro promontorio de Punta Negra y sigue los imponentes acantilados de caliza blanca de Cavall Bernat hasta llegar a la Cueva Azul, una cueva marina que brilla en turquesa desde dentro. Regresa por el canal abierto con parada para hacer snorkel y saltos desde los acantilados en Cala Molins. 11 km · 3,5–4 h en el agua.",
+      "description_en": "The most spectacular SUP circuit on the Mallorcan north coast. From Cala Molins, paddle north past Cala Carbó, round the dark headland of Punta Negra and hug the towering white limestone cliffs of Cavall Bernat until you reach the Cueva Azul — a sea cave that glows turquoise from within. Return via the open channel with a stop for snorkel and cliff jumps at Cala Molins. 11 km · 3.5–4 h on the water.",
+      "description_de": "Die spektakulärste SUP-Rundfahrt an der Nordküste Mallorcas. Von Cala Molins aus paddeln Sie nordwärts an Cala Carbó vorbei, umrunden das dunkle Vorgebirge der Punta Negra und folgen den imposanten weißen Kalksteinfelsen von Cavall Bernat bis zur Cueva Azul – eine Meereshöhle, die von innen türkis leuchtet. Rückweg über den offenen Kanal mit Schnorcheln und Klippenspringen bei Cala Molins. 11 km · 3,5–4 Std. auf dem Wasser.",
+      "highlights_es": [
+        "Cueva Azul: cueva marina de 40m accesible solo en SUP",
+        "Acantilados de Cavall Bernat — solo visibles desde el mar",
+        "Coves Blanques: cuevas de caliza blanca a nivel del mar",
+        "Snorkel y saltos desde los acantilados en Cala Molins"
+      ],
+      "highlights_en": [
+        "Cueva Azul: 40m sea cave accessible only by SUP",
+        "Cliffs of Cavall Bernat — only visible from the sea",
+        "Coves Blanques: white limestone caves at sea level",
+        "Snorkel and cliff jumping return at Cala Molins"
+      ],
+      "highlights_de": [
+        "Cueva Azul: 40m Meereshöhle, nur per SUP erreichbar",
+        "Klippen von Cavall Bernat — nur vom Meer aus sichtbar",
+        "Coves Blanques: weiße Kalksteinhöhlen auf Meereshöhe",
+        "Schnorcheln und Klippenspringen bei der Rückkehr nach Cala Molins"
+      ]
     }
   ],
   "events": [
