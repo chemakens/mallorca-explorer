@@ -7892,327 +7892,6 @@
       "heroFocalY": 0.7,
       "lat": 39.9290388,
       "lon": 3.0946593
-    },
-    {
-      "id": "event-sant-bartomeu-valldemossa-2026",
-      "type": "event",
-      "name": "Sant Bartomeu Fiestas (Valldemossa)",
-      "name_es": "Fiestas de Sant Bartomeu (Valldemossa)",
-      "name_de": "Sant Bartomeu Feste (Valldemossa)",
-      "description": "One of Mallorca's most charming summer fiestas in the picturesque mountain village of Valldemossa. Music, dancing, traditional costumes and street celebrations fill the historic village centre.",
-      "description_es": "Una de las fiestas de verano más encantadoras de Mallorca en el pintoresco pueblo de montaña de Valldemossa. Música, baile, trajes tradicionales y celebraciones en las calles del centro histórico.",
-      "description_de": "Eines der charmantesten Sommerfeste Mallorcas im malerischen Bergdorf Valldemossa. Musik, Tanz, traditionelle Trachten und Straßenfeiern füllen das historische Dorfzentrum.",
-      "location": "Valldemossa, Mallorca",
-      "location_es": "Valldemossa, Mallorca",
-      "start_date_epoch": 1787097600000,
-      "end_date_epoch": 1787529600000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "traditional",
-        "fiestas",
-        "village"
-      ],
-      "website_url": "https://thecalendarmallorca.com/es/events/festes-de-sant-bartomeu-valldemossa/"
-    },
-    {
-      "id": "event-es-vermar-binissalem-2026",
-      "type": "event",
-      "name": "Es Vermar - Wine Harvest Festival (Binissalem)",
-      "name_es": "Es Vermar - Festival de la Vendimia (Binissalem)",
-      "name_de": "Es Vermar - Weinernte-Festival (Binissalem)",
-      "description": "Mallorca's beloved grape harvest festival in the heart of the island's wine country. Enjoy wine tastings, traditional grape-treading, live music, local food stalls and a vibrant village atmosphere.",
-      "description_es": "El querido festival de la vendimia de Mallorca en el corazón de la zona vinícola de la isla. Disfruta de catas de vino, pisado tradicional de uvas, música en vivo, puestos de comida local y un animado ambiente de pueblo.",
-      "description_de": "Mallorcas geliebtes Weinlesefestival im Herzen des Weinanbaugebiets der Insel. Genießen Sie Weinverkostungen, traditionelles Traubentreten, Live-Musik, lokale Essensstände und eine lebhafte Dorfatmosphäre.",
-      "location": "Binissalem, Mallorca",
-      "location_es": "Binissalem, Mallorca",
-      "start_date_epoch": 1788566400000,
-      "end_date_epoch": 1790640000000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "wine",
-        "harvest",
-        "traditional",
-        "gastronomy"
-      ],
-      "website_url": "https://bravobaleares.com/lx-festa-des-vermar/"
-    },
-    {
-      "id": "event-feria-sant-miquel-felanitx-2026",
-      "type": "event",
-      "name": "Feria de Sant Miquel (Felanitx)",
-      "name_es": "Feria de Sant Miquel (Felanitx)",
-      "name_de": "Feria de Sant Miquel (Felanitx)",
-      "description": "Felanitx's traditional Sant Miquel fair combining agricultural, industrial, craft and commercial exhibits. One of the town's most important annual fairs marking the end of summer.",
-      "description_es": "La tradicional feria de Sant Miquel de Felanitx que combina expositores agrícolas, industriales, artesanales y comerciales. Una de las ferias anuales más importantes del municipio al cierre del verano.",
-      "description_de": "Felanitxs traditionelle Sant-Miquel-Messe mit landwirtschaftlichen, industriellen, handwerklichen und kommerziellen Ausstellern. Eine der wichtigsten Jahrmärkte der Stadt zum Sommerausklang.",
-      "location": "Felanitx, Mallorca",
-      "location_es": "Felanitx, Mallorca",
-      "start_date_epoch": 1790467200000,
-      "end_date_epoch": 1790467200000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "traditional",
-        "fair",
-        "local"
-      ],
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
-    },
-    {
-      "id": "event-flem-2026-magaluf",
-      "type": "event",
-      "name": "FLEM 2026 - Literary Festival (Magaluf)",
-      "name_es": "FLEM 2026 - Festival Literario (Magaluf)",
-      "name_de": "FLEM 2026 - Literaturfestival (Magaluf)",
-      "description": "One of Spain's most singular literary encounters, held in Magaluf. FLEM brings together authors, readers and creative voices for talks, readings and cultural events.",
-      "description_es": "Uno de los encuentros literarios más singulares de España, celebrado en Magaluf. FLEM reúne a autores, lectores y voces creativas para charlas, lecturas y eventos culturales.",
-      "description_de": "Eines der einzigartigsten Literaturtreffen Spaniens, abgehalten in Magaluf. FLEM bringt Autoren, Leser und kreative Stimmen für Vorträge, Lesungen und Kulturveranstaltungen zusammen.",
-      "location": "INNSiDE Wave Calvià, Magaluf, Mallorca",
-      "location_es": "INNSiDE Wave Calvià, Magaluf, Mallorca",
-      "start_date_epoch": 1790812800000,
-      "end_date_epoch": 1791072000000,
-      "is_recurring": false,
-      "category": "CULTURE",
-      "price_tier": "BUDGET",
-      "tags": [
-        "literature",
-        "culture",
-        "festival",
-        "talks"
-      ],
-      "website_url": "https://flemfestival.com/en/"
-    },
-    {
-      "id": "event-feria-alcudia-2026",
-      "type": "event",
-      "name": "Feria de Alcúdia",
-      "name_es": "Feria de Alcúdia",
-      "name_de": "Messe von Alcúdia",
-      "description": "Alcúdia's major autumn fair featuring crafts, livestock, food stalls, live music, a Roman market, shows and workshops. One of the most complete fairs on the island, held in and around the historic walled town.",
-      "description_es": "La importante feria otoñal de Alcúdia con artesanía, ganado, puestos de comida, música en vivo, mercado romano, espectáculos y talleres. Una de las ferias más completas de la isla, celebrada en la histórica ciudad amurallada.",
-      "description_de": "Alcúdias große Herbstmesse mit Handwerk, Vieh, Essensständen, Live-Musik, einem Römermarkt, Shows und Workshops. Eine der vollständigsten Messen der Insel, abgehalten in und um die historische Stadtmauer.",
-      "location": "Alcúdia, Mallorca",
-      "location_es": "Alcúdia, Mallorca",
-      "start_date_epoch": 1790899200000,
-      "end_date_epoch": 1791072000000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "fair",
-        "crafts",
-        "traditional",
-        "roman"
-      ],
-      "website_url": "https://bravobaleares.com/en/fair-holiday-in-alcudia/"
-    },
-    {
-      "id": "event-novena-beethoven-palma-2026",
-      "type": "event",
-      "name": "Beethoven's 9th Symphony - Auditorium Palma",
-      "name_es": "La Novena Sinfonía de Beethoven - Auditorium de Palma",
-      "name_de": "Beethovens 9. Sinfonie - Auditorium Palma",
-      "description": "A celebration of one of the most powerful musical works ever written. Beethoven's Ninth Symphony performed live at the iconic Auditorium de Palma — an unmissable classical music experience.",
-      "description_es": "Una celebración de una de las obras musicales más poderosas jamás escritas. La Novena Sinfonía de Beethoven interpretada en vivo en el icónico Auditorium de Palma: una experiencia de música clásica imperdible.",
-      "description_de": "Eine Feier eines der mächtigsten Musikwerke, das je geschrieben wurde. Beethovens Neunte Sinfonie live im ikonischen Auditorium de Palma — ein unvergessliches Klassikkonzert.",
-      "location": "Auditorium de Palma, Palma",
-      "location_es": "Auditorium de Palma, Palma",
-      "start_date_epoch": 1790985600000,
-      "end_date_epoch": 1790985600000,
-      "is_recurring": false,
-      "category": "CONCERT",
-      "price_tier": "MID",
-      "tags": [
-        "concert",
-        "classical",
-        "beethoven",
-        "orchestra"
-      ],
-      "website_url": "https://www.auditoriumpalma.com"
-    },
-    {
-      "id": "event-fira-botifarro-sant-joan-2026",
-      "type": "event",
-      "name": "Festa del Botifarró (Sant Joan)",
-      "name_es": "Fiesta del Botifarró (Sant Joan)",
-      "name_de": "Festa del Botifarró (Sant Joan)",
-      "description": "Sant Joan's beloved sausage festival celebrating the traditional Mallorcan botifarró. A gastronomic and popular culture event with food tastings, local products and live entertainment.",
-      "description_es": "El querido festival del botifarró de Sant Joan que celebra la tradicional salchicha mallorquina. Un evento gastronómico y de cultura popular con degustaciones, productos locales y entretenimiento en vivo.",
-      "description_de": "Sant Joans geliebtes Wurstfestival, das die traditionelle mallorquinische Botifarró feiert. Eine gastronomische Volkskulturveranstaltung mit Kostproben, lokalen Produkten und Live-Unterhaltung.",
-      "location": "Sant Joan, Mallorca",
-      "location_es": "Sant Joan, Mallorca",
-      "start_date_epoch": 1790985600000,
-      "end_date_epoch": 1791072000000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "gastronomy",
-        "traditional",
-        "local"
-      ],
-      "website_url": "https://www.seemallorca.com/events/festa-d-es-botifarro-sausage-festival-sant-joan-711651"
-    },
-    {
-      "id": "event-fira-dolca-esporles-2026",
-      "type": "event",
-      "name": "Fira Dolça - Sweet Pastry Fair (Esporles)",
-      "name_es": "Fira Dolça - Muestra de Repostería (Esporles)",
-      "name_de": "Fira Dolça - Süßgebäckmesse (Esporles)",
-      "description": "Esporles' charming sweet pastry fair showcasing traditional Mallorcan confectionery, cakes and desserts alongside local artisan products.",
-      "description_es": "La encantadora muestra de repostería de Esporles que exhibe la confitería, pasteles y postres tradicionales mallorquines junto con productos artesanales locales.",
-      "description_de": "Esporles' charmante Süßgebäckmesse präsentiert traditionelle mallorquinische Süßwaren, Kuchen und Desserts neben lokalen Handwerksprodukten.",
-      "location": "Esporles, Mallorca",
-      "location_es": "Esporles, Mallorca",
-      "start_date_epoch": 1791072000000,
-      "end_date_epoch": 1791072000000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "gastronomy",
-        "sweets",
-        "pastry",
-        "local"
-      ],
-      "website_url": "https://bravobaleares.com/en/fira-dolca-2/"
-    },
-    {
-      "id": "event-feria-llampuga-capdepera-2026",
-      "type": "event",
-      "name": "Feria de la Llampuga (Capdepera)",
-      "name_es": "Feria de la Llampuga (Capdepera)",
-      "name_de": "Lampuki-Fest (Capdepera)",
-      "description": "Capdepera's gastronomic festival celebrating the llampuga (mahi-mahi), the iconic Mediterranean fish of autumn. Sample traditional recipes, fresh seafood and local products in the northeast's most scenic town.",
-      "description_es": "El festival gastronómico de Capdepera que celebra la llampuga, el icónico pescado mediterráneo del otoño. Degusta recetas tradicionales, marisco fresco y productos locales en el pueblo más pintoresco del noreste.",
-      "description_de": "Capdeperas gastronomisches Festival zu Ehren der Lampuke, dem ikonischen mediterranen Herbstfisch. Probieren Sie traditionelle Rezepte, frische Meeresfrüchte und lokale Produkte.",
-      "location": "Cala Ratjada, Capdepera, Mallorca",
-      "location_es": "Cala Ratjada, Capdepera, Mallorca",
-      "start_date_epoch": 1791590400000,
-      "end_date_epoch": 1791763200000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "gastronomy",
-        "fish",
-        "seafood",
-        "local"
-      ],
-      "website_url": "https://visitcapdepera.com/mostra-de-la-llampuga-2/"
-    },
-    {
-      "id": "event-feria-serra-tramuntana-2026",
-      "type": "event",
-      "name": "Feria de la Serra de Tramuntana (Escorca)",
-      "name_es": "Feria de la Serra de Tramuntana (Escorca)",
-      "name_de": "Messe der Serra de Tramuntana (Escorca)",
-      "description": "A unique fair deep in the UNESCO-listed Tramuntana mountains at Escorca, celebrating the heritage, agriculture and crafts of the mountain communities.",
-      "description_es": "Una feria única en el corazón de las montañas de la Tramuntana (Patrimonio UNESCO) en Escorca, que celebra el patrimonio, la agricultura y la artesanía de las comunidades de montaña.",
-      "description_de": "Eine einzigartige Messe tief in den UNESCO-geschützten Tramuntana-Bergen bei Escorca, die das Erbe, die Landwirtschaft und das Handwerk der Berggemeinschaften feiert.",
-      "location": "Escorca, Serra de Tramuntana, Mallorca",
-      "location_es": "Escorca, Serra de Tramuntana, Mallorca",
-      "start_date_epoch": 1791590400000,
-      "end_date_epoch": 1791676800000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "tramuntana",
-        "mountains",
-        "traditional",
-        "crafts"
-      ],
-      "website_url": "https://mallorcactiva.cat/es/evento/xxvi-feria-de-la-serra-de-tramuntana-escorca/"
-    },
-    {
-      "id": "event-feria-oliva-caimari-2026",
-      "type": "event",
-      "name": "Feria de la Oliva (Caimari)",
-      "name_es": "Feria de la Oliva (Caimari)",
-      "name_de": "Olivenmesse (Caimari)",
-      "description": "Caimari's celebrated olive oil fair in the Tramuntana foothills. One of the most authentically local events on the island, showcasing premium Mallorcan olive oils, olives and Mediterranean diet products alongside artisan crafts.",
-      "description_es": "La celebrada feria del aceite de oliva de Caimari en las estribaciones de la Tramuntana. Uno de los eventos más auténticamente locales de la isla, con aceites de oliva mallorquines de primera calidad, aceitunas y artesanía.",
-      "description_de": "Caimarís berühmte Olivenölmesse am Fuß der Tramuntana mit erstklassigen mallorquinischen Olivenölen, Oliven, mediterranen Diätprodukten und Kunsthandwerk.",
-      "location": "Caimari, Selva, Mallorca",
-      "location_es": "Caimari, Selva, Mallorca",
-      "start_date_epoch": 1795219200000,
-      "end_date_epoch": 1795305600000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "olive oil",
-        "gastronomy",
-        "tramuntana",
-        "local"
-      ],
-      "website_url": "https://www.illesbalears.travel/en/mallorca/events-fira-de-loliva-de-caimari"
-    },
-    {
-      "id": "event-feria-miel-llubi-2026",
-      "type": "event",
-      "name": "Feria de la Miel (Llubí)",
-      "name_es": "Feria de la Miel (Llubí)",
-      "name_de": "Honigmesse (Llubí)",
-      "description": "Llubí's honey fair celebrating the town's long beekeeping tradition. Browse honey products, local crafts and meet the beekeeping community. A sweet and genuine Mallorcan autumn experience.",
-      "description_es": "La feria de la miel de Llubí que celebra la larga tradición apícola del pueblo. Explora productos de miel, artesanía local y conoce a la comunidad apicultora.",
-      "description_de": "Llubís Honigmesse, die die lange Imkerei-Tradition des Ortes feiert. Stöbern Sie in Honigprodukten und lokalem Kunsthandwerk und lernen Sie die Imkergemeinschaft kennen.",
-      "location": "Llubí, Mallorca",
-      "location_es": "Llubí, Mallorca",
-      "start_date_epoch": 1795305600000,
-      "end_date_epoch": 1795305600000,
-      "is_recurring": false,
-      "category": "FESTIVAL",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "honey",
-        "bees",
-        "local",
-        "gastronomy"
-      ],
-      "website_url": "https://km0plademallorca.com/recurso/feria-de-la-miel/"
-    },
-    {
-      "id": "event-feria-sant-tomas-sineu-2026",
-      "type": "event",
-      "name": "Feria de Sant Tomàs - Matança (Sineu)",
-      "name_es": "Feria de Sant Tomàs - Matança (Sineu)",
-      "name_de": "Feria de Sant Tomàs - Matança (Sineu)",
-      "description": "Sineu's traditional Feria de Sant Tomàs centred on the ancient Mallorcan matança (pig slaughter) tradition. Witness food preservation rituals, taste traditional sobrasada, black pudding and pork products, and discover authentic rural Mallorcan culture.",
-      "description_es": "La tradicional Feria de Sant Tomàs de Sineu centrada en la antigua tradición mallorquina de la matança (matanza del cerdo). Presencia rituales de conservación de alimentos, degusta sobrasada tradicional y descubre la auténtica cultura rural mallorquina.",
-      "description_de": "Sineus traditionelle Feria de Sant Tomàs rund um die uralte mallorquinische Matança-Tradition. Erleben Sie Lebensmittelkonservierungsrituale, probieren Sie traditionelle Sobrasada und entdecken Sie authentische ländliche Kultur.",
-      "location": "Sineu, Mallorca",
-      "location_es": "Sineu, Mallorca",
-      "start_date_epoch": 1797120000000,
-      "end_date_epoch": 1797120000000,
-      "is_recurring": false,
-      "category": "CULTURE",
-      "price_tier": "FREE",
-      "tags": [
-        "festival",
-        "traditional",
-        "matança",
-        "sobrasada",
-        "local",
-        "culture"
-      ],
-      "website_url": "https://bravobaleares.com/en/matanza-and-saint-thomas-day/"
     }
   ],
   "itineraries": [
@@ -11427,7 +11106,9 @@
       "is_free": false,
       "price": "Desde 20€",
       "is_recurring": false,
-      "website_url": "https://festivalpollenca.com"
+      "website_url": "https://festivalpollenca.com",
+      "title_de": "Mallorca Jazzfestival",
+      "description_de": "Open-Air-Jazzkonzerte im Juli im historischen Zentrum von Palma — internationale Künstler in unschlagbarer Kulisse."
     },
     {
       "id": "event-mercat-olivar",
@@ -11441,7 +11122,9 @@
       "address": "Plaça de l'Olivar, Palma",
       "is_free": true,
       "is_recurring": true,
-      "recurring_day_of_week": 0
+      "recurring_day_of_week": 0,
+      "title_de": "Mercat de l'Olivar",
+      "description_de": "Palmas größter überdachter Markt — frisches Obst und Gemüse, Fisch, Fleisch und lokale Spezialitäten. Montag bis Samstag geöffnet."
     },
     {
       "id": "event-dimecres-inca",
@@ -11455,7 +11138,9 @@
       "address": "Centre d'Inca",
       "is_free": true,
       "is_recurring": true,
-      "recurring_day_of_week": 3
+      "recurring_day_of_week": 3,
+      "title_de": "Markt von Inca — Mittwoch",
+      "description_de": "Mallorcas größter Wochenmarkt jeden Mittwoch in Inca — Lederwaren, Kleidung, lokale Lebensmittel und Antiquitäten."
     },
     {
       "id": "event-nit-art-2026",
@@ -11467,7 +11152,9 @@
       "start_date": "2026-09-19",
       "municipality": "Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "title_de": "Nacht der Kunst Palma",
+      "description_de": "Eine Nacht im September, in der Palmas Galerien, Museen und Ateliers bis Mitternacht kostenlos ihre Türen öffnen."
     },
     {
       "id": "event-fira-sineu",
@@ -11480,7 +11167,9 @@
       "municipality": "Sineu",
       "is_free": true,
       "is_recurring": true,
-      "recurring_day_of_week": 3
+      "recurring_day_of_week": 3,
+      "title_de": "Markt von Sineu — Mittwoch",
+      "description_de": "Der authentischste mittelalterliche Markt Mallorcas, jeden Mittwoch im Bergdorf Sineu."
     },
     {
       "id": "event-regata-palma-2026",
@@ -11495,7 +11184,9 @@
       "address": "Real Club Náutico, Palma",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://realgcnautico.com"
+      "website_url": "https://realgcnautico.com",
+      "title_de": "Copa del Rey de Vela",
+      "description_de": "Das renommierteste Segelrennen des Mittelmeers in der Bucht von Palma im August mit über 100 Booten aus aller Welt."
     },
     {
       "id": "event-pollenca-classics-2026",
@@ -11512,7 +11203,9 @@
       "price": "25–60€",
       "image_url": null,
       "is_recurring": false,
-      "website_url": "https://festivalpollenca.com"
+      "website_url": "https://festivalpollenca.com",
+      "title_de": "Internationales Musikfestival Pollença",
+      "description_de": "Eines der bedeutendsten klassischen Musikfestivals Europas im römischen Kreuzgang von Sant Domingo."
     },
     {
       "id": "event-sant-bartomeu-soller-2026",
@@ -11526,7 +11219,9 @@
       "address": "Plaça de la Constitució, Sóller",
       "is_free": true,
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "title_de": "Festa de Sant Bartomeu – Sóller",
+      "description_de": "Sóllers größtes Fest mit der Nachstellung der historischen Seeschlacht zwischen Christen und Mauren."
     },
     {
       "id": "event-vermar-binissalem-2026",
@@ -11535,13 +11230,16 @@
       "description": "Wine harvest festival with grape stomping, tastings and live music.",
       "description_es": "Festival de la vendimia con pisado de uva, catas y música en directo.",
       "category": "FESTIVAL",
-      "start_date": "2026-09-25",
+      "start_date": "2026-09-05",
       "end_date": "2026-09-27",
       "municipality": "Binissalem",
       "address": "Plaça de l'Església, Binissalem",
       "is_free": true,
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://bravobaleares.com/lx-festa-des-vermar/",
+      "title_de": "Festa des Vermar – Binissalem",
+      "description_de": "Weinernte-Festival mit Traubentreten, Weinverkostungen und Live-Musik."
     },
     {
       "id": "event-electrobeach-2026",
@@ -11558,7 +11256,9 @@
       "price": "35€/día",
       "image_url": null,
       "is_recurring": false,
-      "website_url": "https://electrobeachfestival.es"
+      "website_url": "https://electrobeachfestival.es",
+      "title_de": "Electrobeach Festival",
+      "description_de": "Open-Air-Festival für elektronische Musik am Strand mit internationalen DJs."
     },
     {
       "id": "event-cine-fresca-palma-2026",
@@ -11574,7 +11274,9 @@
       "is_free": true,
       "image_url": null,
       "is_recurring": true,
-      "recurring_day_of_week": 5
+      "recurring_day_of_week": 5,
+      "title_de": "Cine a la Fresca – Palma",
+      "description_de": "Open-Air-Kino unter dem Sternenhimmel in Palmas Parks jeden Freitag im Sommer."
     },
     {
       "id": "event-mallorca-walking-2026",
@@ -11591,7 +11293,9 @@
       "price": "15–40€ por ruta",
       "image_url": null,
       "is_recurring": false,
-      "website_url": "https://mallorcawalkingfestival.com"
+      "website_url": "https://mallorcawalkingfestival.com",
+      "title_de": "Mallorca Walking Festival",
+      "description_de": "Einwöchiges geführtes Wanderfestival durch die Tramuntana-Berge."
     },
     {
       "id": "event-fira-tardor-inca-2026",
@@ -11605,7 +11309,9 @@
       "address": "Centre d'Inca",
       "is_free": true,
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "title_de": "Herbstmesse Inca",
+      "description_de": "Die größte Herbstmesse Mallorcas mit Erzeugnissen, Lederwaren und Kunsthandwerk."
     },
     {
       "id": "event-mercat-santa-maria",
@@ -11620,7 +11326,9 @@
       "is_free": true,
       "image_url": null,
       "is_recurring": true,
-      "recurring_day_of_week": 7
+      "recurring_day_of_week": 7,
+      "title_de": "Mercat Pagès – Santa Maria del Camí",
+      "description_de": "Traditioneller Bauernmarkt jeden Sonntag mit lokalen Produkten, Weinen und Käsesorten."
     },
     {
       "id": "event-jazz-andratx-2026",
@@ -11636,7 +11344,9 @@
       "is_free": false,
       "price": "10–20€",
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "title_de": "Jazz & Más Festival – Andratx",
+      "description_de": "Intimes Jazzfestival mit Sonnenuntergangskonzerten und lokalem Wein."
     },
     {
       "id": "event-mostra-folklor-soller-2026",
@@ -11651,7 +11361,9 @@
       "address": "Plaça de la Constitució, Sóller",
       "is_free": true,
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "title_de": "Internationale Folkloreshow",
+      "description_de": "Internationale Folkloreshow in Sóller mit Tanzgruppen aus aller Welt."
     },
     {
       "id": "event-pedra-musica-felanitx-2026",
@@ -11667,7 +11379,9 @@
       "is_free": false,
       "price": "12€",
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "title_de": "Pedra i Música – Felanitx",
+      "description_de": "Open-Air-Konzerte zwischen den alten Steinmauern des Kastells von Felanitx."
     },
     {
       "id": "event-mercat-llevant-palma",
@@ -11682,7 +11396,9 @@
       "is_free": true,
       "image_url": null,
       "is_recurring": true,
-      "recurring_day_of_week": 6
+      "recurring_day_of_week": 6,
+      "title_de": "Mercat de Llevant – Palma",
+      "description_de": "Samstäglicher Straßenmarkt mit frischen Produkten, Vintage-Waren und Street Food."
     },
     {
       "id": "event-drac-art-manacor-2026",
@@ -11697,7 +11413,9 @@
       "address": "Centre Històric, Manacor",
       "is_free": true,
       "image_url": null,
-      "is_recurring": false
+      "is_recurring": false,
+      "title_de": "Festival Drac Art – Manacor",
+      "description_de": "Festival für zeitgenössische Kunst mit bildender Kunst, Performance, Musik und Gastronomie."
     },
     {
       "id": "event-mobofest-2026",
@@ -12413,6 +12131,317 @@
       "address": "Plaça de Cort, Palma",
       "is_free": true,
       "is_recurring": false
+    },
+    {
+      "id": "event-sant-bartomeu-valldemossa-2026",
+      "title": "Sant Bartomeu Fiestas (Valldemossa)",
+      "title_es": "Fiestas de Sant Bartomeu (Valldemossa)",
+      "title_de": "Sant Bartomeu Feste (Valldemossa)",
+      "description": "One of Mallorca's most charming summer fiestas in the picturesque mountain village of Valldemossa. Music, dancing, traditional costumes and street celebrations fill the historic village centre.",
+      "description_es": "Una de las fiestas de verano más encantadoras de Mallorca en el pintoresco pueblo de montaña de Valldemossa. Música, baile, trajes tradicionales y celebraciones en las calles del centro histórico.",
+      "description_de": "Eines der charmantesten Sommerfeste Mallorcas im malerischen Bergdorf Valldemossa. Musik, Tanz, traditionelle Trachten und Straßenfeiern füllen das historische Dorfzentrum.",
+      "category": "FESTIVAL",
+      "start_date": "2026-08-19",
+      "end_date": "2026-08-24",
+      "municipality": "Valldemossa",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://thecalendarmallorca.com/es/events/festes-de-sant-bartomeu-valldemossa/"
+    },
+    {
+      "id": "event-feria-sant-miquel-felanitx-2026",
+      "title": "Feria de Sant Miquel (Felanitx)",
+      "title_es": "Feria de Sant Miquel (Felanitx)",
+      "title_de": "Feria de Sant Miquel (Felanitx)",
+      "description": "Felanitx's traditional Sant Miquel fair combining agricultural, industrial, craft and commercial exhibits. One of the town's most important annual fairs marking the end of summer.",
+      "description_es": "La tradicional feria de Sant Miquel de Felanitx que combina expositores agrícolas, industriales, artesanales y comerciales. Una de las ferias anuales más importantes del municipio al cierre del verano.",
+      "description_de": "Felanitxs traditionelle Sant-Miquel-Messe mit landwirtschaftlichen, industriellen, handwerklichen und kommerziellen Ausstellern. Eine der wichtigsten Jahrmärkte der Stadt zum Sommerausklang.",
+      "category": "FESTIVAL",
+      "start_date": "2026-09-27",
+      "municipality": "Felanitx",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+    },
+    {
+      "id": "event-flem-2026-magaluf",
+      "title": "FLEM 2026 - Literary Festival (Magaluf)",
+      "title_es": "FLEM 2026 - Festival Literario (Magaluf)",
+      "title_de": "FLEM 2026 - Literaturfestival (Magaluf)",
+      "description": "One of Spain's most singular literary encounters, held in Magaluf. FLEM brings together authors, readers and creative voices for talks, readings and cultural events.",
+      "description_es": "Uno de los encuentros literarios más singulares de España, celebrado en Magaluf. FLEM reúne a autores, lectores y voces creativas para charlas, lecturas y eventos culturales.",
+      "description_de": "Eines der einzigartigsten Literaturtreffen Spaniens, abgehalten in Magaluf. FLEM bringt Autoren, Leser und kreative Stimmen für Vorträge, Lesungen und Kulturveranstaltungen zusammen.",
+      "category": "CULTURE",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-04",
+      "municipality": "INNSiDE Wave Calvià",
+      "is_free": false,
+      "is_recurring": false,
+      "website_url": "https://flemfestival.com/en/"
+    },
+    {
+      "id": "event-novena-beethoven-palma-2026",
+      "title": "Beethoven's 9th Symphony - Auditorium Palma",
+      "title_es": "La Novena Sinfonía de Beethoven - Auditorium de Palma",
+      "title_de": "Beethovens 9. Sinfonie - Auditorium Palma",
+      "description": "A celebration of one of the most powerful musical works ever written. Beethoven's Ninth Symphony performed live at the iconic Auditorium de Palma — an unmissable classical music experience.",
+      "description_es": "Una celebración de una de las obras musicales más poderosas jamás escritas. La Novena Sinfonía de Beethoven interpretada en vivo en el icónico Auditorium de Palma: una experiencia de música clásica imperdible.",
+      "description_de": "Eine Feier eines der mächtigsten Musikwerke, das je geschrieben wurde. Beethovens Neunte Sinfonie live im ikonischen Auditorium de Palma — ein unvergessliches Klassikkonzert.",
+      "category": "CONCERT",
+      "start_date": "2026-10-03",
+      "municipality": "Auditorium de Palma",
+      "is_free": false,
+      "is_recurring": false,
+      "website_url": "https://www.auditoriumpalma.com"
+    },
+    {
+      "id": "event-fira-botifarro-sant-joan-2026",
+      "title": "Festa del Botifarró (Sant Joan)",
+      "title_es": "Fiesta del Botifarró (Sant Joan)",
+      "title_de": "Festa del Botifarró (Sant Joan)",
+      "description": "Sant Joan's beloved sausage festival celebrating the traditional Mallorcan botifarró. A gastronomic and popular culture event with food tastings, local products and live entertainment.",
+      "description_es": "El querido festival del botifarró de Sant Joan que celebra la tradicional salchicha mallorquina. Un evento gastronómico y de cultura popular con degustaciones, productos locales y entretenimiento en vivo.",
+      "description_de": "Sant Joans geliebtes Wurstfestival, das die traditionelle mallorquinische Botifarró feiert. Eine gastronomische Volkskulturveranstaltung mit Kostproben, lokalen Produkten und Live-Unterhaltung.",
+      "category": "FESTIVAL",
+      "start_date": "2026-10-03",
+      "end_date": "2026-10-04",
+      "municipality": "Sant Joan",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://www.seemallorca.com/events/festa-d-es-botifarro-sausage-festival-sant-joan-711651"
+    },
+    {
+      "id": "event-fira-dolca-esporles-2026",
+      "title": "Fira Dolça - Sweet Pastry Fair (Esporles)",
+      "title_es": "Fira Dolça - Muestra de Repostería (Esporles)",
+      "title_de": "Fira Dolça - Süßgebäckmesse (Esporles)",
+      "description": "Esporles' charming sweet pastry fair showcasing traditional Mallorcan confectionery, cakes and desserts alongside local artisan products.",
+      "description_es": "La encantadora muestra de repostería de Esporles que exhibe la confitería, pasteles y postres tradicionales mallorquines junto con productos artesanales locales.",
+      "description_de": "Esporles' charmante Süßgebäckmesse präsentiert traditionelle mallorquinische Süßwaren, Kuchen und Desserts neben lokalen Handwerksprodukten.",
+      "category": "FESTIVAL",
+      "start_date": "2026-10-04",
+      "municipality": "Esporles",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://bravobaleares.com/en/fira-dolca-2/"
+    },
+    {
+      "id": "event-feria-llampuga-capdepera-2026",
+      "title": "Feria de la Llampuga (Capdepera)",
+      "title_es": "Feria de la Llampuga (Capdepera)",
+      "title_de": "Lampuki-Fest (Capdepera)",
+      "description": "Capdepera's gastronomic festival celebrating the llampuga (mahi-mahi), the iconic Mediterranean fish of autumn. Sample traditional recipes, fresh seafood and local products in the northeast's most scenic town.",
+      "description_es": "El festival gastronómico de Capdepera que celebra la llampuga, el icónico pescado mediterráneo del otoño. Degusta recetas tradicionales, marisco fresco y productos locales en el pueblo más pintoresco del noreste.",
+      "description_de": "Capdeperas gastronomisches Festival zu Ehren der Lampuke, dem ikonischen mediterranen Herbstfisch. Probieren Sie traditionelle Rezepte, frische Meeresfrüchte und lokale Produkte.",
+      "category": "FESTIVAL",
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-12",
+      "municipality": "Cala Ratjada",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://visitcapdepera.com/mostra-de-la-llampuga-2/"
+    },
+    {
+      "id": "event-feria-serra-tramuntana-2026",
+      "title": "Feria de la Serra de Tramuntana (Escorca)",
+      "title_es": "Feria de la Serra de Tramuntana (Escorca)",
+      "title_de": "Messe der Serra de Tramuntana (Escorca)",
+      "description": "A unique fair deep in the UNESCO-listed Tramuntana mountains at Escorca, celebrating the heritage, agriculture and crafts of the mountain communities.",
+      "description_es": "Una feria única en el corazón de las montañas de la Tramuntana (Patrimonio UNESCO) en Escorca, que celebra el patrimonio, la agricultura y la artesanía de las comunidades de montaña.",
+      "description_de": "Eine einzigartige Messe tief in den UNESCO-geschützten Tramuntana-Bergen bei Escorca, die das Erbe, die Landwirtschaft und das Handwerk der Berggemeinschaften feiert.",
+      "category": "FESTIVAL",
+      "start_date": "2026-10-10",
+      "end_date": "2026-10-11",
+      "municipality": "Escorca",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://mallorcactiva.cat/es/evento/xxvi-feria-de-la-serra-de-tramuntana-escorca/"
+    },
+    {
+      "id": "event-feria-oliva-caimari-2026",
+      "title": "Feria de la Oliva (Caimari)",
+      "title_es": "Feria de la Oliva (Caimari)",
+      "title_de": "Olivenmesse (Caimari)",
+      "description": "Caimari's celebrated olive oil fair in the Tramuntana foothills. One of the most authentically local events on the island, showcasing premium Mallorcan olive oils, olives and Mediterranean diet products alongside artisan crafts.",
+      "description_es": "La celebrada feria del aceite de oliva de Caimari en las estribaciones de la Tramuntana. Uno de los eventos más auténticamente locales de la isla, con aceites de oliva mallorquines de primera calidad, aceitunas y artesanía.",
+      "description_de": "Caimarís berühmte Olivenölmesse am Fuß der Tramuntana mit erstklassigen mallorquinischen Olivenölen, Oliven, mediterranen Diätprodukten und Kunsthandwerk.",
+      "category": "FESTIVAL",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-22",
+      "municipality": "Caimari",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://www.illesbalears.travel/en/mallorca/events-fira-de-loliva-de-caimari"
+    },
+    {
+      "id": "event-feria-miel-llubi-2026",
+      "title": "Feria de la Miel (Llubí)",
+      "title_es": "Feria de la Miel (Llubí)",
+      "title_de": "Honigmesse (Llubí)",
+      "description": "Llubí's honey fair celebrating the town's long beekeeping tradition. Browse honey products, local crafts and meet the beekeeping community. A sweet and genuine Mallorcan autumn experience.",
+      "description_es": "La feria de la miel de Llubí que celebra la larga tradición apícola del pueblo. Explora productos de miel, artesanía local y conoce a la comunidad apicultora.",
+      "description_de": "Llubís Honigmesse, die die lange Imkerei-Tradition des Ortes feiert. Stöbern Sie in Honigprodukten und lokalem Kunsthandwerk und lernen Sie die Imkergemeinschaft kennen.",
+      "category": "FESTIVAL",
+      "start_date": "2026-11-22",
+      "municipality": "Llubí",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://km0plademallorca.com/recurso/feria-de-la-miel/"
+    },
+    {
+      "id": "event-feria-sant-tomas-sineu-2026",
+      "title": "Feria de Sant Tomàs - Matança (Sineu)",
+      "title_es": "Feria de Sant Tomàs - Matança (Sineu)",
+      "title_de": "Feria de Sant Tomàs - Matança (Sineu)",
+      "description": "Sineu's traditional Feria de Sant Tomàs centred on the ancient Mallorcan matança (pig slaughter) tradition. Witness food preservation rituals, taste traditional sobrasada, black pudding and pork products, and discover authentic rural Mallorcan culture.",
+      "description_es": "La tradicional Feria de Sant Tomàs de Sineu centrada en la antigua tradición mallorquina de la matança (matanza del cerdo). Presencia rituales de conservación de alimentos, degusta sobrasada tradicional y descubre la auténtica cultura rural mallorquina.",
+      "description_de": "Sineus traditionelle Feria de Sant Tomàs rund um die uralte mallorquinische Matança-Tradition. Erleben Sie Lebensmittelkonservierungsrituale, probieren Sie traditionelle Sobrasada und entdecken Sie authentische ländliche Kultur.",
+      "category": "CULTURE",
+      "start_date": "2026-12-13",
+      "municipality": "Sineu",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://bravobaleares.com/en/matanza-and-saint-thomas-day/"
+    },
+    {
+      "id": "event-fira-sa-pobla-coenta-2026",
+      "title": "Fira Sa Pobla Coenta",
+      "title_es": "Fira Sa Pobla Coenta",
+      "title_de": "Fira Sa Pobla Coenta",
+      "description": "Sa Pobla's spicy gastronomy fair celebrating Mallorca's pepper culture. Tastings, cooking competitions and local food stalls in the heart of the island's agricultural north.",
+      "description_es": "La feria gastronómica picante de Sa Pobla que celebra la cultura del pimiento mallorquín. Degustaciones, concursos de cocina y puestos de comida local.",
+      "description_de": "Sa Poblas Gewürzgastronomie-Messe feiert Mallorcas Paprikakultur mit Verkostungen, Kochwettbewerben und lokalen Essensständen.",
+      "category": "FESTIVAL",
+      "start_date": "2026-09-12",
+      "municipality": "Sa Pobla",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://www.inmallorcamagazine.com/events-and-festivals/festivals-fairs-annual-guide"
+    },
+    {
+      "id": "event-sa-fira-petra-2026",
+      "title": "Sa Fira – Petra",
+      "title_es": "Sa Fira – Petra",
+      "title_de": "Sa Fira – Petra",
+      "description": "Petra's traditional industrial and artisan fair, one of the village's most important annual celebrations with local products, crafts and exhibitions.",
+      "description_es": "La tradicional feria industrial y artesanal de Petra, una de las celebraciones anuales más importantes del pueblo con productos locales y artesanía.",
+      "description_de": "Petras traditionelle Industrie- und Handwerksmesse mit lokalen Produkten und Kunsthandwerk.",
+      "category": "FESTIVAL",
+      "start_date": "2026-09-19",
+      "municipality": "Petra",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://firesifestes.es/es/"
+    },
+    {
+      "id": "event-feria-septiembre-manacor-2026",
+      "title": "Feria de Septiembre – Manacor",
+      "title_es": "Feria de Septiembre – Manacor",
+      "title_de": "Septembermesse – Manacor",
+      "description": "Manacor's traditional September fair combining craft, gastronomic and agricultural exhibits. One of the most popular autumn events in the east of the island.",
+      "description_es": "La tradicional feria de septiembre de Manacor que combina artesanía, gastronomía y expositores agrícolas. Uno de los eventos de otoño más populares del este de la isla.",
+      "description_de": "Manacors traditionelle Septembermesse mit Handwerk, Gastronomie und landwirtschaftlichen Ausstellern.",
+      "category": "FESTIVAL",
+      "start_date": "2026-09-20",
+      "municipality": "Manacor",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://firesifestes.es/es/"
+    },
+    {
+      "id": "event-mallorca-roots-festival-2026",
+      "title": "Mallorca Roots Festival",
+      "title_es": "Mallorca Roots Festival",
+      "title_de": "Mallorca Roots Festival",
+      "description": "A world music and roots festival bringing together artists from across the globe to Palma. Concerts, workshops and cultural events celebrating music diversity.",
+      "description_es": "Un festival de música del mundo y roots que reúne a artistas de todo el mundo en Palma. Conciertos, talleres y eventos culturales.",
+      "description_de": "Ein Weltmusik- und Roots-Festival, das Künstler aus aller Welt nach Palma bringt.",
+      "category": "CONCERT",
+      "start_date": "2026-09-23",
+      "end_date": "2026-09-27",
+      "municipality": "Palma",
+      "is_free": false,
+      "is_recurring": false,
+      "website_url": "https://www.myguidemallorca.com/events/september-2026"
+    },
+    {
+      "id": "event-fira-calonge-2026",
+      "title": "Fira de Calonge – Santanyí",
+      "title_es": "Fira de Calonge – Santanyí",
+      "title_de": "Fira de Calonge – Santanyí",
+      "description": "An ecological and local products fair in the charming village of Calonge, showcasing organic produce, artisan crafts and sustainable Mallorcan culture.",
+      "description_es": "Una feria ecológica y de productos locales en el encantador pueblo de Calonge, con productos ecológicos, artesanía y cultura mallorquina sostenible.",
+      "description_de": "Eine Öko- und Lokalproduktmesse im malerischen Dorf Calonge mit Bio-Produkten und nachhaltigem mallorquinischem Kunsthandwerk.",
+      "category": "FESTIVAL",
+      "start_date": "2026-09-27",
+      "municipality": "Santanyí",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://firesifestes.es/es/"
+    },
+    {
+      "id": "event-fires-llucmajor-2026",
+      "title": "Fires de Llucmajor",
+      "title_es": "Fires de Llucmajor",
+      "title_de": "Fires de Llucmajor",
+      "description": "One of Mallorca's oldest and most important traditional fairs, held annually in Llucmajor over two weeks. Livestock, crafts, gastronomy, music and a spectacular closing Firó.",
+      "description_es": "Una de las ferias tradicionales más antiguas e importantes de Mallorca, celebrada anualmente en Llucmajor durante dos semanas. Ganadería, artesanía, gastronomía, música y un espectacular Firó de cierre.",
+      "description_de": "Eine der ältesten und wichtigsten traditionellen Messen Mallorcas in Llucmajor über zwei Wochen mit Vieh, Handwerk, Gastronomie und dem spektakulären Abschluss-Firó.",
+      "category": "FESTIVAL",
+      "start_date": "2026-09-27",
+      "end_date": "2026-10-12",
+      "municipality": "Llucmajor",
+      "is_free": true,
+      "is_recurring": false,
+      "website_url": "https://llucmajor.org/es/ferias"
+    },
+    {
+      "id": "event-most-beautiful-day-2026",
+      "title": "Most Beautiful Day Festival – The Lemon Twigs",
+      "title_es": "Most Beautiful Day Festival – The Lemon Twigs",
+      "title_de": "Most Beautiful Day Festival – The Lemon Twigs",
+      "description": "An intimate music festival in Mallorca featuring The Lemon Twigs and other artists in a unique island setting.",
+      "description_es": "Un íntimo festival de música en Mallorca con The Lemon Twigs y otros artistas en un entorno único en la isla.",
+      "description_de": "Ein intimes Musikfestival auf Mallorca mit The Lemon Twigs und anderen Künstlern.",
+      "category": "CONCERT",
+      "start_date": "2026-10-23",
+      "municipality": "Palma",
+      "is_free": false,
+      "is_recurring": false,
+      "website_url": "https://www.mallorcacarhirecompany.com/mallorca-events-2026/"
+    },
+    {
+      "id": "event-tapalma-2026",
+      "title": "TaPalma – Tapas & Cocktail Festival",
+      "title_es": "TaPalma – Festival de Tapas y Cócteles",
+      "title_de": "TaPalma – Tapas- und Cocktailfestival",
+      "description": "Palma's acclaimed citywide tapas and cocktail festival. Over 50 bars and restaurants create special tapas routes through the city's neighbourhoods — one of the tastiest events of the year.",
+      "description_es": "El aclamado festival de tapas y cócteles de Palma. Más de 50 bares y restaurantes crean rutas de tapas especiales por los barrios de la ciudad — uno de los eventos más sabrosos del año.",
+      "description_de": "Palmas gefeiertes stadtweites Tapas- und Cocktailfestival. Über 50 Bars und Restaurants erstellen spezielle Tapasrouten durch die Stadtviertel.",
+      "category": "FESTIVAL",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-08",
+      "municipality": "Palma",
+      "is_free": false,
+      "price": "Desde 5€",
+      "is_recurring": false,
+      "website_url": "https://tapalma.com/en/"
+    },
+    {
+      "id": "event-salitrefest-2026",
+      "title": "SalitreFest – Santa Margalida",
+      "title_es": "SalitreFest – Santa Margalida",
+      "title_de": "SalitreFest – Santa Margalida",
+      "description": "A music festival in the heart of rural Mallorca in Santa Margalida, featuring indie and alternative acts in an authentic village atmosphere.",
+      "description_es": "Un festival de música en el corazón de la Mallorca rural en Santa Margalida, con actuaciones indie y alternativas en un auténtico ambiente de pueblo.",
+      "description_de": "Ein Musikfestival im Herzen des ländlichen Mallorcas in Santa Margalida mit Indie- und Alternativacts.",
+      "category": "CONCERT",
+      "start_date": "2026-11-12",
+      "end_date": "2026-11-14",
+      "municipality": "Santa Margalida",
+      "is_free": false,
+      "is_recurring": false,
+      "website_url": "https://salitrefest.es/"
     }
   ],
   "discounts": [

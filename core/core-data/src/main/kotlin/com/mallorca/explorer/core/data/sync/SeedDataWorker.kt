@@ -97,7 +97,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 187
+        const val CURRENT_SEED_VERSION = 193
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -133,6 +133,7 @@ class SeedDataWorker @AssistedInject constructor(
             "event-sant-joan-2026",
             "event-triatlon-alcudia-2026",
             "event-copa-rey-vela-2026",
+            "event-es-vermar-binissalem-2026", // duplicate of event-vermar-binissalem-2026
         )
 
         // NOTE: "disc-gtrentals-2026" was archived out of seed_data.json along with

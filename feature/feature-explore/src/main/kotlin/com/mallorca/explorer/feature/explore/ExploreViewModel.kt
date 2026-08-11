@@ -160,7 +160,18 @@ class ExploreViewModel @Inject constructor(
 
         val now = System.currentTimeMillis()
         val weekMs = 7 * 86_400_000L
-        val monthMs = 30 * 86_400_000L
+        // Calendar-based month boundaries
+        val calNow = java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")).also { it.timeInMillis = now }
+        val thisMonthStart = (java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")).also {
+            it.timeInMillis = now; it.set(java.util.Calendar.DAY_OF_MONTH, 1); it.set(java.util.Calendar.HOUR_OF_DAY, 0); it.set(java.util.Calendar.MINUTE, 0); it.set(java.util.Calendar.SECOND, 0); it.set(java.util.Calendar.MILLISECOND, 0)
+        }).timeInMillis
+        val thisMonthEnd = (java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")).also {
+            it.timeInMillis = now; it.set(java.util.Calendar.DAY_OF_MONTH, 1); it.set(java.util.Calendar.HOUR_OF_DAY, 0); it.set(java.util.Calendar.MINUTE, 0); it.set(java.util.Calendar.SECOND, 0); it.set(java.util.Calendar.MILLISECOND, 0); it.add(java.util.Calendar.MONTH, 1)
+        }).timeInMillis
+        val nextMonthStart = thisMonthEnd
+        val nextMonthEnd = (java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")).also {
+            it.timeInMillis = now; it.set(java.util.Calendar.DAY_OF_MONTH, 1); it.set(java.util.Calendar.HOUR_OF_DAY, 0); it.set(java.util.Calendar.MINUTE, 0); it.set(java.util.Calendar.SECOND, 0); it.set(java.util.Calendar.MILLISECOND, 0); it.add(java.util.Calendar.MONTH, 2)
+        }).timeInMillis
         var filteredEvents = when (timeFilter) {
             EventTimeFilter.ALL -> events
             EventTimeFilter.THIS_WEEK -> events.filter { e ->
@@ -168,11 +179,12 @@ class ExploreViewModel @Inject constructor(
                     || (e.endDateEpoch ?: e.startDateEpoch) in now..(now + weekMs)
             }
             EventTimeFilter.THIS_MONTH -> events.filter { e ->
-                e.isRecurring || e.startDateEpoch in now..(now + monthMs)
-                    || (e.endDateEpoch ?: e.startDateEpoch) in now..(now + monthMs)
+                e.isRecurring || e.startDateEpoch in thisMonthStart until thisMonthEnd
+                    || (e.endDateEpoch ?: e.startDateEpoch) in thisMonthStart until thisMonthEnd
             }
             EventTimeFilter.NEXT_MONTH -> events.filter { e ->
-                e.isRecurring || e.startDateEpoch in (now + monthMs)..(now + 2 * monthMs)
+                e.isRecurring || e.startDateEpoch in nextMonthStart until nextMonthEnd
+                    || (e.endDateEpoch ?: e.startDateEpoch) in nextMonthStart until nextMonthEnd
             }
         }
         catFilter?.let { cat -> filteredEvents = filteredEvents.filter { it.category == cat } }
