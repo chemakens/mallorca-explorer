@@ -878,9 +878,14 @@ private fun EventCard(event: Event, locale: String, onMoreInfoClicked: (Event) -
         EventCategory.SPORT    -> stringResource(R.string.explore_event_category_sport)
     }
     val recurringLabel = stringResource(R.string.explore_events_recurring)
-    val dateStr = remember(event.startDateEpoch, event.isRecurring, recurringLabel) {
+    val dateStr = remember(event.startDateEpoch, event.endDateEpoch, event.isRecurring, recurringLabel) {
         if (event.isRecurring) recurringLabel
-        else SimpleDateFormat("d MMM", Locale.getDefault()).format(Date(event.startDateEpoch))
+        else {
+            val fmt = SimpleDateFormat("d MMM", Locale.getDefault())
+            val start = fmt.format(Date(event.startDateEpoch))
+            val end = event.endDateEpoch?.let { fmt.format(Date(it)) }
+            if (end != null && end != start) "$start – $end" else start
+        }
     }
     Card(modifier = modifier.width(160.dp), shape = RoundedCornerShape(16.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant), elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)) {
         Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
