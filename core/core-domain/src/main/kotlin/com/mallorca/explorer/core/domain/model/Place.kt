@@ -37,6 +37,7 @@ data class Place(
     val isFavorite: Boolean = false,
     val isVisited: Boolean = false,
     val distanceKm: Double? = null,
+    val gemAccess: List<String> = emptyList(),
     val lastUpdated: Instant = Instant.now(),
 )
 

@@ -150,6 +150,7 @@ fun PlaceEntity.toDomain(): Place = Place(
     website = website,
     phoneNumber = phoneNumber,
     ticketUrl = ticketUrl,
+    gemAccess = gemAccessJson.toStringList(),
     lastUpdated = Instant.ofEpochMilli(lastUpdatedEpoch),
 )
 
@@ -184,6 +185,7 @@ fun Place.toEntity(): PlaceEntity = PlaceEntity(
     website = website,
     phoneNumber = phoneNumber,
     ticketUrl = ticketUrl,
+    gemAccessJson = gemAccess.toJson(),
     tagsJson = subCategories.toJson(),
     lastUpdatedEpoch = lastUpdated.toEpochMilli(),
 )

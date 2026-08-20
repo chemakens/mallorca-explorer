@@ -37,4 +37,5 @@ data class PlaceEntity(
     val tagsJson: String,
     val lastUpdatedEpoch: Long,
     val ticketUrl: String? = null,
+    val gemAccessJson: String = "[]",
 )

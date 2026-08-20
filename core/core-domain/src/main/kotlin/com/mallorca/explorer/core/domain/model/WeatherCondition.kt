@@ -30,8 +30,8 @@ data class WeatherCondition(
             WeatherSummary.RAINY -> listOf(Category.CULTURE, Category.GASTRONOMY, Category.TOWN)
             WeatherSummary.WINDY -> listOf(Category.CULTURE, Category.GASTRONOMY, Category.HIKING)
             WeatherSummary.HOT -> listOf(Category.BEACH, Category.VIEWPOINT, Category.TOWN)
-            WeatherSummary.SUNNY -> listOf(Category.BEACH, Category.ADVENTURE, Category.HIKING, Category.VIEWPOINT)
-            WeatherSummary.MILD -> listOf(Category.HIKING, Category.CULTURE, Category.ADVENTURE, Category.TOWN)
+            WeatherSummary.SUNNY -> listOf(Category.BEACH, Category.SUP, Category.HIKING, Category.VIEWPOINT)
+            WeatherSummary.MILD -> listOf(Category.HIKING, Category.CULTURE, Category.SUP, Category.TOWN)
         }
 
     val bannerEmoji: String get() = summary.emoji

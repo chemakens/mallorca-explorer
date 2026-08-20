@@ -198,7 +198,13 @@
       ],
       "rating": 4.6,
       "review_count": 210,
-      "price_level": null
+      "price_level": null,
+      "description_de": "Eine abgelegene Felsbucht am Fuß der Cap-de-Formentor-Klippen, nur wenige Minuten vom Leuchtturm entfernt. Erreichbar über einen kurzen Pfad vom Leuchtturmparkplatz oder per Boot von Port de Pollença. Belohnt mit kristallklarem türkisfarbenem Wasser und eindrucksvollen Kalksteinwänden. Deutlich ruhiger als der Platja de Formentor — am besten früh morgens besuchen, bevor die Ausflugsboote ankommen.",
+      "tips_de": [
+        "Zugang zu Fuß über einen 20-minütigen Pfad vom Leuchtturmparkplatz oder per Boot von Port de Pollença",
+        "Früh ankommen — Ausflugsboote kommen ab ca. 10 Uhr",
+        "Felsiger Einstieg — Wasserschuhe empfohlen"
+      ]
     },
     {
       "id": "cala-deia",
@@ -306,8 +312,8 @@
       "name_es": "Cala Varques",
       "description": "Secluded wild beach accessible only by a 20-minute walk through pine forest.",
       "category": "BEACH",
-      "latitude": 39.4998,
-      "longitude": 3.2962,
+      "latitude": 39.5172626,
+      "longitude": 3.308739,
       "municipality": "Manacor",
       "rating": 4.6,
       "review_count": 650,
@@ -349,7 +355,11 @@
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "gem_access": [
+        "caminar",
+        "natacion"
+      ]
     },
     {
       "id": "tramuntana-range",
@@ -768,7 +778,12 @@
       "tips": [
         "Visit the Royal Carthusian Monastery",
         "Try the local ensaïmades pastries",
-        "Busy in peak season — visit early morning"
+        "Busy in peak season — visit early morning",
+        "Try the coca de patata, the town's famous sweet — buy it at a local bakery or order it with a coffee at a café in the village",
+        "Visit the Chopin Museum and the cell where the composer spent the winter of 1838-39 alongside George Sand",
+        "Explore the Royal Carthusian Monastery and its gardens, one of Mallorca's most iconic monuments",
+        "Take a photo at the village viewpoint overlooking the Serra de Tramuntana mountains",
+        "Visit the birthplace of Blessed Santa Catalina Tomàs, patron saint of Mallorca"
       ],
       "thumbnail_url": "file:///android_asset/images/place-valldemossa.jpg",
       "photo_urls": [
@@ -781,22 +796,52 @@
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-valldemossa-3.jpg",
-          "source": "PEXELS"
+          "url": "file:///android_asset/images/valldemossa-mia-1.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/valldemossa-mia-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/valldemossa-mia-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/valldemossa-mia-4.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/valldemossa-mia-5.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/valldemossa-mia-6.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Uno de los pueblos más bellos de Mallorca, en las montañas donde Chopin y George Sand pasaron un invierno memorable en la década de 1830.",
       "tips_es": [
         "Visita la celda donde Chopin y George Sand pasaron el invierno de 1838-39",
         "La Real Cartuja está abierta al público la mayor parte del año",
-        "El mercado de los domingos es encantador"
+        "El mercado de los domingos es encantador",
+        "Prueba la coca de patata, el dulce típico del pueblo — cómprala en una panadería local o pídela en una cafetería acompañada de un buen café",
+        "Visita el Museo Chopin y la celda donde el compositor pasó el invierno de 1838-39 junto a George Sand",
+        "Recorre la Cartuja y sus jardines, uno de los monumentos más emblemáticos de Mallorca",
+        "Hazte una foto en el mirador del pueblo con las vistas a la Serra de Tramuntana",
+        "Visita la casa natal de la Beata Santa Catalina Tomàs, patrona de Mallorca"
       ],
       "name_de": "Valldemossa",
       "description_de": "Eines der schönsten Dörfer Mallorcas mit gepflasterten Gassen und blumengeschmückten Häusern. Die Kartause, wo Chopin und George Sand den Winter verbrachten, ist das kulturelle Herzstück.",
       "tips_de": [
         "Chopins und George Sands Winter 1838-39 in der Kartause besichtigen",
         "Die Kartause ist das meiste Jahr geöffnet",
-        "Der Sonntagsmarkt ist sehr gemütlich"
+        "Der Sonntagsmarkt ist sehr gemütlich",
+        "Probiert die Coca de Patata, das berühmte Süßgebäck des Ortes — in einer lokalen Bäckerei kaufen oder in einem Café mit einem guten Kaffee genießen",
+        "Besucht das Chopin-Museum und die Zelle, in der der Komponist gemeinsam mit George Sand den Winter 1838-39 verbrachte",
+        "Erkundet die Kartause und ihre Gärten, eines der bekanntesten Monumente Mallorcas",
+        "Macht ein Foto am Aussichtspunkt des Dorfes mit dem Blick auf die Serra de Tramuntana",
+        "Besucht das Geburtshaus der seligen Santa Catalina Tomàs, Schutzpatronin Mallorcas"
       ],
       "name_ru": "",
       "description_ru": "",
@@ -871,14 +916,22 @@
       "tips": [
         "Ride the vintage tram from Sóller to Port de Sóller",
         "The Modernista bank building on the main square is stunning",
-        "Orange and lemon products are the local specialty"
+        "Orange and lemon products are the local specialty",
+        "Visit the train station: downstairs you'll find two permanent exhibition rooms with works by Picasso and Miró",
+        "Have a coffee with ensaïmada or a 'variat' on the Plaça de la Constitució in front of the church — the perfect way to start the morning",
+        "Step inside the Church of Sant Bartomeu and admire its Modernista façade right on the main square",
+        "Walk along Carrer de la Lluna, the town's shopping street: clothing, jewellery, local products, crafts and the Can Prunera Modernista Museum",
+        "Don't miss the Balearic Museum of Natural Sciences and its botanical garden, next to the train station",
+        "Just 2 km away is Biniaraix, one of Mallorca's most beautiful villages — well worth the walk",
+        "Take the tram down to Port de Sóller and visit its beach and lighthouse, where the views and photos are spectacular"
       ],
       "thumbnail_url": "file:///android_asset/images/place-soller.jpg",
       "photo_urls": [
         {
           "url": "file:///android_asset/images/place-soller.jpg",
           "source": "AETIB",
-          "author": "Eduardo Miralles"
+          "author": "Eduardo Miralles",
+          "heroFocalY": 0.45
         },
         {
           "url": "file:///android_asset/images/place-soller-2.jpg",
@@ -899,14 +952,28 @@
       "tips_es": [
         "El tranvía histórico conecta el pueblo con el Puerto de Sóller",
         "El tren de madera desde Palma tarda 1 hora y vale la pena",
-        "El mercado del sábado es el más auténtico del valle"
+        "El mercado del sábado es el más auténtico del valle",
+        "Visita la estación de tren: debajo hay dos salas de exposición permanente con obras de Picasso y Miró",
+        "Tómate un café con ensaimada o un 'variat' en la Plaça de la Constitució, frente a la iglesia — el mejor plan para empezar la mañana",
+        "Entra a la Iglesia de Sant Bartomeu y admira su fachada modernista en plena plaza",
+        "Pasea por la Calle de la Luna, la calle comercial del pueblo: ropa, joyería, productos locales, artesanía y el Museo Modernista Can Prunera",
+        "No te pierdas el Museu Balear de Ciències Naturals y su jardín botánico, junto a la estación",
+        "A 2 km está Biniaraix, uno de los pueblos más bonitos de Mallorca — vale mucho la pena el paseo",
+        "Baja al Puerto de Sóller en tranvía y visita su playa y su faro, donde las vistas y las fotos son espectaculares"
       ],
       "name_de": "Sóller",
       "description_de": "Charmantes Orangenstädtchen in einem idyllischen Tal, verbunden mit Palma durch einen historischen Holzzug. Die Jugendstilarchitektur und der Wochenmarkt machen es zu einem Muss.",
       "tips_de": [
         "Historische Straßenbahn verbindet Dorf und Hafen",
         "Der Holzzug ab Palma dauert 1 Stunde und lohnt sich sehr",
-        "Der Samstagmarkt ist der authentischste des Tals"
+        "Der Samstagmarkt ist der authentischste des Tals",
+        "Besucht den Bahnhof: Im Untergeschoss befinden sich zwei Dauerausstellungsräume mit Werken von Picasso und Miró",
+        "Genießt einen Kaffee mit Ensaïmada oder ein 'Variat' auf der Plaça de la Constitució vor der Kirche — der perfekte Tagesstart",
+        "Tretet in die Kirche Sant Bartomeu ein und bewundert ihre Modernista-Fassade mitten auf dem Hauptplatz",
+        "Schlendert durch die Carrer de la Lluna, die Einkaufsstraße des Ortes: Kleidung, Schmuck, lokale Produkte, Kunsthandwerk und das Modernista-Museum Can Prunera",
+        "Unbedingt das Balearische Museum für Naturwissenschaften und den botanischen Garten neben dem Bahnhof besuchen",
+        "Nur 2 km entfernt liegt Biniaraix, eines der schönsten Dörfer Mallorcas — ein Spaziergang dorthin lohnt sich sehr",
+        "Fahrt mit der Straßenbahn hinunter zum Port de Sóller und besucht Strand und Leuchtturm — die Aussicht und die Fotos sind spektakulär"
       ],
       "name_ru": "",
       "description_ru": "",
@@ -3017,10 +3084,12 @@
       "rating": 4.7,
       "review_count": 620,
       "tips": [
-        "⚠️ Carretera estrecha y revirada — No recomendada para vehículos grandes ni conductores inexpertos",
-        "El autobús NO baja hasta aquí; exclusivo para coche, moto o senderistas",
-        "Aparca junto al puerto y baja a la pequeña playa de guijarros",
-        "Mejor en primavera o fuera de temporada alta para evitar atascos"
+        "⚠️ Narrow, winding road — not recommended for large vehicles or inexperienced drivers; in the tightest sections you may have to stop and reverse to let another car pass",
+        "The bus does NOT come down here — accessible only by car, motorbike or on foot",
+        "The restaurant Es Pont has views of both the mountain and the beach — a great spot for a meal",
+        "The beach is striking for the deep red tones of the mountain's iron-rich slopes coming down to the sea",
+        "There is a small car park at the port, which also doubles as a mooring area for small boats",
+        "Perfect for those who want to swim surrounded by unspoilt nature"
       ],
       "price_level": "FREE",
       "tags": [
@@ -3034,26 +3103,44 @@
       "thumbnail_url": "file:///android_asset/images/beach-puerto-valldemossa.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-puerto-valldemossa.jpg",
-          "source": "PIXABAY"
+          "url": "file:///android_asset/images/puerto-valldemossa-mia-1.jpg",
+          "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-puerto-valldemossa-2.jpg",
+          "url": "file:///android_asset/images/puerto-valldemossa-mia-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/puerto-valldemossa-mia-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/puerto-valldemossa-mia-4.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/puerto-valldemossa-mia-5.jpg",
           "source": "MINE"
         }
       ],
       "description_es": "Pequeño e idílico puerto pesquero al que se llega por una de las carreteras más dramáticas y estrechas de la isla. Casas de piedra sobre acantilados, una pequeña playa de canto rodado y agua cristalina.",
       "tips_es": [
-        "El acceso es por una carretera muy estrecha y empinada — cuidado",
-        "El restaurante Bens d'Avall tiene una de las mejores vistas de Mallorca",
-        "La cala es pequeña pero muy pintoresca"
+        "⚠️ Carretera muy estrecha y revirada — no apta para vehículos grandes ni conductores inexpertos; en los tramos más cerrados tendrás que parar para que el otro coche pueda pasar",
+        "El autobús NO baja hasta aquí — solo accesible en coche, moto o a pie",
+        "El restaurante Es Pont tiene vistas a la montaña y a la playa — ideal para comer con un entorno único",
+        "La playa impresiona por las tonalidades de la tierra roja de la ladera de la montaña que llega hasta el mar",
+        "Hay un pequeño aparcamiento junto al puerto, donde también se estacionan pequeñas embarcaciones",
+        "Ideal para quienes quieran bañarse rodeados de naturaleza sin multitudes"
       ],
       "name_de": "Hafen Valldemossa",
       "description_de": "Winziger und idyllischer Fischerhafen, zu Fuß oder per Auto über eine abenteuerliche enge Straße erreichbar. Traumhafter Blick auf die Tramuntana.",
       "tips_de": [
-        "Zufahrt über sehr enge steile Straße – Vorsicht",
-        "Restaurant Bens d'Avall hat eine der schönsten Aussichten Mallorcas",
-        "Die Bucht ist klein aber sehr malerisch"
+        "⚠️ Sehr enge, kurvenreiche Straße — nicht geeignet für große Fahrzeuge oder unerfahrene Fahrer; auf den engsten Abschnitten musst du anhalten, damit ein entgegenkommendes Auto passieren kann",
+        "Der Bus fährt NICHT bis hier hinunter — nur mit Auto, Motorrad oder zu Fuß erreichbar",
+        "Das Restaurant Es Pont bietet Blick auf Berg und Strand — ein großartiger Ort für eine Mahlzeit mit einzigartiger Kulisse",
+        "Der Strand beeindruckt durch die tiefroten Töne der eisenreichen Berghänge, die bis ans Meer reichen",
+        "Es gibt einen kleinen Parkplatz am Hafen, der auch als Liegeplatz für kleine Boote genutzt wird",
+        "Ideal für alle, die umgeben von unberührter Natur schwimmen möchten"
       ],
       "name_ru": "",
       "description_ru": "",
@@ -3121,8 +3208,8 @@
       "name_es": "Mirador des Pi",
       "description": "A spectacular coastal viewpoint near the Hotel Continental and the legendary S'Estaca estate — once owned by Michael Douglas. A secret path from the roadside reveals dramatic views of the rugged Tramuntana cliffs plunging into the sea, with the estate's historic tower visible below.",
       "category": "VIEWPOINT",
-      "latitude": 39.7334,
-      "longitude": 2.604,
+      "latitude": 39.7348734,
+      "longitude": 2.6122562,
       "municipality": "Valldemossa",
       "rating": 4.6,
       "review_count": 310,
@@ -3171,16 +3258,21 @@
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "gem_access": [
+        "caminar",
+        "mirador",
+        "sunset"
+      ]
     },
     {
       "id": "sup-sant-vicenc",
       "name": "SUP Cala Sant Vicenç",
       "name_es": "SUP Cala Sant Vicenç",
       "description": "One of Mallorca's most scenic SUP launch points, where three turquoise coves sheltered by dramatic limestone cliffs meet the open sea. The paddle between Cala Molins, Cala Clara and Cala Barques reveals sea caves and underwater arches inaccessible on foot.",
-      "category": "ADVENTURE",
-      "latitude": 39.9199,
-      "longitude": 3.0577,
+      "category": "SUP",
+      "latitude": 39.9204066,
+      "longitude": 3.0534575,
       "municipality": "Pollença",
       "rating": 4.8,
       "review_count": 340,
@@ -3209,8 +3301,20 @@
           "author": "Gaspar Monroig"
         },
         {
-          "url": "file:///android_asset/images/place-sup-sant-vicenc-2.jpg",
-          "source": "PEXELS"
+          "url": "file:///android_asset/images/sup-sant-vicenc-mia-1.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/sup-sant-vicenc-mia-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/sup-sant-vicenc-mia-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/sup-sant-vicenc-mia-4.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Uno de los puntos de lanzamiento de SUP más pintorescos de Mallorca, donde tres calas turquesas protegidas por acantilados de caliza se encuentran con el mar abierto.",
@@ -3238,7 +3342,7 @@
       "name": "SUP Port de Pollença",
       "name_es": "SUP Port de Pollença",
       "description": "The wide, sheltered bay of Port de Pollença is the ideal base camp for advanced SUP expeditions along the Formentor peninsula coast, exploring towering limestone cliffs, sea arches and deserted coves unreachable by land.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "latitude": 39.9094,
       "longitude": 3.0894,
       "municipality": "Pollença",
@@ -3298,7 +3402,7 @@
       "name": "SUP Portocolom",
       "name_es": "SUP Portocolom",
       "description": "The natural harbour of Portocolom is one of Mallorca's best spots for beginner SUP, with glassy protected water, colourful fishermen's houses lining the shore and exceptional clarity to the sandy seabed.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "latitude": 39.4186,
       "longitude": 3.2599,
       "municipality": "Felanitx",
@@ -3359,7 +3463,7 @@
       "name": "SUP Cala Ratjada",
       "name_es": "SUP Cala Ratjada",
       "description": "The rugged northeast cape of Mallorca offers an exciting intermediate SUP circuit connecting the small coves around Cala Ratjada, with views of Menorca on clear days and a jagged limestone coastline dotted with sea caves to explore.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "latitude": 39.7112,
       "longitude": 3.4663,
       "municipality": "Capdepera",
@@ -3420,7 +3524,7 @@
       "name": "SUP Portals Vells",
       "name_es": "SUP Portals Vells",
       "description": "One of Mallorca's most dramatic SUP destinations: three secluded coves sheltered by tall pine-clad cliffs on the southwest coast. Medieval quarry caves carved directly into the rock face, crystal-clear turquoise water and the hidden naturist cove of El Mago make this a unique paddle experience.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "latitude": 39.4722,
       "longitude": 2.52,
       "municipality": "Calvià",
@@ -3480,7 +3584,7 @@
       "name": "SUP Santa Ponsa",
       "name_es": "SUP Santa Ponsa",
       "description": "The wide, sheltered bay of Santa Ponsa on the southwest coast offers ideal beginner SUP conditions. A half-kilometre of white sand beach, calm turquoise water and easy paddling distance to the Sa Caleta marina and the rocky headlands at each end of the bay.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "latitude": 39.515,
       "longitude": 2.4827,
       "municipality": "Calvià",
@@ -3540,7 +3644,7 @@
       "name": "SUP Camp de Mar",
       "name_es": "SUP Camp de Mar",
       "description": "A charming beginner SUP spot on the southwest coast near Andratx, with a 180-metre white sand beach and exceptionally calm, shallow water. The highlight of the route is paddling to the tiny offshore island connected to the mainland by a wooden footbridge, home to a small restaurant perched over the sea.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "latitude": 39.5375,
       "longitude": 2.4217,
       "municipality": "Andratx",
@@ -3600,7 +3704,7 @@
       "name": "SUP Port Adriano",
       "name_es": "SUP Port Adriano",
       "description": "Launching from the foot of Philippe Starck's iconic luxury marina, this intermediate SUP route explores the wild limestone coastline between Port Adriano and Portals Vells. Expect sea caves, hidden coves and vertiginous cliffs dropping straight into deep emerald water.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "latitude": 39.4933,
       "longitude": 2.4717,
       "municipality": "Calvià",
@@ -3660,7 +3764,7 @@
       "name": "SUP Port de Sóller",
       "name_es": "SUP Port de Sóller",
       "description": "The sheltered circular bay of Port de Sóller, ringed by the Tramuntana mountains plunging into the sea, is one of the most scenic SUP venues in Mallorca. Paddle across the mirror-like harbour, hug the dramatic cliffs at the bay entrance and discover tiny pebble coves unreachable on foot.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "latitude": 39.7963,
       "longitude": 2.6963,
       "municipality": "Sóller",
@@ -3720,7 +3824,7 @@
       "name": "SUP Cala Major",
       "name_es": "SUP Cala Major",
       "description": "An easy urban SUP route along the Palma coastline, starting from Cala Major beach just west of the city. Paddle along the pine-backed rocky shoreline past the elegant Marivent Palace and towards Ses Illetes, with sweeping views of Palma's skyline and the cathedral La Seu on the horizon.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "latitude": 39.5521,
       "longitude": 2.6066,
       "municipality": "Palma",
@@ -4371,8 +4475,8 @@
       "name_es": "Playa del Delta",
       "description": "In Llucmajor, uneven coastal rocks form natural saltwater pools that fill and drain with the tides, with varying depths across the area. It's an ideal spot for young children, since many of these pools are shallow enough for calm, wave-free bathing. The rocky bottom is uneven, so water shoes are recommended, and since there are no facilities nearby, bring everything you need. The clear waters also make it popular for snorkelling. Park near Mhares Sea Club and follow the trail down to the beach.",
       "category": "VIEWPOINT",
-      "latitude": 39.451,
-      "longitude": 2.7428,
+      "latitude": 39.4511323,
+      "longitude": 2.7415804,
       "municipality": "Llucmajor",
       "address": "Platja Delta, Urbanización Maioris, Llucmajor",
       "rating": 4.7,
@@ -4409,12 +4513,9 @@
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-4.jpg",
-          "source": "MINE"
-        },
-        {
-          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-5.jpg",
-          "source": "MINE"
+          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-6.jpg",
+          "source": "MINE",
+          "heroFocalY": 0.55
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-mhares-sea-club-sunset.jpg",
@@ -4436,7 +4537,11 @@
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "gem_access": [
+        "natacion",
+        "sunset"
+      ]
     },
     {
       "id": "calas-sur-llucmajor",
@@ -4502,8 +4607,8 @@
       "name_es": "Caló des Moro",
       "description": "One of Mallorca's most photographed calas — a tiny jewel of blinding white sand flanked by towering limestone cliffs, with water shifting from emerald to electric turquoise. Its limited capacity (around 100 people) and single access track mean you must arrive before 9 am or take the shuttle bus from Santanyí.",
       "category": "BEACH",
-      "latitude": 39.3138,
-      "longitude": 3.1214,
+      "latitude": 39.3171806,
+      "longitude": 3.1222326,
       "municipality": "Santanyí",
       "rating": 4.9,
       "review_count": 8700,
@@ -4558,14 +4663,18 @@
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "gem_access": [
+        "caminar",
+        "natacion"
+      ]
     },
     {
       "id": "cala-agulla",
       "name": "Cala Agulla",
       "name_es": "Cala Agulla",
       "description": "A wide, sandy arc backed by fragrant pine forest and rolling dunes in the northeast of Mallorca, near the medieval castle town of Capdepera. One of the few large natural beaches in the area that retains a relaxed, crowd-friendly character with clear shallow water perfect for families.",
-      "category": "ADVENTURE",
+      "category": "BEACH",
       "latitude": 39.7225,
       "longitude": 3.4525,
       "municipality": "Capdepera",
@@ -5719,8 +5828,8 @@
       "name_es": "Ruta a Cala Murta",
       "description": "A moderately demanding coastal trail through dense Aleppo pine forest on the Formentor peninsula, leading to one of Mallorca's most sheltered and pristine coves. The deep green of the pines against the turquoise water makes it one of the island's most photogenic hikes. A roughly 6 km round trip from the Font de la Cala car park, about 2 hours total.",
       "category": "HIKING",
-      "latitude": 39.9217,
-      "longitude": 3.1467,
+      "latitude": 39.9493699,
+      "longitude": 3.169097,
       "address": "Ctra. de Formentor, km 14",
       "municipality": "Pollença",
       "photo_urls": [
@@ -5768,7 +5877,11 @@
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "gem_access": [
+        "senderismo",
+        "natacion"
+      ]
     },
     {
       "id": "ruta-cala-tuent",
@@ -5999,8 +6112,8 @@
       "name_es": "Mirador Secreto de Sa Trapa",
       "description": "A hidden outcrop 50 metres above the famous Sa Trapa monastery ruins, reachable by an unmarked goat path that few hikers ever find. The view it commands — the Dragonera island directly below, the sunset silhouette of the Tramuntana above — is arguably the finest on the island and almost never photographed.",
       "category": "VIEWPOINT",
-      "latitude": 39.5996,
-      "longitude": 2.3583,
+      "latitude": 39.5850412,
+      "longitude": 2.35357,
       "address": "Sa Trapa — Sant Elm",
       "municipality": "Andratx",
       "photo_urls": [
@@ -6048,7 +6161,12 @@
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "gem_access": [
+        "senderismo",
+        "mirador",
+        "sunset"
+      ]
     },
     {
       "id": "cala-figuera-santanyi",
@@ -6631,8 +6749,8 @@
       "name_es": "Cala Llucalcari (Es Canyaret)",
       "description": "Encajada entre acantilados de la Serra de Tramuntana a 80 metros sobre el Mediterráneo, esta diminuta cala rocosa de apenas 50 metros de largo parece existir fuera del tiempo. Sus aguas son extraordinariamente claras y tranquilas, protegidas del viento por dos paredes de roca. Desde las piedras brotan fuentes naturales de agua dulce que, mezcladas con el agua salada, forman pequeñas pozas de barro con fama de propiedades terapéuticas. El nudismo es habitual y el ambiente, de una intimidad que pocas calas de la isla pueden igualar.",
       "category": "BEACH",
-      "latitude": 39.7674,
-      "longitude": 2.6531,
+      "latitude": 39.7651996,
+      "longitude": 2.6545211,
       "address": "Camí dels Pintors",
       "municipality": "Deià",
       "photo_urls": [
@@ -6644,6 +6762,34 @@
         {
           "url": "file:///android_asset/images/beach-cala-llucalcari-2.jpg",
           "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/llucalcari-mia-1.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/llucalcari-mia-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/llucalcari-mia-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/llucalcari-mia-4.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/llucalcari-mia-5.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/llucalcari-mia-6.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/llucalcari-mia-7.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-llucalcari.jpg",
@@ -6651,11 +6797,13 @@
       "rating": 4.6,
       "review_count": 620,
       "tips": [
-        "Acceso a pie por sendero empinado y rocoso — calzado de senderismo imprescindible",
-        "Sin servicios: lleva agua, comida y bolsa para la basura",
-        "El barro natural de las pozas tiene fama de propiedades hidratantes — úsalo con moderación",
-        "El aparcamiento es solo para residentes; deja el coche en los arcenes junto a la carretera o viaja en autobús TIB",
-        "Llega temprano en verano — la cala es muy pequeña y se llena rápido"
+        "Reachable by bus or by car — limited roadside parking available near the turn-off",
+        "From Llucalcari village to the cove it's a pleasant 20–30 minute walk",
+        "The final descent to the cove is steep — take care on the way down",
+        "Mix of rocks and smooth flat stones to lie on",
+        "Perfect spot to watch the sunset before heading back",
+        "No facilities — bring water, food and a bag for your rubbish",
+        "The natural mud from a nearby spring is mineral-rich and makes a great natural scrub — use it before swimming"
       ],
       "tags": [
         "hidden_gem",
@@ -6672,15 +6820,24 @@
       ],
       "description_es": "Encajada entre acantilados de la Serra de Tramuntana a 80 metros sobre el Mediterráneo, esta diminuta cala rocosa parece existir fuera del tiempo. Sus aguas son extraordinariamente claras y de un verde azulado profundo.",
       "tips_es": [
-        "Solo accesible a pie desde el camino de Deià a Llucalcari",
+        "Accesible en autobús o en coche — aparcamiento limitado en el arcén de la carretera cerca del desvío",
+        "Desde las casas de Llucalcari hasta la cala hay un agradable paseo de unos 20-30 minutos",
+        "El acceso final a la cala es bastante empinado — ten cuidado en el descenso",
         "Una de las calas más íntimas y menos visitadas del noroeste",
-        "El agua es muy profunda junto a las rocas — cuidado con los niños"
+        "Mezcla de rocas y piedras lisas donde tumbarse",
+        "Lugar ideal para ver la puesta de sol antes de volver",
+        "El agua es muy profunda junto a las rocas — cuidado con los niños",
+        "El barro natural que proviene de una fuente próxima es rico en minerales y sirve como exfoliante natural para la piel. Aprovéchalo antes de bañarte."
       ],
       "name_de": "Cala Llucalcari",
       "description_de": "Eine der intimsten und am wenigsten besuchten Buchten der Nordwestküste – nur zu Fuß durch ein malerisches Bergdorf erreichbar.",
       "tips_de": [
-        "Nur zu Fuß durch das malerische Dorf Llucalcari erreichbar",
+        "Per Bus oder Auto erreichbar — begrenzte Parkplätze am Straßenrand nahe der Abzweigung",
+        "Vom Dorf Llucalcari bis zur Bucht sind es ein angenehmer 20–30-minütiger Spaziergang",
+        "Der letzte Abstieg zur Bucht ist steil — Vorsicht beim Hinuntergehen",
         "Eine der intimsten und am wenigsten besuchten Buchten des Nordwestens",
+        "Mischung aus Felsen und glatten, flachen Steinen zum Liegen",
+        "Perfekter Ort, um den Sonnenuntergang zu beobachten, bevor man zurückgeht",
         "Das Wasser neben den Felsen ist sehr tief – bei Kindern aufpassen"
       ],
       "name_ru": "Кала Люкалькари (Эс Канярет)",
@@ -6698,6 +6855,10 @@
         "无任何设施，请自备饮水、食物和垃圾袋",
         "礁石旁水深较深，带孩子须格外小心",
         "夏季请早到——小湾面积有限，很快就会人满"
+      ],
+      "gem_access": [
+        "senderismo",
+        "natacion"
       ]
     },
     {
@@ -6813,67 +6974,13 @@
       "tips_zh": []
     },
     {
-      "id": "punta-negra-sant-vicenc",
-      "name": "Punta Negra",
-      "name_es": "Punta Negra",
-      "description": "The dark limestone headland that marks the northern exit of the Cala Sant Vicenç bay. From the water, the contrast between the black rock face and the emerald sea is startling. Rounding this cape opens the full exposure of the Tramuntana cliff coast.",
-      "category": "ADVENTURE",
-      "latitude": 39.9176,
-      "longitude": 3.0565,
-      "municipality": "Pollença",
-      "price_level": "FREE",
-      "rating": 4.7,
-      "review_count": 180,
-      "tips": [
-        "Only accessible by sea — SUP, kayak or boat",
-        "Check wind before rounding — exposure increases sharply past the headland",
-        "Pass close to the rock to see the limestone erosion patterns underwater"
-      ],
-      "tags": [
-        "SUP",
-        "kayak",
-        "headland",
-        "north",
-        "tramuntana",
-        "sea-access-only",
-        "sup_launch",
-        "facing:45"
-      ],
-      "thumbnail_url": "file:///android_asset/images/place-punta-negra-sant-vicenc.jpg",
-      "photo_urls": [
-        {
-          "url": "file:///android_asset/images/place-punta-negra-sant-vicenc.jpg",
-          "source": "PEXELS"
-        }
-      ],
-      "description_es": "El cabo oscuro de caliza que marca la salida norte de la bahía de Cala Sant Vicenç. Desde el agua, el contraste entre la cara de roca negra y el mar esmeralda es de una belleza impactante.",
-      "tips_es": [
-        "Las rocas volcánicas oscuras contrastan con el agua turquesa",
-        "Snorkel excepcional en las grietas y cuevas submarinas",
-        "Llega en kayak desde Cala Sant Vicenç para la mejor experiencia"
-      ],
-      "name_de": "Punta Negra",
-      "description_de": "Vulkanische schwarze Felsen im Kontrast zum türkisfarbenen Wasser – hervorragendes Schnorcheln in Ritzen und kleinen Höhlen.",
-      "tips_de": [
-        "Dunkle Vulkanfelsen kontrastieren mit türkisfarbenem Wasser",
-        "Außergewöhnliches Schnorcheln in Ritzen und kleinen Unterwasserhöhlen",
-        "Per Kajak ab Cala Sant Vicenç für das beste Erlebnis anreisen"
-      ],
-      "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
-      "name_zh": "",
-      "description_zh": "",
-      "tips_zh": []
-    },
-    {
       "id": "cavall-bernat-coves-blanques",
-      "name": "Cavall Bernat & Coves Blanques",
-      "name_es": "Cavall Bernat y Coves Blanques",
+      "name": "Cavall Bernat & Cuevas Marinas",
+      "name_es": "Cavall Bernat y Cuevas Marinas",
       "description": "The most dramatic section of the Sant Vicenç coast — towering vertical cliffs of white limestone (coves blanques) rise directly from the sea while the Cavall Bernat peak looms above. The colour contrast between white rock, pine forest and turquoise water is extraordinary and only visible from the water.",
-      "category": "ADVENTURE",
-      "latitude": 39.92594,
-      "longitude": 3.07952,
+      "category": "SUP",
+      "latitude": 39.9198804,
+      "longitude": 3.0574707,
       "municipality": "Pollença",
       "price_level": "FREE",
       "rating": 4.9,
@@ -6901,6 +7008,26 @@
         {
           "url": "file:///android_asset/images/place-cavall-bernat-coves-blanques.jpg",
           "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/cavall-bernat-mia-1.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cavall-bernat-mia-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cavall-bernat-mia-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cavall-bernat-mia-4.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cavall-bernat-mia-5.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "El tramo más dramático de la costa de Sant Vicenç: verticales acantilados de caliza blanca se elevan directamente desde el mar mientras el pico del Cavall Bernat domina sobre ellos.",
@@ -6909,7 +7036,7 @@
         "El agua dentro de las cuevas tiene un color azul intenso",
         "El recorrido en kayak desde Cala Sant Vicenç dura unos 30 minutos"
       ],
-      "name_de": "Cavall Bernat & Coves Blanques",
+      "name_de": "Cavall Bernat & Meereshöhlen",
       "description_de": "Malerische Küstenformation mit weißen Kalksteinhöhlen – per Kajak ab Cala Sant Vicenç in ca. 30 Minuten erreichbar.",
       "tips_de": [
         "Höhlen sind schwimmend oder per Kajak erreichbar",
@@ -6924,99 +7051,98 @@
       "tips_zh": []
     },
     {
-      "id": "cueva-larga-azul-sant-vicenc",
-      "name": "Cueva Larga (Cueva Azul)",
-      "name_es": "Cueva Larga (Cueva Azul)",
-      "description": "A sea cave penetrating more than 40 metres into the limestone cliff face, where the turquoise bioluminescent light from below creates the 'blue cave' effect on the cave walls and ceiling. One of the most spectacular natural phenomena on the Mallorcan north coast — only accessible by flat-water SUP or kayak.",
-      "category": "ADVENTURE",
-      "latitude": 39.9285123,
-      "longitude": 3.0995516,
-      "municipality": "Pollença",
-      "price_level": "FREE",
-      "rating": 5.0,
-      "review_count": 95,
-      "tips": [
-        "CONDITIONS REQUIRED: flat sea (< 0.3m swell), no offshore wind — do not enter in any doubt",
-        "Paddle in slowly — the cave entrance narrows and waves amplify inside",
-        "Turn off your phone torch once inside to see the natural blue light effect",
-        "The cave is 40+ metres deep — bring a head torch for the inner section",
-        "If swell is present, observe from the entrance only — never force entry"
-      ],
-      "tags": [
-        "SUP",
-        "cave",
-        "bioluminescence",
-        "blue-cave",
-        "north",
-        "tramuntana",
-        "sea-access-only",
-        "advanced",
-        "conditional",
-        "sup_launch",
-        "facing:45",
-        "hidden_gem"
-      ],
-      "thumbnail_url": "file:///android_asset/images/cueva-azul-exterior.jpg",
+      "id": "cala-del-toro",
+      "name": "Cala del Toro",
+      "name_es": "Cala del Toro",
+      "description": "A hidden gem on Mallorca's southwest coast near Cap de Cala Figuera. This secluded cove features dramatic limestone cliffs, natural rock formations, and turquoise waters. Access requires descending stone steps carved into the cliff face, rewarding visitors with a wild, unspoiled spot away from the crowds. The natural rock arch and underwater marine life make it a favourite for swimmers and snorkellers alike.",
+      "category": "BEACH",
+      "latitude": 39.4777476,
+      "longitude": 2.4819875,
+      "municipality": "Calvià",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cueva-azul-exterior.jpg",
-          "source": "MINE",
-          "heroFocalY": 0.35
+          "url": "file:///android_asset/images/cala-del-toro-6.jpg",
+          "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cueva-azul-interior-1.jpg",
-          "source": "MINE",
-          "heroFocalY": 0.3
+          "url": "file:///android_asset/images/cala-del-toro-5.jpg",
+          "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cueva-azul-interior-2.jpg",
-          "source": "MINE",
-          "heroFocalY": 0.35
+          "url": "file:///android_asset/images/cala-del-toro-4.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cala-del-toro-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cala-del-toro-2.jpg",
+          "source": "MINE"
         }
       ],
-      "description_es": "Cueva marina de más de 40 metros de profundidad donde la luz turquesa desde abajo crea el efecto de 'cueva azul' en las paredes y el techo. Una de las experiencias de kayak más memorables de Mallorca.",
+      "thumbnail_url": "file:///android_asset/images/cala-del-toro-6.jpg",
+      "price_level": "FREE",
+      "rating": 4.9,
+      "review_count": 5,
+      "tags": [
+        "hidden_gem"
+      ],
+      "tips": [],
       "tips_es": [
-        "La cueva solo es accesible a nado — buena condición física recomendada",
-        "La luz azul dentro de la cueva es más intensa a media mañana",
-        "Lleva gafas de snorkel y aletas para mayor comodidad"
+        "El acceso desciende por escalones tallados en la roca — calzado con agarre recomendado",
+        "Ideal para buceo con tubo gracias al arco natural de roca y la vida marina",
+        "Sin servicios — lleva agua y comida",
+        "Mejor visitarla en días de calma; el oleaje puede dificultar el acceso"
       ],
-      "name_de": "Blaue Höhle (Cueva Azul)",
-      "description_de": "Atemberaubende Meereshöhle mit intensivem Blaulicht – nur zu Fuß erreichbar und ein unvergessliches Erlebnis für gute Schwimmer.",
-      "tips_de": [
-        "Höhle nur schwimmend erreichbar – gute körperliche Verfassung empfohlen",
-        "Das blaue Licht in der Höhle ist am intensivsten am späten Vormittag",
-        "Schnorchel und Flossen für mehr Komfort mitbringen"
-      ],
+      "name_de": "Cala del Toro",
+      "name_fr": "",
+      "name_it": "",
+      "name_nl": "",
       "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
       "name_zh": "",
+      "description_de": "Ein verstecktes Juwel an der Südwestküste Mallorcas nahe Cap de Cala Figuera. Diese abgeschiedene Bucht besticht durch dramatische Kalksteinklippen, natürliche Felsformationen und türkisfarbenes Wasser. Der Zugang erfolgt über in den Fels gehauene Stufen und belohnt mit einem wilden, unberührten Fleckchen fernab der Massen.",
+      "description_es": "Una joya escondida en la costa suroeste de Mallorca, cerca del Cap de Cala Figuera. Esta cala solitaria destaca por sus acantilados de piedra caliza, formaciones rocosas naturales y aguas turquesas. El acceso requiere bajar unos escalones tallados en la roca, recompensando a los visitantes con un rincón salvaje e intacto alejado de las multitudes.",
+      "description_fr": "",
+      "description_it": "",
+      "description_nl": "",
+      "description_ru": "",
       "description_zh": "",
+      "tips_de": [
+        "Der Zugang führt über in den Fels gehauene Stufen — griffige Schuhe empfohlen",
+        "Ideal zum Schnorcheln dank des natürlichen Felsbogens und des reichen Meereslebens",
+        "Keine Einrichtungen — Wasser und Essen mitbringen",
+        "Am besten bei ruhigem Wetter besuchen; Wellengang kann den Zugang erschweren"
+      ],
+      "tips_fr": [],
+      "tips_it": [],
+      "tips_nl": [],
+      "tips_ru": [],
       "tips_zh": [],
-      "hidden_gem_description": "Only accessible by sea in kayak or SUP. A marine cave over 40m deep where turquoise light creates a magical effect from inside. Not suitable for people with reduced mobility or without open water experience.",
-      "hidden_gem_description_es": "Solo accesible por mar en kayak o SUP. Una cueva marina de más de 40m de profundidad donde la luz turquesa crea un efecto mágico desde dentro. No apta para personas con movilidad reducida o sin experiencia en aguas abiertas.",
-      "hidden_gem_description_de": "Nur per Kajak oder SUP vom Meer aus erreichbar. Eine Meereshöhle von über 40m Tiefe, in der türkisfarbenes Licht von innen einen magischen Effekt erzeugt. Nicht geeignet für Personen mit eingeschränkter Mobilität.",
-      "cover": "file:///android_asset/images/cueva-azul-exterior.jpg",
-      "lat": 39.9285123,
-      "lon": 3.0995516
+      "gem_access": [
+        "caminar",
+        "natacion"
+      ]
     },
     {
       "id": "cala-en-basset",
-      "name": "Cala en Basset & Defense Tower",
-      "name_es": "Cala en Basset y Torre de Defensa",
+      "name": "Torre de Cala en Basset",
+      "name_es": "Torre de Cala en Basset",
       "description": "A rewarding circular hike from Sant Elm through fragrant pine forests to a 16th-century watchtower built to defend against Berber pirates. From the summit, the full silhouette of Sa Dragonera island unfolds across the Mediterranean. The descent leads to the turquoise waters of Cala en Basset — a perfect end-of-hike swim.",
       "category": "HIKING",
-      "latitude": 39.596,
-      "longitude": 2.3509,
+      "latitude": 39.5854657,
+      "longitude": 2.3462981,
       "municipality": "Andratx",
       "rating": 4.7,
       "review_count": 847,
       "tips": [
-        "Distance: 5.18 km circular route",
-        "Elevation gain: 245 m — difficulty: Easy",
-        "Estimated time: 2 hours",
-        "Start early to avoid midday heat",
-        "Parking at Avinguda de La Trapa, Sant Elm"
+        "In July and August arrive before 9:30 to find parking on Carrer de na Pòpia",
+        "Do not park beyond the tarmac section of the road",
+        "Wear proper footwear and avoid flip-flops — the terrain is rocky",
+        "Take care when climbing the tower: there are no safety barriers",
+        "Bring water and sun protection — there are no services on the route",
+        "Near the tower the path splits — take the right fork to descend to Cala en Basset",
+        "Total from the car park: 2.8 km round trip, 20–25 min each way"
       ],
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/cala-en-basset.jpg",
@@ -7044,16 +7170,24 @@
       ],
       "description_es": "Gratificante ruta circular desde Sant Elm por aromáticos bosques de pinos hasta una atalaya del siglo XVI construida para defenderse de los piratas berberiscos. Desde la cima, la silueta completa de Sa Dragonera se despliega en el horizonte.",
       "tips_es": [
-        "La torre defensiva del siglo XVI domina la entrada de la cala",
-        "Acceso a pie desde Sant Elm — unos 30 minutos de caminata",
-        "El agua verde esmeralda es perfecta para el baño"
+        "En julio y agosto llega antes de las 9:30 para encontrar aparcamiento en el Carrer de na Pòpia",
+        "No aparques más allá del asfalto de la carretera",
+        "Lleva calzado adecuado y evita las chanclas — el terreno es pedregoso",
+        "Cuidado al subir a la torre: no hay barreras de seguridad",
+        "Lleva agua y protección solar, no hay ningún servicio en la ruta",
+        "Cerca de la torre el sendero se divide — coge la derecha para bajar a Cala en Basset",
+        "En total desde el aparcamiento son 2,8 km (ida y vuelta), 20-25 minutos por trayecto"
       ],
-      "name_de": "Cala en Basset",
+      "name_de": "Torre de Cala en Basset",
       "description_de": "Smaragdgrüne Bucht mit einem Wachturm aus dem 16. Jahrhundert – fußläufig von Sant Elm, abseits der Massentouristen.",
       "tips_de": [
-        "Der Wachturm aus dem 16. Jahrhundert dominiert den Eingang",
-        "Zu Fuß von Sant Elm – ca. 30 Minuten Wanderung",
-        "Das smaragdgrüne Wasser ist ideal zum Baden"
+        "Im Juli und August vor 9:30 Uhr ankommen, um einen Parkplatz am Carrer de na Pòpia zu finden",
+        "Nicht über den asphaltierten Abschnitt der Straße hinaus parken",
+        "Geeignetes Schuhwerk tragen, Flip-Flops vermeiden — das Gelände ist felsig",
+        "Beim Besteigen des Turms Vorsicht: Es gibt keine Sicherheitsgeländer",
+        "Wasser und Sonnenschutz mitbringen — auf dem Weg gibt es keinerlei Versorgung",
+        "Nahe dem Turm teilt sich der Pfad — rechts abbiegen, um zur Cala en Basset hinabzusteigen",
+        "Gesamtdistanz ab dem Parkplatz: 2,8 km (Hin- und Rückweg), 20–25 Minuten pro Richtung"
       ],
       "name_ru": "",
       "description_ru": "",
@@ -7646,8 +7780,8 @@
     {
       "id": "gem-torre-verger",
       "name": "Torre Verger",
-      "name_es": "",
-      "name_de": "",
+      "name_es": "Torre Verger",
+      "name_de": "Torre Verger",
       "name_ru": "",
       "name_zh": "",
       "description": "Coastal watchtower built in 1579. Circular in plan, it was the only signal tower in Banyalbufar and part of the Tramuntana coastline defense network. Original battlements and arrow slits are still visible.",
@@ -7656,8 +7790,8 @@
       "description_ru": "Прибрежная сторожевая башня, построенная в 1579 году. Имеет круглую форму, была единственной сигнальной башней Баньяльбуфара и частью оборонительной сети вдоль побережья Трамунтаны. Оригинальные зубцы и бойницы сохранились до наших дней.",
       "description_zh": "建于1579年的沿海瞭望塔。圆形平面设计，是Banyalbufar唯一的信号塔，也是特拉蒙塔纳海岸防御网络的一部分。原始雉堞和箭孔至今仍清晰可见。",
       "category": "VIEWPOINT",
-      "latitude": 39.6897,
-      "longitude": 2.5081,
+      "latitude": 39.6830773,
+      "longitude": 2.49997,
       "address": "Ctra. Banyalbufar-Estellencs, km 88,6",
       "municipality": "Banyalbufar",
       "thumbnail_url": "file:///android_asset/images/gem-torre-verger.jpg",
@@ -7683,10 +7817,21 @@
         "senderismo"
       ],
       "tips": [],
-      "tips_es": [],
-      "tips_de": [],
+      "tips_es": [
+        "Acceso libre y gratuito — no se necesita reserva",
+        "Las vistas al Mediterráneo y a los acantilados de la Serra de Tramuntana son espectaculares",
+        "Combínala con una visita al pueblo de Banyalbufar, a pocos minutos en coche"
+      ],
+      "tips_de": [
+        "Freier und kostenloser Zugang — keine Reservierung erforderlich",
+        "Der Blick auf das Mittelmeer und die Tramuntana-Klippen ist spektakulär",
+        "Lässt sich gut mit einem Besuch des Dorfes Banyalbufar kombinieren, nur wenige Minuten entfernt"
+      ],
       "tips_ru": [],
-      "tips_zh": []
+      "tips_zh": [],
+      "gem_access": [
+        "mirador"
+      ]
     },
     {
       "id": "gem-costa-de-la-calma",
@@ -7694,8 +7839,8 @@
       "name_es": "Costa de la Calma",
       "description": "Costa de la Calma offers calm and natural beauty between Santa Ponça and Peguera, just 30 minutes from Palma. Its highlight is Cala Blanca beach, a small, open, rocky cove with clear waters ideal for a swim followed by sunbathing. At sunset, the area becomes one of Calvià's most special spots — perfect for watching the sun go down with a tinto de verano in hand.",
       "category": "BEACH",
-      "latitude": 39.522936,
-      "longitude": 2.466547,
+      "latitude": 39.5228398,
+      "longitude": 2.4687375,
       "municipality": "Calvià",
       "photo_urls": [
         {
@@ -7709,6 +7854,10 @@
         },
         {
           "url": "file:///android_asset/images/gem-costa-de-la-calma-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/gem-costa-de-la-calma-4.jpg",
           "source": "MINE"
         }
       ],
@@ -7745,7 +7894,11 @@
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "gem_access": [
+        "natacion",
+        "sunset"
+      ]
     },
     {
       "id": "mercat-1930",
@@ -7891,7 +8044,217 @@
       "cover": "file:///android_asset/images/place-cala-boquer-new.jpg",
       "heroFocalY": 0.7,
       "lat": 39.9290388,
-      "lon": 3.0946593
+      "lon": 3.0946593,
+      "tips": [
+        "Follow the GR221 trail from Port de Pollença — flat 2.7 km walk through the Boquer valley",
+        "Keep an eye out for Eleonora's falcons nesting on the Cavall Bernat cliffs",
+        "Rocky shore — water shoes recommended for entry",
+        "No facilities — bring water and snacks",
+        "Best in the morning before the wind picks up in the afternoon"
+      ],
+      "tips_es": [
+        "Sigue el sendero GR221 desde Port de Pollença — camino plano de 2,7 km por el valle de Boquer",
+        "Observa los halcones de Eleonora que anidan en los acantilados del Cavall Bernat",
+        "Orilla rocosa — escarpines recomendados para entrar al agua",
+        "Sin servicios — lleva agua y algo de comer",
+        "Mejor por la mañana antes de que sople el viento de la tarde"
+      ],
+      "tips_de": [
+        "Folge dem GR221 von Port de Pollença — flacher 2,7 km Spaziergang durch das Boquer-Tal",
+        "Achte auf Eleonorenfalken, die in den Cavall Bernat Klippen nisten",
+        "Felsiges Ufer — Wasserschuhe für den Einstieg empfohlen",
+        "Keine Einrichtungen — Wasser und Essen mitbringen",
+        "Am besten morgens, bevor der Nachmittagswind auffrischt"
+      ]
+    },
+    {
+      "id": "sup-cala-punta-negra-calvia",
+      "name": "SUP Cala Punta Negra",
+      "name_es": "SUP Cala Punta Negra",
+      "name_de": "SUP Cala Punta Negra",
+      "description": "A hidden SUP launch point near Portals Nous in Calvià, with calm turquoise waters sheltered by pine-covered cliffs. One of the most scenic and peaceful paddling spots on the southwest coast.",
+      "description_es": "Un punto de lanzamiento de SUP escondido cerca de Portals Nous en Calvià, con aguas turquesas tranquilas protegidas por acantilados cubiertos de pinos. Uno de los rincones más pintorescos del suroeste.",
+      "description_de": "Ein versteckter SUP-Startpunkt nahe Portals Nous in Calvià, mit ruhigem türkisfarbenem Wasser, geschützt durch kiefernbewachsene Klippen. Einer der schönsten Paddelspots an der Südwestküste.",
+      "category": "SUP",
+      "latitude": 39.5266789,
+      "longitude": 2.5510462,
+      "municipality": "Calvià",
+      "rating": 4.7,
+      "review_count": 180,
+      "tips": [
+        "Best launched at high tide — rocks can be exposed at low tide",
+        "Morning is calmer before the sea breeze picks up",
+        "Beginners welcome — waters are well sheltered"
+      ],
+      "tips_es": [
+        "Mejor lanzar con marea alta — las rocas pueden quedar expuestas con marea baja",
+        "Por las mañanas el agua está más tranquila antes de que sople la brisa",
+        "Apto para principiantes — las aguas están bien protegidas"
+      ],
+      "tips_de": [
+        "Am besten bei Hochwasser starten — bei Ebbe können Felsen freigelegt sein",
+        "Morgens ist das Wasser ruhiger, bevor die Seebrise einsetzt",
+        "Geeignet für Anfänger — gut geschütztes Gewässer"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "SUP",
+        "paddlesurf",
+        "sea",
+        "hidden",
+        "calvia",
+        "southwest",
+        "adventure",
+        "sup_launch",
+        "facing:225"
+      ],
+      "thumbnail_url": "file:///android_asset/images/sup-punta-negra-thumb.jpg",
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/sup-punta-negra-thumb.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "name_ru": "",
+      "description_ru": "",
+      "tips_ru": [],
+      "name_zh": "",
+      "description_zh": "",
+      "tips_zh": []
+    },
+    {
+      "id": "sup-sa-cova-baixa",
+      "name": "SUP Sa Cova Baixa",
+      "name_es": "SUP Sa Cova Baixa",
+      "name_de": "SUP Sa Cova Baixa",
+      "description": "A stunning SUP launch point at Es Caló de Sant Antoni, with crystal-clear turquoise waters and dramatic limestone cliffs. One of the most scenic paddling spots on the east coast of Mallorca.",
+      "description_es": "Un espectacular punto de lanzamiento de SUP en Es Caló de Sant Antoni, con aguas turquesas cristalinas y dramáticos acantilados de piedra caliza. Uno de los rincones más bonitos para practicar paddle surf en la costa este de Mallorca.",
+      "description_de": "Ein atemberaubender SUP-Startpunkt am Es Caló de Sant Antoni, mit kristallklarem türkisfarbenem Wasser und dramatischen Kalksteinfelsen. Einer der schönsten Paddelspots an der Ostküste Mallorcas.",
+      "category": "SUP",
+      "latitude": 39.4973173,
+      "longitude": 2.7458257,
+      "municipality": "Llucmajor",
+      "rating": 4.8,
+      "review_count": 210,
+      "tips": [
+        "Morning is the calmest time — afternoon winds can pick up from the east",
+        "The underwater cave (Sa Cova Baixa) is visible from the board at low tide",
+        "Ideal for all levels — sheltered by the cliffs from prevailing winds"
+      ],
+      "tips_es": [
+        "Por las mañanas el agua está más tranquila — por la tarde puede soplar viento del este",
+        "La cueva submarina (Sa Cova Baixa) se puede ver desde la tabla con marea baja",
+        "Apto para todos los niveles — los acantilados protegen del viento dominante"
+      ],
+      "tips_de": [
+        "Morgens ist das Wasser am ruhigsten — nachmittags kann Ostwind aufkommen",
+        "Die Unterwasserhöhle (Sa Cova Baixa) ist bei Ebbe vom Board aus sichtbar",
+        "Für alle Niveaus geeignet — die Klippen schützen vor dem Hauptwind"
+      ],
+      "price_level": "FREE",
+      "tags": [
+        "SUP",
+        "paddlesurf",
+        "sea",
+        "hidden",
+        "felanitx",
+        "east",
+        "adventure",
+        "sup_launch",
+        "facing:90"
+      ],
+      "thumbnail_url": "file:///android_asset/images/sup-sa-cova-baixa-thumb.jpg",
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/sup-sa-cova-baixa-thumb.jpg",
+          "source": "OTHER"
+        },
+        {
+          "url": "file:///android_asset/images/sup-sa-cova-baixa-2.jpg",
+          "source": "OTHER"
+        }
+      ],
+      "name_ru": "",
+      "description_ru": "",
+      "tips_ru": [],
+      "name_zh": "",
+      "description_zh": "",
+      "tips_zh": []
+    },
+    {
+      "id": "cueva-larga-azul-sant-vicenc",
+      "name": "Cueva Azul (Cova del Vell Marí)",
+      "name_es": "Cueva Azul (Cova del Vell Marí)",
+      "name_de": "Blaue Höhle (Cova del Vell Marí)",
+      "description": "A hidden sea cave accessible only by sea from Cala Boquer, 500 m along the coast. Inside, the water glows an intense turquoise-blue from sunlight filtering through the submerged entrance. The cave reaches 40 m deep. Only accessible when the sea is completely flat.",
+      "description_es": "Una cueva marina oculta, accesible solo por mar desde Cala Boquer, a 500 m por la costa. En su interior, el agua brilla con un intenso azul turquesa por la luz que se filtra a través de la entrada submarina. La cueva alcanza 40 m de profundidad. Solo accesible con el mar en calma total.",
+      "description_de": "Eine verborgene Meereshöhle, nur vom Meer erreichbar — 500 m von Cala Boquer entlang der Küste. Im Inneren leuchtet das Wasser durch den untergetauchten Eingang intensiv türkisblau. Die Höhle ist 40 m tief. Nur bei absolut ruhiger See zugänglich.",
+      "category": "SUP",
+      "latitude": 39.9285123,
+      "longitude": 3.0995516,
+      "municipality": "Pollença",
+      "price_level": "FREE",
+      "rating": 5.0,
+      "review_count": 89,
+      "tips": [
+        "Only enter if swell is under 0.3 m — check forecast before going",
+        "Switch off your torch inside to see the turquoise bioluminescent glow",
+        "500 m from Cala Boquer by sea, on the left side heading north",
+        "Best visited in the morning when light angle is optimal"
+      ],
+      "tips_es": [
+        "Solo entra si el oleaje es inferior a 0,3 m — consulta el pronóstico antes",
+        "Apaga la linterna dentro para ver el resplandor azul bioluminiscente",
+        "A 500 m de Cala Boquer por mar, a mano izquierda en dirección norte",
+        "Mejor visitarla por la mañana cuando el ángulo de luz es óptimo"
+      ],
+      "tips_de": [
+        "Nur einfahren bei Wellengang unter 0,3 m — vorher Wettervorhersage prüfen",
+        "Taschenlampe im Inneren ausschalten, um das türkisblau biolumineszente Leuchten zu sehen",
+        "500 m von Cala Boquer auf dem Seeweg, auf der linken Seite Richtung Norden",
+        "Morgens besuchen, wenn der Lichteinfall am besten ist"
+      ],
+      "tags": [
+        "hidden_gem",
+        "SUP",
+        "kayak",
+        "sea-access-only",
+        "caves",
+        "tramuntana",
+        "north",
+        "scenic",
+        "swimming"
+      ],
+      "gem_access": [
+        "sup",
+        "kayak",
+        "barco"
+      ],
+      "thumbnail_url": "file:///android_asset/images/cueva-azul-mia-2.jpg",
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/cueva-azul-mia-1.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cueva-azul-mia-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cueva-azul-mia-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cueva-azul-mia-4.jpg",
+          "source": "MINE"
+        }
+      ],
+      "name_ru": "",
+      "description_ru": "",
+      "tips_ru": [],
+      "name_zh": "",
+      "description_zh": "",
+      "tips_zh": []
     }
   ],
   "itineraries": [
@@ -8811,7 +9174,7 @@
       "id": "itin-sup-sant-vicenc",
       "title": "SUP Cala Sant Vicenç – Three Coves Circuit",
       "description": "A stunning intermediate paddle around the three turquoise coves of Sant Vicenç in the north of Mallorca. The route weaves between limestone headlands, enters sea caves and circles back via a long crystal-clear channel. Around 9 km and 3–4 hours on the water.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "MODERATE",
       "best_seasons": [
@@ -8921,6 +9284,18 @@
         {
           "url": "file:///android_asset/images/itin-sup-sant-vicenc-2.jpg",
           "source": "PEXELS"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-sant-vicenc-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-sant-vicenc-4.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/itin-sup-sant-vicenc-5.jpg",
+          "source": "MINE"
         }
       ]
     },
@@ -8928,7 +9303,7 @@
       "id": "itin-sup-formentor",
       "title": "SUP Formentor Peninsula Expedition",
       "description": "An advanced full-day SUP expedition from Port de Pollença along the entire Formentor peninsula coast. The route passes towering cliffs, hidden sea caves and deserted coves before reaching Playa de Formentor and the Cape lighthouse. A total of 16 km and 5–6 hours on the water — Mallorca's ultimate paddle adventure.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "HARD",
       "best_seasons": [
@@ -9048,7 +9423,7 @@
       "id": "itin-sup-mondrag",
       "title": "SUP Mondragó Natural Park",
       "description": "A relaxed beginner SUP session inside the protected waters of Mondragó Natural Park in southeast Mallorca. Paddle between the two coves of Mondragó, snorkel the rocky outcrops and drift through the pine-fringed channel that connects them. Around 6 km and 2–2.5 hours at an easy pace.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "EASY",
       "best_seasons": [
@@ -9147,7 +9522,7 @@
       "id": "itin-sup-portocolom",
       "title": "SUP Portocolom Harbour Circuit",
       "description": "A gentle beginner SUP circuit inside the beautiful natural harbour of Portocolom on the east coast. Paddle past colourful fishermen's houses, explore the calm inner lagoon and circle the headland back to the starting beach. Around 5 km and 1.5–2 hours — perfect for families and first-time paddlers.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "EASY",
       "best_seasons": [
@@ -9260,7 +9635,7 @@
       "id": "itin-sup-cala-ratjada",
       "title": "SUP Cala Ratjada – Northeast Cape Circuit",
       "description": "An intermediate SUP circuit along the wild northeast cape of Mallorca, connecting the coves of Cala Agulla, Cala Mesquida and Cala dels Ases. The route hugs a jagged limestone coastline punctuated by sea caves, with views of Menorca on the horizon. Around 8 km and 2.5–3 hours on the water.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "MODERATE",
       "best_seasons": [
@@ -9374,7 +9749,7 @@
       "id": "itin-sup-portals-vells",
       "title": "SUP Portals Vells – Caves & Hidden Coves",
       "description": "A spectacular intermediate SUP route exploring the secluded coves and medieval sea caves of Portals Vells on the southwest coast. The paddle takes you inside the ancient quarry caves carved by Genoese stonemasons, around the headland to the naturist cove of El Mago and back through crystal-clear turquoise water. Around 7 km and 2.5–3 hours.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "MODERATE",
       "best_seasons": [
@@ -9482,7 +9857,7 @@
       "id": "itin-sup-santa-ponsa",
       "title": "SUP Santa Ponsa Bay Circuit",
       "description": "A relaxed beginner SUP circuit inside the wide, sheltered bay of Santa Ponsa on the southwest coast. Paddle along the white sand beach, explore the rocky headlands at each end and cross to the Sa Caleta marina cove. Calm turquoise water and easy conditions make this a perfect first outing or family paddle. Around 5 km and 1.5–2 hours.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "EASY",
       "best_seasons": [
@@ -9590,7 +9965,7 @@
       "id": "itin-sup-camp-de-mar",
       "title": "SUP Camp de Mar – Island Paddle",
       "description": "A delightful beginner SUP outing at the tranquil beach of Camp de Mar near Andratx. The highlight is paddling out to the tiny offshore island connected by a wooden footbridge — home to a terrace restaurant hanging over the sea. The surrounding water is exceptionally shallow and calm, with a sandy white bottom visible throughout. Around 3 km and 1–1.5 hours.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "EASY",
       "best_seasons": [
@@ -9698,7 +10073,7 @@
       "id": "itin-sup-port-adriano",
       "title": "SUP Port Adriano – Cliffs & Sea Caves",
       "description": "An intermediate SUP route launching from the foot of Philippe Starck's iconic marina and heading south along a wild limestone coastline towards Portals Vells. The route hugs towering cliffs, enters several sea caves and discovers hidden coves reachable only by water. One of the most dramatic paddle routes on the southwest coast. Around 12 km return and 3–4 hours.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "MODERATE",
       "best_seasons": [
@@ -9815,7 +10190,7 @@
       "id": "itin-sup-soller",
       "title": "SUP Port de Sóller – Tramuntana Bay",
       "description": "A scenic intermediate SUP circuit inside the spectacular circular bay of Port de Sóller, enclosed by the Tramuntana mountains. Paddle past the lighthouse at the bay mouth, discover small pebble coves along the cliff base and cross the glassy harbour to the sandy beach. The mountain scenery reflected in the calm water makes this one of Mallorca's most beautiful paddles. Around 6 km and 2 hours.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "MODERATE",
       "best_seasons": [
@@ -9932,7 +10307,7 @@
       "id": "itin-sup-cala-major",
       "title": "SUP Cala Major – Palma Coastline",
       "description": "An easy early-morning SUP paddle along the Palma coastline, starting at Cala Major beach just west of the city. Glide past rocky coves and pine-backed cliffs with sweeping views of Palma's skyline, the royal Marivent Palace and the Gothic spires of La Seu cathedral rising above the city in the distance. Around 5 km and 1.5–2 hours one way.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "EASY",
       "best_seasons": [
@@ -10394,7 +10769,7 @@
       "id": "itin-hidden-gems-day",
       "title": "Hidden Gems of Mallorca",
       "description": "A two-day journey combining one of the island's best-kept secrets with three southwest coast highlights: a secret cliffside viewpoint, a defensive tower with views over Sa Dragonera after a pleasant walk, the calm Sant Elm beach for a relaxing swim in those same waters, and a beach club with a natural pool to end the day.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 2,
       "difficulty": "HARD",
       "total_distance_km": 120.0,
@@ -10636,14 +11011,14 @@
       "title": "Ruta Acantilados de Cavall Bernat y Cueva Azul",
       "title_es": "Ruta Acantilados de Cavall Bernat y Cueva Azul",
       "description": "The most spectacular SUP circuit on the Mallorcan north coast. From Cala Molins, paddle north past Cala Carbó, round the dark headland of Punta Negra and hug the towering white limestone cliffs of Cavall Bernat until you reach the Cueva Azul — a sea cave that glows turquoise from within. Return via the open channel with a stop for snorkel and cliff jumps at Cala Molins. 11 km · 3.5–4 h on the water.",
-      "category": "ADVENTURE",
+      "category": "SUP",
       "duration_days": 1,
       "difficulty": "MODERATE",
       "total_distance_km": 11.0,
       "highlights": [
         "Cueva Azul: 40m sea cave accessible only by SUP",
         "Cliffs of Cavall Bernat — only visible from the sea",
-        "Coves Blanques: white limestone caves at sea level",
+        "Marine caves and sea-level grottos carved into the white limestone cliffs",
         "Snorkel and cliff jumping return at Cala Molins"
       ],
       "best_seasons": [
@@ -10708,8 +11083,8 @@
           "name": "Cala Molins",
           "name_es": "Cala Molins",
           "role": "LAUNCH",
-          "lat": 39.919911,
-          "lng": 3.057912,
+          "lat": 39.9194398,
+          "lng": 3.0568049,
           "note_es": "Salida. Técnica de remo y calentamiento rumbo norte. La cala más protegida.",
           "distance_from_prev_km": 0.0,
           "icon": "launch",
@@ -10734,7 +11109,7 @@
         {
           "order": 3,
           "name": "Cavall Bernat & White Caves",
-          "name_es": "Cavall Bernat y Coves Blanques",
+          "name_es": "Cavall Bernat y Cuevas Marinas",
           "role": "WAYPOINT",
           "lat": 39.92594,
           "lng": 3.07952,
@@ -10743,7 +11118,7 @@
           "icon": "cliff",
           "note": "Cliffs and white caves. Stick close to the cliff base for the views.",
           "note_de": "Klippen und weiße Höhlen. An der Klippenbasis bleiben für die Aussicht.",
-          "name_de": "Cavall Bernat & Coves Blanques"
+          "name_de": "Cavall Bernat & Cuevas Marinas"
         },
         {
           "order": 4,
@@ -10871,7 +11246,7 @@
           "highlights": [
             "Cueva Azul: cueva marina de 40m solo accesible en SUP",
             "Acantilados de Cavall Bernat — solo visibles desde el mar",
-            "Coves Blanques: cuevas de caliza blanca a nivel del mar",
+            "Cuevas marinas y grutas talladas en los acantilados de caliza blanca",
             "Esnórquel y saltos desde acantilado en Cala Molins"
           ]
         },
@@ -10881,7 +11256,7 @@
           "highlights": [
             "Cueva Azul: 40 m tiefe Meereshöhle, nur per SUP erreichbar",
             "Felswände von Cavall Bernat — nur vom Meer aus sichtbar",
-            "Coves Blanques: weiße Kalksteinhöhlen auf Meereshöhe",
+            "Meereshöhlen und Grotten in den weißen Kalksteinfelsen",
             "Schnorcheln und Klippenspringen zurück an Cala Molins"
           ]
         },
@@ -11030,8 +11405,8 @@
           "name": "Cala Molins",
           "name_es": "Cala Molins",
           "description": "Inicio de la ruta",
-          "lat": 39.9201528,
-          "lng": 3.0595975
+          "lat": 39.9194398,
+          "lng": 3.0568049
         },
         {
           "order": 2,
@@ -11044,7 +11419,7 @@
         {
           "order": 3,
           "name": "Cavall Bernat",
-          "name_es": "Cavall Bernat & Coves Blanques",
+          "name_es": "Cavall Bernat & Cuevas Marinas",
           "description": "Cavall Bernat & White caves",
           "lat": 39.9259453,
           "lng": 3.0795214
@@ -11074,19 +11449,19 @@
       "highlights_es": [
         "Cueva Azul: cueva marina de 40m accesible solo en SUP",
         "Acantilados de Cavall Bernat — solo visibles desde el mar",
-        "Coves Blanques: cuevas de caliza blanca a nivel del mar",
+        "Cuevas marinas y grutas talladas en los acantilados de caliza blanca",
         "Snorkel y saltos desde los acantilados en Cala Molins"
       ],
       "highlights_en": [
         "Cueva Azul: 40m sea cave accessible only by SUP",
         "Cliffs of Cavall Bernat — only visible from the sea",
-        "Coves Blanques: white limestone caves at sea level",
+        "Marine caves and sea-level grottos carved into the white limestone cliffs",
         "Snorkel and cliff jumping return at Cala Molins"
       ],
       "highlights_de": [
         "Cueva Azul: 40m Meereshöhle, nur per SUP erreichbar",
         "Klippen von Cavall Bernat — nur vom Meer aus sichtbar",
-        "Coves Blanques: weiße Kalksteinhöhlen auf Meereshöhe",
+        "Meereshöhlen und Grotten in den weißen Kalksteinfelsen",
         "Schnorcheln und Klippenspringen bei der Rückkehr nach Cala Molins"
       ]
     }
@@ -12473,5 +12848,5 @@
       "valid_until": "2026-09-30"
     }
   ],
-  "CURRENT_SEED_VERSION": 187
+  "CURRENT_SEED_VERSION": 249
 }

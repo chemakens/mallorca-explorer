@@ -33,7 +33,7 @@ internal fun Category.routeColor(): String = when (this) {
     Category.GASTRONOMY -> "#E65100"
     Category.TOWN -> "#37474F"
     Category.VIEWPOINT -> "#C62828"
-    Category.ADVENTURE -> "#F9A825"
+    Category.SUP -> "#0288D1"
 }
 
 @HiltViewModel
@@ -84,7 +84,7 @@ class MapViewModel @Inject constructor(
                 Triple(itin, all, previewId)
             },
         ) { (placeList, cat, selectedId), isOnline, (itinerary, allItin, previewId) ->
-            val normalPlaces = placeList.filter { "hidden_gem" !in it.subCategories }
+            val normalPlaces = placeList.filter { "hidden_gem" !in it.subCategories && it.category != Category.SUP }
             val hiddenGems = placeList.filter { "hidden_gem" in it.subCategories }
             // When a category is active, the sheet shows ALL places in that category
             // (including hidden gems) so gems like Caló de Moro appear under Beach.

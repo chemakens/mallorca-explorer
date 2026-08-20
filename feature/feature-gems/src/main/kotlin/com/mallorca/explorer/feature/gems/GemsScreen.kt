@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -44,6 +45,8 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImagePainter
 import coil.compose.SubcomposeAsyncImage
 import coil.compose.SubcomposeAsyncImageContent
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.layout.FlowRow
 import com.mallorca.explorer.core.domain.model.Place
 
 private val GemGold = Color(0xFFF9A825)
@@ -217,6 +220,10 @@ private fun UnlockedGemCard(
                     style = MaterialTheme.typography.bodySmall,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                 )
+                GemAccessChips(
+                    accessTypes = place.gemAccess,
+                    modifier = Modifier.fillMaxWidth(),
+                )
                 Row(
                     modifier = Modifier
                         .clip(RoundedCornerShape(8.dp))
@@ -227,6 +234,49 @@ private fun UnlockedGemCard(
                 ) {
                     Text(stringResource(R.string.gems_unlocked_label), fontSize = 11.sp, color = GemAccent, fontWeight = FontWeight.SemiBold)
                 }
+            }
+        }
+    }
+}
+
+
+private fun gemAccessLabel(key: String): String = when (key) {
+    "caminar"   -> "🚶 Caminar"
+    "senderismo"-> "🥾 Senderismo"
+    "natacion"  -> "🏊 Natación"
+    "kayak_sup" -> "🚣 Kayak/SUP"
+    "barco"     -> "⛵ Barco"
+    "mirador"   -> "👁️ Mirador"
+    "sunset"    -> "🌅 Sunset"
+    "coche"     -> "🚗 Coche"
+    else        -> key
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun GemAccessChips(
+    accessTypes: List<String>,
+    modifier: Modifier = Modifier,
+) {
+    if (accessTypes.isEmpty()) return
+    FlowRow(
+        modifier = modifier,
+        horizontalArrangement = Arrangement.spacedBy(4.dp),
+        verticalArrangement = Arrangement.spacedBy(4.dp),
+    ) {
+        accessTypes.forEach { key ->
+            Box(
+                modifier = Modifier
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(Color.White.copy(alpha = 0.10f))
+                    .padding(horizontal = 6.dp, vertical = 2.dp),
+            ) {
+                Text(
+                    text = gemAccessLabel(key),
+                    fontSize = 10.sp,
+                    color = Color.White.copy(alpha = 0.75f),
+                    fontWeight = FontWeight.Medium,
+                )
             }
         }
     }
@@ -250,8 +300,8 @@ private fun LockedGemCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(116.dp),
-            verticalAlignment = Alignment.CenterVertically,
+                .heightIn(min = 116.dp),
+            verticalAlignment = Alignment.Top,
         ) {
             // Mystery thumbnail
             Box(
@@ -295,6 +345,10 @@ private fun LockedGemCard(
                     place.municipality.ifEmpty { "Mallorca" },
                     style = MaterialTheme.typography.bodySmall,
                     color = Color.White.copy(alpha = 0.3f),
+                )
+                GemAccessChips(
+                    accessTypes = place.gemAccess,
+                    modifier = Modifier.fillMaxWidth(),
                 )
                 Row(
                     modifier = Modifier

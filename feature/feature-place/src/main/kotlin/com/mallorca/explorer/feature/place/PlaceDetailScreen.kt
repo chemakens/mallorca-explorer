@@ -246,7 +246,7 @@ private fun PlaceDetailContent(
                     val heroAlignment = if (heroFocalY != null) {
                         BiasAlignment(horizontalBias = 0f, verticalBias = 2f * heroFocalY - 1f)
                     } else {
-                        Alignment.TopCenter
+                        Alignment.Center
                     }
                     SubcomposeAsyncImage(
                         model = place.photoUrls[page].url,
@@ -871,7 +871,7 @@ private fun SUPTrafficLightCard(
     }
 }
 
-private const val GEM_UNLOCK_RADIUS_KM = 0.2
+private const val GEM_UNLOCK_RADIUS_KM = 1.0
 
 @Suppress("MissingPermission")
 private fun checkProximityAndUnlock(

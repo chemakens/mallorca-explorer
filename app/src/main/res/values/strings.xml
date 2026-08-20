@@ -74,6 +74,7 @@
     <string name="gem_tap_to_discover">Tap to discover →</string>
     <string name="gems_screen_title">Hidden Gems</string>
     <string name="gems_screen_subtitle">Secret places only locals know</string>
+    <string name="gems_screen_geo_hint">Get within 1 km to unlock them automatically</string>
     <string name="gems_progress">%1$d / %2$d discovered</string>
     <string name="gems_unlocked_label">💎 Discovered</string>
     <string name="gems_locked_label">Secret Gem</string>

@@ -74,7 +74,7 @@
     <string name="gem_auto_unlock_hint">📍 Automatische Freischaltung per Nähe</string>
     <string name="gems_screen_title">Geheimtipps</string>
     <string name="gems_screen_subtitle">Geheime Orte, die nur Einheimische kennen</string>
-    <string name="gems_screen_geo_hint">Komm auf 200 Meter heran, um sie automatisch freizuschalten</string>
+    <string name="gems_screen_geo_hint">Komm auf 1 km heran, um sie automatisch freizuschalten</string>
     <string name="gems_progress">%1$d / %2$d entdeckt</string>
     <string name="gems_unlocked_label">💎 Entdeckt</string>
     <string name="gems_locked_label">Geheimtipp</string>

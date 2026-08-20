@@ -7,5 +7,5 @@ enum class Category(val displayName: String, val emoji: String) {
     GASTRONOMY("Gastronomy", "🍽"),
     TOWN("Town", "🏘"),
     VIEWPOINT("Viewpoint", "🌅"),
-    ADVENTURE("Adventure", "🧗"),
+    SUP("SUP", "🏄"),
 }

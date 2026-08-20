@@ -45,7 +45,7 @@ import com.mallorca.explorer.core.data.database.entity.WeatherCacheEntity
         VisitedPlaceEntity::class,
         RecentlyViewedEntity::class,
     ],
-    version = 15,
+    version = 16,
     exportSchema = true,
 )
 abstract class MallorcaDatabase : RoomDatabase() {
@@ -119,6 +119,12 @@ abstract class MallorcaDatabase : RoomDatabase() {
                 database.execSQL("ALTER TABLE discounts ADD COLUMN termsDe TEXT NOT NULL DEFAULT ''")
                 database.execSQL("ALTER TABLE discounts ADD COLUMN termsRu TEXT NOT NULL DEFAULT ''")
                 database.execSQL("ALTER TABLE discounts ADD COLUMN termsZh TEXT NOT NULL DEFAULT ''")
+            }
+        }
+
+        val MIGRATION_15_16 = object : Migration(15, 16) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.execSQL("ALTER TABLE places ADD COLUMN gemAccessJson TEXT NOT NULL DEFAULT '[]'")
             }
         }
 

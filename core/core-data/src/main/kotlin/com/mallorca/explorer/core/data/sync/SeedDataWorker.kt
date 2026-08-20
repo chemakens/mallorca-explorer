@@ -97,7 +97,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 193
+        const val CURRENT_SEED_VERSION = 249
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -115,6 +115,7 @@ class SeedDataWorker @AssistedInject constructor(
             "kayak-soller",
             "gtrentals-motorworld",
             "gem-mirador-sestaca",
+            "punta-negra-sant-vicenc",
         )
 
         // Itineraries removed from seed_data.json that must be deleted from the local DB.
@@ -172,6 +173,7 @@ class SeedDataWorker @AssistedInject constructor(
         val tags: List<String> = emptyList(),
         val website: String? = null, val phone_number: String? = null,
         val ticket_url: String? = null,
+        val gem_access: List<String> = emptyList(),
     ) {
         fun toEntity(): PlaceEntity {
             val photoImagesJson = Json.encodeToString(
@@ -196,6 +198,7 @@ class SeedDataWorker @AssistedInject constructor(
                 tagsJson = Json.encodeToString(ListSerializer(String.serializer()), tags),
                 website = website, phoneNumber = phone_number,
                 ticketUrl = ticket_url,
+                gemAccessJson = Json.encodeToString(ListSerializer(String.serializer()), gem_access),
                 lastUpdatedEpoch = Instant.now().toEpochMilli(),
             )
         }
