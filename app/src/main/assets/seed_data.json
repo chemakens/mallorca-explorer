@@ -3214,10 +3214,14 @@
       "rating": 4.6,
       "review_count": 310,
       "tips": [
-        "Park at Hotel Continental and take the path signposted towards the coast",
-        "The Michael Douglas estate (S'Estaca) is visible below — not open to the public",
-        "Combine with the Caló de S'Estaca cove just 5 min away",
-        "Dramatic sunset views over the Tramuntana coast"
+        "Park briefly at the bus stop next to Hotel Continental",
+        "The entrance to the path is next to a road sign that has nothing to do with the viewpoint",
+        "You pass alongside the Hotel Continental pool — guests can use it by consuming at the hotel bar until 18:00 during the open season",
+        "Take care near the end of the path: the fence is down and there is no protection against the drop — particularly for those with a fear of heights",
+        "From the viewpoint you can see Michael Douglas's estate (S'Estaca) where he spends holidays with his family, and to the right the iconic Sa Foradada rock arch over the sea",
+        "You can continue hiking on a connecting trail from the viewpoint",
+        "The total activity is brief depending on how long you spend photographing and enjoying the majestic sea views",
+        "Wear non-slip footwear"
       ],
       "price_level": "FREE",
       "tags": [
@@ -3229,29 +3233,63 @@
         "sunset",
         "hidden_gem"
       ],
-      "thumbnail_url": "file:///android_asset/images/mirador-estaca.jpg",
+      "thumbnail_url": "file:///android_asset/images/mirador-estaca-mia-3.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mirador-estaca.jpg",
+          "url": "file:///android_asset/images/mirador-estaca-mia-3.jpg",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/mirador-estaca-2.jpg",
+          "url": "file:///android_asset/images/mirador-estaca-mia-6.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/mirador-estaca-mia-7.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/mirador-estaca-mia-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/mirador-estaca-mia-4.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/mirador-estaca-mia-5.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/mirador-estaca-mia-1.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/mirador-estaca-mia-8.jpg",
           "source": "MINE"
         }
       ],
       "description_es": "Espectacular mirador costero cerca de la legendaria finca S'Estaca, antaño propiedad de Michael Douglas. Un camino secreto revela vistas dramáticas de la costa salvaje de la Tramuntana.",
       "tips_es": [
-        "Parada perfecta en el recorrido por la costa entre Deià y Valldemossa",
-        "La luz al atardecer es especialmente fotogénica",
-        "Aparcamiento en el arcén de la carretera"
+        "Puedes aparcar un momento en la parada de autobús que hay al lado del Hotel Continental",
+        "La entrada al camino está junto a una señal de carretera que no tiene nada que ver con el mirador",
+        "Pasas al lado de la piscina del Hotel Continental — se puede usar consumiendo en el bar del hotel hasta las 18:00 mientras el hotel está abierto en temporada",
+        "Mucho cuidado al final del camino: el vallado está caído y no hay protección contra la caída — especialmente para personas con vértigo",
+        "Desde el mirador se ve la finca de Michael Douglas (S'Estaca) donde pasa sus vacaciones con su familia, y a la derecha la icónica imagen de Sa Foradada con el mar de fondo",
+        "Desde aquí puedes continuar haciendo senderismo por otro camino que conecta con la zona",
+        "La actividad total es breve dependiendo del tiempo que dediques a fotografiar y contemplar la majestuosa vista del mar",
+        "Lleva calzado adecuado que no resbale"
       ],
       "name_de": "Mirador des Pi",
       "description_de": "Spektakulärer Küstenaussichtspunkt zwischen Deià und Valldemossa. Das Abendlicht taucht die Steilküste in warmes Gold.",
       "tips_de": [
-        "Idealer Stop auf der Küstenfahrt zwischen Deià und Valldemossa",
-        "Das Abendlicht ist besonders fotogen",
-        "Parken am Straßenrand"
+        "Kurz an der Bushaltestelle neben dem Hotel Continental parken",
+        "Der Einstieg in den Weg befindet sich neben einem Straßenschild, das nichts mit dem Aussichtspunkt zu tun hat",
+        "Der Weg führt am Pool des Hotel Continental vorbei — Gäste können ihn nutzen, wenn sie bis 18:00 Uhr an der Hotelbar konsumieren (nur in der Saison)",
+        "Am Ende des Weges ist Vorsicht geboten: Der Zaun ist umgefallen und es gibt keinen Schutz vor dem Absturz — besonders für Menschen mit Höhenangst",
+        "Vom Aussichtspunkt sieht man das Anwesen von Michael Douglas (S'Estaca), wo er mit seiner Familie Urlaub macht, und rechts das ikonische Felsentor Sa Foradada mit dem Meer im Hintergrund",
+        "Von hier aus kann man auf einem Verbindungsweg weiterwandern",
+        "Die gesamte Aktivität ist kurz — je nachdem, wie lange man die majestätische Meeresaussicht genießt und fotografiert",
+        "Rutschfestes Schuhwerk tragen"
       ],
       "name_ru": "",
       "description_ru": "",
@@ -12848,5 +12886,5 @@
       "valid_until": "2026-09-30"
     }
   ],
-  "CURRENT_SEED_VERSION": 249
+  "CURRENT_SEED_VERSION": 254
 }
