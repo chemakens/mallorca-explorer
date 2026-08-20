@@ -11519,7 +11519,7 @@
       "is_free": false,
       "price": "Desde 20€",
       "is_recurring": false,
-      "website_url": "https://festivalpollenca.com",
+      "website_url": "https://bravobaleares.com/palma-jazz-festival-2026/",
       "title_de": "Mallorca Jazzfestival",
       "description_de": "Open-Air-Jazzkonzerte im Juli im historischen Zentrum von Palma — internationale Künstler in unschlagbarer Kulisse."
     },
@@ -11537,7 +11537,8 @@
       "is_recurring": true,
       "recurring_day_of_week": 0,
       "title_de": "Mercat de l'Olivar",
-      "description_de": "Palmas größter überdachter Markt — frisches Obst und Gemüse, Fisch, Fleisch und lokale Spezialitäten. Montag bis Samstag geöffnet."
+      "description_de": "Palmas größter überdachter Markt — frisches Obst und Gemüse, Fisch, Fleisch und lokale Spezialitäten. Montag bis Samstag geöffnet.",
+      "website_url": "https://www.mercatolivar.com"
     },
     {
       "id": "event-dimecres-inca",
@@ -11553,7 +11554,8 @@
       "is_recurring": true,
       "recurring_day_of_week": 3,
       "title_de": "Markt von Inca — Mittwoch",
-      "description_de": "Mallorcas größter Wochenmarkt jeden Mittwoch in Inca — Lederwaren, Kleidung, lokale Lebensmittel und Antiquitäten."
+      "description_de": "Mallorcas größter Wochenmarkt jeden Mittwoch in Inca — Lederwaren, Kleidung, lokale Lebensmittel und Antiquitäten.",
+      "website_url": "https://thecalendarmallorca.com/events/mercat-des-dijous-inca/"
     },
     {
       "id": "event-nit-art-2026",
@@ -11567,7 +11569,8 @@
       "is_free": true,
       "is_recurring": false,
       "title_de": "Nacht der Kunst Palma",
-      "description_de": "Eine Nacht im September, in der Palmas Galerien, Museen und Ateliers bis Mitternacht kostenlos ihre Türen öffnen."
+      "description_de": "Eine Nacht im September, in der Palmas Galerien, Museen und Ateliers bis Mitternacht kostenlos ihre Türen öffnen.",
+      "website_url": "https://thecalendarmallorca.com/events/nit-de-lart-palma-2026/"
     },
     {
       "id": "event-fira-sineu",
@@ -11582,7 +11585,8 @@
       "is_recurring": true,
       "recurring_day_of_week": 3,
       "title_de": "Markt von Sineu — Mittwoch",
-      "description_de": "Der authentischste mittelalterliche Markt Mallorcas, jeden Mittwoch im Bergdorf Sineu."
+      "description_de": "Der authentischste mittelalterliche Markt Mallorcas, jeden Mittwoch im Bergdorf Sineu.",
+      "website_url": "https://firesifestes.es/es/"
     },
     {
       "id": "event-regata-palma-2026",
@@ -11634,7 +11638,8 @@
       "image_url": null,
       "is_recurring": false,
       "title_de": "Festa de Sant Bartomeu – Sóller",
-      "description_de": "Sóllers größtes Fest mit der Nachstellung der historischen Seeschlacht zwischen Christen und Mauren."
+      "description_de": "Sóllers größtes Fest mit der Nachstellung der historischen Seeschlacht zwischen Christen und Mauren.",
+      "website_url": "https://ajsoller.net"
     },
     {
       "id": "event-vermar-binissalem-2026",
@@ -11689,7 +11694,8 @@
       "is_recurring": true,
       "recurring_day_of_week": 5,
       "title_de": "Cine a la Fresca – Palma",
-      "description_de": "Open-Air-Kino unter dem Sternenhimmel in Palmas Parks jeden Freitag im Sommer."
+      "description_de": "Open-Air-Kino unter dem Sternenhimmel in Palmas Parks jeden Freitag im Sommer.",
+      "website_url": "https://palmajove.es/es/-/cinema-fresca26-cat"
     },
     {
       "id": "event-mallorca-walking-2026",
@@ -11724,7 +11730,8 @@
       "image_url": null,
       "is_recurring": false,
       "title_de": "Herbstmesse Inca",
-      "description_de": "Die größte Herbstmesse Mallorcas mit Erzeugnissen, Lederwaren und Kunsthandwerk."
+      "description_de": "Die größte Herbstmesse Mallorcas mit Erzeugnissen, Lederwaren und Kunsthandwerk.",
+      "website_url": "https://thecalendarmallorca.com/events/fira-de-tardor-inca/"
     },
     {
       "id": "event-mercat-santa-maria",
@@ -11741,7 +11748,8 @@
       "is_recurring": true,
       "recurring_day_of_week": 7,
       "title_de": "Mercat Pagès – Santa Maria del Camí",
-      "description_de": "Traditioneller Bauernmarkt jeden Sonntag mit lokalen Produkten, Weinen und Käsesorten."
+      "description_de": "Traditioneller Bauernmarkt jeden Sonntag mit lokalen Produkten, Weinen und Käsesorten.",
+      "website_url": "https://thecalendarmallorca.com/events/mercat-pages-santa-maria/"
     },
     {
       "id": "event-jazz-andratx-2026",
@@ -11759,7 +11767,8 @@
       "image_url": null,
       "is_recurring": false,
       "title_de": "Jazz & Más Festival – Andratx",
-      "description_de": "Intimes Jazzfestival mit Sonnenuntergangskonzerten und lokalem Wein."
+      "description_de": "Intimes Jazzfestival mit Sonnenuntergangskonzerten und lokalem Wein.",
+      "website_url": "https://ticketib.com/ca/events/festival-jazz-y-mas-2026-8-edicion"
     },
     {
       "id": "event-mostra-folklor-soller-2026",
@@ -11776,7 +11785,8 @@
       "image_url": null,
       "is_recurring": false,
       "title_de": "Internationale Folkloreshow",
-      "description_de": "Internationale Folkloreshow in Sóller mit Tanzgruppen aus aller Welt."
+      "description_de": "Internationale Folkloreshow in Sóller mit Tanzgruppen aus aller Welt.",
+      "website_url": "https://auditoriumpalma.com"
     },
     {
       "id": "event-pedra-musica-felanitx-2026",
@@ -11794,7 +11804,8 @@
       "image_url": null,
       "is_recurring": false,
       "title_de": "Pedra i Música – Felanitx",
-      "description_de": "Open-Air-Konzerte zwischen den alten Steinmauern des Kastells von Felanitx."
+      "description_de": "Open-Air-Konzerte zwischen den alten Steinmauern des Kastells von Felanitx.",
+      "website_url": "https://felanitx.org"
     },
     {
       "id": "event-mercat-llevant-palma",
@@ -11811,7 +11822,8 @@
       "is_recurring": true,
       "recurring_day_of_week": 6,
       "title_de": "Mercat de Llevant – Palma",
-      "description_de": "Samstäglicher Straßenmarkt mit frischen Produkten, Vintage-Waren und Street Food."
+      "description_de": "Samstäglicher Straßenmarkt mit frischen Produkten, Vintage-Waren und Street Food.",
+      "website_url": "https://www.palma.es/es/mercado-de-llevant"
     },
     {
       "id": "event-drac-art-manacor-2026",
@@ -11828,7 +11840,8 @@
       "image_url": null,
       "is_recurring": false,
       "title_de": "Festival Drac Art – Manacor",
-      "description_de": "Festival für zeitgenössische Kunst mit bildender Kunst, Performance, Musik und Gastronomie."
+      "description_de": "Festival für zeitgenössische Kunst mit bildender Kunst, Performance, Musik und Gastronomie.",
+      "website_url": "https://thecalendarmallorca.com/events/festival-drac-art/"
     },
     {
       "id": "event-mobofest-2026",
@@ -11878,7 +11891,8 @@
       "municipality": "Palma",
       "is_free": false,
       "price": "Desde 8€",
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://atlantidafilmfest.com"
     },
     {
       "id": "event-patrona-pollenca-2026",
@@ -11910,7 +11924,8 @@
       "municipality": "Calvià",
       "is_free": false,
       "price": "Desde 45€",
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://www.portadriano.com/eventos/port-adriano-music-festival/"
     },
     {
       "id": "event-lluc-a-peu-2026",
@@ -11925,7 +11940,8 @@
       "end_date": "2026-08-02",
       "municipality": "Escorca",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://www.grupguell.es"
     },
     {
       "id": "event-nits-sant-carles-2026",
@@ -11941,7 +11957,8 @@
       "municipality": "Palma",
       "is_free": false,
       "price": "Desde 12€",
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://ociomallorca.com/nits-sant-carles/"
     },
     {
       "id": "event-jazz-palma-festival-2026",
@@ -11973,7 +11990,8 @@
       "end_date": "2026-08-12",
       "municipality": "Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://thecalendarmallorca.com/events/eclipse-solar-total-2026/"
     },
     {
       "id": "event-verbenas-felanitx-2026",
@@ -11988,7 +12006,8 @@
       "end_date": "2026-08-23",
       "municipality": "Felanitx",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://felanitx.org"
     },
     {
       "id": "event-patrona-palma-2026",
@@ -12003,7 +12022,8 @@
       "end_date": "2026-09-05",
       "municipality": "Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://visitpalma.com/es/agenda/"
     },
     {
       "id": "event-feria-alcudia-2026",
@@ -12018,7 +12038,8 @@
       "end_date": "2026-10-04",
       "municipality": "Alcúdia",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://alcudiamallorca.com/es/eventos"
     },
     {
       "id": "event-dijous-bo-2026",
@@ -12049,7 +12070,8 @@
       "end_date": "2026-12-28",
       "municipality": "Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://visitpalma.com/es/agenda/"
     },
     {
       "id": "event-nits-bellver-2026",
@@ -12082,7 +12104,8 @@
       "municipality": "Sa Pobla",
       "address": "Plaça Major, Sa Pobla",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://mallorcajazzsapobla.com"
     },
     {
       "id": "event-noches-flamenco-palma-2026",
@@ -12117,7 +12140,8 @@
       "address": "Antiguo Aquapark, Calvià",
       "is_free": false,
       "price": "Desde 28€",
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://feverup.com/m/648840/en"
     },
     {
       "id": "event-es-jardi-2026",
@@ -12134,7 +12158,8 @@
       "address": "Recinto Mallorca Live, Calvià",
       "is_free": false,
       "price": "Desde 20€",
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://esjardimallorca.com"
     },
     {
       "id": "event-candlelight-hans-zimmer-2026",
@@ -12220,7 +12245,8 @@
       "municipality": "Vilafranca de Bonany",
       "address": "Vilafranca de Bonany",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://thecalendarmallorca.com/events/festes-de-la-beata-vilafranca/"
     },
     {
       "id": "event-festes-mare-deu-sineu-2026",
@@ -12236,7 +12262,8 @@
       "municipality": "Sineu",
       "address": "Sineu",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://thecalendarmallorca.com/events/festes-mare-de-deu-agost-sineu/"
     },
     {
       "id": "event-yves-klein-palma-2026",
@@ -12252,7 +12279,8 @@
       "municipality": "Palma",
       "address": "Museu Fundación Juan March, Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://www.march.es/es/palma/actividades"
     },
     {
       "id": "event-national-geographic-caixaforum-2026",
@@ -12321,7 +12349,8 @@
       "municipality": "Calvià",
       "address": "Puerto Portals, Calvià",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://puertoportals.com/en/evento/the-sunset-market/"
     },
     {
       "id": "event-mercadillo-port-pollenca-2026",
@@ -12338,7 +12367,8 @@
       "address": "Passeig Marítim, Port de Pollença",
       "is_free": true,
       "is_recurring": true,
-      "recurring_day_of_week": 2
+      "recurring_day_of_week": 2,
+      "website_url": "https://totnmallorca.com/port-pollenca-summer-night-market-dates-2026/"
     },
     {
       "id": "event-mercadillo-alcudia-noche-2026",
@@ -12354,7 +12384,8 @@
       "municipality": "Alcúdia",
       "address": "Passeig Marítim, Port d'Alcúdia",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://alcudiamallorca.com/es/eventos"
     },
     {
       "id": "event-mercado-artesanos-palma-2026",
@@ -12370,7 +12401,8 @@
       "municipality": "Palma",
       "address": "S'Hort del Rei, Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://www.palma.es/es/artesanal-de-l-hort-del-rei"
     },
     {
       "id": "event-mercat-santa-catalina-2026",
@@ -12386,7 +12418,8 @@
       "municipality": "Palma",
       "address": "Plaça de la Navegació, Santa Catalina, Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://mercatdesantacatalina.com"
     },
     {
       "id": "event-fira-melo-vilafranca-2026",
@@ -12401,7 +12434,8 @@
       "municipality": "Vilafranca de Bonany",
       "address": "Vilafranca de Bonany",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://thecalendarmallorca.com/events/fira-del-melo-vilafranca/"
     },
     {
       "id": "event-feria-pebre-bord-2026",
@@ -12416,7 +12450,8 @@
       "municipality": "Felanitx",
       "address": "Felanitx",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://thecalendarmallorca.com/events/"
     },
     {
       "id": "event-feria-otono-porreres-2026",
@@ -12432,7 +12467,8 @@
       "municipality": "Porreres",
       "address": "Porreres",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://firesifestes.es/es/"
     },
     {
       "id": "event-feria-calabaza-muro-2026",
@@ -12448,7 +12484,8 @@
       "municipality": "Muro",
       "address": "Muro",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://thecalendarmallorca.com/events/"
     },
     {
       "id": "event-feria-arroz-sa-pobla-2026",
@@ -12464,7 +12501,8 @@
       "municipality": "Sa Pobla",
       "address": "Sa Pobla",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://thecalendarmallorca.com/events/"
     },
     {
       "id": "event-feria-perdiz-montuiri-2026",
@@ -12479,7 +12517,8 @@
       "municipality": "Montuïri",
       "address": "Montuïri",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://thecalendarmallorca.com/events/"
     },
     {
       "id": "event-31-fam-palma-2026",
@@ -12528,7 +12567,8 @@
       "municipality": "Palma",
       "address": "Catedral de Mallorca, Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://catedraldemallorca.org"
     },
     {
       "id": "event-festa-estendard-2026",
@@ -12543,7 +12583,8 @@
       "municipality": "Palma",
       "address": "Plaça de Cort, Palma",
       "is_free": true,
-      "is_recurring": false
+      "is_recurring": false,
+      "website_url": "https://fiestasbaleares.com/que-hacemos/fiesta-de-lestandard/"
     },
     {
       "id": "event-sant-bartomeu-valldemossa-2026",
@@ -12886,5 +12927,6 @@
       "valid_until": "2026-09-30"
     }
   ],
-  "CURRENT_SEED_VERSION": 254
+  "CURRENT_SEED_VERSION": 255,
+  "version": 256
 }
