@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="gem_tap_to_discover">Tippen zum Entdecken →</string>
+    <string name="gems_screen_title">Geheimtipps</string>
+    <string name="gems_screen_subtitle">Geheime Orte, die nur Einheimische kennen</string>
+    <string name="gems_screen_geo_hint">Komm auf 1 km heran, um sie automatisch freizuschalten</string>
+    <string name="gems_progress">%1$d / %2$d entdeckt</string>
+    <string name="gems_unlocked_label">💎 Entdeckt</string>
+    <string name="gems_locked_label">Geheimtipp</string>
+    <string name="gem_auto_unlock_hint">📍 Automatische Freischaltung per Nähe</string>
+    <string name="gem_access_caminar">🚶 Wandern</string>
+    <string name="gem_access_senderismo">🥾 Trekking</string>
+    <string name="gem_access_natacion">🏊 Schwimmen</string>
+    <string name="gem_access_kayak_sup">🚣 Kajak/SUP</string>
+    <string name="gem_access_barco">⛵ Boot</string>
+    <string name="gem_access_mirador">👁️ Aussichtspunkt</string>
+    <string name="gem_access_sunset">🌅 Sonnenuntergang</string>
+    <string name="gem_access_coche">🚗 Auto</string>
+</resources>

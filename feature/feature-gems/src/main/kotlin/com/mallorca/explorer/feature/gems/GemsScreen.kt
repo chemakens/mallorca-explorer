@@ -239,17 +239,17 @@ private fun UnlockedGemCard(
     }
 }
 
-
+@Composable
 private fun gemAccessLabel(key: String): String = when (key) {
-    "caminar"   -> "🚶 Caminar"
-    "senderismo"-> "🥾 Senderismo"
-    "natacion"  -> "🏊 Natación"
-    "kayak_sup" -> "🚣 Kayak/SUP"
-    "barco"     -> "⛵ Barco"
-    "mirador"   -> "👁️ Mirador"
-    "sunset"    -> "🌅 Sunset"
-    "coche"     -> "🚗 Coche"
-    else        -> key
+    "caminar"    -> stringResource(R.string.gem_access_caminar)
+    "senderismo" -> stringResource(R.string.gem_access_senderismo)
+    "natacion"   -> stringResource(R.string.gem_access_natacion)
+    "kayak_sup"  -> stringResource(R.string.gem_access_kayak_sup)
+    "barco"      -> stringResource(R.string.gem_access_barco)
+    "mirador"    -> stringResource(R.string.gem_access_mirador)
+    "sunset"     -> stringResource(R.string.gem_access_sunset)
+    "coche"      -> stringResource(R.string.gem_access_coche)
+    else         -> key
 }
 
 @OptIn(ExperimentalLayoutApi::class)

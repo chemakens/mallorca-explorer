@@ -8,4 +8,12 @@
     <string name="gems_unlocked_label">💎 Discovered</string>
     <string name="gems_locked_label">Secret Gem</string>
     <string name="gem_auto_unlock_hint">📍 Auto-unlock by proximity</string>
+    <string name="gem_access_caminar">🚶 Walk</string>
+    <string name="gem_access_senderismo">🥾 Hiking</string>
+    <string name="gem_access_natacion">🏊 Swimming</string>
+    <string name="gem_access_kayak_sup">🚣 Kayak/SUP</string>
+    <string name="gem_access_barco">⛵ Boat</string>
+    <string name="gem_access_mirador">👁️ Viewpoint</string>
+    <string name="gem_access_sunset">🌅 Sunset</string>
+    <string name="gem_access_coche">🚗 Car</string>
 </resources>
