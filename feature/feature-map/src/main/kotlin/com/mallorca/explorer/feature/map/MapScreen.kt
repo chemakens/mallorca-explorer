@@ -251,7 +251,6 @@ fun MapScreen(
 
     val onPlaceClickState = rememberUpdatedState(onPlaceClick)
     val onItineraryClickState = rememberUpdatedState(onItineraryClick)
-    val currentRoutesState = rememberUpdatedState(uiState.allItineraryRoutes)
 
     val locationPermissionLauncher = rememberLauncherForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -446,75 +445,9 @@ fun MapScreen(
                     }
                 }
 
-                // 3. Itinerary waypoint/stop tap → show waypoint name or navigate to itinerary detail
-                val hitRadiusPx = 80f
-                var bestId: String? = null
-                var bestWaypointName: String? = null
-                var bestDistSq = hitRadiusPx * hitRadiusPx
-                var nearbyCount = 0
-
-                for (route in currentRoutesState.value) {
-                    // Check waypoints first (they have names)
-                    if (route.waypoints.isNotEmpty()) {
-                        for (wp in route.waypoints) {
-                            val markerScreen = map.projection.toScreenLocation(
-                                org.maplibre.android.geometry.LatLng(wp.location.latitude, wp.location.longitude)
-                            )
-                            val dx = tapScreen.x - markerScreen.x
-                            val dy = tapScreen.y - markerScreen.y
-                            val distSq = dx * dx + dy * dy
-                            if (distSq < bestDistSq) {
-                                bestDistSq = distSq
-                                bestId = route.id
-                                bestWaypointName = wp.name
-                            }
-                            if (distSq < 120f * 120f) nearbyCount++
-                        }
-                    } else {
-                        // Fall back to coords if no waypoints
-                        for (coord in route.coords) {
-                            val markerScreen = map.projection.toScreenLocation(
-                                org.maplibre.android.geometry.LatLng(coord.latitude, coord.longitude)
-                            )
-                            val dx = tapScreen.x - markerScreen.x
-                            val dy = tapScreen.y - markerScreen.y
-                            val distSq = dx * dx + dy * dy
-                            if (distSq < bestDistSq) { bestDistSq = distSq; bestId = route.id }
-                            if (distSq < 120f * 120f) nearbyCount++
-                        }
-                    }
-                }
-
-                when {
-                    bestId != null && bestWaypointName != null -> {
-                        // Show waypoint name in toast
-                        android.widget.Toast.makeText(
-                            context,
-                            bestWaypointName,
-                            android.widget.Toast.LENGTH_SHORT
-                        ).show()
-                        true
-                    }
-                    bestId != null -> {
-                        map.animateCamera(
-                            CameraUpdateFactory.newLatLngZoom(latLng, maxOf(map.cameraPosition.zoom, 12.0)), 350,
-                        )
-                        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
-                            onItineraryClickState.value(bestId)
-                        }, 200)
-                        true
-                    }
-                    nearbyCount >= 2 && map.cameraPosition.zoom < 13 -> {
-                        map.animateCamera(
-                            CameraUpdateFactory.newLatLngZoom(latLng, map.cameraPosition.zoom + 2.5), 600,
-                        )
-                        true
-                    }
-                    else -> {
-                        viewModel.onBottomSheetDismissed()
-                        false
-                    }
-                }
+                // Nothing found → dismiss bottom sheet
+                viewModel.onBottomSheetDismissed()
+                false
             }
         }
     }
