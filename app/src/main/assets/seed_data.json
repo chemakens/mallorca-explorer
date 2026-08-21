@@ -1279,8 +1279,8 @@
       "name_es": "Castell d'Alaró",
       "description": "A dramatic medieval castle perched on a rocky peak at 822m, surrounded by holm oak forest. Offers panoramic views across the entire Mallorcan plain. The climb is rewarded with a restaurant at the top.",
       "category": "HIKING",
-      "latitude": 39.7325,
-      "longitude": 2.7936,
+      "latitude": 39.7294002,
+      "longitude": 2.7886528,
       "municipality": "Alaró",
       "rating": 4.8,
       "review_count": 2200,
@@ -1800,18 +1800,23 @@
       "id": "sa-foradada",
       "name": "Sa Foradada",
       "name_es": "Sa Foradada",
-      "description": "A dramatic rocky peninsula near Deià with a 18-metre natural hole (foradada = pierced) carved by the sea. A 30-minute walk from the Son Marroig estate leads to the tip of the promontory with vertiginous views.",
+      "description": "Sa Foradada is a famous rocky peninsula on the northwest coast of Mallorca, in the municipality of Deià, within the Serra de Tramuntana. It stands out for its great natural hole — 33 metres high — carved by sea erosion, and for offering one of the most beautiful sunsets on the island from the Son Marroig Mirador. The hole gives the place its name — foradada means pierced in Catalan — and can be seen from afar and from the nearby viewpoints. The surroundings combine steep cliffs, Mediterranean pines and crystal-clear waters. Historically it was highly appreciated by the Austrian Archduke Ludwig Salvator of Habsburg in the late 19th century.",
       "category": "VIEWPOINT",
-      "latitude": 39.7503,
-      "longitude": 2.6279,
+      "latitude": 39.7510553,
+      "longitude": 2.6299403,
       "municipality": "Deià",
       "rating": 4.7,
       "review_count": 980,
       "tips": [
-        "Walk down from Son Marroig estate — 30 min each way on a rough path",
-        "The hole is best seen from a boat or from the water",
-        "Combined with a visit to Son Marroig makes a great half-day",
-        "Take the GR221 section towards Deià for beautiful coastal scenery"
+        "2-hour round trip hike from the Son Marroig Mirador — wide and clear path, easy to follow",
+        "Easy difficulty going down, but the return uphill is tiring in hot weather — bring plenty of water",
+        "Wear proper hiking footwear — not suitable for pushchairs or strollers",
+        "At the start you must climb a staircase by Son Marroig mansion — only for people with good mobility",
+        "Only accessible on foot or by boat",
+        "The mirador parking is small and paid — bring coins for the ticket machine",
+        "At the end is Restaurant Sa Foradada, famous for its wood-fired paellas — open spring and summer, book ahead",
+        "At the tip there is a small jetty with water access for swimming if the weather allows",
+        "At the Son Marroig Mirador there is a chiringuito with chairs and tables — one of the best spots on the island to watch the sunset"
       ],
       "price_level": "FREE",
       "tags": [
@@ -1832,20 +1837,52 @@
         {
           "url": "file:///android_asset/images/place-sa-foradada-2.jpg",
           "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-sa-foradada-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-sa-foradada-5.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-sa-foradada-6.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/place-sa-foradada-7.jpg",
+          "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/place-sa-foradada-10.jpg",
+          "source": "MINE"
         }
       ],
-      "description_es": "Dramática península rocosa cerca de Deià con un agujero natural de 18 metros excavado por el mar. Un paseo de 30 minutos desde la finca Son Marroig conduce al extremo del promontorio con vistas vertiginosas.",
+      "description_es": "Sa Foradada es una famosa península rocosa en la costa noroeste de Mallorca, dentro del municipio de Deià, en plena Sierra de Tramuntana. Destaca por su gran agujero natural de 33 metros de altura en la roca, formado por erosión marina, y por ofrecer uno de los atardeceres más bellos de la isla desde el Mirador de Son Marroig. El agujero da nombre al lugar — foradada significa agujereada en catalán — y puede verse desde la lejanía y los miradores de la zona. El entorno combina acantilados escarpados, pinos mediterráneos y aguas cristalinas. Históricamente fue una zona muy apreciada por el Archiduque austríaco Luis Salvador de Habsburgo a finales del siglo XIX.",
       "tips_es": [
-        "El camino desde Son Marroig tarda unos 30 minutos en bajada",
-        "Pide permiso en Son Marroig para acceder al camino privado",
-        "El embarcadero de piedra es ideal para tirarse al mar"
+        "Excursión de 2 horas ida y vuelta desde el Mirador de Son Marroig — camino ancho y claro, sin pérdida",
+        "Dificultad fácil en bajada, pero la subida de regreso cansa más si hace calor — lleva suficiente agua",
+        "Lleva calzado de hiking adecuado — no apto para carritos de bebé",
+        "Al inicio hay que pasar una escalinata junto a la mansión de Son Marroig — solo para personas con buena movilidad",
+        "Solo se puede llegar a pie o en barco",
+        "El aparcamiento del mirador es pequeño y de pago con máquinas de ticket",
+        "Al final está el Restaurante Sa Foradada, famoso por sus paellas cocinadas con leña — abre en primavera y verano, reserva con antelación",
+        "En la punta hay un pequeño embarcadero con acceso al agua para nadar si el tiempo acompaña",
+        "En el Mirador de Son Marroig hay un chiringuito con sillas y mesas — uno de los mejores lugares de la isla para ver la puesta de sol"
       ],
       "name_de": "Sa Foradada",
-      "description_de": "Dramatische Felsenhalbinsel mit einem 18 m großen natürlichen Loch – Wahrzeichen der Westküste nahe Deià.",
+      "description_de": "Sa Foradada ist eine berühmte Felshalbinsel an der Nordwestküste Mallorcas, in der Gemeinde Deià, mitten in der Serra de Tramuntana. Bekannt ist sie für ihr großes natürliches Loch — 33 Meter hoch — das durch Meereserosion entstanden ist, und für einen der schönsten Sonnenuntergänge der Insel vom Mirador Son Marroig aus. Das Loch gibt dem Ort seinen Namen — foradada bedeutet auf Katalanisch durchlöchert — und ist aus der Ferne sowie von den umliegenden Aussichtspunkten zu sehen. Die Umgebung vereint steile Klippen, mediterrane Pinien und kristallklares Wasser. Historisch war der Ort ein Lieblingsplatz von Erzherzog Ludwig Salvator von Österreich im späten 19. Jahrhundert.",
       "tips_de": [
-        "Der Weg von Son Marroig dauert ca. 30 Minuten bergab",
-        "In Son Marroig um Erlaubnis für den privaten Weg bitten",
-        "Der Steinkai ist ideal zum ins Wasser springen"
+        "2-stündige Rundwanderung vom Mirador Son Marroig — breiter, klar markierter Weg",
+        "Leichte Schwierigkeit bergab, aber der Rückweg bergauf ist bei Hitze anstrengend — genug Wasser mitnehmen",
+        "Geeignetes Wanderschuhwerk tragen — nicht für Kinderwagen geeignet",
+        "Am Anfang muss eine Treppe neben der Son Marroig Anlage überwunden werden — nur für Personen mit guter Mobilität",
+        "Nur zu Fuß oder per Boot erreichbar",
+        "Der Mirador-Parkplatz ist klein und kostenpflichtig — Kleingeld für den Ticketautomaten mitbringen",
+        "Am Ende liegt das Restaurant Sa Foradada, bekannt für holzofengegrillte Paella — geöffnet im Frühjahr und Sommer, Reservierung empfohlen",
+        "An der Spitze gibt es einen kleinen Steg mit Wasserzugang zum Schwimmen, wenn das Wetter es erlaubt",
+        "Am Mirador Son Marroig gibt es einen Chiringuito mit Stühlen und Tischen — einer der schönsten Plätze der Insel für den Sonnenuntergang"
       ],
       "name_ru": "",
       "description_ru": "",
@@ -4438,67 +4475,6 @@
         "Technische Route die etwas Bergerfahrung erfordert",
         "Genug Wasser mitbringen – keine Quellen auf der Strecke",
         "Der Wasserfall ist nach Herbstregen besonders beeindruckend"
-      ],
-      "name_ru": "",
-      "description_ru": "",
-      "tips_ru": [],
-      "name_zh": "",
-      "description_zh": "",
-      "tips_zh": []
-    },
-    {
-      "id": "sa-foradada-hike",
-      "name": "Sa Foradada",
-      "name_es": "Sa Foradada",
-      "description": "A spectacular hike down from the clifftop mirador to the iconic perforated rock peninsula and the secluded cala below, where the legendary Restaurant Sa Foradada sits right at the water's edge. The descent winds through pine and olive terraces with jaw-dropping views of the northwest coast.",
-      "category": "HIKING",
-      "latitude": 39.7567,
-      "longitude": 2.6223,
-      "municipality": "Deià",
-      "address": "Mirador de Sa Foradada, Ma-10, Deià",
-      "rating": 4.8,
-      "review_count": 1240,
-      "price_level": "FREE",
-      "tips": [
-        "Park at the Mirador de Sa Foradada lay-by on the Ma-10 between Deià and Valldemossa",
-        "The descent takes about 45 min — steep in places, wear shoes with grip",
-        "Restaurant Sa Foradada is open for lunch (reservations recommended in summer)",
-        "The famous hole in the rock is best seen from the sea or from the peninsula itself",
-        "Return climb is harder — allow 1 h back up, especially in summer heat"
-      ],
-      "tags": [
-        "coastal",
-        "viewpoint",
-        "mirador",
-        "tramuntana",
-        "restaurant",
-        "moderate",
-        "cala",
-        "iconic"
-      ],
-      "thumbnail_url": "file:///android_asset/images/place-sa-foradada-hike.jpg",
-      "photo_urls": [
-        {
-          "url": "file:///android_asset/images/place-sa-foradada-hike.jpg",
-          "source": "MINE"
-        },
-        {
-          "url": "file:///android_asset/images/place-sa-foradada-hike-2.jpg",
-          "source": "PIXABAY"
-        }
-      ],
-      "description_es": "Dramática península rocosa cerca de Deià con un agujero natural de 18 metros excavado por el mar. Un paseo de 30 minutos desde la finca Son Marroig conduce al extremo del promontorio con vistas vertiginosas.",
-      "tips_es": [
-        "El camino desde Son Marroig tarda unos 30 minutos en bajada",
-        "Pide permiso en Son Marroig para acceder al camino privado",
-        "El embarcadero de piedra es ideal para tirarse al mar"
-      ],
-      "name_de": "Sa Foradada",
-      "description_de": "Dramatische Felsenhalbinsel mit einem 18 m großen natürlichen Loch – Wahrzeichen der Westküste nahe Deià.",
-      "tips_de": [
-        "Der Weg von Son Marroig dauert ca. 30 Minuten bergab",
-        "In Son Marroig um Erlaubnis für den privaten Weg bitten",
-        "Der Steinkai ist ideal zum ins Wasser springen"
       ],
       "name_ru": "",
       "description_ru": "",
