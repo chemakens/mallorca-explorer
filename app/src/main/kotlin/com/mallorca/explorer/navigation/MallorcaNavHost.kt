@@ -2,6 +2,7 @@ package com.mallorca.explorer.navigation
 
 import androidx.compose.animation.ExperimentalSharedTransitionApi
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
@@ -102,6 +103,7 @@ fun MallorcaNavHost(
     }
 
     Scaffold(
+        containerColor = Color.Transparent,
         topBar = { OfflineBanner(isOffline = isOffline) },
         bottomBar = {
             if (showBottomBar) {
@@ -109,6 +111,7 @@ fun MallorcaNavHost(
                 Surface(
                     modifier = Modifier
                         .fillMaxWidth()
+                        .navigationBarsPadding()
                         .padding(horizontal = 16.dp, vertical = 8.dp),
                     shape = RoundedCornerShape(24.dp),
                     shadowElevation = 12.dp,
