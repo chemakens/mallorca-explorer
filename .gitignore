@@ -14,3 +14,8 @@ gradlew.bat
 app/release/
 node_modules/
 *.jks
+
+# Firestore utility scripts
+scripts/update-places-firestore.js
+scripts/upload-places-to-firestore.js
+scripts/verify-sa-foradada.js
