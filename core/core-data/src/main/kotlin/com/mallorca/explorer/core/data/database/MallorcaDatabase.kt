@@ -141,6 +141,11 @@ abstract class MallorcaDatabase : RoomDatabase() {
                 } catch (e: Exception) {
                     // Column already exists for users migrated 15→16
                 }
+                try {
+                    database.execSQL("ALTER TABLE itineraries ADD COLUMN routePolylinePointsJson TEXT NOT NULL DEFAULT '[]'")
+                } catch (e: Exception) {
+                    // Column already exists for some users
+                }
             }
         }
     }
