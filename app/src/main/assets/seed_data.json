@@ -11521,7 +11521,11 @@
       "is_recurring": false,
       "website_url": "https://bravobaleares.com/palma-jazz-festival-2026/",
       "title_de": "Mallorca Jazzfestival",
-      "description_de": "Open-Air-Jazzkonzerte im Juli im historischen Zentrum von Palma — internationale Künstler in unschlagbarer Kulisse."
+      "description_de": "Open-Air-Jazzkonzerte im Juli im historischen Zentrum von Palma — internationale Künstler in unschlagbarer Kulisse.",
+      "title_ru": "Международный джазовый фестиваль Майорки",
+      "title_zh": "马略卡国际爵士音乐节",
+      "description_ru": "Ежегодный фестиваль с международными джазовыми артистами в исторических местах Пальмы.",
+      "description_zh": "一年一度的爵士音乐节，汇聚国际著名艺术家，在帕尔马历史遗址举行露天演出。"
     },
     {
       "id": "event-mercat-olivar",
@@ -11538,7 +11542,11 @@
       "recurring_day_of_week": 0,
       "title_de": "Mercat de l'Olivar",
       "description_de": "Palmas größter überdachter Markt — frisches Obst und Gemüse, Fisch, Fleisch und lokale Spezialitäten. Montag bis Samstag geöffnet.",
-      "website_url": "https://www.mercatolivar.com"
+      "website_url": "https://www.mercatolivar.com",
+      "title_ru": "Рынок Оливар — Пальма",
+      "title_zh": "奥利瓦尔市场 — 帕尔马",
+      "description_ru": "Крытый рынок Пальмы с лучшими свежими продуктами, рыбой, мясом и деликатесами Майорки.",
+      "description_zh": "帕尔马室内市场，提供新鲜产品、鱼类、肉类和马略卡特产，每天开放。"
     },
     {
       "id": "event-dimecres-inca",
@@ -11555,7 +11563,11 @@
       "recurring_day_of_week": 3,
       "title_de": "Markt von Inca — Mittwoch",
       "description_de": "Mallorcas größter Wochenmarkt jeden Mittwoch in Inca — Lederwaren, Kleidung, lokale Lebensmittel und Antiquitäten.",
-      "website_url": "https://thecalendarmallorca.com/events/mercat-des-dijous-inca/"
+      "website_url": "https://thecalendarmallorca.com/events/mercat-des-dijous-inca/",
+      "title_ru": "Рынок Инки — Среда",
+      "title_zh": "因卡周三集市",
+      "description_ru": "Традиционный еженедельный рынок по средам в Инке с продуктами и ремёслами.",
+      "description_zh": "因卡每周三传统集市，出售农产品、皮革制品和手工艺品。"
     },
     {
       "id": "event-nit-art-2026",
@@ -11570,7 +11582,11 @@
       "is_recurring": false,
       "title_de": "Nacht der Kunst Palma",
       "description_de": "Eine Nacht im September, in der Palmas Galerien, Museen und Ateliers bis Mitternacht kostenlos ihre Türen öffnen.",
-      "website_url": "https://thecalendarmallorca.com/events/nit-de-lart-palma-2026/"
+      "website_url": "https://thecalendarmallorca.com/events/nit-de-lart-palma-2026/",
+      "title_ru": "Ночь искусства в Пальме 2026",
+      "title_zh": "帕尔马艺术之夜 2026",
+      "description_ru": "Галереи и музеи Пальмы открываются ночью с бесплатным входом и специальными выставками.",
+      "description_zh": "帕尔马画廊和博物馆夜间免费开放，举办表演和特别展览。"
     },
     {
       "id": "event-fira-sineu",
@@ -11586,7 +11602,11 @@
       "recurring_day_of_week": 3,
       "title_de": "Markt von Sineu — Mittwoch",
       "description_de": "Der authentischste mittelalterliche Markt Mallorcas, jeden Mittwoch im Bergdorf Sineu.",
-      "website_url": "https://firesifestes.es/es/"
+      "website_url": "https://firesifestes.es/es/",
+      "title_ru": "Рынок Синеу — Среда",
+      "title_zh": "锡内乌周三集市",
+      "description_ru": "Один из самых живописных традиционных рынков Майорки каждую среду на площади Синеу.",
+      "description_zh": "马略卡最具风情的传统市场之一，每周三在锡内乌广场举行。"
     },
     {
       "id": "event-regata-palma-2026",
@@ -11603,7 +11623,11 @@
       "is_recurring": false,
       "website_url": "https://realgcnautico.com",
       "title_de": "Copa del Rey de Vela",
-      "description_de": "Das renommierteste Segelrennen des Mittelmeers in der Bucht von Palma im August mit über 100 Booten aus aller Welt."
+      "description_de": "Das renommierteste Segelrennen des Mittelmeers in der Bucht von Palma im August mit über 100 Booten aus aller Welt.",
+      "title_ru": "Кубок Короля по парусному спорту",
+      "title_zh": "国王帆船杯",
+      "description_ru": "Престижная королевская регата в заливе Пальмы с сотнями яхт со всего мира.",
+      "description_zh": "帕尔马湾享有盛誉的国王帆船赛，地中海最重要的帆船赛事之一。"
     },
     {
       "id": "event-pollenca-classics-2026",
@@ -11622,7 +11646,11 @@
       "is_recurring": false,
       "website_url": "https://festivalpollenca.com",
       "title_de": "Internationales Musikfestival Pollença",
-      "description_de": "Eines der bedeutendsten klassischen Musikfestivals Europas im römischen Kreuzgang von Sant Domingo."
+      "description_de": "Eines der bedeutendsten klassischen Musikfestivals Europas im römischen Kreuzgang von Sant Domingo.",
+      "title_ru": "Международный музыкальный фестиваль Польенсы",
+      "title_zh": "波连萨国际音乐节",
+      "description_ru": "Один из старейших классических фестивалей Испании во дворе монастыря Санто-Доминго.",
+      "description_zh": "西班牙最古老的古典音乐节之一，在圣多明各修道院庭院露天演出。"
     },
     {
       "id": "event-sant-bartomeu-soller-2026",
@@ -11639,7 +11667,11 @@
       "is_recurring": false,
       "title_de": "Festa de Sant Bartomeu – Sóller",
       "description_de": "Sóllers größtes Fest mit der Nachstellung der historischen Seeschlacht zwischen Christen und Mauren.",
-      "website_url": "https://ajsoller.net"
+      "website_url": "https://ajsoller.net",
+      "title_ru": "Праздник Святого Бартоломе в Сольере",
+      "title_zh": "索勒圣巴托洛梅节",
+      "description_ru": "Главный летний праздник Сольера с народными танцами, ярмарками и реконструкцией битвы с пиратами.",
+      "description_zh": "索勒最重要的夏季节日，举办民间舞蹈、集市和传统海盗战役重演。"
     },
     {
       "id": "event-vermar-binissalem-2026",
@@ -11657,7 +11689,11 @@
       "is_recurring": false,
       "website_url": "https://bravobaleares.com/lx-festa-des-vermar/",
       "title_de": "Festa des Vermar – Binissalem",
-      "description_de": "Weinernte-Festival mit Traubentreten, Weinverkostungen und Live-Musik."
+      "description_de": "Weinernte-Festival mit Traubentreten, Weinverkostungen und Live-Musik.",
+      "title_ru": "Праздник сбора винограда в Биниссалеме",
+      "title_zh": "比尼萨勒姆葡萄收获节 2026",
+      "description_ru": "Ежегодный праздник урожая в сердце винодельческого региона: сбор винограда, дегустации и битва виноградом.",
+      "description_zh": "马略卡葡萄酒产区中心一年一度的丰收节：葡萄采摘、品酒和葡萄大战。"
     },
     {
       "id": "event-electrobeach-2026",
@@ -11676,7 +11712,11 @@
       "is_recurring": false,
       "website_url": "https://electrobeachfestival.es",
       "title_de": "Electrobeach Festival",
-      "description_de": "Open-Air-Festival für elektronische Musik am Strand mit internationalen DJs."
+      "description_de": "Open-Air-Festival für elektronische Musik am Strand mit internationalen DJs.",
+      "title_ru": "Electrobeach Festival",
+      "title_zh": "Electrobeach 音乐节",
+      "description_ru": "Международный фестиваль электронной музыки на пляже с лучшими мировыми DJ.",
+      "description_zh": "海滩上的国际电子音乐节，汇聚全球顶级DJ和现场表演。"
     },
     {
       "id": "event-cine-fresca-palma-2026",
@@ -11695,7 +11735,11 @@
       "recurring_day_of_week": 5,
       "title_de": "Cine a la Fresca – Palma",
       "description_de": "Open-Air-Kino unter dem Sternenhimmel in Palmas Parks jeden Freitag im Sommer.",
-      "website_url": "https://palmajove.es/es/-/cinema-fresca26-cat"
+      "website_url": "https://palmajove.es/es/-/cinema-fresca26-cat",
+      "title_ru": "Кино на свежем воздухе — Пальма",
+      "title_zh": "帕尔马露天电影节",
+      "description_ru": "Летний сезон показов кино под открытым небом в парках Пальмы. Бесплатный вход.",
+      "description_zh": "夏季在帕尔马公园举行的露天电影放映季，大多数场次免费入场。"
     },
     {
       "id": "event-mallorca-walking-2026",
@@ -11714,7 +11758,11 @@
       "is_recurring": false,
       "website_url": "https://mallorcawalkingfestival.com",
       "title_de": "Mallorca Walking Festival",
-      "description_de": "Einwöchiges geführtes Wanderfestival durch die Tramuntana-Berge."
+      "description_de": "Einwöchiges geführtes Wanderfestival durch die Tramuntana-Berge.",
+      "title_ru": "Mallorca Walking Festival",
+      "title_zh": "马略卡徒步节",
+      "description_ru": "Фестиваль пешеходного туризма с маршрутами по горам, деревням и побережью Майорки.",
+      "description_zh": "徒步旅游节，提供穿越马略卡山脉、村庄和海岸线的有组织路线。"
     },
     {
       "id": "event-fira-tardor-inca-2026",
@@ -11731,7 +11779,11 @@
       "is_recurring": false,
       "title_de": "Herbstmesse Inca",
       "description_de": "Die größte Herbstmesse Mallorcas mit Erzeugnissen, Lederwaren und Kunsthandwerk.",
-      "website_url": "https://thecalendarmallorca.com/events/fira-de-tardor-inca/"
+      "website_url": "https://thecalendarmallorca.com/events/fira-de-tardor-inca/",
+      "title_ru": "Осенняя ярмарка Инки",
+      "title_zh": "因卡秋季集市",
+      "description_ru": "Традиционная осенняя ярмарка в Инке с кожаными изделиями и местными продуктами.",
+      "description_zh": "因卡传统秋季集市，展示皮革制品和本地产品。"
     },
     {
       "id": "event-mercat-santa-maria",
@@ -11749,7 +11801,11 @@
       "recurring_day_of_week": 7,
       "title_de": "Mercat Pagès – Santa Maria del Camí",
       "description_de": "Traditioneller Bauernmarkt jeden Sonntag mit lokalen Produkten, Weinen und Käsesorten.",
-      "website_url": "https://thecalendarmallorca.com/events/mercat-pages-santa-maria/"
+      "website_url": "https://thecalendarmallorca.com/events/mercat-pages-santa-maria/",
+      "title_ru": "Крестьянский рынок — Санта-Мария-дель-Ками",
+      "title_zh": "圣玛丽亚德尔卡米农家集市",
+      "description_ru": "Традиционный воскресный крестьянский рынок с органическими продуктами.",
+      "description_zh": "圣玛丽亚德尔卡米传统周日农家集市，出售有机产品和手工制品。"
     },
     {
       "id": "event-jazz-andratx-2026",
@@ -11768,7 +11824,11 @@
       "is_recurring": false,
       "title_de": "Jazz & Más Festival – Andratx",
       "description_de": "Intimes Jazzfestival mit Sonnenuntergangskonzerten und lokalem Wein.",
-      "website_url": "https://ticketib.com/ca/events/festival-jazz-y-mas-2026-8-edicion"
+      "website_url": "https://ticketib.com/ca/events/festival-jazz-y-mas-2026-8-edicion",
+      "title_ru": "Jazz and Mas Festival — Андрач",
+      "title_zh": "Jazz & Mas 音乐节 — 安德拉奇",
+      "description_ru": "Летний фестиваль джаза и других жанров в живописном Андраче.",
+      "description_zh": "在风景如画的安德拉奇举行的夏季爵士和多类型音乐节。"
     },
     {
       "id": "event-mostra-folklor-soller-2026",
@@ -11786,7 +11846,11 @@
       "is_recurring": false,
       "title_de": "Internationale Folkloreshow",
       "description_de": "Internationale Folkloreshow in Sóller mit Tanzgruppen aus aller Welt.",
-      "website_url": "https://auditoriumpalma.com"
+      "website_url": "https://auditoriumpalma.com",
+      "title_ru": "Международный фестиваль фольклора в Сольере",
+      "title_zh": "索勒国际民俗节",
+      "description_ru": "Международный фестиваль народных танцев и музыки с группами из разных стран.",
+      "description_zh": "索勒国际民间舞蹈和音乐节，汇聚来自世界各地的表演团体。"
     },
     {
       "id": "event-pedra-musica-felanitx-2026",
@@ -11805,7 +11869,11 @@
       "is_recurring": false,
       "title_de": "Pedra i Música – Felanitx",
       "description_de": "Open-Air-Konzerte zwischen den alten Steinmauern des Kastells von Felanitx.",
-      "website_url": "https://felanitx.org"
+      "website_url": "https://felanitx.org",
+      "title_ru": "Камень и музыка — Фелантиш",
+      "title_zh": "石头与音乐 — 费拉尼特斯",
+      "description_ru": "Концерты классической музыки в исторических каменных постройках Фелантиша.",
+      "description_zh": "在费拉尼特斯历史石制建筑和教堂中举行的古典音乐会。"
     },
     {
       "id": "event-mercat-llevant-palma",
@@ -11823,7 +11891,11 @@
       "recurring_day_of_week": 6,
       "title_de": "Mercat de Llevant – Palma",
       "description_de": "Samstäglicher Straßenmarkt mit frischen Produkten, Vintage-Waren und Street Food.",
-      "website_url": "https://www.palma.es/es/mercado-de-llevant"
+      "website_url": "https://www.palma.es/es/mercado-de-llevant",
+      "title_ru": "Рынок Льевант — Пальма",
+      "title_zh": "帕尔马莱万特市场",
+      "description_ru": "Популярный рынок выходного дня в восточном районе Пальмы с органическими продуктами.",
+      "description_zh": "帕尔马东部区域热门周末市场，出售有机产品、美食和手工艺品。"
     },
     {
       "id": "event-drac-art-manacor-2026",
@@ -11841,7 +11913,11 @@
       "is_recurring": false,
       "title_de": "Festival Drac Art – Manacor",
       "description_de": "Festival für zeitgenössische Kunst mit bildender Kunst, Performance, Musik und Gastronomie.",
-      "website_url": "https://thecalendarmallorca.com/events/festival-drac-art/"
+      "website_url": "https://thecalendarmallorca.com/events/festival-drac-art/",
+      "title_ru": "Festival Drac Art — Манакор",
+      "title_zh": "Drac Art 节 — 马纳科尔",
+      "description_ru": "Фестиваль уличного искусства в Манакоре с граффити, перформансами и выставками.",
+      "description_zh": "马纳科尔街头艺术和文化节，举办涂鸦、表演和展览。"
     },
     {
       "id": "event-mobofest-2026",
@@ -11858,7 +11934,11 @@
       "is_free": false,
       "price": "Desde 35€",
       "is_recurring": false,
-      "website_url": "https://mobofest.org"
+      "website_url": "https://mobofest.org",
+      "title_ru": "Mobofest 2026",
+      "title_zh": "Mobofest 2026",
+      "description_ru": "Фестиваль электронной и экспериментальной музыки с местными и международными артистами.",
+      "description_zh": "电子和实验音乐节，汇聚本地和国际艺术家演出。"
     },
     {
       "id": "event-banyalbujazz-2026",
@@ -11875,7 +11955,11 @@
       "is_free": false,
       "price": "Desde 15€",
       "is_recurring": false,
-      "website_url": "https://bravobaleares.com/banyalbujazz-2026/"
+      "website_url": "https://bravobaleares.com/banyalbujazz-2026/",
+      "title_ru": "Banyalbujazz 2026",
+      "title_zh": "Banyalbujazz 2026",
+      "description_ru": "Очаровательный джазовый фестиваль в горной деревне Баньялбуфар.",
+      "description_zh": "在山村巴尼亚尔布法举行的迷人爵士音乐节，在庭院和观景台演出。"
     },
     {
       "id": "event-atlantida-film-fest-2026",
@@ -11892,7 +11976,11 @@
       "is_free": false,
       "price": "Desde 8€",
       "is_recurring": false,
-      "website_url": "https://atlantidafilmfest.com"
+      "website_url": "https://atlantidafilmfest.com",
+      "title_ru": "Кинофестиваль Atlantida Mallorca",
+      "title_zh": "Atlantida 马略卡电影节",
+      "description_ru": "Уникальный кинофестиваль с показами европейского и независимого кино.",
+      "description_zh": "独特的线上线下电影节，在马略卡放映欧洲和独立电影。"
     },
     {
       "id": "event-patrona-pollenca-2026",
@@ -11908,7 +11996,11 @@
       "municipality": "Pollença",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://pollensa.com/es/que-hacer/ferias-y-fiestas/la-patrona"
+      "website_url": "https://pollensa.com/es/que-hacer/ferias-y-fiestas/la-patrona",
+      "title_ru": "Покровительница Польенсы — Мавры и Христиане",
+      "title_zh": "波连萨守护圣母节 — 摩尔人与基督徒",
+      "description_ru": "Исторические торжества покровительницы Польенсы с реконструкцией битвы и процессиями.",
+      "description_zh": "波连萨守护圣母节，重演摩尔人与基督徒战役，举行夜间游行。"
     },
     {
       "id": "event-port-adriano-music-2026",
@@ -11925,7 +12017,11 @@
       "is_free": false,
       "price": "Desde 45€",
       "is_recurring": false,
-      "website_url": "https://www.portadriano.com/eventos/port-adriano-music-festival/"
+      "website_url": "https://www.portadriano.com/eventos/port-adriano-music-festival/",
+      "title_ru": "Музыкальный фестиваль Порт-Адриано",
+      "title_zh": "阿德里亚诺港音乐节",
+      "description_ru": "Элегантный музыкальный фестиваль в роскошном марине с классической и джазовой музыкой.",
+      "description_zh": "在豪华的阿德里亚诺港码头举行的优雅音乐节，演奏古典和爵士音乐。"
     },
     {
       "id": "event-lluc-a-peu-2026",
@@ -11941,7 +12037,11 @@
       "municipality": "Escorca",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://www.grupguell.es"
+      "website_url": "https://www.grupguell.es",
+      "title_ru": "Льюк-а-Пэу 2026 — Марш Гуэля",
+      "title_zh": "柳克徒步朝圣 2026",
+      "description_ru": "Массовое ночное паломничество пешком к монастырю Льюк с десятками тысяч участников.",
+      "description_zh": "数万人徒步前往柳克修道院的大规模夜间朝圣活动。"
     },
     {
       "id": "event-nits-sant-carles-2026",
@@ -11958,7 +12058,11 @@
       "is_free": false,
       "price": "Desde 12€",
       "is_recurring": false,
-      "website_url": "https://ociomallorca.com/nits-sant-carles/"
+      "website_url": "https://ociomallorca.com/nits-sant-carles/",
+      "title_ru": "Ночи Святого Карлоса 2026",
+      "title_zh": "圣卡洛斯之夜 2026",
+      "description_ru": "Летняя серия концертов у исторического форта Сант-Карлес с живой музыкой на закате.",
+      "description_zh": "海边历史圣卡洛斯炮台夏季系列音乐会，日落时分的现场音乐表演。"
     },
     {
       "id": "event-jazz-palma-festival-2026",
@@ -11975,7 +12079,11 @@
       "is_free": false,
       "price": "Desde 18€",
       "is_recurring": false,
-      "website_url": "https://palmacultura.es"
+      "website_url": "https://palmacultura.es",
+      "title_ru": "Джазовый фестиваль Пальмы 2026",
+      "title_zh": "帕尔马爵士音乐节 2026",
+      "description_ru": "Ежегодный городской джазовый фестиваль с бесплатными концертами в разных районах Пальмы.",
+      "description_zh": "帕尔马年度城市爵士音乐节，在不同街区举行免费音乐会。"
     },
     {
       "id": "event-eclipse-solar-2026",
@@ -11991,7 +12099,11 @@
       "municipality": "Palma",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://thecalendarmallorca.com/events/eclipse-solar-total-2026/"
+      "website_url": "https://thecalendarmallorca.com/events/eclipse-solar-total-2026/",
+      "title_ru": "Полное солнечное затмение 2026",
+      "title_zh": "2026年日全食",
+      "description_ru": "Майорка находится в зоне видимости полного солнечного затмения 12 августа 2026 года.",
+      "description_zh": "马略卡位于2026年8月12日日全食的全食带，是观测这一罕见天文奇观的绝佳地点。"
     },
     {
       "id": "event-verbenas-felanitx-2026",
@@ -12007,7 +12119,11 @@
       "municipality": "Felanitx",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://felanitx.org"
+      "website_url": "https://felanitx.org",
+      "title_ru": "Вечерние гулянья в Фелантише",
+      "title_zh": "费拉尼特斯夏夜广场舞",
+      "description_ru": "Традиционные летние народные гулянья с живой музыкой и танцами под открытым небом.",
+      "description_zh": "费拉尼特斯传统夏季民间露天舞会，有现场音乐和户外舞蹈。"
     },
     {
       "id": "event-patrona-palma-2026",
@@ -12023,7 +12139,11 @@
       "municipality": "Palma",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://visitpalma.com/es/agenda/"
+      "website_url": "https://visitpalma.com/es/agenda/",
+      "title_ru": "Патрона 2026 — Фестиваль Пальмы",
+      "title_zh": "守护圣母节 2026 — 帕尔马",
+      "description_ru": "Главный городской праздник Пальмы в честь покровительницы города.",
+      "description_zh": "帕尔马城市守护圣母节，举办音乐会、集市和庆典活动。"
     },
     {
       "id": "event-feria-alcudia-2026",
@@ -12039,7 +12159,11 @@
       "municipality": "Alcúdia",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://alcudiamallorca.com/es/eventos"
+      "website_url": "https://alcudiamallorca.com/es/eventos",
+      "title_ru": "Ярмарка Алькудии",
+      "title_zh": "阿尔库迪亚集市",
+      "description_ru": "Ежегодная традиционная ярмарка Алькудии с ремёслами и народными гуляниями.",
+      "description_zh": "阿尔库迪亚年度传统集市，在历史中心展示手工艺品和民间庆祝活动。"
     },
     {
       "id": "event-dijous-bo-2026",
@@ -12055,7 +12179,11 @@
       "municipality": "Inca",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://dijousbo.com"
+      "website_url": "https://dijousbo.com",
+      "title_ru": "Dijous Bo 2026 — Инка",
+      "title_zh": "Dijous Bo 2026 — 因卡",
+      "description_ru": "Крупнейшая традиционная ярмарка Майорки в третий четверг ноября в Инке.",
+      "description_zh": "每年11月第三个周四在因卡举行的马略卡最大传统集市。"
     },
     {
       "id": "event-mercado-navidad-palma-2026",
@@ -12071,7 +12199,11 @@
       "municipality": "Palma",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://visitpalma.com/es/agenda/"
+      "website_url": "https://visitpalma.com/es/agenda/",
+      "title_ru": "Рождественский рынок Пальмы 2026",
+      "title_zh": "帕尔马圣诞市场 2026",
+      "description_ru": "Традиционный рождественский рынок в центре Пальмы с подарками и рождественскими сладостями.",
+      "description_zh": "帕尔马市中心传统圣诞市场，出售礼品、装饰品和传统甜食。"
     },
     {
       "id": "event-nits-bellver-2026",
@@ -12089,7 +12221,11 @@
       "is_free": false,
       "price": "Desde 8€",
       "is_recurring": false,
-      "website_url": "https://palmacultura.es/ficha.php?Cod_not=14362"
+      "website_url": "https://palmacultura.es/ficha.php?Cod_not=14362",
+      "title_ru": "Ночи в Бельвере 2026",
+      "title_zh": "贝尔维尔之夜 2026",
+      "description_ru": "Летняя серия концертов в замке Бельвер: рок, поп, фламенко и классика.",
+      "description_zh": "贝尔维尔城堡夏季系列音乐会，星空下演奏摇滚、流行和古典音乐。"
     },
     {
       "id": "event-erik-truffaz-sa-pobla-2026",
@@ -12105,7 +12241,11 @@
       "address": "Plaça Major, Sa Pobla",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://mallorcajazzsapobla.com"
+      "website_url": "https://mallorcajazzsapobla.com",
+      "title_ru": "Эрик Труффаз — Джазовый фестиваль в Са-Пробле",
+      "title_zh": "埃里克·特吕法兹 — 萨波布拉爵士节",
+      "description_ru": "Концерт знаменитого джазового трубача с испанским вокалистом на фестивале в Са-Пробле.",
+      "description_zh": "著名爵士小号手与西班牙歌手在萨波布拉爵士节的联合演出。"
     },
     {
       "id": "event-noches-flamenco-palma-2026",
@@ -12124,7 +12264,11 @@
       "price": "Desde 15€",
       "is_recurring": true,
       "recurring_day_of_week": 2,
-      "website_url": "https://visitpalma.com/es/event/noches-de-flamenco-teatro-sans-palma-2026/"
+      "website_url": "https://visitpalma.com/es/event/noches-de-flamenco-teatro-sans-palma-2026/",
+      "title_ru": "Ночи фламенко — Театро Санс",
+      "title_zh": "弗拉明戈之夜 — 桑斯剧院",
+      "description_ru": "Серия концертов фламенко в историческом Театро Санс с ведущими исполнителями.",
+      "description_zh": "在帕尔马历史桑斯剧院举行的弗拉明戈系列音乐会。"
     },
     {
       "id": "event-jackies-house-music-2026",
@@ -12141,7 +12285,11 @@
       "is_free": false,
       "price": "Desde 28€",
       "is_recurring": false,
-      "website_url": "https://feverup.com/m/648840/en"
+      "website_url": "https://feverup.com/m/648840/en",
+      "title_ru": "Jackies Mallorca House Music Festival",
+      "title_zh": "杰基斯马略卡浩室音乐节",
+      "description_ru": "Фестиваль хаус-музыки с международными DJ на культовой площадке Майорки.",
+      "description_zh": "在马略卡标志性场地举行的浩室音乐节，汇聚国际DJ。"
     },
     {
       "id": "event-es-jardi-2026",
@@ -12159,7 +12307,11 @@
       "is_free": false,
       "price": "Desde 20€",
       "is_recurring": false,
-      "website_url": "https://esjardimallorca.com"
+      "website_url": "https://esjardimallorca.com",
+      "title_ru": "Es Jardi — Mallorca Live",
+      "title_zh": "Es Jardi — 马略卡现场音乐",
+      "description_ru": "Серия концертов на живописной террасе сада с видом на море в рамках Mallorca Live Festival.",
+      "description_zh": "在俯瞰大海的花园露台举行的系列音乐会，马略卡现场音乐节节目的一部分。"
     },
     {
       "id": "event-candlelight-hans-zimmer-2026",
@@ -12177,7 +12329,11 @@
       "is_free": false,
       "price": "Desde 20€",
       "is_recurring": false,
-      "website_url": "https://feverup.com/es/mallorca"
+      "website_url": "https://feverup.com/es/mallorca",
+      "title_ru": "Candlelight: Трибьют Хансу Циммеру",
+      "title_zh": "烛光音乐会：向汉斯·季默致敬",
+      "description_ru": "Камерный концерт при свечах с музыкой Ханса Циммера из культовых фильмов.",
+      "description_zh": "烛光室内音乐会，演奏汉斯·季默经典电影配乐。"
     },
     {
       "id": "event-god-save-queen-2026",
@@ -12194,7 +12350,11 @@
       "is_free": false,
       "price": "Desde 34€",
       "is_recurring": false,
-      "website_url": "https://mallorcamusicmagazine.com/conciertos/"
+      "website_url": "https://mallorcamusicmagazine.com/conciertos/",
+      "title_ru": "God Save the Queen — Трибьют Queen",
+      "title_zh": "God Save the Queen — Queen致敬演出",
+      "description_ru": "Грандиозный трибьют-концерт легендарной группы Queen с полным воссозданием шоу.",
+      "description_zh": "传奇乐队Queen的盛大致敬演唱会，完整重现原版专辑的演出。"
     },
     {
       "id": "event-antonio-orozco-2026",
@@ -12211,7 +12371,11 @@
       "is_free": false,
       "price": "Desde 43€",
       "is_recurring": false,
-      "website_url": "https://mallorcamusicmagazine.com/conciertos/"
+      "website_url": "https://mallorcamusicmagazine.com/conciertos/",
+      "title_ru": "Антонио Орозко — Тур",
+      "title_zh": "安东尼奥·奥罗斯科 — 巡回演出",
+      "description_ru": "Концерт одного из самых успешных испанских певцов на сцене Майорки.",
+      "description_zh": "西班牙最成功歌手之一在马略卡舞台上的演唱会。"
     },
     {
       "id": "event-nits-libellula-2026",
@@ -12229,7 +12393,11 @@
       "is_free": false,
       "price": "Desde 15€",
       "is_recurring": false,
-      "website_url": "https://canprunera.com"
+      "website_url": "https://canprunera.com",
+      "title_ru": "Ночи Libelula — Кан-Пруньера",
+      "title_zh": "蜻蜓之夜 — 卡恩普鲁内拉",
+      "description_ru": "Серия летних концертов в саду Кан-Пруньера в Сольере с джазом и классикой.",
+      "description_zh": "索勒卡恩普鲁内拉花园夏季系列音乐会，演奏爵士和古典音乐。"
     },
     {
       "id": "event-festes-beata-vilafranca-2026",
@@ -12246,7 +12414,11 @@
       "address": "Vilafranca de Bonany",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://thecalendarmallorca.com/events/festes-de-la-beata-vilafranca/"
+      "website_url": "https://thecalendarmallorca.com/events/festes-de-la-beata-vilafranca/",
+      "title_ru": "Праздники Беаты — Вилафранка-де-Бонани",
+      "title_zh": "维拉弗兰卡德博纳尼贝阿塔节",
+      "description_ru": "Красочный праздник в честь Беаты Каталины Томас с костюмированными процессиями.",
+      "description_zh": "纪念圣女卡塔琳娜·托马斯的多彩节日，举行化装游行和民间表演。"
     },
     {
       "id": "event-festes-mare-deu-sineu-2026",
@@ -12263,7 +12435,11 @@
       "address": "Sineu",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://thecalendarmallorca.com/events/festes-mare-de-deu-agost-sineu/"
+      "website_url": "https://thecalendarmallorca.com/events/festes-mare-de-deu-agost-sineu/",
+      "title_ru": "Праздники Богородицы Августа — Синеу",
+      "title_zh": "锡内乌八月圣母节",
+      "description_ru": "Традиционный летний праздник Синеу в честь Богородицы с народными гуляниями.",
+      "description_zh": "锡内乌传统夏季圣母节，举办民间庆典和集市。"
     },
     {
       "id": "event-yves-klein-palma-2026",
@@ -12280,7 +12456,11 @@
       "address": "Museu Fundación Juan March, Palma",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://www.march.es/es/palma/actividades"
+      "website_url": "https://www.march.es/es/palma/actividades",
+      "title_ru": "Ив Кляйн: Немного бесконечности — Пальма",
+      "title_zh": "伊夫·克莱因：一点点无限 — 帕尔马",
+      "description_ru": "Крупная ретроспектива французского художника Ива Кляйна с его революционными синими работами.",
+      "description_zh": "法国艺术家伊夫·克莱因在帕尔马的大型回顾展，展示其革命性的蓝色作品和行为艺术。"
     },
     {
       "id": "event-national-geographic-caixaforum-2026",
@@ -12298,7 +12478,11 @@
       "is_free": false,
       "price": "Desde 4€",
       "is_recurring": false,
-      "website_url": "https://caixaforum.org/es/palma"
+      "website_url": "https://caixaforum.org/es/palma",
+      "title_ru": "Цвета мира — National Geographic",
+      "title_zh": "世界之色 — 国家地理",
+      "description_ru": "Фотовыставка National Geographic в CaixaForum Пальмы с потрясающими снимками природы.",
+      "description_zh": "国家地理摄影展在帕尔马凯沙论坛展出，呈现令人叹为观止的自然和文化照片。"
     },
     {
       "id": "event-gaudi-seu-mallorca-2026",
@@ -12316,7 +12500,11 @@
       "is_free": false,
       "price": "Desde 9€",
       "is_recurring": false,
-      "website_url": "https://catedraldemallorca.org"
+      "website_url": "https://catedraldemallorca.org",
+      "title_ru": "Гауди в Соборе Майорки",
+      "title_zh": "高迪在马略卡大教堂",
+      "description_ru": "Выставка, посвящённая реставрационной работе Антонио Гауди в Кафедральном соборе Пальмы.",
+      "description_zh": "展览介绍安东尼奥·高迪在帕尔马大教堂的修复工作。"
     },
     {
       "id": "event-triathlon-palma-2026",
@@ -12333,7 +12521,11 @@
       "is_free": false,
       "price": "Desde 21€",
       "is_recurring": false,
-      "website_url": "https://visitpalma.com/es/agenda/"
+      "website_url": "https://visitpalma.com/es/agenda/",
+      "title_ru": "Триатлон Порт-де-Пальма Майорка",
+      "title_zh": "帕尔马港马略卡铁人三项",
+      "description_ru": "Официальный триатлон в бухте Пальмы с категориями Спринт и Олимпийская дистанция.",
+      "description_zh": "帕尔马港官方铁人三项赛，设短距离和奥运会距离比赛。"
     },
     {
       "id": "event-sunset-market-portals-2026",
@@ -12350,7 +12542,11 @@
       "address": "Puerto Portals, Calvià",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://puertoportals.com/en/evento/the-sunset-market/"
+      "website_url": "https://puertoportals.com/en/evento/the-sunset-market/",
+      "title_ru": "Рынок закатов — Пуэрто-Порталс",
+      "title_zh": "日落市场 — 波尔塔尔斯港",
+      "description_ru": "Элегантный рынок на закате в роскошном порту с модой, ремёслами и гастрономией.",
+      "description_zh": "豪华波尔塔尔斯港优雅日落市场，出售时装、手工艺品和美食。"
     },
     {
       "id": "event-mercadillo-port-pollenca-2026",
@@ -12368,7 +12564,11 @@
       "is_free": true,
       "is_recurring": true,
       "recurring_day_of_week": 2,
-      "website_url": "https://totnmallorca.com/port-pollenca-summer-night-market-dates-2026/"
+      "website_url": "https://totnmallorca.com/port-pollenca-summer-night-market-dates-2026/",
+      "title_ru": "Ночной рынок Порт-де-Польенса",
+      "title_zh": "波连萨港夜市",
+      "description_ru": "Летний вечерний рынок на набережной с местными мастерами и уличной едой.",
+      "description_zh": "波连萨港滨海大道夏季夜间集市，本地工匠和街头美食。"
     },
     {
       "id": "event-mercadillo-alcudia-noche-2026",
@@ -12385,7 +12585,11 @@
       "address": "Passeig Marítim, Port d'Alcúdia",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://alcudiamallorca.com/es/eventos"
+      "website_url": "https://alcudiamallorca.com/es/eventos",
+      "title_ru": "Ночной рынок Порт-д-Алькудиа",
+      "title_zh": "阿尔库迪亚港夜市",
+      "description_ru": "Летний ночной рынок с ремёслами, едой и развлечениями для всей семьи.",
+      "description_zh": "阿尔库迪亚港夏季夜市，出售手工艺品、美食，提供全家娱乐活动。"
     },
     {
       "id": "event-mercado-artesanos-palma-2026",
@@ -12402,7 +12606,11 @@
       "address": "S'Hort del Rei, Palma",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://www.palma.es/es/artesanal-de-l-hort-del-rei"
+      "website_url": "https://www.palma.es/es/artesanal-de-l-hort-del-rei",
+      "title_ru": "Рынок ремесленников — Пальма",
+      "title_zh": "帕尔马国王花园手工艺品市场",
+      "description_ru": "Регулярный рынок местных ремесленников в садах рядом с Кафедральным собором.",
+      "description_zh": "大教堂旁国王花园定期举行的本地工匠市场。"
     },
     {
       "id": "event-mercat-santa-catalina-2026",
@@ -12419,7 +12627,11 @@
       "address": "Plaça de la Navegació, Santa Catalina, Palma",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://mercatdesantacatalina.com"
+      "website_url": "https://mercatdesantacatalina.com",
+      "title_ru": "Рынок Санта-Каталина — Пальма",
+      "title_zh": "帕尔马圣卡塔利娜市场",
+      "description_ru": "Крытый рынок модного района Санта-Каталина с разнообразными продуктами.",
+      "description_zh": "帕尔马时尚圣卡塔利娜街区的室内市场，提供多样产品和街头美食。"
     },
     {
       "id": "event-fira-melo-vilafranca-2026",
@@ -12435,7 +12647,11 @@
       "address": "Vilafranca de Bonany",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://thecalendarmallorca.com/events/fira-del-melo-vilafranca/"
+      "website_url": "https://thecalendarmallorca.com/events/fira-del-melo-vilafranca/",
+      "title_ru": "Ярмарка дыни — Вилафранка",
+      "title_zh": "维拉弗兰卡甜瓜节",
+      "description_ru": "Фестиваль знаменитой майоркинской дыни с дегустациями и конкурсами.",
+      "description_zh": "维拉弗兰卡著名马略卡甜瓜节，提供品鉴和竞赛活动。"
     },
     {
       "id": "event-feria-pebre-bord-2026",
@@ -12451,7 +12667,11 @@
       "address": "Felanitx",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://thecalendarmallorca.com/events/"
+      "website_url": "https://thecalendarmallorca.com/events/",
+      "title_ru": "Ярмарка паприки — Фелантиш",
+      "title_zh": "费拉尼特斯辣椒节",
+      "description_ru": "Фестиваль традиционного красного перца Майорки в Фелантише.",
+      "description_zh": "费拉尼特斯传统马略卡红辣椒节。"
     },
     {
       "id": "event-feria-otono-porreres-2026",
@@ -12468,7 +12688,11 @@
       "address": "Porreres",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://firesifestes.es/es/"
+      "website_url": "https://firesifestes.es/es/",
+      "title_ru": "Осенняя ярмарка — Поререс",
+      "title_zh": "波雷雷斯秋季集市",
+      "description_ru": "Традиционная осенняя ярмарка с местными продуктами и ремёслами.",
+      "description_zh": "波雷雷斯传统秋季集市，展示本地产品和手工艺品。"
     },
     {
       "id": "event-feria-calabaza-muro-2026",
@@ -12485,7 +12709,11 @@
       "address": "Muro",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://thecalendarmallorca.com/events/"
+      "website_url": "https://thecalendarmallorca.com/events/",
+      "title_ru": "Ярмарка тыквы — Муро",
+      "title_zh": "穆罗南瓜节",
+      "description_ru": "Осенняя ярмарка тыквы в Муро с дегустациями и традиционными блюдами.",
+      "description_zh": "穆罗秋季南瓜节，品尝南瓜菜肴和传统产品。"
     },
     {
       "id": "event-feria-arroz-sa-pobla-2026",
@@ -12502,7 +12730,11 @@
       "address": "Sa Pobla",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://thecalendarmallorca.com/events/"
+      "website_url": "https://thecalendarmallorca.com/events/",
+      "title_ru": "Ярмарка риса — Са-Пробла",
+      "title_zh": "萨波布拉大米节",
+      "description_ru": "Фестиваль риса с дегустациями традиционных блюд Са-Пробла.",
+      "description_zh": "萨波布拉大米节，品尝传统大米菜肴。"
     },
     {
       "id": "event-feria-perdiz-montuiri-2026",
@@ -12518,7 +12750,11 @@
       "address": "Montuïri",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://thecalendarmallorca.com/events/"
+      "website_url": "https://thecalendarmallorca.com/events/",
+      "title_ru": "Ярмарка куропатки — Монтуири",
+      "title_zh": "蒙图伊里鹧鸪节",
+      "description_ru": "Традиционный фестиваль охоты и дичи с дегустациями блюд из куропатки.",
+      "description_zh": "蒙图伊里传统狩猎和野味节，品尝鹧鸪菜肴。"
     },
     {
       "id": "event-31-fam-palma-2026",
@@ -12535,7 +12771,11 @@
       "is_free": false,
       "price": "Desde 20€",
       "is_recurring": false,
-      "website_url": "https://mallorcamusicmagazine.com/conciertos/"
+      "website_url": "https://mallorcamusicmagazine.com/conciertos/",
+      "title_ru": "31 FAM — Пальма",
+      "title_zh": "31 FAM — 帕尔马",
+      "description_ru": "Международный фестиваль авангардной музыки в Пальме с экспериментальными концертами и инсталляциями.",
+      "description_zh": "帕尔马国际前卫音乐节，举办实验性音乐会和装置艺术。"
     },
     {
       "id": "event-candlelight-navidad-2026",
@@ -12552,7 +12792,11 @@
       "is_free": false,
       "price": "Desde 20€",
       "is_recurring": false,
-      "website_url": "https://feverup.com/es/mallorca"
+      "website_url": "https://feverup.com/es/mallorca",
+      "title_ru": "Candlelight: Рождественская классика",
+      "title_zh": "烛光音乐会：圣诞经典",
+      "description_ru": "Рождественский концерт при свечах с классическими мелодиями в атмосферном зале Пальмы.",
+      "description_zh": "帕尔马温馨场馆烛光圣诞音乐会，演奏经典圣诞曲目。"
     },
     {
       "id": "event-canto-sibila-2026",
@@ -12568,7 +12812,11 @@
       "address": "Catedral de Mallorca, Palma",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://catedraldemallorca.org"
+      "website_url": "https://catedraldemallorca.org",
+      "title_ru": "Пение Сибиллы — Рождественский сочельник",
+      "title_zh": "西比拉之歌 — 圣诞节前夕",
+      "description_ru": "Средневековая традиция ЮНЕСКО: пение пророчества Сибиллы в Кафедральном соборе в ночь Рождества.",
+      "description_zh": "联合国教科文组织中世纪传统：圣诞节前夕在帕尔马大教堂演唱西比拉预言。"
     },
     {
       "id": "event-festa-estendard-2026",
@@ -12584,7 +12832,11 @@
       "address": "Plaça de Cort, Palma",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://fiestasbaleares.com/que-hacemos/fiesta-de-lestandard/"
+      "website_url": "https://fiestasbaleares.com/que-hacemos/fiesta-de-lestandard/",
+      "title_ru": "Праздник Штандарта — Пальма",
+      "title_zh": "旗帜节 — 帕尔马",
+      "description_ru": "Торжественный праздник в память о завоевании Майорки королём Жауме I в 1229 году.",
+      "description_zh": "纪念1229年海梅一世国王征服马略卡的庄严节日。"
     },
     {
       "id": "event-sant-bartomeu-valldemossa-2026",
@@ -12600,7 +12852,11 @@
       "municipality": "Valldemossa",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://thecalendarmallorca.com/es/events/festes-de-sant-bartomeu-valldemossa/"
+      "website_url": "https://thecalendarmallorca.com/es/events/festes-de-sant-bartomeu-valldemossa/",
+      "title_ru": "Праздники Святого Бартоломе — Вальдемосса",
+      "title_zh": "瓦尔德莫萨圣巴托洛梅节",
+      "description_ru": "Главный летний праздник Вальдемоссы с традиционными глосас и народными танцами.",
+      "description_zh": "瓦尔德莫萨最重要的夏季节日，有传统民谣、舞蹈和集市。"
     },
     {
       "id": "event-feria-sant-miquel-felanitx-2026",
@@ -12615,7 +12871,11 @@
       "municipality": "Felanitx",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide",
+      "title_ru": "Ярмарка Святого Михаила — Фелантиш",
+      "title_zh": "费拉尼特斯圣米盖尔集市",
+      "description_ru": "Традиционная ярмарка в честь Святого Михаила с ремёслами и местными продуктами.",
+      "description_zh": "费拉尼特斯传统圣米盖尔节集市，展示手工艺品和本地产品。"
     },
     {
       "id": "event-flem-2026-magaluf",
@@ -12631,7 +12891,11 @@
       "municipality": "INNSiDE Wave Calvià",
       "is_free": false,
       "is_recurring": false,
-      "website_url": "https://flemfestival.com/en/"
+      "website_url": "https://flemfestival.com/en/",
+      "title_ru": "FLEM 2026 — Литературный фестиваль (Магалуф)",
+      "title_zh": "FLEM 2026 文学节（马加鲁夫）",
+      "description_ru": "Нестандартный литературный фестиваль с чтениями и перформансами в необычных местах.",
+      "description_zh": "马加鲁夫非传统文学节，在意想不到的场所举行朗读、讨论和表演。"
     },
     {
       "id": "event-novena-beethoven-palma-2026",
@@ -12646,7 +12910,11 @@
       "municipality": "Auditorium de Palma",
       "is_free": false,
       "is_recurring": false,
-      "website_url": "https://www.auditoriumpalma.com"
+      "website_url": "https://www.auditoriumpalma.com",
+      "title_ru": "Девятая симфония Бетховена — Аудиторио",
+      "title_zh": "贝多芬第九交响曲 — 帕尔马礼堂",
+      "description_ru": "Торжественное исполнение Девятой симфонии Бетховена с хором и оркестром.",
+      "description_zh": "在帕尔马礼堂演奏贝多芬第九交响曲，合唱团和管弦乐队共同呈现。"
     },
     {
       "id": "event-fira-botifarro-sant-joan-2026",
@@ -12662,7 +12930,11 @@
       "municipality": "Sant Joan",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://www.seemallorca.com/events/festa-d-es-botifarro-sausage-festival-sant-joan-711651"
+      "website_url": "https://www.seemallorca.com/events/festa-d-es-botifarro-sausage-festival-sant-joan-711651",
+      "title_ru": "Праздник Ботифарро — Сан-Жоан",
+      "title_zh": "圣胡安博蒂法罗节",
+      "description_ru": "Фестиваль традиционной майоркинской кровяной колбасы с дегустациями.",
+      "description_zh": "圣胡安传统马略卡血肠博蒂法罗节，提供品鉴和集市活动。"
     },
     {
       "id": "event-fira-dolca-esporles-2026",
@@ -12677,7 +12949,11 @@
       "municipality": "Esporles",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://bravobaleares.com/en/fira-dolca-2/"
+      "website_url": "https://bravobaleares.com/en/fira-dolca-2/",
+      "title_ru": "Сладкая ярмарка — Эспорлес",
+      "title_zh": "埃斯波尔莱斯甜点集市",
+      "description_ru": "Фестиваль традиционных майоркинских пирожных и сладостей с дегустациями.",
+      "description_zh": "埃斯波尔莱斯传统马略卡糕点和甜食节，提供品鉴和糕点师展示。"
     },
     {
       "id": "event-feria-llampuga-capdepera-2026",
@@ -12693,7 +12969,11 @@
       "municipality": "Cala Ratjada",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://visitcapdepera.com/mostra-de-la-llampuga-2/"
+      "website_url": "https://visitcapdepera.com/mostra-de-la-llampuga-2/",
+      "title_ru": "Ярмарка рыбы льямпуги — Кабдепера",
+      "title_zh": "卡布德佩拉鱼节",
+      "description_ru": "Осенний гастрономический фестиваль в честь рыбы льямпуги с дегустациями.",
+      "description_zh": "秋季美食节，以鬼头刀为主题，提供品鉴和传统食谱。"
     },
     {
       "id": "event-feria-serra-tramuntana-2026",
@@ -12709,7 +12989,11 @@
       "municipality": "Escorca",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://mallorcactiva.cat/es/evento/xxvi-feria-de-la-serra-de-tramuntana-escorca/"
+      "website_url": "https://mallorcactiva.cat/es/evento/xxvi-feria-de-la-serra-de-tramuntana-escorca/",
+      "title_ru": "Ярмарка Сьерры Трамунтана — Эскорка",
+      "title_zh": "特拉蒙塔纳山脉集市 — 埃斯科尔卡",
+      "description_ru": "Ярмарка горного хребта Трамунтана с традиционными продуктами горных районов.",
+      "description_zh": "埃斯科尔卡特拉蒙塔纳山脉集市，展示山区传统产品。"
     },
     {
       "id": "event-feria-oliva-caimari-2026",
@@ -12725,7 +13009,11 @@
       "municipality": "Caimari",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://www.illesbalears.travel/en/mallorca/events-fira-de-loliva-de-caimari"
+      "website_url": "https://www.illesbalears.travel/en/mallorca/events-fira-de-loliva-de-caimari",
+      "title_ru": "Ярмарка оливы — Каймари",
+      "title_zh": "凯马里橄榄节",
+      "description_ru": "Фестиваль оливки и оливкового масла у подножия горы Трамунтана.",
+      "description_zh": "在特拉蒙塔纳山脚下的凯马里举行的橄榄和橄榄油节。"
     },
     {
       "id": "event-feria-miel-llubi-2026",
@@ -12740,7 +13028,11 @@
       "municipality": "Llubí",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://km0plademallorca.com/recurso/feria-de-la-miel/"
+      "website_url": "https://km0plademallorca.com/recurso/feria-de-la-miel/",
+      "title_ru": "Ярмарка мёда — Льюби",
+      "title_zh": "卢比蜂蜜节",
+      "description_ru": "Фестиваль местного мёда с дегустациями и выставкой пчеловодства.",
+      "description_zh": "卢比当地蜂蜜节，提供品鉴和养蜂展览。"
     },
     {
       "id": "event-feria-sant-tomas-sineu-2026",
@@ -12755,7 +13047,11 @@
       "municipality": "Sineu",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://bravobaleares.com/en/matanza-and-saint-thomas-day/"
+      "website_url": "https://bravobaleares.com/en/matanza-and-saint-thomas-day/",
+      "title_ru": "Ярмарка Сан-Томас — Матанса в Синеу",
+      "title_zh": "锡内乌圣托马斯集市 — 杀猪节",
+      "description_ru": "Традиционная зимняя ярмарка, посвящённая свиноводству и колбасам Майорки.",
+      "description_zh": "锡内乌传统冬季集市，以养猪业和马略卡传统香肠为主题。"
     },
     {
       "id": "event-fira-sa-pobla-coenta-2026",
@@ -12770,7 +13066,11 @@
       "municipality": "Sa Pobla",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://www.inmallorcamagazine.com/events-and-festivals/festivals-fairs-annual-guide"
+      "website_url": "https://www.inmallorcamagazine.com/events-and-festivals/festivals-fairs-annual-guide",
+      "title_ru": "Острая ярмарка в Са-Пробле",
+      "title_zh": "萨波布拉辣椒节",
+      "description_ru": "Уникальный фестиваль острых блюд и перца с дегустациями и конкурсами.",
+      "description_zh": "萨波布拉独特辣味美食节，提供品鉴和辣度竞赛。"
     },
     {
       "id": "event-sa-fira-petra-2026",
@@ -12785,7 +13085,11 @@
       "municipality": "Petra",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://firesifestes.es/es/"
+      "website_url": "https://firesifestes.es/es/",
+      "title_ru": "Ярмарка Са-Фира — Петра",
+      "title_zh": "彼得拉集市",
+      "description_ru": "Традиционная ярмарка Петры — родного города отца Хуниперо Серры, основателя миссий Калифорнии.",
+      "description_zh": "彼得拉传统集市，这是加利福尼亚传教团创始人胡尼佩罗·塞拉神父的出生地。"
     },
     {
       "id": "event-feria-septiembre-manacor-2026",
@@ -12800,7 +13104,11 @@
       "municipality": "Manacor",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://firesifestes.es/es/"
+      "website_url": "https://firesifestes.es/es/",
+      "title_ru": "Сентябрьская ярмарка — Манакор",
+      "title_zh": "马纳科尔九月集市",
+      "description_ru": "Крупная традиционная ярмарка Манакора в сентябре с ремёслами и народными гуляниями.",
+      "description_zh": "马纳科尔大型传统九月集市，展示手工艺品和民间活动。"
     },
     {
       "id": "event-mallorca-roots-festival-2026",
@@ -12816,7 +13124,11 @@
       "municipality": "Palma",
       "is_free": false,
       "is_recurring": false,
-      "website_url": "https://www.myguidemallorca.com/events/september-2026"
+      "website_url": "https://www.myguidemallorca.com/events/september-2026",
+      "title_ru": "Mallorca Roots Festival",
+      "title_zh": "马略卡根源音乐节",
+      "description_ru": "Фестиваль, посвящённый корневой музыке и традиционным звукам Майорки и Средиземноморья.",
+      "description_zh": "致力于马略卡和地中海根源音乐传统的音乐节。"
     },
     {
       "id": "event-fira-calonge-2026",
@@ -12831,7 +13143,11 @@
       "municipality": "Santanyí",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://firesifestes.es/es/"
+      "website_url": "https://firesifestes.es/es/",
+      "title_ru": "Ярмарка Калонже — Сантаньи",
+      "title_zh": "卡隆杰集市 — 桑塔尼",
+      "description_ru": "Традиционная местная ярмарка с ремёслами и местными продуктами.",
+      "description_zh": "卡隆杰村传统地方集市，展示手工艺品和本地产品。"
     },
     {
       "id": "event-fires-llucmajor-2026",
@@ -12847,7 +13163,11 @@
       "municipality": "Llucmajor",
       "is_free": true,
       "is_recurring": false,
-      "website_url": "https://llucmajor.org/es/ferias"
+      "website_url": "https://llucmajor.org/es/ferias",
+      "title_ru": "Ярмарки Льюкмажора",
+      "title_zh": "卢赫马霍尔集市",
+      "description_ru": "Традиционные ярмарки Льюкмажора — главное торговое и народное событие года.",
+      "description_zh": "卢赫马霍尔传统集市，是该城市一年中最重要的商贸和民间活动。"
     },
     {
       "id": "event-most-beautiful-day-2026",
@@ -12862,7 +13182,11 @@
       "municipality": "Palma",
       "is_free": false,
       "is_recurring": false,
-      "website_url": "https://www.mallorcacarhirecompany.com/mallorca-events-2026/"
+      "website_url": "https://www.mallorcacarhirecompany.com/mallorca-events-2026/",
+      "title_ru": "Most Beautiful Day Festival",
+      "title_zh": "最美丽的一天音乐节",
+      "description_ru": "Музыкальный фестиваль с концертом культовой американской группы The Lemon Twigs.",
+      "description_zh": "汇聚标志性美国乐队The Lemon Twigs和其他艺术家的音乐节。"
     },
     {
       "id": "event-tapalma-2026",
@@ -12879,7 +13203,11 @@
       "is_free": false,
       "price": "Desde 5€",
       "is_recurring": false,
-      "website_url": "https://tapalma.com/en/"
+      "website_url": "https://tapalma.com/en/",
+      "title_ru": "TaPalma — Фестиваль тапас и коктейлей",
+      "title_zh": "TaPalma — 小吃与鸡尾酒节",
+      "description_ru": "Фестиваль тапас и авторских коктейлей в барах и ресторанах Пальмы с дегустационными маршрутами.",
+      "description_zh": "帕尔马酒吧和餐厅的小吃和特调鸡尾酒节，提供特别城市品鉴路线。"
     },
     {
       "id": "event-salitrefest-2026",
@@ -12895,7 +13223,297 @@
       "municipality": "Santa Margalida",
       "is_free": false,
       "is_recurring": false,
-      "website_url": "https://salitrefest.es/"
+      "website_url": "https://salitrefest.es/",
+      "title_ru": "SalitreFest — Санта-Маргалида",
+      "title_zh": "SalitreFest — 圣玛格丽特",
+      "description_ru": "Музыкальный фестиваль с местными и национальными группами на открытой сцене.",
+      "description_zh": "圣玛格丽特音乐节，本地和全国乐队在露天舞台演出。"
+    },
+    {
+      "id": "event-festes-sant-bartomeu-montuiri-2026",
+      "title": "Festes de Sant Bartomeu – Montuïri",
+      "title_es": "Fiestas de Sant Bartomeu – Montuïri",
+      "title_de": "Sant-Bartomeu-Fest – Montuïri",
+      "title_ru": "Праздник Сант-Бартомеу – Монтуири",
+      "title_zh": "蒙图伊里圣巴托梅乌节",
+      "description": "One of Mallorca's most beloved traditional festivals, famous for the Cossiers — seven dancers performing ancient ritual dances dating back to the 16th century. The festival fills the streets of Montuïri with music, fireworks, and traditional Mallorcan culture culminating on August 24, the feast day of Sant Bartomeu.",
+      "description_es": "Uno de los festivales tradicionales más queridos de Mallorca, famoso por los Cossiers — siete bailarines que ejecutan antiguas danzas rituales del siglo XVI. El festival llena las calles de Montuïri con música, fuegos artificiales y cultura mallorquina tradicional, culminando el 24 de agosto.",
+      "description_de": "Eines der beliebtesten traditionellen Feste Mallorcas, bekannt für die Cossiers – sieben Tänzer mit uralten Ritualtänzen aus dem 16. Jahrhundert. Das Festival füllt die Straßen von Montuïri mit Musik und Feuerwerk.",
+      "category": "FESTIVAL",
+      "start_date": "2026-08-14",
+      "end_date": "2026-08-25",
+      "municipality": "Montuïri",
+      "is_free": true,
+      "website_url": "https://www.illesbalears.travel/experiencia/es/mallorca/los-cossiers-de-montuiri-el-alma-de-las-fiestas-de-sant-bartomeu",
+      "description_ru": "Главный летний праздник Монтуири с традиционными танцами косьеры с дьяволами.",
+      "description_zh": "蒙图伊里最重要的夏季节日，以传统的骑士与魔鬼舞蹈闻名。"
+    },
+    {
+      "id": "event-festival-musica-santanyi-2026",
+      "title": "XIV International Music Festival – Santanyí",
+      "title_es": "XIV Festival Internacional de Música Vila de Santanyí",
+      "title_de": "XIV. Internationales Musikfestival Vila de Santanyí",
+      "title_ru": "XIV Международный музыкальный фестиваль Сантаньи",
+      "title_zh": "第14届桑塔尼国际音乐节",
+      "description": "Free classical and contemporary music concerts in the stunning 15th-century Sant Andreu church in Santanyí. The 2026 edition features world-class performers including Ton Koopman, the Valencian Generalitat Choir, and the Balearic Symphony Orchestra. Free entry with advance reservation on ticketib.com.",
+      "description_es": "Conciertos gratuitos de música clásica y contemporánea en la iglesia de Sant Andreu del siglo XV en Santanyí. La edición 2026 incluye a Ton Koopman, el Cor de la Generalitat Valenciana y la Orquestra Simfònica de les Illes Balears. Entrada gratuita con reserva previa en ticketib.com.",
+      "description_de": "Kostenlose Konzerte in der Sant-Andreu-Kirche aus dem 15. Jahrhundert in Santanyí. Freier Eintritt mit Voranmeldung über ticketib.com.",
+      "category": "CONCERT",
+      "start_date": "2026-05-30",
+      "end_date": "2026-10-25",
+      "municipality": "Santanyí",
+      "is_free": true,
+      "website_url": "https://ajsantanyi.net/ca/agenda/xiv-festival-internacional-de-musica-vila-de-santanyi",
+      "description_ru": "Международный камерный фестиваль в красивых церквях и дворах Сантаньи.",
+      "description_zh": "在桑塔尼美丽的教堂和庭院举行的国际室内乐节。"
+    },
+    {
+      "id": "event-rei-en-jaume-calvia-2026",
+      "title": "Festes del Rei en Jaume – Santa Ponça",
+      "title_es": "Fiestas del Rei en Jaume – Santa Ponça",
+      "title_de": "König-Jaume-Fest – Santa Ponça",
+      "title_ru": "Праздник короля Жауме – Санта-Понса",
+      "title_zh": "哈梅国王节 – 圣蓬萨",
+      "description": "Annual historical festival in Santa Ponça commemorating the landing of King Jaume I in 1229. Features spectacular reenactments, Moorish and Christian parades, traditional Mallorcan music, giant figures, and local gastronomy.",
+      "description_es": "Festival histórico anual en Santa Ponça que conmemora el desembarco del rey Jaume I en 1229. Incluye recreaciones históricas, desfiles de moros y cristianos, música tradicional mallorquina, gigantes y gastronomía local.",
+      "description_de": "Jährliches historisches Festival in Santa Ponça zum Gedenken an die Landung von König Jaume I. im Jahr 1229.",
+      "category": "FESTIVAL",
+      "start_date": "2026-08-27",
+      "end_date": "2026-09-12",
+      "municipality": "Calvià",
+      "address": "Santa Ponça, Calvià",
+      "is_free": true,
+      "website_url": "https://www.calvia.com/en/calvia-a-day/agenda/rei-en-jaume-2026-festivities",
+      "description_ru": "Историческая реконструкция высадки короля Жауме I в Санта-Понсе в 1229 году.",
+      "description_zh": "历史重演1229年海梅一世国王在圣蓬萨登陆，举行海战和游行。"
+    },
+    {
+      "id": "event-love-of-lesbian-felanitx-2026",
+      "title": "Love of Lesbian + Victoria Lerma – Felanitx",
+      "title_es": "Love of Lesbian + Victoria Lerma – Felanitx",
+      "title_de": "Love of Lesbian + Victoria Lerma – Felanitx",
+      "description": "Spanish indie rock legends Love of Lesbian perform live at Parc Municipal de Sa Torre in Felanitx, with Victoria Lerma as opening act.",
+      "description_es": "Los legendarios Love of Lesbian actúan en directo en el Parc Municipal de Sa Torre de Felanitx, con Victoria Lerma como artista de apertura.",
+      "description_de": "Die spanischen Indie-Rock-Legenden Love of Lesbian im Parc Municipal de Sa Torre in Felanitx, mit Victoria Lerma als Vorband.",
+      "category": "CONCERT",
+      "start_date": "2026-08-26",
+      "municipality": "Felanitx",
+      "address": "Parc Municipal de Sa Torre, Felanitx",
+      "is_free": false,
+      "website_url": "https://mallorcamusicmagazine.com/conciertos/",
+      "title_ru": "Love of Lesbian — Фелантиш",
+      "title_zh": "Love of Lesbian — 费拉尼特斯",
+      "description_ru": "Концерт культовой каталонской группы Love of Lesbian в Фелантише.",
+      "description_zh": "标志性加泰罗尼亚乐队Love of Lesbian在费拉尼特斯的演唱会。"
+    },
+    {
+      "id": "event-festival-sororitat-2026",
+      "title": "Festival Sororitat – Palma",
+      "title_es": "Festival Sororitat – Palma",
+      "title_de": "Festival Sororitat – Palma",
+      "description": "Two-day music festival in Palma celebrating female artists and empowerment through live music, showcasing leading women in the Spanish and international music scene.",
+      "description_es": "Festival de música de dos días en Palma que celebra a las artistas femeninas y el empoderamiento a través de la música en vivo.",
+      "description_de": "Zweitägiges Musikfestival in Palma, das Künstlerinnen durch Live-Musik feiert.",
+      "category": "CONCERT",
+      "start_date": "2026-09-18",
+      "end_date": "2026-09-19",
+      "municipality": "Palma",
+      "is_free": false,
+      "website_url": "https://www.mallorca.com/es/eventos/2026/septiembre",
+      "title_ru": "Festival Sororitat — Пальма",
+      "title_zh": "女性团结音乐节 — 帕尔马",
+      "description_ru": "Фестиваль продвижения женщин-музыкантов с концертами и дискуссиями о гендерном равенстве.",
+      "description_zh": "致力于推广女性音乐家的节日，举办音乐会和关于音乐界性别平等的讨论。"
+    },
+    {
+      "id": "event-alcudia-jazz-2026",
+      "title": "Alcúdia Jazz Festival 2026",
+      "title_es": "Festival de Jazz de Alcúdia 2026",
+      "title_de": "Alcúdia Jazz Festival 2026",
+      "title_ru": "Джазовый фестиваль Алькудия 2026",
+      "title_zh": "阿尔库迪亚爵士音乐节2026",
+      "description": "One of Mallorca's most popular jazz festivals, held in the historic walled town of Alcúdia. National and international jazz artists perform open-air concerts in the town's charming squares.",
+      "description_es": "Uno de los festivales de jazz más populares de Mallorca, celebrado en la histórica ciudad amurallada de Alcúdia. Artistas de jazz nacionales e internacionales ofrecen conciertos al aire libre en las encantadoras plazas de la ciudad.",
+      "description_de": "Eines der beliebtesten Jazzfestivals Mallorcas in der historischen ummauerten Stadt Alcúdia.",
+      "category": "CONCERT",
+      "start_date": "2026-09-10",
+      "end_date": "2026-09-13",
+      "municipality": "Alcúdia",
+      "is_free": true,
+      "website_url": "https://www.seemallorca.com/nightlife/jazz/alcudia-jazz-festival",
+      "description_ru": "Летний джазовый фестиваль в историческом центре Алькудии с местными и международными музыкантами.",
+      "description_zh": "夏季爵士音乐节在阿尔库迪亚历史中心举行，汇聚本地和国际音乐家。"
+    },
+    {
+      "id": "event-feria-marinera-andratx-2026",
+      "title": "Feria Marinera – Port d'Andratx",
+      "title_es": "Feria Marinera – Port d'Andratx",
+      "title_de": "Seemesse – Port d'Andratx",
+      "title_ru": "Морская ярмарка – Порт д'Андрач",
+      "title_zh": "安德拉特港海洋集市",
+      "description": "Annual maritime fair celebrating the fishing heritage and seafaring traditions of Port d'Andratx. Features local fish markets, boat exhibitions, nautical crafts, traditional food and live music around the picturesque harbour.",
+      "description_es": "Feria marítima anual que celebra el patrimonio pesquero de Port d'Andratx. Incluye mercado de pescado, exposición de embarcaciones, artesanía náutica, comida tradicional y música en vivo.",
+      "description_de": "Jährliche Seemesse, die das Fischerbe von Port d'Andratx feiert.",
+      "category": "FESTIVAL",
+      "start_date": "2026-10-18",
+      "end_date": "2026-10-19",
+      "municipality": "Andratx",
+      "address": "Port d'Andratx",
+      "is_free": true,
+      "website_url": "https://mallorcainforma.com/2026/05/08/ferias-mercados-2026-mallorca/",
+      "description_ru": "Морской праздник с дегустацией морепродуктов и народными гуляниями.",
+      "description_zh": "在风景如画的安德拉奇港举行的海洋节，品尝海鲜和民间庆典。"
+    },
+    {
+      "id": "event-sa-fira-soller-2026",
+      "title": "Sa Fira i Es Firó – Sóller",
+      "title_es": "Sa Fira i Es Firó – Sóller",
+      "title_de": "Sa Fira und Es Firó – Sóller",
+      "title_ru": "Са Фира и Эс Фиро – Сольер",
+      "title_zh": "萨菲拉和埃斯菲罗 – 索勒",
+      "description": "One of Mallorca's most spectacular traditional festivals, held every May in Sóller. Highlights include the dramatic reenactment of the 1561 Battle of Sóller (Es Firó), when townspeople repelled a Moorish pirate attack, plus parades, markets and music.",
+      "description_es": "Uno de los festivales tradicionales más espectaculares de Mallorca, que se celebra cada mayo en Sóller. El punto culminante es la recreación de la Batalla de Sóller de 1561 (Es Firó), cuando los habitantes rechazaron un ataque pirata. Incluye desfiles, mercados y música.",
+      "description_de": "Eines der spektakulärsten traditionellen Feste Mallorcas, jeden Mai in Sóller. Höhepunkt ist die Nachstellung der Schlacht von Sóller von 1561 (Es Firó).",
+      "category": "FESTIVAL",
+      "start_date": "2026-05-01",
+      "end_date": "2026-05-11",
+      "municipality": "Sóller",
+      "is_free": true,
+      "website_url": "https://www.seemallorca.com/events/calendar/fires-i-firo-soller",
+      "description_ru": "Традиционная ярмарка и историческая реконструкция битвы с пиратами в Сольере.",
+      "description_zh": "索勒传统集市和与海盗战役历史重演，五月最重要的节日。"
+    },
+    {
+      "id": "event-mallorca-312-2026",
+      "title": "Mallorca 312 OK Mobility",
+      "title_es": "Mallorca 312 OK Mobility",
+      "title_de": "Mallorca 312 OK Mobility",
+      "title_ru": "Майорка 312 ОК Мобилити",
+      "title_zh": "马略卡312 OK Mobility",
+      "description": "One of Europe's most iconic sportive cycling events, starting and finishing at Platja de Muro. Riders choose between 312 km, 226 km or 167 km routes circumnavigating Mallorca through the Serra de Tramuntana and the dramatic Cap de Formentor. Thousands of cyclists from over 50 countries participate annually.",
+      "description_es": "Uno de los eventos cicloturistas más icónicos de Europa, con salida y llegada en Platja de Muro. Los participantes eligen entre 312 km, 226 km o 167 km circunnavegando Mallorca por la Serra de Tramuntana y el Cap de Formentor. Miles de ciclistas de más de 50 países participan cada año.",
+      "description_de": "Eines der ikonischsten Radfahrevents Europas, Start und Ziel in Platja de Muro. Teilnehmer wählen zwischen 312 km, 226 km oder 167 km durch die Serra de Tramuntana.",
+      "category": "SPORT",
+      "start_date": "2026-04-25",
+      "municipality": "Muro",
+      "address": "Platja de Muro",
+      "is_free": false,
+      "website_url": "https://www.mallorca312.com",
+      "description_ru": "Культовая велоэкспедиция с дистанциями 312, 225, 167 и 83 км по живописным дорогам Майорки.",
+      "description_zh": "标志性自行车骑行，设312、225、167和83公里距离，沿马略卡最美风景公路骑行。"
+    },
+    {
+      "id": "event-mallorca-utmb-2026",
+      "title": "Mallorca by UTMB® 2026",
+      "title_es": "Mallorca by UTMB® 2026",
+      "title_de": "Mallorca by UTMB® 2026",
+      "title_ru": "Майорка by UTMB® 2026",
+      "title_zh": "马略卡UTMB越野跑2026",
+      "description": "Premium mountain trail running event held in the UNESCO-listed Serra de Tramuntana. Distances range from 20 km to 137 km along ancient stone paths, clifftops and Mediterranean pine forests. Part of the global UTMB World Series, attracting elite and amateur trail runners from around the world.",
+      "description_es": "Evento de trail running de montaña en la Serra de Tramuntana (Patrimonio UNESCO). Distancias de 20 km a 137 km por caminos de piedra centenarios, acantilados y bosques mediterráneos. Parte de la UTMB World Series, atrae a corredores élite y amateurs de todo el mundo.",
+      "description_de": "Premium-Trailrunning-Event im UNESCO-Welterbe Serra de Tramuntana. Distanzen von 20 km bis 137 km auf alten Steinpfaden und mediterranen Kiefernwäldern. Teil der globalen UTMB World Series.",
+      "category": "SPORT",
+      "start_date": "2026-10-30",
+      "end_date": "2026-11-01",
+      "municipality": "Sóller",
+      "is_free": false,
+      "website_url": "https://mallorca.utmb.world",
+      "description_ru": "Горный ультрамарафон Майорки в рамках серии UTMB с дистанциями от 20 до 100+ км.",
+      "description_zh": "马略卡山地超级马拉松，UTMB系列赛事，距离从20到100多公里穿越特拉蒙塔纳山脉。"
+    },
+    {
+      "id": "event-palma-marathon-2026",
+      "title": "TUI Palma Marathon 2026",
+      "title_es": "TUI Palma Marathon 2026",
+      "title_de": "TUI Palma Marathon 2026",
+      "title_ru": "TUI Пальма Марафон 2026",
+      "title_zh": "TUI 帕尔马马拉松2026",
+      "description": "One of the most scenic marathons in Spain, running along Palma's iconic bay past the Cathedral and historic landmarks. Offers marathon (42.195 km), half marathon (21.097 km) and 10 km distances. Authorized by AIMS and attracting thousands of runners from around the world.",
+      "description_es": "Uno de los maratones más pintorescos de España, corriendo junto a la bahía de Palma frente a la Catedral y monumentos históricos. Ofrece maratón (42,195 km), media maratón (21,097 km) y 10 km. Autorizado por AIMS y que atrae a miles de corredores de todo el mundo.",
+      "description_de": "Einer der landschaftlich schönsten Marathons Spaniens, entlang der Bucht von Palma an der Kathedrale und historischen Sehenswürdigkeiten vorbei. Marathon, Halbmarathon und 10 km verfügbar.",
+      "category": "SPORT",
+      "start_date": "2026-10-18",
+      "municipality": "Palma",
+      "is_free": false,
+      "website_url": "https://www.palmademallorcamarathon.com/english",
+      "description_ru": "Международный марафон — один из крупнейших беговых событий Испании.",
+      "description_zh": "帕尔马国际马拉松，西班牙最大跑步赛事之一。"
+    },
+    {
+      "id": "event-salt-tramuntana-2026",
+      "title": "Salt de Tramuntana – Ultramarathon",
+      "title_es": "Salt de Tramuntana – Ultramaratón",
+      "title_de": "Salt de Tramuntana – Ultramarathon",
+      "title_ru": "Салт де Трамунтана – Ультрамарафон",
+      "title_zh": "特拉蒙塔纳超马赛",
+      "description": "Challenging ultramarathon through the rugged terrain of the Serra de Tramuntana, starting in Caimari. Offers distances of 42.8 km and 85.6 km through breathtaking mountain landscapes, ancient stone paths and traditional Mallorcan villages.",
+      "description_es": "Exigente ultramaratón por el accidentado terreno de la Serra de Tramuntana, con salida en Caimari. Ofrece distancias de 42,8 km y 85,6 km por paisajes montañosos impresionantes, caminos de piedra ancestrales y pueblos mallorquines tradicionales.",
+      "description_de": "Anspruchsvoller Ultramarathon durch das raue Gelände der Serra de Tramuntana, Start in Caimari. 42,8 km und 85,6 km durch atemberaubende Berglandschaften.",
+      "category": "SPORT",
+      "start_date": "2026-10-10",
+      "municipality": "Selva",
+      "address": "Caimari",
+      "is_free": false,
+      "website_url": "https://saltdetramuntana.com",
+      "description_ru": "Сложный горный ультрамарафон в горах Трамунтана с дистанцией более 100 км.",
+      "description_zh": "特拉蒙塔纳山脉艰难山地超级马拉松，距离超过100公里。"
+    },
+    {
+      "id": "event-nitx-art-felanitx-2026",
+      "title": "Nitx de l'Art – Felanitx",
+      "title_es": "Nitx de l'Art – Felanitx",
+      "title_de": "Nitx de l'Art – Felanitx (Kunstnacht)",
+      "title_ru": "Ночь искусства – Феланич",
+      "title_zh": "费拉尼奇艺术之夜",
+      "description": "Felanitx's spectacular art night, coinciding with the town's patron saint festivities. Over 200 artists exhibit across 50+ spaces — galleries, shops, patios and public spaces — transforming the entire town into an open-air art venue for four nights. Free entry to all exhibitions.",
+      "description_es": "La espectacular noche del arte de Felanitx, coincidiendo con las fiestas patronales. Más de 200 artistas exponen en más de 50 espacios — galerías, tiendas, patios y espacios públicos — transformando todo el pueblo en un gran espacio de arte al aire libre durante cuatro noches. Entrada gratuita.",
+      "description_de": "Die spektakuläre Kunstnacht von Felanitx, die mit den Patronatsfesten zusammenfällt. Über 200 Künstler stellen in mehr als 50 Räumen aus — Galerien, Geschäfte, Höfe und öffentliche Plätze. Freier Eintritt.",
+      "category": "CULTURE",
+      "start_date": "2026-08-20",
+      "end_date": "2026-08-23",
+      "municipality": "Felanitx",
+      "is_free": true,
+      "website_url": "https://www.artsmallorca.com/en/event/nitx-de-lart-de-felanitx-2026",
+      "description_ru": "Ночная выставка искусства с открытыми галереями и уличными инсталляциями.",
+      "description_zh": "费拉尼特斯艺术之夜，画廊开放参观，举办表演和街头装置艺术。"
+    },
+    {
+      "id": "event-algaidart-2026",
+      "title": "Algaid'Art 2026 — 10th Edition",
+      "title_es": "Algaid'Art 2026 — 10ª Edición",
+      "title_de": "Algaid'Art 2026 — 10. Ausgabe",
+      "title_ru": "Алгайд-Арт 2026 — 10-е издание",
+      "title_zh": "阿尔盖达艺术节2026（第10届）",
+      "description": "A vibrant contemporary art festival in the charming village of Algaida, celebrating its 10th anniversary. Artists from Mallorca and beyond exhibit paintings, sculpture and installations across the village's historic spaces. Free entry and a wonderful excuse to discover this beautiful inland town.",
+      "description_es": "Un vibrante festival de arte contemporáneo en el encantador pueblo de Algaida, que celebra su 10ª edición. Artistas de Mallorca y de fuera exponen pinturas, esculturas e instalaciones en los espacios históricos del pueblo. Entrada gratuita y una excusa perfecta para descubrir este hermoso pueblo del interior.",
+      "description_de": "Ein lebendiges zeitgenössisches Kunstfestival im malerischen Dorf Algaida, das seinen 10. Jahrestag feiert. Künstler aus Mallorca und darüber hinaus stellen Gemälde, Skulpturen und Installationen aus. Freier Eintritt.",
+      "category": "CULTURE",
+      "start_date": "2026-09-12",
+      "end_date": "2026-09-13",
+      "municipality": "Algaida",
+      "is_free": true,
+      "website_url": "https://www.artsmallorca.com/en/event/10th-algaidart-2026",
+      "description_ru": "Международный фестиваль искусства и музыки в деревне Алгайда с выставками и концертами.",
+      "description_zh": "阿尔盖达村国际艺术和音乐节，举办展览、音乐会和街头表演。"
+    },
+    {
+      "id": "event-mostra-arts-santa-eugenia-2026",
+      "title": "Mostra d'Arts Cèniques – Santa Eugènia",
+      "title_es": "Mostra de Artes Escénicas – Santa Eugènia",
+      "title_de": "Mostra d'Arts Cèniques – Santa Eugènia",
+      "title_ru": "Фестиваль сценических искусств – Санта-Эухения",
+      "title_zh": "圣尤哲尼亚表演艺术节",
+      "description": "Annual performing arts festival held in the small village of Santa Eugènia, showcasing theatre, circus, music and dance from Balearic and international companies. Set in the village's charming outdoor spaces, it is one of Mallorca's most beloved community cultural events.",
+      "description_es": "Festival anual de artes escénicas en el pequeño pueblo de Santa Eugènia, con teatro, circo, música y danza de compañías baleares e internacionales. Celebrado en los encantadores espacios al aire libre del pueblo, es uno de los eventos culturales comunitarios más queridos de Mallorca.",
+      "description_de": "Jährliches Darstellende-Künste-Festival im kleinen Dorf Santa Eugènia mit Theater, Zirkus, Musik und Tanz balearischer und internationaler Kompanien.",
+      "category": "CULTURE",
+      "start_date": "2026-09-03",
+      "end_date": "2026-09-05",
+      "municipality": "Santa Eugènia",
+      "is_free": true,
+      "website_url": "https://www.artsmallorca.com/en/event/mostra-darts-ceniques-de-santa-eugenia-2026",
+      "description_ru": "Фестиваль театра и сценических искусств в деревне Санта-Эухениа.",
+      "description_zh": "圣欧亨尼亚小村庄的戏剧和表演艺术节，举办亲密的室内演出。"
     }
   ],
   "discounts": [

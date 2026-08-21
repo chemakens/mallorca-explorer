@@ -80,6 +80,7 @@ class SeedDataWorker @AssistedInject constructor(
             eventDao.upsertAll(seedData.events.map { it.toEntity() })
             discountDao.upsertAll(seedData.discounts.map { it.toEntity() })
 
+            prefsDataStore.setEventsLastSyncedEpoch(System.currentTimeMillis())
             prefsDataStore.setIsSeeded(true)
             prefsDataStore.setSeedVersion(CURRENT_SEED_VERSION)
             Timber.d("Seeded ${seedData.places.size} places, ${seedData.itineraries.size} itineraries, ${seedData.events.size} events (v$CURRENT_SEED_VERSION)")
@@ -97,7 +98,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 256
+        const val CURRENT_SEED_VERSION = 257
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
