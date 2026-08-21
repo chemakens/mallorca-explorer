@@ -5133,25 +5133,46 @@
         "sunrise",
         "iconic"
       ],
-      "description_es": "La colina sagrada de Mallorca que se eleva 543 m sobre la llanura, coronada por tres monasterios. El panorama de 360 grados desde el Santuari de Cura revela toda la isla.",
+      "description_es": "El Puig de Randa es una emblemática montaña de 543 m situada en el municipio de Algaida, en el centro de Mallorca. Conocida como la 'Montaña de los Tres Monasterios', alberga tres santuarios escalonados a lo largo de su ascenso: el Santuario de Nuestra Señora de Gracia, construido bajo un impresionante acantilado; la Ermita de Sant Honorat a media altura; y el Santuario de Cura en la cima, vinculado al filósofo Ramon Llull, que se retiró aquí en el siglo XIII. Desde la cumbre, al no haber montañas cercanas, se contemplan vistas de hasta 36 pueblos, la bahía de Palma y la isla de Cabrera en días despejados.",
       "tips_es": [
-        "Tres santuarios en la misma montaña, cada uno con historia",
-        "Ramon Llull fundó el monasterio superior en el siglo XIII",
-        "Las vistas sobre la llanura central de Mallorca son únicas"
+        "Tres santuarios en una sola subida — Gracia, Sant Honorat y Cura en la cima",
+        "Vinculado a Ramon Llull, filósofo mallorquín del siglo XIII — el Santuario de Cura tiene aula de gramática",
+        "En coche desde el pueblo de Randa — carretera asfaltada de 5 km con curvas",
+        "A pie: rutas circulares de 7–10 km desde Randa, ~2h 30min, entre pinares",
+        "Muy popular entre ciclistas — pendiente media del 5,5%, uno de los puertos más queridos del interior",
+        "Desde la cima se ven hasta 36 pueblos, la bahía de Palma y Cabrera en días claros",
+        "El Santuario de Cura tiene hospedería, cafetería y restaurante",
+        "Acceso gratuito — aparcamiento en la cima"
       ],
       "name_de": "Puig de Randa",
-      "description_de": "Heiliger Berg mit drei Klöstern – Ramon Llull gründete hier im 13. Jahrhundert die erste Missionsschule. Panorama über die gesamte Zentralebene.",
+      "description_de": "Der Puig de Randa ist ein markanter 543 m hoher Berg in der Gemeinde Algaida im Zentrum Mallorcas. Als 'Berg der drei Klöster' bekannt, beherbergt er drei historische Heiligtümer entlang des Aufstiegs: das Heiligtum Unserer Lieben Frau von Gracia, spektakulär unter einer Felswand erbaut; die Einsiedelei Sant Honorat auf halber Höhe; und das Heiligtum von Cura an der Spitze, das mit dem Philosophen Ramon Llull verbunden ist, der sich im 13. Jahrhundert hierher zurückzog. Da keine anderen hohen Berge in der Nähe sind, reicht der Blick bei klarem Wetter bis zu 36 Dörfer, die Bucht von Palma und die Insel Cabrera.",
       "tips_de": [
-        "Drei Heiligtümer auf demselben Berg, jedes mit Geschichte",
-        "Ramon Llull gründete das oberste Kloster im 13. Jahrhundert",
-        "Einzigartiger Ausblick über die gesamte Zentralebene"
+        "Drei Heiligtümer in einem Aufstieg — Gracia, Sant Honorat und Cura an der Spitze",
+        "Mit Ramon Llull, mallorquinischem Philosophen des 13. Jh. verbunden — Heiligtum Cura hat einen Grammatiksaal",
+        "Mit dem Auto vom Dorf Randa — asphaltierte 5 km kurvenreiche Straße",
+        "Zu Fuß: Rundwege von 7–10 km ab Randa, ~2h 30min, durch Kiefernwälder",
+        "Sehr beliebt bei Radfahrern — durchschnittlich 5,5% Steigung, einer der beliebtesten Anstiege im Inselinneren",
+        "Vom Gipfel sieht man bis zu 36 Dörfer, die Bucht von Palma und Cabrera bei klarem Wetter",
+        "Das Heiligtum Cura hat eine Herberge, Cafeteria und Restaurant",
+        "Freier Eintritt — Parkplatz an der Spitze"
       ],
       "name_ru": "",
       "description_ru": "",
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "description_en": "Puig de Randa is an iconic 543 m mountain in the municipality of Algaida, in central Mallorca. Known as the 'Mountain of the Three Monasteries', it hosts three historic sanctuaries staggered along its ascent: the Sanctuary of Nuestra Señora de Gracia, dramatically built beneath a cliff face; the Hermitage of Sant Honorat at mid-height; and the Sanctuary of Cura at the summit, historically linked to the philosopher Ramon Llull, who retreated here in the 13th century. From the top, with no other high mountains nearby, you can see up to 36 villages, the Bay of Palma and the island of Cabrera on clear days.",
+      "tips_en": [
+        "Three sanctuaries in one ascent — Gracia, Sant Honorat and Cura at the summit",
+        "Linked to Ramon Llull, 13th-century Mallorcan philosopher — Sanctuary of Cura has a grammar school room",
+        "By car from the village of Randa — paved 5 km winding road",
+        "On foot: circular routes of 7–10 km from Randa, ~2h 30min, through pine forests",
+        "Very popular with cyclists — average 5.5% gradient, one of the most beloved climbs in central Mallorca",
+        "From the summit you can see up to 36 villages, the Bay of Palma and Cabrera on clear days",
+        "Sanctuary of Cura has a hostelry, cafeteria and restaurant",
+        "Free access — parking at the summit"
+      ]
     },
     {
       "id": "son-marroig",
@@ -5354,25 +5375,46 @@
         "bay-views",
         "north-mallorca"
       ],
-      "description_es": "Pico de caliza de 333 m sobre Pollença coronado por un oratorio del siglo XIV. La subida recompensa con amplias vistas sobre la bahía de Pollença, la Península de Formentor y las montañas del norte.",
+      "description_es": "El Puig de Maria es un promontorio aislado de 321 m junto al municipio de Pollença, en el norte de Mallorca. En su cima se encuentra el Santuari de la Mare de Déu del Puig, un antiguo monasterio fortificado del siglo XIV construido para pedir protección frente a la Peste Negra. Es uno de los miradores y rutas de senderismo familiar más emblemáticos de la Sierra de Tramuntana, con vistas espectaculares al pueblo de Pollença, la bahía y el Port de Pollença, la península de Formentor y los picos de la Tramuntana. El camino combina un tramo asfaltado bajo un encinar y un precioso tramo final de piedra tradicional (Camí de Pedra).",
       "tips_es": [
-        "El monasterio en la cima ofrece habitaciones muy básicas para peregrinos",
-        "La subida desde Pollença dura unos 45 minutos",
-        "Desde la cima se ven las bahías de Pollença y Alcúdia simultáneamente"
+        "Inicio en la Ma-2200, km 51,9, a la entrada de Pollença — aparcamiento gratuito cerca",
+        "Subida ~50 min, recorrido completo ~1h 40min, desnivel 260 m — dificultad fácil",
+        "Primer tramo asfaltado bajo encinar; tramo final en empedrado tradicional (Camí de Pedra)",
+        "Lleva calzado con buen agarre — las piedras del tramo final pueden resbalar si están húmedas",
+        "No apto para carritos de bebé ni sillas de ruedas",
+        "Vistas al pueblo de Pollença, Port de Pollença, bahía y península de Formentor",
+        "En la cima hay mesas de picnic, servicios básicos y zona recreativa",
+        "El santuario tiene hospedería — se puede dormir allí"
       ],
       "name_de": "Puig de Maria",
-      "description_de": "Kloster auf dem Gipfel mit einfachen Pilgerzimmern und unglaublichem Panorama über beide Buchten – Pollença und Alcúdia.",
+      "description_de": "Der Puig de Maria ist ein isolierter 321 m hoher Hügel neben der Stadt Pollença im Norden Mallorcas. An seinem Gipfel steht das Santuari de la Mare de Déu del Puig, ein befestigtes Kloster aus dem 14. Jahrhundert, das als Schutz vor der Pest erbaut wurde. Es ist eine der ikonischsten Familienwanderrouten und Aussichtspunkte der Serra de Tramuntana, mit spektakulärem Blick auf Pollença, die Bucht und den Port de Pollença, die Halbinsel Formentor und die umliegenden Tramuntana-Gipfel. Der Weg verbindet einen asphaltierten Abschnitt durch einen Eichenwald mit einem wunderschönen traditionellen Steinweg (Camí de Pedra) am Ende.",
       "tips_de": [
-        "Das Gipfelkloster bietet sehr einfache Pilgerzimmer an",
-        "Aufstieg ab Pollença dauert ca. 45 Minuten",
-        "Von der Spitze sind Bucht von Pollença und Bucht von Alcúdia gleichzeitig zu sehen"
+        "Start an der Ma-2200, km 51,9, am Eingang von Pollença — kostenlose Parkplätze in der Nähe",
+        "Aufstieg ~50 Min., komplette Runde ~1h 40min, 260 m Höhenunterschied — leichte Schwierigkeit",
+        "Erster Abschnitt asphaltiert durch Eichenwald; letzter Abschnitt auf traditionellem Steinweg (Camí de Pedra)",
+        "Schuhe mit gutem Profil mitbringen — die Steine im oberen Teil können bei Nässe rutschig sein",
+        "Nicht geeignet für Kinderwagen oder Rollstühle",
+        "Aussicht auf das Dorf Pollença, Port de Pollença, die Bucht und die Halbinsel Formentor",
+        "Am Gipfel gibt es Picknicktische, einfache Einrichtungen und einen Erholungsbereich",
+        "Das Heiligtum hat eine Herberge — Übernachtung möglich"
       ],
       "name_ru": "",
       "description_ru": "",
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "description_en": "Puig de Maria is an isolated 321 m promontory next to the town of Pollença in northern Mallorca. At its summit stands the Santuari de la Mare de Déu del Puig, a fortified 14th-century monastery built to seek protection against the Black Death. It is one of the most iconic family hiking routes and viewpoints in the Serra de Tramuntana, with spectacular views of Pollença, the bay and Port de Pollença, the Formentor peninsula and the surrounding Tramuntana peaks. The path combines a shaded asphalt section through an oak forest with a beautiful traditional stone trail (Camí de Pedra) at the top.",
+      "tips_en": [
+        "Start at Ma-2200, km 51.9, at the entrance to Pollença — free parking nearby",
+        "Ascent ~50 min, full circuit ~1h 40min, 260 m elevation gain — easy difficulty",
+        "First section on asphalt through an oak forest; final section on traditional stone path (Camí de Pedra)",
+        "Wear shoes with good grip — the stones on the upper section can be slippery when wet",
+        "Not suitable for pushchairs or wheelchairs",
+        "Views over Pollença village, Port de Pollença, the bay and the Formentor peninsula",
+        "At the summit there are picnic tables, basic facilities and a recreation area",
+        "The sanctuary has a hostelry — you can stay overnight"
+      ]
     },
     {
       "id": "santuari-sant-salvador",
@@ -5411,25 +5453,46 @@
         "sunset",
         "iconic"
       ],
-      "description_es": "El santuario en colina más visitado de Mallorca a 510 m cerca de Felanitx. La imponente estatua de Cristo y el gran rosetón enmarcan un panorama que abarca toda la costa sur y el archipiélago de Cabrera.",
+      "description_es": "El Santuari de Sant Salvador es un complejo religioso del siglo XIV en la cima del Puig de Sant Salvador, a 509 m de altitud, en el municipio de Felanitx. Desde su terraza se contemplan vistas panorámicas del Pla de Mallorca, la costa este y la isla de Cabrera en días despejados. El conjunto incluye una iglesia del siglo XVIII con un retablo gótico de piedra del siglo XV, el monumental Cristo Rey de 7 m sobre una columna de 37 m, y la Creu del Picot, una cruz de piedra de 14 m en un pico contiguo accesible a pie en 15 minutos. El recinto dispone de hostatgería, cafetería, restaurante y zona de picnic.",
       "tips_es": [
-        "Abierto todo el año con habitaciones de peregrino disponibles",
-        "La cruz monumental y el obelisco son iconos del interior de Mallorca",
-        "Desde la terraza se ven las costas este y sur de la isla"
+        "Acceso gratuito al santuario, iglesia y aparcamiento",
+        "Horario: lu, mi, vi, sá, do 9:00–20:00 · ma y ju 9:00–18:00",
+        "En coche por la Ma-4011 — subida sinuosa de 5 km, conduce con precaución",
+        "A pie por el Vía Crucis: 8,4 km ida y vuelta, fácil, ~2h 30min",
+        "Muy popular entre ciclistas — uno de los puertos de montaña más icónicos de Mallorca",
+        "En días claros se ve la isla de Cabrera desde la terraza",
+        "La Creu del Picot está a 15 minutos a pie — merece el desvío",
+        "Hay hostatgería con habitaciones en las antiguas celdas — se puede dormir allí"
       ],
       "name_de": "Heiligtum Sant Salvador",
-      "description_de": "Heiligtum auf dem höchsten Punkt des Llevant mit riesigem Kreuz und Obelisk. Von der Terrasse sieht man die Ost- und Südküste gleichzeitig.",
+      "description_de": "Das Santuari de Sant Salvador ist ein religiöser Komplex aus dem 14. Jahrhundert auf dem Gipfel des Puig de Sant Salvador auf 509 m Höhe in der Gemeinde Felanitx. Von seiner Terrasse genießt man an klaren Tagen einen Panoramablick auf die Ebene von Mallorca, die Ostküste und die Insel Cabrera. Der Komplex umfasst eine Kirche aus dem 18. Jahrhundert mit einem gotischen Steinretabel aus dem 15. Jahrhundert, die monumentale Christus-König-Statue (7 m auf einer 37 m hohen Säule) und das Creu del Picot — ein 14 m hohes Steinkreuz auf einem benachbarten Gipfel, der in 15 Minuten zu Fuß erreichbar ist. Das Gelände verfügt über eine Herberge, Cafeteria, Restaurant und Picknickbereich.",
       "tips_de": [
-        "Ganzjährig geöffnet mit Pilgerzimmern",
-        "Das monumentale Kreuz und der Obelisk sind Ikonen des Inselinneren",
-        "Von der Terrasse sind Ost- und Südküste der Insel zu sehen"
+        "Freier Eintritt zum Heiligtum, zur Kirche und zum Parkplatz",
+        "Öffnungszeiten: Mo, Mi, Fr, Sa, So 9:00–20:00 · Di & Do 9:00–18:00",
+        "Mit dem Auto über die Ma-4011 — kurvenreiche 5 km Auffahrt, vorsichtig fahren",
+        "Zu Fuß über den Via Crucis Pilgerweg: 8,4 km Hin- und Rückweg, leicht, ~2h 30min",
+        "Sehr beliebt bei Radfahrern — einer der ikonischsten Bergpässe Mallorcas",
+        "An klaren Tagen ist die Insel Cabrera von der Terrasse aus zu sehen",
+        "Das Creu del Picot ist 15 Minuten zu Fuß entfernt — sehr empfehlenswert",
+        "Die Herberge bietet Zimmer in den ehemaligen Mönchszellen — Übernachtung möglich"
       ],
       "name_ru": "",
       "description_ru": "",
       "tips_ru": [],
       "name_zh": "",
       "description_zh": "",
-      "tips_zh": []
+      "tips_zh": [],
+      "description_en": "The Santuari de Sant Salvador is a 14th-century religious complex perched on the summit of Puig de Sant Salvador at 509 m altitude, in the municipality of Felanitx. From its terrace you can enjoy panoramic views of the Pla de Mallorca, the east coast, and the island of Cabrera on clear days. The complex includes an 18th-century church with a 15th-century Gothic stone altarpiece, the monumental Cristo Rey statue (7 m tall on a 37 m column), and the Creu del Picot — a 14 m stone cross on an adjacent peak reachable on foot in 15 minutes. The site has a hostelry, cafeteria, restaurant and picnic area.",
+      "tips_en": [
+        "Free access to the sanctuary, church and parking",
+        "Opening hours: Mon, Wed, Fri, Sat, Sun 9:00–20:00 · Tue & Thu 9:00–18:00",
+        "By car via Ma-4011 — winding 5 km ascent, drive carefully",
+        "On foot via the Via Crucis pilgrims' path: 8.4 km return, easy, ~2h 30min",
+        "A favourite among cyclists — one of Mallorca's most iconic mountain climbs",
+        "On clear days you can see the island of Cabrera from the terrace",
+        "The Creu del Picot is 15 minutes on foot — well worth the detour",
+        "The hostelry offers rooms in the former monks' cells — you can stay overnight"
+      ]
     },
     {
       "id": "mirador-coll-gramola",
