@@ -6232,7 +6232,7 @@
       "id": "cala-dor",
       "name": "Cala d'Or",
       "name_es": "Cala d'Or",
-      "description": "A cluster of five intimate coves connected by pine-shaded promenades in the elegant resort of Cala d'Or. The whitewashed architecture, the bobbing yachts of the marina, and the clear shallow water create a Côte d'Azur atmosphere unique in Mallorca. Best explored by pedal boat or kayak between coves.",
+      "description": "Cala d'Or is a charming coastal resort on the southeast coast of Mallorca, famous for its turquoise coves and whitewashed Ibizan-style architecture. The main tourist hub of Santanyí municipality, it is ideal for families and couples seeking a mix of relaxation, accessible beaches, and excellent dining. Its coastline is dotted with beautiful coves — Cala Gran (the largest, fully serviced), Cala Esmeralda, the quieter Cala Serena, and Cala Petita. The exclusive Marina Cala d'Or is lined with yachts and waterfront restaurants serving Mediterranean cuisine. Nearby, the 18th-century Es Fortí fortress offers free access and sunset views, while the Mondragó Natural Park — just minutes away — features wild beaches such as S'Amarador and marked hiking trails.",
       "category": "BEACH",
       "latitude": 39.3712,
       "longitude": 3.2253,
@@ -6246,6 +6246,14 @@
         {
           "url": "file:///android_asset/images/beach-cala-dor-2.jpg",
           "source": "UNSPLASH"
+        },
+        {
+          "url": "file:///android_asset/images/cala-dor-mia-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cala-dor-mia-3.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/beach-cala-dor.jpg",
@@ -6253,9 +6261,11 @@
       "rating": 4.4,
       "review_count": 5870,
       "tips": [
-        "Rent a kayak to explore all five coves in half a day",
-        "Marina has excellent restaurants for a sunset dinner",
-        "The smallest cove (Cala Gran) has the most sheltered water"
+        "Walk between the coves — Cala Gran, Cala Esmeralda, Cala Serena and Cala Petita are all connected by shaded pine paths",
+        "The Marina Cala d'Or is perfect for an evening stroll among yachts, with waterfront restaurants and cocktail bars",
+        "Visit the Es Fortí fortress at sunset — free entry and open views over the Mediterranean",
+        "Take the tourist train to move easily between beaches, hotels and the town centre without a car",
+        "The Mondragó Natural Park is just 10 minutes away by car — its wild beach S'Amarador is one of the most beautiful on the island"
       ],
       "tags": [
         "marina",
@@ -6265,18 +6275,22 @@
         "east-coast",
         "elegant"
       ],
-      "description_es": "Conjunto de cinco íntimas calas conectadas por paseos sombreados de pinos en el elegante resort de Cala d'Or. La arquitectura encalada, los yates de la marina y el agua clara crean una atmósfera de Riviera mediterránea.",
+      "description_es": "Cala d'Or es una encantadora localidad turística en el sureste de Mallorca, famosa por sus calas de agua turquesa y su arquitectura de casas blancas de estilo ibicenco. Principal núcleo turístico del municipio de Santanyí, es ideal para familias y parejas que buscan combinar relax, playas accesibles y una excelente oferta gastronómica. Su litoral está salpicado de hermosas calas: Cala Gran (la más amplia, con todos los servicios), Cala Esmeralda, la tranquila Cala Serena y Cala Petita. La exclusiva Marina de Cala d'Or está llena de yates y restaurantes frente al mar con cocina mediterránea. Cerca, el fortín Es Fortí del siglo XVIII ofrece acceso gratuito y vistas al atardecer, mientras que el Parque Natural de Mondragó — a pocos minutos — cuenta con playas vírgenes como S'Amarador y senderos señalizados.",
       "tips_es": [
-        "Puerto deportivo con ambiente cosmopolita y animado",
-        "Las calitas del entorno son accesibles en kayak de alquiler",
-        "El mercado artesanal de los martes y jueves es muy popular"
+        "Pasea entre las calas — Cala Gran, Cala Esmeralda, Cala Serena y Cala Petita están conectadas por caminos sombreados entre pinos",
+        "La Marina de Cala d'Or es perfecta para un paseo nocturno entre yates, con restaurantes y coctelerías frente al mar",
+        "Visita el fortín Es Fortí al atardecer — entrada gratuita y vistas abiertas sobre el Mediterráneo",
+        "El tren turístico es la forma más cómoda de moverse entre playas, hoteles y el centro sin necesidad de coche",
+        "El Parque Natural de Mondragó está a solo 10 minutos en coche — su playa virgen S'Amarador es una de las más bonitas de la isla"
       ],
       "name_de": "Cala d'Or",
-      "description_de": "Mondäner Jachthafen mit Café-Promenade und kleinen umgebenden Buchten – ideal für Wasserradfahrten.",
+      "description_de": "Cala d'Or ist ein charmanter Küstenort im Südosten Mallorcas, bekannt für seine türkisfarbenen Buchten und die weiß getünchte Architektur im ibizenkischen Stil. Als wichtigstes Touristenzentrum der Gemeinde Santanyí ist es ideal für Familien und Paare, die Entspannung, zugängliche Strände und hervorragende Gastronomie verbinden möchten. Die Küste ist mit wunderschönen Buchten gespickt: Cala Gran (die größte, voll ausgestattet), Cala Esmeralda, die ruhige Cala Serena und Cala Petita. Die exklusive Marina Cala d'Or ist von Yachten und Restaurants mit mediterraner Küche gesäumt. In der Nähe bietet das Festungswerk Es Fortí aus dem 18. Jahrhundert freien Eintritt und Sonnenuntergangsblicke, während das Naturpark Mondragó — nur wenige Minuten entfernt — wilde Strände wie S'Amarador und markierte Wanderwege bietet.",
       "tips_de": [
-        "Sportboothafen mit kosmopolitischem Flair",
-        "Die umliegenden Buchten per Mietkajak erkunden",
-        "Der Dienstags- und Donnerstagskünstlermarkt ist sehr beliebt"
+        "Spaziere zwischen den Buchten — Cala Gran, Cala Esmeralda, Cala Serena und Cala Petita sind durch schattige Kiefernpfade verbunden",
+        "Die Marina Cala d'Or eignet sich perfekt für einen Abendspaziergang unter Yachten, mit Restaurants und Cocktailbars am Wasser",
+        "Besuche die Festung Es Fortí bei Sonnenuntergang — freier Eintritt und offene Aussicht über das Mittelmeer",
+        "Der Touristenzug ist die bequemste Art, zwischen Stränden, Hotels und dem Stadtzentrum zu pendeln — ohne Auto",
+        "Der Naturpark Mondragó ist nur 10 Minuten mit dem Auto entfernt — sein wilder Strand S'Amarador gehört zu den schönsten der Insel"
       ]
     },
     {
@@ -6993,7 +7007,7 @@
       "id": "cala-marcal",
       "name": "Cala Marçal",
       "name_es": "Cala Marçal",
-      "description": "A well-equipped golden-sand beach just south of the picturesque fishing harbour of Porto Colom. Calm, sheltered waters and full beach services make it ideal for families, with the colourful fishing boats of Porto Colom as a backdrop.",
+      "description": "Cala Marçal is a beautiful fine-sand beach with crystal-clear waters on the east coast of Mallorca, one kilometre from the fishing village of Portocolom (Felanitx municipality). Wide and well sheltered from waves, with shallow depths, it is ideal for families with children. The beach stretches around 150 metres in length and over 100 metres in width, framed by low cliffs and shading pine trees. Perfect for snorkelling along the cliffs and renting sun loungers or pedal boats. Facilities include sun loungers, umbrellas, public toilets, good restaurants and the Chiringuito Cala Marçal right on the sand.",
       "category": "BEACH",
       "latitude": 39.4097,
       "longitude": 3.2579,
@@ -7001,9 +7015,11 @@
       "rating": 4.4,
       "review_count": 920,
       "tips": [
-        "Walk to Porto Colom harbour for lunch — 10 minutes",
-        "Sunbeds and parasols available for hire",
-        "Calm water — safe for young children"
+        "The beach is wide and shallow — ideal for families with young children and safe for swimming",
+        "Snorkel along the rocky cliffs on the sides of the cove to discover abundant marine life",
+        "Rent a pedal boat to explore the turquoise waters at your own pace",
+        "The Chiringuito Cala Marçal on the sand is a great spot for a meal or a drink with sea views",
+        "Arrive early in summer — the car park fills up quickly and the beach gets very busy by midday"
       ],
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/cala-marcal.jpg",
@@ -7011,6 +7027,10 @@
         {
           "url": "file:///android_asset/images/cala-marcal.jpg",
           "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/cala-marcal-mia-2.jpg",
+          "source": "MINE"
         }
       ],
       "tags": [
@@ -7019,18 +7039,22 @@
         "services",
         "porto-colom"
       ],
-      "description_es": "Playa de arena dorada bien equipada justo al sur del pintoresco puerto pesquero de Porto Colom. Aguas tranquilas y protegidas e instalaciones completas la hacen ideal para familias.",
+      "description_es": "Cala Marçal es una hermosa playa de arena fina y aguas cristalinas en la costa este de Mallorca, a un kilómetro del núcleo urbano de Portocolom (municipio de Felanitx). Amplia y bien resguardada del oleaje, de poca profundidad, es ideal para familias con niños. Mide unos 150 metros de longitud y más de 100 metros de anchura, rodeada de acantilados bajos y pinos que dan sombra. Perfecta para practicar snorkel junto a los acantilados y alquilar hamacas o hidropedales. Dispone de tumbonas, sombrillas, baños públicos, buenos restaurantes y el Chiringuito Cala Marçal junto a la arena.",
       "tips_es": [
-        "Playa familiar con servicio de socorristas en temporada",
-        "El camping cercano hace que tenga buenos servicios",
-        "Los pedales de alquiler son populares entre familias"
+        "La playa es amplia y de poca profundidad — ideal para familias con niños pequeños y segura para el baño",
+        "Practica snorkel junto a los acantilados rocosos a los lados de la cala para descubrir la vida marina",
+        "Alquila un hidropedal para explorar las aguas turquesas a tu propio ritmo",
+        "El Chiringuito Cala Marçal en la arena es un lugar estupendo para comer o tomar algo con vistas al mar",
+        "Llega temprano en verano — el aparcamiento se llena rápido y la playa se llena mucho antes del mediodía"
       ],
       "name_de": "Cala Marçal",
-      "description_de": "Familienfreundlicher Strand mit Rettungsschwimmern in der Saison. Wasserpedale für Kinder sehr beliebt.",
+      "description_de": "Cala Marçal ist ein wunderschöner Feinsandstrand mit kristallklarem Wasser an der Ostküste Mallorcas, einen Kilometer vom Fischerort Portocolom (Gemeinde Felanitx) entfernt. Der breite, gut vor Wellen geschützte und flache Strand ist ideal für Familien mit Kindern. Er erstreckt sich über etwa 150 Meter Länge und mehr als 100 Meter Breite, umrahmt von niedrigen Klippen und schattenspendenden Pinien. Perfekt zum Schnorcheln entlang der Felsen und zum Mieten von Sonnenliegen oder Tretbooten. Ausstattung: Sonnenliegen, Sonnenschirme, öffentliche Toiletten, gute Restaurants und die Chiringuito Cala Marçal direkt am Sand.",
       "tips_de": [
-        "Familienfreundlicher Strand mit Rettungsschwimmern in der Saison",
-        "Wasserpedale zum Mieten bei Familien sehr beliebt",
-        "Der nahe Campingplatz sorgt für gute Infrastruktur"
+        "Der Strand ist breit und flach — ideal für Familien mit kleinen Kindern und sicher zum Baden",
+        "Schnorchle entlang der Felsenklippen an den Seiten der Bucht und entdecke das reiche Meeresleben",
+        "Miete ein Tretboot und erkunde die türkisfarbenen Gewässer in deinem eigenen Tempo",
+        "Der Chiringuito Cala Marçal am Sand ist ein toller Ort zum Essen oder für ein Getränk mit Meerblick",
+        "Komm im Sommer früh — der Parkplatz füllt sich schnell und der Strand ist vor dem Mittag sehr belebt"
       ]
     },
     {

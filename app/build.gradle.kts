@@ -30,7 +30,7 @@ android {
     defaultConfig {
         applicationId = "com.mallorca.explorer"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 36
         versionCode = requiredLocalProp("VERSION_CODE").toInt()
         versionName = requiredLocalProp("VERSION_NAME")
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
