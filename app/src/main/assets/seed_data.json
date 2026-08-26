@@ -1949,19 +1949,22 @@
       "id": "jardins-alfabia",
       "name": "Jardins d'Alfàbia",
       "name_es": "Jardines de Alfàbia",
-      "description": "Historic Moorish-inspired gardens dating from the 12th century, fed by natural springs at the foot of the Tramuntana mountains near the Sóller tunnel. Pergolas draped with wisteria, Arabic water channels and ancient palms create a lush green oasis.",
+      "description": {
+        "en": "Jardines de Alfàbia is one of Mallorca's most enchanting historic estates, nestled in the Tramuntana foothills near Bunyola. With roots dating back to the 13th century and Moorish Islamic origins, this manor estate blends Arabic garden design with later Renaissance and Baroque influences. The iconic pergola — a long canopied walkway with crossing water jets — creates a magical entrance, while lily ponds, ancient plane trees, and citrus orchards fill the grounds with colour and fragrance. The noble manor house, open to visitors, houses a historic library and period furniture. A small café on site makes it easy to linger.",
+        "es": "Jardines de Alfàbia es una de las fincas históricas más encantadoras de Mallorca, situada en las estribaciones de la Tramuntana cerca de Bunyola. Con raíces que se remontan al siglo XIII y origen islámico árabe, esta finca señorial combina el diseño de jardines árabes con influencias renacentistas y barrocas posteriores. La icónica pérgola — un largo pasillo cubierto con chorros de agua cruzados — crea una entrada mágica, mientras que los estanques de nenúfares, los plátanos centenarios y los huertos de cítricos llenan los jardines de color y fragancia. La casa señorial, abierta a los visitantes, alberga una biblioteca histórica y mobiliario de época. Un pequeño café en el lugar permite disfrutar de la visita con calma.",
+        "de": "Die Jardines de Alfàbia sind eines der bezauberndsten historischen Anwesen Mallorcas, eingebettet in die Ausläufer der Tramuntana nahe Bunyola. Mit Wurzeln aus dem 13. Jahrhundert und maurisch-islamischen Ursprüngen verbindet dieses Herrenhaus arabisches Gartendesign mit späteren Renaissance- und Barockeinflüssen. Die ikonische Pergola — ein langer überdachter Gang mit kreuzenden Wasserdüsen — schafft einen magischen Eingang, während Lilienteiche, uralte Platanen und Zitrusgärten das Gelände in Farbe und Duft tauchen. Das Herrenhaus, das für Besucher geöffnet ist, beherbergt eine historische Bibliothek und Möbel aus vergangenen Epochen. Ein kleines Café vor Ort lädt zum Verweilen ein."
+      },
       "category": "CULTURE",
       "latitude": 39.7174,
       "longitude": 2.6914,
       "municipality": "Bunyola",
       "rating": 4.5,
       "review_count": 1600,
-      "tips": [
-        "Open daily except Sundays",
-        "Combine with a ride on the vintage Sóller train — request a stop at Alfàbia",
-        "The manor house interior has original Moorish-influenced furnishings",
-        "Best visited in spring when the wisteria is in bloom"
-      ],
+      "tips": {
+        "en": "Visit the pergola in the morning for the best light through the canopy and water jets. Combine the visit with the Sóller vintage train for a scenic day trip through the mountains. The manor house is included in the entrance ticket — don't skip it. Allow at least 1.5 hours to explore the full gardens. Entry is around €10 with free parking. Open March to October, 09:30–18:30.",
+        "es": "Visita la pérgola por la mañana para aprovechar la mejor luz entre el follaje y los chorros de agua. Combina la visita con el tren histórico de Sóller para una excursión pintoresca por la montaña. La casa señorial está incluida en la entrada — no te la pierdas. Reserva al menos 1 hora y media para explorar los jardines completos. La entrada cuesta alrededor de 10 € con aparcamiento gratuito. Abierto de marzo a octubre, de 09:30 a 18:30.",
+        "de": "Besuche die Pergola am Morgen für das beste Licht durch das Blätterdach und die Wasserdüsen. Kombiniere den Besuch mit dem historischen Zug nach Sóller für einen malerischen Tagesausflug durch die Berge. Das Herrenhaus ist im Eintrittspreis inbegriffen — auf keinen Fall verpassen. Plane mindestens 1,5 Stunden ein, um die gesamten Gärten zu erkunden. Der Eintritt beträgt ca. 10 € mit kostenlosem Parkplatz. Geöffnet von März bis Oktober, 09:30–18:30 Uhr."
+      },
       "price_level": "BUDGET",
       "website": "https://jardinesalfabia.com",
       "tags": [
