@@ -7180,11 +7180,6 @@
         "kayak_sup",
         "cliff_jump"
       ],
-      "gem_access": [
-        "natacion",
-        "kayak_sup",
-        "cliff_jump"
-      ],
       "tags": [
         "hidden_gem",
         "snorkelling",
@@ -8320,6 +8315,64 @@
         "Radfahrer sollten Restaurant Stay am Hafen oder Tolo's nicht verpassen",
         "Vom nordlichen Ortsrand fuhrt der Cami de Cala Boquer zu einer einsamen Bucht — ein absolutes Muss",
         "Von hier beginnt die Strasse zum Cap de Formentor — fruhe Abfahrt empfohlen, bevor Verkehrsbeschrankungen gelten"
+      ]
+    },
+    {
+      "id": "amok-mallorca",
+      "name": "Amok Mallorca",
+      "name_es": "Amok Mallorca",
+      "name_de": "Amok Mallorca",
+      "description": "One of Mallorca's most iconic outdoor clubs, set right on Platja de Palma just 10 km from Palma. Open from late summer through October, Amok hosts some of the biggest names in electronic, house and commercial music across two daily sessions: sunset parties from 19:30 and main nights from midnight. Known for its open-air terraces, top-tier sound system and vibrant atmosphere facing the sea.",
+      "description_es": "Uno de los clubs al aire libre más icónicos de Mallorca, situado en la Platja de Palma a tan solo 10 km de Palma. Abierto desde finales de verano hasta octubre, Amok acoge a algunos de los nombres más grandes de la música electrónica, house y comercial en dos sesiones diarias: fiestas de atardecer desde las 19:30 y noches principales desde medianoche. Conocido por sus terrazas al aire libre, sistema de sonido de primer nivel y ambiente vibrante con vistas al mar.",
+      "description_de": "Einer der ikonischsten Open-Air-Clubs Mallorcas, direkt am Platja de Palma, nur 10 km von Palma entfernt. Von Ende Sommer bis Oktober lädt Amok einige der größten Namen der elektronischen, House- und kommerziellen Musik ein — mit zwei täglichen Sessions: Sunset-Partys ab 19:30 Uhr und Hauptnächte ab Mitternacht. Bekannt für seine Open-Air-Terrassen, erstklassiges Soundsystem und lebhafte Atmosphäre mit Meerblick.",
+      "category": "NIGHTLIFE",
+      "latitude": 39.5213,
+      "longitude": 2.7389,
+      "municipality": "Palma",
+      "address": "Carretera Arenal, Km 10, Platja de Palma, 07199 S'Aranjasa, Palma",
+      "rating": 4.5,
+      "review_count": 1200,
+      "price_level": "PAID",
+      "opening_hours": "Thu–Sun 19:30–06:00 (Aug–Oct)",
+      "website_url": "https://www.amokmallorca.com",
+      "thumbnail_url": "file:///android_asset/images/venue-amok-mallorca.jpg",
+      "photo_urls": [
+        {
+          "url": "file:///android_asset/images/venue-amok-mallorca.jpg",
+          "source": "MINE"
+        }
+      ],
+      "tips": [
+        "Two daily sessions: sunset party from 19:30 and night session from midnight — you can book for one or both",
+        "Book VIP tables in advance, especially for headline nights — they sell out fast",
+        "Tickets start from €5 for sunset parties; headline nights can reach €35+",
+        "The club is right on Platja de Palma — combine with a beach day before the party",
+        "Check the calendar on their website before going — programming changes weekly",
+        "Free parking nearby; also reachable by bus from Palma (line 15)"
+      ],
+      "tips_es": [
+        "Dos sesiones diarias: fiesta de atardecer desde las 19:30 y sesión nocturna desde medianoche — puedes reservar para una o las dos",
+        "Reserva mesas VIP con antelación, especialmente en las noches con artistas estrella — se agotan rápido",
+        "Las entradas empiezan desde 5€ para las tardeos; las noches con cabezas de cartel pueden llegar a 35€ o más",
+        "El club está justo en la Platja de Palma — combínalo con un día de playa antes de la fiesta",
+        "Consulta el calendario en su web antes de ir — la programación cambia cada semana",
+        "Aparcamiento gratuito cerca; también se puede llegar en autobús desde Palma (línea 15)"
+      ],
+      "tips_de": [
+        "Zwei tägliche Sessions: Sunset-Party ab 19:30 und Nachtsession ab Mitternacht — buchbar für eine oder beide",
+        "VIP-Tische im Voraus buchen, besonders für Headliner-Nächte — sie sind schnell ausgebucht",
+        "Tickets ab 5 € für Sunset-Partys; Headliner-Nächte können 35 € oder mehr kosten",
+        "Der Club liegt direkt am Platja de Palma — kombiniere ihn mit einem Strandtag vor der Party",
+        "Vor dem Besuch den Kalender auf der Website prüfen — die Programmierung ändert sich wöchentlich",
+        "Kostenlose Parkplätze in der Nähe; auch mit dem Bus aus Palma erreichbar (Linie 15)"
+      ],
+      "tags": [
+        "nightlife",
+        "club",
+        "electronic",
+        "sunset",
+        "outdoor",
+        "platja-de-palma"
       ]
     }
   ],
@@ -13605,6 +13658,40 @@
       "website_url": "https://mallorcamusicmagazine.com/concierto/elrow/"
     },
     {
+      "id": "event-danzu-fstvl-2026",
+      "title": "Danzû FSTVL 2026",
+      "title_es": "Danzû FSTVL 2026",
+      "title_de": "Danzû FSTVL 2026",
+      "description": "Mallorca's premier electronic music festival returns to Son Fusteret with world-class DJs, state-of-the-art sound systems and an open-air atmosphere. 7 hours of non-stop electronic music.",
+      "description_es": "El festival de música electrónica más importante de Mallorca vuelve a Son Fusteret con DJs de nivel mundial, sistemas de sonido de última generación y ambiente al aire libre. 7 horas de música electrónica sin parar.",
+      "description_de": "Mallorcas wichtigstes Elektronik-Musik-Festival kehrt nach Son Fusteret zurück mit weltklasse DJs, modernsten Soundsystemen und Open-Air-Atmosphäre. 7 Stunden Non-Stop-Elektronik.",
+      "category": "FESTIVAL",
+      "start_date": "2026-09-19",
+      "municipality": "Palma",
+      "address": "Son Fusteret, Camí Vell de Bunyola, Palma",
+      "is_free": false,
+      "price": "Desde 28€",
+      "is_recurring": false,
+      "website_url": "https://danzufstvl.com"
+    },
+    {
+      "id": "event-ultima-del-verano-2026",
+      "title": "La Última del Verano Vol.3",
+      "title_es": "La Última del Verano Vol.3",
+      "title_de": "La Última del Verano Vol.3",
+      "description": "Over 9 hours of live music across 3 stages at Son Fusteret: a main stage with local and national bands, plus DJ stages for commercial and reggaeton sounds. The biggest end-of-summer party in Mallorca.",
+      "description_es": "Más de 9 horas de música en directo en 3 escenarios en Son Fusteret: escenario principal con bandas locales y nacionales, más escenarios de DJ con música comercial y reggaeton. La fiesta de fin de verano más grande de Mallorca.",
+      "description_de": "Über 9 Stunden Live-Musik auf 3 Bühnen im Son Fusteret: Hauptbühne mit lokalen und nationalen Bands, plus DJ-Bühnen für kommerzielle Musik und Reggaeton. Die größte Sommerausklang-Party Mallorcas.",
+      "category": "FESTIVAL",
+      "start_date": "2026-09-12",
+      "municipality": "Palma",
+      "address": "Son Fusteret, Camí Vell de Bunyola 1, Palma",
+      "is_free": false,
+      "price": "Desde 6,60€",
+      "is_recurring": false,
+      "website_url": "https://www.enterticket.es/eventos/la-ultima-del-verano-vol3-352916"
+    },
+    {
       "id": "event-karmento-montuiri-2026",
       "title": "Karmento – La Lluna en Vers, Montuïri",
       "title_es": "Karmento – La Lluna en Vers, Montuïri",
@@ -16965,9 +17052,77 @@
       "price": null,
       "is_recurring": false,
       "website_url": "https://www.mallorca.com/es/eventos/oyster-palma-regatta-port_adriano-2026-12af1c"
+    },
+    {
+      "id": "event-amok-miss-monique-2026",
+      "title": "Miss Monique @ Amok Mallorca",
+      "title_es": "Miss Monique @ Amok Mallorca",
+      "title_de": "Miss Monique @ Amok Mallorca",
+      "description": "Amok presents Miss Monique — the Ukrainian melodic techno and progressive house star — for one night at Son Fusteret. One of the club's most anticipated bookings of the summer.",
+      "description_es": "Amok presenta a Miss Monique — la estrella ucraniana del techno melódico y progressive house — para una noche en Son Fusteret. Una de las actuaciones más esperadas del club en verano.",
+      "description_de": "Amok präsentiert Miss Monique — den ukrainischen Star des melodischen Techno und Progressive House — für eine Nacht im Son Fusteret. Eine der meisterwarteten Bookings des Sommers.",
+      "category": "CONCERT",
+      "start_date": "2026-08-29",
+      "municipality": "Palma",
+      "address": "Amok Mallorca, Platja de Palma, Palma",
+      "is_free": false,
+      "price": "Desde 35€",
+      "is_recurring": false,
+      "website_url": "https://www.amokmallorca.com/events"
+    },
+    {
+      "id": "event-amok-jonas-blue-2026",
+      "title": "Jonas Blue @ Amok Mallorca",
+      "title_es": "Jonas Blue @ Amok Mallorca",
+      "title_de": "Jonas Blue @ Amok Mallorca",
+      "description": "Amok presents Jonas Blue, the British DJ and producer behind global hits like 'Fast Car' and 'Perfect Strangers', for a night of feel-good dance music at Platja de Palma.",
+      "description_es": "Amok presenta a Jonas Blue, el DJ y productor británico de éxitos mundiales como 'Fast Car' y 'Perfect Strangers', para una noche de música dance en la Platja de Palma.",
+      "description_de": "Amok präsentiert Jonas Blue, den britischen DJ und Produzenten hinter Welthits wie 'Fast Car' und 'Perfect Strangers', für eine Nacht Dance-Musik am Platja de Palma.",
+      "category": "CONCERT",
+      "start_date": "2026-09-05",
+      "municipality": "Palma",
+      "address": "Amok Mallorca, Platja de Palma, Palma",
+      "is_free": false,
+      "price": "Desde 20€",
+      "is_recurring": false,
+      "website_url": "https://www.amokmallorca.com/events"
+    },
+    {
+      "id": "event-amok-robin-schulz-2026",
+      "title": "Robin Schulz @ Amok Mallorca",
+      "title_es": "Robin Schulz @ Amok Mallorca",
+      "title_de": "Robin Schulz @ Amok Mallorca",
+      "description": "German superstar DJ Robin Schulz plays Amok Mallorca for one special night. Known for his remixes of 'Prayer in C' and 'Waves', one of the biggest names in deep house.",
+      "description_es": "El superstar DJ alemán Robin Schulz actúa en Amok Mallorca para una noche especial. Conocido por sus remixes de 'Prayer in C' y 'Waves', uno de los nombres más grandes del deep house.",
+      "description_de": "Der deutsche Superstar-DJ Robin Schulz spielt eine besondere Nacht im Amok Mallorca. Bekannt für seine Remixe von 'Prayer in C' und 'Waves' — einer der größten Namen im Deep House.",
+      "category": "CONCERT",
+      "start_date": "2026-09-17",
+      "municipality": "Palma",
+      "address": "Amok Mallorca, Platja de Palma, Palma",
+      "is_free": false,
+      "price": "Desde 35€",
+      "is_recurring": false,
+      "website_url": "https://www.amokmallorca.com/events"
+    },
+    {
+      "id": "event-amok-jamie-jones-closing-2026",
+      "title": "Grand Summer Closing – Jamie Jones @ Amok",
+      "title_es": "Gran Cierre de Verano – Jamie Jones @ Amok",
+      "title_de": "Grand Summer Closing – Jamie Jones @ Amok",
+      "description": "The summer closing party at Amok Mallorca with British DJ and producer Jamie Jones, Ibiza legend and founder of Paradise. An unmissable end to the clubbing season on the island.",
+      "description_es": "La fiesta de cierre de verano de Amok Mallorca con el DJ y productor británico Jamie Jones, leyenda de Ibiza y fundador de Paradise. Un final de temporada de clubs en la isla que no te puedes perder.",
+      "description_de": "Die Sommerschlussparty im Amok Mallorca mit dem britischen DJ und Produzenten Jamie Jones, Ibiza-Legende und Gründer von Paradise. Ein unvergesslicher Abschluss der Clubsaison auf der Insel.",
+      "category": "FESTIVAL",
+      "start_date": "2026-09-26",
+      "municipality": "Palma",
+      "address": "Amok Mallorca, Platja de Palma, Palma",
+      "is_free": false,
+      "price": "Desde 20€",
+      "is_recurring": false,
+      "website_url": "https://www.amokmallorca.com/events"
     }
   ],
   "discounts": [],
   "CURRENT_SEED_VERSION": 295,
-  "version": 295
+  "version": 297
 }
