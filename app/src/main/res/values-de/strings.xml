@@ -143,6 +143,9 @@
     <string name="explore_events_recurring">Jede Woche</string>
     <string name="explore_events_free">Kostenlos</string>
     <string name="explore_time_filter_all">Alle</string>
+    <string name="explore_time_filter_today">Heute</string>
+    <string name="explore_time_filter_tomorrow">Morgen</string>
+    <string name="explore_time_filter_this_weekend">Dieses Wochenende</string>
     <string name="explore_time_filter_this_week">Diese Woche</string>
     <string name="explore_time_filter_this_month">Diesen Monat</string>
     <string name="explore_time_filter_next_month">Nächsten Monat</string>

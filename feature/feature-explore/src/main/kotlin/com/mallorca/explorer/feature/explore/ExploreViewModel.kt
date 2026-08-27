@@ -48,6 +48,9 @@ private const val MALLORCA_LNG = 2.9
 
 enum class EventTimeFilter {
     ALL,
+    TODAY,
+    TOMORROW,
+    THIS_WEEKEND,
     THIS_WEEK,
     THIS_MONTH,
     NEXT_MONTH,
@@ -172,9 +175,33 @@ class ExploreViewModel @Inject constructor(
         val nextMonthEnd = (java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")).also {
             it.timeInMillis = now; it.set(java.util.Calendar.DAY_OF_MONTH, 1); it.set(java.util.Calendar.HOUR_OF_DAY, 0); it.set(java.util.Calendar.MINUTE, 0); it.set(java.util.Calendar.SECOND, 0); it.set(java.util.Calendar.MILLISECOND, 0); it.add(java.util.Calendar.MONTH, 2)
         }).timeInMillis
+        val todayStart = (java.util.Calendar.getInstance(java.util.TimeZone.getTimeZone("UTC")).also {
+            it.timeInMillis = now; it.set(java.util.Calendar.HOUR_OF_DAY, 0); it.set(java.util.Calendar.MINUTE, 0); it.set(java.util.Calendar.SECOND, 0); it.set(java.util.Calendar.MILLISECOND, 0)
+        }).timeInMillis
+        val todayEnd = todayStart + 86_400_000L
         var filteredEvents = when (timeFilter) {
             EventTimeFilter.ALL -> events
-            EventTimeFilter.THIS_WEEK -> events.filter { e ->
+            EventTimeFilter.TODAY -> events.filter { e ->
+                e.isRecurring || e.startDateEpoch in todayStart until todayEnd
+                    || (e.endDateEpoch ?: e.startDateEpoch) >= todayStart && e.startDateEpoch < todayEnd
+            }
+            EventTimeFilter.TOMORROW -> events.filter { e ->
+                val tomorrowStart = todayEnd
+                val tomorrowEnd = todayEnd + 86_400_000L
+                e.startDateEpoch in tomorrowStart until tomorrowEnd
+                    || (e.endDateEpoch ?: e.startDateEpoch) >= tomorrowStart && e.startDateEpoch < tomorrowEnd
+            }
+            EventTimeFilter.THIS_WEEKEND -> events.filter { e ->
+                val cal = java.util.Calendar.getInstance()
+                val dow = cal.get(java.util.Calendar.DAY_OF_WEEK)
+                val daysToSat = ((java.util.Calendar.SATURDAY - dow + 7) % 7).let { if (it == 0) 0 else it }
+                val satStart = todayStart + daysToSat * 86_400_000L
+                val sunEnd = satStart + 2 * 86_400_000L
+                e.isRecurring
+                    || e.startDateEpoch in satStart until sunEnd
+                    || (e.endDateEpoch ?: e.startDateEpoch) >= satStart && e.startDateEpoch < sunEnd
+            }
+                        EventTimeFilter.THIS_WEEK -> events.filter { e ->
                 e.isRecurring || e.startDateEpoch in now..(now + weekMs)
                     || (e.endDateEpoch ?: e.startDateEpoch) in now..(now + weekMs)
             }

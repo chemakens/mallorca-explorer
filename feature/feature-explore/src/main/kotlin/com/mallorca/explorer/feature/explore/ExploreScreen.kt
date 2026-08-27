@@ -800,6 +800,9 @@ private fun EventsSection(
             EventTimeFilter.entries.forEach { filter ->
                 val filterLabel = when (filter) {
                     EventTimeFilter.ALL        -> stringResource(R.string.explore_time_filter_all)
+                    EventTimeFilter.TODAY       -> stringResource(R.string.explore_time_filter_today)
+                    EventTimeFilter.TOMORROW    -> stringResource(R.string.explore_time_filter_tomorrow)
+                    EventTimeFilter.THIS_WEEKEND -> stringResource(R.string.explore_time_filter_this_weekend)
                     EventTimeFilter.THIS_WEEK  -> stringResource(R.string.explore_time_filter_this_week)
                     EventTimeFilter.THIS_MONTH -> stringResource(R.string.explore_time_filter_this_month)
                     EventTimeFilter.NEXT_MONTH -> stringResource(R.string.explore_time_filter_next_month)

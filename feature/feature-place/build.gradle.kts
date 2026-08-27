@@ -14,6 +14,7 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
+        isCoreLibraryDesugaringEnabled = true
     }
     kotlinOptions { jvmTarget = "17" }
 }
@@ -37,5 +38,6 @@ dependencies {
     implementation(libs.coil.compose)
     implementation(libs.kotlinx.collections.immutable)
     implementation(libs.play.services.location)
+    coreLibraryDesugaring(libs.desugar.jdk.libs)
     debugImplementation(libs.compose.ui.tooling)
 }
