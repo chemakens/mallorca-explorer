@@ -942,6 +942,7 @@ private fun categoryLabel(cat: Category): String = when (cat) {
     Category.TOWN       -> stringResource(R.string.category_town)
     Category.VIEWPOINT  -> stringResource(R.string.category_viewpoint)
     Category.SUP        -> stringResource(R.string.category_sup)
+    Category.NIGHTLIFE  -> stringResource(R.string.category_nightlife)
 }
 
 private fun windCardinal(deg: Int, locale: String): String {

@@ -34,6 +34,7 @@ internal fun Category.routeColor(): String = when (this) {
     Category.TOWN -> "#37474F"
     Category.VIEWPOINT -> "#C62828"
     Category.SUP -> "#0288D1"
+    Category.NIGHTLIFE -> "#880E4F"
 }
 
 @HiltViewModel

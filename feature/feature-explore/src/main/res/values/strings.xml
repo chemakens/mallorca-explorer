@@ -41,6 +41,7 @@
     <string name="category_town">Town</string>
     <string name="category_viewpoint">Viewpoint</string>
     <string name="category_sup">SUP</string>
+    <string name="category_nightlife">Nightlife</string>
     <!-- Weather banner -->
     <string name="weather_banner_sunny">Sunny day · %1$d°C — perfect for beach and adventure</string>
     <string name="weather_banner_rainy">Rain expected — culture and gastronomy recommended</string>
