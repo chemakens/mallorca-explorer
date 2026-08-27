@@ -7175,6 +7175,16 @@
           "source": "MINE"
         }
       ],
+      "gem_access": [
+        "natacion",
+        "kayak_sup",
+        "cliff_jump"
+      ],
+      "gem_access": [
+        "natacion",
+        "kayak_sup",
+        "cliff_jump"
+      ],
       "tags": [
         "hidden_gem",
         "snorkelling",

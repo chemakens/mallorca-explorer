@@ -249,6 +249,7 @@ private fun gemAccessLabel(key: String): String = when (key) {
     "mirador"    -> stringResource(R.string.gem_access_mirador)
     "sunset"     -> stringResource(R.string.gem_access_sunset)
     "coche"      -> stringResource(R.string.gem_access_coche)
+    "cliff_jump" -> stringResource(R.string.gem_access_cliff_jump)
     else         -> key
 }
 
