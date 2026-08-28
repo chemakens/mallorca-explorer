@@ -4454,6 +4454,10 @@
           "url": "file:///android_asset/images/place-mhares-sea-club-sunset-6.jpg",
           "source": "MINE",
           "heroFocalY": 0.55
+        },
+        {
+          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-mia-1.jpg",
+          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-mhares-sea-club-sunset.jpg",
@@ -17351,5 +17355,5 @@
   "discounts": [],
   "CURRENT_SEED_VERSION": 295,
   "version": 319,
-  "seed_version": 324
+  "seed_version": 325
 }
