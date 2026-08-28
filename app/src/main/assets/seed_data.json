@@ -4075,10 +4075,10 @@
         "paella",
         "views"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-rest-illeta-camp-de-mar.jpg",
+      "thumbnail_url": "file:///android_asset/images/place-rest-illeta-camp-de-mar-mia-1.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-rest-illeta-camp-de-mar.jpg",
+          "url": "file:///android_asset/images/place-rest-illeta-camp-de-mar-mia-1.jpg",
           "source": "MINE"
         },
         {
@@ -17367,5 +17367,5 @@
   "discounts": [],
   "CURRENT_SEED_VERSION": 295,
   "version": 319,
-  "seed_version": 326
+  "seed_version": 327
 }
