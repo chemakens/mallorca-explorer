@@ -8019,7 +8019,7 @@
       "rating": 4.6,
       "review_count": 534,
       "price_level": "MID",
-      "thumbnail_url": "file:///android_asset/images/cala-llamp-yo10.jpg",
+      "thumbnail_url": "file:///android_asset/images/cala-llamp-mia-1.jpg",
       "tips": [
         "The beach is entirely rocky — water shoes are essential for entering and exiting the sea safely.",
         "Gran Folies beach club sunbeds cost €40–60 per person per day (includes pool access); book via their website as daily capacity is limited.",
@@ -8029,7 +8029,7 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-llamp-yo7.jpg",
+          "url": "file:///android_asset/images/cala-llamp-mia-1.jpg",
           "source": "MINE"
         },
         {
@@ -17373,5 +17373,5 @@
   "discounts": [],
   "CURRENT_SEED_VERSION": 295,
   "version": 319,
-  "seed_version": 327
+  "seed_version": 328
 }
