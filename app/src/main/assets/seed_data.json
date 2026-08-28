@@ -3748,12 +3748,16 @@
       "thumbnail_url": "file:///android_asset/images/place-sup-camp-de-mar.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-camp-de-mar.jpg",
+          "url": "file:///android_asset/images/sup-camp-de-mar-mia-1.jpg",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-sup-camp-de-mar-2.jpg",
-          "source": "PEXELS"
+          "url": "file:///android_asset/images/sup-camp-de-mar-mia-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/sup-camp-de-mar-mia-3.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "Encantador punto de SUP para principiantes cerca de Andratx, con playa de arena blanca y agua excepcionalmente calmada. El destaque es llegar paleteando hasta la pequeña isla frente a la costa.",
@@ -17355,5 +17359,5 @@
   "discounts": [],
   "CURRENT_SEED_VERSION": 295,
   "version": 319,
-  "seed_version": 325
+  "seed_version": 326
 }
