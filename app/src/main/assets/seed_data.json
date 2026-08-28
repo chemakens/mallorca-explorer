@@ -9,7 +9,7 @@
       "latitude": 39.346,
       "longitude": 2.983,
       "municipality": "Campos",
-      "thumbnail_url": "file:///android_asset/images/beach-es-trenc.jpg",
+      "thumbnail_url": "file:///android_asset/images/beach-es-trenc-pexels-2.jpg",
       "rating": 4.9,
       "review_count": 2400,
       "tips": [
@@ -25,12 +25,16 @@
       "price_level": "FREE",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-es-trenc.jpg",
-          "source": "MINE"
+          "url": "file:///android_asset/images/beach-es-trenc-pexels-2.jpg",
+          "source": "PEXELS"
         },
         {
           "url": "file:///android_asset/images/beach-es-trenc-pexels.jpg",
           "source": "PIXABAY"
+        },
+        {
+          "url": "file:///android_asset/images/beach-es-trenc-mia-1.jpg",
+          "source": "MINE"
         }
       ],
       "description_es": "La playa virgen más famosa de Mallorca — apodada el 'Caribe europeo' por sus 3 kilómetros de arena blanca fina y agua turquesa brillante. Situada en el municipio de Campos, en la costa sur, se encuentra dentro de un parque natural protegido que la ha mantenido libre de hoteles y grandes desarrollos comerciales. Las dunas, la posidonia y los búnkeres de la Segunda Guerra Mundial repartidos por la orilla le dan un carácter salvaje e inolvidable. De camino, las salinas de Flor de Sal d'Es Trenc ofrecen visita guiada gratuita y tienda.",
@@ -4450,10 +4454,6 @@
           "url": "file:///android_asset/images/place-mhares-sea-club-sunset-6.jpg",
           "source": "MINE",
           "heroFocalY": 0.55
-        },
-        {
-          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-7.jpg",
-          "source": "MINE"
         }
       ],
       "thumbnail_url": "file:///android_asset/images/place-mhares-sea-club-sunset.jpg",
@@ -5802,15 +5802,11 @@
       "municipality": "Pollença",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-ruta-cala-murta.jpg",
-          "source": "MINE"
-        },
-        {
-          "url": "file:///android_asset/images/place-ruta-cala-murta-2.jpg",
+          "url": "file:///android_asset/images/cala-murta-mia-1.jpg",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-murta.jpg",
+      "thumbnail_url": "file:///android_asset/images/cala-murta-mia-1.jpg",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 1180,
@@ -7081,18 +7077,10 @@
         "Total from the car park: 2.8 km round trip, 20–25 min each way"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/cala-en-basset.jpg",
+      "thumbnail_url": "file:///android_asset/images/cala-en-basset-mia-1.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-en-basset.jpg",
-          "source": "MINE"
-        },
-        {
-          "url": "file:///android_asset/images/cala-en-basset-2.jpg",
-          "source": "MINE"
-        },
-        {
-          "url": "file:///android_asset/images/cala-en-basset-3.jpg",
+          "url": "file:///android_asset/images/cala-en-basset-mia-1.jpg",
           "source": "MINE"
         }
       ],
@@ -7468,14 +7456,10 @@
         "No natural shade — bring your own umbrella."
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/es-carbo.jpg",
+      "thumbnail_url": "file:///android_asset/images/beach-es-carbo-mia-1.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/es-carbo.jpg",
-          "source": "MINE"
-        },
-        {
-          "url": "file:///android_asset/images/es-carbo-2.jpg",
+          "url": "file:///android_asset/images/beach-es-carbo-mia-1.jpg",
           "source": "MINE"
         }
       ],
@@ -17366,5 +17350,6 @@
   ],
   "discounts": [],
   "CURRENT_SEED_VERSION": 295,
-  "version": 315
+  "version": 319,
+  "seed_version": 324
 }
