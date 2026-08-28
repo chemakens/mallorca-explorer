@@ -92,7 +92,10 @@
       "Bash(/Users/usuario/Library/Android/sdk/platform-tools/adb logcat *)",
       "Bash(./gradlew bundleRelease)",
       "Bash(chmod +x *)",
-      "Bash(node *)"
+      "Bash(node *)",
+      "Read(//private/tmp/**)",
+      "Bash(unzip -q ~/Code/mallorca-explorer/app/build/outputs/bundle/release/app-release.aab -d aab_temp)",
+      "Bash(git checkout *)"
     ]
   }
 }
