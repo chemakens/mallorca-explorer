@@ -3720,7 +3720,7 @@
       "id": "sup-camp-de-mar",
       "name": "SUP Camp de Mar",
       "name_es": "SUP Camp de Mar",
-      "description": "A charming beginner SUP spot on the southwest coast near Andratx, with a 180-metre white sand beach and exceptionally calm, shallow water. The highlight of the route is paddling to the tiny offshore island connected to the mainland by a wooden footbridge, home to a small restaurant perched over the sea.",
+      "description": "Camp de Mar beach is ideal for SUP thanks to its sheltered bay shape that keeps the water calm even on windier days. The beach is just steps from the car park, and supermarkets along the way let you stock up at good prices. Launch from the dedicated zone on the far right of the beach and follow an easy 40-minute paddle to Cala Blanca, where you can snorkel among posidonia meadows and rich marine life. Cala Blanca is a quiet cove, hard to reach by car, where small catamarans often anchor. The cliffs on either side provide welcome shade in summer and you may spot wild goats on the rock face. The return paddle in the late afternoon takes roughly the same time; rounding the Illeta restaurant island on the way back is a highlight. A fresh-water shower awaits at the beach exit.",
       "category": "SUP",
       "latitude": 39.5375,
       "longitude": 2.4217,
@@ -3728,10 +3728,12 @@
       "rating": 4.7,
       "review_count": 310,
       "tips": [
-        "Perfect for first-timers — very calm and shallow",
-        "Paddle to the island restaurant for a coffee or lunch break mid-route",
-        "Best in the morning before the sea breeze arrives",
-        "Combine with a drive over the Andratx mountain road"
+        "Launch from the far right of the beach — that's the designated SUP zone",
+        "Stock up at the supermarkets on the way; parking is just steps from the sand",
+        "Paddle to Cala Blanca (~40 min) and snorkel among posidonia and fish",
+        "Look out for wild goats on the cliffs — a true wild Mallorca moment",
+        "Time your return for late afternoon and enjoy the Illeta restaurant island on the way back",
+        "Pack: water, sunglasses, hat, sun shirt, sunscreen, snorkel gear and an underwater camera"
       ],
       "price_level": "FREE",
       "tags": [
@@ -3760,18 +3762,24 @@
           "source": "MINE"
         }
       ],
-      "description_es": "Encantador punto de SUP para principiantes cerca de Andratx, con playa de arena blanca y agua excepcionalmente calmada. El destaque es llegar paleteando hasta la pequeña isla frente a la costa.",
+      "description_es": "La playa de Camp de Mar es ideal para hacer SUP gracias a su forma que protege del oleaje, manteniendo el agua en calma incluso en días de viento. Se accede directamente desde el aparcamiento a pocos metros, y hay supermercados por el camino para comprar lo que necesites a buenos precios. La zona de salida está a la derecha del todo de la playa. El itinerario hasta Cala Blanca dura unos 40 minutos y es sencillo. Una vez allí puedes hacer snorkeling disfrutando de la posidonia y de la fauna marina, especialmente de peces. Cala Blanca es una playa tranquila de difícil acceso en coche donde suelen fondear embarcaciones pequeñas como catamaranes. Los acantilados a ambos lados proporcionan una sombra reconfortante en los meses más calurosos y a veces se pueden ver cabras por la ladera, dando una sensación de naturaleza más salvaje de Mallorca. La vuelta a última hora de la tarde se hace en el mismo tiempo que la ida; la entrada bordeando el restaurante Illeta es muy agradecida. Al salir dispones de servicio de ducha en la playa.",
       "tips_es": [
-        "Aguas tranquilas protegidas por el islote de Es Malgrat",
-        "Club náutico con servicio de alquiler y clases",
-        "La distancia corta al islote es perfecta para rutas de media hora"
+        "La zona de salida está a la derecha del todo de la playa",
+        "Aprovecha los supermercados de camino; el aparcamiento está a metros de la arena",
+        "Llega paleteando hasta Cala Blanca (~40 min) y haz snorkeling entre posidonia y peces",
+        "Presta atención a las cabras en los acantilados — la cara más salvaje de Mallorca",
+        "Vuelve a última hora de la tarde bordeando el restaurante Illeta",
+        "Lleva: agua, gafas de sol, sombrero, camisa de protección, crema solar, equipo de snorkeling y cámara acuática"
       ],
       "name_de": "SUP Camp de Mar",
-      "description_de": "Ruhiger SUP-Einstieg für Anfänger, geschützt durch die kleine Insel Es Malgrat. Kurze Ausfahrten zum Eiland sind sehr beliebt.",
+      "description_de": "Der Strand von Camp de Mar ist dank seiner geschützten Bucht ideal zum SUP – das Wasser bleibt selbst bei Wind ruhig. Der Parkplatz liegt direkt am Strand; auf dem Weg gibt es Supermärkte für günstige Verpflegung. Der Einstieg befindet sich ganz rechts am Strand. Die leichte Route bis zur Cala Blanca dauert rund 40 Minuten. Dort lohnt sich Schnorcheln im Posidoniagras mit reichhaltiger Meeresfauna. Die Cala Blanca ist eine ruhige, kaum per Auto erreichbare Bucht, in der oft kleine Katamarane ankern. Die Klippen auf beiden Seiten spenden im Hochsommer angenehmen Schatten; manchmal sieht man Ziegen am Fels. Die Rückfahrt am späten Nachmittag dauert ähnlich lang; die Einfahrt vorbei am Restaurant Illeta ist ein schöner Abschluss. Am Strandausgang gibt es eine Dusche.",
       "tips_de": [
-        "Ruhiges Wasser geschützt durch das Eiland Es Malgrat",
-        "Nautikclub mit Verleih und Kursen",
-        "Kurze Distanz zum Eiland ideal für halbstündige Touren"
+        "Der Einstieg ist ganz rechts am Strand (ausgewiesene SUP-Zone)",
+        "Supermärkte auf dem Weg nutzen; Parkplatz direkt am Strand",
+        "Zur Cala Blanca paddeln (~40 Min.) und im Posidoniagras schnorcheln",
+        "Auf Ziegen an den Klippen achten — wildes Mallorca pur",
+        "Rückfahrt am späten Nachmittag, vorbei am Restaurant Illeta",
+        "Mitnehmen: Wasser, Sonnenbrille, Hut, UV-Shirt, Sonnencreme, Schnorchelausrüstung, Unterwasserkamera"
       ]
     },
     {
