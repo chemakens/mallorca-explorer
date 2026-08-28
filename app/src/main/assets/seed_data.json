@@ -4051,7 +4051,7 @@
       "id": "rest-illeta-camp-de-mar",
       "name": "Camp de Mar",
       "name_es": "Camp de Mar",
-      "description": "An exclusive coastal resort in the municipality of Andratx, south-west Mallorca. Its 180-metre beach of fine white sand and crystal-clear water is one of the most picturesque on the island. Just offshore lies S'Illeta, a small rocky islet reached by an iconic wooden footbridge, where Restaurante Illeta offers a unique Mediterranean dining experience completely surrounded by turquoise water — specialising in rice dishes, seafood and fresh fish. The setting is completed by rocky cliffs, lush pine forests, luxury residences and the prestigious Golf de Andratx.",
+      "description": "An exclusive coastal resort in the municipality of Andratx, in southwest Mallorca. Its 180-metre white sand beach with crystal-clear water is one of the most picturesque on the island. Just offshore lies S'Illeta, a small rocky islet reached by an iconic wooden bridge, home to Restaurant Illeta — a unique Mediterranean dining experience surrounded entirely by turquoise water, specialising in rice dishes, seafood and fresh fish.\n\nThe area also features rocky cliffs, pine forests, luxury villas, the prestigious Andratx Golf Club and several beach clubs with good food and a relaxed vibe.\n\nThe beach has public showers, foot-wash stations, toilets (restricted hours) and wheelchair-accessible access. Several supermarkets along the road to the car park make it easy to stock up before you arrive.",
       "category": "GASTRONOMY",
       "latitude": 39.5369,
       "longitude": 2.4223,
@@ -4059,10 +4059,12 @@
       "rating": 4.6,
       "review_count": 1230,
       "tips": [
-        "The 180m beach has very calm, sheltered water — ideal for families with children",
-        "Restaurante Illeta (on the islet) is in high demand: book well in advance, especially in July and August",
-        "In summer, arrive before 10:00 AM to find free parking near the beach",
-        "Walk the trail to Cap Andritxol to see a 16th-century watchtower with panoramic views of the coast"
+        "The 180 m beach has very calm, wind-sheltered water — perfect for families with young children",
+        "Restaurant Illeta (on the islet) is in high demand: book well in advance, especially in July and August",
+        "In summer arrive before 10:00 to find free parking close to the beach",
+        "Beach facilities include showers, foot-wash stations, toilets (restricted hours) and wheelchair access",
+        "Stock up at the supermarkets along the road to the car park before you arrive",
+        "Walk the Cap Andritxol trail to see a 16th-century watchtower with panoramic coastal views"
       ],
       "price_level": "MID",
       "website": "https://illeta.com",
@@ -4086,20 +4088,24 @@
           "source": "MINE"
         }
       ],
-      "description_es": "Exclusiva localidad costera en el municipio de Andratx, al suroeste de Mallorca. Su playa de 180 metros de arena blanca y aguas cristalinas es una de las más pintorescas de la isla. Frente a la orilla se encuentra S'Illeta, un pequeño islote rocoso al que se accede por un icónico puente de madera, donde el Restaurante Illeta ofrece una experiencia gastronómica mediterránea única rodeado completamente de agua turquesa — especializado en arroces, mariscos y pescados frescos. El entorno se completa con acantilados rocosos, frondosos pinares, residencias de lujo y el prestigioso Golf de Andratx.",
+      "description_es": "Exclusiva localidad costera en el municipio de Andratx, al suroeste de Mallorca. Su playa de 180 metros de arena blanca y aguas cristalinas es una de las más pintorescas de la isla. Frente a la orilla se encuentra S'Illeta, un pequeño islote rocoso al que se accede por un icónico puente de madera, donde el Restaurante Illeta ofrece una experiencia gastronómica mediterránea única rodeado completamente de agua turquesa — especializado en arroces, mariscos y pescados frescos.\n\nEl entorno se completa con acantilados rocosos, frondosos pinares, residencias de lujo, el prestigioso Golf de Andratx y varios beach clubs con buena cocina y ambiente agradable.\n\nLa playa dispone de duchas públicas, lavapiés, baños con horario restringido durante el día y acceso adaptado para personas con movilidad reducida. De camino al aparcamiento encontrarás varios supermercados para abastecerte antes de llegar.",
       "tips_es": [
         "La playa de 180 m tiene aguas muy tranquilas y resguardadas del viento — ideal para familias con niños",
         "El Restaurante Illeta (islote) tiene alta demanda: reserva con días de antelación, especialmente en julio y agosto",
         "En verano llega antes de las 10:00 h para encontrar aparcamiento gratuito cerca de la playa",
+        "Dispone de duchas, lavapiés y baños públicos (horario restringido) y acceso para movilidad reducida",
+        "Varios supermercados de camino al aparcamiento para abastecerte antes de llegar",
         "Haz la ruta a pie hasta el Cap Andritxol para ver una torre de defensa del siglo XVI con vistas panorámicas a la costa"
       ],
       "name_de": "Camp de Mar",
-      "description_de": "Exklusiver Küstenort in der Gemeinde Andratx im Südwesten Mallorcas. Der 180 Meter lange Strand mit feinem weißen Sand und kristallklarem Wasser zählt zu den malerischsten der Insel. Vor der Küste liegt S'Illeta, ein kleines Felseneiland, das über einen ikonischen Holzsteg zu erreichen ist. Dort bietet das Restaurante Illeta ein einzigartiges mediteranes Dining-Erlebnis, völlig vom türkisfarbenen Wasser umgeben — spezialisiert auf Reisgerichte, Meeresfrüchte und frischen Fisch. Die Umgebung wird durch Felsenklippen, dichte Pinienwälder, Luxusresidenzen und den renommierten Golfplatz Golf de Andratx abgerundet.",
+      "description_de": "Exklusiver Küstenort im Gemeindegebiet von Andratx im Südwesten Mallorcas. Der 180 Meter lange Sandstrand mit kristallklarem Wasser gehört zu den malerischsten der Insel. Direkt vor der Küste liegt S'Illeta, ein kleines Felseneiland, das über eine ikonische Holzbrücke erreichbar ist. Dort befindet sich das Restaurant Illeta — ein einzigartiges mediterranes Erlebnis, rundherum von türkisem Wasser umgeben, mit Spezialitäten wie Reisgerichten, Meeresfrüchten und frischem Fisch.\n\nDie Umgebung bietet Felsküsten, Pinienwälder, Luxusvillen, den renommierten Golfclub Andratx und mehrere Beach Clubs mit guter Küche und angenehmer Atmosphäre.\n\nDer Strand verfügt über öffentliche Duschen, Fußwaschstationen, Toiletten (eingeschränkte Öffnungszeiten) und ist barrierefrei zugänglich. Auf dem Weg zum Parkplatz gibt es mehrere Supermärkte zum Einkaufen.",
       "tips_de": [
-        "Der 180 m lange Strand hat ruhiges, windgeschütztes Wasser — ideal für Familien mit Kindern",
-        "Das Restaurante Illeta (auf dem Felseneiland) ist sehr gefragt: frühzeitig reservieren, besonders im Juli und August",
-        "Im Sommer vor 10:00 Uhr ankommen, um einen kostenlosen Parkplatz in Strandnähe zu finden",
-        "Wandern Sie zum Cap Andritxol, um einen Wachturm aus dem 16. Jahrhundert mit Panoramablick auf die Küste zu sehen"
+        "Der 180 m lange Strand hat sehr ruhiges, windgeschütztes Wasser — ideal für Familien mit Kindern",
+        "Restaurant Illeta (auf dem Eiland) ist sehr gefragt: früh reservieren, besonders im Juli und August",
+        "Im Sommer vor 10:00 Uhr ankommen, um einen kostenlosen Parkplatz nahe am Strand zu finden",
+        "Strandausstattung: Duschen, Fußwaschstationen, Toiletten (eingeschränkte Zeiten) und Rollstuhlzugang",
+        "Supermärkte auf dem Weg zum Parkplatz für Verpflegung nutzen",
+        "Den Cap-Andritxol-Wanderweg laufen für einen Wachturm aus dem 16. Jh. mit Panoramablick"
       ]
     },
     {
