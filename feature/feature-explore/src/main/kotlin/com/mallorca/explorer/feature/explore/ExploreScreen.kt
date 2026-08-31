@@ -831,6 +831,7 @@ private fun EventsSection(
                     EventCategory.CONCERT  -> stringResource(R.string.explore_event_category_concert)
                     EventCategory.CULTURE  -> stringResource(R.string.explore_event_category_culture)
                     EventCategory.SPORT    -> stringResource(R.string.explore_event_category_sport)
+                    EventCategory.NIGHTLIFE -> stringResource(R.string.explore_event_category_nightlife)
                 }
                 FilterChip(
                     selected = categoryFilter == cat,
@@ -879,6 +880,7 @@ private fun EventCard(event: Event, locale: String, onMoreInfoClicked: (Event) -
         EventCategory.CONCERT  -> stringResource(R.string.explore_event_category_concert)
         EventCategory.CULTURE  -> stringResource(R.string.explore_event_category_culture)
         EventCategory.SPORT    -> stringResource(R.string.explore_event_category_sport)
+        EventCategory.NIGHTLIFE -> stringResource(R.string.explore_event_category_nightlife)
     }
     val recurringLabel = stringResource(R.string.explore_events_recurring)
     val dateStr = remember(event.startDateEpoch, event.endDateEpoch, event.isRecurring, recurringLabel) {
@@ -942,7 +944,6 @@ private fun categoryLabel(cat: Category): String = when (cat) {
     Category.TOWN       -> stringResource(R.string.category_town)
     Category.VIEWPOINT  -> stringResource(R.string.category_viewpoint)
     Category.SUP        -> stringResource(R.string.category_sup)
-    Category.NIGHTLIFE  -> stringResource(R.string.category_nightlife)
 }
 
 private fun windCardinal(deg: Int, locale: String): String {

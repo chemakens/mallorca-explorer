@@ -31,4 +31,5 @@ enum class EventCategory(val emoji: String) {
     CONCERT("🎵"),
     CULTURE("🎭"),
     SPORT("⚽"),
+    NIGHTLIFE("🎶"),
 }

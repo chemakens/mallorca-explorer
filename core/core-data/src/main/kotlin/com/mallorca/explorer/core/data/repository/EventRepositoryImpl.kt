@@ -73,7 +73,7 @@ class EventRepositoryImpl @Inject constructor(
         try {
             val remoteEvents = eventRemoteDataSource.fetchAll()
             if (remoteEvents.isNotEmpty()) {
-                eventDao.replaceAll(remoteEvents)
+                eventDao.upsertAll(remoteEvents)
                 prefsDataStore.setEventsLastSyncedEpoch(now)
             } else {
                 Timber.w("Firestore events sync returned an empty list — skipping replace to avoid wiping local data")

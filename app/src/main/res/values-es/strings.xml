@@ -154,6 +154,7 @@
     <string name="explore_event_category_concert">Concierto</string>
     <string name="explore_event_category_culture">Cultura</string>
     <string name="explore_event_category_sport">Deporte</string>
+    <string name="explore_event_category_nightlife">Vida nocturna</string>
     <!-- Place categories -->
     <string name="category_beach">Playa</string>
     <string name="category_hiking">Senderismo</string>

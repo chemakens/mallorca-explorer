@@ -33,6 +33,7 @@
     <string name="explore_event_category_concert">Concert</string>
     <string name="explore_event_category_culture">Culture</string>
     <string name="explore_event_category_sport">Sport</string>
+    <string name="explore_event_category_nightlife">Nightlife</string>
     <!-- Place categories -->
     <string name="category_beach">Beach</string>
     <string name="category_hiking">Hiking</string>
@@ -41,7 +42,6 @@
     <string name="category_town">Town</string>
     <string name="category_viewpoint">Viewpoint</string>
     <string name="category_sup">SUP</string>
-    <string name="category_nightlife">Nightlife</string>
     <!-- Weather banner -->
     <string name="weather_banner_sunny">Sunny day · %1$d°C — perfect for beach and adventure</string>
     <string name="weather_banner_rainy">Rain expected — culture and gastronomy recommended</string>

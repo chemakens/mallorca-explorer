@@ -44,6 +44,7 @@ class SeedDataWorker @AssistedInject constructor(
         val currentVersion = prefsDataStore.seedVersion.first()
         if (currentVersion >= CURRENT_SEED_VERSION) return Result.success()
 
+
         return try {
             val rawJson = applicationContext.assets.open("seed_data.json")
                 .bufferedReader().use { it.readText() }
@@ -98,7 +99,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 328
+        const val CURRENT_SEED_VERSION = 366
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.

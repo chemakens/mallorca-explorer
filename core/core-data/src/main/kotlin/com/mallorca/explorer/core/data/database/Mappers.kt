@@ -132,7 +132,7 @@ fun PlaceEntity.toDomain(): Place = Place(
     descriptionDe = descriptionDe,
     descriptionRu = descriptionRu,
     descriptionZh = descriptionZh,
-    category = Category.valueOf(category),
+    category = runCatching { Category.valueOf(category) }.getOrElse { Category.CULTURE },
     subCategories = tagsJson.toStringList(),
     location = LatLng(latitude, longitude),
     address = address,
@@ -200,7 +200,7 @@ fun ItineraryEntity.toDomain(
         id = id,
         title = t?.title ?: title,
         description = t?.description ?: description,
-        category = Category.valueOf(category),
+        category = runCatching { Category.valueOf(category) }.getOrElse { Category.CULTURE },
         durationDays = durationDays,
         difficulty = difficulty?.let { Difficulty.valueOf(it) },
         places = stops.map { (stop, place) ->

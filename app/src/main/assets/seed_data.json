@@ -415,7 +415,7 @@
       "id": "tramuntana-range",
       "name": "Serra de Tramuntana",
       "name_es": "Serra de Tramuntana",
-      "description": "UNESCO World Heritage mountain range running along Mallorca's northwest coast, offering dramatic landscapes and ancient terraced olive groves.",
+      "description": "UNESCO World Heritage mountain range stretching 90 km along Mallorca's northwest coast, rising to 1,445m at Puig Major. Its dramatic landscape blends sheer sea cliffs, ancient olive terraces built with dry-stone technique (pedra en sec), traditional water-management systems and charming mountain villages — all recognised for their exceptional cultural harmony with nature.",
       "category": "HIKING",
       "latitude": 39.7308,
       "longitude": 2.6947,
@@ -423,9 +423,11 @@
       "rating": 4.9,
       "review_count": 3200,
       "tips": [
-        "The GR221 long-distance trail traverses the entire range",
-        "Spring and autumn are best — avoid July/August heat",
-        "Mountain refuges (refugis) provide overnight accommodation"
+        "Drive the Ma-10 road with care — it's narrow, winding and busy with cyclists",
+        "Arrive early: car parks at Valldemossa, Cúber and Gorg Blau fill up fast",
+        "Download offline maps before you go — mobile signal is patchy in deep valleys",
+        "Wear mountain boots on traditional stone paths and carry at least 2 litres of water",
+        "Stay on marked trails — much of the land is private farmland (possessions)"
       ],
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/place-tramuntana-range.jpg",
@@ -439,25 +441,29 @@
           "source": "PIXABAY"
         }
       ],
-      "description_es": "Sierra declarada Patrimonio Mundial de la UNESCO que recorre la costa noroeste de Mallorca, con paisajes dramáticos, pueblos de montaña y antiguas terrazas de olivos.",
+      "description_es": "Cadena montañosa Patrimonio Mundial de la UNESCO que se extiende 90 km por el noroeste de Mallorca, con su punto más alto en el Puig Major (1.445 m). El paisaje combina acantilados sobre el Mediterráneo, terrazas de olivos milenarios construidas en pedra en sec, sistemas históricos de gestión del agua y pueblos encantadores, en una armonía única reconocida a nivel mundial.",
       "tips_es": [
-        "La Serra está declarada Patrimonio Mundial de la UNESCO desde 2011",
-        "El mirador de Ses Barques ofrece las mejores vistas",
-        "La ruta más popular es el Camí de s'Arxiduc"
+        "Conduce con calma por la Ma-10: es estrecha, sinuosa y muy frecuentada por ciclistas",
+        "Madruga para aparcar — Valldemossa, Cúber y Gorg Blau se llenan temprano",
+        "Descarga mapas sin conexión antes de salir — la cobertura es intermitente en los valles",
+        "Usa botas de montaña y lleva al menos 2 litros de agua por persona",
+        "Mantente en los senderos señalizados — gran parte del territorio es finca privada"
       ],
       "name_de": "Tramuntana-Gebirge",
-      "description_de": "UNESCO-Weltnaturerbe seit 2011 – das Tramuntana-Gebirge zieht sich über 90 km entlang der Nordwestküste und beherbergt die höchsten Gipfel und schönsten Wanderwege Mallorcas.",
+      "description_de": "UNESCO-Welterbe-Gebirgskette, die sich 90 km entlang der Nordwestküste Mallorcas erstreckt und im Puig Major (1.445 m) gipfelt. Die dramatische Landschaft vereint Steilklippen über dem Meer, jahrhundertealte Oliventerrassen in Trockenmauertechnik (pedra en sec), historische Wasserwirtschaft und malerische Bergdörfer — eine einzigartige Harmonie zwischen Natur und Menschenhand.",
       "tips_de": [
-        "UNESCO-Weltnaturerbe seit 2011",
-        "Aussichtspunkt Ses Barques bietet die besten Ausblicke",
-        "Die beliebteste Route ist der Camí de s'Arxiduc"
+        "Fahre die Ma-10 vorsichtig — sie ist schmal, kurvenreich und von Radfahrern frequentiert",
+        "Früh ankommen: Parkplätze in Valldemossa, Cúber und Gorg Blau sind schnell voll",
+        "Offline-Karten herunterladen — Mobilempfang in tiefen Tälern ist lückenhaft",
+        "Bergschuhe tragen und mindestens 2 Liter Wasser pro Person mitbringen",
+        "Auf markierten Wegen bleiben — viel Gelände gehört privaten Fincas (possessions)"
       ]
     },
     {
       "id": "barranc-biniaraix",
       "name": "Barranc de Biniaraix",
       "name_es": "Barranc de Biniaraix",
-      "description": "One of Mallorca's most beautiful walks, following ancient stone steps through a narrow gorge up into the mountains from Sóller.",
+      "description": "A karst canyon known as the 'cathedral of dry-stone' — over 1,900 hand-laid stone steps wind through a dramatic gorge flanked by the crags of Es Cornadors and Serra de Son Torrella. The historic path (BIC protected, part of the GR-221) climbs 620m from the tiny village of Biniaraix up to the highlands of l'Ofre and Cúber reservoir, past centuries-old olive groves, carob trees and, higher up, wild holm-oak forest.",
       "category": "HIKING",
       "latitude": 39.759,
       "longitude": 2.7562,
@@ -465,9 +471,11 @@
       "rating": 4.8,
       "review_count": 1500,
       "tips": [
-        "Start in Biniaraix village — take bus from Sóller",
-        "2-3 hours to reach L'Ofre peak",
-        "Stone steps can be slippery when wet"
+        "Start at the public washing fountains (lavaderos) in Biniaraix — park in Sóller and walk or take the bus",
+        "Best in autumn, winter and spring; after rain the stream cascades beautifully — avoid summer heat",
+        "Wear mountain boots with good grip: stone steps are slippery when wet and the descent is hard on knees",
+        "Family-friendly option: walk the first 2 km through olive groves and turn back whenever you like",
+        "Fill water bottles in Biniaraix — no shops or drinking fountains along the gorge"
       ],
       "price_level": "FREE",
       "tags": [
@@ -488,25 +496,29 @@
           "source": "PEXELS"
         }
       ],
-      "description_es": "Uno de los paseos más hermosos de Mallorca, siguiendo antiguos escalones de piedra por una estrecha garganta hasta las montañas desde Sóller.",
+      "description_es": "Cañón kárstico conocido como la 'catedral de la piedra en seco' — más de 1.900 escalones empedrados a mano serpentean por un desfiladero flanqueado por los peñascos de Es Cornadors y la Serra de Son Torrella. El camino histórico (Bien de Interés Cultural, parte del GR-221) asciende 620 m desde el pequeño núcleo de Biniaraix hasta las tierras altas de l'Ofre y el embalse de Cúber, entre olivares centenarios, algarrobos y, en la parte alta, frondosos encinares.",
       "tips_es": [
-        "Empieza en el pueblo de Biniaraix, a las afueras de Sóller",
-        "Los adoquines históricos pueden estar resbaladizos cuando está mojado",
-        "Lleva calzado de senderismo robusto"
+        "Empieza en los lavaderos de Biniaraix — aparca en Sóller y camina o usa el autobús",
+        "Mejor en otoño, invierno y primavera; tras lluvias el torrente baja espectacular — evita el calor veraniego",
+        "Usa botas de montaña con agarre: los adoquines se vuelven resbaladizos mojados y la bajada carga las rodillas",
+        "Opción familiar: camina los primeros 2 km entre olivares y da la vuelta cuando quieras",
+        "Llena las botellas en Biniaraix — no hay tiendas ni fuentes en el barranco"
       ],
       "name_de": "Schlucht von Biniaraix",
-      "description_de": "Einer der schönsten Wanderwege Mallorcas führt durch diese historische Schlucht. Gepflasterte Wege und Trockensteinmauern zeugen von der jahrhundertealten Kulturlandschaft.",
+      "description_de": "Karstschlucht, bekannt als die ‚Kathedrale des Trockenmauerbaus' — über 1.900 von Hand gesetzte Steinstufen winden sich durch eine dramatische Schlucht zwischen den Felsen von Es Cornadors und der Serra de Son Torrella. Der historische Weg (BIC-geschützt, Teil des GR-221) überwindet 620 Höhenmeter vom Dörfchen Biniaraix bis zu den Hochlagen von l'Ofre und dem Cúber-Stausee, vorbei an jahrhundertealten Olivenhainen und dichtem Steineichenwald.",
       "tips_de": [
-        "Start im Dorf Biniaraix am Rand von Sóller",
-        "Historisches Pflaster kann nass rutschig sein",
-        "Festes Wanderschuhwerk tragen"
+        "Start an den Lavaderos in Biniaraix — in Sóller parken und laufen oder Bus nehmen",
+        "Ideal im Herbst, Winter und Frühling; nach Regen fließt der Bach spektakulär — Sommerhitze meiden",
+        "Bergschuhe mit gutem Grip tragen: nasse Stufen sind rutschig, der Abstieg belastet die Knie",
+        "Familienvariante: erste 2 km durch Olivenhaine gehen und umkehren wann gewünscht",
+        "Wasserflaschen in Biniaraix füllen — keine Läden oder Trinkwasser im Barranco"
       ]
     },
     {
       "id": "puig-major",
       "name": "Puig Major",
       "name_es": "Puig Major",
-      "description": "Mallorca's highest peak at 1,445m, with dramatic views across the island and the Tramuntana range.",
+      "description": "At 1,445m, the highest peak in Mallorca and the Balearic Islands — a limestone massif in the heart of the UNESCO Serra de Tramuntana. The summit is off-limits to the public (a military radar base has stood there since 1959), but the surrounding landscape of the Cúber and Gorg Blau reservoirs, sheer rocky ridges and sweeping views makes the approach spectacular in itself. Hikers aim for nearby peaks like Torrella (1,415m) or Penyal des Migdia; cyclists tackle the 14.3 km climb from Sóller on the Ma-10.",
       "category": "HIKING",
       "latitude": 39.8073,
       "longitude": 2.7937,
@@ -514,9 +526,11 @@
       "rating": 4.7,
       "review_count": 800,
       "tips": [
-        "Military radar installation at top — access may be restricted",
-        "Approach via Sa Calobra road is spectacular",
-        "Best views at sunrise"
+        "The summit is military-restricted — don't cross the perimeter fence; head for Torrella (1,415m) or Penyal des Migdia instead",
+        "Classic hike starts at Es Funicular bend on the Ma-10 — parking is very limited, arrive early",
+        "High-mountain terrain: loose rock, no shade, no water sources — bring mountain boots, warm layers and 2+ litres",
+        "In summer start at dawn; the limestone slopes have almost no shade and heat up fast",
+        "Cyclists: 14.3 km from Sóller, 843m elevation, avg 5.9% gradient — one of the island's iconic climbs"
       ],
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/place-puig-major.jpg",
@@ -531,18 +545,22 @@
           "author": "Giorgio Gatti"
         }
       ],
-      "description_es": "El pico más alto de Mallorca con 1.445 m, con vistas dramáticas sobre toda la isla y la Serra de Tramuntana.",
+      "description_es": "Con 1.445 m, el pico más alto de Mallorca y de las Islas Baleares — un macizo calcáreo en el corazón de la Serra de Tramuntana (Patrimonio UNESCO). La cima está cerrada al público desde 1959 por una base radar militar, pero el paisaje circundante —los embalses de Cúber y Gorg Blau, las crestas abruptas y las panorámicas— hace que la aproximación sea ya un espectáculo. Los senderistas se dirigen a cimas próximas como la Torrella (1.415 m) o el Penyal des Migdia; los ciclistas afrontan la subida de 14,3 km desde Sóller por la Ma-10.",
       "tips_es": [
-        "La cima está restringida por instalaciones militares",
-        "Las mejores vistas son desde el mirador junto a la carretera",
-        "El embalse de Cúber a sus pies es muy fotogénico"
+        "La cima está restringida por la base militar — no cruces el perímetro; sube a la Torrella (1.415 m) o al Penyal des Migdia",
+        "La ruta clásica sale de la curva de Es Funicular en la Ma-10 — aparcamiento muy limitado, llega temprano",
+        "Alta montaña: roca suelta, sin sombra ni fuentes — lleva botas, ropa de abrigo y más de 2 litros de agua",
+        "En verano sal al alba; las laderas calcáreas no tienen sombra y se calientan rápido",
+        "Ciclistas: 14,3 km desde Sóller, 843 m de desnivel, pendiente media del 5,9% — una de las subidas icónicas de la isla"
       ],
       "name_de": "Puig Major",
-      "description_de": "Mit 1.445 m der höchste Gipfel Mallorcas. Militärische Einschränkungen machen den Gipfel selbst unzugänglich, doch die Straße vorbei am Stausee Cúber bietet atemberaubende Ausblicke.",
+      "description_de": "Mit 1.445 m der höchste Gipfel Mallorcas und der Balearen — ein Kalksteinmassiv im Herzen der UNESCO-Tramuntana. Der Gipfel ist seit 1959 wegen einer Militärradaranlage für die Öffentlichkeit gesperrt, doch die umgebende Landschaft — Cúber- und Gorg-Blau-Stauseen, schroffe Grate und weite Panoramen — macht den Anstieg schon zum Erlebnis. Wanderer steuern Nebengipfel wie Torrella (1.415 m) oder Penyal des Migdia an; Radfahrer bewältigen den 14,3 km langen Anstieg ab Sóller auf der Ma-10.",
       "tips_de": [
-        "Der Gipfel ist wegen militärischer Anlagen gesperrt",
-        "Bester Aussichtspunkt von der Straße neben dem Gipfel",
-        "Der Stausee Cúber am Fuß ist sehr fotogen"
+        "Gipfel militärisch gesperrt — Zaun nicht überschreiten; stattdessen Torrella (1.415 m) oder Penyal des Migdia ansteuern",
+        "Klassischer Anstieg ab der Es-Funicular-Kurve auf der Ma-10 — sehr wenig Parkplätze, früh ankommen",
+        "Hochgebirge: loses Gestein, kein Schatten, keine Wasserquellen — Bergschuhe, warme Kleidung und 2+ Liter mitbringen",
+        "Im Sommer bei Tagesanbruch starten; die Kalksteinhänge bieten kaum Schatten und heizen sich schnell auf",
+        "Radfahrer: 14,3 km ab Sóller, 843 Höhenmeter, Ø 5,9% Steigung — einer der Klassiker der Insel"
       ]
     },
     {
@@ -1075,7 +1093,7 @@
       "id": "cap-formentor",
       "name": "Cap de Formentor",
       "name_es": "Cap de Formentor",
-      "description": "Mallorca's dramatic northern tip, with a clifftop lighthouse and 360-degree views over the sea.",
+      "description": "Cap de Formentor is Mallorca's northernmost point — a dramatic peninsula where the Serra de Tramuntana plunges vertically into the Mediterranean. Known locally as the 'meeting point of the four winds', it is one of the most wild and photographed landscapes in the Balearic Islands. The iconic lighthouse (1863), perched 210 metres above the sea, marks the island's 'end of the world'. Along the route, the Mirador de Es Colomer delivers a jaw-dropping panorama over towering limestone cliffs and the electric-blue sea. Formentor Beach, a stretch of white sand ringed by pine forest, lies sheltered in the bay below.",
       "category": "VIEWPOINT",
       "latitude": 39.9619,
       "longitude": 3.2139,
@@ -1083,9 +1101,12 @@
       "rating": 4.9,
       "review_count": 4100,
       "tips": [
-        "Car access restricted in peak season — take the shuttle bus",
-        "The winding road is one of the most scenic in Europe",
-        "Arrive at sunrise for the best light"
+        "From 15 May to 18 October (10:00–22:00), private vehicles are banned on the road beyond Port de Pollença. Park in Port de Pollença or Alcúdia and take the Line 334 shuttle bus — it stops at Mirador de Es Colomer, Formentor Beach, Cala Murta and the lighthouse.",
+        "If arriving by car before 10:00 am (outside the restriction window), use the paid car park at Formentor Beach (~€12/day max). It fills quickly — if it's full, access is cut off.",
+        "The road (Ma-2210) is full of tight bends and steep drops — drive slowly and watch for cyclists, who are frequent on this route.",
+        "Even in summer, the cape is exposed to strong winds — bring a light jacket if you plan to stay for sunset.",
+        "The lighthouse café exists but is expensive with long queues. Bring your own water and snacks.",
+        "For a completely different perspective — and to avoid the crowds — consider a boat or catamaran excursion from Port d'Alcúdia or Port de Pollença to see the 300 m cliffs from the sea."
       ],
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/place-cap-formentor.jpg",
@@ -1103,25 +1124,31 @@
           "source": "MINE"
         }
       ],
-      "description_es": "El dramático extremo norte de Mallorca, con un faro en lo alto del acantilado y vistas de 360 grados sobre el Mediterráneo y las montañas.",
+      "description_es": "El Cap de Formentor es el punto más septentrional de Mallorca, una dramática península donde la Serra de Tramuntana se hunde verticalmente en el Mediterráneo. Conocido como el 'punto de encuentro de los cuatro vientos', es uno de los paisajes más salvajes y fotografiados de las Islas Baleares. El icónico faro de 1863, encaramado a 210 metros sobre el mar, marca el 'fin del mundo' de la isla. El Mirador de Es Colomer ofrece una panorámica de vértigo sobre acantilados de más de 300 metros y un mar de color azul intenso. La Playa de Formentor, franja de arena blanca rodeada de pinos, se refugia en la bahía.",
       "tips_es": [
-        "La carretera puede cerrarse en verano — comprueba las restricciones",
-        "Llega al faro antes de las 9h para evitar aglomeraciones",
-        "Los vencejos que anidan en los acantilados son fascinantes"
+        "Del 15 de mayo al 18 de octubre (10:00–22:00 h), los vehículos privados tienen prohibido circular más allá del Port de Pollença. Aparca en Port de Pollença o Alcúdia y sube en el autobús lanzadera Línea 334 — para en el Mirador de Es Colomer, Playa de Formentor, Cala Murta y el faro.",
+        "Si llegas en coche antes de las 10:00 h (fuera de la restricción), utiliza el parking de pago de la Playa de Formentor (~12 €/día máximo). Se llena rápido — si está completo, se corta el acceso vehicular.",
+        "La carretera Ma-2210 está llena de curvas cerradas y fuertes desniveles. Conduce despacio y ten cuidado con los ciclistas, muy frecuentes en este tramo.",
+        "Incluso en verano el cabo está expuesto a vientos fuertes. Lleva una chaqueta ligera si vas a quedarte al atardecer.",
+        "La cafetería del faro es cara y con colas largas. Lleva tu propia agua y algo de picar.",
+        "Para una perspectiva completamente diferente — y evitar las aglomeraciones — considera una excursión en barco o catamarán desde el Port d'Alcúdia o Port de Pollença para ver los acantilados desde el mar."
       ],
       "name_de": "Kap Formentor",
-      "description_de": "Das dramatische Nordkap Mallorcas mit schwindelerregenden Klippen und dem ikonischen Leuchtturm. Die Fahrt durch die Halbinsel gehört zu den beeindruckendsten Europas.",
+      "description_de": "Cap de Formentor ist Mallorcas nördlichste Spitze — eine dramatische Halbinsel, wo die Serra de Tramuntana senkrecht ins Mittelmeer abfällt. Bekannt als der 'Treffpunkt der vier Winde', zählt sie zu den wildesten und meistfotografierten Landschaften der Balearen. Der ikonische Leuchtturm von 1863, 210 Meter über dem Meer, markiert das 'Ende der Welt' der Insel. Der Mirador de Es Colomer bietet einen atemberaubenden Panoramablick über Steilklippen von über 300 Metern und intensiv blaues Wasser. Der Strand von Formentor, ein weißer Sandstreifen umgeben von Kiefernwald, liegt geschützt in der Bucht.",
       "tips_de": [
-        "Die Straße kann im Sommer gesperrt sein – Beschränkungen prüfen",
-        "Vor 9 Uhr am Leuchtturm ankommen um Menschenmassen zu vermeiden",
-        "Nistende Mauersegler in den Felswänden sind faszinierend"
+        "Vom 15. Mai bis 18. Oktober (10:00–22:00 Uhr) sind Privatfahrzeuge hinter Port de Pollença verboten. In Port de Pollença oder Alcúdia parken und den Shuttlebus Linie 334 nehmen — er hält am Mirador de Es Colomer, Strand Formentor, Cala Murta und am Leuchtturm.",
+        "Bei Ankunft vor 10:00 Uhr (außerhalb der Sperrzeit) den gebührenpflichtigen Parkplatz am Strand von Formentor nutzen (~max. 12 €/Tag). Er füllt sich schnell — ist er voll, wird der Zugang gesperrt.",
+        "Die Straße Ma-2210 hat enge Kurven und starke Gefälle. Langsam fahren und auf Radfahrer achten, die hier sehr häufig unterwegs sind.",
+        "Selbst im Sommer ist das Kap starken Winden ausgesetzt. Eine leichte Jacke mitbringen, falls der Sonnenuntergang geplant ist.",
+        "Das Café am Leuchtturm ist teuer und hat lange Schlangen. Eigenes Wasser und Snacks mitbringen.",
+        "Für eine völlig andere Perspektive — und um die Menschenmassen zu meiden — lohnt sich eine Boot- oder Katamaranfahrt von Port d'Alcúdia oder Port de Pollença, um die Klippen vom Meer aus zu sehen."
       ]
     },
     {
       "id": "mirador-ses-barques",
       "name": "Mirador de Ses Barques",
       "name_es": "Mirador de Ses Barques",
-      "description": "A spectacular viewpoint overlooking the Port de Sóller and the entire bay, with a traditional restaurant.",
+      "description": "Mirador de Ses Barques is one of the most iconic and easily accessible viewpoints in the Serra de Tramuntana, perched at around 400 metres on the Ma-10 road (km 45) between Sóller and Lluc monastery. Its name means 'view of the boats' in Catalan — from this height you can clearly make out the fishing and leisure vessels entering and leaving the semicircular bay of Port de Sóller, framed by terraced olive groves and mountain ridges. A traditional Mallorcan restaurant occupies the viewpoint terrace, making it a popular stop for lunch with a view.",
       "category": "VIEWPOINT",
       "latitude": 39.7906,
       "longitude": 2.7251,
@@ -1129,9 +1156,11 @@
       "rating": 4.6,
       "review_count": 1200,
       "tips": [
-        "Stop here on the drive from Palma to Sóller via the old mountain road",
-        "Great place for lunch with views",
-        "The old road (not the tunnel) is the scenic route"
+        "The main viewing terrace belongs to the restaurant — but a small public platform to the side lets you stop for photos without needing to eat.",
+        "If you want to dine on the terrace, book a table in advance and ask specifically for a front-row spot by the railing. The views are the highlight; the food is traditional Mallorcan (rice dishes, local orange juice).",
+        "The viewpoint is the official starting point for classic hiking routes including Sa Costera and the demanding descent to Cala Tuent (5–6 hours round trip).",
+        "The upper car park is large and easy. Note that the restaurant and toilets are not wheelchair accessible — the bathrooms are three flights of stairs down.",
+        "Just a few minutes further along the Ma-10, stop at the tiny Modernista chapel of Mare de Déu de l'Olivar — its interior mimics a natural cave with stalactites in a style influenced by Gaudí."
       ],
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/mirador-ses-barques.jpg",
@@ -1141,18 +1170,22 @@
           "source": "MINE"
         }
       ],
-      "description_es": "Espectacular mirador con vistas al Port de Sóller y a toda la bahía, con un restaurante tradicional que sirve cocina mallorquina.",
+      "description_es": "El Mirador de Ses Barques es uno de los puntos panorámicos más emblemáticos y accesibles de la Serra de Tramuntana, situado a unos 400 metros de altitud en la carretera Ma-10 (km 45), entre Sóller y el Monasterio de Lluc. Su nombre en catalán significa 'vista de las barcas': desde esta altura se distinguen perfectamente los barcos pesqueros y de recreo entrando y saliendo de la bahía semicircular del Port de Sóller, enmarcada por olivares en terrazas y crestas de montaña. Un restaurante de cocina mallorquina tradicional ocupa la terraza del mirador, convirtiéndolo en una parada habitual para comer con vistas.",
       "tips_es": [
-        "Parada obligatoria en la carretera de Sóller al Port",
-        "El café del mirador sirve los mejores ensaimadas del área",
-        "Mejor al atardecer cuando la luz ilumina el puerto"
+        "La terraza principal pertenece al restaurante, pero existe una pequeña plataforma pública lateral desde donde puedes parar a hacer fotos sin necesidad de consumir.",
+        "Si quieres comer en la terraza, reserva mesa con antelación y pide expresamente un sitio en primera línea de la barandilla. Las vistas son el plato fuerte; la comida es mallorquina tradicional (arroces, zumo de naranja local).",
+        "El mirador es el punto de partida oficial de rutas de senderismo clásicas como Sa Costera y el exigente descenso a Cala Tuent (5–6 horas ida y vuelta).",
+        "El aparcamiento superior es amplio y cómodo. Ten en cuenta que el restaurante y los aseos no están adaptados para sillas de ruedas — los baños están bajando tres tramos de escaleras.",
+        "A pocos minutos siguiendo la Ma-10, para en la diminuta capilla modernista de la Mare de Déu de l'Olivar, cuyo interior imita una cueva natural con estalactitas de clara influencia gaudiniana."
       ],
       "name_de": "Aussichtspunkt Ses Barques",
-      "description_de": "Spektakulärer Aussichtspunkt auf der Straße nach Sóller mit Blick auf den Hafen und die Tramuntana. Das Café serviert die besten Ensaimadas der Region.",
+      "description_de": "Der Mirador de Ses Barques ist einer der ikonischsten und am leichtesten erreichbaren Aussichtspunkte der Serra de Tramuntana, auf etwa 400 Metern Höhe an der Ma-10 (km 45) zwischen Sóller und dem Kloster Lluc gelegen. Sein Name bedeutet auf Katalanisch 'Blick auf die Boote' — von hier oben kann man die Fisch- und Freizeitboote, die in die halbkreisförmige Bucht von Port de Sóller ein- und ausfahren, deutlich erkennen, eingerahmt von terrassierten Olivenhainen und Bergkämmen. Ein traditionelles mallorquinisches Restaurant belegt die Aussichtsterrasse und macht ihn zu einem beliebten Mittagsstopp mit Aussicht.",
       "tips_de": [
-        "Pflichthauptstop auf der Straße von Sóller zum Hafen",
-        "Das Café des Aussichtspunktes serviert die besten Ensaimadas der Region",
-        "Besonders schön bei Sonnenuntergang"
+        "Die Hauptterrasse gehört zum Restaurant — aber eine kleine öffentliche Plattform an der Seite ermöglicht einen Fotostopp ohne Verzehrzwang.",
+        "Für ein Essen auf der Terrasse im Voraus reservieren und ausdrücklich nach einem Platz in der ersten Reihe am Geländer fragen. Die Aussicht ist das Highlight; das Essen ist traditionell mallorquinisch (Reisgerichte, lokaler Orangensaft).",
+        "Der Aussichtspunkt ist der offizielle Ausgangspunkt für klassische Wanderungen wie Sa Costera und den anspruchsvollen Abstieg nach Cala Tuent (5–6 Stunden Rundtour).",
+        "Der obere Parkplatz ist groß und bequem. Zu beachten: Restaurant und Toiletten sind nicht rollstuhlgerecht — die Toiletten befinden sich drei Treppenabsätze tiefer.",
+        "Wenige Minuten weiter auf der Ma-10 lohnt ein Stopp an der winzigen Modernisme-Kapelle Mare de Déu de l'Olivar, deren Innenraum eine natürliche Höhle mit Stalaktiten im Stil von Gaudí nachahmt."
       ]
     },
     {
@@ -1257,7 +1290,7 @@
       "id": "cami-des-correu",
       "name": "Camí des Correu",
       "name_es": "Camí des Correu",
-      "description": "A historic coastal postal route in the Tramuntana, connecting Estellencs and Banyalbufar along ancient stone paths with dramatic sea cliff views. Part of the GR221 network.",
+      "description": "A royal postal road dating from 1401 — the only connection between Esporles and Banyalbufar until the 19th century. This 8 km trail (part of the GR-221 Ruta de Pedra en Sec) winds through dense holm-oak, pine and arbutus forest before opening up to sweeping Mediterranean views as it approaches the coast. The traditional stone paving and dry-stone walls are remarkably well preserved, making it one of the most scenic and accessible walks in the Tramuntana.",
       "category": "HIKING",
       "latitude": 39.6725,
       "longitude": 2.5605,
@@ -1265,9 +1298,11 @@
       "rating": 4.7,
       "review_count": 620,
       "tips": [
-        "Best walked west to east (Estellencs → Banyalbufar)",
-        "Moderate difficulty — allow 3 hours",
-        "Stunning sea views the entire way"
+        "Route: 8 km one way, ~2h15min, low-medium difficulty — great for families; return by TIB bus L200",
+        "Start near La Granja estate in Esporles; follow GR-221 markers and always trust the official signposts over digital maps",
+        "Close all gates you pass through — the path crosses private farmland with livestock",
+        "Wear hiking boots on the irregular stone paving; bring at least 1.5 litres of water (no drinking fountains en route)",
+        "Best in spring, autumn or winter — parts of the trail are sun-exposed; wear a hat and sunscreen"
       ],
       "tags": [
         "tramuntana",
@@ -1287,25 +1322,29 @@
           "source": "PIXABAY"
         }
       ],
-      "description_es": "Histórico camino postal costero en la Tramuntana que conecta Estellencs y Banyalbufar por senderos de piedra con dramáticas vistas a los acantilados. Parte de la red GR221.",
+      "description_es": "Camino real del año 1401 — única conexión entre Esporles y Banyalbufar hasta el siglo XIX. Este sendero de 8 km (parte del GR-221 Ruta de Pedra en Sec) atraviesa frondosos bosques de encinas, pinos y madroños antes de abrirse a espectaculares vistas del Mediterráneo al acercarse a la costa. El empedrado tradicional y los muros de piedra en seco están excepcionalmente bien conservados, lo que lo convierte en uno de los paseos más bonitos y accesibles de la Tramuntana.",
       "tips_es": [
-        "El sendero conecta varias localidades históricas de la costa",
-        "Lleva mapa descargado ya que la señalización puede fallar",
-        "La mejor época es primavera y otoño para evitar el calor"
+        "Ruta: 8 km solo ida, ~2h15min, dificultad media-baja — ideal para familias; regreso en autobús TIB L200",
+        "Empieza cerca de La Granja en Esporles; sigue las marcas del GR-221 y prioriza los postes oficiales ante dudas",
+        "Cierra siempre las portillas — el sendero cruza fincas privadas con ganado",
+        "Usa calzado de montaña en el empedrado irregular; lleva mínimo 1,5 litros de agua (sin fuentes en ruta)",
+        "Mejor en primavera, otoño o invierno — hay tramos expuestos al sol; lleva gorra y protector solar"
       ],
       "name_de": "Postweg Camí des Correu",
-      "description_de": "Historischer Postweg entlang der Nordwestküste der Tramuntana. Der Pfad verbindet mehrere Dörfer und bietet spektakuläre Meerausblicke.",
+      "description_de": "Ein historischer Postweg aus dem Jahr 1401 — bis ins 19. Jahrhundert die einzige Verbindung zwischen Esporles und Banyalbufar. Der 8 km lange Pfad (Teil des GR-221 Ruta de Pedra en Sec) führt durch dichte Steineichen-, Kiefern- und Erdbeerbaumwälder, bevor er sich zur Küste hin mit weiten Mittelmeerblicken öffnet. Das traditionelle Steinpflaster und die Trockenmauern sind außergewöhnlich gut erhalten.",
       "tips_de": [
-        "Pfad verbindet mehrere historische Ortschaften der Küste",
-        "Offline-Karte herunterladen da Beschilderung lückenhaft",
-        "Bester Zeitraum Frühling und Herbst wegen der Hitze"
+        "Route: 8 km einfach, ~2h15min, mittlere/leichte Schwierigkeit — familienfreundlich; Rückfahrt mit TIB-Bus L200",
+        "Start nahe der Finca La Granja in Esporles; GR-221-Markierungen folgen und bei Zweifeln offizielle Wegweiser bevorzugen",
+        "Alle Tore schließen — der Weg führt durch Privatgelände mit Vieh",
+        "Wanderschuhe auf dem unebenen Steinpflaster; mindestens 1,5 Liter Wasser mitbringen (keine Trinkwasserquellen)",
+        "Beste Zeit Frühling, Herbst oder Winter — exponierte Abschnitte; Hut und Sonnencreme tragen"
       ]
     },
     {
       "id": "castell-alaro",
       "name": "Castell d'Alaró",
       "name_es": "Castell d'Alaró",
-      "description": "A dramatic medieval castle perched on a rocky peak at 822m, surrounded by holm oak forest. Offers panoramic views across the entire Mallorcan plain. The climb is rewarded with a restaurant at the top.",
+      "description": "Castell d'Alaró is one of only three medieval rock fortresses preserved in Mallorca, perched at 822 metres on the summit of Puig d'Alaró. Declared a Site of Cultural Interest, the castle retains its defensive walls with five towers and two stone gateways — including the Torre de l'Homenatge and the Presó dels Moros, built above the mystical Cueva de Sant Antoni. At the top, a 17th-century hermitage and a mountain refuge with a cafeteria await, along with extraordinary 360° panoramic views over the Pla de Mallorca, the Orient valley, and the bays of Alcúdia and Pollença.",
       "category": "HIKING",
       "latitude": 39.7294002,
       "longitude": 2.7886528,
@@ -1313,9 +1352,12 @@
       "rating": 4.8,
       "review_count": 2200,
       "tips": [
-        "2-hour climb from Orient or Alaró village",
-        "The restaurant at the summit serves excellent traditional food",
-        "Sunset views over the entire island are breathtaking — bring a torch for the descent"
+        "Two access options: drive the rough 3 km mountain track to Restaurant Es Verger (free parking, 45–50 min walk to summit) or park in Alaró village and hike the full 2-hour trail through olive groves and oak forest.",
+        "The track to Es Verger is narrow, potholed and demanding — not recommended for low-clearance cars, rental vehicles or nervous drivers. Arrive before 10:30 am to avoid oncoming traffic.",
+        "Sturdy footwear is essential — the cobbled path is steep and slippery. Carry plenty of water and sun protection as the upper section is exposed.",
+        "Not suitable for wheelchairs, pushchairs or people with serious mobility difficulties. Recommended for children aged 5+ used to walking.",
+        "If you want to stay overnight in the summit refuge, reserve in advance and bring your own sleeping bag.",
+        "Reward yourself on the way down with the famous wood-roasted lamb at Es Verger — book ahead, especially at weekends."
       ],
       "tags": [
         "castle",
@@ -1337,18 +1379,24 @@
           "source": "PIXABAY"
         }
       ],
-      "description_es": "Dramático castillo medieval encaramado en un pico rocoso a 822 m, rodeado de bosque de encinas. Vistas panorámicas sobre toda la llanura mallorquina y un restaurante en la cima.",
+      "description_es": "El Castell d'Alaró es una de las tres únicas fortalezas roqueras medievales conservadas en Mallorca, encaramada a 822 metros en la cima del Puig d'Alaró. Declarado Bien de Interés Cultural, el castillo conserva su muralla con cinco torres defensivas y dos portales de piedra — incluyendo la Torre de l'Homenatge y la Presó dels Moros, construida sobre la mística Cueva de Sant Antoni. En la cumbre aguardan una ermita del siglo XVII y un refugio de montaña con cafetería, junto a unas vistas panorámicas de 360° sobre el Pla de Mallorca, el valle de Orient y las bahías de Alcúdia y Pollença.",
       "tips_es": [
-        "La subida desde Alaró tarda aproximadamente 2 horas",
-        "El refugio en la cima sirve comida casera simple",
-        "Las vistas son 360°, perfectas para orientarse en Mallorca"
+        "Dos opciones de acceso: sube en coche por la pista de montaña de 3 km hasta el Restaurante Es Verger (aparcamiento gratuito, 45–50 min a pie hasta la cima) o aparca en Alaró y sube andando por la ruta completa de 2 horas entre olivares y encinas.",
+        "La pista hasta Es Verger es estrecha, con baches y exigente — no recomendada para coches bajos, de alquiler o conductores nerviosos. Llega antes de las 10:30 h para evitar coches de frente.",
+        "Calzado resistente imprescindible: el camino empedrado es empinado y resbaladizo. Lleva suficiente agua y protección solar, ya que el tramo final no tiene sombra.",
+        "No apto para sillas de ruedas, carritos de bebé ni personas con dificultades graves de movilidad. Recomendado para niños a partir de 5-6 años acostumbrados a caminar.",
+        "Si quieres pernoctar en el refugio de la cima, reserva con antelación y lleva tu propio saco de dormir.",
+        "Al bajar, date el capricho del famoso cordero asado a la leña en Es Verger — reserva mesa, especialmente los fines de semana."
       ],
       "name_de": "Burg Alaró",
-      "description_de": "Dramatische mittelalterliche Ruine auf einem Felsen mit 360°-Panorama über Mallorca. Der Aufstieg dauert etwa 2 Stunden – belohnt wird man mit einem unvergesslichen Ausblick.",
+      "description_de": "Das Castell d'Alaró ist eine der nur drei erhaltenen mittelalterlichen Felsenfestungen Mallorcas, auf 822 Metern auf dem Gipfel des Puig d'Alaró gelegen. Als Kulturgut eingestuft, bewahrt die Burg ihre Wehranlage mit fünf Türmen und zwei Steintoren — darunter der Torre de l'Homenatge und die Presó dels Moros über der mystischen Cueva de Sant Antoni. Oben erwarten eine Einsiedelei aus dem 17. Jahrhundert, eine Berghütte mit Cafeteria und ein spektakulärer 360°-Panoramablick über den Pla de Mallorca, das Tal von Orient und die Buchten von Alcúdia und Pollença.",
       "tips_de": [
-        "Aufstieg ab Alaró dauert ca. 2 Stunden",
-        "Die Schutzhütte oben serviert einfache Hausmannskost",
-        "360°-Panorama zum Orientieren über ganz Mallorca"
+        "Zwei Zugangsmöglichkeiten: mit dem Auto über den 3 km langen Bergweg zum Restaurant Es Verger (kostenloser Parkplatz, 45–50 Min. Fußweg zum Gipfel) oder in Alaró parken und den kompletten 2-Stunden-Wanderweg durch Olivenhaine und Eichenwälder nehmen.",
+        "Der Weg nach Es Verger ist schmal, voller Schlaglöcher und anspruchsvoll — nicht empfohlen für tiefergelegte Fahrzeuge, Mietwagen oder unsichere Fahrer. Vor 10:30 Uhr ankommen, um Gegenverkehr zu vermeiden.",
+        "Festes Schuhwerk ist Pflicht — der Kopfsteinpflasterweg ist steil und rutschig. Ausreichend Wasser und Sonnenschutz mitbringen, da der obere Abschnitt schattenlos ist.",
+        "Nicht geeignet für Rollstühle, Kinderwagen oder Personen mit starken Mobilitätseinschränkungen. Empfohlen für Kinder ab 5–6 Jahren, die ans Wandern gewöhnt sind.",
+        "Für eine Übernachtung in der Berghütte auf dem Gipfel im Voraus reservieren und einen eigenen Schlafsack mitbringen.",
+        "Beim Abstieg das berühmte holzofengegrillte Lamm in Es Verger genießen — Tisch reservieren, besonders am Wochenende."
       ]
     },
     {
@@ -1420,7 +1468,7 @@
       "id": "puig-tomir",
       "name": "Puig Tomir",
       "name_es": "Puig Tomir",
-      "description": "A remote and rewarding summit in the northern Tramuntana at 1,103m. Offers solitude and sweeping views over the Raiguer plain, the Pollença bay and the Serra del Cavall Bernat ridge.",
+      "description": "At 1,104m, the highest peak in the northern Serra de Tramuntana — its name popularly comes from the Mallorcan 'tot mir' (I see everything), and the 360° summit panorama earns it: the bays of Pollença and Alcúdia, the Formentor peninsula and the heart of the island all spread out below. The classic route from Finca Menut passes through holm-oak forest before tackling the Pas des Pedregaret, a rock chimney equipped with metal steps and steel chains (via-ferrata style).",
       "category": "HIKING",
       "latitude": 39.842766,
       "longitude": 2.925412,
@@ -1428,10 +1476,11 @@
       "rating": 4.6,
       "review_count": 480,
       "tips": [
-        "Approach from Binibona or via the old Camí de Lluc",
-        "Hard — allow 5–6 hours round trip",
-        "Very remote — carry a map and extra water",
-        "Rarely crowded even in peak season"
+        "Do NOT attempt with vertigo — the Pas des Pedregaret chimney and loose-scree sections require scrambling on exposed rock",
+        "Park free at the Casas de Menut forestry centre (Ma-10, km 17.4) — the trailhead for the classic route",
+        "Route: ~6 km round trip, 3–5 hours, high difficulty; final ridge is very technical",
+        "Mountain boots essential — smooth soles are dangerous on wet limestone; always bring a windproof layer",
+        "Avoid July and August — almost no shade on the high section; go in spring, autumn or winter"
       ],
       "tags": [
         "summit",
@@ -1452,25 +1501,29 @@
           "source": "MINE"
         }
       ],
-      "description_es": "Cumbre remota y recompensante en el norte de la Tramuntana a 1.103 m. Ofrece soledad y amplias vistas sobre la llanura del Raiguer y la bahía de Pollença.",
+      "description_es": "Con 1.104 m, el pico más alto del norte de la Serra de Tramuntana — su nombre popular viene del mallorquín 'tot mir' (todo lo miro), y la panorámica de 360° desde la cima lo confirma: las bahías de Pollença y Alcúdia, la Península de Formentor y el corazón de la isla se extienden a los pies. La ruta clásica desde la Finca Menut atraviesa un encinar antes de afrontar el Pas des Pedregaret, una chimenea rocosa equipada con escalones metálicos y cadenas de acero a modo de vía ferrata.",
       "tips_es": [
-        "Punto de partida en el Coll de Sa Bataia",
-        "Es una ruta de montaña real — lleva equipo adecuado",
-        "Desde la cima se ven tanto la bahía de Pollença como la de Alcúdia"
+        "No apta para personas con vértigo — el Pas des Pedregaret y los canchales exigen trepar sobre roca expuesta",
+        "Aparca gratis en las Casas de Menut (Ma-10, km 17,4) — punto de inicio de la ruta clásica",
+        "Ruta: ~6 km ida y vuelta, 3–5 horas, dificultad alta; la cresta final es muy técnica",
+        "Botas de montaña obligatorias — las zapatillas lisas son peligrosas en caliza mojada; lleva siempre cortavientos",
+        "Evita julio y agosto — casi sin sombra en la parte alta; mejor primavera, otoño o invierno"
       ],
       "name_de": "Puig Tomir",
-      "description_de": "Abgelegener und lohnender Gipfel im Norden der Tramuntana. Von der Spitze sieht man sowohl die Bucht von Pollença als auch die Bucht von Alcúdia.",
+      "description_de": "Mit 1.104 m der höchste Gipfel im nördlichen Teil der Serra de Tramuntana — sein Name kommt vom mallorquinischen ‚tot mir' (ich sehe alles), und das 360°-Panorama vom Gipfel bestätigt es: die Buchten von Pollença und Alcúdia, die Halbinsel Formentor und das Herz der Insel liegen zu Füßen. Der klassische Weg von der Finca Menut führt durch einen Steineichenwald, bevor er die Schlüsselstelle Pas des Pedregaret — eine Felskamine mit Metalltritten und Stahlketten (Klettersteig-Stil) — angeht.",
       "tips_de": [
-        "Startpunkt am Coll de Sa Bataia",
-        "Echte Bergwanderung – angemessene Ausrüstung mitbringen",
-        "Vom Gipfel sind Bucht von Pollença und Bucht von Alcúdia sichtbar"
+        "Nicht für Schwindelgeplagte — der Pas des Pedregaret und Geröllfelder erfordern Klettern an exponiertem Fels",
+        "Kostenlos parken an den Casas de Menut (Ma-10, km 17,4) — Ausgangspunkt der Standardroute",
+        "Route: ~6 km Hin- und Rückweg, 3–5 Std., hoher Schwierigkeitsgrad; Gipfelgrat sehr technisch",
+        "Bergschuhe Pflicht — glatte Sohlen sind auf nassem Kalkstein gefährlich; Windjacke immer einpacken",
+        "Juli und August meiden — kaum Schatten im Gipfelbereich; besser Frühling, Herbst oder Winter"
       ]
     },
     {
       "id": "cami-arxiduc",
       "name": "Camí de s'Arxiduc",
       "name_es": "Camí de s'Arxiduc",
-      "description": "One of Mallorca's most iconic ridge walks, built by Archduke Ludwig Salvador of Austria in the 19th century above Valldemossa. The path runs along a dramatic cliff edge with extraordinary views of the northwest coast.",
+      "description": "One of Mallorca's most legendary hiking routes, built by Archduke Ludwig Salvador of Austria in the late 19th century at around 900 metres altitude above Valldemossa. The circular trail (12–14 km, 5–6 hours, moderate-high difficulty) follows a dramatic cliff-edge ridge with breathtaking panoramic views over the northwest coast and the Serra de Tramuntana. The key section, Pas des Pedregaret, is a narrow exposed passage that demands sure footing. A route steeped in history and wild mountain beauty.",
       "category": "HIKING",
       "latitude": 39.7279,
       "longitude": 2.6542,
@@ -1478,10 +1531,12 @@
       "rating": 4.9,
       "review_count": 1700,
       "tips": [
-        "Start from Valldemossa village — follow signs to Son Gual",
-        "Allow 3–4 hours for the full circuit",
-        "The cliff sections are exposed — avoid in high winds or wet conditions",
-        "Combine with a visit to Valldemossa village"
+        "Avoid in summer — the exposed ridge offers no shade and temperatures are extreme. Spring and autumn are ideal.",
+        "Wear mountain boots with ankle support; the terrain is rocky and uneven throughout.",
+        "Carry at least 1.5–2 litres of water per person — there are no springs or facilities on the route.",
+        "Bring a windproof layer: the ridge is fully exposed and winds can be strong even on sunny days.",
+        "Download the GPS track before you go — signage is limited in places.",
+        "Respect private property: part of the route crosses private land, so stick to the marked path."
       ],
       "tags": [
         "ridge",
@@ -1507,18 +1562,24 @@
           "source": "MINE"
         }
       ],
-      "description_es": "Uno de los paseos de cresta más icónicos de Mallorca, construido por el Archiduque Luis Salvador de Austria en el siglo XIX sobre Valldemossa, con vistas extraordinarias.",
+      "description_es": "Una de las rutas de senderismo más legendarias de Mallorca, construida por el Archiduque Luis Salvador de Austria a finales del siglo XIX a unos 900 metros de altitud sobre Valldemossa. El sendero circular (12–14 km, 5–6 horas, dificultad moderada-alta) recorre una cresta de acantilados con vistas panorámicas espectaculares sobre la costa noroeste y la Serra de Tramuntana. El tramo clave, el Pas des Pedregaret, es un paso estrecho y expuesto que exige paso firme. Una ruta cargada de historia y belleza montañosa salvaje.",
       "tips_es": [
-        "La ruta empieza en Valldemossa o Son Gual",
-        "Las partes de cresta pueden ser vertiginosas — no recomendado para vértigo",
-        "El Arxiduc Luis Salvador construyó este sendero para explorar sus tierras"
+        "Evita el verano: la cresta no tiene sombra y las temperaturas son extremas. La primavera y el otoño son ideales.",
+        "Usa botas de montaña con sujección de tobillo; el terreno es rocoso y desigual.",
+        "Lleva al menos 1,5–2 litros de agua por persona — no hay fuentes ni servicios en la ruta.",
+        "Lleva una capa cortavientos: la cresta está totalmente expuesta y el viento puede ser fuerte incluso en días soleados.",
+        "Descarga el track GPS antes de salir — la señalización es limitada en algunos tramos.",
+        "Respeta la propiedad privada: parte de la ruta atraviesa terrenos privados, mantente en el camino marcado."
       ],
       "name_de": "Erzherzogsweg",
-      "description_de": "Einer der berühmtesten Kammwege Mallorcas, angelegt vom Erzherzog Ludwig Salvator. Die Route bietet spektakuläre Ausblicke über die Westküste.",
+      "description_de": "Eine der legendärsten Wanderrouten Mallorcas, erbaut vom Erzherzog Ludwig Salvator von Österreich im späten 19. Jahrhundert auf etwa 900 Metern Höhe über Valldemossa. Der Rundweg (12–14 km, 5–6 Stunden, mittlere bis schwere Schwierigkeit) verläuft entlang eines dramatischen Kliffgrats mit atemberaubenden Panoramablicken auf die Nordwestküste und die Serra de Tramuntana. Der Schlüsselabschnitt Pas des Pedregaret ist ein schmaler, exponierter Durchgang, der sicheres Auftreten erfordert. Eine Route voller Geschichte und wilder Bergschönheit.",
       "tips_de": [
-        "Route beginnt in Valldemossa oder Son Gual",
-        "Kammabschnitte können schwindelerregend sein – nicht für Ängstliche",
-        "Erzherzog Ludwig Salvator baute diesen Weg zur Erkundung"
+        "Den Sommer meiden — der exponierte Grat bietet keinen Schatten und die Temperaturen sind extrem. Frühling und Herbst sind ideal.",
+        "Bergstiefel mit Knöchelstütze tragen; das Gelände ist durchgehend felsig und uneben.",
+        "Mindestens 1,5–2 Liter Wasser pro Person mitführen — es gibt keine Quellen oder Einrichtungen auf der Route.",
+        "Eine windabweisende Schicht mitnehmen: der Grat ist völlig ungeschützt und der Wind kann selbst an sonnigen Tagen stark sein.",
+        "Die GPS-Strecke vor der Wanderung herunterladen — die Beschilderung ist stellenweise begrenzt.",
+        "Privateigentum respektieren: ein Teil der Route führt über Privatgelände, daher auf dem markierten Weg bleiben."
       ]
     },
     {
@@ -1974,7 +2035,7 @@
       "id": "mirador-ses-animes",
       "name": "Mirador de Ses Ànimes",
       "name_es": "Mirador de Ses Ànimes",
-      "description": "A 16th-century watchtower (Torre des Verger) perched on the edge of a cliff near Banyalbufar, offering panoramic views of the west coast, the Tramuntana cliffs and the distant island of Sa Dragonera. One of the most photogenic spots on the island.",
+      "description": "Mirador de Ses Ànimes (also known as Torre des Verger) is a 16th-century watchtower perched on a clifftop on the Ma-10 road between Banyalbufar and Estellencs. Built in 1579 to watch for pirate raids and send smoke or fire signals along the coast, the tower is one of the most evocative historical landmarks on Mallorca's west coast. On clear days the views stretch across the Serra de Tramuntana cliffs, the deep blue Mediterranean and all the way to the island of Sa Dragonera. Its name — 'viewpoint of the souls' — comes from a local legend that souls weave invisible nets on winter nights to lure passing travellers.",
       "category": "VIEWPOINT",
       "latitude": 39.6835,
       "longitude": 2.5003,
@@ -1982,10 +2043,11 @@
       "rating": 4.8,
       "review_count": 2100,
       "tips": [
-        "Short 10-minute walk from a roadside car park on the Ma-10",
-        "The watchtower itself can be climbed for 360° views",
-        "Best at sunset when the cliffs glow orange",
-        "Very popular — arrive early in summer"
+        "One of the best sunset spots on the island — arrive well before sunset as the roadside parking fits only 4–5 cars. If it's full, park carefully on the permitted verge further along.",
+        "By bus: TIB Line 202 from Palma's Estació Intermodal stops right at Torre des Verger (stop 7004), about 50 minutes from the city — a much easier option at sunset.",
+        "By car from Palma (~45 min): take the Ma-20, exit 5B towards Valldemossa (Ma-1110), then follow the Ma-1120 and Ma-10 towards Banyalbufar. The Ma-10 has tight bends and narrow sections — drive slowly.",
+        "Access to the tower surroundings is free. Check on-site whether the interior is open — access is sometimes restricted for safety reasons.",
+        "Wear comfortable shoes if you plan to walk on the rocky terrain around the tower."
       ],
       "price_level": "FREE",
       "tags": [
@@ -2009,18 +2071,22 @@
           "source": "PIXABAY"
         }
       ],
-      "description_es": "Atalaya del siglo XVI (Torre des Verger) en lo alto de un acantilado cerca de Banyalbufar, con vistas panorámicas sobre la costa oeste y la isla de Sa Dragonera.",
+      "description_es": "El Mirador de Ses Ànimes (también conocido como Torre des Verger) es una torre de vigilancia del siglo XVI encaramada en un acantilado de la carretera Ma-10, entre Banyalbufar y Estellencs. Construida en 1579 para vigilar la llegada de piratas y transmitir señales de humo o fuego por la costa, la torre es uno de los monumentos históricos más evocadores de la costa oeste de Mallorca. En días claros las vistas abarcan los acantilados de la Serra de Tramuntana, el Mediterráneo y la isla de Sa Dragonera. Su nombre — 'mirador de las almas' — viene de una leyenda local que dice que las almas tejen redes invisibles en las noches de invierno para atrapar a los caminantes.",
       "tips_es": [
-        "La Torre des Verger fue construida en el siglo XVI como atalaya",
-        "Aparcamiento gratuito en la carretera principal",
-        "Vista directa sobre los acantilados y la isla de Sa Dragonera"
+        "Uno de los mejores puntos para el atardecer de la isla — llega con tiempo porque el aparcamiento junto a la carretera solo cabe 4-5 coches. Si está lleno, aparca con cuidado en los arcenes permitidos más adelante.",
+        "En autobús: la Línea 202 del TIB desde la Estació Intermodal de Palma para justo en Torre des Verger (parada 7004), unos 50 minutos desde la ciudad — una opción mucho más cómoda al atardecer.",
+        "En coche desde Palma (~45 min): toma la Ma-20, salida 5B hacia Valldemossa (Ma-1110), luego sigue por la Ma-1120 y la Ma-10 hasta Banyalbufar. La Ma-10 tiene curvas muy cerradas y tramos estrechos — conduce despacio.",
+        "El acceso al entorno de la torre es gratuito. Consulta in situ si el interior está abierto — el acceso a veces está restringido por seguridad.",
+        "Lleva calzado cómodo si piensas caminar por el terreno rocoso alrededor de la torre."
       ],
       "name_de": "Aussichtspunkt Ses Ànimes",
-      "description_de": "Wachturm aus dem 16. Jahrhundert (Torre des Verger) mit direktem Blick auf die Klippen und die Insel Sa Dragonera. Einer der schönsten Aussichtspunkte der Insel.",
+      "description_de": "Der Mirador de Ses Ànimes (auch bekannt als Torre des Verger) ist ein Wachturm aus dem 16. Jahrhundert auf einem Kliff an der Ma-10 zwischen Banyalbufar und Estellencs. 1579 erbaut, um Piratenüberfälle zu beobachten und Rauch- oder Feuersignale entlang der Küste weiterzugeben, ist der Turm eines der eindrucksvollsten historischen Denkmäler an Mallorcas Westküste. An klaren Tagen reicht der Blick über die Steilklippen der Serra de Tramuntana, das tiefblaue Mittelmeer und bis zur Insel Sa Dragonera. Sein Name — 'Aussichtspunkt der Seelen' — geht auf eine lokale Legende zurück, der zufolge Seelen in Winternächten unsichtbare Netze weben, um vorbeiziehende Wanderer zu fangen.",
       "tips_de": [
-        "Der Wachturm Torre des Verger wurde im 16. Jahrhundert erbaut",
-        "Kostenloser Parkplatz an der Hauptstraße",
-        "Direkter Blick auf Klippen und die Insel Sa Dragonera"
+        "Einer der besten Sonnenuntergangsplätze der Insel — rechtzeitig ankommen, da der Straßenparkplatz nur 4–5 Autos fasst. Ist er voll, vorsichtig auf den erlaubten Banketten weiter entlang parken.",
+        "Mit dem Bus: TIB-Linie 202 ab Palmas Estació Intermodal hält direkt an Torre des Verger (Haltestelle 7004), ca. 50 Minuten von der Stadt — beim Sonnenuntergang die bequemere Option.",
+        "Mit dem Auto von Palma (~45 Min.): Ma-20 nehmen, Ausfahrt 5B Richtung Valldemossa (Ma-1110), dann Ma-1120 und Ma-10 Richtung Banyalbufar folgen. Die Ma-10 hat enge Kurven und schmale Abschnitte — langsam fahren.",
+        "Der Zugang zur Turmumgebung ist kostenlos. Vor Ort prüfen, ob das Innere zugänglich ist — der Zugang ist aus Sicherheitsgründen manchmal eingeschränkt.",
+        "Bequeme Schuhe mitbringen, falls ein Spaziergang über das felsige Gelände rund um den Turm geplant ist."
       ]
     },
     {
@@ -4377,7 +4443,7 @@
       "id": "salt-des-freu",
       "name": "Salt des Freu",
       "name_es": "Salt des Freu",
-      "description": "A dramatic canyon hike through the narrow Sa Fosca gorge, where you wade through crystal-clear emerald water hemmed in by towering limestone walls. One of Mallorca's most adventurous and rewarding trails.",
+      "description": "Es Salt des Freu is one of Mallorca's most spectacular natural waterfalls, hidden in a lush holm-oak forest in the Serra de Tramuntana near the village of Orient. Fed by the Coanegra torrent, the main waterfall drops 8–9 metres into a pool of emerald-green water. The classic hike starts at km 8.5 of the MA-2100 road (Bunyola–Orient), follows a stone path through traditional wells, the Font de ses Tres Piques spring and old charcoal-making sites, then descends through the oak forest to the torrent. The full round trip is about 3 km and takes 45–60 minutes — one of the most rewarding family walks on the island.",
       "category": "HIKING",
       "latitude": 39.7173,
       "longitude": 2.7449,
@@ -4387,11 +4453,11 @@
       "review_count": 820,
       "price_level": "FREE",
       "tips": [
-        "Bring water shoes — you will wade through the gorge pool",
-        "Best visited April–June when water is clear and not too cold",
-        "Park near Caimari and follow signs to Sa Fosca gorge",
-        "The narrowest section (es Freu) requires swimming — avoid after heavy rain",
-        "Take a waterproof bag for phone and camera"
+        "The waterfall only flows after significant rainfall — it is completely dry in summer and after long dry spells. Visit in winter or after several days of heavy rain for the full spectacle.",
+        "Start at km 8.5 of the MA-2100 road. Look for a metal gate and a sign towards 'Santa Maria – 2h 40min'. Park on the verge — there is no official car park.",
+        "Very popular at weekends — arrive before 9:30–10:00 am to find a roadside space.",
+        "The ground near the waterfall is very slippery, wet and muddy. Waterproof mountain boots with good grip are essential.",
+        "Great for families, but the final section to the waterfall has large rocks and steep slopes. Bring a change of clothes and shoes for children — they will get wet."
       ],
       "tags": [
         "canyon",
@@ -4413,18 +4479,22 @@
           "source": "PIXABAY"
         }
       ],
-      "description_es": "Dramática ruta de cañón por el estrecho barranco de Sa Fosca, donde se vadea agua esmeralda entre paredes de caliza. Una de las excursiones más aventureras y gratificantes de Mallorca.",
+      "description_es": "Es Salt des Freu es una de las cascadas naturales más espectaculares de Mallorca, escondida en un frondoso bosque de encinas de la Serra de Tramuntana cerca de la aldea de Orient. Alimentada por el Torrent de Coanegra, la cascada principal cae 8-9 metros hacia una poza de agua esmeralda. La ruta clásica parte del km 8,5 de la carretera MA-2100 (Bunyola–Orient), recorre un camino de piedra entre pozos tradicionales, la Font de ses Tres Piques y restos de carboneo, y desciende por el encinar hasta el torrente. La excursión completa (ida y vuelta) son unos 3 km y se completa en 45-60 minutos — uno de los paseos familiares más gratificantes de la isla.",
       "tips_es": [
-        "Ruta técnica que requiere algo de experiencia en montaña",
-        "Lleva agua suficiente — no hay fuentes en el recorrido",
-        "El salto de agua es especialmente espectacular tras las lluvias de otoño"
+        "La cascada solo corre tras lluvias intensas — está completamente seca en verano y después de épocas secas. Visítala en invierno o justo después de varios días de lluvia fuerte.",
+        "El inicio está en el km 8,5 de la carretera MA-2100. Busca un portón metálico y un cartel hacia 'Santa Maria – 2h 40min'. Aparca en el arcén — no hay parking oficial.",
+        "Muy concurrida los fines de semana — llega antes de las 9:30-10:00 h para encontrar sitio en la cuneta.",
+        "El terreno junto a la cascada es muy resbaladizo, húmedo y embarrado. Imprescindibles botas de montaña impermeables con buena tracción.",
+        "Ideal para familias, pero el tramo final tiene rocas grandes y pendientes pronunciadas. Lleva ropa y calzado de repuesto para los niños — se mojarán."
       ],
       "name_de": "Wasserfall Salt des Freu",
-      "description_de": "Dramatische Schluchtenwanderung durch die enge Schlucht von Son Lluís. Der Wasserfall ist nach Herbstregen besonders beeindruckend.",
+      "description_de": "Es Salt des Freu ist einer der spektakulärsten Wasserfälle Mallorcas, versteckt in einem üppigen Steineichenwald der Serra de Tramuntana nahe dem Dorf Orient. Gespeist vom Coanegra-Torrente stürzt der Hauptwasserfall 8–9 Meter in ein smaragdgrünes Becken. Die klassische Wanderung beginnt bei km 8,5 der MA-2100-Straße (Bunyola–Orient), folgt einem Steinweg durch traditionelle Brunnen, die Font de ses Tres Piques und alte Holzkohle-Meilerplätze und steigt durch den Eichenwald zum Torrente ab. Die Rundtour beträgt etwa 3 km und dauert 45–60 Minuten — eine der lohnendsten Familientouren der Insel.",
       "tips_de": [
-        "Technische Route die etwas Bergerfahrung erfordert",
-        "Genug Wasser mitbringen – keine Quellen auf der Strecke",
-        "Der Wasserfall ist nach Herbstregen besonders beeindruckend"
+        "Der Wasserfall fließt nur nach ergiebigen Regenfällen — im Sommer und nach Trockenperioden ist er komplett ausgetrocknet. Im Winter oder nach mehreren Tagen starken Regens besuchen.",
+        "Start bei km 8,5 der MA-2100-Straße. Nach einem Metalltor und einem Schild Richtung 'Santa Maria – 2h 40min' Ausschau halten. Am Straßenrand parken — kein offizieller Parkplatz vorhanden.",
+        "An Wochenenden sehr beliebt — vor 9:30–10:00 Uhr ankommen, um einen Randstreifen-Platz zu finden.",
+        "Der Untergrund am Wasserfall ist sehr rutschig, nass und matschig. Wasserdichte Bergstiefel mit gutem Grip sind Pflicht.",
+        "Toll für Familien, aber der letzte Abschnitt hat große Felsen und steile Hänge. Wechselkleidung und Ersatzschuhe für Kinder mitbringen — sie werden nass werden."
       ]
     },
     {
@@ -5133,7 +5203,7 @@
       "id": "son-marroig",
       "name": "Son Marroig",
       "name_es": "Son Marroig",
-      "description": "Archduke Ludwig Salvator's romantic estate perched above the sea at Deia. The white marble gazebo at the cliff edge frames the legendary Sa Foradada rock needle jutting into the cobalt Mediterranean.",
+      "description": "Son Marroig is a 17th-century Mallorcan estate in Deià, famous as the beloved residence of Archduke Ludwig Salvador of Austria. The manor house holds a private museum of historical maps, books, paintings and personal objects belonging to the Archduke. Its crowning jewel is the iconic Carrara marble gazebo perched on the clifftop — one of the most photographed spots in Mallorca and a coveted setting for exclusive weddings. From the gardens, the view stretches over the dramatic Sa Foradada peninsula, a rocky headland with a natural 18-metre hole piercing through it. A medieval defensive tower on the grounds was originally built to protect the estate from North African pirate raids.",
       "category": "VIEWPOINT",
       "latitude": 39.7513,
       "longitude": 2.6289,
@@ -5155,9 +5225,11 @@
       "rating": 4.6,
       "review_count": 2200,
       "tips": [
-        "Entry fee to the museum is modest",
-        "The gazebo terrace is the money shot — arrive early",
-        "Combine with a walk down to Sa Foradada cove (45 min)"
+        "Visit in the late afternoon — sunset from the marble gazebo is unanimously considered one of the finest in Mallorca.",
+        "Son Marroig is a popular exclusive wedding venue. Call ahead or check the website before visiting to make sure the grounds won't be closed for a private event.",
+        "From the estate, a trail descends to Sa Foradada headland — a rewarding but demanding hike of about 2.5 hours return. Wear sturdy shoes and bring water.",
+        "Parking along the Ma-10 and at the adjacent restaurant fills quickly in high season, especially at sunset. Arrive with time to spare.",
+        "By bus: Line 203 from Palma's Estació Intermodal stops directly in front of Son Marroig — a good option to avoid driving the winding Tramuntana road."
       ],
       "tags": [
         "historic",
@@ -5166,25 +5238,29 @@
         "romantic"
       ],
       "ticket_url": "https://sonmarroig.com/visita",
-      "description_es": "La romántica finca del Archiduque Luis Salvador asomada sobre el mar en Deià. El gazebo de mármol blanco al borde del acantilado enmarca la legendaria aguja rocosa de Sa Foradada.",
+      "description_es": "Son Marroig es una posesión mallorquina del siglo XVII en Deyá, famosa por haber sido la amada residencia del Archiduque Luis Salvador de Austria. La mansión alberga un museo privado con mapas históricos, libros, pinturas y objetos personales del Archiduque. Su joya principal es el icónico templete de mármol blanco de Carrara asomado al acantilado — uno de los puntos más fotografiados de Mallorca y el escenario más codiciado para bodas exclusivas. Desde los jardines, la vista se extiende sobre la dramática península de Sa Foradada, un promontorio rocoso con un agujero natural de 18 metros de diámetro. Una torre defensiva medieval en la finca fue construida originalmente para protegerla de las incursiones de piratas norteafricanos.",
       "tips_es": [
-        "La antigua finca del Arxiduc tiene un museo con recuerdos personales",
-        "Desde el jardín se accede al camino hacia Sa Foradada",
-        "El templete de mármol de Carrara junto al mar es muy fotogénico"
+        "Visita a última hora de la tarde — el atardecer desde el templete de mármol es considerado unánimemente uno de los mejores de Mallorca.",
+        "Son Marroig es un popular escenario de bodas exclusivas. Llama con antelación o consulta la web antes de ir para asegurarte de que la finca no esté cerrada por un evento privado.",
+        "Desde la finca parte un sendero hasta el peñón de Sa Foradada — una caminata exigente pero muy gratificante de unas 2,5 horas ida y vuelta. Lleva calzado resistente y agua.",
+        "El aparcamiento junto a la Ma-10 y el restaurante colindante se llena rápido en temporada alta, especialmente al atardecer. Intenta llegar con margen de tiempo.",
+        "En autobús: la Línea 203 desde la Estació Intermodal de Palma para directamente frente a Son Marroig — una buena opción para evitar las curvas de la Tramuntana."
       ],
       "name_de": "Son Marroig",
-      "description_de": "Das Landgut des Erzherzogs Ludwig Salvator mit Museum und dem berühmten Marmortempel am Meer. Startpunkt für den Abstieg nach Sa Foradada.",
+      "description_de": "Son Marroig ist ein mallorquinisches Landgut aus dem 17. Jahrhundert in Deià, bekannt als geliebter Wohnsitz von Erzherzog Ludwig Salvator von Österreich. Das Herrenhaus beherbergt ein Privatmuseum mit historischen Karten, Büchern, Gemälden und persönlichen Gegenständen des Erzherzogs. Sein Schmuckstück ist der ikonische Pavillon aus weißem Carrara-Marmor auf der Klippe — einer der meistfotografierten Orte Mallorcas und eine begehrte Kulisse für exklusive Hochzeiten. Vom Garten aus erstreckt sich der Blick über die dramatische Halbinsel Sa Foradada, ein Felsvorsprung mit einem natürlichen 18-Meter-Loch. Ein mittelalterlicher Wehrturm auf dem Gelände wurde ursprünglich zum Schutz vor nordafrikanischen Piratenüberfällen errichtet.",
       "tips_de": [
-        "Das alte Gut des Erzherzogs hat ein Museum mit persönlichen Erinnerungsstücken",
-        "Vom Garten aus führt der Weg zu Sa Foradada",
-        "Der Marmortempel von Carrara mit Meerblick ist sehr fotogen"
+        "Am späten Nachmittag besuchen — der Sonnenuntergang vom Marmorpavillon gilt einstimmig als einer der schönsten auf Mallorca.",
+        "Son Marroig ist ein beliebter Schauplatz für exklusive Hochzeiten. Vorher anrufen oder die Website prüfen, um sicherzustellen, dass das Gelände nicht für eine Privatveranstaltung geschlossen ist.",
+        "Vom Anwesen führt ein Pfad zur Sa-Foradada-Halbinsel — eine lohnende, aber anspruchsvolle Wanderung von ca. 2,5 Stunden hin und zurück. Festes Schuhwerk und Wasser mitbringen.",
+        "Der Parkplatz entlang der Ma-10 und am benachbarten Restaurant füllt sich in der Hochsaison schnell, besonders bei Sonnenuntergang. Rechtzeitig ankommen.",
+        "Mit dem Bus: Linie 203 ab Palmas Estació Intermodal hält direkt vor Son Marroig — eine gute Alternative zu den kurvenreichen Tramuntana-Straßen."
       ]
     },
     {
       "id": "mirador-na-burguesa",
       "name": "Mirador de Na Burguesa",
       "name_es": "Mirador de Na Burguesa",
-      "description": "The closest panoramic viewpoint to Palma, perched at 360m in the Serra de Na Burguesa. On clear days the entire Badia de Palma stretches below, with the cathedral and the Tramuntana as a backdrop.",
+      "description": "Mirador de Na Burguesa is Palma's closest panoramic viewpoint, perched at 276 metres on Puig del Caragol in the Serra de Na Burguesa, above the Génova neighbourhood. On clear days the entire Bay of Palma spreads below — the cathedral, Bellver Castle, the port and the open Mediterranean — with the Serra de Tramuntana as a backdrop. The summit is crowned by the Monument of Na Burguesa, a 22-metre concrete base supporting a statue of Our Lady of Peace installed in 1985. A restaurant terrace at the top allows you to enjoy the view over a drink. The surrounding sierra is a network of pine forest trails, karst formations and hidden caves, making it a favourite escape for Palma locals.",
       "category": "VIEWPOINT",
       "latitude": 39.5659,
       "longitude": 2.5944,
@@ -5201,9 +5277,12 @@
       "rating": 4.4,
       "review_count": 980,
       "tips": [
-        "Accessible by car or a short hike from Son Reus",
-        "Best in the evening — city lights and sunset over the bay",
-        "No facilities — bring water"
+        "Sunset and the first hours of the night are the standout moments — watching the city lights and the harbour reflection come alive over the bay is spectacular.",
+        "By car: access is via a narrow, hairpin road from Génova — drive slowly, especially on blind corners. On foot: a steep but well-marked 30-minute climb from Génova, or longer trail routes from La Vileta.",
+        "Trail warning: signage inside the sierra is very poor. Download a GPS track on Wikiloc or AllTrails before heading into the interior — it is easy to get lost at trail junctions.",
+        "The terrain is limestone karst — stay on marked paths. Hidden vertical shafts (avencs) concealed by vegetation pose a real fall risk off-trail.",
+        "Wear trail shoes or mountain boots with good grip — the ground is rocky and uneven. Bring a windproof layer; the exposed summit catches strong breezes, especially in the evening.",
+        "From the viewpoint, classic hikes lead to Mirador de n'Alzamora, Cova des Mármol and Puig Gros de Bendinat (486 m, 360° views of the southwest coast)."
       ],
       "tags": [
         "palma-views",
@@ -5211,25 +5290,31 @@
         "accessible",
         "local-secret"
       ],
-      "description_es": "El mirador panorámico más cercano a Palma, a 360 m en la Serra de Na Burguesa. En días claros, toda la Badia de Palma se extiende a los pies, con la catedral y la Tramuntana como telón de fondo.",
+      "description_es": "El Mirador de Na Burguesa es el mirador panorámico más cercano a Palma, situado a 276 metros en el Puig del Caragol, en la Serra de Na Burguesa, sobre el barrio de Génova. En días claros, toda la Bahía de Palma se extiende a los pies — la catedral, el Castillo de Bellver, el puerto y el Mediterráneo abierto — con la Serra de Tramuntana como telón de fondo. La cima está coronada por el Monumento de Na Burguesa, una base de hormigón de 22 metros con la estatua de Nuestra Señora de la Paz instalada en 1985. Un restaurante con terraza en la cumbre permite tomar algo con vistas. La sierra circundante es una red de senderos entre pinos, formaciones kársticas y cuevas escondidas, un escaparate favorito de los palmesanos.",
       "tips_es": [
-        "Accesible en bicicleta de montaña desde Palma",
-        "Mejor al amanecer para ver Palma despertarse",
-        "El camino de subida está bien señalizado desde Son Rapinya"
+        "El atardecer y las primeras horas de la noche son los momentos estrella — ver encenderse las luces de la ciudad y el reflejo del puerto sobre el mar es un espectáculo único.",
+        "En coche: el acceso es por una carretera estrecha y con curvas en horquilla desde Génova — conduce despacio, especialmente en las curvas ciegas. A pie: subida exigente pero bien señalizada de unos 30 minutos desde Génova, o rutas más largas desde La Vileta.",
+        "Aviso senderismo: la señalización en el interior de la sierra es muy deficiente. Descarga un track GPS en Wikiloc o AllTrails antes de adentrarte — es fácil perderse en los cruces.",
+        "El terreno es calizo y kárstico — mantente en los senderos marcados. Hay pozos verticales (avencs) ocultos por la vegetación que suponen un riesgo real de caída fuera del camino.",
+        "Lleva zapatillas de trail o botas de montaña con buen agarre — el terreno es rocoso e irregular. Lleva una capa cortavientos; la cima despejada coge mucho viento, especialmente al anochecer.",
+        "Desde el mirador parten rutas clásicas hacia el Mirador de n'Alzamora, la Cova des Mármol y el Puig Gros de Bendinat (486 m, vistas de 360° de la costa suroeste)."
       ],
       "name_de": "Aussichtspunkt Na Burguesa",
-      "description_de": "Aussichtspunkt im Grünen über Palma – ideal bei Sonnenaufgang. Per Mountainbike ab Palma erreichbar.",
+      "description_de": "Der Mirador de Na Burguesa ist Palmas nächstgelegener Panoramaaussichtspunkt, auf 276 Metern auf dem Puig del Caragol in der Serra de Na Burguesa über dem Stadtviertel Génova gelegen. An klaren Tagen breitet sich die gesamte Bucht von Palma aus — die Kathedrale, Schloss Bellver, der Hafen und das offene Mittelmeer — mit der Serra de Tramuntana als Kulisse. Der Gipfel ist vom Monument de Na Burguesa gekrönt, einem 22 Meter hohen Betonsockel mit der 1985 aufgestellten Statue Unserer Lieben Frau vom Frieden. Ein Restaurantterasse auf dem Gipfel lädt zum Verweilen mit Aussicht ein. Die umliegende Sierra mit ihrem Pinienwaldnetz, Karstformationen und versteckten Höhlen ist ein beliebtes Naherholungsgebiet der Palmesaner.",
       "tips_de": [
-        "Per Mountainbike ab Palma erreichbar",
-        "Am besten bei Sonnenaufgang wenn Palma erwacht",
-        "Der Aufstiegsweg ist ab Son Rapinya gut ausgeschildert"
+        "Sonnenuntergang und die frühen Abendstunden sind die Höhepunkte — das Aufleuchten der Stadtlichter und die Hafenspiegelung über der Bucht zu beobachten ist spektakulär.",
+        "Mit dem Auto: Zufahrt über eine schmale Serpentinenstraße aus Génova — langsam fahren, besonders an unübersichtlichen Kurven. Zu Fuß: steiler, aber gut markierter 30-Minuten-Aufstieg aus Génova oder längere Wanderwege aus La Vileta.",
+        "Wanderwarnung: Die Beschilderung im Inneren der Sierra ist sehr schlecht. Vor dem Aufbruch einen GPS-Track auf Wikiloc oder AllTrails herunterladen — an Wegkreuzungen ist Verirren leicht möglich.",
+        "Das Gelände ist Kalkstein-Karst — auf markierten Wegen bleiben. Versteckte vertikale Schächte (Avencs), die von Vegetation verdeckt werden, stellen abseits der Wege eine echte Absturzgefahr dar.",
+        "Trail-Schuhe oder Bergstiefel mit gutem Halt mitbringen — das Gelände ist felsig und uneben. Eine winddichte Schicht einpacken; der exponierte Gipfel ist besonders abends windig.",
+        "Vom Aussichtspunkt führen klassische Wanderungen zum Mirador de n'Alzamora, zur Cova des Mármol und zum Puig Gros de Bendinat (486 m, 360°-Aussicht auf die Südwestküste)."
       ]
     },
     {
       "id": "talaia-albercutx",
       "name": "Talaia d'Albercutx",
       "name_es": "Talaia de Albercutx",
-      "description": "A dramatic military watchtower at 386m on the Cap de Formentor peninsula. The knife-edge ridge views — sheer cliffs plunging into both sides of the sea — are among the most vertigo-inducing on the island.",
+      "description": "16th-century military watchtower perched at 380m on the Formentor peninsula, built to spot Barbary pirate raids. Its stone truncated-cone tower offers a 360° panorama taking in Cap de Formentor, the Serra de Tramuntana and the bays of Pollença and Alcúdia — with the ruins of a bunker and abandoned military complex adding to the atmosphere.",
       "category": "VIEWPOINT",
       "latitude": 39.9287,
       "longitude": 3.1172,
@@ -5250,9 +5335,10 @@
       "rating": 4.8,
       "review_count": 760,
       "tips": [
-        "Hike from the Mirador de Es Colomer car park (40 min round trip)",
-        "Trail is exposed — wind can be strong",
-        "One of the best spots on the island for photographers"
+        "Far quieter than Es Colomer viewpoint — go at sunrise or sunset for the best light",
+        "Access via Ma-2210 from Port de Pollença; take the 2 km side road just past Mirador de Es Colomer",
+        "You can climb the tower via an exposed iron ladder — not for those with vertigo",
+        "No services or shade on top — bring water, sturdy footwear and a windproof layer"
       ],
       "tags": [
         "dramatic",
@@ -5261,18 +5347,20 @@
         "photography",
         "wild"
       ],
-      "description_es": "Dramática atalaya militar a 386 m en la Península de Formentor. Las vistas desde la cresta del filo — acantilados verticales que caen a ambos lados del mar — son de las más vertiginosas de la isla.",
+      "description_es": "Atalaya militar del siglo XVI levantada para avistar piratas berberiscos, encaramada a 380 m sobre el mar en la Península de Formentor. Su torre troncocónica de piedra domina una panorámica de 360° sobre el Cabo de Formentor, la Serra de Tramuntana y las bahías de Pollença y Alcúdia. Junto a ella quedan los restos de un búnker y un antiguo complejo militar abandonado.",
       "tips_es": [
-        "Una de las cimas menos visitadas del Cap de Formentor",
-        "El sendero desde la carretera no está señalizado — lleva mapa",
-        "Las vistas sobre el cabo y la bahía de Pollença son únicas"
+        "Mucho más tranquila que el Mirador de Es Colomer — sube al amanecer o al atardecer",
+        "Desde Port de Pollença por la Ma-2210; desvío asfaltado de 2 km pasado el Mirador de Es Colomer",
+        "Puedes subir a la torre por una escalera exterior de hierro — requiere no tener vértigo",
+        "Sin servicios ni sombra en la cima — lleva agua, calzado cerrado y algo de abrigo para el viento"
       ],
       "name_de": "Talaia d'Albercutx",
-      "description_de": "Wenig besuchter Gipfel am Cap de Formentor mit einzigartigen Ausblicken auf den Cabo und die Bucht von Pollença.",
+      "description_de": "Militärischer Wachturm aus dem 16. Jahrhundert auf der Halbinsel Formentor, 380 m über dem Meer erbaut, um Barbaresken-Piraten zu erspähen. Der kegelförmige Steinturm bietet einen 360°-Panoramablick auf Cap de Formentor, die Serra de Tramuntana sowie die Buchten von Pollença und Alcúdia — ergänzt durch die Ruinen eines Bunkers und einer verlassenen Militäranlage.",
       "tips_de": [
-        "Einer der am wenigsten besuchten Gipfel am Cap de Formentor",
-        "Der Pfad ab der Straße ist nicht ausgeschildert – Karte mitbringen",
-        "Einzigartige Ausblicke auf das Kap und die Bucht von Pollença"
+        "Viel ruhiger als der Mirador de Es Colomer — bei Sonnenauf- oder -untergang besonders empfehlenswert",
+        "Zufahrt über die Ma-2210 ab Port de Pollença; 2 km asphaltierte Nebenstraße kurz nach dem Mirador de Es Colomer",
+        "Der Turm ist über eine exponierte Eisenleiter besteigbar — nichts für Schwindelgeplagte",
+        "Keine Versorgung oder Schatten oben — Wasser, festes Schuhwerk und eine Windjacke mitbringen"
       ]
     },
     {
@@ -5423,7 +5511,7 @@
       "id": "mirador-coll-gramola",
       "name": "Mirador del Coll de Sa Gramola",
       "name_es": "Mirador del Coll de Sa Gramola",
-      "description": "A hidden roadside lookout on the MA-10 mountain highway between Banyalbufar and Estellencs. Ancient terraced hillsides of olive and almond trees cascade down to a rugged coastline of sea stacks and secret coves.",
+      "description": "Coll de Sa Gramola is a dramatic mountain pass and viewpoint at 360 metres on the Ma-10 road (km 106), between Andratx and Estellencs at the southwestern edge of the Serra de Tramuntana. The pass offers sweeping views over the Mediterranean, the cliffs of the northwest coast, Puig de ses Basses and the iconic island of Sa Dragonera. A flat dirt area serves as a free car park with a small picnic zone under the shade of pines. This is also the starting point for the GR-221 long-distance trail (Ruta de Pedra en Sec), with two classic hikes departing from here: the short walk to Mirador de Josep Sastre and the emblematic excursion to the ruined monastery of La Trapa.",
       "category": "VIEWPOINT",
       "latitude": 39.6058,
       "longitude": 2.4096,
@@ -5445,9 +5533,12 @@
       "rating": 4.5,
       "review_count": 540,
       "tips": [
-        "Pull-off with space for 4-5 cars only",
-        "Best in morning when terraces catch warm light",
-        "Locals consider this more scenic than the main mirador"
+        "Avoid peak summer midday — past fires left the hillsides with little shade; hike at dawn or late afternoon only. Spring and autumn are ideal.",
+        "Sunset here is outstanding — one of the best on the island with views directly over Sa Dragonera. Bring a torch if you plan to walk back in the dark.",
+        "The car park is free but fills completely on weekend mornings with hikers and cyclists. Arrive early.",
+        "Bring at least 1.5 litres of water per person — there are no drinking water sources on the trails. Wear mountain boots (rocky, loose terrain) and sun protection.",
+        "Short hike (1h15, 4 km): flat forest track to Mirador de Josep Sastre — direct clifftop views of Sa Dragonera, ideal for families or sunset.",
+        "Full hike (3h30, 9.5 km): follow GR-221 markers to La Trapa monastery ruins — spectacular Sa Dragonera panoramas, traditional dry-stone terraces and a protected ancient tree."
       ],
       "tags": [
         "hidden-gem",
@@ -5456,18 +5547,24 @@
         "tramuntana",
         "photography"
       ],
-      "description_es": "Mirador de carretera escondido en la autopista de montaña MA-10 entre Banyalbufar y Estellencs. Antiguas terrazas de olivos y almendros descienden hasta una costa de arcos y pilares de roca tallados por el mar.",
+      "description_es": "El Coll de Sa Gramola es un dramático paso de montaña y mirador a 360 metros en la carretera Ma-10 (km 106), entre Andratx y Estellencs en el extremo suroeste de la Serra de Tramuntana. El collado ofrece vistas panorámicas sobre el Mediterráneo, los acantilados de la costa noroeste, el Puig de ses Basses y la icónica isla de Sa Dragonera. Una explanada de tierra hace de aparcamiento gratuito con una pequeña zona de pícnic. Es también el punto de partida del sendero de gran recorrido GR-221 (Ruta de Pedra en Sec), con dos rutas clásicas: el paseo corto al Mirador de Josep Sastre y la emblemática excursión al monasterio en ruinas de La Trapa.",
       "tips_es": [
-        "Parada perfecta en la ruta Andratx-Banyalbufar",
-        "El mirador tiene parking propio y bancos para descansar",
-        "Vista directa sobre el pueblo de Banyalbufar y sus terrazas"
+        "Evita el mediodía en pleno verano — los incendios pasados dejaron las laderas sin apenas sombra; camina solo al amanecer o a última hora. La primavera y el otoño son ideales.",
+        "El atardecer aquí es excepcional — uno de los mejores de la isla con vistas directas a Sa Dragonera. Lleva una linterna si piensas regresar andando de noche.",
+        "El aparcamiento es gratuito pero se llena del todo las mañanas de fin de semana con senderistas y ciclistas. Llega temprano.",
+        "Lleva al menos 1,5 litros de agua por persona — no hay fuentes en los senderos. Usa botas de montaña (terreno rocoso y suelto) y protección solar.",
+        "Ruta corta (1h15, 4 km): pista forestal llana hasta el Mirador de Josep Sastre — vistas directas al acantilado y a Sa Dragonera, ideal para familias o atardecer.",
+        "Ruta completa (3h30, 9,5 km): sigue las marcas del GR-221 hasta las ruinas del monasterio de La Trapa — panorámicas de Sa Dragonera, terrazas de piedra seca y un árbol catalogado."
       ],
       "name_de": "Aussichtspunkt Coll de Sa Gramola",
-      "description_de": "Perfekter Aussichtspunkt auf der Strecke Andratx–Banyalbufar mit Blick auf die Terrassenfelder und das Dorf.",
+      "description_de": "Coll de Sa Gramola ist ein dramatischer Gebirgspass und Aussichtspunkt auf 360 Metern an der Ma-10 (km 106) zwischen Andratx und Estellencs am Südwestrand der Serra de Tramuntana. Der Pass bietet weite Blicke über das Mittelmeer, die Steilklippen der Nordwestküste, den Puig de ses Basses und die ikonische Insel Sa Dragonera. Eine flache Schotterfläche dient als kostenloser Parkplatz mit einem kleinen Picknickbereich. Es ist auch der Ausgangspunkt des GR-221-Fernwanderwegs (Ruta de Pedra en Sec), mit zwei klassischen Wanderungen: dem kurzen Weg zum Mirador de Josep Sastre und der emblematischen Tour zu den Ruinen des Klosters La Trapa.",
       "tips_de": [
-        "Idealer Halt auf der Strecke Andratx–Banyalbufar",
-        "Eigener Parkplatz und Bänke zum Ausruhen",
-        "Direkter Blick auf das Dorf Banyalbufar und seine Terrassenfelder"
+        "Mittags im Hochsommer meiden — vergangene Brände ließen die Hänge kaum beschattet; nur bei Tagesanbruch oder spätnachmittags wandern. Frühling und Herbst sind ideal.",
+        "Der Sonnenuntergang hier ist außergewöhnlich — einer der schönsten der Insel mit direktem Blick auf Sa Dragonera. Taschenlampe mitbringen, wenn der Rückweg im Dunkeln geplant ist.",
+        "Der Parkplatz ist kostenlos, füllt sich aber an Wochenendmorgen mit Wanderern und Radfahrern komplett. Früh ankommen.",
+        "Mindestens 1,5 Liter Wasser pro Person mitbringen — auf den Wegen gibt es keine Trinkwasserquellen. Bergstiefel (felsiges, loses Gelände) und Sonnenschutz tragen.",
+        "Kurze Wanderung (1h15, 4 km): flacher Forstweg zum Mirador de Josep Sastre — direkter Klippenblick auf Sa Dragonera, ideal für Familien oder Sonnenuntergang.",
+        "Große Wanderung (3h30, 9,5 km): GR-221-Markierungen zum Kloster La Trapa folgen — Sa-Dragonera-Panorama, traditionelle Trockenmauern und ein geschützter alter Baum."
       ]
     },
     {
@@ -6389,7 +6486,15 @@
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-romantica-2.jpg",
+          "url": "file:///android_asset/images/beach-cala-romantica-sunset.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-romantica-cliff.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/beach-cala-romantica-bar.jpg",
           "source": "MINE"
         }
       ],
@@ -6839,7 +6944,7 @@
       "id": "avenc-de-son-pou",
       "name": "Avenc de Son Pou",
       "name_es": "Avenc de Son Pou",
-      "description": "One of Mallorca's most spectacular natural wonders — a colossal limestone sinkhole whose vaulted ceiling is pierced by a dramatic skylight, flooding the cave floor with shafts of light. The approach trail through the Santa Maria del Camí forest adds a peaceful prelude to the underground spectacle.",
+      "description": "One of Mallorca's most extraordinary geological formations — a colossal limestone doline 150 metres long and 70 metres wide, with a vaulted ceiling soaring 60 metres high. A natural skylight just 10 metres across pierces the dome, flooding the cave floor with dramatic shafts of light. An artificial tunnel, excavated in 1894 to extract bat guano, provides the entrance. Inside, a forest of stalactites and stalagmites covers the walls. The cave sits on the Camí de sa Coanegra between Santa Maria del Camí and Orient, and can be reached from both ends — the route from Orient is shorter (2.5 h round trip) and passes the Salt des Freu waterfall.",
       "category": "HIKING",
       "latitude": 39.7164,
       "longitude": 2.7561,
@@ -6849,11 +6954,12 @@
       "review_count": 640,
       "price_level": "FREE",
       "tips": [
-        "Follow the GR221 signage from the Can Borreó farmhouse car park",
-        "Bring a torch — the cave interior is very dark beyond the skylight zone",
-        "The cave mouth is slippery after rain; wear boots with good grip",
-        "Best light inside the cave: late morning (10–12h) when the sun hits the skylight",
-        "Combine with the Font des Pouet for a half-day loop"
+        "Bring a torch — essential beyond the skylight zone; the tunnel and deeper sections are pitch black",
+        "Duck at the entrance tunnel: ceiling height is only ~1.70 m for the first stretch",
+        "Wear waterproof boots — the cave floor can be wet and muddy year-round",
+        "Check the gate before setting off: the cave is on a private finca and may be closed for conservation",
+        "Best light inside: late morning (10–12 h) when the sun is directly above the skylight",
+        "From Orient: 2.5 h round trip, shorter and passes the Salt des Freu waterfall. From Santa Maria del Camí: 4 h+, flat Camí de Coanegra track (15–17 km)"
       ],
       "tags": [
         "cave",
@@ -6871,25 +6977,31 @@
           "source": "MINE"
         }
       ],
-      "description_es": "Una de las maravillas naturales más espectaculares de Mallorca: una colosal dolina de caliza cuya bóveda está perforada por una claraboya que inunda el suelo de la cueva con haces de luz.",
+      "description_es": "Una de las formaciones geológicas más extraordinarias de Mallorca: una colosal dolina calcárea de 150 metros de largo y 70 metros de ancho, con una bóveda que se eleva 60 metros. Una claraboya natural de apenas 10 metros perfora la cúpula, inundando el suelo de la cueva con haces de luz dramáticos. Un túnel artificial excavado en 1894 para extraer guano de murciélagos sirve de entrada. En el interior, una selva de estalactitas y estalagmitas cubre las paredes. La cueva se encuentra en el Camí de sa Coanegra entre Santa Maria del Camí y Orient; se puede llegar desde ambos extremos — la ruta desde Orient es más corta (2,5 h ida y vuelta) y pasa junto al Salt des Freu.",
       "tips_es": [
-        "El acceso es gratuito pero requiere linterna y calzado cerrado",
-        "La chimenea calcárea es espectacular desde abajo",
-        "Combina bien con una visita al bosque circundante"
+        "Lleva linterna — imprescindible más allá de la zona de la claraboya; el túnel y las secciones más profundas están en completa oscuridad",
+        "Agáchate en el túnel de entrada: la altura del techo es de solo ~1,70 m en el primer tramo",
+        "Usa botas impermeables — el suelo de la cueva puede estar mojado y con barro durante todo el año",
+        "Comprueba si la verja está abierta antes de salir: la cueva está en una finca privada y puede estar cerrada por conservación",
+        "Mejor luz en el interior: mañana tardía (10–12 h) cuando el sol está justo encima de la claraboya",
+        "Desde Orient: 2,5 h ida y vuelta, más corto y pasa junto al Salt des Freu. Desde Santa Maria del Camí: más de 4 h, pista plana del Camí de Coanegra (15–17 km)"
       ],
       "name_de": "Höhle Avenc de Son Pou",
-      "description_de": "Faszinierende natürliche Dolomitkammer mit einem Lichtkegel von oben – kostenlos zugänglich, Taschenlampe und festes Schuhwerk mitbringen.",
+      "description_de": "Eine der außergewöhnlichsten geologischen Formationen Mallorcas: eine gewaltige Kalksteindoline von 150 Metern Länge und 70 Metern Breite, mit einem Gewölbe das 60 Meter hoch aufsteigt. Ein natürliches Oberlicht von nur 10 Metern durchbricht die Kuppel und taucht den Höhlenboden in dramatische Lichtstrahlen. Ein 1894 zur Guano-Gewinnung ausgehobener Kunsttunnel dient als Eingang. Im Inneren bedeckt ein Wald aus Stalaktiten und Stalagmiten die Wände. Die Höhle liegt am Camí de sa Coanegra zwischen Santa Maria del Camí und Orient und ist von beiden Seiten erreichbar — die Route von Orient ist kürzer (2,5 Std. Rundweg) und führt am Wasserfall Salt des Freu vorbei.",
       "tips_de": [
-        "Kostenloser Zugang aber Taschenlampe und festes Schuhwerk erforderlich",
-        "Das Kalkstein-Schlot ist von unten spektakulär",
-        "Gut kombinierbar mit einer Wanderung im umgebenden Wald"
+        "Taschenlampe mitbringen — unverzichtbar hinter der Oberlichtzzone; Tunnel und tiefere Abschnitte sind stockdunkel",
+        "Im Eingangstunnel ducken: die Deckenhöhe beträgt nur ~1,70 m auf dem ersten Abschnitt",
+        "Wasserdichte Stiefel tragen — der Höhlenboden kann das ganze Jahr über nass und schlammig sein",
+        "Tor vor der Abfahrt prüfen: die Höhle liegt auf einer Privatfinca und kann aus Naturschutzgründen geschlossen sein",
+        "Bestes Licht im Inneren: später Vormittag (10–12 Uhr) wenn die Sonne direkt über dem Oberlicht steht",
+        "Von Orient: 2,5 Std. Rundweg, kürzer und am Wasserfall Salt des Freu vorbei. Von Santa Maria del Camí: über 4 Std., flacher Camí de Coanegra (15–17 km)"
       ]
     },
     {
       "id": "la-comuna-bunyola",
       "name": "La Comuna de Bunyola",
       "name_es": "La Comuna de Bunyola",
-      "description": "A protected communal woodland above the village of Bunyola where ancient holm oak forests hide the remains of traditional charcoal pits (sitges de carbó). The summit ridge rewards hikers with sweeping panoramas across the Raiguer plain all the way to the Bay of Palma.",
+      "description": "Sa Comuna de Bunyola is the largest public forest in Mallorca — 716 hectares of pine, holm oak and ancient olive groves deep in the Tramuntana foothills. The woodland hides a remarkable collection of traditional stone structures: charcoal kilns (sitges de carbó), lime ovens and cisterns that speak to centuries of forest craft. A network of tracks and trails fans out from the old forester's house at Cas Garriguer, ranging from easy forest paths to the technical Coma d'en Buscante ravine. The summit ridge at Penyal d'Honor (819 m) delivers sweeping panoramas over the Bay of Palma and across the central plain. The limestone wall of Es Pas des Fraguel is one of Mallorca's most respected sport-climbing sectors.",
       "category": "HIKING",
       "latitude": 39.6963,
       "longitude": 2.6996,
@@ -6899,11 +7011,13 @@
       "review_count": 380,
       "price_level": "FREE",
       "tips": [
-        "Start from Bunyola village — follow the signposted trail behind the church",
-        "Look for the circular stone charcoal pits (sitges de carbó) along the ridge path",
-        "The summit crest is rocky — bring trekking poles for the final stretch",
-        "Best in autumn and spring when the holm oaks are most atmospheric",
-        "Can be combined with a visit to the Sóller train — Bunyola is a stop on the line"
+        "Download a map or Wikiloc track before you go — the dense secondary paths are easy to mix up",
+        "Start from Calle de la Comuna in Bunyola village; Cas Garriguer picnic area is ideal for a mid-route rest",
+        "Classic circular route: Camí des Cocons up → Penyal d'Honor summit (819 m) → Coma d'en Buscante descent (~11 km, 450 m gain, 3–4 h)",
+        "No drinking water along the route — carry at least 1.5 litres per person",
+        "Respect the stone charcoal kilns and lime ovens: they are protected heritage structures",
+        "Fires are strictly regulated and banned in summer — no barbecues outside the designated Cas Garriguer area",
+        "Es Pas des Fraguel climbing wall (north-facing, shady) suits experienced climbers: grades 6c–9th, ideal spring to autumn"
       ],
       "tags": [
         "forest",
@@ -6921,25 +7035,33 @@
           "source": "PIXABAY"
         }
       ],
-      "description_es": "Bosque comunal protegido sobre el pueblo de Bunyola donde los bosques de encinas esconden restos de carboneras tradicionales. La cresta cimera recompensa con amplias vistas del valle de Sóller y Palma.",
+      "description_es": "Sa Comuna de Bunyola es el bosque público más extenso de Mallorca — 716 hectáreas de pinos, encinas y antiguos olivares en plena Tramuntana. El bosque esconde un notable conjunto de construcciones de piedra en seco: sitges de carbó (hornos de carbón), hornos de cal y aljibes que testimonian siglos de trabajo forestal. Una red de pistas y senderos parte de la antigua casa forestal de Cas Garriguer, desde caminos forestales fáciles hasta el técnico barranco de la Coma d'en Buscante. La cresta del Penyal d'Honor (819 m) ofrece panorámicas de la bahía de Palma y del Pla. La pared calcárea de Es Pas des Fraguel es uno de los sectores de escalada deportiva más respetados de la isla.",
       "tips_es": [
-        "La red de senderos es extensa — descarga el mapa del Consell de Mallorca",
-        "Ideal para bicicleta de montaña — varios niveles de dificultad",
-        "Los miradores sobre el Pla de Mallorca son magníficos"
+        "Descarga un mapa o track de Wikiloc antes de salir — los senderos secundarios son fáciles de confundir",
+        "Empieza desde la Calle de la Comuna en el pueblo de Bunyola; el área recreativa de Cas Garriguer es ideal para descansar",
+        "Ruta circular clásica: Camí des Cocons subiendo → cima del Penyal d'Honor (819 m) → bajada por la Coma d'en Buscante (~11 km, 450 m de desnivel, 3–4 h)",
+        "No hay agua potable en la ruta — lleva al menos 1,5 litros por persona",
+        "Respeta los hornos de carbón y de cal: son patrimonio histórico protegido",
+        "El fuego está estrictamente regulado y prohibido en verano — no hagas barbacoas fuera de la zona habilitada de Cas Garriguer",
+        "La pared de Es Pas des Fraguel (orientación norte, a la sombra) es para escaladores experimentados: grados 6c–noveno, ideal de primavera a otoño"
       ],
       "name_de": "La Comuna de Bunyola",
-      "description_de": "Ausgedehntes Wandergebiet in den Tramuntana-Ausläufern mit Aussichtspunkten über die Zentralebene – ideal auch für Mountainbiker.",
+      "description_de": "Sa Comuna de Bunyola ist das größte öffentliche Waldgebiet Mallorcas — 716 Hektar Kiefern, Steineichen und alte Olivenhaine im Tramuntana-Vorland. Der Wald birgt eine bemerkenswerte Sammlung traditioneller Trockensteinbauten: Köhlermeiler (sitges de carbó), Kalkbrennöfen und Zisternen aus Jahrhunderten der Forstwirtschaft. Ein Netz aus Wegen und Pfaden führt vom alten Forsthaus Cas Garriguer aus, von leichten Waldwegen bis zum technischen Coma d'en Buscante-Klamm. Der Gipfelkamm am Penyal d'Honor (819 m) bietet Panoramablick über die Bucht von Palma und die Zentralebene. Die Kalkwand Es Pas des Fraguel ist einer der angesehensten Sportklettersektoren der Insel.",
       "tips_de": [
-        "Ausgedehntes Wegenetz – Karte des Consell de Mallorca herunterladen",
-        "Ideal für Mountainbike – verschiedene Schwierigkeitsgrade",
-        "Die Aussichtspunkte über die Zentralebene sind großartig"
+        "Karte oder Wikiloc-Track vorher herunterladen — die dichten Nebenpfade sind leicht zu verwechseln",
+        "Start von der Calle de la Comuna im Dorf Bunyola; der Picknickplatz Cas Garriguer ist ideal für eine Pause auf halber Strecke",
+        "Klassische Rundtour: Camí des Cocons hinauf → Gipfel Penyal d'Honor (819 m) → Abstieg durch Coma d'en Buscante (~11 km, 450 Hm, 3–4 Std.)",
+        "Kein Trinkwasser entlang der Route — mindestens 1,5 Liter pro Person mitnehmen",
+        "Die Köhlermeiler und Kalkbrennöfen schonen — sie sind geschütztes Kulturerbe",
+        "Feuer ist streng reglementiert und im Sommer verboten — kein Grillen außerhalb des ausgewiesenen Bereichs Cas Garriguer",
+        "Kletterwand Es Pas des Fraguel (nordseitig, schattig) für erfahrene Kletterer: Grade 6c–9., ideal Frühling bis Herbst"
       ]
     },
     {
       "id": "cavall-bernat-coves-blanques",
-      "name": "Cavall Bernat & Cuevas Marinas",
+      "name": "Cavall Bernat y Cuevas Marinas",
       "name_es": "Cavall Bernat y Cuevas Marinas",
-      "description": "The most dramatic section of the Sant Vicenç coast — towering vertical cliffs of white limestone (coves blanques) rise directly from the sea while the Cavall Bernat peak looms above. The colour contrast between white rock, pine forest and turquoise water is extraordinary and only visible from the water.",
+      "description": "The most dramatic stretch of the Sant Vicenç coast — the Serra del Cavall Bernat, a towering limestone ridge, drops sheer into the Mediterranean and conceals some of the Balearics' most spectacular sea caves beneath its cliffs. The star is the Cueva Azul (Cova del Vell Marí): sunlight filtering through the submerged cave entrance creates an intense blue-green glow that fills the entire chamber. The cliffs are only accessible by sea — kayak and speedboat tours depart from Cala Molins (Cala Sant Vicenç), skirting the vertiginous walls to reach the Blue Cave and the wild beach of Cala Bóquer. The crystal-clear water at the cliff base is also outstanding for snorkelling, with posidonia reefs, octopus and abundant Mediterranean fish.",
       "category": "SUP",
       "latitude": 39.9198804,
       "longitude": 3.0574707,
@@ -6948,10 +7070,12 @@
       "rating": 4.9,
       "review_count": 210,
       "tips": [
-        "Only accessible by sea — no coastal path reaches here",
-        "Paddle close to the base of the cliffs for the best perspective",
-        "The white caves (coves blanques) are visible at sea level — look for the bright reflections",
-        "Best light: morning sun hits the white rock face directly"
+        "Access is by sea only — the cliffs are dangerously steep from land. Book a guided kayak or speedboat tour from Cala Molins (Cala Sant Vicenç)",
+        "Best time inside the Blue Cave: mid-morning (10–12 h) when the sun angle maximises the underwater light effect",
+        "Kayak tours are self-paced and quieter; speedboat tours cover more caves in less time — choose by preference",
+        "Bring snorkel gear: the posidonia reefs and rock walls at the cliff base are excellent for underwater wildlife",
+        "Calm sea is essential — tours are cancelled in swell or strong wind. Check conditions the morning of your visit",
+        "Cala Bóquer (reached on the same boat route) is one of the most pristine beaches on the north coast — worth combining"
       ],
       "tags": [
         "SUP",
@@ -6992,18 +7116,24 @@
           "source": "MINE"
         }
       ],
-      "description_es": "El tramo más dramático de la costa de Sant Vicenç: verticales acantilados de caliza blanca se elevan directamente desde el mar mientras el pico del Cavall Bernat domina sobre ellos.",
+      "description_es": "El tramo más dramático de la costa de Sant Vicenç: la Serra del Cavall Bernat, un imponente cordón de caliza, cae verticalmente al Mediterráneo y esconde bajo sus acantilados algunas de las cuevas marinas más espectaculares de las Baleares. La protagonista es la Cueva Azul (Cova del Vell Marí): la luz solar que se filtra por la entrada submarina crea un intenso resplandor azul-verde que ilumina toda la cámara interior. Los acantilados solo son accesibles por mar — excursiones en kayak y lancha parten de Cala Molins (Cala Sant Vicenç), bordeando las verticales paredes hasta la Cueva Azul y la playa virgen de Cala Bóquer. El agua cristalina a los pies del acantilado es excepcional para el snorkel, con praderas de posidonia, pulpos y fauna mediterránea.",
       "tips_es": [
-        "Las cuevas son accesibles nadando o en kayak",
-        "El agua dentro de las cuevas tiene un color azul intenso",
-        "El recorrido en kayak desde Cala Sant Vicenç dura unos 30 minutos"
+        "El acceso es solo por mar — los acantilados son peligrosamente escarpados desde tierra. Reserva un tour guiado en kayak o lancha desde Cala Molins (Cala Sant Vicenç)",
+        "Mejor momento en la Cueva Azul: media mañana (10–12 h) cuando el ángulo solar maximiza el efecto de luz bajo el agua",
+        "El kayak es más tranquilo y a tu ritmo; la lancha cubre más cuevas en menos tiempo — elige según preferencia",
+        "Lleva equipo de snorkel: las praderas de posidonia y las paredes rocosas son excelentes para ver fauna submarina",
+        "El mar en calma es imprescindible — los tours se cancelan con oleaje o viento fuerte. Consulta las condiciones la mañana de tu visita",
+        "Cala Bóquer (en la misma ruta en barco) es una de las playas más vírgenes de la costa norte — vale la pena combinarlas"
       ],
-      "name_de": "Cavall Bernat & Meereshöhlen",
-      "description_de": "Malerische Küstenformation mit weißen Kalksteinhöhlen – per Kajak ab Cala Sant Vicenç in ca. 30 Minuten erreichbar.",
+      "name_de": "Cavall Bernat y Cuevas Marinas",
+      "description_de": "Der dramatischste Abschnitt der Küste von Sant Vicenç: die Serra del Cavall Bernat, ein mächtiger Kalksteinrücken, fällt senkrecht ins Mittelmeer und verbirgt unter ihren Klippen einige der spektakulärsten Meereshöhlen der Balearen. Das Highlight ist die Cueva Azul (Cova del Vell Marí): Sonnenlicht, das durch den untergetauchten Höhleneingang fällt, erzeugt ein intensives blau-grünes Leuchten, das die gesamte Kammer erfüllt. Die Klippen sind nur vom Meer aus zugänglich — Kajak- und Schnellboottouren starten von Cala Molins (Cala Sant Vicenç), entlang der schwindelerregenden Wände zur Blauen Höhle und zum wilden Strand Cala Bóquer. Das kristallklare Wasser am Klippenfuß ist ideal zum Schnorcheln, mit Posidonia-Riffen, Tintenfischen und mediterraner Fauna.",
       "tips_de": [
-        "Höhlen sind schwimmend oder per Kajak erreichbar",
-        "Das Wasser in den Höhlen leuchtet intensiv blau",
-        "Kajakfahrt ab Cala Sant Vicenç dauert ca. 30 Minuten"
+        "Zugang nur vom Meer — die Klippen sind von Land aus gefährlich steil. Geführte Kajak- oder Schnellboottour ab Cala Molins (Cala Sant Vicenç) buchen",
+        "Beste Zeit in der Blauen Höhle: später Vormittag (10–12 Uhr) wenn der Sonnenwinkel den Unterwasser-Lichteffekt maximiert",
+        "Kajak ist ruhiger und im eigenen Tempo; Schnellboot deckt mehr Höhlen in kürzerer Zeit ab — je nach Vorliebe wählen",
+        "Schnorchelausrüstung mitbringen: die Posidonia-Riffe und Felswände am Klippenfuß sind ausgezeichnet für Unterwasserfauna",
+        "Ruhige See ist unverzichtbar — Touren werden bei Swell oder starkem Wind abgesagt. Bedingungen am Morgen des Besuchs prüfen",
+        "Cala Bóquer (auf derselben Bootsroute) ist einer der unberührtesten Strände der Nordküste — lohnt sich zu kombinieren"
       ]
     },
     {
@@ -7626,7 +7756,7 @@
       "id": "cap-falco",
       "name": "Cala Cap Falcó",
       "name_es": "Cala Cap Falcó",
-      "description": "One of Calvià's most dramatic and photogenic hidden coves, wedged between vertical cliff walls and reachable only via a pine forest trail. The water clarity borders on surreal. The silence and effort required to reach it make the experience unlike any other cove on the island.",
+      "description": "A small 60m-wide white-sand cove surrounded by pine trees and low cliffs in Calvià, with no hotels in sight — perfect for families with children. From the free car park, steep stone steps lead down to the beach in 2-3 minutes.\n\nFull facilities: showers, WC, lifeguard post, sunbed rental (~€20/day) and a surf-bar style chiringuito (May–October) with fresh fish, burgers and cocktails. At night, Flower Party events with DJs create a magical atmosphere with candles on the steps.\n\nSnorkelling is exceptional: good visibility up to 60m from shore over sandy and rocky seabed — there's even a sunken boat wreck close to the shoreline. Don't forget your underwater camera.",
       "category": "BEACH",
       "latitude": 39.4879,
       "longitude": 2.5328,
@@ -7634,15 +7764,19 @@
       "rating": 4.8,
       "review_count": 290,
       "tips": [
-        "Walk-in only — 20-minute trail through pine forest",
-        "No facilities — bring everything you need",
-        "Best light for photos in the morning"
+        "Arrive before 10am in summer — the free car park has limited capacity",
+        "Bring snorkel gear: there's a sunken boat wreck close to the shoreline",
+        "The Flower Party events at the chiringuito at sunset are not to be missed"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/cap-falco.jpg",
+      "thumbnail_url": "file:///android_asset/images/cap-falco-mia-1.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cap-falco.jpg",
+          "url": "file:///android_asset/images/cap-falco-mia-1.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/cap-falco-mia-2.jpg",
           "source": "MINE"
         }
       ],
@@ -7653,18 +7787,18 @@
         "dramatic",
         "calvia"
       ],
-      "description_es": "Una de las calas ocultas más dramáticas y fotogénicas de Calvià, encajonada entre paredes verticales de acantilado y accesible solo por un sendero de bosque de pinos. La claridad del agua raya en lo surrealista.",
+      "description_es": "Pequeña cala de arena blanca de 60 m de ancho, rodeada de pinos y acantilados en Calvià, sin hoteles a la vista — ideal para familias con niños. Desde el parking gratuito, unas escaleras empinadas te llevan a la arena en 2-3 minutos.\n\nServicios completos: duchas, WC, puesto de socorrista, hamacas y sombrillas (~20 €/día) y chiringuito estilo surf bar (mayo-octubre) con pescado fresco, hamburguesas y cócteles. Por las noches se celebran Flower Parties con DJs y velas en las escaleras.\n\nEl snórquel es excepcional: buena visibilidad hasta 60 m de la orilla, fondos de arena y roca, e incluso los restos de un barco hundido cerca de la orilla. No olvides la cámara acuática.",
       "tips_es": [
-        "Cala rocosa accesible por un camino forestal desde Portals Vells",
-        "El snorkel es excelente en los fondos rocosos",
-        "El faro del Cap Falcó es el punto de referencia"
+        "Llega antes de las 10h en verano — el parking gratuito tiene capacidad limitada",
+        "Trae equipo de snórquel: hay restos de un barco hundido cerca de la orilla",
+        "Las Flower Parties del chiringuito al atardecer son muy recomendables"
       ],
       "name_de": "Cala Cap Falcó",
-      "description_de": "Felsige Bucht am Ende eines Waldweges von Portals Vells – ausgezeichnetes Schnorcheln auf steinigem Grund.",
+      "description_de": "Kleine, 60 m breite Bucht mit weißem Sand in Calvià, umgeben von Pinien und Felsen — ohne Hotels in Sicht, ideal für Familien mit Kindern. Vom kostenlosen Parkplatz führen steile Steinstufen in 2-3 Minuten an den Strand.\n\nVollständige Ausstattung: Duschen, WC, Rettungsposten, Liegestuhlverleih (~20 €/Tag) und ein Chiringuito im Surfbar-Stil (Mai–Oktober) mit frischem Fisch, Burgern und Cocktails. Abends finden Flower-Party-Events mit DJs und Kerzen auf den Stufen statt.\n\nDas Schnorcheln ist hervorragend: gute Sicht bis 60 m vom Ufer — sogar ein versunkenes Schiffswrack liegt in Ufernähe. Unterwasserkamera nicht vergessen.",
       "tips_de": [
-        "Felsige Bucht am Ende eines Waldweges von Portals Vells",
-        "Ausgezeichnetes Schnorcheln auf felsigem Meeresgrund",
-        "Der Leuchtturm Cap Falcó ist der Orientierungspunkt"
+        "Im Sommer vor 10 Uhr ankommen — der kostenlose Parkplatz ist schnell voll",
+        "Schnorchelausrüstung mitbringen: in Ufernähe liegt ein versunkenes Schiffswrack",
+        "Die Flower-Party-Abende am Chiringuito bei Sonnenuntergang sind sehr empfehlenswert"
       ]
     },
     {
@@ -7778,9 +7912,9 @@
     },
     {
       "id": "mirador-des-colomer",
-      "name": "Mirador de s'Colomer",
-      "name_es": "Mirador de s'Colomer",
-      "description": "One of Mallorca's most spectacular viewpoints, perched above the Cap de Formentor peninsula. A stone staircase descends to dramatic platforms overlooking the tiny island of s'Colomer and the open sea — a jaw-dropping panorama at any hour.",
+      "name": "Mirador Es Colomer",
+      "name_es": "Mirador Es Colomer",
+      "description": "Designed in 1925 by Mallorcan engineer Antoni Parietti Coll, this viewpoint sits atop a sheer vertical rock over 200m above the sea on the Formentor peninsula. A stone stairway carved into the cliff leads in just 5–10 minutes to circular terraces with dramatic views of the Serra de Tramuntana plunging into the Mediterranean — and the 112m rock islet of Es Colomer rising straight out of the water below.",
       "category": "VIEWPOINT",
       "latitude": 39.931,
       "longitude": 3.1124,
@@ -7788,9 +7922,11 @@
       "rating": 4.9,
       "review_count": 3100,
       "tips": [
-        "Arrive at sunrise or sunset for dramatic lighting",
-        "Strong winds — hold children close near the railings",
-        "Combine with the drive along Cap de Formentor road"
+        "In summer (Jun–Sep) private cars are restricted on the road to the lighthouse — take the shuttle bus from Port de Pollença",
+        "Best at sunset: cliffs glow gold and red; arrive before 09:30 to beat the crowds",
+        "Watch out for strong gusts — secure hats, phones and sunglasses near the edge",
+        "Small café with drinks and toilets in the car park area",
+        "Cross the road to find the track up to Talaia d'Albercutx for even higher views"
       ],
       "price_level": "FREE",
       "thumbnail_url": "file:///android_asset/images/place-mirador-des-colomer.jpg",
@@ -7811,18 +7947,22 @@
         "sunrise",
         "iconic"
       ],
-      "description_es": "Uno de los miradores más espectaculares de Mallorca, suspendido sobre la Península de Cap de Formentor. Una escalinata de piedra desciende hasta plataformas dramáticas con vistas a la diminuta isla de s'Colomer.",
+      "description_es": "Ideado en 1925 por el ingeniero Antoni Parietti Coll, este mirador se asienta sobre una imponente roca vertical a más de 200 m sobre el mar en la Península de Formentor. Un camino escalonado labrado en la roca conduce en apenas 5–10 minutos a las terrazas circulares del filo, con vistas de los acantilados de la Serra de Tramuntana hundiéndose en el Mediterráneo y el islote de Es Colomer — de 112 m de altura — emergiendo del agua justo enfrente.",
       "tips_es": [
-        "Las vistas sobre el Peñón des Colomer y la bahía son impresionantes",
-        "El aparcamiento puede llenarse rápido en verano — llega temprano",
-        "Con buenos prismáticos puedes ver aves rapaces nidificando"
+        "En verano (jun–sep) el acceso en coche privado está restringido — usa la lanzadera desde Port de Pollença",
+        "El atardecer es el momento estrella; si quieres evitar aglomeraciones, llega antes de las 09:30",
+        "Cuidado con las rachas de viento — asegura gorras, móviles y gafas cerca del precipicio",
+        "Junto al parking hay un pequeño chiringuito con bebidas, snacks y aseos de pago",
+        "Al otro lado de la carretera sale la pista hacia la Talaia de Albercutx — súbela si tienes tiempo"
       ],
-      "name_de": "Aussichtspunkt s'Colomer",
-      "description_de": "Dramatischer Aussichtspunkt über den Felsen des Colomer und die Bucht von Pollença – einer der spektakulärsten der Insel.",
+      "name_de": "Mirador Es Colomer",
+      "description_de": "Entworfen 1925 vom mallorquinischen Ingenieur Antoni Parietti Coll, thront dieser Aussichtspunkt auf einem senkrechten Felsen über 200 m über dem Meer auf der Halbinsel Formentor. Ein in den Fels gehauener Treppenweg führt in nur 5–10 Minuten zu kreisrunden Terrassen am Klippenrand — mit Panoramablick auf die Serra de Tramuntana und den 112 m hohen Felsenislet Es Colomer direkt darunter.",
       "tips_de": [
-        "Spektakuläre Aussicht auf den Felsen Colomer und die Bucht von Pollença",
-        "Parkplatz kann im Sommer schnell voll sein – früh ankommen",
-        "Mit guten Ferngläsern nistende Raubvögel sehen"
+        "Im Sommer (Jun–Sep) ist die Zufahrt mit dem Privatwagen eingeschränkt — Shuttlebus ab Port de Pollença nutzen",
+        "Sonnenuntergang ist die beste Zeit; vor 09:30 Uhr kommen, um Menschenmassen zu vermeiden",
+        "Achtung vor Windböen — Hüte, Handys und Sonnenbrillen am Rand gut festhalten",
+        "Kleiner Kiosk mit Getränken, Snacks und kostenpflichtigen Toiletten am Parkplatz",
+        "Auf der anderen Straßenseite führt ein Weg zur Talaia d'Albercutx — lohnt sich für noch höhere Aussichten"
       ]
     },
     {
@@ -8343,114 +8483,99 @@
       ]
     },
     {
-      "id": "amok-mallorca",
-      "name": "Amok Mallorca",
-      "name_es": "Amok Mallorca",
-      "name_de": "Amok Mallorca",
-      "description": "One of Mallorca's most iconic outdoor clubs, set right on Platja de Palma just 10 km from Palma. Open from late summer through October, Amok hosts some of the biggest names in electronic, house and commercial music across two daily sessions: sunset parties from 19:30 and main nights from midnight. Known for its open-air terraces, top-tier sound system and vibrant atmosphere facing the sea.",
-      "description_es": "Uno de los clubs al aire libre más icónicos de Mallorca, situado en la Platja de Palma a tan solo 10 km de Palma. Abierto desde finales de verano hasta octubre, Amok acoge a algunos de los nombres más grandes de la música electrónica, house y comercial en dos sesiones diarias: fiestas de atardecer desde las 19:30 y noches principales desde medianoche. Conocido por sus terrazas al aire libre, sistema de sonido de primer nivel y ambiente vibrante con vistas al mar.",
-      "description_de": "Einer der ikonischsten Open-Air-Clubs Mallorcas, direkt am Platja de Palma, nur 10 km von Palma entfernt. Von Ende Sommer bis Oktober lädt Amok einige der größten Namen der elektronischen, House- und kommerziellen Musik ein — mit zwei täglichen Sessions: Sunset-Partys ab 19:30 Uhr und Hauptnächte ab Mitternacht. Bekannt für seine Open-Air-Terrassen, erstklassiges Soundsystem und lebhafte Atmosphäre mit Meerblick.",
-      "category": "NIGHTLIFE",
-      "latitude": 39.5213,
-      "longitude": 2.7389,
-      "municipality": "Palma",
-      "address": "Carretera Arenal, Km 10, Platja de Palma, 07199 S'Aranjasa, Palma",
-      "rating": 4.5,
-      "review_count": 1200,
-      "price_level": "PAID",
-      "opening_hours": "Thu–Sun 19:30–06:00 (Aug–Oct)",
-      "website_url": "https://www.amokmallorca.com",
-      "thumbnail_url": "file:///android_asset/images/venue-amok-mallorca.jpg",
+      "id": "cova-dels-coloms",
+      "name": "Cova dels Coloms",
+      "name_es": "Cova dels Coloms",
+      "name_de": "Cova dels Coloms",
+      "description": "Una de las cuevas marinas más extraordinarias de Mallorca — la Cova dels Coloms combina imponentes cámaras de estalactitas y estalagmitas con lagos subterráneos de agua cristalina. La cueva se encuentra en la costa este, cerca de Cala Varques (Manacor), y se puede llegar en kayak, SUP, barco o nadando ~200–300 m a lo largo de la costa desde Cala Falcó. En el interior, el suelo arenoso alterna con transparentes pozas de agua dulce y salada, y la bóveda está cubierta de densas formaciones de estalactitas de un blanco brillante. El contraste entre las paredes oscuras y el agua reluciente crea una atmósfera de otro mundo que muy pocos visitantes llegan a experimentar.",
+      "description_es": "Una de las cuevas marinas más extraordinarias de Mallorca — la Cova dels Coloms combina cámaras imponentes de estalactitas y estalagmitas con lagos subterráneos de agua cristalina. La cueva se encuentra en la costa este cerca de Cala Varques (Manacor) y se puede llegar en kayak, SUP, barco, o nadando ~200–300 m por la costa desde Cala Falcó. Una vez dentro, el suelo arenoso de la cueva alterna con pozas translúcidas de agua dulce y salada, y la bóveda está cubierta de densas formaciones de estalactitas blancas brillantes. El contraste entre las paredes oscuras y el agua centelleante crea una atmósfera de otro mundo que muy pocos visitantes llegan a conocer.",
+      "description_de": "Eine der außergewöhnlichsten Meereshöhlen Mallorcas — die Cova dels Coloms (Taubenhöhle) verbindet imposante Kammern mit Stalaktiten und Stalagmiten mit unterirdischen Seen aus kristallklarem Wasser. Die Höhle liegt an der Ostküste nahe Cala Varques (Manacor) und kann per Kajak, SUP, Boot oder schwimmend (~200–300 m entlang der Küste von Cala Falcó) erreicht werden. Im Inneren wechselt der sandige Höhlenboden mit durchscheinenden Süß- und Salzwassertümpeln ab, und das Gewölbe ist mit dichten Formationen leuchtend weißer Stalaktiten bedeckt. Der Kontrast zwischen den dunklen Wänden und dem schimmernden Wasser schafft eine unwirkliche Atmosphäre, die nur wenige Besucher je erleben.",
+      "category": "SUP",
+      "latitude": 39.5145,
+      "longitude": 3.3105,
+      "municipality": "Manacor",
+      "address": "Cala Varques, Manacor",
+      "rating": 4.9,
+      "review_count": 180,
+      "price_level": "FREE",
+      "tips": [
+        "Acceso por mar: kayak, SUP o barco desde Cala Varques o Cala Falcó — es la opción más sencilla y espectacular.",
+        "Acceso nadando: desde Cala Falcó nada ~200–300 m a lo largo de la costa; lleva aletas y gafas de buceo.",
+        "Imprescindible llevar una linterna frontal impermeable — el interior está completamente oscuro.",
+        "Solo con el mar en calma — con oleaje o viento de levante la entrada puede ser peligrosa o impracticable.",
+        "No toques las estalactitas: crecen apenas unos milímetros por año y son muy frágiles.",
+        "Aparca en el arcén de la Ma-4014 (el camino a Cala Varques) y baja a pie unos 20–25 minutos hasta la costa.",
+        "Considera contratar una excursión guiada de espeleología — los operadores locales proporcionan neopreno y equipamiento."
+      ],
+      "tips_es": [
+        "Acceso por mar: kayak, SUP o barco desde Cala Varques o Cala Falcó — rema por los acantilados y busca la boca de la cueva. Es la opción más fácil",
+        "Acceso nadando: desde Cala Falcó nada ~200–300 m por la costa hasta la entrada — lleva una bolsa estanca para el móvil y la linterna",
+        "Una linterna frontal impermeable es imprescindible — el interior está completamente oscuro más allá de la entrada; las estalactitas brillan espectacularmente con un haz potente",
+        "Solo con el mar en calma — con cualquier oleaje o viento del este la entrada se convierte en una trampa de resaca peligrosa. Consulta siempre las condiciones antes de ir",
+        "Nunca toques las estalactitas: crecen solo unos centímetros por siglo y la grasa de las manos detiene su crecimiento de forma permanente",
+        "Aparca en el arcén de la carretera Ma-4014 (el camino a Cala Varques está cerrado al tráfico) y camina 15–20 min por senderos rurales hasta la costa",
+        "Considera reservar una excursión de espeleología guiada — las empresas locales proporcionan traje de neopreno, casco, linterna y seguridad"
+      ],
+      "tips_de": [
+        "Zugang vom Meer: Kajak, SUP oder Boot von Cala Varques oder Cala Falcó — an den Klippen entlangpaddeln und den Höhleneingang suchen. Einfachste Option",
+        "Schwimmzugang: von Cala Falcó ~200–300 m an der Küste entlangschwimmen bis zum Eingang — Dry Bag für Handy und Taschenlampe mitbringen",
+        "Wasserdichte Stirnlampe ist unverzichtbar — das Innere ist hinter dem Eingang stockdunkel; Stalaktiten leuchten mit einem starken Strahl spektakulär",
+        "Nur bei ruhiger See — bei Swell oder Ostwind wird der Eingang zu einer gefährlichen Sturzsee-Falle. Immer vorher die Bedingungen prüfen",
+        "Stalaktiten niemals berühren: sie wachsen nur wenige Zentimeter pro Jahrhundert und Handfett stoppt ihr Wachstum dauerhaft",
+        "Auf dem Bankett der Ma-4014 parken (der Weg nach Cala Varques ist für Fahrzeuge gesperrt) und 15–20 Min. durch Farmland zur Küste laufen",
+        "Geführte Höhlentour buchen — lokale Anbieter stellen Neoprenanzug, Helm, Taschenlampe und Sicherheitsabdeckung für das volle Erlebnis"
+      ],
+      "tags": [
+        "hidden_gem",
+        "cave",
+        "sea-cave",
+        "hidden-gem",
+        "swimming",
+        "kayak",
+        "sup",
+        "snorkelling",
+        "manacor",
+        "coastal",
+        "barco",
+        "caminar"
+      ],
+      "thumbnail_url": "file:///android_asset/images/place-cova-dels-coloms.jpg",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/venue-amok-mallorca.jpg",
+          "url": "file:///android_asset/images/place-cova-dels-coloms.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-cova-dels-coloms-2.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-cova-dels-coloms-3.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-cova-dels-coloms-4.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-cova-dels-coloms-5.jpg",
+          "source": "MINE"
+        },
+        {
+          "url": "file:///android_asset/images/place-cova-dels-coloms-6.jpg",
           "source": "MINE"
         }
       ],
-      "tips": [
-        "Two daily sessions: sunset party from 19:30 and night session from midnight — you can book for one or both",
-        "Book VIP tables in advance, especially for headline nights — they sell out fast",
-        "Tickets start from €5 for sunset parties; headline nights can reach €35+",
-        "The club is right on Platja de Palma — combine with a beach day before the party",
-        "Check the calendar on their website before going — programming changes weekly",
-        "Free parking nearby; also reachable by bus from Palma (line 15)"
-      ],
-      "tips_es": [
-        "Dos sesiones diarias: fiesta de atardecer desde las 19:30 y sesión nocturna desde medianoche — puedes reservar para una o las dos",
-        "Reserva mesas VIP con antelación, especialmente en las noches con artistas estrella — se agotan rápido",
-        "Las entradas empiezan desde 5€ para las tardeos; las noches con cabezas de cartel pueden llegar a 35€ o más",
-        "El club está justo en la Platja de Palma — combínalo con un día de playa antes de la fiesta",
-        "Consulta el calendario en su web antes de ir — la programación cambia cada semana",
-        "Aparcamiento gratuito cerca; también se puede llegar en autobús desde Palma (línea 15)"
-      ],
-      "tips_de": [
-        "Zwei tägliche Sessions: Sunset-Party ab 19:30 und Nachtsession ab Mitternacht — buchbar für eine oder beide",
-        "VIP-Tische im Voraus buchen, besonders für Headliner-Nächte — sie sind schnell ausgebucht",
-        "Tickets ab 5 € für Sunset-Partys; Headliner-Nächte können 35 € oder mehr kosten",
-        "Der Club liegt direkt am Platja de Palma — kombiniere ihn mit einem Strandtag vor der Party",
-        "Vor dem Besuch den Kalender auf der Website prüfen — die Programmierung ändert sich wöchentlich",
-        "Kostenlose Parkplätze in der Nähe; auch mit dem Bus aus Palma erreichbar (Linie 15)"
-      ],
-      "tags": [
-        "nightlife",
-        "club",
-        "electronic",
-        "sunset",
-        "outdoor",
-        "platja-de-palma"
-      ]
-    },
-    {
-      "id": "es-gremi",
-      "name": "Es Gremi",
-      "name_es": "Es Gremi",
-      "name_de": "Es Gremi",
-      "description": "One of Palma's most active live music venues with three rooms — Sala Zero, Sala 1 and Sala 3 — hosting rock, indie, electronic and Latin artists. Packed calendar from September to November.",
-      "description_es": "Uno de los locales de música en directo más activos de Palma, con tres salas y programación de rock, indie, electrónica y música latina. Agenda cargada de septiembre a noviembre.",
-      "description_de": "Einer der aktivsten Livemusik-Clubs in Palma mit drei Sälen und Programm von Rock bis Latin. Voller Kalender von September bis November.",
-      "category": "NIGHTLIFE",
-      "latitude": 39.5742,
-      "longitude": 2.6622,
-      "municipality": "Palma",
-      "address": "Gremi de Porgadors, 16, 07009 Palma de Mallorca",
-      "rating": 4.4,
-      "review_count": 850,
-      "price_level": "PAID",
-      "opening_hours": "Varies by event",
-      "website_url": "https://esgremi.com",
-      "thumbnail_url": "file:///android_asset/images/venue-es-gremi.jpg",
-      "photo_urls": [
-        {
-          "url": "file:///android_asset/images/venue-es-gremi.jpg",
-          "source": "MINE"
-        }
-      ],
-      "tips": [
-        "Three rooms — check which sala your event is in before arriving",
-        "Buy tickets at esgremi.com — headline shows sell out fast",
-        "Easy to reach by car with parking nearby",
-        "Check the agenda regularly — new events added throughout the season"
-      ],
-      "tips_es": [
-        "Tres salas — comprueba en qué sala es tu evento",
-        "Compra entradas en esgremi.com — los conciertos importantes se agotan",
-        "Fácil acceso en coche con aparcamiento cerca",
-        "Revisa la agenda con frecuencia — añaden nuevos eventos toda la temporada"
-      ],
-      "tips_de": [
-        "Drei Säle — vor der Anreise prüfen, welcher Saal",
-        "Tickets auf esgremi.com — Headliner-Shows ausverkauft",
-        "Gut mit Auto erreichbar",
-        "Kalender regelmäßig prüfen"
-      ],
-      "tags": [
-        "nightlife",
-        "concerts",
-        "rock",
-        "electronic",
-        "latin",
-        "live-music",
-        "palma"
+      "description_en": "One of Mallorca's most extraordinary sea caves — the Cova dels Coloms (Cave of the Pigeons) combines towering chambers of stalactites and stalagmites with subterranean lakes of crystal-clear water. The cave sits along the east coast near Cala Varques (Manacor) and can be reached by kayak, SUP, boat, or by swimming ~200–300 m along the coast from Cala Falcó. Once inside, the sandy cave floor alternates with translucent freshwater and saltwater pools, and the vaulted ceiling bristles with dense formations of brilliant white stalactites. The contrast between the dark walls and the shimmering water creates an otherworldly atmosphere that few visitors ever experience.",
+      "name_en": "Cova dels Coloms",
+      "tips_en": [
+        "Access by sea: kayak, SUP or boat from Cala Varques or Cala Falcó — paddle along the cliffs and look for the cave mouth. By sea is the easiest approach",
+        "Swimming access: from Cala Falcó swim ~200–300 m along the coast to reach the entrance — bring a dry bag for your phone and torch",
+        "A waterproof headtorch is essential — the interior is pitch black beyond the entrance; the stalactites glow brilliantly with a strong beam",
+        "Calm sea only — in any swell or east wind the entrance becomes a dangerous surge trap. Always check conditions before going",
+        "Never touch the stalactites: they grow just a few centimetres per century and the grease from hands stops their growth permanently",
+        "Park on the verge of the Ma-4014 road (the track to Cala Varques is closed to vehicles) and walk 15–20 min through farmland to the coast",
+        "Consider booking a guided speleology tour — local operators provide wetsuit, helmet, torch and safety cover for the full experience"
       ]
     }
   ],
@@ -14202,7 +14327,7 @@
       "description": "The great musical event of the season in Palma, with memorable live performances by Alice Wonder, Cupido, Carlangas and the best local talent. Two days celebrating the 23rd anniversary of Es Gremi.",
       "description_es": "El gran evento musical de la temporada en Palma, con directos memorables de Alice Wonder, Cupido, Carlangas y el mejor talento local. Dos días celebrando el 23 aniversario de Es Gremi.",
       "description_de": "Das große musikalische Ereignis der Saison in Palma, mit unvergesslichen Live-Auftritten von Alice Wonder, Cupido, Carlangas und dem besten lokalen Talent. Zwei Tage zum 23. Jubiläum des Es Gremi.",
-      "category": "FESTIVAL",
+      "category": "NIGHTLIFE",
       "start_date": "2026-11-13",
       "end_date": "2026-11-14",
       "municipality": "Palma",
@@ -14392,7 +14517,7 @@
       "description_es": "El prestigioso pianista japonés Naruhiko Kawaguchi inaugura el XVII Festival Pianino 2026 en la Cartuja de Valldemossa. Interpretando a Chopin y compositores españoles sobre un excepcional piano Pleyel original de 1851 — el instrumento predilecto del propio Chopin — en la celda donde pasó el invierno de 1838-1839, este concierto ofrece una experiencia romántica sin igual en uno de los enclaves más emblemáticos de Mallorca.",
       "description_de": "Der renommierte japanische Pianist Naruhiko Kawaguchi eröffnet das XVII. Festival Pianino 2026 im Kartäuserkloster von Valldemossa. Mit Werken von Chopin und spanischen Komponisten auf einem originalen Pleyel-Flügel von 1851 — Chopins bevorzugtem Instrument — in der Zelle, in der er den Winter 1838–1839 verbrachte, bietet dieses Konzert ein unvergleichliches romantisches Erlebnis an einem der ikonischsten Orte Mallorcas.",
       "category": "CONCERT",
-      "start_date": 1789171200000,
+      "start_date": "2026-09-12",
       "municipality": "Valldemossa",
       "address": "Cartoixa de Valldemossa, Valldemossa",
       "is_free": false,
@@ -14409,8 +14534,8 @@
       "description_es": "Capdepera celebra una de las fiestas patronales más emblemáticas del noreste de Mallorca del 17 al 26 de agosto. Diez días de música, tradiciones mallorquinas, conciertos, el animado Garbeo Gabellí, la Festa Blanca, el espectacular Correfoc, teatro al aire libre y la Gran Revetla convierten esta celebración en un evento imprescindible del verano para vecinos y visitantes.",
       "description_de": "Capdepera feiert vom 17. bis 26. August eines der bedeutendsten Patronatsfeste im Nordosten Mallorcas. Zehn Tage voller Musik, mallorquinischer Volkstraditionen, Konzerte, die lebhafte Garbeo Gabellí-Straßenparty, die Festa Blanca, den spektakulären Correfoc-Feuerlauf, Freilufttheater und die Gran Revetla machen dieses Sommerfest zu einem unverzichtbaren Erlebnis für Einheimische und Besucher.",
       "category": "FESTIVAL",
-      "start_date": 1786924800000,
-      "end_date": 1787702400000,
+      "start_date": "2026-08-17",
+      "end_date": "2026-08-26",
       "municipality": "Capdepera",
       "address": "Plaça de l'Orient, Capdepera",
       "is_free": true,
@@ -14427,8 +14552,8 @@
       "description_es": "Cada verano, la plaza principal de Binissalem cobra vida con el Ball a la Fresca, una velada de baile popular mallorquín al aire libre. Bajo las estrellas, vecinos y visitantes disfrutan de música en directo y del tradicional ball de bot en un ambiente cálido y festivo perfecto para todas las edades.",
       "description_de": "Jeden Sommer erwacht der Hauptplatz von Binissalem mit dem Ball a la Fresca zum Leben — einem Abend traditionellen mallorquinischen Volkstanzes unter freiem Himmel. Einheimische und Besucher genießen Live-Musik und den traditionellen Ball de Bot in einer herzlichen, festlichen Atmosphäre für alle Altersgruppen.",
       "category": "CULTURE",
-      "start_date": 1780617600000,
-      "end_date": 1787961600000,
+      "start_date": "2026-06-05",
+      "end_date": "2026-08-29",
       "municipality": "Binissalem",
       "address": "Plaça de l'Església, Binissalem",
       "is_free": true,
@@ -14445,8 +14570,8 @@
       "description_es": "SDN (Sonidos Digitales y Nuevas Tecnologías) en Fonart, Algaida, fusiona música, tecnología y arte digital. Este evento único presenta conciertos electrónicos y experimentales en directo, instalaciones sonoras interactivas, talleres de producción musical digital y actuaciones de artistas invitados que exploran nuevas formas de creación sonora.",
       "description_de": "SDN (Digitale Klänge und Neue Technologien) in Fonart, Algaida, verbindet Musik, Technologie und digitale Kunst. Diese einzigartige Veranstaltung bietet Live-Konzerte mit elektronischer und experimenteller Musik, interaktive Klanginstallationen, Workshops zur digitalen Musikproduktion und Auftritte von Gastkünstlern.",
       "category": "CONCERT",
-      "start_date": 1779580800000,
-      "end_date": 1788048000000,
+      "start_date": "2026-05-24",
+      "end_date": "2026-08-30",
       "municipality": "Algaida",
       "address": "Fonart, Algaida",
       "is_free": false,
@@ -14463,8 +14588,8 @@
       "description_es": "De julio a septiembre, el hermoso patio del Casal de Cultura Can Gelabert en Binissalem acoge las Nits a la Fresca — un ciclo de conciertos al aire libre los jueves con música clásica, jazz, flamenco, folk y sonidos contemporáneos. Entre los destacados: Niño de Elche, Los Atunos Rojos y Ensemble Tramuntana. Entrada gratuita con inscripción previa.",
       "description_de": "Von Juli bis September beherbergt der wunderschöne Innenhof des Kulturzentrums Can Gelabert in Binissalem die Nits a la Fresca — eine donnerstägliche Freiluft-Konzertreihe mit klassischer Musik, Jazz, Flamenco, Folk und zeitgenössischen Klängen. Highlights: Niño de Elche, Los Atunos Rojos und Ensemble Tramuntana. Eintritt frei mit Voranmeldung.",
       "category": "CONCERT",
-      "start_date": 1782950400000,
-      "end_date": 1788998400000,
+      "start_date": "2026-07-02",
+      "end_date": "2026-09-10",
       "municipality": "Binissalem",
       "address": "Casal de Cultura Can Gelabert, Binissalem",
       "is_free": true,
@@ -14481,8 +14606,8 @@
       "description_es": "El íntimo ciclo de Microconciertos de CaixaForum Palma reúne jazz, música clásica, folk y música contemporánea en un espacio de aforo reducido. Cuatro actuaciones especiales — 3 Pilgrims country y bluegrass (19 sep), Izan Blasco al saxofón (16 oct), Dúo de Arpa y Flauta (13 nov) y la pianista Sira Hernández (28 nov) — ofrecen una experiencia musical en directo única en el corazón de Palma.",
       "description_de": "Die intime Microconciertos-Reihe des CaixaForum Palma vereint Jazz, klassische Musik, Folk und zeitgenössische Musik bei kleiner Kapazität. Vier besondere Konzerte — 3 Pilgrims Country & Bluegrass (19. Sep.), Izan Blasco am Saxofon (16. Okt.), Harfen- und Flötenduo (13. Nov.) und Pianistin Sira Hernández (28. Nov.) — bieten ein persönliches Live-Musikerlebnis im Herzen Palmas.",
       "category": "CONCERT",
-      "start_date": 1789776000000,
-      "end_date": 1795824000000,
+      "start_date": "2026-09-19",
+      "end_date": "2026-11-28",
       "municipality": "Palma",
       "address": "CaixaForum Palma, Plaza de Weyler, 3, Palma",
       "is_free": false,
@@ -14499,7 +14624,7 @@
       "description_es": "Cada miércoles, la Plaça de l'Orient y las calles colindantes de Capdepera acogen el tradicional mercadillo semanal con alimentación, textil, plantas y artículos de primera necesidad. La excusa perfecta para pasear por el casco histórico y recorrer este encantador pueblo medieval.",
       "description_de": "Jeden Mittwoch verwandeln sich der Plaça de l'Orient und die umliegenden Straßen von Capdepera in einen traditionellen Wochenmarkt mit Lebensmitteln, Textilien, Pflanzen und Alltagsprodukten. Der perfekte Anlass, die historische Altstadt und das Burgdorf zu erkunden.",
       "category": "MARKET",
-      "start_date": 1767225600000,
+      "start_date": "2026-01-01",
       "municipality": "Capdepera",
       "address": "Plaça de l'Orient, Capdepera",
       "is_free": true,
@@ -14516,8 +14641,8 @@
       "description_es": "De febrero a diciembre, la icónica Plaça Major de Palma acoge un mercado artesanal acreditado con joyería, cerámica, bolsos, velas, jabones y otros productos hechos a mano. En el corazón del casco antiguo bajo los porches con sombra, es el lugar perfecto para encontrar souvenirs originales y regalos artesanales.",
       "description_de": "Von Februar bis Dezember beherbergt Palmas ikonische Plaça Major einen zertifizierten Kunsthandwerkermarkt mit handgefertigtem Schmuck, Keramik, Taschen, Kerzen, Seifen und weiteren Handwerksprodukten. Im Herzen der Altstadt unter schattigen Arkaden ideal für originelle Souvenirs und handgefertigte Geschenke.",
       "category": "MARKET",
-      "start_date": 1771545600000,
-      "end_date": 1798675200000,
+      "start_date": "2026-02-20",
+      "end_date": "2026-12-31",
       "municipality": "Palma",
       "address": "Plaça Major, Palma",
       "is_free": true,
@@ -14534,7 +14659,7 @@
       "description_es": "Cada miércoles por la mañana en la zona de Maioris (Llucmajor), un mercadillo práctico ofrece fruta fresca, verduras y productos de alimentación. Una parada matinal cómoda mientras se recorre la costa sur de Mallorca.",
       "description_de": "Jeden Mittwochmorgen im Bereich Maioris (Llucmajor) bietet ein kleiner, praktischer Markt frisches Obst, Gemüse und Alltagslebensmittel. Ein bequemer Morgenstopp bei der Erkundung der Südküste Mallorcas.",
       "category": "MARKET",
-      "start_date": 1767225600000,
+      "start_date": "2026-01-01",
       "municipality": "Llucmajor",
       "address": "Maioris, Llucmajor",
       "is_free": true,
@@ -14551,8 +14676,8 @@
       "description_es": "El primer y tercer sábado de cada mes, los jardines del Centre Cultural La Misericòrdia en Palma acogen una encantadora feria de coleccionismo con libros de segunda mano, cómics, vinilos, postales antiguas y objetos curiosos. Un paseo tranquilo entre piezas únicas en uno de los espacios con más encanto de Palma.",
       "description_de": "Am ersten und dritten Samstag jeden Monats beherbergen die Gärten des Kulturzentrums La Misericòrdia in Palma einen charmanten Sammlermarkt mit Secondhand-Büchern, Comics, Schallplatten, alten Postkarten und Kuriositäten. Ein entspannter Bummel durch einzigartige Fundstücke in einer der stimmungsvollsten Locations Palmas.",
       "category": "MARKET",
-      "start_date": 1767225600000,
-      "end_date": 1798675200000,
+      "start_date": "2026-01-01",
+      "end_date": "2026-12-31",
       "municipality": "Palma",
       "address": "Centre Cultural La Misericòrdia, Palma",
       "is_free": true,
@@ -14569,7 +14694,7 @@
       "description_es": "Cada miércoles, la Plaça Bartomeu Riera de Sa Cabana (Marratxí) acoge un práctico mercadillo de barrio centrado en alimentación y artículos de primera necesidad. Una parada matinal cómoda y bien ubicada en la zona de Marratxí.",
       "description_de": "Jeden Mittwoch verwandelt sich der Plaça Bartomeu Riera in Sa Cabana (Marratxí) in einen praktischen Quartiersmarkt mit Lebensmitteln und Alltagsprodukten. Ein bequemer und zentral gelegener Morgenstopp im Gebiet Marratxí.",
       "category": "MARKET",
-      "start_date": 1767225600000,
+      "start_date": "2026-01-01",
       "municipality": "Marratxí",
       "address": "Plaça Bartomeu Riera, Sa Cabana, Marratxí",
       "is_free": true,
@@ -14586,7 +14711,7 @@
       "description_es": "Cada miércoles, el barrio de Son Roca en Palma celebra un clásico mercadillo de barrio con fruta y verdura fresca, plantas, flores, ropa y calzado. Un ambiente vecinal animado ideal para una compra rápida por la mañana.",
       "description_de": "Jeden Mittwoch findet im Stadtviertel Son Roca in Palma ein klassischer Quartiersmarkt mit frischem Obst und Gemüse, Pflanzen, Blumen, Kleidung und Schuhen statt. Lebhafte Nachbarschaftsatmosphäre ideal für einen schnellen Morgeneinkauf.",
       "category": "MARKET",
-      "start_date": 1767225600000,
+      "start_date": "2026-01-01",
       "municipality": "Palma",
       "address": "Son Roca, Palma",
       "is_free": true,
@@ -14603,7 +14728,7 @@
       "description_es": "Cada miércoles, el centro de Andratx se llena de vida con uno de los mercadillos semanales más concurridos del suroeste de Mallorca. Los puestos se extienden por las calles cercanas al Ajuntament con productos locales, ropa, artesanía y más — una buena excusa para descubrir este encantador pueblo interior.",
       "description_de": "Jeden Mittwoch erwacht das Stadtzentrum von Andratx mit einem der beliebtesten Wochenmärkte im Südwesten Mallorcas. Stände erstrecken sich durch die Straßen rund ums Rathaus und bieten lokale Produkte, Kleidung, Kunsthandwerk und mehr — ein toller Anlass, dieses charmante Inlandsdorf zu erkunden.",
       "category": "MARKET",
-      "start_date": 1767225600000,
+      "start_date": "2026-01-01",
       "municipality": "Andratx",
       "address": "Centre d'Andratx, Andratx",
       "is_free": true,
@@ -17139,7 +17264,7 @@
       "description": "Amok presents Miss Monique — the Ukrainian melodic techno and progressive house star — for one night at Amok Mallorca. One of the club's most anticipated bookings of the summer.",
       "description_es": "Amok presenta a Miss Monique — la estrella ucraniana del techno melódico y progressive house — para una noche en Son Fusteret. Una de las actuaciones más esperadas del club en verano.",
       "description_de": "Amok präsentiert Miss Monique — den ukrainischen Star des melodischen Techno und Progressive House — für eine Nacht im Son Fusteret. Eine der meisterwarteten Bookings des Sommers.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-08-29",
       "municipality": "Palma",
       "address": "Amok Mallorca, Platja de Palma, Palma",
@@ -17156,7 +17281,7 @@
       "description": "Amok presents Jonas Blue, the British DJ and producer behind global hits like 'Fast Car' and 'Perfect Strangers', for a night of feel-good dance music at Platja de Palma.",
       "description_es": "Amok presenta a Jonas Blue, el DJ y productor británico de éxitos mundiales como 'Fast Car' y 'Perfect Strangers', para una noche de música dance en la Platja de Palma.",
       "description_de": "Amok präsentiert Jonas Blue, den britischen DJ und Produzenten hinter Welthits wie 'Fast Car' und 'Perfect Strangers', für eine Nacht Dance-Musik am Platja de Palma.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-05",
       "municipality": "Palma",
       "address": "Amok Mallorca, Platja de Palma, Palma",
@@ -17173,7 +17298,7 @@
       "description": "German superstar DJ Robin Schulz plays Amok Mallorca for one special night. Known for his remixes of 'Prayer in C' and 'Waves', one of the biggest names in deep house.",
       "description_es": "El superstar DJ alemán Robin Schulz actúa en Amok Mallorca para una noche especial. Conocido por sus remixes de 'Prayer in C' y 'Waves', uno de los nombres más grandes del deep house.",
       "description_de": "Der deutsche Superstar-DJ Robin Schulz spielt eine besondere Nacht im Amok Mallorca. Bekannt für seine Remixe von 'Prayer in C' und 'Waves' — einer der größten Namen im Deep House.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-17",
       "municipality": "Palma",
       "address": "Amok Mallorca, Platja de Palma, Palma",
@@ -17190,7 +17315,7 @@
       "description": "The summer closing party at Amok Mallorca with British DJ and producer Jamie Jones, Ibiza legend and founder of Paradise. An unmissable end to the clubbing season on the island.",
       "description_es": "La fiesta de cierre de verano de Amok Mallorca con el DJ y productor británico Jamie Jones, leyenda de Ibiza y fundador de Paradise. Un final de temporada de clubs en la isla que no te puedes perder.",
       "description_de": "Die Sommerschlussparty im Amok Mallorca mit dem britischen DJ und Produzenten Jamie Jones, Ibiza-Legende und Gründer von Paradise. Ein unvergesslicher Abschluss der Clubsaison auf der Insel.",
-      "category": "FESTIVAL",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-26",
       "municipality": "Palma",
       "address": "Amok Mallorca, Platja de Palma, Palma",
@@ -17207,7 +17332,7 @@
       "description": "Intro presents Themba & Les Castizos at Amok Mallorca. South African DJ Themba brings his Afro house sound to Platja de Palma.",
       "description_es": "Intro presenta a Themba & Les Castizos en Amok Mallorca. El DJ sudafricano Themba trae su sonido Afro house a la Platja de Palma.",
       "description_de": "Intro präsentiert Themba & Les Castizos im Amok Mallorca.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-08-27",
       "municipality": "Palma",
       "address": "Amok Mallorca, Platja de Palma, Palma",
@@ -17224,7 +17349,7 @@
       "description": "Amok x Tribu presents Javi Torres, one of Spain's top house DJs, for a midnight session at Platja de Palma.",
       "description_es": "Amok x Tribu presenta a Javi Torres, uno de los mejores DJs de house de España.",
       "description_de": "Amok x Tribu präsentiert Javi Torres, einen der besten House-DJs Spaniens.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-08-30",
       "municipality": "Palma",
       "address": "Amok Mallorca, Platja de Palma, Palma",
@@ -17241,7 +17366,7 @@
       "description": "German DJ Alle Farben brings his blend of house and pop-electronic to Amok Mallorca: From Disco to Disco.",
       "description_es": "El DJ alemán Alle Farben trae su mezcla de house y electrónica a Amok Mallorca: From Disco to Disco.",
       "description_de": "Der deutsche DJ Alle Farben im Amok Mallorca: From Disco to Disco.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-10",
       "municipality": "Palma",
       "address": "Amok Mallorca, Platja de Palma, Palma",
@@ -17258,7 +17383,7 @@
       "description": "Spanish house legend Wally Lopez takes over Amok Mallorca for a headline night.",
       "description_es": "La leyenda española del house Wally Lopez toma el control de Amok Mallorca.",
       "description_de": "Die spanische House-Legende Wally Lopez übernimmt das Amok Mallorca.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-12",
       "municipality": "Palma",
       "address": "Amok Mallorca, Platja de Palma, Palma",
@@ -17275,7 +17400,7 @@
       "description": "The after party of Only Techno Festival continues across three rooms at Es Gremi.",
       "description_es": "El after party del Only Techno Festival continúa en tres salas de Es Gremi.",
       "description_de": "Die Afterparty des Only Techno Festivals in drei Sälen des Es Gremi.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-08-29",
       "municipality": "Palma",
       "address": "Es Gremi, Gremi de Porgadors, 16, Palma",
@@ -17292,7 +17417,7 @@
       "description": "Argentine band El Kuelgue returns to Palma after two years — previously sold out Es Gremi.",
       "description_es": "La banda argentina El Kuelgue regresa a Palma tras dos años — ya colgaron el sold out en Es Gremi.",
       "description_de": "Die argentinische Band El Kuelgue kehrt nach Palma zurück — Es Gremi war schon ausverkauft.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-08",
       "municipality": "Palma",
       "address": "Es Gremi, Gremi de Porgadors, 16, Palma",
@@ -17309,7 +17434,7 @@
       "description": "Argentine artist Emanero plays Es Gremi for the first time on his 'Todo por un beso' tour.",
       "description_es": "Emanero actúa por primera vez en Es Gremi dentro de su gira 'Todo por un beso'.",
       "description_de": "Emanero spielt zum ersten Mal im Es Gremi auf seiner 'Todo por un beso'-Tour.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-09",
       "municipality": "Palma",
       "address": "Es Gremi, Gremi de Porgadors, 16, Palma",
@@ -17326,7 +17451,7 @@
       "description": "Mexican alternative legends Plastilina Mosh return to Es Gremi blending rock, hip hop, electronics and jazz.",
       "description_es": "Las leyendas mexicanas Plastilina Mosh regresan a Es Gremi mezclando rock, hip hop, electrónica y jazz.",
       "description_de": "Die mexikanischen Legenden Plastilina Mosh kehren ins Es Gremi zurück.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-12",
       "municipality": "Palma",
       "address": "Es Gremi, Gremi de Porgadors, 16, Palma",
@@ -17343,7 +17468,7 @@
       "description": "Barcelona world music artist Macaco at Es Gremi — Directes Estrella Damm 150.",
       "description_es": "Macaco en Es Gremi dentro del ciclo Directes Estrella Damm 150.",
       "description_de": "Macaco im Es Gremi im Rahmen von Directes Estrella Damm 150.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-20",
       "municipality": "Palma",
       "address": "Es Gremi, Gremi de Porgadors, 16, Palma",
@@ -17360,7 +17485,7 @@
       "description": "Argentine rock band Ciro y Los Persas bring their high-energy live show to Es Gremi.",
       "description_es": "La banda argentina Ciro y Los Persas lleva su directo de alta energía a Es Gremi.",
       "description_de": "Die argentinische Rockband Ciro y Los Persas bringt ihre Live-Show ins Es Gremi.",
-      "category": "CONCERT",
+      "category": "NIGHTLIFE",
       "start_date": "2026-09-22",
       "municipality": "Palma",
       "address": "Es Gremi, Gremi de Porgadors, 16, Palma",
@@ -17373,5 +17498,5 @@
   "discounts": [],
   "CURRENT_SEED_VERSION": 295,
   "version": 319,
-  "seed_version": 328
+  "seed_version": 366
 }
