@@ -1,3 +1,5 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
@@ -6,10 +8,22 @@ plugins {
     alias(libs.plugins.hilt)
 }
 
+val localProps = Properties().apply {
+    val f = rootProject.file("local.properties")
+    if (f.exists()) load(f.inputStream())
+}
+
 android {
     namespace = "com.mallorca.explorer.core.data"
     compileSdk = 35
-    defaultConfig { minSdk = 26 }
+    defaultConfig {
+        minSdk = 26
+        buildConfigField(
+            "String",
+            "WINDY_API_KEY",
+            "\"${localProps.getProperty("WINDY_API_KEY", "")}\""
+        )
+    }
     buildFeatures { buildConfig = true }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17

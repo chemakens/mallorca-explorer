@@ -3,6 +3,7 @@ package com.mallorca.explorer.core.data.di
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
 import com.mallorca.explorer.core.data.network.MallorcaApiService
 import com.mallorca.explorer.core.data.network.OpenMeteoApiService
+import com.mallorca.explorer.core.data.network.WindyApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,6 +20,10 @@ import javax.inject.Singleton
 @Qualifier
 @Retention(AnnotationRetention.BINARY)
 annotation class OpenMeteoRetrofit
+
+@Qualifier
+@Retention(AnnotationRetention.BINARY)
+annotation class WindyRetrofit
 
 @Module
 @InstallIn(SingletonComponent::class)
@@ -72,4 +77,19 @@ object NetworkModule {
     @Singleton
     fun provideOpenMeteoApiService(@OpenMeteoRetrofit retrofit: Retrofit): OpenMeteoApiService =
         retrofit.create(OpenMeteoApiService::class.java)
+
+    @Provides
+    @Singleton
+    @WindyRetrofit
+    fun provideWindyRetrofit(okHttpClient: OkHttpClient, json: Json): Retrofit =
+        Retrofit.Builder()
+            .baseUrl("https://api.windy.com/api/")
+            .client(okHttpClient)
+            .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+            .build()
+
+    @Provides
+    @Singleton
+    fun provideWindyApiService(@WindyRetrofit retrofit: Retrofit): WindyApiService =
+        retrofit.create(WindyApiService::class.java)
 }

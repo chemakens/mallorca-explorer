@@ -229,6 +229,11 @@ private fun PlaceDetailContent(
     val scrollState = rememberScrollState()
     var fullscreenPage by remember { mutableStateOf<Int?>(null) }
 
+    // Determinar si el lugar tiene actividad SUP/kayak
+    val hasSUPActivity = isSUPPlace ||
+        place.subCategories.any { it.equals("sup", ignoreCase = true) || it.equals("kayak_sup", ignoreCase = true) || it.contains("sup") } ||
+        place.gemAccess.any { it.equals("kayak_sup", ignoreCase = true) }
+
     Column(modifier = modifier.fillMaxSize()) {
         // Photo carousel header
         val pagerState = rememberPagerState { place.photoUrls.size.coerceAtLeast(1) }
@@ -513,6 +518,26 @@ private fun PlaceDetailContent(
                     SUPTrafficLightCard(status = supStatus)
                 } else {
                     SUPLoadingCard()
+                }
+            }
+
+            // Botón de mapa de olas (solo para lugares con actividad SUP)
+            if (hasSUPActivity) {
+                Spacer(Modifier.height(12.dp))
+                OutlinedButton(
+                    onClick = {
+                        val url = buildWindyUrl(place.location.latitude, place.location.longitude)
+                        try {
+                            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)))
+                        } catch (e: ActivityNotFoundException) {
+                            // No browser available
+                        }
+                    },
+                    modifier = Modifier.fillMaxWidth(),
+                    shape = RoundedCornerShape(12.dp),
+                ) {
+                    Text("🌊 ", style = MaterialTheme.typography.bodyLarge)
+                    Text(stringResource(R.string.place_view_wave_map))
                 }
             }
 
@@ -1249,4 +1274,24 @@ private fun windCardinal(deg: Int, locale: String): String {
         "de" -> listOf("N", "NO", "O", "SO", "S", "SW", "W", "NW")[i]
         else -> listOf("N", "NE", "E", "SE", "S", "SW", "W", "NW")[i]
     }
+}
+
+private fun buildWindyUrl(latitude: Double, longitude: Double): String {
+    return "https://embed.windy.com/embed2.html?" +
+        "lat=$latitude&" +
+        "lon=$longitude&" +
+        "zoom=11&" +
+        "level=surface&" +
+        "overlay=wind&" +
+        "menu=&" +
+        "message=&" +
+        "marker=&" +
+        "calendar=&" +
+        "pressure=&" +
+        "type=map&" +
+        "location=coordinates&" +
+        "detail=&" +
+        "metricWind=km/h&" +
+        "metricTemp=%C2%B0C&" +
+        "radarRange=-1"
 }

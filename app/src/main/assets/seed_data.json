@@ -8491,8 +8491,8 @@
       "description_es": "Una de las cuevas marinas más extraordinarias de Mallorca — la Cova dels Coloms combina cámaras imponentes de estalactitas y estalagmitas con lagos subterráneos de agua cristalina. La cueva se encuentra en la costa este cerca de Cala Varques (Manacor) y se puede llegar en kayak, SUP, barco, o nadando ~200–300 m por la costa desde Cala Falcó. Una vez dentro, el suelo arenoso de la cueva alterna con pozas translúcidas de agua dulce y salada, y la bóveda está cubierta de densas formaciones de estalactitas blancas brillantes. El contraste entre las paredes oscuras y el agua centelleante crea una atmósfera de otro mundo que muy pocos visitantes llegan a conocer.",
       "description_de": "Eine der außergewöhnlichsten Meereshöhlen Mallorcas — die Cova dels Coloms (Taubenhöhle) verbindet imposante Kammern mit Stalaktiten und Stalagmiten mit unterirdischen Seen aus kristallklarem Wasser. Die Höhle liegt an der Ostküste nahe Cala Varques (Manacor) und kann per Kajak, SUP, Boot oder schwimmend (~200–300 m entlang der Küste von Cala Falcó) erreicht werden. Im Inneren wechselt der sandige Höhlenboden mit durchscheinenden Süß- und Salzwassertümpeln ab, und das Gewölbe ist mit dichten Formationen leuchtend weißer Stalaktiten bedeckt. Der Kontrast zwischen den dunklen Wänden und dem schimmernden Wasser schafft eine unwirkliche Atmosphäre, die nur wenige Besucher je erleben.",
       "category": "SUP",
-      "latitude": 39.5145,
-      "longitude": 3.3105,
+      "latitude": 39.5022975,
+      "longitude": 3.3009778,
       "municipality": "Manacor",
       "address": "Cala Varques, Manacor",
       "rating": 4.9,
@@ -8576,6 +8576,12 @@
         "Never touch the stalactites: they grow just a few centimetres per century and the grease from hands stops their growth permanently",
         "Park on the verge of the Ma-4014 road (the track to Cala Varques is closed to vehicles) and walk 15–20 min through farmland to the coast",
         "Consider booking a guided speleology tour — local operators provide wetsuit, helmet, torch and safety cover for the full experience"
+      ],
+      "gem_access": [
+        "natacion",
+        "kayak_sup",
+        "barco",
+        "caminar"
       ]
     }
   ],
@@ -17498,5 +17504,5 @@
   "discounts": [],
   "CURRENT_SEED_VERSION": 295,
   "version": 319,
-  "seed_version": 366
+  "seed_version": 368
 }

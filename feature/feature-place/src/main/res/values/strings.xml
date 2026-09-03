@@ -45,4 +45,5 @@
     <string name="place_hidden_gem_no_subscription">Visita el lugar · Sin suscripción</string>
     <string name="place_share_prefix">Check out this place in Mallorca! 🌴\n</string>
     <string name="place_share_open_in_app">Open in app:</string>
+    <string name="place_view_wave_map">View Wave Map</string>
 </resources>
