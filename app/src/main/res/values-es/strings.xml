@@ -6,6 +6,8 @@
     <string name="nav_trips">Mis Viajes</string>
     <string name="nav_favorites">Favoritos</string>
     <string name="nav_gems">Gemas</string>
+    <string name="nav_events">Eventos</string>
+    <string name="nav_my_mallorca">Mi Mallorca</string>
 
     <!-- feature-map -->
     <string name="map_search_hint">Buscar lugares secretos…</string>
@@ -149,12 +151,14 @@
     <string name="explore_time_filter_this_week">Esta semana</string>
     <string name="explore_time_filter_this_month">Este mes</string>
     <string name="explore_time_filter_next_month">Próximo mes</string>
-    <string name="explore_event_category_market">Mercado</string>
+    <string name="explore_event_category_market">Ferias y Mercados</string>
     <string name="explore_event_category_festival">Festival</string>
     <string name="explore_event_category_concert">Concierto</string>
     <string name="explore_event_category_culture">Cultura</string>
     <string name="explore_event_category_sport">Deporte</string>
     <string name="explore_event_category_nightlife">Vida nocturna</string>
+    <string name="explore_event_category_gastronomy">Gastronomía</string>
+    <string name="explore_event_category_family">Familia</string>
     <!-- Place categories -->
     <string name="category_beach">Playa</string>
     <string name="category_hiking">Senderismo</string>
@@ -231,4 +235,7 @@
     <string name="onboarding_btn_start">¡Empezar!</string>
     <string name="onboarding_btn_next">Siguiente</string>
     <string name="onboarding_btn_skip">Omitir</string>
+
+    <string name="notification_gem_title">💎 ¡Nuevas gemas ocultas!</string>
+    <string name="notification_gem_body">Hemos añadido nuevos lugares secretos en Mallorca. Toca para descubrirlos.</string>
 </resources>

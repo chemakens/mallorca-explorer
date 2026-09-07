@@ -6,6 +6,8 @@
     <string name="nav_trips">Meine Reisen</string>
     <string name="nav_favorites">Favoriten</string>
     <string name="nav_gems">Geheimtipps</string>
+    <string name="nav_events">Events</string>
+    <string name="nav_my_mallorca">Mein Mallorca</string>
 
     <!-- feature-map -->
     <string name="map_search_hint">Geheime Orte suchen…</string>
@@ -149,12 +151,14 @@
     <string name="explore_time_filter_this_week">Diese Woche</string>
     <string name="explore_time_filter_this_month">Diesen Monat</string>
     <string name="explore_time_filter_next_month">Nächsten Monat</string>
-    <string name="explore_event_category_market">Markt</string>
+    <string name="explore_event_category_market">Märkte &amp; Messen</string>
     <string name="explore_event_category_festival">Festival</string>
     <string name="explore_event_category_concert">Konzert</string>
     <string name="explore_event_category_culture">Kultur</string>
     <string name="explore_event_category_sport">Sport</string>
     <string name="explore_event_category_nightlife">Nachtleben</string>
+    <string name="explore_event_category_gastronomy">Gastronomie</string>
+    <string name="explore_event_category_family">Familie</string>
     <!-- Place categories -->
     <string name="category_beach">Strand</string>
     <string name="category_hiking">Wandern</string>

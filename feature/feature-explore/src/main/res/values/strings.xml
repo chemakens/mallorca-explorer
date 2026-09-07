@@ -28,12 +28,14 @@
     <string name="explore_time_filter_this_week">This week</string>
     <string name="explore_time_filter_this_month">This month</string>
     <string name="explore_time_filter_next_month">Next month</string>
-    <string name="explore_event_category_market">Market</string>
+    <string name="explore_event_category_market">Fairs &amp; Markets</string>
     <string name="explore_event_category_festival">Festival</string>
     <string name="explore_event_category_concert">Concert</string>
     <string name="explore_event_category_culture">Culture</string>
     <string name="explore_event_category_sport">Sport</string>
     <string name="explore_event_category_nightlife">Nightlife</string>
+    <string name="explore_event_category_gastronomy">Gastronomy</string>
+    <string name="explore_event_category_family">Family</string>
     <!-- Place categories -->
     <string name="category_beach">Beach</string>
     <string name="category_hiking">Hiking</string>

@@ -31,14 +31,16 @@ android {
         applicationId = "com.mallorca.explorer"
         minSdk = 26
         targetSdk = 36
-        versionCode = 39
-        versionName = "1.9.5"
+        versionCode = 44
+        versionName = "1.14.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "MAPTILER_API_KEY",
             "\"${localProps.getProperty("MAPTILER_API_KEY", "demo")}\"")
         buildConfigField("String", "BASE_API_URL",
             "\"${localProps.getProperty("BASE_API_URL", "")}\"")
+        buildConfigField("String", "GOOGLE_WEB_CLIENT_ID",
+            "\"${localProps.getProperty("GOOGLE_WEB_CLIENT_ID", "")}\"")
     }
 
     buildFeatures {
@@ -130,7 +132,13 @@ dependencies {
     implementation(libs.timber)
     implementation(libs.kotlinx.serialization.json)
 
+    implementation(libs.firebase.auth)
+    implementation(libs.credentials)
+    implementation(libs.credentials.play.services.auth)
+    implementation(libs.google.identity.googleid)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.junit.ext)
     androidTestImplementation(libs.espresso.core)
 }
+// PLACEHOLDER - will be replaced

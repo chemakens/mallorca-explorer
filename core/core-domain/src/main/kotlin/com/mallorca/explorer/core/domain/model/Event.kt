@@ -25,11 +25,13 @@ data class Event(
     val websiteUrl: String?,
 )
 
-enum class EventCategory(val emoji: String) {
-    MARKET("🛒"),
-    FESTIVAL("🎪"),
-    CONCERT("🎵"),
-    CULTURE("🎭"),
-    SPORT("⚽"),
-    NIGHTLIFE("🎶"),
+enum class EventCategory(val emoji: String, val displayName: String) {
+    MARKET("🛒", "Ferias y Mercados"),
+    FESTIVAL("🎪", "Festivales"),
+    CONCERT("🎵", "Conciertos"),
+    CULTURE("🎭", "Cultura"),
+    SPORT("⚽", "Deporte"),
+    NIGHTLIFE("🎶", "Vida nocturna"),
+    GASTRONOMY("🍽️", "Gastronomía"),
+    FAMILY("👨‍👩‍👧", "Familia"),
 }

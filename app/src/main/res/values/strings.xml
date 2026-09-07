@@ -6,6 +6,8 @@
     <string name="nav_trips">My Trips</string>
     <string name="nav_favorites">Favorites</string>
     <string name="nav_gems">Gems</string>
+    <string name="nav_events">Events</string>
+    <string name="nav_my_mallorca">My Mallorca</string>
     <string name="widget_description">Sea and paddle surf conditions in Mallorca</string>
 
     <!-- feature-map -->
@@ -155,6 +157,8 @@
     <string name="explore_event_category_culture">Culture</string>
     <string name="explore_event_category_sport">Sport</string>
     <string name="explore_event_category_nightlife">Nightlife</string>
+    <string name="explore_event_category_gastronomy">Gastronomy</string>
+    <string name="explore_event_category_family">Family</string>
     <!-- Place categories -->
     <string name="category_beach">Beach</string>
     <string name="category_hiking">Hiking</string>
@@ -228,4 +232,7 @@
     <string name="onboarding_btn_start">Let\'s go!</string>
     <string name="onboarding_btn_next">Next</string>
     <string name="onboarding_btn_skip">Skip</string>
+
+    <string name="notification_gem_title">💎 New hidden gems!</string>
+    <string name="notification_gem_body">We\'ve added new secret spots in Mallorca. Tap to discover them.</string>
 </resources>

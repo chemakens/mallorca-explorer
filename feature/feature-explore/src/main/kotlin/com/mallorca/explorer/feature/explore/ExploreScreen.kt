@@ -504,18 +504,7 @@ fun ExploreScreen(
                                     }
                                 }
                             }
-                            // Events
-                            item {
-                                EventsSection(
-                                    events = uiState.upcomingEvents,
-                                    timeFilter = uiState.eventTimeFilter,
-                                    categoryFilter = uiState.eventCategoryFilter,
-                                    locale = uiState.locale,
-                                    onTimeFilterChange = viewModel::setEventTimeFilter,
-                                    onCategoryFilterChange = viewModel::setEventCategoryFilter,
-                                    onMoreInfoClicked = viewModel::onEventMoreInfoClicked,
-                                )
-                            }
+
                         }
                     }
                 }
@@ -832,6 +821,8 @@ private fun EventsSection(
                     EventCategory.CULTURE  -> stringResource(R.string.explore_event_category_culture)
                     EventCategory.SPORT    -> stringResource(R.string.explore_event_category_sport)
                     EventCategory.NIGHTLIFE -> stringResource(R.string.explore_event_category_nightlife)
+                    EventCategory.GASTRONOMY -> stringResource(R.string.explore_event_category_gastronomy)
+                    EventCategory.FAMILY   -> stringResource(R.string.explore_event_category_family)
                 }
                 FilterChip(
                     selected = categoryFilter == cat,
@@ -881,6 +872,8 @@ private fun EventCard(event: Event, locale: String, onMoreInfoClicked: (Event) -
         EventCategory.CULTURE  -> stringResource(R.string.explore_event_category_culture)
         EventCategory.SPORT    -> stringResource(R.string.explore_event_category_sport)
         EventCategory.NIGHTLIFE -> stringResource(R.string.explore_event_category_nightlife)
+        EventCategory.GASTRONOMY -> stringResource(R.string.explore_event_category_gastronomy)
+        EventCategory.FAMILY   -> stringResource(R.string.explore_event_category_family)
     }
     val recurringLabel = stringResource(R.string.explore_events_recurring)
     val dateStr = remember(event.startDateEpoch, event.endDateEpoch, event.isRecurring, recurringLabel) {
