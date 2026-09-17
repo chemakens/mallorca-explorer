@@ -31,8 +31,8 @@ android {
         applicationId = "com.mallorca.explorer"
         minSdk = 26
         targetSdk = 36
-        versionCode = 44
-        versionName = "1.14.0"
+        versionCode = 66
+        versionName = "1.17.16"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "MAPTILER_API_KEY",
@@ -133,9 +133,7 @@ dependencies {
     implementation(libs.kotlinx.serialization.json)
 
     implementation(libs.firebase.auth)
-    implementation(libs.credentials)
-    implementation(libs.credentials.play.services.auth)
-    implementation(libs.google.identity.googleid)
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.junit.ext)
