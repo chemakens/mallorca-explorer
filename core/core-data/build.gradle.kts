@@ -23,6 +23,11 @@ android {
             "WINDY_API_KEY",
             "\"${localProps.getProperty("WINDY_API_KEY", "")}\""
         )
+        buildConfigField(
+            "String",
+            "GOOGLE_WEB_CLIENT_ID",
+            "\"${localProps.getProperty("GOOGLE_WEB_CLIENT_ID", "")}\""
+        )
     }
     buildFeatures { buildConfig = true }
     compileOptions {
@@ -52,6 +57,10 @@ dependencies {
     implementation(libs.firebase.firestore)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.analytics)
+
+    implementation("androidx.credentials:credentials:1.3.0")
+    implementation("androidx.credentials:credentials-play-services-auth:1.3.0")
+    implementation("com.google.android.libraries.identity.googleid:googleid:1.1.1")
 
     implementation(libs.hilt.android)
     ksp(libs.hilt.android.compiler)

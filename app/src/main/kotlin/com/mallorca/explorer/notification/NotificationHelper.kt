@@ -52,3 +52,66 @@ fun sendEventNotification(context: Context, event: Event, notifId: Int) {
 
     NotificationManagerCompat.from(context).notify(notifId, notification)
 }
+
+fun sendNewGemNotification(context: Context) {
+    if (!NotificationManagerCompat.from(context).areNotificationsEnabled()) return
+
+    val tapIntent = Intent(context, MainActivity::class.java).apply {
+        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+    }
+    val pendingIntent = PendingIntent.getActivity(
+        context, 9999, tapIntent,
+        PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+    )
+
+    val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+        .setSmallIcon(R.drawable.ic_notification)
+        .setContentTitle(context.getString(R.string.notification_gem_title))
+        .setContentText(context.getString(R.string.notification_gem_body))
+        .setStyle(NotificationCompat.BigTextStyle().bigText(context.getString(R.string.notification_gem_body)))
+        .setContentIntent(pendingIntent)
+        .setAutoCancel(true)
+        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+        .build()
+
+    NotificationManagerCompat.from(context).notify(9999, notification)
+}
+
+fun sendDailySummaryNotification(context: Context, events: List<Event>) {
+    if (!NotificationManagerCompat.from(context).areNotificationsEnabled()) return
+    if (events.isEmpty()) return
+
+    val tapIntent = Intent(context, MainActivity::class.java).apply {
+        flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+    }
+    val pendingIntent = PendingIntent.getActivity(
+        context, 1001, tapIntent,
+        PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
+    )
+
+    val title = if (events.size == 1) {
+        "🗓 Mañana en Mallorca"
+    } else {
+        "Mañana hay ${events.size} eventos en Mallorca"
+    }
+
+    val maxTitles = 4
+    val eventTitles = events.take(maxTitles).map { it.titleEs.ifEmpty { it.title } }
+    val summaryText = if (events.size > maxTitles) {
+        eventTitles.joinToString(" · ") + " y ${events.size - maxTitles} más..."
+    } else {
+        eventTitles.joinToString(" · ")
+    }
+
+    val notification = NotificationCompat.Builder(context, CHANNEL_ID)
+        .setSmallIcon(R.drawable.ic_notification)
+        .setContentTitle(title)
+        .setContentText(summaryText)
+        .setStyle(NotificationCompat.BigTextStyle().bigText(summaryText))
+        .setContentIntent(pendingIntent)
+        .setAutoCancel(true)
+        .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+        .build()
+
+    NotificationManagerCompat.from(context).notify(1001, notification)
+}

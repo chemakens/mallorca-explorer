@@ -95,7 +95,24 @@
       "Bash(node *)",
       "Read(//private/tmp/**)",
       "Bash(unzip -q ~/Code/mallorca-explorer/app/build/outputs/bundle/release/app-release.aab -d aab_temp)",
-      "Bash(git checkout *)"
+      "Bash(git checkout *)",
+      "Bash(./gradlew :core:core-data:compileDebugKotlin --console=plain)",
+      "Bash(./gradlew installDebug --console=plain)",
+      "Bash(./gradlew :feature:feature-place:compileDebugKotlin --console=plain)",
+      "Bash(./gradlew bundleRelease --console=plain)",
+      "Bash(unzip -l app/build/outputs/bundle/release/app-release.aab)",
+      "Bash(./gradlew :core:core-data:compileDebugKotlin)",
+      "Bash(~/Library/Android/sdk/platform-tools/adb shell *)",
+      "Bash(~/Library/Android/sdk/platform-tools/adb logcat *)",
+      "Bash(./gradlew :app:bundleRelease)",
+      "Bash(tee /tmp/build_output.log)",
+      "Bash(shasum -a 256 app/build/outputs/bundle/release/app-release.aab)",
+      "Bash(./gradlew :feature:feature-settings:compileDebugKotlin --console=plain)",
+      "Bash(./gradlew :app:bundleRelease --console=plain)",
+      "Bash(~/Library/Android/sdk/platform-tools/adb devices *)",
+      "Bash(~/Library/Android/sdk/platform-tools/adb *)",
+      "Bash(/opt/homebrew/share/android-commandlinetools/platform-tools/adb devices *)",
+      "Bash(/opt/homebrew/share/android-commandlinetools/platform-tools/adb *)"
     ]
   }
 }

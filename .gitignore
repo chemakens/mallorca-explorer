@@ -10,6 +10,7 @@ local.properties
 .cxx
 .kotlin/
 **/google-services.json
+serviceAccountKey.json
 gradlew.bat
 app/release/
 node_modules/
@@ -19,3 +20,7 @@ node_modules/
 scripts/update-places-firestore.js
 scripts/upload-places-to-firestore.js
 scripts/verify-sa-foradada.js
+
+# Tools - generated files (scripts themselves are tracked)
+tools/review.html
+tools/approved_events.json

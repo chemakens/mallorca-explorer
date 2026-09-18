@@ -31,8 +31,8 @@ android {
         applicationId = "com.mallorca.explorer"
         minSdk = 26
         targetSdk = 36
-        versionCode = 66
-        versionName = "1.17.16"
+        versionCode = 67
+        versionName = "1.17.17"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
 
         buildConfigField("String", "MAPTILER_API_KEY",

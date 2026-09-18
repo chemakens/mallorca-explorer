@@ -11,6 +11,8 @@ import coil.ImageLoaderFactory
 import com.mallorca.explorer.core.common.LocaleSource
 import com.mallorca.explorer.core.data.datastore.UserPreferencesDataStore
 import com.mallorca.explorer.core.data.sync.SeedDataWorker
+import com.mallorca.explorer.notification.DailyEventCheckWorker
+import com.mallorca.explorer.notification.NewGemCheckWorker
 import com.mallorca.explorer.notification.createNotificationChannel
 import dagger.hilt.android.HiltAndroidApp
 import androidx.lifecycle.ProcessLifecycleOwner
@@ -53,11 +55,17 @@ class MallorcaApp : Application(), Configuration.Provider, ImageLoaderFactory {
             localeSource.setLocale(prefsDataStore.selectedLocale.first())
         }
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
+        android.util.Log.d("MallorcaApp", "🚀 onCreate called, BuildConfig.DEBUG=${BuildConfig.DEBUG}")
+        android.util.Log.d("MallorcaApp", "🚀 Enqueuing SeedDataWorker with REPLACE policy...")
+        Timber.d("🚀 Enqueuing SeedDataWorker with REPLACE policy...")
         WorkManager.getInstance(this).enqueueUniqueWork(
             "seed_data",
-            ExistingWorkPolicy.KEEP,
+            ExistingWorkPolicy.REPLACE,
             OneTimeWorkRequestBuilder<SeedDataWorker>().build(),
         )
+        android.util.Log.d("MallorcaApp", "✅ SeedDataWorker enqueued successfully")
+        NewGemCheckWorker.schedule(this)
+        DailyEventCheckWorker.schedule(this)
         createNotificationChannel(this)
     }
 }

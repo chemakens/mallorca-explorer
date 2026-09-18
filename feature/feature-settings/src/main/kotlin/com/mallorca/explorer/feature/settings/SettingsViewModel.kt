@@ -56,6 +56,9 @@ class SettingsViewModel @Inject constructor(
     private val _signInError = MutableStateFlow<String?>(null)
     val signInError: StateFlow<String?> = _signInError.asStateFlow()
 
+    private val _isSigningIn = MutableStateFlow(false)
+    val isSigningIn: StateFlow<Boolean> = _isSigningIn.asStateFlow()
+
     fun onVersionTapped() {
         val next = _devTapCount.value + 1
         if (next >= 7) {
@@ -96,11 +99,27 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch { notificationPreferences.setGemNotificationsEnabled(enabled) }
     }
 
+    /**
+     * Inicia el flujo de Google Sign-In usando Credential Manager.
+     * El diálogo de selección de cuenta es gestionado automáticamente por Credential Manager.
+     */
     fun signInWithGoogle(activityContext: Context) {
+        if (_isSigningIn.value) return
+
         viewModelScope.launch {
-            authRepository.signInWithGoogle(activityContext).onFailure { e ->
-                _signInError.value = e.message
-            }
+            _isSigningIn.value = true
+            _signInError.value = null
+
+            authRepository.signInWithGoogle(activityContext)
+                .onSuccess { user ->
+                    android.util.Log.d("MallorcaLogin", "✅ Google Sign-In exitoso: ${user.email}")
+                }
+                .onFailure { e ->
+                    android.util.Log.e("MallorcaLogin", "🔴 Error en Google Sign-In: ${e.message}", e)
+                    _signInError.value = e.message ?: "Error desconocido"
+                }
+
+            _isSigningIn.value = false
         }
     }
 
@@ -108,5 +127,7 @@ class SettingsViewModel @Inject constructor(
         viewModelScope.launch { authRepository.signOut() }
     }
 
-    fun clearSignInError() { _signInError.value = null }
+    fun clearSignInError() {
+        _signInError.value = null
+    }
 }

@@ -1,5 +1,7 @@
 package com.mallorca.explorer.core.data.repository
 
+import com.google.firebase.auth.FirebaseAuth
+import com.mallorca.explorer.core.data.auth.UserCloudDataSource
 import com.mallorca.explorer.core.data.database.dao.VisitedPlaceDao
 import com.mallorca.explorer.core.data.database.entity.VisitedPlaceEntity
 import com.mallorca.explorer.core.domain.repository.VisitedPlaceRepository
@@ -11,7 +13,11 @@ import javax.inject.Singleton
 @Singleton
 class VisitedPlaceRepositoryImpl @Inject constructor(
     private val visitedPlaceDao: VisitedPlaceDao,
+    private val cloud: UserCloudDataSource,
+    private val firebaseAuth: FirebaseAuth,
 ) : VisitedPlaceRepository {
+
+    private val uid get() = firebaseAuth.currentUser?.uid
 
     override fun getAllVisitedIds(): Flow<List<String>> = visitedPlaceDao.getAllVisitedIds()
 
@@ -19,10 +25,12 @@ class VisitedPlaceRepositoryImpl @Inject constructor(
 
     override suspend fun markVisited(placeId: String) {
         visitedPlaceDao.markVisited(VisitedPlaceEntity(placeId, System.currentTimeMillis()))
+        uid?.let { cloud.addVisited(it, placeId) }
     }
 
     override suspend fun unmarkVisited(placeId: String) {
         visitedPlaceDao.unmarkVisited(placeId)
+        uid?.let { cloud.removeVisited(it, placeId) }
     }
 
     override suspend fun toggleVisited(placeId: String) {

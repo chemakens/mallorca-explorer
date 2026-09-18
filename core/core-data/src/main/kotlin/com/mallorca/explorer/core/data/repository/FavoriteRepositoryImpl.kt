@@ -1,5 +1,7 @@
 package com.mallorca.explorer.core.data.repository
 
+import com.google.firebase.auth.FirebaseAuth
+import com.mallorca.explorer.core.data.auth.UserCloudDataSource
 import com.mallorca.explorer.core.data.database.dao.FavoriteDao
 import com.mallorca.explorer.core.data.database.dao.PlaceDao
 import com.mallorca.explorer.core.data.database.entity.FavoriteEntity
@@ -17,7 +19,11 @@ import javax.inject.Singleton
 class FavoriteRepositoryImpl @Inject constructor(
     private val favoriteDao: FavoriteDao,
     private val placeDao: PlaceDao,
+    private val cloud: UserCloudDataSource,
+    private val firebaseAuth: FirebaseAuth,
 ) : FavoriteRepository {
+
+    private val uid get() = firebaseAuth.currentUser?.uid
 
     override fun getFavoritePlaces(): Flow<List<Place>> =
         combine(
@@ -34,10 +40,12 @@ class FavoriteRepositoryImpl @Inject constructor(
 
     override suspend fun addFavorite(placeId: String) {
         favoriteDao.insert(FavoriteEntity(placeId, Instant.now().toEpochMilli()))
+        uid?.let { cloud.addFavorite(it, placeId) }
     }
 
     override suspend fun removeFavorite(placeId: String) {
         favoriteDao.delete(placeId)
+        uid?.let { cloud.removeFavorite(it, placeId) }
     }
 
     override suspend fun toggleFavorite(placeId: String) {

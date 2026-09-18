@@ -7,6 +7,7 @@ import androidx.work.ExistingPeriodicWorkPolicy
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
 import androidx.work.WorkerParameters
+import com.mallorca.explorer.core.data.preferences.NotificationPreferences
 import com.mallorca.explorer.core.domain.usecase.event.GetUpcomingEvents
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
@@ -19,11 +20,13 @@ class DailyEventCheckWorker @AssistedInject constructor(
     @Assisted private val context: Context,
     @Assisted workerParams: WorkerParameters,
     private val getUpcomingEvents: GetUpcomingEvents,
+    private val notificationPreferences: NotificationPreferences,
 ) : CoroutineWorker(context, workerParams) {
 
     override suspend fun doWork(): Result {
         return try {
             val events = getUpcomingEvents().first()
+            val enabledCategories = notificationPreferences.enabledCategories.first()
 
             val tomorrow = Calendar.getInstance().apply { add(Calendar.DAY_OF_YEAR, 1) }
             val tomorrowDayOfWeek = tomorrow.get(Calendar.DAY_OF_WEEK) // 1=Sun … 7=Sat
@@ -36,14 +39,17 @@ class DailyEventCheckWorker @AssistedInject constructor(
             val tomorrowEnd = tomorrowStart + TimeUnit.DAYS.toMillis(1)
 
             val tomorrowEvents = events.filter { event ->
-                if (event.isRecurring)
+                val matchesCategory = event.category in enabledCategories
+                val matchesDate = if (event.isRecurring)
                     event.recurringDayOfWeek == tomorrowDayOfWeek
                 else
                     event.startDateEpoch in tomorrowStart until tomorrowEnd
+                matchesCategory && matchesDate
             }
 
-            tomorrowEvents.forEachIndexed { index, event ->
-                sendEventNotification(context, event, notifId = 1000 + index)
+            // Enviar notificación resumen solo si hay eventos
+            if (tomorrowEvents.isNotEmpty()) {
+                sendDailySummaryNotification(context, tomorrowEvents)
             }
 
             Result.success()

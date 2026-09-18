@@ -13,6 +13,9 @@ interface EventDao {
     @Query("SELECT * FROM events ORDER BY startDateEpoch ASC")
     fun getAll(): Flow<List<EventEntity>>
 
+    @Query("SELECT COUNT(*) FROM events")
+    suspend fun getCount(): Int
+
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertAll(events: List<EventEntity>)
 

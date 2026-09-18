@@ -41,10 +41,19 @@ class SeedDataWorker @AssistedInject constructor(
 ) : CoroutineWorker(context, params) {
 
     override suspend fun doWork(): Result {
+        android.util.Log.d("SeedDataWorker", "🌱 doWork() called")
         val currentVersion = prefsDataStore.seedVersion.first()
-        if (currentVersion >= CURRENT_SEED_VERSION) return Result.success()
+        android.util.Log.d("SeedDataWorker", "🌱 Current version: $currentVersion, Target: $CURRENT_SEED_VERSION")
+        Timber.d("🌱 SeedDataWorker started. Current version: $currentVersion, Target: $CURRENT_SEED_VERSION")
 
+        if (currentVersion >= CURRENT_SEED_VERSION) {
+            android.util.Log.d("SeedDataWorker", "✅ Seed already up to date (v$currentVersion), skipping")
+            Timber.d("✅ Seed already up to date (v$currentVersion), skipping")
+            return Result.success()
+        }
 
+        android.util.Log.d("SeedDataWorker", "📦 Starting seed process from v$currentVersion to v$CURRENT_SEED_VERSION...")
+        Timber.d("📦 Starting seed process from v$currentVersion to v$CURRENT_SEED_VERSION...")
         return try {
             val rawJson = applicationContext.assets.open("seed_data.json")
                 .bufferedReader().use { it.readText() }
@@ -84,7 +93,8 @@ class SeedDataWorker @AssistedInject constructor(
             prefsDataStore.setEventsLastSyncedEpoch(System.currentTimeMillis())
             prefsDataStore.setIsSeeded(true)
             prefsDataStore.setSeedVersion(CURRENT_SEED_VERSION)
-            Timber.d("Seeded ${seedData.places.size} places, ${seedData.itineraries.size} itineraries, ${seedData.events.size} events (v$CURRENT_SEED_VERSION)")
+            android.util.Log.d("SeedDataWorker", "✅ Seed completed successfully: ${seedData.places.size} places, ${seedData.itineraries.size} itineraries, ${seedData.events.size} events (v$CURRENT_SEED_VERSION)")
+            Timber.d("✅ Seed completed successfully: ${seedData.places.size} places, ${seedData.itineraries.size} itineraries, ${seedData.events.size} events (v$CURRENT_SEED_VERSION)")
             Result.success()
         } catch (e: SerializationException) {
             Timber.e(e, "Seed JSON is malformed — permanent failure, no retry")
@@ -99,7 +109,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 368
+        const val CURRENT_SEED_VERSION = 398
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.

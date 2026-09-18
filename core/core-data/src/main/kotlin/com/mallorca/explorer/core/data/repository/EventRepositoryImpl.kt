@@ -67,14 +67,29 @@ class EventRepositoryImpl @Inject constructor(
     private suspend fun trySyncFromFirestore() {
         val now = System.currentTimeMillis()
         val lastSynced = prefsDataStore.eventsLastSyncedEpoch.first()
-        if (now - lastSynced < EVENTS_SYNC_TTL_MS) return
-        if (!networkMonitor.isOnline.first()) return
+        val localCount = eventDao.getCount()
+
+        // Always sync if Room is empty, otherwise respect TTL
+        val shouldSync = localCount == 0 || (now - lastSynced >= EVENTS_SYNC_TTL_MS)
+
+        if (!shouldSync) {
+            Timber.d("Skipping sync: $localCount events cached, last sync ${(now - lastSynced) / 1000}s ago")
+            return
+        }
+
+        if (!networkMonitor.isOnline.first()) {
+            Timber.d("Skipping sync: no network connection")
+            return
+        }
+
+        Timber.d("Starting Firestore sync: localCount=$localCount, lastSynced=${(now - lastSynced) / 1000}s ago")
 
         try {
             val remoteEvents = eventRemoteDataSource.fetchAll()
             if (remoteEvents.isNotEmpty()) {
                 eventDao.upsertAll(remoteEvents)
                 prefsDataStore.setEventsLastSyncedEpoch(now)
+                Timber.d("Successfully synced ${remoteEvents.size} events from Firestore")
             } else {
                 Timber.w("Firestore events sync returned an empty list — skipping replace to avoid wiping local data")
             }

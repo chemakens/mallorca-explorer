@@ -287,13 +287,13 @@ private fun EmptyTripsState(
         ) {
             val emptyStateImages = remember {
                 listOf(
-                    "file:///android_asset/images/trips-carousel-1.jpg", // PEXELS — Catedral La Seu, Palma
-                    "file:///android_asset/images/trips-carousel-2.jpg", // UNSPLASH — Castillo de Bellver, Palma
-                    "file:///android_asset/images/trips-carousel-3.jpg", // PIXABAY — Cartuja de Valldemossa
-                    "file:///android_asset/images/trips-carousel-4.jpg", // MINE — Sa Foradada al atardecer
-                    "file:///android_asset/images/trips-carousel-5.jpg", // PIXABAY — velero Mallorca
-                    "file:///android_asset/images/trips-carousel-6.jpg", // PEXELS — Cala Barques, Sant Vicenç
-                    "file:///android_asset/images/trips-carousel-7.jpg", // MINE — tapas restaurante pesquero
+                    "file:///android_asset/images/trips-carousel-1.webp", // PEXELS — Catedral La Seu, Palma
+                    "file:///android_asset/images/trips-carousel-2.webp", // UNSPLASH — Castillo de Bellver, Palma
+                    "file:///android_asset/images/trips-carousel-3.webp", // PIXABAY — Cartuja de Valldemossa
+                    "file:///android_asset/images/trips-carousel-4.webp", // MINE — Sa Foradada al atardecer
+                    "file:///android_asset/images/trips-carousel-5.webp", // PIXABAY — velero Mallorca
+                    "file:///android_asset/images/trips-carousel-6.webp", // PEXELS — Cala Barques, Sant Vicenç
+                    "file:///android_asset/images/trips-carousel-7.webp", // MINE — tapas restaurante pesquero
                 )
             }
             var currentIndex by remember { mutableIntStateOf(0) }

@@ -1,0 +1,2472 @@
+#!/usr/bin/env python3
+"""
+Web Scraping Events for Mallorca
+---------------------------------
+Scrapes multiple Mallorca event websites with specific selectors
+for accurate date and price extraction.
+"""
+
+import sys
+import json
+import hashlib
+import re
+import threading as _th
+import webbrowser
+import time
+from pathlib import Path
+from datetime import datetime
+from typing import List, Dict, Optional, Set
+from http.server import HTTPServer, BaseHTTPRequestHandler
+
+try:
+    import requests
+    from bs4 import BeautifulSoup
+    from playwright.sync_api import sync_playwright, TimeoutError as PlaywrightTimeout
+except ImportError:
+    print("❌ Missing dependencies. Install with:")
+    print("   pip install requests beautifulsoup4 lxml playwright")
+    print("   playwright install chromium")
+    sys.exit(1)
+
+# Paths
+TOOLS_DIR = Path(__file__).parent
+REVIEW_HTML = TOOLS_DIR / "review.html"
+
+# Mallorca municipalities
+MALLORCA_MUNICIPALITIES = {
+    "palma", "calvià", "manacor", "llucmajor", "marratxí", "inca", "alcúdia",
+    "felanitx", "pollença", "sóller", "sa pobla", "artà", "campos", "santanyí",
+    "ses salines", "capdepera", "andratx", "santa margalida", "petra", "muro",
+    "alaró", "binissalem", "sant llorenç", "santa maria", "esporles", "sineu",
+    "porreres", "algaida", "consell", "búger", "costitx", "ariany", "banyalbufar",
+    "campanet", "deià", "escorca", "estellencs", "fornalutx", "lloret", "lloseta",
+    "maria de la salut", "montuïri", "puigpunyent", "sant joan", "selva", "sencelles",
+    "vilafranca"
+}
+
+# Category keywords
+CATEGORY_KEYWORDS = {
+    "CONCERT": ["concierto", "concert", "música", "music", "recital", "jazz", "rock", "pop", "orquestra", "sinfónica"],
+    "FESTIVAL": ["festival", "feria", "fiesta", "festa", "celebración"],
+    "SPORT": ["deporte", "sport", "triatlón", "maratón", "ciclismo", "running", "vela", "regata"],
+    "CULTURE": ["exposición", "exhibition", "teatro", "theatre", "danza", "dance", "conferencia", "obra"],
+    "GASTRONOMY": ["gastronómico", "gastronomic", "cata", "tasting", "culinaria"],
+    "MARKET": ["mercado", "market", "mercat", "artesanía", "fira"],
+    "NIGHTLIFE": ["fiesta", "party", "noche", "night", "discoteca", "club"],
+    "FAMILY": ["familia", "family", "niños", "kids", "children", "infantil", "familiar"],
+}
+
+
+def generate_event_id(source: str, title: str, date: str) -> str:
+    """Generate unique event ID."""
+    content = f"{source}-{title}-{date}"
+    hash_obj = hashlib.md5(content.encode())
+    return f"web-{source}-{hash_obj.hexdigest()[:12]}"
+
+
+def detect_category(text: str) -> str:
+    """Detect category from text."""
+    text_lower = text.lower()
+    for category, keywords in CATEGORY_KEYWORDS.items():
+        if any(keyword in text_lower for keyword in keywords):
+            return category
+    return "CULTURE"
+
+
+def normalize_municipality(location: str) -> Optional[str]:
+    """Normalize location to Mallorca municipality."""
+    if not location:
+        return None
+
+    location_lower = location.lower().strip()
+
+    if location_lower in MALLORCA_MUNICIPALITIES:
+        return location.title()
+
+    for municipality in MALLORCA_MUNICIPALITIES:
+        if municipality in location_lower:
+            return municipality.title()
+
+    if "palma" in location_lower:
+        return "Palma"
+
+    return None
+
+
+def parse_date(date_str: str) -> Optional[str]:
+    """Parse date string to ISO format (YYYY-MM-DD)."""
+    if not date_str:
+        return None
+
+    # Clean up the date string
+    date_str = date_str.strip()
+
+    # Spanish and Catalan month names
+    months_es = {
+        "enero": "01", "febrero": "02", "marzo": "03", "abril": "04",
+        "mayo": "05", "junio": "06", "julio": "07", "agosto": "08",
+        "septiembre": "09", "octubre": "10", "noviembre": "11", "diciembre": "12",
+        "ene": "01", "feb": "02", "mar": "03", "abr": "04", "may": "05",
+        "jun": "06", "jul": "07", "ago": "08", "sep": "09", "oct": "10",
+        "nov": "11", "dic": "12",
+        # Catalan months
+        "gener": "01", "febrer": "02", "març": "03", "abril": "04",
+        "maig": "05", "juny": "06", "juliol": "07", "agost": "08",
+        "setembre": "09", "octubre": "10", "novembre": "11", "desembre": "12"
+    }
+
+    date_normalized = date_str.lower()
+    for month_name, month_num in months_es.items():
+        date_normalized = date_normalized.replace(month_name, month_num)
+
+    # Try common formats
+    formats = [
+        "%d/%m/%Y", "%d-%m-%Y", "%Y-%m-%d",
+        "%d de %m de %Y", "%d %m %Y", "%d.%m.%Y"
+    ]
+
+    for fmt in formats:
+        try:
+            dt = datetime.strptime(date_normalized, fmt)
+            return dt.strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+
+    # Extract with regex (dd/mm/yyyy or dd-mm-yyyy)
+    match = re.search(r'(\d{1,2})[/-](\d{1,2})[/-](\d{4})', date_str)
+    if match:
+        day, month, year = match.groups()
+        try:
+            dt = datetime(int(year), int(month), int(day))
+            return dt.strftime("%Y-%m-%d")
+        except ValueError:
+            pass
+
+    return None
+
+
+def fetch_date_from_url(event_url: str, session=None) -> Optional[str]:
+    """Fetch an event detail page and extract the date from its text content."""
+    try:
+        import requests as _requests
+        s = session or _requests.Session()
+        s.headers.update({'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'})
+        resp = s.get(event_url, timeout=15)
+        detail_soup = BeautifulSoup(resp.content, 'html.parser')
+        text = detail_soup.get_text()
+
+        # Try parse_date on the full page text
+        date = parse_date(text)
+        if date:
+            return date
+
+        # Spanish date pattern: "19 de noviembre de 2026"
+        MESES_ES = {
+            'enero': '01', 'febrero': '02', 'marzo': '03', 'abril': '04',
+            'mayo': '05', 'junio': '06', 'julio': '07', 'agosto': '08',
+            'septiembre': '09', 'octubre': '10', 'noviembre': '11', 'diciembre': '12'
+        }
+        m = re.search(
+            r'(\d{1,2})\s+de\s+(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+de\s+(\d{4})',
+            text, re.IGNORECASE
+        )
+        if m:
+            day = m.group(1).zfill(2)
+            month = MESES_ES[m.group(2).lower()]
+            year = m.group(3)
+            return f"{year}-{month}-{day}"
+    except Exception:
+        pass
+    return None
+
+
+def extract_price(text: str) -> tuple[bool, Optional[str]]:
+    """Extract price from text."""
+    text_lower = text.lower()
+
+    if any(word in text_lower for word in ["gratis", "gratuito", "free", "entrada libre", "sin coste"]):
+        return True, None
+
+    price_match = re.search(r'(\d+(?:[.,]\d{2})?)\s*€', text)
+    if price_match:
+        price_str = price_match.group(1).replace(',', '.')
+        return False, f"{price_str}€"
+
+    return True, None
+
+
+# ============================================================================
+# SPECIFIC SCRAPERS WITH ACCURATE SELECTORS
+# ============================================================================
+
+def scrape_auditorium_palma() -> List[Dict]:
+    """Scrape Auditorium Palma with specific selectors."""
+    events = []
+    url = "https://auditoriumpalma.com/es/"
+
+    try:
+        print(f"   🔍 Scraping (Playwright): auditorium...")
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(url, wait_until="networkidle", timeout=30000)
+            page.wait_for_timeout(2000)
+
+            html_content = page.content()
+            browser.close()
+
+            soup = BeautifulSoup(html_content, 'html.parser')
+
+            # Auditorium uses Elementor cards
+            event_cards = soup.select('article.elementor-post')
+
+            for card in event_cards:  # Process ALL events, not just first 40
+                # Title - find the link in the card
+                link_elem = card.select_one('a[href*="/espectaculo/"]')
+                if not link_elem:
+                    continue
+
+                title_elem = card.select_one('h3, h2, .elementor-post__title')
+                if not title_elem:
+                    # Try to get all text from the card as title
+                    text_div = card.select_one('.elementor-post__text')
+                    if text_div:
+                        lines = [line.strip() for line in text_div.stripped_strings]
+                        title = lines[0] if lines else None
+                    else:
+                        continue
+                else:
+                    title = title_elem.get_text(strip=True)
+
+                event_url = link_elem.get('href', url)
+
+                # Date - extract from .elementor-post-date
+                date_elem = card.select_one('.elementor-post-date')
+                date_str = None
+
+                if date_elem:
+                    date_text = date_elem.get_text(strip=True)
+                    # Format: "Del 11 Sep. al 12 Sep. 2026" or "11 Sep. 2026"
+                    # Extract the date
+                    match = re.search(r'(\d{1,2})\s+(\w+)\.?\s+(\d{4})', date_text)
+                    if match:
+                        day, month, year = match.groups()
+                        # Convert Spanish month abbreviation
+                        month_map = {
+                            'ene': '01', 'feb': '02', 'mar': '03', 'abr': '04',
+                            'may': '05', 'jun': '06', 'jul': '07', 'ago': '08',
+                            'sep': '09', 'oct': '10', 'nov': '11', 'dic': '12'
+                        }
+                        month_num = month_map.get(month.lower()[:3], '01')
+                        date_str = f"{year}-{month_num}-{day.zfill(2)}"
+
+                # Price - check for "Comprar entrada" button (means paid)
+                text = card.get_text()
+                has_buy_button = 'comprar entrada' in text.lower()
+
+                if has_buy_button:
+                    is_free = False
+                    price = "Consultar web"
+                else:
+                    is_free, price = extract_price(text)
+
+                if title and date_str:
+                    events.append({
+                        "source": "auditorium",
+                        "title": title,
+                        "start_date": date_str,
+                        "municipality": "Palma",
+                        "category": detect_category(title + " " + text),
+                        "is_free": is_free,
+                        "price": price,
+                        "website_url": event_url,
+                    })
+
+        print(f"      ✅ Found {len(events)} events")
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_firesifestes() -> List[Dict]:
+    """Scrape Fires i Festes usando Playwright — calendario mes a mes.
+
+    Estrategia: navegar directamente a /es/calendario/YYYY/MM/, recoger todos
+    los links /es/evento/ de la página. Visita también la página de detalle
+    de cada evento para obtener la fecha exacta si no está en la lista.
+    """
+    events = []
+    base_url = "https://firesifestes.es"
+
+    MESES_FF = {
+        'enero': '01', 'febrero': '02', 'marzo': '03', 'abril': '04',
+        'mayo': '05', 'junio': '06', 'julio': '07', 'agosto': '08',
+        'septiembre': '09', 'octubre': '10', 'noviembre': '11', 'diciembre': '12',
+        'gener': '01', 'febrer': '02', 'marc': '03', 'març': '03', 'abril': '04',
+        'maig': '05', 'juny': '06', 'juliol': '07', 'agost': '08',
+        'setembre': '09', 'octubre': '10', 'novembre': '11', 'desembre': '12',
+        'january': '01', 'february': '02', 'march': '03', 'april': '04',
+        'may': '05', 'june': '06', 'july': '07', 'august': '08',
+        'september': '09', 'october': '10', 'november': '11', 'december': '12',
+    }
+
+    today = datetime.now().date()
+    seen_urls: Set[str] = set()
+    seen_titles: Set[str] = set()
+
+    def _extract_date_from_text(text: str, year: int, month: int):
+        """Try to extract a full date from event text."""
+        text_up = text.upper()
+        # "EVENTOS PARA 3 OCTUBRE" or "3 DE OCTUBRE"
+        m = re.search(
+            r'(\d{1,2})\s+(?:DE\s+)?(ENERO|FEBRERO|MARZO|ABRIL|MAYO|JUNIO|JULIO|AGOSTO|'
+            r'SEPTIEMBRE|OCTUBRE|NOVIEMBRE|DICIEMBRE|JANUARY|FEBRUARY|MARCH|APRIL|MAY|'
+            r'JUNE|JULY|AUGUST|SEPTEMBER|OCTOBER|NOVEMBER|DECEMBER|'
+            r'GENER|FEBRER|MARC|MARÇ|MAIG|JUNY|JULIOL|AGOST|SETEMBRE|NOVEMBRE|DESEMBRE)',
+            text_up
+        )
+        if m:
+            day = m.group(1).zfill(2)
+            mon = MESES_FF.get(m.group(2).lower())
+            if mon:
+                return f"{year}-{mon}-{day}"
+        # <time datetime="YYYY-MM-DD">
+        m = re.search(r'datetime=["\'](\d{4}-\d{2}-\d{2})', text)
+        if m:
+            return m.group(1)
+        return None
+
+    try:
+        print(f"   🔍 Scraping (Playwright): firesifestes...")
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.set_default_timeout(25000)
+
+            import calendar as _cal
+
+            # Strategy: click each day in the calendar — events appear with date heading
+            # "EVENTOS PARA 13TH SEPTIEMBRE" → exact date known
+            for month_offset in range(3):  # current month + next 2
+                abs_month = today.month - 1 + month_offset
+                target_year = today.year + abs_month // 12
+                target_month = abs_month % 12 + 1
+
+                cal_url = f"{base_url}/es/calendario/{target_year}/{str(target_month).zfill(2)}/"
+                try:
+                    page.goto(cal_url, wait_until="networkidle", timeout=25000)
+                    page.wait_for_timeout(2000)
+                except Exception:
+                    continue
+
+                days_in_month = _cal.monthrange(target_year, target_month)[1]
+                start_day = today.day if (target_year == today.year and target_month == today.month) else 1
+
+                # Esperar a que el calendario renderice los días con eventos
+                try:
+                    page.wait_for_selector('dt.mec-has-event', timeout=8000)
+                except Exception:
+                    pass  # Si no aparece, la lista estará vacía y pasamos al siguiente mes
+                # Clic solo en días con eventos (dt.mec-has-event) — selector correcto
+                day_elements = page.query_selector_all('dt.mec-has-event')
+                for dt_el in day_elements:
+                    try:
+                        day_num_text = dt_el.inner_text().strip().split()[0]
+                        day_num = int(day_num_text)
+                    except Exception:
+                        continue
+                    day_date_str = f"{target_year}-{str(target_month).zfill(2)}-{str(day_num).zfill(2)}"
+                    try:
+                        dt_el.click()
+                        page.wait_for_timeout(600)
+                    except Exception:
+                        continue
+
+                    html = page.content()
+                    soup = BeautifulSoup(html, 'html.parser')
+
+                    for a in soup.find_all('a', href=True):
+                        href = a.get('href', '')
+                        if '/evento/' not in href or 'evento-tipo' in href:
+                            continue
+                        full_url = href if href.startswith('http') else f"{base_url}{href}"
+                        if full_url in seen_urls:
+                            continue
+                        seen_urls.add(full_url)
+                        title = a.get_text(strip=True)
+                        if not title or len(title) < 4:
+                            continue
+                        # Date is known from the day we clicked
+                        title_key = title.lower()[:60]
+                        if title_key in seen_titles:
+                            continue
+                        seen_titles.add(title_key)
+
+                        parent = a.parent
+                        container_text = parent.get_text(separator=' ', strip=True)[:300] if parent else ''
+                        municipality = normalize_municipality(container_text or title) or "Mallorca"
+                        is_free, price = extract_price(container_text)
+
+                        events.append({
+                            "source": "firesifestes",
+                            "title": title[:100],
+                            "description": "",
+                            "start_date": day_date_str,
+                            "municipality": municipality,
+                            "category": "FESTIVAL",
+                            "is_free": is_free,
+                            "price": price,
+                            "website_url": full_url,
+                        })
+
+            # Also scrape category pages for events further in the future
+            for cat_url in [
+                f"{base_url}/es/evento-tipo/ferias-y-fiestas/",
+                f"{base_url}/es/evento-tipo/musica-y-teatro/",
+                f"{base_url}/es/evento-tipo/mercados/",
+                f"{base_url}/es/evento-tipo/arte-i-exposiciones/",
+            ]:
+                try:
+                    page.goto(cat_url, wait_until="networkidle", timeout=25000)
+                    page.wait_for_timeout(1500)
+                    html = page.content()
+                    soup = BeautifulSoup(html, 'html.parser')
+                    for a in soup.find_all('a', href=True):
+                        href = a.get('href', '')
+                        if '/evento/' not in href or 'evento-tipo' in href:
+                            continue
+                        full_url = href if href.startswith('http') else f"{base_url}{href}"
+                        if full_url in seen_urls:
+                            continue
+                        seen_urls.add(full_url)
+                        title = a.get_text(strip=True)
+                        if not title or len(title) < 4:
+                            continue
+                        title_key = title.lower()[:60]
+                        if title_key in seen_titles:
+                            continue
+                        seen_titles.add(title_key)
+                        # Visit detail page for date
+                        date_str = None
+                        container_text = ''
+                        try:
+                            dp = browser.new_page()
+                            dp.goto(full_url, wait_until="networkidle", timeout=20000)
+                            dp.wait_for_timeout(800)
+                            dhtml = dp.content()
+                            dsoup = BeautifulSoup(dhtml, 'html.parser')
+                            dp.close()
+                            t = dsoup.find('time', attrs={'datetime': True})
+                            if t and re.match(r'\d{4}-\d{2}-\d{2}', t['datetime'][:10]):
+                                date_str = t['datetime'][:10]
+                            if not date_str:
+                                for sc in dsoup.find_all('script', type='application/ld+json'):
+                                    try:
+                                        import json as _json
+                                        jd = _json.loads(sc.string or '')
+                                        sd = jd.get('startDate', '')
+                                        if sd and re.match(r'\d{4}-\d{2}-\d{2}', sd):
+                                            date_str = sd[:10]; break
+                                    except: pass
+                            if not date_str:
+                                date_str = _extract_date_from_text(
+                                    dsoup.get_text(separator=' '), today.year, today.month)
+                            container_text = dsoup.get_text(separator=' ', strip=True)[:300]
+                        except: pass
+                        if not date_str:
+                            date_str = today.strftime('%Y-%m-%d')
+                        try:
+                            if datetime.strptime(date_str, '%Y-%m-%d').date() < today:
+                                continue
+                        except: pass
+                        municipality = normalize_municipality(container_text or title) or "Mallorca"
+                        is_free, price = extract_price(container_text)
+                        events.append({
+                            "source": "firesifestes",
+                            "title": title[:100],
+                            "description": "",
+                            "start_date": date_str,
+                            "municipality": municipality,
+                            "category": "FESTIVAL",
+                            "is_free": is_free,
+                            "price": price,
+                            "website_url": full_url,
+                        })
+                except: continue
+
+            browser.close()
+
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_mallorcafiestas() -> List[Dict]:
+    """Scrape Mallorca Fiestas extracting dates from URL patterns."""
+    events = []
+    base_url = "https://mallorcafiestas.com"
+
+    try:
+        print(f"   🔍 Scraping: mallorcafiestas...")
+
+        session = requests.Session()
+        session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        })
+
+        today = datetime.now().date()
+
+        # Generate URLs for current month + next 5 months
+        urls_to_scrape = [base_url]
+        current_date = today
+        for i in range(6):
+            year = current_date.year
+            month = current_date.month
+            urls_to_scrape.append(f"{base_url}/{year}/{month:02d}/")
+            # Move to next month
+            if month == 12:
+                current_date = current_date.replace(year=year+1, month=1, day=1)
+            else:
+                current_date = current_date.replace(month=month+1, day=1)
+
+        for url in urls_to_scrape:
+            try:
+                response = session.get(url, timeout=15)
+                soup = BeautifulSoup(response.content, 'html.parser')
+
+                # Find all links with date pattern /YYYY/MM/DD/
+                all_links = soup.find_all('a', href=True)
+
+                for link in all_links:
+                    href = link.get('href', '')
+
+                    # Extract date from URL pattern /YYYY/MM/DD/
+                    date_match = re.search(r'/(\d{4})/(\d{2})/(\d{2})/', href)
+
+                    if date_match:
+                        year, month, day = date_match.groups()
+                        date_str = f"{year}-{month}-{day}"
+
+                        # Filter past events
+                        try:
+                            event_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+                            if event_date < today:
+                                continue
+                        except:
+                            continue
+
+                        # Extract title from link text
+                        title = link.get_text(strip=True)
+                        if not title or len(title) < 3:
+                            continue
+
+                        # Skip domain strings that appear as titles
+                        if re.match(r'^[\w.-]+\.(com|es|net|org|info)\.?$', title, re.IGNORECASE):
+                            continue
+
+                        # Extract municipality from surrounding text
+                        parent = link.parent
+                        text = parent.get_text() if parent else ""
+                        municipality = normalize_municipality(text) or "Mallorca"
+
+                        # Strip municipality name appended to title (e.g. "Mercado SemanalAlcudia")
+                        if municipality and municipality != "Mallorca":
+                            import re as _re
+                            title = _re.sub(r'\s*' + _re.escape(municipality) + r'\s*$', '', title, flags=_re.IGNORECASE).strip()
+
+                        # Build full URL
+                        event_url = href if href.startswith('http') else f"{base_url}{href}"
+
+                        # Price
+                        is_free, price = extract_price(text)
+
+                        events.append({
+                            "source": "mallorcafiestas",
+                            "title": title[:100],
+                            "start_date": date_str,
+                            "municipality": municipality,
+                            "category": "FESTIVAL",
+                            "is_free": is_free,
+                            "price": price,
+                            "website_url": event_url,
+                        })
+                    else:
+                        # No date in URL - check if this is an event link
+                        if 'fiestas' in href or 'eventos' in href or 'event' in href:
+                            title = link.get_text(strip=True)
+                            if title and len(title) >= 3 and not re.match(r'^[\w.-]+\.(com|es|net|org|info)\.?$', title, re.IGNORECASE):
+                                parent = link.parent
+                                text = parent.get_text() if parent else ""
+                                municipality = normalize_municipality(text) or "Mallorca"
+
+                                # Fallback date — use today so global filter keeps it
+                                date_str = today.strftime('%Y-%m-%d')
+
+                                event_url = href if href.startswith('http') else f"{base_url}{href}"
+                                is_free, price = extract_price(text)
+
+                                events.append({
+                                    "source": "mallorcafiestas",
+                                    "title": title[:100],
+                                    "start_date": date_str,
+                                    "municipality": municipality,
+                                    "category": "FESTIVAL",
+                                    "is_free": is_free,
+                                    "price": price,
+                                    "website_url": event_url,
+                                })
+
+                # Small delay between pages
+                time.sleep(0.3)
+
+            except Exception as e:
+                continue
+
+        print(f"      ✅ Found {len(events)} events")
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_mallorcamusicmagazine() -> List[Dict]:
+    """Scrape Mallorca Music Magazine with specific selectors."""
+    events = []
+    url = "https://mallorcamusicmagazine.com/conciertos/"
+
+    try:
+        print(f"   🔍 Scraping: mallorcamusicmagazine...")
+
+        session = requests.Session()
+        session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        })
+
+        response = session.get(url, timeout=15)
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        event_items = soup.select('li.qodef-blog-list-item')
+
+        for item in event_items:  # Process ALL events
+            # Title and URL
+            link_elem = item.select_one('a[href*="/concierto/"]')
+            if not link_elem:
+                continue
+
+            event_url = link_elem.get('href', url)
+
+            # Title is in the text content
+            text = item.get_text()
+            lines = [line.strip() for line in text.split('\n') if line.strip()]
+
+            # First substantial line is usually the artist/title
+            title = None
+            for line in lines:
+                if len(line) > 3 and line not in ['DESTACADOS', 'MÚSICA', 'DEPORTES']:
+                    title = line
+                    break
+
+            if not title:
+                continue
+
+            # Date extraction - look for patterns like "9 septiembre 2026"
+            date_str = None
+            for line in lines:
+                match = re.search(r'(\d{1,2})\s+(\w+)\s+(\d{4})', line)
+                if match:
+                    day, month_name, year = match.groups()
+                    month_map = {
+                        'enero': '01', 'febrero': '02', 'marzo': '03', 'abril': '04',
+                        'mayo': '05', 'junio': '06', 'julio': '07', 'agosto': '08',
+                        'septiembre': '09', 'octubre': '10', 'noviembre': '11', 'diciembre': '12'
+                    }
+                    month = month_map.get(month_name.lower(), '01')
+                    date_str = f"{year}-{month}-{day.zfill(2)}"
+                    break
+
+            # Municipality - default to Palma, look for specific mentions
+            municipality = "Palma"
+            text_lower = text.lower()
+            for muni in ["inca", "manacor", "alcúdia", "pollença", "sóller"]:
+                if muni in text_lower:
+                    municipality = muni.title()
+                    break
+
+            # Price
+            is_free, price = extract_price(text)
+
+            if title and date_str:
+                events.append({
+                    "source": "mallorcamusicmagazine",
+                    "title": title,
+                    "start_date": date_str,
+                    "municipality": municipality,
+                    "category": "CONCERT",
+                    "is_free": is_free,
+                    "price": price or "Consultar web",
+                    "website_url": event_url,
+                })
+
+        print(f"      ✅ Found {len(events)} events")
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_conciertos_club() -> List[Dict]:
+    """Scrape Conciertos.club Baleares with specific selectors."""
+    events = []
+    url = "https://conciertos.club/baleares"
+
+    try:
+        print(f"   🔍 Scraping: conciertos.club...")
+
+        session = requests.Session()
+        session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        })
+
+        response = session.get(url, timeout=15)
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        # Select individual event items within articles
+        event_items = soup.select('article li[itemprop="itemListElement"]')
+
+        for item in event_items:  # Process ALL events
+            text = item.get_text()
+            lines = [line.strip() for line in text.split('\n') if line.strip()]
+
+            # Link
+            link_elem = item.select_one('a[href^="/baleares/conciertos/"]')
+            if not link_elem:
+                continue
+
+            event_url = "https://conciertos.club" + link_elem.get('href', '')
+
+            # Title - extract artist name
+            # Structure: time (20:00), artist name, genre (/ Genre), venue
+            title = None
+            for i, line in enumerate(lines):
+                # Skip time (HH:MM pattern)
+                if re.match(r'^\d{2}:\d{2}$', line):
+                    continue
+                # Skip genre lines (start with /)
+                if line.startswith('/'):
+                    continue
+                # Skip venue/location lines (contain "Palma de Mallorca")
+                if 'Palma de Mallorca' in line or 'Baleares' in line or 'Comprar' in line:
+                    continue
+                # Artist name should be a short, substantial line
+                if len(line) > 2 and len(line) < 100:
+                    title = line
+                    break
+
+            if not title:
+                continue
+
+            # Date - look in parent article for date
+            parent_article = item.find_parent('article')
+            date_str = None
+            if parent_article:
+                date_div = parent_article.select_one('.tit')
+                if date_div:
+                    date_text = date_div.get_text(strip=True)
+                    match = re.search(r'(\d{1,2})\s+de\s+(\w+)', date_text)
+                    if match:
+                        day, month_name = match.groups()
+                        month_map = {
+                            'enero': '01', 'febrero': '02', 'marzo': '03', 'abril': '04',
+                            'mayo': '05', 'junio': '06', 'julio': '07', 'agosto': '08',
+                            'septiembre': '09', 'octubre': '10', 'noviembre': '11', 'diciembre': '12'
+                        }
+                        month = month_map.get(month_name.lower(), '09')
+                        # Assume 2026 for future events
+                        date_str = f"2026-{month}-{day.zfill(2)}"
+
+            if not date_str:
+                continue
+
+            # Municipality
+            municipality = normalize_municipality(text) or "Palma"
+
+            # Price
+            is_free, price = extract_price(text)
+
+            if title and date_str:
+                events.append({
+                    "source": "conciertos.club",
+                    "title": title,
+                    "start_date": date_str,
+                    "municipality": municipality,
+                    "category": "CONCERT",
+                    "is_free": is_free,
+                    "price": price or "Consultar web",
+                    "website_url": event_url,
+                })
+
+        print(f"      ✅ Found {len(events)} events")
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_resident_advisor() -> List[Dict]:
+    """Scrape Resident Advisor events using their GraphQL API."""
+    events = []
+    url = "https://ra.co/graphql"
+
+    try:
+        print(f"   🔍 Scraping: Resident Advisor API...")
+
+        # Date range: from today to end of year
+        from datetime import datetime
+        today = datetime.now()
+        end_date = f"{today.year}-12-31"
+        start_date = today.strftime("%Y-%m-%d")
+
+        # GraphQL query for Mallorca events (area ID 31)
+        query = f"""
+        {{
+          eventListings(
+            filters: {{
+              areas: {{ eq: 31 }}
+              listingDate: {{ gte: "{start_date}", lte: "{end_date}" }}
+            }}
+            pageSize: 100
+          ) {{
+            data {{
+              event {{
+                title
+                date
+                venue {{
+                  name
+                  area {{
+                    name
+                  }}
+                }}
+              }}
+            }}
+          }}
+        }}
+        """
+
+        response = requests.post(
+            url,
+            json={"query": query},
+            headers={
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36",
+                "Referer": "https://ra.co",
+                "Content-Type": "application/json"
+            },
+            timeout=15
+        )
+
+        if response.status_code != 200:
+            print(f"      ❌ API returned status {response.status_code}")
+            return events
+
+        data = response.json()
+
+        # Check for GraphQL errors
+        if 'errors' in data:
+            print(f"      ⚠️  GraphQL errors: {data['errors'][0]['message']}")
+            return events
+
+        # Extract events
+        if 'data' in data and 'eventListings' in data['data']:
+            api_events = data['data']['eventListings']['data']
+
+            for item in api_events:
+                evt = item['event']
+
+                # Parse date (format: YYYY-MM-DD)
+                date_str = evt['date']
+
+                # Municipality from venue name or area
+                municipality = "Palma"
+                venue_name = evt['venue']['name']
+
+                # Try to extract municipality from venue name or area
+                area_name = evt['venue']['area']['name']
+                if 'ibiza' in area_name.lower():
+                    continue  # Skip Ibiza events
+                if area_name == 'Mallorca' or 'palma' in venue_name.lower():
+                    municipality = "Palma"
+
+                # Build event URL
+                # RA URLs are like: https://ra.co/events/{event-id}
+                event_url = "https://ra.co"  # Base URL, specific event URL requires event ID
+
+                events.append({
+                    "source": "residentadvisor",
+                    "title": evt['title'],
+                    "start_date": date_str,
+                    "municipality": municipality,
+                    "category": "CONCERT",
+                    "is_free": False,
+                    "price": "Consultar web",
+                    "website_url": event_url,
+                })
+
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_wodira() -> List[Dict]:
+    """Scrape Wodira.app Mallorca calendar with Playwright."""
+    events = []
+    url = "https://wodira.app/es/calendar/mallorca"
+
+    try:
+        print(f"   🔍 Scraping (Playwright): wodira...")
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(url, wait_until="networkidle", timeout=30000)
+            page.wait_for_timeout(3000)
+
+            # Click "Mostrar más eventos" until no more available
+            click_count = 0
+            max_clicks = 20  # Safety limit
+            while click_count < max_clicks:
+                try:
+                    # Look for "Mostrar más eventos" button
+                    show_more = page.query_selector('button:has-text("Mostrar más eventos")')
+
+                    if show_more and show_more.is_visible():
+                        show_more.click()
+                        page.wait_for_timeout(2000)  # Wait for new events to load
+                        click_count += 1
+                    else:
+                        break  # No more button available
+                except:
+                    break  # Button not found or error
+
+            html_content = page.content()
+            browser.close()
+
+            soup = BeautifulSoup(html_content, 'html.parser')
+
+            # Wodira uses <a href="/es/events/..."> links for each event
+            event_links = soup.select('a[href*="/events/"]')
+
+            today = datetime.now().date()
+
+            for link in event_links:
+                # Title - in h3 tag
+                title_elem = link.select_one('h3')
+                if not title_elem:
+                    continue
+                title = title_elem.get_text(strip=True)
+
+                if not title or len(title) < 3:
+                    continue
+
+                # Get full text for date and location extraction
+                text = link.get_text()
+
+                # Date - extract from Spanish date format: "domingo, 6 de septiembre de 2026"
+                date_str = None
+                date_match = re.search(r'(\d{1,2})\s+de\s+(\w+)\s+de\s+(\d{4})', text)
+                if date_match:
+                    day, month_name, year = date_match.groups()
+                    # Convert Spanish month name to number
+                    month_map = {
+                        'enero': '01', 'febrero': '02', 'marzo': '03', 'abril': '04',
+                        'mayo': '05', 'junio': '06', 'julio': '07', 'agosto': '08',
+                        'septiembre': '09', 'octubre': '10', 'noviembre': '11', 'diciembre': '12'
+                    }
+                    month_num = month_map.get(month_name.lower(), '01')
+                    date_str = f"{year}-{month_num}-{day.zfill(2)}"
+
+                if not date_str:
+                    continue
+
+                # Filter future events only (>= today)
+                try:
+                    event_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+                    if event_date < today:
+                        continue
+                except:
+                    continue
+
+                # Location - extract from text (format: "CALLE X, 07XXX City, España")
+                location = ""
+                location_match = re.search(r'([A-ZÑÁÉÍÓÚ\s,\d-]+,\s*\d{5}\s+[A-Za-zÑñÁáÉéÍíÓóÚú\s]+),\s*España', text)
+                if location_match:
+                    location = location_match.group(1).strip()
+                else:
+                    # Try simpler pattern
+                    location_match = re.search(r'(\d{5}\s+[A-Za-zÑñÁáÉéÍíÓóÚú\s]+),\s*España', text)
+                    if location_match:
+                        location = location_match.group(1).strip()
+
+                # Municipality
+                municipality = normalize_municipality(location) or "Mallorca"
+
+                # Source URL
+                event_url = link.get('href', '')
+                if event_url.startswith('/'):
+                    event_url = f"https://wodira.app{event_url}"
+
+                # Description - get event type/category badges
+                badges = link.select('.badge')
+                description = ' '.join([b.get_text(strip=True) for b in badges if b.get_text(strip=True)])
+
+                events.append({
+                    "source": "wodira",
+                    "title": title,
+                    "description": description[:200] if description else "",
+                    "start_date": date_str,
+                    "municipality": municipality,
+                    "location": location,
+                    "category": "SPORT",
+                    "is_free": True,
+                    "price": None,
+                    "website_url": event_url,
+                })
+
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_mallorca_com() -> List[Dict]:
+    """Scrape mallorca.com events visiting monthly URLs directly."""
+    events = []
+    base_url = "https://www.mallorca.com/es/eventos"
+
+    try:
+        print(f"   🔍 Scraping (Playwright): mallorca.com monthly URLs...")
+
+        # Spanish months in lowercase for URL
+        MESES_URL = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                     'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre']
+
+        # Spanish months in uppercase for parsing headers
+        MESES_ES = {
+            'ENERO': '01', 'FEBRERO': '02', 'MARZO': '03', 'ABRIL': '04',
+            'MAYO': '05', 'JUNIO': '06', 'JULIO': '07', 'AGOSTO': '08',
+            'SEPTIEMBRE': '09', 'OCTUBRE': '10', 'NOVIEMBRE': '11', 'DICIEMBRE': '12'
+        }
+
+        today = datetime.now().date()
+
+        # Build list of monthly URLs from current month to March 2027
+        monthly_urls = []
+        current_date = today.replace(day=1)
+        end_date = datetime(2027, 3, 1).date()
+
+        while current_date <= end_date:
+            year = current_date.year
+            month_index = current_date.month - 1
+            month_name = MESES_URL[month_index]
+            monthly_urls.append(f"{base_url}/{year}/{month_name}")
+
+            # Move to next month
+            if current_date.month == 12:
+                current_date = current_date.replace(year=year+1, month=1)
+            else:
+                current_date = current_date.replace(month=current_date.month+1)
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+
+            for monthly_url in monthly_urls:
+                try:
+                    page.goto(monthly_url, wait_until="networkidle", timeout=30000)
+                    page.wait_for_timeout(2000)
+
+                    # Parse line by line from rendered text — much more reliable than element iteration
+                    full_text = page.inner_text('body')
+                    lines = [l.strip() for l in full_text.split('\n') if l.strip()]
+
+                    # Also get links from HTML for URL mapping
+                    html_content = page.content()
+                    soup = BeautifulSoup(html_content, 'html.parser')
+                    event_links_map = {}
+                    for a in soup.find_all('a', href=True):
+                        href = a.get('href', '')
+                        if '/eventos/' in href and not href.endswith('/eventos') and not href.endswith('/eventos/'):
+                            link_title = a.get_text(strip=True)
+                            if link_title:
+                                full_url = href if href.startswith('http') else f"https://www.mallorca.com{href}"
+                                event_links_map[link_title.lower()[:60]] = full_url
+
+                    current_date_str = None
+                    seen_titles = set()
+
+                    for line in lines:
+                        # Detect date header: "MARTES, 8 DE SEPTIEMBRE DE 2026"
+                        date_header_match = re.match(
+                            r'^\w+,\s+(\d{1,2})\s+DE\s+(ENERO|FEBRERO|MARZO|ABRIL|MAYO|JUNIO|JULIO|AGOSTO|SEPTIEMBRE|OCTUBRE|NOVIEMBRE|DICIEMBRE)\s+DE\s+(\d{4})$',
+                            line
+                        )
+                        if date_header_match:
+                            day = date_header_match.group(1).zfill(2)
+                            month = MESES_ES[date_header_match.group(2)]
+                            year_str = date_header_match.group(3)
+                            current_date_str = f"{year_str}-{month}-{day}"
+                            continue
+
+                        # Detect footer/FAQ section — stop accumulating events
+                        if re.match(r'^preguntas frecuentes', line, re.IGNORECASE):
+                            current_date_str = None
+                            continue
+                        # Month-year navigation links like "octubre de 2026" or "enero de 2027"
+                        if re.match(
+                            r'^(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)\s+de\s+\d{4}$',
+                            line, re.IGNORECASE
+                        ):
+                            current_date_str = None
+                            continue
+                        # Footer section markers
+                        if line.lower().strip() in {
+                            'el tiempo', 'vacaciones', 'clasificados', 'publicar anuncio',
+                            'publicar evento', 'anunciar', 'contacto', 'quiénes somos',
+                            'trabaja con nosotros', 'mapa del sitio', 'sitemap',
+                            'aplicación', 'descargar app', 'app store', 'google play',
+                        }:
+                            current_date_str = None
+                            continue
+
+                        # Skip short/navigation/month lines
+                        if len(line) < 8 or len(line) > 150:
+                            continue
+                        # Skip pure time strings like "13:00", "13:00 h"
+                        if re.match(r'^\d{1,2}:\d{2}(\s*h\.?)?$', line):
+                            continue
+                        # Skip standalone date lines
+                        if re.match(r'^\d{1,2}[/\-]\d{1,2}[/\-]\d{4}$', line):
+                            continue
+                        # Skip date headers already parsed above
+                        if re.match(r'^\w+,?\s+\d+\s+DE\s+', line, re.IGNORECASE):
+                            continue
+                        # Skip navigation, footer, cookie, FAQ and UI labels
+                        _MALLORCA_COM_SKIP = {
+                            'cargar más', 'ver más', 'inicio', 'eventos', 'gastronomía',
+                            'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                            'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre',
+                            'descubrir', 'directorio', 'noticias', 'revista', 'tiempo', 'mapa',
+                            'playas', 'webcam', 'webcams', 'hoteles', 'restaurantes', 'tours',
+                            'conciertos', 'fiestas', 'deporte', 'cultura', 'gastronomia',
+                            'familia', 'naturaleza', 'ocio', 'viaje', 'escapada', 'alojamiento',
+                            'vuelos', 'traslados', 'actividades', 'excursiones',
+                            'todos los eventos en mallorca', 'todos los eventos', 'el portal de la isla',
+                            '© 2026 mallorca.com', '© 2025 mallorca.com', '© 2027 mallorca.com',
+                            'aviso legal', 'privacidad', 'política de privacidad', 'cookies',
+                            'rechazar todo', 'aceptar todo', 'preferencias de cookies',
+                            'utilizamos cookies', 'gestionar cookies', 'más información',
+                            'newsletter', 'suscríbete', 'síguenos', 'redes sociales',
+                            'facebook', 'twitter', 'instagram', 'youtube', 'tiktok',
+                            'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo',
+                            'palma', 'calvià', 'manacor', 'llucmajor', 'marratxí', 'inca', 'alcúdia',
+                            'felanitx', 'pollença', 'sóller', 'sa pobla', 'artà', 'campos', 'santanyí',
+                            'ses salines', 'capdepera', 'andratx', 'santa margalida', 'petra', 'muro',
+                            'búsqueda', 'buscar', 'search', 'filtrar', 'filtros', 'ordenar',
+                            'anterior', 'siguiente', 'página', 'cerrar', 'abrir', 'menú',
+                        }
+                        if line.lower().strip() in _MALLORCA_COM_SKIP:
+                            continue
+                        # Skip FAQ questions
+                        if line.startswith('¿') and line.endswith('?'):
+                            continue
+                        # Skip copyright/legal lines
+                        if re.match(r'^©\s*\d{4}', line):
+                            continue
+                        # Skip cookie/legal paragraphs
+                        _line_low = line.lower()
+                        if any(kw in _line_low for kw in ['utilizamos cookies', 'política de',
+                                                           'derechos reservados', 'aviso legal']):
+                            continue
+                        # Skip lines that are just a municipality name
+                        if line.lower().strip() in MALLORCA_MUNICIPALITIES:
+                            continue
+
+                        # If we have a current date, treat line as event title
+                        if current_date_str:
+                            title_key = line.lower()[:60]
+                            if title_key in seen_titles:
+                                continue
+
+                            try:
+                                event_date = datetime.strptime(current_date_str, '%Y-%m-%d').date()
+                                if event_date < today:
+                                    continue
+                            except:
+                                continue
+
+                            seen_titles.add(title_key)
+                            municipality = normalize_municipality(line) or "Mallorca"
+                            category = detect_category(line)
+                            event_url = event_links_map.get(title_key, monthly_url)
+
+                            events.append({
+                                "source": "mallorca.com",
+                                "title": line[:100],
+                                "description": "",
+                                "start_date": current_date_str,
+                                "municipality": municipality,
+                                "location": "",
+                                "category": category,
+                                "is_free": None,
+                                "price": "Consultar web",
+                                "website_url": event_url,
+                            })
+
+                except Exception as e:
+                    continue
+
+            browser.close()
+
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_ime_palma() -> List[Dict]:
+    """Scrape IME Palma events with pagination (26 pages)."""
+    events = []
+    base_url = "https://ime.palma.es/es/eventos"
+
+    try:
+        print(f"   🔍 Scraping: IME Palma...")
+
+        session = requests.Session()
+        session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+            'Accept-Language': 'es-ES,es;q=0.9'
+        })
+
+        today = datetime.now().date()
+
+        # Only scrape first 3 pages (≈36 most recent events) — site lists all historical events
+        for page_num in range(1, 4):
+            try:
+                # Build paginated URL (Liferay pattern)
+                if page_num == 1:
+                    url = base_url
+                else:
+                    url = f"{base_url}?p_p_id=com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_zgzD14PYJk5w&p_p_lifecycle=0&p_p_state=normal&p_p_mode=view&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_zgzD14PYJk5w_delta=12&p_r_p_resetCur=false&_com_liferay_asset_publisher_web_portlet_AssetPublisherPortlet_INSTANCE_zgzD14PYJk5w_cur={page_num}"
+
+                response = session.get(url, timeout=15)
+
+                if response.status_code != 200:
+                    break
+
+                soup = BeautifulSoup(response.text, 'html.parser')
+
+                # Find event links (pattern: /-/ with redirect parameter)
+                all_links = soup.find_all('a', href=True)
+                event_links = [link for link in all_links if '/-/' in link.get('href', '') and 'redirect=' in link.get('href', '')]
+
+                if not event_links:
+                    # No events on this page, stop
+                    break
+
+                page_events = 0
+                for link in event_links:
+                    href = link.get('href', '')
+                    title = link.get_text(strip=True)
+
+                    if not title or len(title) < 5:
+                        continue
+
+                    # Build full URL first
+                    event_url = href if href.startswith('http') else f"https://ime.palma.es{href}"
+
+                    # Try to find date in surrounding HTML container
+                    date_str = None
+                    MESES_IME = {
+                        'enero':'01','febrero':'02','marzo':'03','abril':'04','mayo':'05','junio':'06',
+                        'julio':'07','agosto':'08','septiembre':'09','octubre':'10','noviembre':'11','diciembre':'12'
+                    }
+
+                    def _ime_extract_date_from_text(text):
+                        """Extract date from IME detail page text."""
+                        # <time datetime="YYYY-MM-DD">
+                        # Try DD/MM/YYYY or DD-MM-YYYY
+                        m = re.search(r'(\d{1,2})[/\-](\d{1,2})[/\-](\d{4})', text)
+                        if m:
+                            d, mo, y = m.groups()
+                            return f"{y}-{mo.zfill(2)}-{d.zfill(2)}"
+                        # Try "DD de mes de YYYY"
+                        m = re.search(
+                            r'(\d{1,2})\s+(?:de\s+)?(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|octubre|noviembre|diciembre)(?:\s+de)?\s+(\d{4})',
+                            text.lower()
+                        )
+                        if m:
+                            d = m.group(1).zfill(2)
+                            mo = MESES_IME.get(m.group(2), '01')
+                            y = m.group(3)
+                            return f"{y}-{mo}-{d}"
+                        return None
+
+                    # First try container HTML (fast, no extra request)
+                    container = link
+                    for _ in range(4):
+                        if container.parent:
+                            container = container.parent
+                        container_text = container.get_text(separator=' ', strip=True)
+                        date_str = _ime_extract_date_from_text(container_text)
+                        if date_str:
+                            break
+
+                    # If not found, visit detail page for actual date
+                    if not date_str:
+                        try:
+                            detail_resp = session.get(event_url, timeout=10)
+                            if detail_resp.status_code == 200:
+                                detail_soup = BeautifulSoup(detail_resp.text, 'html.parser')
+                                # Try <time datetime="...">
+                                time_tag = detail_soup.find('time', attrs={'datetime': True})
+                                if time_tag:
+                                    dt_val = time_tag['datetime'][:10]
+                                    if re.match(r'\d{4}-\d{2}-\d{2}', dt_val):
+                                        date_str = dt_val
+                                # Try JSON-LD startDate
+                                if not date_str:
+                                    for script in detail_soup.find_all('script', type='application/ld+json'):
+                                        try:
+                                            import json as _json
+                                            jd = _json.loads(script.string or '')
+                                            sd = jd.get('startDate', '')
+                                            if sd and re.match(r'\d{4}-\d{2}-\d{2}', sd):
+                                                date_str = sd[:10]
+                                                break
+                                        except:
+                                            pass
+                                # Try text patterns in detail page
+                                if not date_str:
+                                    date_str = _ime_extract_date_from_text(detail_soup.get_text(separator=' '))
+                                time.sleep(0.2)
+                        except Exception:
+                            pass
+
+                    # Fallback: use today so global filter keeps the event
+                    if not date_str:
+                        date_str = today.strftime('%Y-%m-%d')
+
+                    # Skip past events (historical pages)
+                    try:
+                        if datetime.strptime(date_str, '%Y-%m-%d').date() < today:
+                            continue
+                    except:
+                        pass
+
+                    events.append({
+                        "source": "ime_palma",
+                        "title": title,
+                        "description": "",
+                        "start_date": date_str,
+                        "municipality": "Palma",
+                        "location": "",
+                        "category": "SPORT",
+                        "is_free": True,
+                        "price": None,
+                        "website_url": event_url,
+                    })
+                    page_events += 1
+
+                if page_events == 0:
+                    break
+
+                # Small delay between pages
+                time.sleep(0.3)
+
+            except Exception as e:
+                print(f"      ⚠️  Error on page {page_num}: {e}")
+                break
+
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_wepartynow() -> List[Dict]:
+    """Scrape WePartyNow Mallorca nightlife events with infinite scroll."""
+    events = []
+    url = "https://wepartynow.com/es/es/mallorca/esta-noche"
+
+    # Blacklisted venues to skip
+    VENUE_BLACKLIST = [
+        "SECRETS MALLORCA",
+        "Megasport",
+    ]
+
+    try:
+        print(f"   🔍 Scraping (Playwright): wepartynow...")
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(url, wait_until="networkidle", timeout=30000)
+            page.wait_for_timeout(3000)
+
+            # Infinite scroll to load all events
+            prev_count = 0
+            no_change_count = 0
+            max_scrolls = 20
+
+            for scroll_num in range(max_scrolls):
+                # Scroll to bottom
+                page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                page.wait_for_timeout(2000)
+
+                # Count current events
+                html = page.content()
+                soup = BeautifulSoup(html, 'html.parser')
+
+                # Find event links
+                all_links = soup.find_all('a', href=True)
+                event_links = [link for link in all_links if '/es/es/mallorca/events/' in link.get('href', '')]
+                current_count = len(event_links)
+
+                # Check if loaded more
+                if current_count == prev_count:
+                    no_change_count += 1
+                    if no_change_count >= 3:
+                        break  # No more events loading
+                else:
+                    no_change_count = 0
+
+                prev_count = current_count
+
+            # Final HTML after all scrolling
+            html_content = page.content()
+            browser.close()
+
+            soup = BeautifulSoup(html_content, 'html.parser')
+
+            # Find all event links
+            all_links = soup.find_all('a', href=True)
+            event_links = [link for link in all_links if '/es/es/mallorca/events/' in link.get('href', '')]
+
+            today = datetime.now().date()
+
+            for link in event_links:
+                href = link.get('href', '')
+
+                # Extract title from h3 element (clean, without venue)
+                title_elem = link.select_one('h3')
+                title = title_elem.get_text(strip=True) if title_elem else ""
+
+                if not title or len(title) < 3:
+                    continue
+
+                # Extract venue from span.truncate element
+                venue_elem = link.select_one('span.truncate')
+                location = venue_elem.get_text(strip=True) if venue_elem else ""
+
+                # Extract date from the date badge text
+                # Look for the date badge (contains "dom, 6 sept" format)
+                date_badge = link.select_one('.inline-flex.items-center.rounded-full')
+                if not date_badge:
+                    continue
+
+                date_text = date_badge.get_text(strip=True)
+
+                # Try to extract date (format: "dom, 6 sept")
+                date_match = re.search(r'(\w{3}), (\d+) (\w+)', date_text)
+                if not date_match:
+                    continue
+
+                day_name, day, month_abbr = date_match.groups()
+
+                # Map Spanish month abbreviations
+                month_map = {
+                    'ene': '01', 'feb': '02', 'mar': '03', 'abr': '04',
+                    'may': '05', 'jun': '06', 'jul': '07', 'ago': '08',
+                    'sept': '09', 'oct': '10', 'nov': '11', 'dic': '12'
+                }
+
+                month = month_map.get(month_abbr.lower(), '09')
+
+                # Infer year (events in Sept-Dec = 2026, Jan-Aug = 2027)
+                month_num = int(month)
+                year = '2027' if month_num <= 8 else '2026'
+
+                date_str = f"{year}-{month}-{day.zfill(2)}"
+
+                # Filter future events only
+                try:
+                    event_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+                    if event_date < today:
+                        continue
+                except:
+                    continue
+
+                # Skip blacklisted venues
+                if location in VENUE_BLACKLIST:
+                    continue
+
+                # Build full URL
+                event_url = href
+                if href.startswith('/'):
+                    event_url = f"https://wepartynow.com{href}"
+
+                events.append({
+                    "source": "wepartynow",
+                    "title": title[:100],  # Limit title length
+                    "description": "",
+                    "start_date": date_str,
+                    "municipality": "Palma",  # Most nightlife is in Palma
+                    "location": location[:50] if location else "",
+                    "category": "NIGHTLIFE",
+                    "is_free": False,
+                    "price": "Consultar web",
+                    "website_url": event_url,
+                })
+
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_inmallorca_magazine() -> List[Dict]:
+    """Scrape InMallorca Magazine festivals — robust line-by-line parsing."""
+    events = []
+    url = "https://www.inmallorcamagazine.com/es/events-and-festivals/festivals-fairs-annual-guide"
+
+    try:
+        print(f"   🔍 Scraping: inmallorca magazine...")
+
+        session = requests.Session()
+        session.headers.update({
+            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
+        })
+
+        response = session.get(url, timeout=15)
+        soup = BeautifulSoup(response.content, 'html.parser')
+
+        month_map = {
+            'enero': '01', 'febrero': '02', 'marzo': '03', 'abril': '04',
+            'mayo': '05', 'junio': '06', 'julio': '07', 'agosto': '08',
+            'septiembre': '09', 'octubre': '10', 'noviembre': '11', 'diciembre': '12',
+            'gener': '01', 'febrer': '02', 'març': '03',
+            'maig': '05', 'juny': '06', 'juliol': '07', 'agost': '08',
+            'setembre': '09', 'novembre': '11', 'desembre': '12',
+            'january': '01', 'february': '02', 'march': '03', 'april': '04',
+            'may': '05', 'june': '06', 'july': '07', 'august': '08',
+            'september': '09', 'october': '10', 'november': '11', 'december': '12'
+        }
+
+        today = datetime.now().date()
+
+        # Build regexes
+        MONTH_NAMES = '|'.join(month_map.keys())
+        # "Febrero / Febrer 2026" or "Febrero 2026"
+        MONTH_HEADER_RE = re.compile(
+            r'(' + MONTH_NAMES + r')[\s/\w]*(\d{4})',
+            re.IGNORECASE
+        )
+        # "14 de septiembre" or "14-18 de octubre" or "14 septiembre"
+        DATE_LINE_RE = re.compile(
+            r'(\d{1,2})(?:-\d{1,2})?\s+(?:de\s+)?(' + MONTH_NAMES + r')(?:\s+de)?\s+(\d{4})',
+            re.IGNORECASE
+        )
+        # Inline date in event line: "• 14 de septiembre – Palma: Título"
+        INLINE_DATE_RE = re.compile(
+            r'(\d{1,2})(?:-\d{1,2})?\s+(?:de\s+)?(' + MONTH_NAMES + r')(?:\s+(?:de\s+)?(\d{4}))?',
+            re.IGNORECASE
+        )
+
+        current_month = None
+        current_year = today.year
+        seen = set()
+
+        def _try_add(title, date_str, location=""):
+            key = title.lower()[:60]
+            if key in seen:
+                return
+            try:
+                if datetime.strptime(date_str, '%Y-%m-%d').date() < today:
+                    return
+            except:
+                return
+            seen.add(key)
+            municipality = normalize_municipality(location or title) or "Mallorca"
+            events.append({
+                "source": "inmallorca_magazine",
+                "title": title[:100],
+                "description": "",
+                "start_date": date_str,
+                "municipality": municipality,
+                "location": location[:80] if location else "",
+                "category": "FESTIVAL",
+                "is_free": True,
+                "price": None,
+                "website_url": url,
+            })
+
+        full_text = soup.get_text(separator='\n')
+        lines = [l.strip() for l in full_text.split('\n') if l.strip()]
+
+        for line in lines:
+            # Detect month header
+            mh = MONTH_HEADER_RE.search(line)
+            if mh and len(line) < 60:
+                mon_name = mh.group(1).lower()
+                current_month = month_map.get(mon_name)
+                yr = mh.group(2)
+                current_year = int(yr) if yr else today.year
+                continue
+
+            # Detect explicit full date line: "14 de septiembre de 2026"
+            fd = DATE_LINE_RE.search(line)
+            if fd:
+                d = fd.group(1).zfill(2)
+                mon = month_map.get(fd.group(2).lower(), current_month or '09')
+                yr = fd.group(3) if fd.group(3) else str(current_year)
+                date_str = f"{yr}-{mon}-{d}"
+                # If line is a date-only header (short), just update context
+                rest = line[fd.end():].strip(' –-:•')
+                if len(rest) >= 4:
+                    # Treat rest as title or "location: title"
+                    if ':' in rest:
+                        loc, t = rest.split(':', 1)
+                        _try_add(t.strip().split('|')[0].strip(), date_str, loc.strip())
+                    else:
+                        _try_add(rest.split('|')[0].strip(), date_str)
+                continue
+
+            # Bullet lines with inline date: "• 14 de septiembre – Palma: Título"
+            if line.startswith(('•', '-', '–', '*')) or '•' in line:
+                clean = line.lstrip('•-–* •').strip()
+                id_match = INLINE_DATE_RE.match(clean)
+                if id_match and current_month:
+                    d = id_match.group(1).zfill(2)
+                    mon = month_map.get(id_match.group(2).lower(), current_month)
+                    yr = id_match.group(3) if id_match.group(3) else str(current_year)
+                    date_str = f"{yr}-{mon}-{d}"
+                    rest = clean[id_match.end():].strip(' –-:')
+                    if len(rest) >= 4:
+                        if ':' in rest:
+                            loc, t = rest.split(':', 1)
+                            _try_add(t.strip().split('|')[0].strip(), date_str, loc.strip())
+                        else:
+                            _try_add(rest.split('|')[0].strip(), date_str)
+                    continue
+                # Bullet with no inline date — use current month context
+                if current_month and len(clean) >= 4 and len(clean) <= 150:
+                    date_str = f"{current_year}-{current_month}-01"
+                    _try_add(clean.split('|')[0].strip(), date_str)
+
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_bravobaleares() -> List[Dict]:
+    """Scrape Bravo Baleares events (currently returns empty - site is JavaScript-heavy)."""
+    events = []
+    url = "https://bravobaleares.com/"
+
+    try:
+        print(f"   🔍 Scraping: bravo baleares...")
+
+        # Note: This site is heavily JavaScript-based and events are loaded dynamically
+        # Would require complex Playwright interaction or API access
+        # Returning empty for now
+
+        print(f"      ⚠️  Site requires complex JavaScript interaction - skipping for now")
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_mallorca_com_gastronomia() -> List[Dict]:
+    """Scrape mallorca.com gastronomic events from listing with date headers."""
+    events = []
+    url = "https://www.mallorca.com/es/eventos/gastronomia"
+
+    try:
+        print(f"   🔍 Scraping (Playwright): mallorca.com gastronomía...")
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(url, wait_until="load", timeout=30000)
+            page.wait_for_timeout(3000)
+
+            # Click "Más" button to load all events
+            click_count = 0
+            max_clicks = 10
+            while click_count < max_clicks:
+                try:
+                    load_more = page.query_selector('button:has-text("Más")')
+                    if load_more and load_more.is_visible():
+                        load_more.click()
+                        page.wait_for_timeout(2000)
+                        click_count += 1
+                    else:
+                        break
+                except:
+                    break
+
+            html_content = page.content()
+            browser.close()
+
+            soup = BeautifulSoup(html_content, 'html.parser')
+            today = datetime.now().date()
+
+            # Spanish months in uppercase
+            MESES_ES = {
+                'ENERO': '01', 'FEBRERO': '02', 'MARZO': '03', 'ABRIL': '04',
+                'MAYO': '05', 'JUNIO': '06', 'JULIO': '07', 'AGOSTO': '08',
+                'SEPTIEMBRE': '09', 'OCTUBRE': '10', 'NOVIEMBRE': '11', 'DICIEMBRE': '12'
+            }
+
+            # Iterate page elements in document order
+            current_date = None
+
+            # Find main content container
+            main_content = soup.find('body')
+            if not main_content:
+                main_content = soup
+
+            for elem in main_content.find_all(True):
+                elem_text = elem.get_text(strip=True)
+
+                # Check if this is a date header: "DAYNAME, DD DE MONTHNAME DE YYYY"
+                date_header_match = re.match(
+                    r'^\w+,\s+(\d{1,2})\s+DE\s+(ENERO|FEBRERO|MARZO|ABRIL|MAYO|JUNIO|JULIO|AGOSTO|SEPTIEMBRE|OCTUBRE|NOVIEMBRE|DICIEMBRE)\s+DE\s+(\d{4})$',
+                    elem_text
+                )
+                if date_header_match:
+                    day = date_header_match.group(1).zfill(2)
+                    month = MESES_ES[date_header_match.group(2)]
+                    year = date_header_match.group(3)
+                    current_date = f"{year}-{month}-{day}"
+                    continue
+
+                # Check if this is an event link
+                if elem.name == 'a' and '/eventos/' in elem.get('href', ''):
+                    href = elem.get('href', '')
+
+                    if '/eventos/gastronomia' in href or href.endswith('/eventos') or href.endswith('/eventos/'):
+                        continue
+
+                    # Extract title
+                    title_elem = elem.select_one('h3')
+                    title = title_elem.get_text(strip=True) if title_elem else ""
+                    if not title or len(title) < 3:
+                        continue
+
+                    # Use current_date if available, otherwise fallback
+                    date_str = current_date if current_date else today.strftime('%Y-%m-%d')
+
+                    # Filter future events only
+                    try:
+                        event_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+                        if event_date < today:
+                            continue
+                    except:
+                        continue
+
+                    # Extract location from title
+                    location_match = re.search(r'(Palma|Inca|Manacor|Alcúdia|Pollença|Sóller|Calvià|Fornalutx|Valldemossa|Bunyola|[A-Z][a-záéíóú]+)(?:\s|$)', title)
+                    location = location_match.group(1) if location_match else ""
+                    municipality = normalize_municipality(location) or "Mallorca"
+
+                    # Build full URL
+                    event_url = href if href.startswith('http') else f"https://www.mallorca.com{href}"
+
+                    events.append({
+                        "source": "mallorca.com_gastro",
+                        "title": title[:100],
+                        "description": "Evento gastronómico",
+                        "start_date": date_str,
+                        "municipality": municipality,
+                        "location": location,
+                        "category": "GASTRONOMY",
+                        "is_free": None,
+                        "price": "Consultar web",
+                        "website_url": event_url,
+                    })
+
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_eventbrite_gastronomia() -> List[Dict]:
+    """Scrape Eventbrite food & drink events in Balearic Islands (stub - returns empty)."""
+    events = []
+
+    try:
+        print(f"   🔍 Scraping: eventbrite gastronomía...")
+
+        # Note: Eventbrite has complex dynamic loading and requires
+        # detailed interaction. Implementing a robust scraper would need:
+        # - Complex Playwright interactions
+        # - Handling of dynamic content loading
+        # - Cookie/consent management
+        # - Anti-scraping bypass
+        # Returning empty for now
+
+        print(f"      ⚠️  Eventbrite requires complex interaction - skipping for now")
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def scrape_thecalendarmallorca() -> List[Dict]:
+    """Scrape The Calendar Mallorca calendar grid."""
+    events = []
+    url = "https://thecalendarmallorca.com/events/"
+
+    try:
+        print(f"   🔍 Scraping (Playwright): thecalendarmallorca calendar grid...")
+
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page()
+            page.goto(url, wait_until="networkidle", timeout=60000)
+            page.wait_for_timeout(3000)
+
+            today = datetime.now().date()
+
+            # Scrape 3 months
+            for month_num in range(3):
+                html_content = page.content()
+                soup = BeautifulSoup(html_content, 'html.parser')
+
+                # Find month/year header (format: "September 2026")
+                month_header = soup.find(string=re.compile(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+\d{4}'))
+
+                if not month_header:
+                    break
+
+                # Parse year and month
+                month_match = re.search(r'(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})', month_header)
+                if not month_match:
+                    break
+
+                month_name, year = month_match.groups()
+                month_map = {
+                    'january': '01', 'february': '02', 'march': '03', 'april': '04',
+                    'may': '05', 'june': '06', 'july': '07', 'august': '08',
+                    'september': '09', 'october': '10', 'november': '11', 'december': '12'
+                }
+                month = month_map.get(month_name.lower(), '09')
+
+                # Find all day cells in the calendar grid
+                day_cells = soup.select('.tribe-events-calendar-month__day')
+
+                for cell in day_cells:
+                    # Extract day number
+                    day_elem = cell.select_one('.tribe-events-calendar-month__day-date')
+                    if not day_elem:
+                        continue
+
+                    day_text = day_elem.get_text(strip=True)
+                    day_match = re.search(r'(\d+)', day_text)
+                    if not day_match:
+                        continue
+
+                    day = day_match.group(1).zfill(2)
+                    date_str = f"{year}-{month}-{day}"
+
+                    # Filter past events
+                    try:
+                        event_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+                        if event_date < today:
+                            continue
+                    except:
+                        continue
+
+                    # Find all events in this day cell
+                    event_links = cell.select('a.tribe-events-calendar-month__calendar-event-title')
+
+                    for link in event_links:
+                        title = link.get_text(strip=True)
+                        event_url = link.get('href', url)
+
+                        if not title or len(title) < 3:
+                            continue
+
+                        # Infer category from title keywords
+                        category = 'CULTURE'  # default
+                        title_lower = title.lower()
+
+                        if any(word in title_lower for word in ['concert', 'music', 'dj', 'live music', 'band', 'jazz', 'rock']):
+                            category = 'CONCERT'
+                        elif any(word in title_lower for word in ['nightlife', 'party', 'club', 'night club', 'disco']):
+                            category = 'NIGHTLIFE'
+                        elif any(word in title_lower for word in ['food', 'gastronomic', 'wine', 'tapas', 'dinner', 'brunch', 'restaurant', 'culinary']):
+                            category = 'GASTRONOMY'
+                        elif any(word in title_lower for word in ['market', 'flea market', 'craft market', 'farmers market']):
+                            category = 'MARKET'
+                        elif any(word in title_lower for word in ['sport', 'race', 'run', 'marathon', 'triathlon', 'cycling', 'football', 'basketball']):
+                            category = 'SPORT'
+                        elif any(word in title_lower for word in ['festival', 'feria', 'fair', 'celebration', 'fiesta']):
+                            category = 'FESTIVAL'
+                        elif any(word in title_lower for word in ['family', 'familia', 'kids', 'children', 'niños', 'infantil', 'familiar']):
+                            category = 'FAMILY'
+
+                        events.append({
+                            "source": "thecalendarmallorca",
+                            "title": title[:100],
+                            "description": "",
+                            "start_date": date_str,
+                            "municipality": "Palma",
+                            "location": "",
+                            "category": category,
+                            "is_free": None,
+                            "price": "Consultar web",
+                            "website_url": event_url,
+                        })
+
+                # Click next month arrow if not last month
+                if month_num < 2:
+                    try:
+                        next_button = page.query_selector('.tribe-events-c-nav__next')
+                        if next_button and next_button.is_visible():
+                            next_button.click()
+                            page.wait_for_timeout(2000)
+                        else:
+                            break
+                    except:
+                        break
+
+            browser.close()
+
+        print(f"      ✅ Found {len(events)} events")
+
+    except Exception as e:
+        print(f"      ❌ Error: {e}")
+
+    return events
+
+
+def _normalize_title(t: str) -> str:
+    """Lowercase, strip accents and punctuation for fuzzy dedup."""
+    t = t.lower().strip()
+    # Remove common suffixes/prefixes that differ between sources
+    t = re.sub(r'\s*[-–|·]\s*mallorca.*$', '', t)
+    t = re.sub(r'\s*\(.*?\)', '', t)
+    t = re.sub(r'[^\w\s]', '', t)
+    t = re.sub(r'\s+', ' ', t).strip()
+    # Normalise accented chars
+    import unicodedata
+    t = ''.join(c for c in unicodedata.normalize('NFD', t) if unicodedata.category(c) != 'Mn')
+    return t
+
+
+def deduplicate_events(events: List[Dict]) -> List[Dict]:
+    """Remove duplicate events based on title + date (exact and fuzzy)."""
+    seen_exact: Set[tuple] = set()
+    seen_fuzzy: Set[tuple] = set()
+    unique_events = []
+
+    for event in events:
+        title_raw = event["title"].lower().strip()
+        date = event["start_date"]
+
+        # Exact match key
+        exact_key = (title_raw, date)
+        if exact_key in seen_exact:
+            continue
+        seen_exact.add(exact_key)
+
+        # Fuzzy match: normalised title + date (catches cross-source near-duplicates)
+        norm = _normalize_title(event["title"])
+        # Use first 40 chars of normalised title to allow small differences
+        fuzzy_key = (norm[:40], date)
+        if fuzzy_key in seen_fuzzy:
+            continue
+        seen_fuzzy.add(fuzzy_key)
+
+        unique_events.append(event)
+
+    duplicates_removed = len(events) - len(unique_events)
+    if duplicates_removed > 0:
+        print(f"   ℹ️  Removed {duplicates_removed} duplicate events")
+
+    return unique_events
+
+
+def scrape_all_sources() -> List[Dict]:
+    """Scrape all event sources."""
+    print("🌐 Scraping event sources...")
+    print("=" * 60)
+
+    all_events = []
+
+    # Use specific scrapers for working sources
+    all_events.extend(scrape_auditorium_palma())
+    all_events.extend(scrape_firesifestes())
+    all_events.extend(scrape_mallorcafiestas())
+    all_events.extend(scrape_mallorcamusicmagazine())
+    all_events.extend(scrape_conciertos_club())
+    # Resident Advisor siempre devuelve 0 (requiere API key de pago) — eliminado
+    # all_events.extend(scrape_resident_advisor())
+    all_events.extend(scrape_wodira())
+    all_events.extend(scrape_mallorca_com())
+    all_events.extend(scrape_ime_palma())
+    all_events.extend(scrape_wepartynow())
+    all_events.extend(scrape_inmallorca_magazine())
+    all_events.extend(scrape_bravobaleares())
+    all_events.extend(scrape_mallorca_com_gastronomia())
+    all_events.extend(scrape_eventbrite_gastronomia())
+    all_events.extend(scrape_thecalendarmallorca())
+
+    # Deduplicate
+    all_events = deduplicate_events(all_events)
+
+    # Global filter: remove past events (date < today)
+    today = datetime.now().date()
+    original_count = len(all_events)
+
+    future_events = []
+    for event in all_events:
+        try:
+            event_date = datetime.strptime(event['start_date'], '%Y-%m-%d').date()
+            if event_date >= today:
+                future_events.append(event)
+        except:
+            # Invalid date format, skip this event
+            pass
+
+    all_events = future_events
+    filtered_count = original_count - len(all_events)
+
+    if filtered_count > 0:
+        print(f"🗑  Filtered out {filtered_count} past events (date < {today})")
+
+    print("=" * 60)
+    print(f"✅ Total unique events: {len(all_events)}")
+
+    return all_events
+
+
+def generate_review_html(events: List[Dict]):
+    """Generate interactive HTML review page."""
+    print(f"📝 Generating review page with {len(events)} events...")
+
+    # Add unique IDs
+    for event in events:
+        event["id"] = generate_event_id(
+            event["source"],
+            event["title"],
+            event["start_date"]
+        )
+
+    # Sort by date
+    events.sort(key=lambda x: x["start_date"])
+
+    html_content = f"""<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Events Review - Mallorca</title>
+    <style>
+        * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+        body {{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+            padding-bottom: 100px;
+        }}
+        .header {{
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }}
+        h1 {{ color: #1a1a1a; margin-bottom: 10px; }}
+        .stats {{
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }}
+        .stat {{
+            background: #f0f0f0;
+            padding: 15px 20px;
+            border-radius: 8px;
+        }}
+        .stat-label {{ font-size: 12px; color: #666; text-transform: uppercase; }}
+        .stat-value {{ font-size: 24px; font-weight: bold; color: #1a1a1a; margin-top: 5px; }}
+        .stat.approved .stat-value {{ color: #10b981; }}
+        .stat.rejected .stat-value {{ color: #ef4444; }}
+        .events-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+        }}
+        .event-card {{
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }}
+        .event-card:hover {{
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }}
+        .event-card.approved {{ border: 3px solid #10b981; }}
+        .event-card.rejected {{ opacity: 0.5; border: 3px solid #ef4444; }}
+        .event-title {{ font-size: 18px; font-weight: 600; margin-bottom: 10px; }}
+        .event-meta {{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 15px;
+        }}
+        .event-meta-item {{ font-size: 14px; color: #666; }}
+        .category-badge {{
+            display: inline-block;
+            padding: 4px 12px;
+            background: #e5e7eb;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }}
+        .category-CONCERT {{ background: #dbeafe; color: #1e40af; }}
+        .category-FESTIVAL {{ background: #fce7f3; color: #9f1239; }}
+        .category-CULTURE {{ background: #f3e8ff; color: #6b21a8; }}
+        .category-SPORT {{ background: #d1fae5; color: #065f46; }}
+        .source-badge {{
+            display: inline-block;
+            padding: 2px 8px;
+            background: #f3f4f6;
+            border-radius: 6px;
+            font-size: 11px;
+            color: #6b7280;
+        }}
+        .event-actions {{ display: flex; gap: 10px; }}
+        button {{
+            flex: 1;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }}
+        .btn-approve {{ background: #10b981; color: white; }}
+        .btn-approve:hover {{ background: #059669; }}
+        .btn-reject {{ background: #ef4444; color: white; }}
+        .btn-reject:hover {{ background: #dc2626; }}
+        .footer {{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+        }}
+        .btn-download {{
+            background: #3b82f6;
+            color: white;
+            padding: 16px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }}
+        .btn-download:hover {{ background: #2563eb; }}
+        .btn-download:disabled {{ background: #9ca3af; cursor: not-allowed; }}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🌐 Web Events Review - Mallorca</h1>
+        <p>Eventos ordenados por fecha</p>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-label">Total</div>
+                <div class="stat-value" id="total-count">{len(events)}</div>
+            </div>
+            <div class="stat approved">
+                <div class="stat-label">Aprobados</div>
+                <div class="stat-value" id="approved-count">0</div>
+            </div>
+            <div class="stat rejected">
+                <div class="stat-label">Rechazados</div>
+                <div class="stat-value" id="rejected-count">0</div>
+            </div>
+        </div>
+        <div style="text-align:center;margin:12px 0;display:flex;gap:12px;justify-content:center">
+            <button onclick="approveAll()" style="background:#22c55e;color:white;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;font-weight:bold">✓ Aprobar todos</button>
+            <button onclick="rejectAll()" style="background:#ef4444;color:white;border:none;padding:12px 28px;border-radius:8px;font-size:16px;cursor:pointer;font-weight:bold">✗ Rechazar todos</button>
+        </div>
+    </div>
+    <div class="events-grid" id="events-grid"></div>
+    <div class="footer">
+        <button class="btn-download" id="download-btn" disabled>
+            💾 Guardar seleccion (0)
+        </button>
+    </div>
+    <script>
+        const eventsData = {json.dumps(events, ensure_ascii=False, indent=2)};
+        let approvedEvents = new Set();
+        let rejectedEvents = new Set();
+
+        function renderEvents() {{
+            const grid = document.getElementById('events-grid');
+            grid.innerHTML = '';
+            eventsData.forEach(event => {{
+                const card = document.createElement('div');
+                card.className = 'event-card';
+                card.id = `event-${{event.id}}`;
+                if (approvedEvents.has(event.id)) card.classList.add('approved');
+                else if (rejectedEvents.has(event.id)) card.classList.add('rejected');
+
+                const priceText = event.is_free ? 'Gratis' : (event.price || 'Precio desconocido');
+                card.innerHTML = `
+                    <div class="event-title">${{event.title}}</div>
+                    <div class="event-meta">
+                        <div class="event-meta-item">📅 ${{event.start_date}}</div>
+                        <div class="event-meta-item">
+                            <span class="category-badge category-${{event.category}}">${{event.category}}</span>
+                        </div>
+                        <div class="event-meta-item">📍 ${{event.municipality}}</div>
+                        <div class="event-meta-item">💰 ${{priceText}}</div>
+                        <div class="event-meta-item">
+                            <span class="source-badge">${{event.source}}</span>
+                        </div>
+                    </div>
+                    <div class="event-actions">
+                        <button class="btn-approve" onclick="approveEvent('${{event.id}}')">✓ Aprobar</button>
+                        <button class="btn-reject" onclick="rejectEvent('${{event.id}}')">✗ Rechazar</button>
+                    </div>
+                `;
+                grid.appendChild(card);
+            }});
+            updateStats();
+        }}
+
+        function approveEvent(eventId) {{
+            approvedEvents.add(eventId);
+            rejectedEvents.delete(eventId);
+            updateCard(eventId);
+            updateStats();
+        }}
+
+        function rejectEvent(eventId) {{
+            rejectedEvents.add(eventId);
+            approvedEvents.delete(eventId);
+            updateCard(eventId);
+            updateStats();
+        }}
+
+        function updateCard(eventId) {{
+            const card = document.getElementById(`event-${{eventId}}`);
+            card.className = 'event-card';
+            if (approvedEvents.has(eventId)) card.classList.add('approved');
+            else if (rejectedEvents.has(eventId)) card.classList.add('rejected');
+        }}
+
+        function updateStats() {{
+            document.getElementById('approved-count').textContent = approvedEvents.size;
+            document.getElementById('rejected-count').textContent = rejectedEvents.size;
+            const downloadBtn = document.getElementById('download-btn');
+            downloadBtn.disabled = approvedEvents.size === 0;
+            downloadBtn.textContent = `💾 Guardar seleccion (${{approvedEvents.size}})`;
+        }}
+
+        function downloadApproved() {{
+            const approved = eventsData.filter(e => approvedEvents.has(e.id));
+            fetch('http://localhost:8765/save', {{
+                method: 'POST',
+                headers: {{'Content-Type': 'application/json'}},
+                body: JSON.stringify(approved)
+            }}).then(r=>r.json()).then(d=>{{
+                if(d.ok) alert('Guardado. Ejecuta el Comando 2 para subir.');
+            }}).catch(()=>alert('Error: asegurate de que el script esta corriendo.'));
+        }}
+
+        function approveAll() {{
+            eventsData.forEach(event => {{
+                approvedEvents.add(event.id);
+                rejectedEvents.delete(event.id);
+                updateCard(event.id);
+            }});
+            updateStats();
+        }}
+
+        function rejectAll() {{
+            eventsData.forEach(event => {{
+                rejectedEvents.add(event.id);
+                approvedEvents.delete(event.id);
+                updateCard(event.id);
+            }});
+            updateStats();
+        }}
+
+        document.getElementById('download-btn').addEventListener('click', downloadApproved);
+        renderEvents();
+    </script>
+</body>
+</html>"""
+
+    with open(REVIEW_HTML, 'w', encoding='utf-8') as f:
+        f.write(html_content)
+
+    print(f"✅ Review page generated: {REVIEW_HTML}")
+    print(f"\n📂 Open: file://{REVIEW_HTML.absolute()}")
+
+
+def save_approved_events(events: List[Dict]):
+    """Save approved events to JSON file."""
+    output_file = TOOLS_DIR / "approved_events.json"
+
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(events, f, ensure_ascii=False, indent=2)
+
+    print(f"\n✅ Eventos guardados en: {output_file}")
+    print(f"📄 Archivo: {output_file.name} ({len(events)} eventos)")
+
+
+def run_review_server(output_path):
+    """Run local HTTP server for event review."""
+    saved = _th.Event()
+
+    class H(BaseHTTPRequestHandler):
+        def log_message(self, *a):
+            pass
+
+        def do_GET(self):
+            if self.path in ('/', '/review.html'):
+                d = open(output_path, 'rb').read()
+                self.send_response(200)
+                self.send_header('Content-Type', 'text/html; charset=utf-8')
+                self.end_headers()
+                self.wfile.write(d)
+            else:
+                self.send_response(404)
+                self.end_headers()
+
+        def do_OPTIONS(self):
+            self.send_response(200)
+            self.send_header('Access-Control-Allow-Origin', '*')
+            self.send_header('Access-Control-Allow-Methods', 'POST')
+            self.send_header('Access-Control-Allow-Headers', 'Content-Type')
+            self.end_headers()
+
+        def do_POST(self):
+            if self.path == '/save':
+                import json as j
+                body = self.rfile.read(int(self.headers['Content-Length']))
+                approved = j.loads(body)  # Already filtered by frontend
+                out = str(output_path).replace('review.html', 'approved_events.json')
+                open(out, 'w', encoding='utf-8').write(j.dumps(approved, ensure_ascii=False, indent=2))
+                self.send_response(200)
+                self.send_header('Content-Type', 'application/json')
+                self.send_header('Access-Control-Allow-Origin', '*')
+                self.end_headers()
+                self.wfile.write(b'{"ok":true}')
+                print(f"\n✅ Guardados {len(approved)} eventos en approved_events.json")
+                saved.set()
+            else:
+                self.send_response(404)
+                self.end_headers()
+
+    srv = HTTPServer(('localhost', 8765), H)
+    _th.Thread(target=srv.serve_forever, daemon=True).start()
+    print("\n🌐 Servidor iniciado en http://localhost:8765")
+    print("   Revisa los eventos y pulsa 'Descargar aprobados' cuando termines.")
+    print("   Presiona Ctrl+C para salir.")
+    time.sleep(0.5)
+    webbrowser.open('http://localhost:8765')
+
+    try:
+        saved.wait()
+        srv.shutdown()
+        print(f"\n✅ approved_events.json guardado.")
+        print("\n" + "=" * 60)
+        print("🎉 Siguiente paso:")
+        print("   python3 tools/upload_approved_events.py")
+        print("=" * 60)
+    except KeyboardInterrupt:
+        print("\n⚠️  Servidor detenido. No se guardaron eventos.")
+        srv.shutdown()
+
+
+def main():
+    import sys
+
+    # Check for --auto-approve flag
+    auto_approve = '--auto-approve' in sys.argv or '--auto' in sys.argv
+
+    print("🌐 Mallorca Web Events Scraper (Interactive)")
+    print("=" * 60)
+
+    events = scrape_all_sources()
+
+    if not events:
+        print("⚠️  No events found")
+        return
+
+    # Generate HTML for reference (optional)
+    generate_review_html(events)
+
+    # Auto-approve mode
+    if auto_approve:
+        print("\n🤖 Modo auto-aprobación activado")
+        print(f"✅ Aprobando automáticamente {len(events)} eventos...")
+        approved = events
+        save_approved_events(approved)
+
+        print("\n" + "=" * 60)
+        print("🎉 Listo! Ahora ejecuta:")
+        print("   python3 tools/upload_approved_events.py")
+        print("=" * 60)
+        return
+
+    # Interactive approval via HTTP server
+    run_review_server(REVIEW_HTML)
+
+
+if __name__ == "__main__":
+    main()

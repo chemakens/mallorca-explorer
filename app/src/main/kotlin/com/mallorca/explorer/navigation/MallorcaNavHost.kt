@@ -32,6 +32,7 @@ import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.connectivity.ConnectivityViewModel
 import com.mallorca.explorer.core.ui.component.OfflineBanner
 import com.mallorca.explorer.core.ui.transition.LocalAnimatedContentScope
+import com.mallorca.explorer.feature.explore.EventsScreen
 import com.mallorca.explorer.feature.explore.ExploreScreen
 import com.mallorca.explorer.feature.gems.GemsScreen
 import com.mallorca.explorer.onboarding.OnboardingScreen
@@ -50,7 +51,9 @@ import androidx.compose.material.icons.outlined.Diamond
 import androidx.compose.material.icons.outlined.Explore
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material.icons.outlined.ListAlt
+import androidx.compose.material.icons.outlined.CalendarMonth
 import androidx.compose.material.icons.outlined.Map
+import androidx.compose.material.icons.outlined.BookmarkBorder
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.ui.res.stringResource
 import com.mallorca.explorer.R
@@ -69,6 +72,8 @@ import kotlinx.serialization.Serializable
 @Serializable data class TripMapRoute(val tripId: String)
 @Serializable data class TripSelectorRoute(val placeId: String)
 @Serializable object GemsRoute
+@Serializable object EventsRoute
+@Serializable object MyMallorcaRoute
 @Serializable object SettingsRoute
 
 private data class TopLevelRoute<T : Any>(
@@ -93,9 +98,9 @@ fun MallorcaNavHost(
     val topLevelRoutes = listOf(
         TopLevelRoute(MapRoute(), stringResource(R.string.nav_map), Icons.Outlined.Map),
         TopLevelRoute(ExploreRoute, stringResource(R.string.nav_explore), Icons.Outlined.Explore),
-        TopLevelRoute(TripsRoute, stringResource(R.string.nav_trips), Icons.Outlined.ListAlt),
-        TopLevelRoute(FavoritesRoute, stringResource(R.string.nav_favorites), Icons.Outlined.FavoriteBorder),
         TopLevelRoute(GemsRoute, stringResource(R.string.nav_gems), Icons.Outlined.Diamond),
+        TopLevelRoute(EventsRoute, stringResource(R.string.nav_events), Icons.Outlined.CalendarMonth),
+        TopLevelRoute(MyMallorcaRoute, stringResource(R.string.nav_my_mallorca), Icons.Outlined.BookmarkBorder),
     )
 
     val showBottomBar = topLevelRoutes.any { tlr ->
@@ -192,6 +197,20 @@ fun MallorcaNavHost(
                                 onTripClick = { id -> navController.navigate(TripBuilderRoute(id)) },
                                 onNewTrip = { navController.navigate(TripBuilderRoute()) }
                             )
+                        }
+                    }
+                    composable<MyMallorcaRoute> {
+                        CompositionLocalProvider(LocalAnimatedContentScope provides this) {
+                            MyMallorcaScreen(
+                                onPlaceClick = { id -> navController.navigate(PlaceDetailRoute(id)) },
+                                onTripClick = { id -> navController.navigate(TripBuilderRoute(id)) },
+                                onNewTrip = { navController.navigate(TripBuilderRoute()) },
+                            )
+                        }
+                    }
+                    composable<EventsRoute> {
+                        CompositionLocalProvider(LocalAnimatedContentScope provides this) {
+                            EventsScreen()
                         }
                     }
                     composable<FavoritesRoute> {
