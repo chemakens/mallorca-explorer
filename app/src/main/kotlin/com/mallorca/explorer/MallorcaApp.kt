@@ -11,7 +11,6 @@ import coil.ImageLoaderFactory
 import com.mallorca.explorer.core.common.LocaleSource
 import com.mallorca.explorer.core.data.datastore.UserPreferencesDataStore
 import com.mallorca.explorer.core.data.sync.SeedDataWorker
-import com.mallorca.explorer.notification.DailyEventCheckWorker
 import com.mallorca.explorer.notification.NewGemCheckWorker
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.messaging.FirebaseMessaging
@@ -71,7 +70,6 @@ class MallorcaApp : Application(), Configuration.Provider, ImageLoaderFactory {
         )
         android.util.Log.d("MallorcaApp", "✅ SeedDataWorker enqueued successfully")
         NewGemCheckWorker.schedule(this)
-        DailyEventCheckWorker.schedule(this)
         createNotificationChannel(this)
 
         // Registrar token FCM para usuarios ya logueados (actualizaciones de app)

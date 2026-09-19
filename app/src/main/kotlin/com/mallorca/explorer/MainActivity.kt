@@ -23,7 +23,6 @@ import com.mallorca.explorer.core.ui.theme.MallorcaTheme
 import com.mallorca.explorer.navigation.ItineraryDetailRoute
 import com.mallorca.explorer.navigation.MallorcaNavHost
 import com.mallorca.explorer.navigation.PlaceDetailRoute
-import com.mallorca.explorer.notification.DailyEventCheckWorker
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -64,9 +63,7 @@ class MainActivity : ComponentActivity() {
             val notificationLauncher = rememberLauncherForActivityResult(
                 ActivityResultContracts.RequestPermission()
             ) { granted ->
-                if (granted) {
-                    DailyEventCheckWorker.schedule(this@MainActivity)
-                }
+                // Notificaciones concedidas
             }
 
             LaunchedEffect(Unit) {
@@ -76,8 +73,6 @@ class MainActivity : ComponentActivity() {
 
                 if (!hasPermission && android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
                     notificationLauncher.launch(Manifest.permission.POST_NOTIFICATIONS)
-                } else if (hasPermission) {
-                    DailyEventCheckWorker.schedule(this@MainActivity)
                 }
             }
 
