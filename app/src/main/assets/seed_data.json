@@ -9,7 +9,7 @@
       "latitude": 39.346,
       "longitude": 2.983,
       "municipality": "Campos",
-      "thumbnail_url": "file:///android_asset/images/beach-es-trenc-pexels-2.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-es-trenc-pexels-2.webp",
       "rating": 4.9,
       "review_count": 2400,
       "tips": [
@@ -25,15 +25,15 @@
       "price_level": "FREE",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-es-trenc-pexels-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-es-trenc-pexels-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-es-trenc-pexels.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-es-trenc-pexels.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-es-trenc-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-es-trenc-mia-1.webp",
           "source": "MINE"
         }
       ],
@@ -83,19 +83,19 @@
         "Try the short Ses Puntes de Ses Gatoves trail inside the park for panoramic coastal viewpoints above the coves — flat and easy, about 45 minutes"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-cala-mondrag.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-mondrag.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-mondrag.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-mondrag.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-mondrag-aetib.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-mondrag-aetib.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-mondrag-pixabay.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-mondrag-pixabay.webp",
           "source": "PIXABAY"
         }
       ],
@@ -142,19 +142,19 @@
         "The road to Formentor (Ma-2210) is one of Mallorca's most spectacular drives with sheer drops and hairpin bends — if you do drive outside restriction hours, go early and take it slow."
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-formentor.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-formentor.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-formentor.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-formentor.webp",
           "source": "AETIB",
           "author": "Pedro Coll"
         },
         {
-          "url": "file:///android_asset/images/beach-formentor-pexels.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-formentor-pexels.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-formentor-aetib.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-formentor-aetib.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
@@ -191,24 +191,24 @@
       "address": null,
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-figuera-formentor.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-figuera-formentor.webp",
           "source": "AETIB",
           "author": "Walter Obiol"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-figuera-formentor-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-figuera-formentor-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-figuera-formentor-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-figuera-formentor-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-figuera-formentor-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-figuera-formentor-4.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-figuera-formentor.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-figuera-formentor.webp",
       "tags": [
         "hidden",
         "rocky",
@@ -271,18 +271,18 @@
         "Rocky shore — water shoes are strongly recommended; the seabed is ideal for snorkelling"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-cala-deia.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-deia.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-deia.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-deia.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-deia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-deia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-deia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-deia-3.webp",
           "source": "UNSPLASH"
         }
       ],
@@ -323,18 +323,18 @@
         "From Palma, take the Ma-19 motorway towards Llucmajor, then follow signs for Cala Pi via the Ma-6015. The drive takes around 40 minutes."
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-cala-pi.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-pi.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-pi.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-pi.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-pi-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-pi-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-pi-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-pi-3.webp",
           "source": "MINE"
         }
       ],
@@ -375,17 +375,17 @@
         "Nudism is tolerated in the more secluded sections of the beach. The cove has a relaxed, freedom-loving atmosphere — respect other visitors and the natural environment."
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-cala-varques.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-varques.webp",
       "tags": [
         "hidden_gem"
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-varques.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-varques.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-varques-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-varques-2.webp",
           "source": "MINE"
         }
       ],
@@ -430,14 +430,14 @@
         "Stay on marked trails — much of the land is private farmland (possessions)"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/place-tramuntana-range.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-tramuntana-range.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-tramuntana-range.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-tramuntana-range.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-tramuntana-range-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-tramuntana-range-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -485,14 +485,14 @@
         "stone-steps",
         "classic"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-barranc-biniaraix.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-barranc-biniaraix.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-barranc-biniaraix.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-barranc-biniaraix.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-barranc-biniaraix-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-barranc-biniaraix-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -533,14 +533,14 @@
         "Cyclists: 14.3 km from Sóller, 843m elevation, avg 5.9% gradient — one of the island's iconic climbs"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/place-puig-major.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-major.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-puig-major.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-major.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-puig-major-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-major-2.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         }
@@ -585,15 +585,15 @@
         "Combine with the Mirador de Ses Barques viewpoint on the road down for panoramic views over the bay"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/place-sa-calobra.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-calobra.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sa-calobra.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-calobra.webp",
           "source": "AETIB",
           "author": "Pedro Coll"
         },
         {
-          "url": "file:///android_asset/images/place-sa-calobra-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-calobra-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -641,16 +641,16 @@
       ],
       "price_level": "BUDGET",
       "website": "https://catedraldemallorca.org",
-      "thumbnail_url": "file:///android_asset/images/place-seu-cathedral.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-seu-cathedral.webp",
       "ticket_url": "https://catedraldemallorca.org/visita/",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-seu-cathedral.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-seu-cathedral.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-seu-cathedral-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-seu-cathedral-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -691,16 +691,16 @@
         "Combine the visit with a walk through the Bosque de Bellver pine forest surrounding the castle for shade and forest trails."
       ],
       "price_level": "BUDGET",
-      "thumbnail_url": "file:///android_asset/images/place-bellver-castle-2.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-bellver-castle-2.webp",
       "ticket_url": "https://castelldebellver.palma.es/en/tickets",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-bellver-castle-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-bellver-castle-2.webp",
           "source": "AETIB",
           "author": "Pedro Coll"
         },
         {
-          "url": "file:///android_asset/images/place-bellver-castle.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-bellver-castle.webp",
           "source": "AETIB",
           "author": "Pedro Coll"
         }
@@ -742,15 +742,15 @@
         "Bus line 46 runs directly to the foundation entrance from the city centre — no need to drive or park."
       ],
       "price_level": "MID",
-      "thumbnail_url": "file:///android_asset/images/place-fundacio-miro.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-fundacio-miro.webp",
       "ticket_url": "https://miromallorca.com/en/visit/",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-fundacio-miro.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-fundacio-miro.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/place-fundacio-miro-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-fundacio-miro-2.webp",
           "source": "MINE"
         }
       ],
@@ -792,16 +792,16 @@
       ],
       "price_level": "BUDGET",
       "website": "https://esbaluard.org",
-      "thumbnail_url": "file:///android_asset/images/place-es-baluard.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-es-baluard.webp",
       "ticket_url": "https://www.esbaluard.org/en/visit/",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-es-baluard.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-es-baluard.webp",
           "source": "AETIB",
           "author": "Jaume Capella"
         },
         {
-          "url": "file:///android_asset/images/place-es-baluard-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-es-baluard-2.webp",
           "source": "UNSPLASH"
         }
       ],
@@ -844,34 +844,34 @@
         "Take a photo at the village viewpoint overlooking the Serra de Tramuntana mountains",
         "Visit the birthplace of Blessed Santa Catalina Tomàs, patron saint of Mallorca"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-valldemossa.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-valldemossa.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-valldemossa.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-valldemossa.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-valldemossa-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-valldemossa-2.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/valldemossa-mia-7.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/valldemossa-mia-7.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/valldemossa-mia-8.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/valldemossa-mia-8.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/valldemossa-mia-9.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/valldemossa-mia-9.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/valldemossa-mia-11.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/valldemossa-mia-11.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/valldemossa-mia-10.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/valldemossa-mia-10.webp",
           "source": "MINE"
         }
       ],
@@ -917,23 +917,23 @@
         "The village churchyard is worth a quiet visit: Robert Graves's simple grave looks out over olive terraces towards the sea",
         "Sa Fonda Deià — the legendary bar and outdoor venue under the giant ficus tree — is the heart of village social life; check their programme for live music nights"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-deia.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-deia.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-deia.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-deia.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-deia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-deia-2.webp",
           "source": "AETIB",
           "author": "Pep Vicens"
         },
         {
-          "url": "file:///android_asset/images/place-deia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-deia-3.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-deia-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-deia-4.webp",
           "source": "MINE"
         }
       ],
@@ -978,26 +978,26 @@
         "Just 2 km away is Biniaraix, one of Mallorca's most beautiful villages — well worth the walk",
         "Take the tram down to Port de Sóller and visit its beach and lighthouse, where the views and photos are spectacular"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-soller.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-soller.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-soller.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-soller.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles",
           "heroFocalY": 0.45
         },
         {
-          "url": "file:///android_asset/images/place-soller-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-soller-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-soller-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-soller-3.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         },
         {
-          "url": "file:///android_asset/images/place-soller-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-soller-4.webp",
           "source": "MINE"
         }
       ],
@@ -1050,18 +1050,18 @@
         "Port de Pollença (9 km away) is the perfect base for beaches, kitesurf, and day trips to Cala de Sant Vicenç and Cap de Formentor.",
         "The Fira de Pollença (second Sunday of November) is the main crafts and agricultural fair — a great time to buy local products and see traditional Mallorcan culture."
       ],
-      "thumbnail_url": "file:///android_asset/images/place-pollenca.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-pollenca.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-pollenca.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-pollenca.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-pollenca-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-pollenca-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-pollenca-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-pollenca-3.webp",
           "source": "MINE"
         }
       ],
@@ -1109,18 +1109,18 @@
         "For a completely different perspective — and to avoid the crowds — consider a boat or catamaran excursion from Port d'Alcúdia or Port de Pollença to see the 300 m cliffs from the sea."
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/place-cap-formentor.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cap-formentor.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-cap-formentor.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cap-formentor.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-cap-formentor-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cap-formentor-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-cap-formentor-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cap-formentor-3.webp",
           "source": "MINE"
         }
       ],
@@ -1163,10 +1163,10 @@
         "Just a few minutes further along the Ma-10, stop at the tiny Modernista chapel of Mare de Déu de l'Olivar — its interior mimics a natural cave with stalactites in a style influenced by Gaudí."
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/mirador-ses-barques.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-ses-barques.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mirador-ses-barques.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-ses-barques.webp",
           "source": "MINE"
         }
       ],
@@ -1207,14 +1207,14 @@
         "Saturday mornings are the liveliest but also the busiest — arrive early if you want a seat at the bar."
       ],
       "price_level": "MID",
-      "thumbnail_url": "file:///android_asset/images/place-mercat-santa-catalina.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-santa-catalina.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mercat-santa-catalina.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-santa-catalina.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-mercat-santa-catalina-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-santa-catalina-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -1256,15 +1256,15 @@
       ],
       "price_level": "MID",
       "website": "https://covesdeldrach.com",
-      "thumbnail_url": "file:///android_asset/images/place-coves-drach.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-coves-drach.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-coves-drach.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-coves-drach.webp",
           "source": "AETIB",
           "author": "Jaume Capella"
         },
         {
-          "url": "file:///android_asset/images/place-coves-drach-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-coves-drach-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -1311,14 +1311,14 @@
         "GR221",
         "historic"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-cami-des-correu.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cami-des-correu.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-cami-des-correu.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cami-des-correu.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-cami-des-correu-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cami-des-correu-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -1367,15 +1367,15 @@
         "summit",
         "history"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-castell-alaro.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-castell-alaro.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-castell-alaro.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-castell-alaro.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-castell-alaro-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-castell-alaro-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -1427,15 +1427,15 @@
         "cuber",
         "views"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-puig-ofre.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-ofre.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-puig-ofre.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-ofre.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-puig-ofre-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-ofre-2.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         }
@@ -1490,14 +1490,14 @@
         "north",
         "solitude"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-puig-tomir.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-tomir.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-puig-tomir.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-tomir.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-puig-tomir-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-tomir-2.webp",
           "source": "MINE"
         }
       ],
@@ -1547,18 +1547,18 @@
         "views",
         "northwest"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-cami-arxiduc.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cami-arxiduc.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-cami-arxiduc.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cami-arxiduc.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-cami-arxiduc-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cami-arxiduc-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-cami-arxiduc-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cami-arxiduc-3.webp",
           "source": "MINE"
         }
       ],
@@ -1609,15 +1609,15 @@
         "secluded",
         "chapel"
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-tuent.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-tuent.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-tuent.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-tuent.webp",
           "source": "AETIB",
           "author": "Walter Obiol"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-tuent-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-tuent-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
@@ -1670,14 +1670,14 @@
         "adventure",
         "spectacular"
       ],
-      "thumbnail_url": "file:///android_asset/images/hike-torrent-pareis.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/hike-torrent-pareis.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/hike-torrent-pareis.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/hike-torrent-pareis.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/hike-torrent-pareis-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/hike-torrent-pareis-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -1733,14 +1733,14 @@
         "pristine",
         "marble"
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-marmols.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-marmols.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-marmols.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-marmols.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-marmols-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-marmols-2.webp",
           "source": "MINE"
         }
       ],
@@ -1792,16 +1792,16 @@
         "GR221",
         "religious"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-monestir-lluc.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-monestir-lluc.webp",
       "ticket_url": "https://www.lluc.net/es/visita",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-monestir-lluc.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-monestir-lluc.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-monestir-lluc-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-monestir-lluc-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
@@ -1857,14 +1857,14 @@
         "peninsula",
         "dramatic"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-faro-formentor.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-faro-formentor.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-faro-formentor.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-faro-formentor.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-faro-formentor-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-faro-formentor-2.webp",
           "source": "MINE"
         }
       ],
@@ -1924,34 +1924,34 @@
         "viewpoint",
         "dramatic"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sa-foradada.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-foradada.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sa-foradada.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-foradada.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-sa-foradada-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-foradada-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-sa-foradada-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-foradada-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-sa-foradada-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-foradada-5.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-sa-foradada-6.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-foradada-6.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-sa-foradada-7.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-foradada-7.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-sa-foradada-10.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sa-foradada-10.webp",
           "source": "MINE"
         }
       ],
@@ -2008,10 +2008,10 @@
         "sunset",
         "accessible"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mirador-ricardo-roca.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-ricardo-roca.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mirador-ricardo-roca.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-ricardo-roca.webp",
           "source": "PIXABAY"
         }
       ],
@@ -2059,15 +2059,15 @@
         "panoramic",
         "historic"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mirador-ses-animes.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-ses-animes.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mirador-ses-animes.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-ses-animes.webp",
           "source": "AETIB",
           "author": "Walter Obiol"
         },
         {
-          "url": "file:///android_asset/images/place-mirador-ses-animes-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-ses-animes-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -2119,11 +2119,11 @@
         "arabic",
         "historical"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-jardins-alfabia.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-jardins-alfabia.webp",
       "ticket_url": "https://jardinesalfabia.com/es/visita/",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-jardins-alfabia.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-jardins-alfabia.webp",
           "source": "PIXABAY"
         }
       ],
@@ -2180,12 +2180,12 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-can-prunera-soller.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-can-prunera-soller.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-can-prunera-soller.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-can-prunera-soller.webp",
       "ticket_url": "https://canprunera.com/en/visit/",
       "description_es": "Can Prunera es la casa museo modernista más importante de Sóller y una de las joyas del Art Nouveau en Baleares. Construida entre 1909 y 1911 por emigrantes enriquecidos en Francia y atribuida al arquitecto Joan Rubió i Bellver, discípulo de Gaudí, conserva vitrales originales, suelos hidráulicos, una escalera de caracol de formas sinuosas y lámparas de época. La prestigiosa Colección Serra reúne obras de Miró, Picasso, Kandinsky, Matisse y Barceló. El jardín de esculturas y el espacio immersivo 'Campo de Juego' completan una visita única.",
       "tips_es": [
@@ -2236,12 +2236,12 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-casal-solleric-palma.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-casal-solleric-palma.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-casal-solleric-palma.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-casal-solleric-palma.webp",
       "description_es": "El Casal Solleric es un palacio rococó del siglo XVIII convertido en el principal centro municipal de arte contemporáneo de Palma, gestionado por el Ayuntamiento. Construido en 1763 por la familia Sollerich, su fachada con logia de cinco arcos y barandillas de hierro forjado italiano da al Passeig del Born. El patio interior, con su arco rebajado y espectacular escalera imperial de dos ramos, es uno de los más elegantes de la ciudad. El acceso a las exposiciones temporales de artes visuales, fotografía y arte conceptual es totalmente gratuito. Cierra los lunes.",
       "tips_es": [
         "La entrada a todas las exposiciones y al patio es completamente gratuita — una de las mejores paradas culturales sin coste de Palma.",
@@ -2293,12 +2293,12 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-fundacio-juan-march-palma.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-fundacio-juan-march-palma.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-fundacio-juan-march-palma.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-fundacio-juan-march-palma.webp",
       "description_es": "El Museu Fundació Juan March de Palma alberga una de las colecciones de arte español del siglo XX más relevantes de España en un palacio señorial del siglo XVII reformado por Guillem Reynés i Font. Las dos plantas de la colección permanente reúnen unas 70 obras clave de Picasso, Miró, Dalí y Juan Gris junto a los movimientos de posguerra del Grupo El Paso — Tàpies, Saura, Millares — y el pop art del Equipo Crónica. La entrada es completamente gratuita todos los días. Cierra domingos y festivos.",
       "tips_es": [
         "La entrada es completamente gratuita todos los días — una de las mejores paradas de arte sin coste de Palma.",
@@ -2349,12 +2349,12 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-museu-de-mallorca.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-museu-de-mallorca.webp",
           "source": "AETIB",
           "author": "Jaume Capella"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-museu-de-mallorca.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-museu-de-mallorca.webp",
       "ticket_url": "https://www.illesbalears.travel/es/mallorca/museo-de-mallorca",
       "description_es": "El Museu de Mallorca es la institución de referencia para conocer la evolución histórica y artística de la isla desde la prehistoria hasta el siglo XIX. Su sede principal ocupa Ca la Gran Cristiana, un espectacular palacio barroco del siglo XVII sobre cimientos góticos en el casco antiguo de Palma. La sección de Bellas Artes alberga retablos góticos de pintores locales como Francesc Comes, junto a pintura renacentista y barroca y mobiliario mallorquín. La entrada general cuesta 2,50 € y los domingos es gratuita. Cierra lunes.",
       "tips_es": [
@@ -2405,11 +2405,11 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-centro-cultural-misericordia.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-centro-cultural-misericordia.webp",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-centro-cultural-misericordia.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-centro-cultural-misericordia.webp",
       "description_es": "El Centre Cultural La Misericòrdia es un antiguo hospicio del s.XVIII-XIX reconvertido en centro de arte y cultura contemporánea, gestionado por el Consell de Mallorca. Su sobria arquitectura encierra un majestuoso patio porticado trapezoidal de 1.500 m² con columnas dóricas y jónicas donde se celebran exposiciones, conciertos al aire libre y eventos culturales. El acceso a las exposiciones temporales es gratuito. El edificio alberga también la Biblioteca de Cultura Artesana y la Biblioteca Lluís Alemany, especializada en fondos baleares. Cierra domingos.",
       "tips_es": [
         "Todas las exposiciones temporales y el patio son de entrada gratuita — consulta la programación actual en conselldemallorca.es antes de ir.",
@@ -2461,11 +2461,11 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-teatre-principal-palma.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-teatre-principal-palma.webp",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-teatre-principal-palma.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-teatre-principal-palma.webp",
       "ticket_url": "https://www.teatreprincipal.com/es/entrades",
       "description_es": "El Teatre Principal de Palma es la institución de referencia de las artes escénicas en Mallorca, con una tradición que se remonta a 1667 cuando era la Casa de Comèdies. El edificio actual, de formato clásico a la italiana con 791 localidades en palcos de varios niveles, ofrece una acústica excepcional y líneas de visión muy próximas al escenario. Gestionado por el Consell de Mallorca, su programación abarca ópera, zarzuela, ballet, teatro clásico y contemporáneo y conciertos de gran formato. La temporada de ópera es la más destacada de Baleares.",
       "tips_es": [
@@ -2516,11 +2516,11 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-museu-art-sacre-palma.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-museu-art-sacre-palma.webp",
           "source": "UNSPLASH"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-museu-art-sacre-palma.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-museu-art-sacre-palma.webp",
       "ticket_url": "https://www.museuartsacredemallorca.org/visita/horarios-y-tarifas",
       "description_es": "El Museu d'Art Sacre de Mallorca (MASM), instalado en el Palacio Episcopal del siglo XIII junto a La Seu, alberga una de las mejores colecciones de pintura gótica sobre tabla de España junto a orfebrería, escultura y artes decorativas religiosas del s.XIII al XVIII. Destacan el retablo de Sant Jordi del s.XV de Pere Niçard — con un retrato fiel de la Palma medieval al fondo — y el famoso Drac de na Coca de la leyenda local. También se exponen diseños de mobiliario y bocetos de Gaudí para sus reformas en la catedral, y hay un mirador en azotea con vistas a la bahía.",
       "tips_es": [
@@ -2569,23 +2569,23 @@
         "culture",
         "architecture"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-palma-city.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-palma-city.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-palma-city.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-palma-city.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-palma-city-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-palma-city-2.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-palma-city-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-palma-city-3.webp",
           "source": "PIXABAY",
           "heroFocalY": 0.363
         },
         {
-          "url": "file:///android_asset/images/place-palma-city-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-palma-city-4.webp",
           "source": "PIXABAY",
           "heroFocalY": 0.2898
         }
@@ -2644,20 +2644,20 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-fornalutx.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-fornalutx.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-fornalutx-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-fornalutx-2.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/place-fornalutx-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-fornalutx-3.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-fornalutx.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-fornalutx.webp",
       "description_es": "Oficialmente reconocido como uno de los pueblos más bonitos de España, Fornalutx ocupa un lugar privilegiado en la Serra de Tramuntana, encaramado sobre el valle de Sóller a la sombra del Puig Major. Sus calles empedradas y empinadas adornadas con macetas de colores, sus casas de marès con tejados de teja roja y la perfecta conservación de su arquitectura tradicional lo convierten en un escenario casi irreal. Con poco más de 700 habitantes, es uno de los municipios más pequeños de Mallorca — y paradójicamente uno de los más fotografiados.",
       "tips_es": [
         "Aparca en el parking de la entrada (de pago) y recorre el pueblo a pie — las calles son peatonales, empinadas y estrechas, imposibles para el coche",
@@ -2709,19 +2709,19 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-alcudia.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-alcudia.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-alcudia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-alcudia-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-alcudia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-alcudia-3.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-alcudia.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-alcudia.webp",
       "description_es": "Alcúdia es uno de los destinos más completos de Mallorca, reconocido oficialmente como uno de los Pueblos más Bonitos de España. Sus murallas medievales del siglo XIV — las únicas murallas urbanas intactas de la isla — encierran un casco antiguo peatonal de callejuelas de piedra, iglesias góticas y las ruinas romanas de Pollentia. Más allá de las murallas, el municipio se extiende hasta el Port d'Alcúdia y más de 7 km de playas de arena fina, las dunas protegidas de la Playa de Muro y la vasta s'Albufera — la mayor zona húmeda de las Baleares.",
       "tips_es": [
         "Recorre el circuito completo de las murallas medievales — el camino de ronda ofrece vistas panorámicas sobre el casco antiguo y la bahía. La Porta de Sant Sebastià y la Porta de Moll son las entradas más impresionantes.",
@@ -2779,20 +2779,20 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sineu.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sineu.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-sineu-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sineu-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-sineu-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sineu-3.webp",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sineu.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sineu.webp",
       "description_es": "El corazón geográfico de Mallorca, con un ambiente medieval muy bien conservado y uno de los mercados semanales más antiguos de la isla, celebrado ininterrumpidamente desde 1306. Cada miércoles el pueblo se convierte en punto de encuentro de productores locales, artesanos y animales, y en agosto la fiesta de La Mucada llena las calles de alegría y tradición.",
       "tips_es": [
         "El mercado de los miércoles es uno de los más antiguos y auténticos de Mallorca — llega antes de las 10h para ver la venta de animales y los productos más frescos.",
@@ -2848,15 +2848,15 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-banyalbufar.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-banyalbufar.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-banyalbufar-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-banyalbufar-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-banyalbufar.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-banyalbufar.webp",
       "description_es": "Pueblo de la costa noroeste de Mallorca cuyo nombre árabe significa «construido al borde del mar». Sus famosas marjades — los bancales escalonados labrados en la roca durante la ocupación islámica de la isla para cultivar la uva malvasía — forman parte hoy del Patrimonio de la Humanidad de la Serra de Tramuntana. El paisaje resultante, de terrazas en cascada desde los riscos hasta las calas, es único en el Mediterráneo. Un pueblo de apenas 500 habitantes, pero con una de las identidades paisajísticas más potentes de Mallorca.",
       "tips_es": [
         "Visita la Torre de ses Ànimes (Torre des Verger) al atardecer — esta atalaya del siglo XVII sobre el acantilado ofrece uno de los mejores puntos de observación de la puesta de sol en toda Mallorca",
@@ -2908,20 +2908,20 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-estellencs.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-estellencs.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/place-estellencs-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-estellencs-2.webp",
           "source": "PIXABAY",
           "heroFocalY": 0.4886
         },
         {
-          "url": "file:///android_asset/images/place-estellencs-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-estellencs-3.webp",
           "source": "UNSPLASH"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-estellencs.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-estellencs.webp",
       "description_es": "Uno de los tesoros mejor guardados de Mallorca, Estellencs es el municipio menos poblado de la isla, con apenas 300 habitantes. Encaramado en la vertiente occidental de la Serra de Tramuntana (Patrimonio de la Humanidad), este pueblo de piedra es un oasis de tranquilidad alejado del turismo de masas gracias a su escarpada geografía y sus reviradas carreteras. Conserva arquitectura tradicional, antiguas acequias de origen árabe y un modo de vida que apenas ha cambiado con el tiempo.",
       "tips_es": [
         "Baja caminando hasta la Cala Estellencs — una recóndita cala de guijarros con aguas cristalinas y escars (varaderos tradicionales). Calcula unos 60 minutos a pie desde el pueblo; el acceso en coche es extremadamente estrecho y sin aparcamiento.",
@@ -2975,26 +2975,26 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-binissalem.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-binissalem.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-binissalem-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-binissalem-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-binissalem-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-binissalem-3.webp",
           "source": "AETIB",
           "author": "Mallorca Video"
         },
         {
-          "url": "file:///android_asset/images/place-binissalem-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-binissalem-4.webp",
           "source": "AETIB",
           "author": "Mallorca Video"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-binissalem.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-binissalem.webp",
       "description_es": "Binissalem es la capital vinícola de Mallorca y corazón de su única D.O., a 22 km de Palma. Casonas señoriales del s.XVIII bordean su centro peatonal, con escudos familiares y aldabas de forja. Bodegas históricas como José L. Ferrer (1931) y Vins Nadal (1932) abren sus puertas para visitas y catas de Manto Negro y Callet. La iglesia gótica de Santa María de Robines preside la plaza mayor, y cada septiembre la fiesta de Sa Vermada convierte el pueblo en una celebración de la vendimia.",
       "tips_es": [
         "Aparca en la entrada del pueblo y ve andando al centro: las calles peatonales son estrechas y se disfrutan mucho más a pie.",
@@ -3044,15 +3044,15 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-capdepera.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-capdepera.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/place-capdepera-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-capdepera-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-capdepera.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-capdepera.webp",
       "description_es": "Capdepera corona una colina rocosa en el noreste de Mallorca, presidida por una fortaleza medieval del rey Jaime II (h. 1300) notablemente bien conservada. Sus murallas encierran un pequeño pueblo dentro del pueblo, una capilla gótica y vistas panorámicas hasta Menorca en días claros. En el casco urbano, el Museu de la Llata celebra el arte local del trenzado de hoja de palmito, tradición que durante siglos financió la economía del pueblo. Las calas Mesquida, Agulla y Gat, todas con bandera azul, quedan a muy poca distancia.",
       "tips_es": [
         "Usa calzado firme: los adoquines dentro del castillo son empinados y resbalan, especialmente tras la lluvia.",
@@ -3104,25 +3104,25 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-santanyi.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-santanyi.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/place-santanyi-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-santanyi-2.webp",
           "source": "PEXELS",
           "heroFocalY": 0.6557
         },
         {
-          "url": "file:///android_asset/images/place-santanyi-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-santanyi-3.webp",
           "source": "UNSPLASH",
           "heroFocalY": 0.9911
         },
         {
-          "url": "file:///android_asset/images/place-santanyi-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-santanyi-4.webp",
           "source": "UNSPLASH"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-santanyi.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-santanyi.webp",
       "description_es": "Encantador municipio rural en el sureste de Mallorca, construido con la característica piedra dorada de marès que ya apreciaban los romanos y que ha dado forma a la arquitectura mediterránea durante dos milenios. Santanyí es conocida como el pueblo más cultural de la isla: sus mercados del miércoles y el sábado reúnen más de 150 puestos con sobrasada, quesos artesanales, cerámica y productos locales. La imponente iglesia de Sant Andreu del siglo XVIII, los restos de la Porta Murada y la cercanía a calas vírgenes como el Caló des Moro y el Parque Natural de Mondragó la convierten en parada imprescindible del sureste.",
       "tips_es": [
         "El mercado del miércoles y el sábado (9:00–14:00) es uno de los más bonitos de la isla — más de 150 puestos con embutidos, quesos, cerámica y artesanía",
@@ -3177,19 +3177,19 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-petra.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-petra.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-petra-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-petra-2.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-petra-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-petra-3.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-petra.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-petra.webp",
       "description_es": "Tranquilo municipio agrícola en el corazón de la comarca del Pla de Mallorca, famoso en todo el mundo por ser la cuna de Fray Junípero Serra (1713–1784), el fraile franciscano que fundó la cadena de misiones de California — los gérmenes de ciudades como San Francisco y Los Ángeles. Sus calles empedradas de piedra dorada, las casas de marès y la absoluta ausencia de turismo masivo lo convierten en uno de los pueblos más auténticos de la isla. Además del legado del Beato Serra, Petra es tierra de almendros, bodegas artesanales y una gastronomía rural sin artificios.",
       "tips_es": [
         "La Casa Natal y el Museu Fra Junípero Serra son gratuitos y abren por las mañanas — una visita doble que no lleva más de una hora",
@@ -3236,22 +3236,22 @@
         "scenic",
         "fishing"
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-puerto-valldemossa.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-puerto-valldemossa.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-puerto-valldemossa.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-puerto-valldemossa.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/puerto-valldemossa-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/puerto-valldemossa-mia-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/puerto-valldemossa-mia-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/puerto-valldemossa-mia-4.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/puerto-valldemossa-mia-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/puerto-valldemossa-mia-5.webp",
           "source": "MINE"
         }
       ],
@@ -3301,10 +3301,10 @@
         "photogenic",
         "cove"
       ],
-      "thumbnail_url": "file:///android_asset/images/gem-calo-sestaca.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-calo-sestaca.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/gem-calo-sestaca.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-calo-sestaca.webp",
           "source": "PIXABAY"
         }
       ],
@@ -3353,38 +3353,38 @@
         "sunset",
         "hidden_gem"
       ],
-      "thumbnail_url": "file:///android_asset/images/mirador-estaca-mia-3.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-estaca-mia-3.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/mirador-estaca-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-estaca-mia-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/mirador-estaca-mia-6.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-estaca-mia-6.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/mirador-estaca-mia-7.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-estaca-mia-7.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/mirador-estaca-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-estaca-mia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/mirador-estaca-mia-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-estaca-mia-4.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/mirador-estaca-mia-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-estaca-mia-5.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/mirador-estaca-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-estaca-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/mirador-estaca-mia-8.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/mirador-estaca-mia-8.webp",
           "source": "MINE"
         }
       ],
@@ -3449,27 +3449,27 @@
         "sup_launch",
         "facing:45"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-sant-vicenc.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-sant-vicenc.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-sant-vicenc.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-sant-vicenc.webp",
           "source": "AETIB",
           "author": "Gaspar Monroig"
         },
         {
-          "url": "file:///android_asset/images/sup-sant-vicenc-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-sant-vicenc-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/sup-sant-vicenc-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-sant-vicenc-mia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/sup-sant-vicenc-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-sant-vicenc-mia-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/sup-sant-vicenc-mia-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-sant-vicenc-mia-4.webp",
           "source": "MINE"
         }
       ],
@@ -3528,14 +3528,14 @@
         "sup_launch",
         "facing:0"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-port-pollenca.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-port-pollenca.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-port-pollenca.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-port-pollenca.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-sup-port-pollenca-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-port-pollenca-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -3607,15 +3607,15 @@
         "sup_launch",
         "facing:90"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-portocolom.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-portocolom.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-portocolom.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-portocolom.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-sup-portocolom-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-portocolom-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -3676,15 +3676,15 @@
         "sup_launch",
         "facing:45"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-cala-ratjada.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-cala-ratjada.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-cala-ratjada.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-cala-ratjada.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-sup-cala-ratjada-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-cala-ratjada-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -3744,34 +3744,34 @@
         "sup_launch",
         "facing:225"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-portals-vells.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-portals-vells.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-portals-vells.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-portals-vells.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-sup-portals-vells-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-portals-vells-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/sup-portals-vells-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-portals-vells-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/sup-portals-vells-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-portals-vells-mia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/sup-portals-vells-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-portals-vells-mia-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/sup-portals-vells-mia-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-portals-vells-mia-4.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/sup-portals-vells-mia-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-portals-vells-mia-5.webp",
           "source": "MINE"
         }
       ],
@@ -3826,14 +3826,14 @@
         "sup_launch",
         "facing:180"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-santa-ponsa.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-santa-ponsa.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-santa-ponsa.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-santa-ponsa.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-sup-santa-ponsa-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-santa-ponsa-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -3892,18 +3892,18 @@
         "sup_launch",
         "facing:200"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-camp-de-mar-mia-1.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-camp-de-mar-mia-1.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-camp-de-mar-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-camp-de-mar-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/sup-camp-de-mar-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-camp-de-mar-mia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/sup-camp-de-mar-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-camp-de-mar-mia-3.webp",
           "source": "MINE"
         }
       ],
@@ -3960,15 +3960,15 @@
         "sup_launch",
         "facing:190"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-port-adriano.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-port-adriano.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-port-adriano.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-port-adriano.webp",
           "source": "PIXABAY",
           "heroFocalY": 0.2
         },
         {
-          "url": "file:///android_asset/images/place-sup-port-adriano-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-port-adriano-2.webp",
           "source": "PEXELS",
           "heroFocalY": 0.65
         }
@@ -4030,14 +4030,14 @@
         "sup_launch",
         "facing:315"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-soller.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-soller.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-soller.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-soller.webp",
           "source": "AETIB"
         },
         {
-          "url": "file:///android_asset/images/place-sup-soller-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-soller-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -4098,15 +4098,15 @@
         "sup_launch",
         "facing:175"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-cala-major.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-cala-major.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-cala-major.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-cala-major.webp",
           "source": "AETIB",
           "author": "Pedro Coll"
         },
         {
-          "url": "file:///android_asset/images/place-sup-cala-major-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-cala-major-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -4162,10 +4162,10 @@
         "terrace",
         "traditional"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-rest-can-torrat.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-can-torrat.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-rest-can-torrat.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-can-torrat.webp",
           "source": "MINE"
         }
       ],
@@ -4211,14 +4211,14 @@
         "terrace",
         "seafood"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-rest-can-pedro-genova.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-can-pedro-genova.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-rest-can-pedro-genova.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-can-pedro-genova.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-rest-can-pedro-genova-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-can-pedro-genova-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -4266,14 +4266,14 @@
         "paella",
         "views"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-rest-illeta-camp-de-mar-mia-1.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-illeta-camp-de-mar-mia-1.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-rest-illeta-camp-de-mar-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-illeta-camp-de-mar-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-rest-illeta-camp-de-mar-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-illeta-camp-de-mar-2.webp",
           "source": "MINE"
         }
       ],
@@ -4324,14 +4324,14 @@
         "local",
         "lechona"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-rest-sa-curva-hipodromo.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-sa-curva-hipodromo.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-rest-sa-curva-hipodromo.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-sa-curva-hipodromo.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-rest-sa-curva-hipodromo-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-sa-curva-hipodromo-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -4376,14 +4376,14 @@
         "paella",
         "accessible"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-rest-matias-son-ferriol.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-matias-son-ferriol.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-rest-matias-son-ferriol.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-matias-son-ferriol.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-rest-matias-son-ferriol-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-matias-son-ferriol-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -4429,14 +4429,14 @@
         "bohemian",
         "paambooli"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-rest-sa-ximbomba-genova.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-sa-ximbomba-genova.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-rest-sa-ximbomba-genova.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-sa-ximbomba-genova.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-rest-sa-ximbomba-genova-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-rest-sa-ximbomba-genova-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -4482,15 +4482,15 @@
         "shaded",
         "northwest"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-hike-port-des-canonge.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-hike-port-des-canonge.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-hike-port-des-canonge.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-hike-port-des-canonge.webp",
           "source": "AETIB",
           "author": "Jaume Pallicer"
         },
         {
-          "url": "file:///android_asset/images/place-hike-port-des-canonge-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-hike-port-des-canonge-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -4536,15 +4536,15 @@
         "trailhead",
         "santanyi"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-faro-ses-salines.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-faro-ses-salines.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-faro-ses-salines.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-faro-ses-salines.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-faro-ses-salines-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-faro-ses-salines-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -4591,14 +4591,14 @@
         "moderate-hard",
         "water"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-salt-des-freu.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-salt-des-freu.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-salt-des-freu.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-salt-des-freu.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-salt-des-freu-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-salt-des-freu-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -4654,24 +4654,24 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mhares-sea-club-sunset.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mhares-sea-club-sunset.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mhares-sea-club-sunset-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-6.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mhares-sea-club-sunset-6.webp",
           "source": "MINE",
           "heroFocalY": 0.55
         },
         {
-          "url": "file:///android_asset/images/place-mhares-sea-club-sunset-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mhares-sea-club-sunset-mia-1.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mhares-sea-club-sunset.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mhares-sea-club-sunset.webp",
       "description_es": "El gemelo salvaje del Mhares Sea Club: 200 metros de antiguas canteras de piedra marés esculpidas por el mar en terrazas rocosas planas, pozas de marea naturales y acantilados bajos en la costa de Llucmajor. La Playa del Delta se integra en la Reserva Marina de la Bahía de Palma — la prohibición total de pesca desde 2004 ha permitido que las poblaciones de peces se cuadrupliquen, convirtiendo este rincón en uno de los mejores puntos de apnea y esnórquel de la isla. En sus aguas cristalinas encontrarás meros de gran tamaño en las grietas, bancos de barracudas, dentones, sargos, erizos, pulpos camuflados en las rocas y vibrantes praderas de posidonia. Justo encima, en lo alto del acantilado, se encuentra el Mhares Sea Club, un beach club premium adults-only con amplia piscina, camas balinesas, gastronomía mediterránea y una de las mejores terrazas de atardecer de la isla — cada domingo desde las 17:00 en verano el club organiza su famoso tardeo con DJs residentes y precio rebajado en las hamacas.",
       "tips_es": [
         "Lleva una esterilla gruesa de espuma o colchoneta de camping: una toalla fina sobre la afilada roca marés resulta insoportable al cabo de una hora.",
@@ -4729,11 +4729,11 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-calas-sur-llucmajor.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-calas-sur-llucmajor.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-calas-sur-llucmajor.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-calas-sur-llucmajor.webp",
       "description_es": "Espectacular litoral de acantilados calcáreos y aguas turquesas entre Cala Blava y Cala Pi. Desde la intimidad del fiordo natural con arena blanca y pinos de Cala Pi hasta rincones vírgenes de difícil acceso como Cala Vella o Cala Beltrán, esta costa es el refugio perfecto para quienes buscan soledad y naturaleza sin masificación.",
       "tips_es": [
         "Cala Pi es la joya del tramo: un estrecho fiordo de 30 m de acantilados, arena blanca y aguas muy tranquilas. Acceso sencillo por una escalinata de piedra desde la urbanización.",
@@ -4792,19 +4792,19 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/gem-calo-des-moro-pixabay.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-calo-des-moro-pixabay.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/gem-calo-des-moro-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-calo-des-moro-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/gem-calo-des-moro-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-calo-des-moro-3.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/gem-calo-des-moro-pixabay.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-calo-des-moro-pixabay.webp",
       "description_es": "Una de las calas vírgenes más espectaculares de Mallorca y Hidden Gem en la costa sureste cerca de Santanyí. Caló des Moro es una pequeña maravilla natural — apenas 30 metros de arena blanca enmarcados por acantilados de caliza protegidos con pinos marítimos, y un agua de un turquesa imposiblemente intenso. En 2026 el arenal es mínimo por la erosión y se llena en minutos. No hay ningún servicio: sin socorrista, baños, duchas, hamacas ni papeleras. El acceso requiere bajar por un sendero empinado y rocoso — no apto para carritos ni movilidad reducida. Aparca solo en el parking gratuito habilitado en la entrada de Cala Llombards y camina 15–20 minutos; las calles residenciales son exclusivas para residentes y se sancionan con multa y grúa inmediata.",
       "tips_es": [
         "Llega antes de las 9h — el pequeño arenal se llena en minutos y no hay sombra ni zona de espera una vez completo",
@@ -4862,11 +4862,11 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/gem-cala-agulla.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-cala-agulla.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/gem-cala-agulla.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-cala-agulla.webp",
       "description_es": "Cala Agulla es una de las mejores playas del noreste de Mallorca: un amplio arco de 520 metros de arena blanca respaldado por un fragante pinar y dunas protegidas en el municipio de Capdepera. Declarada Area Natural de Especial Interes (ANEI) desde 1991, el entorno se ha mantenido libre de urbanizacion, conservando la belleza salvaje que la hizo famosa. El agua oscila entre el turquesa y el verde esmeralda segun la luz, y el fondo marino de arena con pendiente suave la hace excepcionalmente segura para familias.",
       "tips_es": [
         "La playa se llena rapidamente en verano. Llega antes de las 10:00 para encontrar un buen sitio cerca del agua y evitar las colas de aparcamiento.",
@@ -4915,15 +4915,15 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-mesquida.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-mesquida.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-mesquida-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-mesquida-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-mesquida.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-mesquida.webp",
       "description_es": "Una espectacular playa de arena blanca y aguas turquesas en el noreste de Mallorca, en el municipio de Capdepera, a unos 7 kilómetros de la localidad. Con 300 metros de longitud y 130 de anchura, es una de las playas naturales más grandes de la isla, y su inclusión en un Área de Especial Interés la mantiene libre de hoteles en primera línea, conservando un ambiente salvaje y auténtico. Una pasarela de madera cruza el impresionante sistema dunar protegido sin dañar el ecosistema. La playa está expuesta a vientos del norte y suele tener más oleaje que otras calas mallorquinas, lo que la hace popular entre bodyboarders y kitesurfistas, especialmente fuera del verano. El nudismo está permitido y es habitual en el sector este. Entre los servicios disponibles hay socorristas en temporada alta, alquiler de hamacas y sombrillas, un gran restaurante a pie de playa y un chiringuito. El parking público gratuito está a unos 200 metros de la arena pero se llena rápido en verano. La cala está unida a la vecina Cala Agulla por el sendero del Coll de Marina, apto para senderismo, BTT y rutas a caballo.",
       "tips_es": [
         "El sistema de dunas es un ecosistema protegido — utiliza siempre la pasarela de madera y no te salgas de los caminos señalizados",
@@ -4971,19 +4971,19 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-llombards.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-llombards.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-llombards-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-llombards-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-llombards-pexels.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-llombards-pexels.webp",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-llombards.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-llombards.webp",
       "description_es": "Cala Llombards es una de las calas de bolsillo mas elegantes del sureste de Mallorca: una ensenada resguardada de apenas 55 metros de ancho, encerrada por acantilados de arenisca ocre y enmarcada por casetas de botes tradicionales de pescadores (es nans) excavadas directamente en la roca. El agua en el interior de la bahia es de un azul verdoso intenso, totalmente en calma y protegida del oleaje por los cabos circundantes. A pesar de su pequeno tamano, la playa ofrece hamacas, un chiringuito en el acantilado y condiciones de bano perfectas para familias y amantes del snorkel.",
       "tips_es": [
         "Llega antes de las 09:30 en verano. El pequeno parking gratuito a pie de playa se llena muy pronto. Si esta lleno, aparca en la urbanizacion de arriba y baja por las escaleras (unos 5 minutos).",
@@ -5032,15 +5032,15 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-playa-muro.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-playa-muro.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-playa-muro-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-playa-muro-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-playa-muro.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-playa-muro.webp",
       "description_es": "La Playa de Muro es una de las playas naturales mas largas y hermosas de las Islas Baleares: un arco de 6 kilometros de arena blanca y aguas cristalinas poco profundas en la protegida bahia de Alcudia, al norte de Mallorca. Respaldada por pinar y las marismas del Parque Natural de S'Albufera, se divide en cuatro sectores bien diferenciados: desde zonas hoteleras con todos los servicios hasta sistemas de dunas silvestres completamente protegidos. La playa tiene Bandera Azul cada ano y es habitualmente reconocida como una de las mejores de Europa.",
       "tips_es": [
         "El sector central de Es Comu es completamente virgen y protegido, sin ningun servicio. Si buscas tranquilidad y dunas, ve alli y lleva tu propia comida, agua y sombra.",
@@ -5089,19 +5089,19 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-salmunia.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-salmunia.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-salmunia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-salmunia-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-salmunia-unsplash.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-salmunia-unsplash.webp",
           "source": "UNSPLASH"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-salmunia.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-salmunia.webp",
       "description_es": "Cala s'Almunia es uno de los rinones mas autenticos y con mas ambiente de la costa sureste de Mallorca: una pequena cala rocosa en el municipio de Santanyi donde coloridas casetas de botes de pescadores tradicionales se aferran a los acantilados de caliza dorada. A diferencia de una playa convencional, casi no tiene arena: los banistas se distribuyen en las rocas y rampas de hormigon junto a las barcas de pesca. El agua en el interior de la ensenada resguardada es extraordinariamente clara, en calma y profunda, filtrada por las praderas de posidonia que le otorgan su intenso color turquesa. Adyacente a ella se encuentra Cala es Maquer, una pequena cala de guijarros al lado opuesto.",
       "tips_es": [
         "Aparca en el parking gratuito cerca de Cala Llombards y baja caminando unos 15 minutos por las calles residenciales hasta la cala. El descenso final es por empinados escalones de piedra y hormigon.",
@@ -5177,23 +5177,23 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-portals-vells.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-portals-vells.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-portals-vells-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-portals-vells-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/portals-vells-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/portals-vells-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/portals-vells-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/portals-vells-mia-2.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-portals-vells.webp"
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-portals-vells.webp"
     },
     {
       "id": "cala-magraner",
@@ -5225,15 +5225,15 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-magraner.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-magraner.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-magraner-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-magraner-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-magraner.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-magraner.webp",
       "description_es": "Cala Magraner es una cala salvaje y recondita en la costa este de Mallorca, en el municipio de Manacor, entre altos acantilados de caliza cubiertos de matorral mediterraneo y pinos en voladizo. La playa mide unos 60 metros de largo, combinando arena palida, grava y cantos rodados, con un agua que se mantiene excepcionalmente clara y tranquila gracias a su orientacion resguardada. Es internacionalmente reconocida como el principal destino de psicobloc y escalada deportiva de Mallorca, con casi 90 vias equipadas en la pared que da al mar. Los senderos cercanos la conectan con otras cuatro calas virgenes: Cala Bota, Cala Virgili, Cala Pilota y Cala Bota.",
       "tips_es": [
         "Aparca en el arcen de la carretera Ma-4014 entre Porto Cristo y Cales de Mallorca (cerca del km 10) y camina unos 2,5 kilometros por una pista rural llana hasta la playa. La caminata dura entre 30 y 40 minutos en cada sentido.",
@@ -5264,15 +5264,15 @@
       "municipality": "Algaida",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-puig-de-randa.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-de-randa.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-puig-de-randa-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-de-randa-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-puig-de-randa.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-de-randa.webp",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 1840,
@@ -5334,16 +5334,16 @@
       "municipality": "Deia",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-son-marroig.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-son-marroig.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-son-marroig-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-son-marroig-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-son-marroig.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-son-marroig.webp",
       "price_level": "BUDGET",
       "rating": 4.6,
       "review_count": 2200,
@@ -5391,11 +5391,11 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mirador-na-burguesa.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-na-burguesa.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mirador-na-burguesa.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-na-burguesa.webp",
       "price_level": "FREE",
       "rating": 4.4,
       "review_count": 980,
@@ -5445,15 +5445,15 @@
       "municipality": "Pollenca",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-talaia-albercutx.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-talaia-albercutx.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/place-talaia-albercutx-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-talaia-albercutx-2.webp",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-talaia-albercutx.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-talaia-albercutx.webp",
       "price_level": "FREE",
       "rating": 4.8,
       "review_count": 760,
@@ -5498,17 +5498,17 @@
       "municipality": "Pollenca",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-puig-de-maria.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-de-maria.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-puig-de-maria-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-de-maria-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-puig-de-maria.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-puig-de-maria.webp",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 1430,
@@ -5570,16 +5570,16 @@
       "municipality": "Felanitx",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-santuari-sant-salvador.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-santuari-sant-salvador.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-santuari-sant-salvador-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-santuari-sant-salvador-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-santuari-sant-salvador.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-santuari-sant-salvador.webp",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 2650,
@@ -5642,16 +5642,16 @@
       "municipality": "Banyalbufar",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mirador-coll-gramola.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-coll-gramola.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/place-mirador-coll-gramola-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-coll-gramola-2.webp",
           "source": "AETIB",
           "author": "Walter Obiol"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mirador-coll-gramola.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-coll-gramola.webp",
       "price_level": "FREE",
       "rating": 4.5,
       "review_count": 540,
@@ -5702,16 +5702,16 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mercat-olivar.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-olivar.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/place-mercat-olivar-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-olivar-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mercat-olivar.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-olivar.webp",
       "price_level": "BUDGET",
       "rating": 4.4,
       "review_count": 3820,
@@ -5759,15 +5759,15 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mercat-san-juan.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-san-juan.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-mercat-san-juan-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-san-juan-2.webp",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mercat-san-juan.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-san-juan.webp",
       "price_level": "MID",
       "rating": 4.5,
       "review_count": 2140,
@@ -5816,15 +5816,15 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mercat-pere-garau.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-pere-garau.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-mercat-pere-garau-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-pere-garau-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mercat-pere-garau.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-pere-garau.webp",
       "price_level": "FREE",
       "rating": 4.3,
       "review_count": 1260,
@@ -5872,15 +5872,15 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mercat-artesanal-palma.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-artesanal-palma.webp",
           "source": "AETIB"
         },
         {
-          "url": "file:///android_asset/images/place-mercat-artesanal-palma-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-artesanal-palma-2.webp",
           "source": "AETIB"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mercat-artesanal-palma.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-artesanal-palma.webp",
       "price_level": "FREE",
       "rating": 4.2,
       "review_count": 890,
@@ -5928,16 +5928,16 @@
       "municipality": "Sineu",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mercat-gastronomic-sineu.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-gastronomic-sineu.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/place-mercat-gastronomic-sineu-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-gastronomic-sineu-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mercat-gastronomic-sineu.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-gastronomic-sineu.webp",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 1740,
@@ -5985,24 +5985,24 @@
       "municipality": "Pollença",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/hiking-yo-mia15.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/hiking-yo-mia15.webp",
           "source": "MINE",
           "heroFocalY": 0.35
         },
         {
-          "url": "file:///android_asset/images/hiking-yo-mia16.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/hiking-yo-mia16.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/hiking-yo-mia17.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/hiking-yo-mia17.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/hiking-yo-mia10.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/hiking-yo-mia10.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/hiking-yo-mia15.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/hiking-yo-mia15.webp",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 2340,
@@ -6053,11 +6053,11 @@
       "municipality": "Pollença",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-murta-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-murta-mia-1.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/cala-murta-mia-1.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-murta-mia-1.webp",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 1180,
@@ -6110,17 +6110,17 @@
       "municipality": "Escorca",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-ruta-cala-tuent.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-cala-tuent.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/place-ruta-cala-tuent-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-cala-tuent-2.webp",
           "source": "AETIB",
           "author": "Walter Obiol"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-tuent.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-cala-tuent.webp",
       "price_level": "FREE",
       "rating": 4.5,
       "review_count": 860,
@@ -6168,15 +6168,15 @@
       "municipality": "Manacor",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-ruta-cala-varques.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-cala-varques.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-ruta-cala-varques-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-cala-varques-2.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-varques.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-cala-varques.webp",
       "price_level": "FREE",
       "rating": 4.5,
       "review_count": 1920,
@@ -6224,16 +6224,16 @@
       "municipality": "Artà",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-ruta-cala-estreta.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-cala-estreta.webp",
           "source": "AETIB"
         },
         {
-          "url": "file:///android_asset/images/place-ruta-cala-estreta-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-cala-estreta-2.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-ruta-cala-estreta.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-cala-estreta.webp",
       "price_level": "FREE",
       "rating": 4.8,
       "review_count": 720,
@@ -6284,11 +6284,11 @@
       "municipality": "Alcúdia",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-ruta-coll-baix.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-coll-baix.webp",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/place-ruta-coll-baix.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-ruta-coll-baix.webp",
       "price_level": "FREE",
       "rating": 4.9,
       "review_count": 1560,
@@ -6339,15 +6339,15 @@
       "municipality": "Andratx",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/gem-mirador-sa-trapa.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-mirador-sa-trapa.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/gem-mirador-sa-trapa-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-mirador-sa-trapa-2.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/gem-mirador-sa-trapa.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-mirador-sa-trapa.webp",
       "price_level": "FREE",
       "rating": 5.0,
       "review_count": 6,
@@ -6401,19 +6401,19 @@
       "municipality": "Santanyí",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-figuera.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-figuera.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-figuera-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-figuera-2.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-figuera-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-figuera-3.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-figuera.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-figuera.webp",
       "price_level": "FREE",
       "rating": 4.7,
       "review_count": 3240,
@@ -6461,15 +6461,15 @@
       "municipality": "Santanyí",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-santanyi.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-santanyi.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-santanyi-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-santanyi-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-santanyi.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-santanyi.webp",
       "price_level": "BUDGET",
       "rating": 4.5,
       "review_count": 2870,
@@ -6517,16 +6517,16 @@
       "municipality": "Sant Llorenç des Cardassar",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-millor.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-millor.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-millor-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-millor-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-millor.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-millor.webp",
       "price_level": "BUDGET",
       "rating": 4.3,
       "review_count": 5680,
@@ -6575,15 +6575,15 @@
       "municipality": "Sóller",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-port-soller.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-port-soller.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-port-soller-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-port-soller-2.webp",
           "source": "PIXABAY"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-port-soller.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-port-soller.webp",
       "price_level": "FREE",
       "rating": 4.5,
       "review_count": 2920,
@@ -6632,23 +6632,23 @@
       "municipality": "Manacor",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-romantica.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-romantica.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-romantica-sunset.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-romantica-sunset.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-romantica-cliff.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-romantica-cliff.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-romantica-bar.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-romantica-bar.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-romantica.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-romantica.webp",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 1480,
@@ -6697,23 +6697,23 @@
       "municipality": "Palma",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-playa-de-palma.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-playa-de-palma.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-playa-de-palma-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-playa-de-palma-2.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-playa-de-palma-ballermann.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-playa-de-palma-ballermann.webp",
           "source": "OWN"
         },
         {
-          "url": "file:///android_asset/images/beach-playa-de-palma-bierkonig.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-playa-de-palma-bierkonig.webp",
           "source": "OWN"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-playa-de-palma.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-playa-de-palma.webp",
       "price_level": "FREE",
       "rating": 4.1,
       "review_count": 18400,
@@ -6762,15 +6762,15 @@
       "municipality": "Calvià",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-illetes.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-illetes.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-illetes-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-illetes-2.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-illetes.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-illetes.webp",
       "price_level": "BUDGET",
       "rating": 4.5,
       "review_count": 4320,
@@ -6820,23 +6820,23 @@
       "municipality": "Santanyí",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-dor.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-dor.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-dor-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-dor-2.webp",
           "source": "UNSPLASH"
         },
         {
-          "url": "file:///android_asset/images/cala-dor-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-dor-mia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cala-dor-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-dor-mia-3.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-dor.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-dor.webp",
       "price_level": "FREE",
       "rating": 4.4,
       "review_count": 5870,
@@ -6885,15 +6885,15 @@
       "municipality": "Calvià",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-peguera.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-peguera.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/beach-peguera-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-peguera-2.webp",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-peguera.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-peguera.webp",
       "price_level": "FREE",
       "rating": 4.3,
       "review_count": 3140,
@@ -6942,16 +6942,16 @@
       "municipality": "Andratx",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-sant-elm.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-sant-elm.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/beach-sant-elm-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-sant-elm-2.webp",
           "source": "PEXELS"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-sant-elm.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-sant-elm.webp",
       "price_level": "FREE",
       "rating": 4.5,
       "review_count": 1860,
@@ -7000,44 +7000,44 @@
       "municipality": "Deià",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-llucalcari.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-llucalcari.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-llucalcari-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-llucalcari-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/llucalcari-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/llucalcari-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/llucalcari-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/llucalcari-mia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/llucalcari-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/llucalcari-mia-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/llucalcari-mia-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/llucalcari-mia-4.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/llucalcari-mia-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/llucalcari-mia-5.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/llucalcari-mia-6.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/llucalcari-mia-6.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/llucalcari-mia-7.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/llucalcari-mia-7.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/beach-cala-llucalcari.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-llucalcari.webp",
       "price_level": "FREE",
       "rating": 4.6,
       "review_count": 620,
@@ -7120,10 +7120,10 @@
         "easy-moderate",
         "natural-wonder"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-avenc-de-son-pou.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-avenc-de-son-pou.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-avenc-de-son-pou.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-avenc-de-son-pou.webp",
           "source": "MINE"
         }
       ],
@@ -7178,10 +7178,10 @@
         "easy-moderate",
         "oak-forest"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-la-comuna-bunyola.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-la-comuna-bunyola.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-la-comuna-bunyola.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-la-comuna-bunyola.webp",
           "source": "PIXABAY"
         }
       ],
@@ -7239,30 +7239,30 @@
         "sup_launch",
         "facing:45"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-cavall-bernat-coves-blanques.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cavall-bernat-coves-blanques.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-cavall-bernat-coves-blanques.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cavall-bernat-coves-blanques.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/cavall-bernat-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cavall-bernat-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cavall-bernat-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cavall-bernat-mia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cavall-bernat-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cavall-bernat-mia-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cavall-bernat-mia-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cavall-bernat-mia-4.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cavall-bernat-mia-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cavall-bernat-mia-5.webp",
           "source": "MINE"
         }
       ],
@@ -7297,23 +7297,23 @@
       "municipality": "Calvià",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-del-toro-6.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-del-toro-6.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cala-del-toro-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-del-toro-5.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cala-del-toro-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-del-toro-4.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cala-del-toro-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-del-toro-2.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/cala-del-toro-6.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-del-toro-6.webp",
       "price_level": "FREE",
       "rating": 4.9,
       "review_count": 5,
@@ -7379,10 +7379,10 @@
         "Total from the car park: 2.8 km round trip, 20–25 min each way"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/cala-en-basset-mia-1.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-en-basset-mia-1.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-en-basset-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-en-basset-mia-1.webp",
           "source": "MINE"
         }
       ],
@@ -7461,26 +7461,26 @@
         "Kostenloser Parkplatz oben am Resort; Zugang zum Strand über eine gepflegte Treppe. Der Küstenweg verbindet die Bucht mit Cala Domingos und Cala Murada"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-cala-antena-main.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-antena-main.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-antena-main.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-antena-main.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-antena-cave-exterior.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-antena-cave-exterior.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-antena-cave-interior.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-antena-cave-interior.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-antena-rocky.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-antena-rocky.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-antena-tunnel.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-antena-tunnel.webp",
           "source": "MINE"
         }
       ],
@@ -7544,23 +7544,23 @@
         "Ein 1 km langer gepflasterter Kliffpfad mit spektakulären Mittelmeerausblicken — besonders schön bei Sonnenuntergang"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-cala-domingos-main.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-domingos-main.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-cala-domingos-main.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-domingos-main.webp",
           "source": "AETIB",
           "author": "AETIB"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-domingos-aerial.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-domingos-aerial.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-domingos-overview.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-domingos-overview.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/beach-cala-domingos-cave.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-cala-domingos-cave.webp",
           "source": "MINE"
         }
       ],
@@ -7592,10 +7592,10 @@
         "Combine the visit with Cala Bota, Cala Pilota and Cala Magraner via the coastal path for a full wild-cove day"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/cala-virgili.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-virgili.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-virgili.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-virgili.webp",
           "source": "PEXELS"
         }
       ],
@@ -7642,14 +7642,14 @@
         "Arrive early in summer — the car park fills up quickly and the beach gets very busy by midday"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/cala-marcal.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-marcal.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-marcal.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-marcal.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/cala-marcal-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-marcal-mia-2.webp",
           "source": "MINE"
         }
       ],
@@ -7698,14 +7698,14 @@
         "No shade — bring your own umbrella if you skip the hire service."
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-ses-covetes.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-ses-covetes.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-ses-covetes.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-ses-covetes.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/beach-ses-covetes-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-ses-covetes-2.webp",
           "source": "MINE"
         }
       ],
@@ -7758,10 +7758,10 @@
         "No natural shade — bring your own umbrella."
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/beach-es-carbo-mia-1.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-es-carbo-mia-1.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/beach-es-carbo-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/beach-es-carbo-mia-1.webp",
           "source": "MINE"
         }
       ],
@@ -7813,14 +7813,14 @@
         "Bring insect repellent if you plan to stay for sunset — the proximity to the salt flats means mosquitoes can appear at dusk."
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/arenal-sa-rapita.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/arenal-sa-rapita.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/arenal-sa-rapita.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/arenal-sa-rapita.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/arenal-sa-rapita-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/arenal-sa-rapita-2.webp",
           "source": "PIXABAY"
         }
       ],
@@ -7867,14 +7867,14 @@
         "Look for the Bronze Age Naveta de Alemany monument nearby — a little-known historical gem right beside a resort beach"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/cala-vinyes-mia-1.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-vinyes-mia-1.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-vinyes-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-vinyes-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cala-vinyes-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-vinyes-mia-2.webp",
           "source": "MINE"
         }
       ],
@@ -7919,14 +7919,14 @@
         "The Flower Party events at the chiringuito at sunset are not to be missed"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/cap-falco-mia-1.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cap-falco-mia-1.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cap-falco-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cap-falco-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cap-falco-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cap-falco-mia-2.webp",
           "source": "MINE"
         }
       ],
@@ -7971,14 +7971,14 @@
         "Drive the Ma-10 with caution: tight bends, narrow lanes and heavy cyclist traffic especially on weekends"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/place-gorg-blau.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-gorg-blau.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-gorg-blau.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-gorg-blau.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/place-gorg-blau-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-gorg-blau-2.webp",
           "source": "MINE"
         }
       ],
@@ -8027,14 +8027,14 @@
         "Smart casual dress code required"
       ],
       "price_level": "EXPENSIVE",
-      "thumbnail_url": "file:///android_asset/images/place-mhares-sea-club.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mhares-sea-club.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mhares-sea-club.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mhares-sea-club.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-mhares-sea-club-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mhares-sea-club-2.webp",
           "source": "PEXELS",
           "heroFocalY": 0.6099
         }
@@ -8079,14 +8079,14 @@
         "Cross the road to find the track up to Talaia d'Albercutx for even higher views"
       ],
       "price_level": "FREE",
-      "thumbnail_url": "file:///android_asset/images/place-mirador-des-colomer.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-des-colomer.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mirador-des-colomer.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-des-colomer.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-mirador-des-colomer-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mirador-des-colomer-2.webp",
           "source": "PEXELS"
         }
       ],
@@ -8128,14 +8128,14 @@
       "longitude": 2.49997,
       "address": "Ctra. Banyalbufar-Estellencs, km 88,6",
       "municipality": "Banyalbufar",
-      "thumbnail_url": "file:///android_asset/images/gem-torre-verger.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-torre-verger.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/gem-torre-verger.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-torre-verger.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/gem-torre-verger-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-torre-verger-2.webp",
           "source": "MINE"
         }
       ],
@@ -8186,24 +8186,24 @@
       "municipality": "Calvià",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/gem-costa-de-la-calma.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-costa-de-la-calma.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/gem-costa-de-la-calma-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-costa-de-la-calma-2.webp",
           "source": "MINE",
           "heroFocalY": 0.347
         },
         {
-          "url": "file:///android_asset/images/gem-costa-de-la-calma-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-costa-de-la-calma-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/gem-costa-de-la-calma-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-costa-de-la-calma-4.webp",
           "source": "MINE"
         }
       ],
-      "thumbnail_url": "file:///android_asset/images/gem-costa-de-la-calma.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-costa-de-la-calma.webp",
       "price_level": "FREE",
       "rating": 4.9,
       "review_count": 8,
@@ -8285,14 +8285,14 @@
         "gourmet",
         "waterfront"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-mercat-1930.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-1930.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-mercat-1930.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-1930.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/place-mercat-1930-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-mercat-1930-2.webp",
           "source": "PEXELS"
         }
       ]
@@ -8309,7 +8309,7 @@
       "rating": 4.6,
       "review_count": 534,
       "price_level": "MID",
-      "thumbnail_url": "file:///android_asset/images/cala-llamp-mia-1.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-llamp-mia-1.webp",
       "tips": [
         "The beach is entirely rocky — water shoes are essential for entering and exiting the sea safely.",
         "Gran Folies beach club sunbeds cost €40–60 per person per day (includes pool access); book via their website as daily capacity is limited.",
@@ -8319,15 +8319,15 @@
       ],
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cala-llamp-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-llamp-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cala-llamp-yo12.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-llamp-yo12.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cala-llamp-yo10.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cala-llamp-yo10.webp",
           "source": "MINE"
         }
       ],
@@ -8375,15 +8375,15 @@
       ],
       "description_de": "Unberührte Bucht mit Rundsteinen, umgeben von den Cavall Bernat Klippen (360m). Sandiger Grund 2-3m tief, ideal zum Ankern. Auch zu Fuß von Port de Pollença erreichbar (2,7 km).",
       "name_de": "Cala Boquer",
-      "thumbnail_url": "file:///android_asset/images/place-cala-boquer-new.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cala-boquer-new.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-cala-boquer-new.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cala-boquer-new.webp",
           "source": "MINE",
           "heroFocalY": 0.7
         }
       ],
-      "cover": "file:///android_asset/images/place-cala-boquer-new.webp",
+      "cover": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cala-boquer-new.webp",
       "heroFocalY": 0.7,
       "lat": 39.9290388,
       "lon": 3.0946593,
@@ -8465,10 +8465,10 @@
         "sup_launch",
         "facing:225"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-sup-cala-punta-negra.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-cala-punta-negra.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-sup-cala-punta-negra.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-sup-cala-punta-negra.webp",
           "source": "OTHER",
           "heroFocalY": 0.75
         }
@@ -8530,14 +8530,14 @@
         "sup_launch",
         "facing:90"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-sa-cova-baixa-thumb.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-sa-cova-baixa-thumb.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-sa-cova-baixa-thumb.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-sa-cova-baixa-thumb.webp",
           "source": "OTHER"
         },
         {
-          "url": "file:///android_asset/images/sup-sa-cova-baixa-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-sa-cova-baixa-2.webp",
           "source": "OTHER"
         }
       ]
@@ -8591,22 +8591,22 @@
         "kayak",
         "barco"
       ],
-      "thumbnail_url": "file:///android_asset/images/cueva-azul-mia-2.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cueva-azul-mia-2.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/cueva-azul-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cueva-azul-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cueva-azul-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cueva-azul-mia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cueva-azul-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cueva-azul-mia-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/cueva-azul-mia-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/cueva-azul-mia-4.webp",
           "source": "MINE"
         }
       ]
@@ -8623,21 +8623,21 @@
       "latitude": 39.9009,
       "longitude": 3.0853,
       "municipality": "Pollenca",
-      "thumbnail_url": "file:///android_asset/images/puerto-pollensa-mia-1.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/puerto-pollensa-mia-1.webp",
       "rating": 4.7,
       "review_count": 1850,
       "price_level": "FREE",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/puerto-pollensa-mia-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/puerto-pollensa-mia-1.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/puerto-pollensa-mia-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/puerto-pollensa-mia-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/puerto-pollensa-mia-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/puerto-pollensa-mia-3.webp",
           "source": "MINE"
         }
       ],
@@ -8720,30 +8720,30 @@
         "barco",
         "caminar"
       ],
-      "thumbnail_url": "file:///android_asset/images/place-cova-dels-coloms.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cova-dels-coloms.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/place-cova-dels-coloms.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cova-dels-coloms.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-cova-dels-coloms-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cova-dels-coloms-2.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-cova-dels-coloms-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cova-dels-coloms-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-cova-dels-coloms-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cova-dels-coloms-4.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-cova-dels-coloms-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cova-dels-coloms-5.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/place-cova-dels-coloms-6.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/place-cova-dels-coloms-6.webp",
           "source": "MINE"
         }
       ],
@@ -8790,30 +8790,30 @@
         "sup_launch",
         "facing:90"
       ],
-      "thumbnail_url": "file:///android_asset/images/sup-cala-romantica-thumb.webp",
+      "thumbnail_url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-cala-romantica-thumb.webp",
       "photo_urls": [
         {
-          "url": "file:///android_asset/images/sup-cala-romantica-thumb.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-cala-romantica-thumb.webp",
           "source": "OTHER"
         },
         {
-          "url": "file:///android_asset/images/sup-cala-romantica-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-cala-romantica-2.webp",
           "source": "OTHER"
         },
         {
-          "url": "file:///android_asset/images/sup-cala-romantica-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-cala-romantica-3.webp",
           "source": "OTHER"
         },
         {
-          "url": "file:///android_asset/images/sup-cala-romantica-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-cala-romantica-4.webp",
           "source": "OTHER"
         },
         {
-          "url": "file:///android_asset/images/sup-cala-romantica-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-cala-romantica-5.webp",
           "source": "OTHER"
         },
         {
-          "url": "file:///android_asset/images/sup-cala-romantica-6.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/sup-cala-romantica-6.webp",
           "source": "OTHER"
         }
       ],
@@ -8947,7 +8947,7 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-beaches-3d-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-beaches-3d-cover.webp",
         "source": "MINE"
       },
       "gallery_photos": []
@@ -9049,16 +9049,16 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-tramuntana-2d-gallery-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-tramuntana-2d-gallery-1.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/itin-tramuntana-2d-gallery-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-tramuntana-2d-gallery-2.webp",
           "source": "PEXELS"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-tramuntana-2d-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-tramuntana-2d-cover.webp",
         "source": "PIXABAY"
       }
     },
@@ -9150,20 +9150,20 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-palma-culture-gallery-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-culture-gallery-1.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/itin-palma-culture-gallery-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-culture-gallery-2.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/itin-palma-culture-gallery-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-culture-gallery-3.webp",
           "source": "UNSPLASH"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-palma-culture-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-culture-cover.webp",
         "source": "PIXABAY"
       }
     },
@@ -9236,7 +9236,7 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-east-coast-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-east-coast-cover.webp",
         "source": "MINE"
       },
       "gallery_photos": []
@@ -9327,61 +9327,61 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-soller-valley.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley.webp",
         "source": "AETIB",
         "author": "Eduardo Miralles"
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-soller-valley.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-2.webp",
           "source": "AETIB"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-3.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-4.webp",
           "source": "AETIB",
           "author": "Pedro Coll"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-5.webp",
           "source": "AETIB",
           "author": "Gaspar Valero"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-6.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-6.webp",
           "source": "AETIB"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-7.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-7.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-8.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-8.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-9.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-9.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-10.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-10.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         },
         {
-          "url": "file:///android_asset/images/itin-soller-valley-11.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-soller-valley-11.webp",
           "source": "AETIB",
           "author": "Giorgio Gatti"
         }
@@ -9477,16 +9477,16 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-west-coast-miradors-cover.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-west-coast-miradors-cover.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/itin-west-coast-miradors-gallery-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-west-coast-miradors-gallery-1.webp",
           "source": "PIXABAY"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-west-coast-miradors-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-west-coast-miradors-cover.webp",
         "source": "PEXELS"
       }
     },
@@ -9562,16 +9562,16 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-formentor-viewpoints-cover.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-formentor-viewpoints-cover.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/itin-formentor-viewpoints-gallery-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-formentor-viewpoints-gallery-1.webp",
           "source": "PIXABAY"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-formentor-viewpoints-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-formentor-viewpoints-cover.webp",
         "source": "PEXELS"
       }
     },
@@ -9751,17 +9751,17 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-palma-soller-gallery-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-soller-gallery-1.webp",
           "source": "AETIB",
           "author": "Pep Vicens"
         },
         {
-          "url": "file:///android_asset/images/itin-palma-soller-gallery-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-soller-gallery-2.webp",
           "source": "PIXABAY"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-palma-soller-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-soller-cover.webp",
         "source": "PIXABAY"
       }
     },
@@ -9866,30 +9866,30 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-sant-vicenc.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-sant-vicenc.webp",
         "source": "AETIB",
         "author": "Pedro Coll"
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-sant-vicenc.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-sant-vicenc.webp",
           "source": "AETIB",
           "author": "Pedro Coll"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-sant-vicenc-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-sant-vicenc-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-sant-vicenc-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-sant-vicenc-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-sant-vicenc-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-sant-vicenc-4.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-sant-vicenc-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-sant-vicenc-5.webp",
           "source": "MINE"
         }
       ]
@@ -10009,7 +10009,7 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-formentor.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-formentor.webp",
         "source": "PIXABAY"
       },
       "gallery_photos": []
@@ -10107,7 +10107,7 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-mondrag.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-mondrag.webp",
         "source": "AETIB",
         "author": "Eduardo Miralles"
       },
@@ -10216,12 +10216,12 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-portocolom.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-portocolom.webp",
         "source": "PIXABAY"
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-portocolom-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-portocolom-2.webp",
           "source": "PEXELS"
         }
       ]
@@ -10324,18 +10324,18 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-cala-ratjada.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-cala-ratjada.webp",
         "source": "AETIB",
         "author": "Eduardo Miralles"
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-cala-ratjada.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-cala-ratjada.webp",
           "source": "AETIB",
           "author": "Eduardo Miralles"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-cala-ratjada-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-cala-ratjada-2.webp",
           "source": "PEXELS"
         }
       ]
@@ -10439,12 +10439,12 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-portals-vells-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-portals-vells-2.webp",
           "source": "PEXELS"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-portals-vells.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-portals-vells.webp",
         "source": "PEXELS"
       }
     },
@@ -10546,12 +10546,12 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-santa-ponsa.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-santa-ponsa.webp",
         "source": "PEXELS"
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-santa-ponsa-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-santa-ponsa-2.webp",
           "source": "PEXELS"
         }
       ]
@@ -10654,12 +10654,12 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-camp-de-mar.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-camp-de-mar.webp",
         "source": "MINE"
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-camp-de-mar-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-camp-de-mar-2.webp",
           "source": "PEXELS"
         }
       ]
@@ -10771,12 +10771,12 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-port-adriano.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-port-adriano.webp",
         "source": "PIXABAY"
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-port-adriano-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-port-adriano-2.webp",
           "source": "PEXELS"
         }
       ]
@@ -10884,16 +10884,16 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-soller.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-soller.webp",
         "source": "AETIB"
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-soller.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-soller.webp",
           "source": "AETIB"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-soller-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-soller-2.webp",
           "source": "PEXELS"
         }
       ]
@@ -11000,18 +11000,18 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-cala-major.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-cala-major.webp",
         "source": "AETIB",
         "author": "Pedro Coll"
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-cala-major.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-cala-major.webp",
           "source": "AETIB",
           "author": "Pedro Coll"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-cala-major-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-cala-major-2.webp",
           "source": "PEXELS"
         }
       ]
@@ -11103,12 +11103,12 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-cami-port-canonge-gallery-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-cami-port-canonge-gallery-1.webp",
           "source": "MINE"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-cami-port-canonge-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-cami-port-canonge-cover.webp",
         "source": "PEXELS"
       }
     },
@@ -11199,12 +11199,12 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-cala-marmols-faro-gallery-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-cala-marmols-faro-gallery-1.webp",
           "source": "MINE"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-cala-marmols-faro-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-cala-marmols-faro-cover.webp",
         "source": "PEXELS"
       }
     },
@@ -11282,7 +11282,7 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/gem-calo-des-moro-pixabay.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/gem-calo-des-moro-pixabay.webp",
         "source": "PIXABAY"
       },
       "gallery_photos": []
@@ -11347,16 +11347,16 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sacred-hilltops-cover.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sacred-hilltops-cover.webp",
           "source": "PIXABAY"
         },
         {
-          "url": "file:///android_asset/images/itin-sacred-hilltops-gallery-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sacred-hilltops-gallery-1.webp",
           "source": "PIXABAY"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sacred-hilltops-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sacred-hilltops-cover.webp",
         "source": "PIXABAY"
       }
     },
@@ -11431,7 +11431,7 @@
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-hidden-gems-day-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-hidden-gems-day-cover.webp",
         "source": "PEXELS"
       },
       "gallery_photos": []
@@ -11512,24 +11512,24 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-palma-markets-2.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-markets-2.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/itin-palma-markets-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-markets-3.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/itin-palma-markets-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-markets-4.webp",
           "source": "PEXELS"
         },
         {
-          "url": "file:///android_asset/images/itin-palma-markets-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-markets-5.webp",
           "source": "PEXELS"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-palma-markets.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-palma-markets.webp",
         "source": "PIXABAY"
       }
     },
@@ -11592,12 +11592,12 @@
       ],
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-northeast-wild-gallery-1.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-northeast-wild-gallery-1.webp",
           "source": "MINE"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-northeast-wild-cover.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-northeast-wild-cover.webp",
         "source": "PEXELS"
       }
     },
@@ -11878,7 +11878,7 @@
       },
       "image_metadata": {
         "file": "itin-sup-cavall-bernat-v2.webp",
-        "asset_path": "file:///android_asset/images/itin-sup-cavall-bernat-v2.webp",
+        "asset_path": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-cavall-bernat-v2.webp",
         "original_filename": "cavall bernat.webp",
         "source": "local_asset",
         "scene": "Vista panorámica de Cala Molins desde el acantilado sur. Agua turquesa cristalina con fondo rocoso visible, kayaks azules en orilla de lanzamiento, carretera costera y montañas de la Tramuntana al fondo.",
@@ -11887,44 +11887,44 @@
       },
       "gallery_photos": [
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-4.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-4.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-3.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-3.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-5.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-5.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-6.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-6.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-7.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-7.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-8.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-8.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-9.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-9.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-10.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-10.webp",
           "source": "MINE"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-11.webp",
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-11.webp",
           "source": "MINE"
         }
       ],
       "cover_photo": {
-        "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc.webp",
+        "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc.webp",
         "source": "MINE"
       },
       "route_polyline_points": [
@@ -11959,34 +11959,34 @@
       ],
       "gallery": [
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-4.webp"
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-4.webp"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-3.webp"
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-3.webp"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-5.webp"
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-5.webp"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-6.webp"
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-6.webp"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-7.webp"
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-7.webp"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-8.webp"
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-8.webp"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-9.webp"
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-9.webp"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-10.webp"
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-10.webp"
         },
         {
-          "url": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc-11.webp"
+          "url": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc-11.webp"
         }
       ],
-      "cover": "file:///android_asset/images/itin-sup-4-calas-sant-vicenc.webp",
+      "cover": "https://storage.googleapis.com/mallorca-explorer-49eb2.firebasestorage.app/places/itin-sup-4-calas-sant-vicenc.webp",
       "waypoints": [
         {
           "order": 1,
