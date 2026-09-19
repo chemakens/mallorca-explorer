@@ -52,4 +52,25 @@ class UserCloudDataSource @Inject constructor(
     suspend fun getVisitedIds(uid: String): List<String> = try {
         visitedCol(uid).get().await().documents.map { it.id }
     } catch (e: Exception) { Timber.w(e, "getVisitedIds failed"); emptyList() }
+
+    // FCM Token
+    suspend fun saveFcmToken(uid: String, token: String) {
+        try {
+            firestore.collection("users").document(uid)
+                .set(mapOf("fcmToken" to token), com.google.firebase.firestore.SetOptions.merge())
+                .await()
+        } catch (e: Exception) {
+            Timber.w(e, "saveFcmToken failed")
+        }
+    }
+
+    suspend fun saveNotificationCategories(uid: String, categories: Set<String>) {
+        try {
+            firestore.collection("users").document(uid)
+                .set(mapOf("notificationCategories" to categories.toList()), com.google.firebase.firestore.SetOptions.merge())
+                .await()
+        } catch (e: Exception) {
+            Timber.w(e, "saveNotificationCategories failed")
+        }
+    }
 }

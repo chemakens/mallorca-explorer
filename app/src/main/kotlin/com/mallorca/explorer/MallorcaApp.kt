@@ -13,12 +13,16 @@ import com.mallorca.explorer.core.data.datastore.UserPreferencesDataStore
 import com.mallorca.explorer.core.data.sync.SeedDataWorker
 import com.mallorca.explorer.notification.DailyEventCheckWorker
 import com.mallorca.explorer.notification.NewGemCheckWorker
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.messaging.FirebaseMessaging
+import com.mallorca.explorer.core.data.auth.UserCloudDataSource
 import com.mallorca.explorer.notification.createNotificationChannel
 import dagger.hilt.android.HiltAndroidApp
 import androidx.lifecycle.ProcessLifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.tasks.await
 import okhttp3.OkHttpClient
 import timber.log.Timber
 import javax.inject.Inject
@@ -29,6 +33,8 @@ class MallorcaApp : Application(), Configuration.Provider, ImageLoaderFactory {
     @Inject lateinit var workerFactory: HiltWorkerFactory
     @Inject lateinit var prefsDataStore: UserPreferencesDataStore
     @Inject lateinit var localeSource: LocaleSource
+    @Inject lateinit var firebaseAuth: FirebaseAuth
+    @Inject lateinit var userCloudDataSource: UserCloudDataSource
 
     override val workManagerConfiguration: Configuration
         get() = Configuration.Builder()
@@ -67,5 +73,17 @@ class MallorcaApp : Application(), Configuration.Provider, ImageLoaderFactory {
         NewGemCheckWorker.schedule(this)
         DailyEventCheckWorker.schedule(this)
         createNotificationChannel(this)
+
+        // Registrar token FCM para usuarios ya logueados (actualizaciones de app)
+        ProcessLifecycleOwner.get().lifecycleScope.launch {
+            val uid = firebaseAuth.currentUser?.uid ?: return@launch
+            try {
+                val token = FirebaseMessaging.getInstance().token.await()
+                userCloudDataSource.saveFcmToken(uid, token)
+                Timber.d("FCM token registrado al arrancar para uid=$uid")
+            } catch (e: Exception) {
+                Timber.w(e, "No se pudo registrar token FCM al arrancar")
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mallorca.explorer.core.common.LocaleSource
 import com.mallorca.explorer.core.data.datastore.UserPreferencesDataStore
+import com.mallorca.explorer.core.data.auth.UserCloudDataSource
 import com.mallorca.explorer.core.data.preferences.NotificationPreferences
 import com.mallorca.explorer.core.domain.model.AuthUser
 import com.mallorca.explorer.core.domain.model.EventCategory
@@ -14,6 +15,7 @@ import com.mallorca.explorer.core.domain.repository.AuthRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -28,6 +30,7 @@ class SettingsViewModel @Inject constructor(
     private val authRepository: AuthRepository,
     private val notificationPreferences: NotificationPreferences,
     @ApplicationContext private val context: Context,
+    private val userCloudDataSource: UserCloudDataSource,
 ) : ViewModel() {
 
     val currentLocale: StateFlow<String> = localeSource.locale
@@ -91,7 +94,13 @@ class SettingsViewModel @Inject constructor(
             val current = enabledEventCategories.value.toMutableSet()
             if (category in current) current.remove(category) else current.add(category)
             // Aseguramos que al menos una categoría quede activa
-            if (current.isNotEmpty()) notificationPreferences.setEnabledCategories(current)
+            if (current.isNotEmpty()) {
+                notificationPreferences.setEnabledCategories(current)
+                // Sincronizar categorías a Firestore para que la Cloud Function las use
+                authRepository.currentUser.firstOrNull()?.uid?.let { uid ->
+                    userCloudDataSource.saveNotificationCategories(uid, current.map { it.name }.toSet())
+                }
+            }
         }
     }
 

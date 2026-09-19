@@ -80,6 +80,15 @@
             </intent-filter>
         </activity>
 
+    
+        <!-- FCM Service para notificaciones push -->
+        <service
+            android:name=".notification.MallorcaFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
