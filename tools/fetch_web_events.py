@@ -1413,77 +1413,117 @@ def scrape_faib_atletisme() -> List[Dict]:
 
 
 
-def scrape_fourvenues() -> List[Dict]:
-    """Fourvenues — BCM Mallorca, Fitz Mallorca y Amok Mallorca. Schema.org JSON-LD."""
-    import re
-    VENUES = [
-        ("BCM Mallorca",  "https://www.fourvenues.com/es/bcm-mallorca",  "Calvià"),
-        ("Fitz Mallorca", "https://www.fourvenues.com/es/fitz-mallorca", "Palma"),
-        ("Amok Mallorca", "https://site.fourvenues.com/es/discoteca-amok-mallorca@amok", "Palma"),
-    ]
-    HEADERS_FV = {
-        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "es-ES,es;q=0.9",
-        "Referer": "https://www.google.com/",
-    }
-    GENERIC_BLACKLIST = []
-    all_events = []
-    for venue_name, url, location in VENUES:
-        seen = set()
-        try:
-            resp = requests.get(url, headers=HEADERS_FV, timeout=12)
-            resp.raise_for_status()
-            soup = BeautifulSoup(resp.text, "html.parser")
-            for tag in soup.find_all("script", type="application/ld+json"):
-                try:
-                    data = json.loads(tag.string or "")
-                    items = []
-                    if isinstance(data, dict):
-                        if data.get("@type") == "ItemList":
-                            items = data.get("itemListElement", [])
-                        elif data.get("@type") in ("Event", "MusicEvent"):
-                            items = [data]
-                    elif isinstance(data, list):
-                        items = data
-                    for item in items:
-                        if isinstance(item, dict) and item.get("@type") == "ListItem":
-                            item = item.get("item", {})
-                        if not isinstance(item, dict):
-                            continue
-                        if item.get("@type") not in ("Event", "MusicEvent"):
-                            continue
-                        title = (item.get("name") or "").strip()
-                        date_raw = item.get("startDate") or ""
-                        date_str = date_raw[:10]
-                        if not title or not date_str:
-                            continue
-                        # Filtrar sesiones genéricas
-                        title_lower = title.lower()
-                        if any(bl in title_lower for bl in GENERIC_BLACKLIST):
-                            continue
-                        # Limpiar prefijos de fecha del título
-                        title = re.sub(r"^\d{1,2}[\s/\-\.]+(?:ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)\S*\s*", "", title, flags=re.IGNORECASE).strip()
-                        key = (title[:50].lower(), date_str)
-                        if key in seen:
-                            continue
-                        seen.add(key)
-                        all_events.append({
-                            "title": title[:120],
-                            "date": date_str,
-                            "location": location,
-                            "category": "NIGHTLIFE",
-                            "source": venue_name,
-                            "url": url,
-                            "description": "",
-                        })
-                except Exception:
-                    pass
-        except Exception as e:
-            print(f"[Fourvenues] Error {venue_name}: {e}")
-        print(f"[Fourvenues] {venue_name}: {len([e for e in all_events if e['source'] == venue_name])} eventos")
-    print(f"[Fourvenues] Total: {len(all_events)} eventos")
-    return all_events
+def scrape_bcm() -> List[Dict]:
+    """BCM Mallorca — Scraping desde web propia con Playwright."""
+    events = []
+    url = "https://bcmmallorca.com/es/tickets"
+    print("   🔍 Scraping: BCM Mallorca...")
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(user_agent=random.choice(USER_AGENTS))
+            page.goto(url, wait_until="networkidle", timeout=60000)
+            page.wait_for_timeout(5000)
+
+            html = page.content()
+            soup = BeautifulSoup(html, "html.parser")
+            browser.close()
+
+        # Buscar JSON-LD
+        json_ld_scripts = soup.find_all("script", type="application/ld+json")
+        for script in json_ld_scripts:
+            try:
+                data = json.loads(script.string or "")
+                items = []
+
+                if isinstance(data, dict):
+                    if data.get("@type") == "ItemList":
+                        items = data.get("itemListElement", [])
+                    elif data.get("@type") in ("Event", "MusicEvent"):
+                        items = [data]
+
+                for item in items:
+                    if isinstance(item, dict):
+                        event = item.get("item", {}) if item.get("@type") == "ListItem" else item
+                        if event.get("@type") in ("Event", "MusicEvent"):
+                            title = event.get("name", "").strip()
+                            date_str = event.get("startDate", "")[:10]
+                            if title and date_str:
+                                events.append({
+                                    "title": title[:100],
+                                    "date": date_str,
+                                    "location": "Calvià",
+                                    "category": "NIGHTLIFE",
+                                    "source": "BCM Mallorca",
+                                    "url": url,
+                                    "description": "",
+                                })
+            except Exception:
+                pass
+
+        print(f"      ✅ BCM Mallorca: {len(events)} eventos")
+    except Exception as e:
+        print(f"      ❌ BCM Mallorca error: {e}")
+
+    return events
+
+
+def scrape_fitz() -> List[Dict]:
+    """Fitz Mallorca — Scraping desde web propia con Playwright."""
+    events = []
+    url = "https://fitzmallorca.com/events"
+    print("   🔍 Scraping: Fitz Mallorca...")
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(user_agent=random.choice(USER_AGENTS))
+            page.goto(url, wait_until="networkidle", timeout=60000)
+            page.wait_for_timeout(5000)
+
+            html = page.content()
+            soup = BeautifulSoup(html, "html.parser")
+            browser.close()
+
+        # Buscar JSON-LD
+        json_ld_scripts = soup.find_all("script", type="application/ld+json")
+        for script in json_ld_scripts:
+            try:
+                data = json.loads(script.string or "")
+                items = []
+
+                if isinstance(data, dict):
+                    if data.get("@type") == "ItemList":
+                        items = data.get("itemListElement", [])
+                    elif data.get("@type") in ("Event", "MusicEvent"):
+                        items = [data]
+
+                for item in items:
+                    if isinstance(item, dict):
+                        event = item.get("item", {}) if item.get("@type") == "ListItem" else item
+                        if event.get("@type") in ("Event", "MusicEvent"):
+                            title = event.get("name", "").strip()
+                            date_str = event.get("startDate", "")[:10]
+                            if title and date_str:
+                                events.append({
+                                    "title": title[:100],
+                                    "date": date_str,
+                                    "location": "Palma",
+                                    "category": "NIGHTLIFE",
+                                    "source": "Fitz Mallorca",
+                                    "url": url,
+                                    "description": "",
+                                })
+            except Exception:
+                pass
+
+        print(f"      ✅ Fitz Mallorca: {len(events)} eventos")
+    except Exception as e:
+        print(f"      ❌ Fitz Mallorca error: {e}")
+
+    return events
+
 
 
 
@@ -1600,7 +1640,8 @@ def scrape_all_sources() -> List[Dict]:
         scrape_ime_palma,
         scrape_firesifestes,
         scrape_ticketib,
-        scrape_fourvenues,
+        scrape_bcm,
+        scrape_fitz,
         scrape_faib_atletisme,
         scrape_amok,
     ]
