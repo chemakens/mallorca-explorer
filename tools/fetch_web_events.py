@@ -147,51 +147,75 @@ def detect_category_smart(title: str, description: str = "") -> str:
 
     # 1. Reglas directas prioritarias (título)
 
-    # 1a. Actividades infantiles/tecnológicas (ANTES que actividades culturales)
-    if any(w in t_lower for w in ["lego", "robòtica", "robotica"]):
+    # 1a. Deportes específicos (MÁXIMA PRIORIDAD)
+    if any(w in t_lower for w in ["corredores", "carreras", "run club", "atletisme", "cursa", "triatlón", "triatlo",
+                                   "maratón", "marató", "torneo", "trofeu", "trofeo", "trail running"]):
+        return "SPORT"
+
+    # 1b. Nightlife y tardeos
+    if any(w in t_lower for w in ["tardeo", "megatardeo"]):
+        return "NIGHTLIFE"
+
+    # 1c. Actividades infantiles/tecnológicas (ANTES que actividades culturales)
+    if any(w in t_lower for w in ["lego", "robòtica", "robotica", "espai de joc", "joc infantil", "titelles",
+                                   "infantil", "per a nadons", "per a infants"]):
         return "FAMILY"
 
-    # 1b. Actividades culturales y formativas
+    # 1d. Markets y mercadillos
+    if any(w in t_lower for w in ["market", "mercadillo", "mercat"]) and "fira" not in t_lower:
+        return "CULTURE"
+    if "rata market" in t_lower:
+        return "CULTURE"
+
+    # 1e. Talleres y cursos
     if any(pattern in t_lower for pattern in [
-        "presentació del llibre", "presentacio de llibre", "presentación del libro",
-        "presentació llibre", "presentacion libro",
-        "curs de", "curs d'", "curso de",
-        "taller sensorial", "ruta guiada", "visita guiada"
+        "taller", "curs d'iniciació", "curs de fotografia", "fotografia", "manualitats",
+        "workshop"
     ]):
-        # Solo si NO tiene palabras deportivas explícitas ni robótica/lego
-        if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "carrera deportiva", "running", "lego", "robòtica", "robotica"]):
+        # Solo si NO es deportivo
+        if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "running", "atletisme"]):
             return "CULTURE"
 
-    # 1c. Conciertos y eventos musicales (prioridad alta)
+    # 1f. Actividades culturales y formativas (ampliado)
+    if any(pattern in t_lower for pattern in [
+        "presentació del llibre", "presentacio de llibre", "presentación del libro",
+        "presentació llibre", "presentacion libro", "llibre",
+        "curs de", "curs d'", "curso de",
+        "taller sensorial", "ruta guiada", "visita guiada", "passeig",
+        "dones històriques"
+    ]):
+        # Solo si NO tiene palabras deportivas explícitas
+        if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "carrera deportiva", "running", "atletisme"]):
+            return "CULTURE"
+
+    # 1g. Musicales (ANTES que conciertos)
+    if any(w in t_lower for w in ["musical", "teatre musical", "el musical"]):
+        return "CULTURE"
+
+    # 1h. Conciertos y eventos musicales (prioridad alta)
     if any(pattern in t_lower for pattern in [
         "jazz", "concert", "concierto", "música", "musica",
         "orquestra", "sinfònica", "sinfonica", "recital"
     ]):
         return "CONCERT"
 
-    # 1d. Artistas conocidos (conciertos/cultura)
+    # 1i. Artistas conocidos (conciertos/cultura)
     if any(artist in t_lower for artist in ["ainhoa arteta", "joan alcover"]):
         return "CONCERT"
 
-    # 1e. Charlas y conferencias
-    if any(w in t_lower for w in ["charla", "conferencia", "conferència", "col·loqui", "lectura", "llibre"]):
+    # 1j. Charlas y conferencias
+    if any(w in t_lower for w in ["charla", "conferencia", "conferència", "col·loqui", "lectura"]):
         return "CULTURE"
 
-    # 1f. Festivales tradicionales
+    # 1k. Festivales tradicionales
     if any(w in t_lower for w in ["gegants", "gigantes", "sant antoni", "moros i cristians", "revetla", "fogueró"]):
         return "FESTIVAL"
 
-    # 1g. Bandas/artistas específicos
+    # 1l. Bandas/artistas específicos
     if "tierra santa" in t_lower:
         return "CONCERT"
     if "candlelight" in t_lower:
         return "CONCERT"
-
-    # 1h. Deportes (solo si tiene palabras deportivas claras)
-    if any(w in t_lower for w in ["cursa", "triatlón", "triatlo", "maratón", "marató", "torneo", "trofeu", "trofeo",
-                                   "caminata", "senderismo", "excursió", "carrera popular",
-                                   "ruta a peu", "marcha popular", "trail running"]):
-        return "SPORT"
 
     # 2. Evaluación ordenada por diccionario
     for category, keywords in CATEGORY_KEYWORDS.items():
@@ -344,6 +368,10 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         "secrets night", "secrets mallorca", "pase diario", "day pass",
         "museos y lugares culturales favoritos", "pase de un día en",
         "academia de pilates", "academia de", "clases de pilates",
+        # Días festivos y calendario genérico
+        "navidad", "celebración de san esteban", "domingo de pascua",
+        # Sesiones genéricas y traducciones rotas
+        "domingo/sunday", "amanecer partea", "el ritual final nu mallorca",
     ]
 
     for event in events:
@@ -376,8 +404,15 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         for existing_event in unique_events:
             if existing_event["start_date"] == event["start_date"]:
                 existing_normalized = _normalize_title(existing_event["title"])
+
+                # Detectar si un título está contenido en otro (substring)
+                if normalized_title in existing_normalized or existing_normalized in normalized_title:
+                    is_similar_duplicate = True
+                    break
+
+                # Detectar similitud alta (aumentado a 0.85 para mayor precisión)
                 similarity = SequenceMatcher(None, normalized_title, existing_normalized).ratio()
-                if similarity > 0.75:
+                if similarity > 0.85:
                     is_similar_duplicate = True
                     break
 
