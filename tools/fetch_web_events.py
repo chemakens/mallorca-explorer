@@ -373,12 +373,8 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         "secrets night", "secrets mallorca", "pase diario", "day pass",
         "museos y lugares culturales favoritos", "pase de un día en",
         "academia de pilates", "academia de", "clases de pilates",
-        # Días festivos y calendario genérico
-        "navidad", "celebración de san esteban", "domingo de pascua",
-        "fiesta de las vírgenes", "fiestas de semana santa",
-        # Sesiones genéricas y traducciones rotas
+        # Traducciones rotas y errores evidentes
         "domingo/sunday", "amanecer partea", "el ritual final nu mallorca",
-        "en las rocas cerrando el club de playa",
     ]
 
     for event in events:
@@ -405,24 +401,31 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         fuzzy_key = (_normalize_title(event["title"])[:35], event["start_date"])  # ✅ FIX: Aumentado de 40 a 60 caracteres
         if fuzzy_key in seen_fuzzy: continue
 
-        # Deduplicación difusa mejorada: detectar títulos similares en la misma fecha
+        # Deduplicación difusa CONSERVADORA: solo duplicados confirmados
         normalized_title = _normalize_title(event["title"])
         is_similar_duplicate = False
         for existing_event in unique_events:
+            # Solo comparar eventos en misma fecha Y mismo municipio/sala
             if existing_event["start_date"] == event["start_date"]:
+                # Verificar si son misma ubicación (conservador: permitir si ubicaciones diferentes)
+                same_location = (event.get("municipality") == existing_event.get("municipality"))
+
                 existing_normalized = _normalize_title(existing_event["title"])
 
-                # Detectar si un título está contenido en otro (substring)
-                # Conservar el más corto o completo (el que ya existe en unique_events)
-                if normalized_title in existing_normalized or existing_normalized in normalized_title:
-                    is_similar_duplicate = True
-                    break
+                # Solo descartar si es substring Y misma ubicación
+                if same_location and (normalized_title in existing_normalized or existing_normalized in normalized_title):
+                    # Verificar que la diferencia de longitud no sea significativa
+                    len_diff = abs(len(normalized_title) - len(existing_normalized))
+                    if len_diff < 5:  # Solo si son prácticamente idénticos
+                        is_similar_duplicate = True
+                        break
 
-                # Detectar similitud alta (0.85 para mayor precisión)
-                similarity = SequenceMatcher(None, normalized_title, existing_normalized).ratio()
-                if similarity > 0.85:
-                    is_similar_duplicate = True
-                    break
+                # Similitud muy alta (0.92 para ser conservador)
+                if same_location:
+                    similarity = SequenceMatcher(None, normalized_title, existing_normalized).ratio()
+                    if similarity > 0.92:
+                        is_similar_duplicate = True
+                        break
 
         if is_similar_duplicate:
             continue
