@@ -152,22 +152,41 @@ def detect_category_smart(title: str, description: str = "") -> str:
                                    "maratón", "marató", "torneo", "trofeu", "trofeo", "trail running"]):
         return "SPORT"
 
-    # 1b. Nightlife y tardeos
+    # 1b. Nightlife y tardeos (AMPLIADO)
     if any(w in t_lower for w in ["tardeo", "megatardeo"]):
         return "NIGHTLIFE"
 
-    # 1c. Actividades infantiles/tecnológicas (ANTES que actividades culturales)
+    # 1c. Actividades infantiles/tecnológicas (ANTES que actividades culturales - AMPLIADO)
     if any(w in t_lower for w in ["lego", "robòtica", "robotica", "espai de joc", "joc infantil", "titelles",
-                                   "infantil", "per a nadons", "per a infants"]):
+                                   "infantil", "per a nadons", "per a infants", "títeres"]):
         return "FAMILY"
 
-    # 1d. Markets y mercadillos
-    if any(w in t_lower for w in ["market", "mercadillo", "mercat"]) and "fira" not in t_lower:
-        return "CULTURE"
+    # 1d. Markets y mercadillos (PRIORIDAD MÁXIMA - CORREGIDO)
     if "rata market" in t_lower:
+        return "MARKET"
+    if any(w in t_lower for w in ["mercadillo", "mercat de", "mercado de"]) and "fira" not in t_lower:
+        return "MARKET"
+
+    # 1e. Musicales (ANTES que conciertos - AMPLIADO)
+    if any(w in t_lower for w in ["musical", "teatre musical", "el musical"]):
+        # Distinguir entre musical (cultura/familia) y concierto
+        if "infantil" in t_lower or "familia" in t_lower:
+            return "FAMILY"
         return "CULTURE"
 
-    # 1e. Talleres y cursos
+    # 1f. Actividades culturales y formativas (AMPLIADO)
+    if any(pattern in t_lower for pattern in [
+        "presentació del llibre", "presentacio de llibre", "presentación del libro",
+        "presentació llibre", "presentacion libro", "presentación de libro", "llibre",
+        "curs de", "curs d'", "curso de", "curs d'iniciació a la fotografia", "curs de fotografia",
+        "taller sensorial", "ruta guiada", "visita guiada", "passeig modernista", "passeig",
+        "dones històriques"
+    ]):
+        # Solo si NO tiene palabras deportivas explícitas
+        if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "carrera deportiva", "running", "atletisme"]):
+            return "CULTURE"
+
+    # 1g. Talleres y cursos
     if any(pattern in t_lower for pattern in [
         "taller", "curs d'iniciació", "curs de fotografia", "fotografia", "manualitats",
         "workshop"
@@ -175,22 +194,6 @@ def detect_category_smart(title: str, description: str = "") -> str:
         # Solo si NO es deportivo
         if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "running", "atletisme"]):
             return "CULTURE"
-
-    # 1f. Actividades culturales y formativas (ampliado)
-    if any(pattern in t_lower for pattern in [
-        "presentació del llibre", "presentacio de llibre", "presentación del libro",
-        "presentació llibre", "presentacion libro", "llibre",
-        "curs de", "curs d'", "curso de",
-        "taller sensorial", "ruta guiada", "visita guiada", "passeig",
-        "dones històriques"
-    ]):
-        # Solo si NO tiene palabras deportivas explícitas
-        if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "carrera deportiva", "running", "atletisme"]):
-            return "CULTURE"
-
-    # 1g. Musicales (ANTES que conciertos)
-    if any(w in t_lower for w in ["musical", "teatre musical", "el musical"]):
-        return "CULTURE"
 
     # 1h. Conciertos y eventos musicales (prioridad alta)
     if any(pattern in t_lower for pattern in [
@@ -207,7 +210,7 @@ def detect_category_smart(title: str, description: str = "") -> str:
     if any(w in t_lower for w in ["charla", "conferencia", "conferència", "col·loqui", "lectura"]):
         return "CULTURE"
 
-    # 1k. Festivales tradicionales
+    # 1k. Festivales tradicionales (AMPLIADO para tardeos)
     if any(w in t_lower for w in ["gegants", "gigantes", "sant antoni", "moros i cristians", "revetla", "fogueró"]):
         return "FESTIVAL"
 
@@ -332,6 +335,8 @@ def extract_price(text: str) -> tuple[bool, Optional[str]]:
 def _normalize_title(t: str) -> str:
     import unicodedata
     t = t.lower().strip()
+    # Normalizar palabras pegadas: insertar espacio entre minúscula-Mayúscula
+    t = re.sub(r"([a-zàèìòùáéíóú])([A-ZÀÈÌÒÙÁÉÍÓÚ])", r"\1 \2", t)
     # Eliminar salas y ciudades añadidas al título
     t = re.sub(r"\s*(?:en|at)\s+(?:es gremi|trui teatre|auditorium|la movida|pueblo español|sala la fornal|intergalactic bar)[^$]*$", "", t)
     t = re.sub(r"\s*\((?:palma|mallorca|calvià|esporles|ibiza|inca|manacor)\)", "", t)
@@ -370,8 +375,10 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         "academia de pilates", "academia de", "clases de pilates",
         # Días festivos y calendario genérico
         "navidad", "celebración de san esteban", "domingo de pascua",
+        "fiesta de las vírgenes", "fiestas de semana santa",
         # Sesiones genéricas y traducciones rotas
         "domingo/sunday", "amanecer partea", "el ritual final nu mallorca",
+        "en las rocas cerrando el club de playa",
     ]
 
     for event in events:
@@ -398,7 +405,7 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         fuzzy_key = (_normalize_title(event["title"])[:35], event["start_date"])  # ✅ FIX: Aumentado de 40 a 60 caracteres
         if fuzzy_key in seen_fuzzy: continue
 
-        # Deduplicación por similitud difusa: detectar títulos muy similares en la misma fecha
+        # Deduplicación difusa mejorada: detectar títulos similares en la misma fecha
         normalized_title = _normalize_title(event["title"])
         is_similar_duplicate = False
         for existing_event in unique_events:
@@ -406,11 +413,12 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
                 existing_normalized = _normalize_title(existing_event["title"])
 
                 # Detectar si un título está contenido en otro (substring)
+                # Conservar el más corto o completo (el que ya existe en unique_events)
                 if normalized_title in existing_normalized or existing_normalized in normalized_title:
                     is_similar_duplicate = True
                     break
 
-                # Detectar similitud alta (aumentado a 0.85 para mayor precisión)
+                # Detectar similitud alta (0.85 para mayor precisión)
                 similarity = SequenceMatcher(None, normalized_title, existing_normalized).ratio()
                 if similarity > 0.85:
                     is_similar_duplicate = True
