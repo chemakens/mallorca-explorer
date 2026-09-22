@@ -477,15 +477,19 @@ def scrape_firesifestes() -> List[Dict]:
     today = datetime.now()
     print("   🔍 Scraping: firesifestes...")
 
-    # URLs con paginación: calendario + eventos-mallorca (3 págs) + ferias-y-fiestas (3 págs)
+    # URLs con paginación: calendario + eventos-mallorca (5 págs) + ferias-y-fiestas (5 págs)
     urls_to_scrape = [
         f"{base_url}/es/calendario/",
         f"{base_url}/es/eventos-mallorca/",
         f"{base_url}/es/eventos-mallorca/page/2/",
         f"{base_url}/es/eventos-mallorca/page/3/",
+        f"{base_url}/es/eventos-mallorca/page/4/",
+        f"{base_url}/es/eventos-mallorca/page/5/",
         f"{base_url}/es/evento-tipo/ferias-y-fiestas/",
         f"{base_url}/es/evento-tipo/ferias-y-fiestas/page/2/",
         f"{base_url}/es/evento-tipo/ferias-y-fiestas/page/3/",
+        f"{base_url}/es/evento-tipo/ferias-y-fiestas/page/4/",
+        f"{base_url}/es/evento-tipo/ferias-y-fiestas/page/5/",
     ]
 
     seen_urls = set()
