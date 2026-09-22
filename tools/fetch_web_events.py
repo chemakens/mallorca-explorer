@@ -1370,7 +1370,7 @@ def scrape_fourvenues() -> List[Dict]:
     VENUES = [
         ("BCM Mallorca",  "https://www.fourvenues.com/es/bcm-mallorca",  "Calvià"),
         ("Fitz Mallorca", "https://www.fourvenues.com/es/fitz-mallorca", "Palma"),
-        ("Amok Mallorca", "https://www.fourvenues.com/es/amok-mallorca", "Palma"),
+        ("Amok Mallorca", "https://site.fourvenues.com/es/discoteca-amok-mallorca@amok", "Palma"),
     ]
     HEADERS_FV = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -1438,6 +1438,93 @@ def scrape_fourvenues() -> List[Dict]:
 
 
 
+def scrape_amok() -> List[Dict]:
+    """Amok Mallorca — Extracción desde web oficial con Playwright (JS-rendered)."""
+    events = []
+    url = "https://www.amokmallorca.com/events"
+    print("   🔍 Scraping: amok_mallorca...")
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(user_agent=random.choice(USER_AGENTS))
+            page.goto(url, wait_until="networkidle", timeout=60000)
+            page.wait_for_timeout(3000)  # Esperar a que cargue el contenido JS
+
+            # Obtener texto de la página renderizada
+            text = page.content()
+            soup = BeautifulSoup(text, "html.parser")
+            page_text = soup.get_text()
+
+            browser.close()
+
+        # Mapeo de meses
+        month_map = {
+            "JAN": "01", "FEB": "02", "MAR": "03", "APR": "04",
+            "MAY": "05", "JUN": "06", "JUL": "07", "AUG": "08",
+            "SEP": "09", "OCT": "10", "NOV": "11", "DEC": "12"
+        }
+
+        current_year = datetime.now().year
+        seen = set()
+
+        # Pattern para extraer eventos
+        # Formato compacto: "WED · 23 SEPWED 23 SEP21:30 – 04:00Title"
+        import re
+
+        # Buscar bloques de eventos con regex
+        # Pattern: [DAY] · [DD] [MONTH][DAY] [DD] [MONTH][HH:MM] – [HH:MM][TITLE]
+        pattern = r'([A-Z]{3})\s*·\s*(\d{1,2})\s+([A-Z]{3})[A-Z]{3}\s+\d{1,2}\s+[A-Z]{3}(\d{2}:\d{2})\s*[–-]\s*\d{2}:\d{2}([^T]+?)(?=TICKETS|TABLES|[A-Z]{3}\s*·|\Z)'
+
+        matches = re.findall(pattern, page_text, re.DOTALL)
+
+        for day_abbr, day_num, month_abbr, start_time, title in matches:
+            title = title.strip()
+
+            # Limpiar título
+            title = re.sub(r'\s+', ' ', title)
+            title = title.title()  # Title case
+
+            if not title or len(title) < 3:
+                continue
+
+            # Construir fecha
+            month = month_map.get(month_abbr, "01")
+            day = day_num.zfill(2)
+            date_str = f"{current_year}-{month}-{day}"
+
+            # Evitar duplicados
+            key = (date_str, title.lower())
+            if key in seen:
+                continue
+            seen.add(key)
+
+            # Validar fecha
+            try:
+                datetime.strptime(date_str, "%Y-%m-%d")
+            except:
+                continue
+
+            events.append({
+                "source": "amok_mallorca",
+                "title": title[:100],
+                "start_date": date_str,
+                "start_time": start_time,
+                "municipality": "Palma",
+                "location": "Amok Mallorca",
+                "category": "NIGHTLIFE",
+                "is_free": False,
+                "price": "Consultar web",
+                "website_url": url,
+            })
+
+        print(f"      ✅ amok_mallorca: {len(events)} eventos")
+    except Exception as e:
+        print(f"      ❌ amok_mallorca error: {e}")
+
+    return events
+
+
 def scrape_all_sources() -> List[Dict]:
     print("🌐 Iniciando extracción masiva de eventos (Multihilo)...")
 
@@ -1466,6 +1553,7 @@ def scrape_all_sources() -> List[Dict]:
         scrape_ticketib,
         scrape_fourvenues,
         scrape_faib_atletisme,
+        scrape_amok,
     ]
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
