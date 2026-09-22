@@ -72,7 +72,7 @@ import kotlinx.serialization.Serializable
 @Serializable data class TripMapRoute(val tripId: String)
 @Serializable data class TripSelectorRoute(val placeId: String)
 @Serializable object GemsRoute
-@Serializable object EventsRoute
+@Serializable data class EventsRoute(val filter: String? = null)
 @Serializable object MyMallorcaRoute
 @Serializable object SettingsRoute
 
@@ -99,7 +99,7 @@ fun MallorcaNavHost(
         TopLevelRoute(MapRoute(), stringResource(R.string.nav_map), Icons.Outlined.Map),
         TopLevelRoute(ExploreRoute, stringResource(R.string.nav_explore), Icons.Outlined.Explore),
         TopLevelRoute(GemsRoute, stringResource(R.string.nav_gems), Icons.Outlined.Diamond),
-        TopLevelRoute(EventsRoute, stringResource(R.string.nav_events), Icons.Outlined.CalendarMonth),
+        TopLevelRoute(EventsRoute(), stringResource(R.string.nav_events), Icons.Outlined.CalendarMonth),
         TopLevelRoute(MyMallorcaRoute, stringResource(R.string.nav_my_mallorca), Icons.Outlined.BookmarkBorder),
     )
 
@@ -208,9 +208,15 @@ fun MallorcaNavHost(
                             )
                         }
                     }
-                    composable<EventsRoute> {
+                    composable<EventsRoute>(
+                        deepLinks = listOf(
+                            navDeepLink { uriPattern = "mallorca://events?filter={filter}" },
+                            navDeepLink { uriPattern = "mallorca://events" },
+                        )
+                    ) { backStack ->
+                        val route = backStack.toRoute<EventsRoute>()
                         CompositionLocalProvider(LocalAnimatedContentScope provides this) {
-                            EventsScreen()
+                            EventsScreen(initialFilter = route.filter)
                         }
                     }
                     composable<FavoritesRoute> {

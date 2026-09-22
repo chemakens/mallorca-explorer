@@ -2,9 +2,15 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
-    android:viewportWidth="24"
-    android:viewportHeight="24">
-    <path
-        android:fillColor="@android:color/white"
-        android:pathData="M12,3C7.03,3 3,7.03 3,12s4.03,9 9,9 9,-4.03 9,-9S16.97,3 12,3zM13,17h-2v-6h2v6zM13,9h-2L11,7h2v2z"/>
+    android:viewportWidth="192"
+    android:viewportHeight="192">
+    <!-- Silueta de Mallorca extraída del icono original con potrace -->
+    <group
+        android:scaleX="0.1"
+        android:scaleY="-0.1"
+        android:translateY="192">
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M1205,1641 c-193,-51 -235,-66 -378,-136 c-203,-99 -434,-280 -552,-433 c-41,-53 -73,-98 -71,-99 c2,-2 19,4 39,12 c50,21 106,19 144,-5 c17,-10 60,-61 94,-112 c81,-120 166,-209 258,-269 c68,-45 79,-49 135,-49 c33,0 105,-7 159,-14 c119,-17 276,-6 344,24 c79,35 170,107 210,165 c47,70 142,329 159,433 c8,50 -14,117 -49,150 c-45,42 -91,54 -191,46 c-88,-6 -95,-5 -150,22 c-32,16 -82,50 -110,77 c-47,45 -50,50 -32,60 c65,39 207,179 180,176 c-5,0 -90,-22 -189,-48z"/>
+    </group>
 </vector>

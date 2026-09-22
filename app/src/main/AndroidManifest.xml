@@ -25,6 +25,11 @@
             android:name="firebase_crashlytics_collection_enabled"
             android:value="${crashlyticsCollectionEnabled}" />
 
+        <!-- Firebase Cloud Messaging default notification icon -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_notification" />
+
         <!-- Disable default WorkManager init so HiltWorkerFactory can be used -->
         <provider
             android:name="androidx.startup.InitializationProvider"
@@ -69,6 +74,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
                 <data android:scheme="mallorca" android:host="itinerary" />
+            </intent-filter>
+            <!-- Deep links: mallorca://events -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="mallorca" android:host="events" />
             </intent-filter>
             <!-- App Links: https://chemakens.github.io/mallorca-explorer-web/itinerary?itineraryId=xxx -->
             <intent-filter android:autoVerify="true">

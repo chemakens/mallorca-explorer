@@ -23,6 +23,7 @@ import com.mallorca.explorer.core.ui.theme.MallorcaTheme
 import com.mallorca.explorer.navigation.ItineraryDetailRoute
 import com.mallorca.explorer.navigation.MallorcaNavHost
 import com.mallorca.explorer.navigation.PlaceDetailRoute
+import com.mallorca.explorer.navigation.EventsRoute
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -47,6 +48,12 @@ class MainActivity : ComponentActivity() {
         // Capture deep link only on a genuine cold start, not on config changes.
         Timber.d("onCreate: intent.data=${intent.data} savedInstanceState=$savedInstanceState")
         if (savedInstanceState == null) {
+            // FCM notification tap: read "link" from extras
+            val fcmLink = intent.getStringExtra("link")
+            if (fcmLink != null) {
+                val modifiedLink = if (fcmLink == "mallorca://events") "mallorca://events?filter=tomorrow" else fcmLink
+                pendingDeepLinkIntent = intent.also { it.data = android.net.Uri.parse(modifiedLink) }
+            }
             pendingDeepLinkIntent = intent.takeIf { it.data != null }
             Timber.d("onCreate: pendingDeepLinkIntent=${pendingDeepLinkIntent?.data}")
         }
@@ -104,6 +111,12 @@ class MainActivity : ComponentActivity() {
     override fun onNewIntent(intent: Intent) {
         super.onNewIntent(intent)
         setIntent(intent)
+        // FCM notification tap: read "link" from extras
+        val fcmLink = intent.getStringExtra("link")
+        if (fcmLink != null) {
+            val modifiedLink = if (fcmLink == "mallorca://events") "mallorca://events?filter=tomorrow" else fcmLink
+            intent.data = android.net.Uri.parse(modifiedLink)
+        }
         Timber.d("onNewIntent: ${intent.data}")
         val nc = navController
         if (nc != null) {
@@ -126,6 +139,10 @@ class MainActivity : ComponentActivity() {
         val placeId = uri.getQueryParameter("placeId")
         Timber.d("tryNavigateFromIntent: itineraryId=$itineraryId placeId=$placeId")
         when {
+            uri.host == "events" -> {
+                val filter = uri.getQueryParameter("filter")
+                nc.navigate(EventsRoute(filter = filter)) { launchSingleTop = true }
+            }
             itineraryId != null -> {
                 Timber.d("tryNavigateFromIntent: navigating to ItineraryDetailRoute($itineraryId)")
                 nc.navigate(ItineraryDetailRoute(itineraryId))
