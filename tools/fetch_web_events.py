@@ -1302,6 +1302,85 @@ def scrape_faib_atletisme() -> List[Dict]:
     return events
 
 
+
+
+def scrape_fourvenues() -> List[Dict]:
+    """Fourvenues — BCM Mallorca y Fitz Mallorca. Schema.org JSON-LD."""
+    import re
+    VENUES = [
+        ("BCM Mallorca",  "https://www.fourvenues.com/es/bcm-mallorca",  "Calvià"),
+        ("Fitz Mallorca", "https://www.fourvenues.com/es/fitz-mallorca", "Palma"),
+    ]
+    HEADERS_FV = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "es-ES,es;q=0.9",
+        "Referer": "https://www.google.com/",
+    }
+    GENERIC_BLACKLIST = [
+        "jueves fitz", "viernes fitz", "sábado fitz", "sabado fitz", "domingo fitz",
+        "thursday fitz", "friday fitz", "saturday fitz", "sunday fitz",
+        "jueves bcm", "viernes bcm", "sábado bcm", "sabado bcm", "domingo bcm",
+    ]
+    all_events = []
+    for venue_name, url, location in VENUES:
+        seen = set()
+        try:
+            resp = requests.get(url, headers=HEADERS_FV, timeout=12)
+            resp.raise_for_status()
+            soup = BeautifulSoup(resp.text, "html.parser")
+            for tag in soup.find_all("script", type="application/ld+json"):
+                try:
+                    data = json.loads(tag.string or "")
+                    items = []
+                    if isinstance(data, dict):
+                        if data.get("@type") == "ItemList":
+                            items = data.get("itemListElement", [])
+                        elif data.get("@type") in ("Event", "MusicEvent"):
+                            items = [data]
+                    elif isinstance(data, list):
+                        items = data
+                    for item in items:
+                        if isinstance(item, dict) and item.get("@type") == "ListItem":
+                            item = item.get("item", {})
+                        if not isinstance(item, dict):
+                            continue
+                        if item.get("@type") not in ("Event", "MusicEvent"):
+                            continue
+                        title = (item.get("name") or "").strip()
+                        date_raw = item.get("startDate") or ""
+                        date_str = date_raw[:10]
+                        if not title or not date_str:
+                            continue
+                        # Filtrar sesiones genéricas
+                        title_lower = title.lower()
+                        if any(bl in title_lower for bl in GENERIC_BLACKLIST):
+                            continue
+                        # Limpiar prefijos de fecha del título
+                        title = re.sub(r"^\d{1,2}[\s/\-\.]+(?:ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)\S*\s*", "", title, flags=re.IGNORECASE).strip()
+                        key = (title[:50].lower(), date_str)
+                        if key in seen:
+                            continue
+                        seen.add(key)
+                        all_events.append({
+                            "title": title[:120],
+                            "date": date_str,
+                            "location": location,
+                            "category": "NIGHTLIFE",
+                            "source": venue_name,
+                            "url": url,
+                            "description": "",
+                        })
+                except Exception:
+                    pass
+        except Exception as e:
+            print(f"[Fourvenues] Error {venue_name}: {e}")
+        print(f"[Fourvenues] {venue_name}: {len([e for e in all_events if e['source'] == venue_name])} eventos")
+    print(f"[Fourvenues] Total: {len(all_events)} eventos")
+    return all_events
+
+
+
 def scrape_all_sources() -> List[Dict]:
     print("🌐 Iniciando extracción masiva de eventos (Multihilo)...")
 
@@ -1541,124 +1620,3 @@ if __name__ == "__main__":
     else:
         print("⚠️ No hay eventos para procesar.")
 
-def scrape_fourvenues() -> List[Dict]:
-    """
-    Scraper para Fourvenues (BCM Mallorca y Fitz Mallorca).
-    Método: Schema.org JSON-LD (<script type="application/ld+json"> con @type=ItemList).
-    No requiere Playwright. Headers básicos evitan Cloudflare WAF.
-    """
-    VENUES = [
-        ("BCM Mallorca",  "https://www.fourvenues.com/es/bcm-mallorca",  "Calvià"),
-        ("Fitz Mallorca", "https://www.fourvenues.com/es/fitz-mallorca", "Palma"),
-    ]
-    HEADERS_FV = {
-        "User-Agent": (
-            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
-            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-        ),
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-        "Accept-Language": "es-ES,es;q=0.9",
-        "Referer": "https://www.google.com/",
-    }
-    # Sesiones genéricas recurrentes sin artista — no aportan valor
-    GENERIC_BLACKLIST = [
-        "jueves fitz", "viernes fitz", "sábado fitz", "sabado fitz", "domingo fitz",
-        "thursday fitz", "friday fitz", "saturday fitz", "sunday fitz",
-    ]
-
-    events = []
-    print("   🔍 Scraping: fourvenues (BCM + Fitz)...")
-
-    session = requests.Session()
-    session.headers.update(HEADERS_FV)
-
-    for venue_name, venue_url, municipality in VENUES:
-        try:
-            r = session.get(venue_url, timeout=20, allow_redirects=True)
-            if r.status_code != 200:
-                print(f"      ⚠️ {venue_name}: HTTP {r.status_code}")
-                continue
-
-            soup = BeautifulSoup(r.text, "html.parser")
-            venue_events = []
-
-            for script in soup.find_all("script", type="application/ld+json"):
-                try:
-                    data = json.loads(script.string or "")
-                    if data.get("@type") != "ItemList":
-                        continue
-                    for item in data.get("itemListElement", []):
-                        ev = item.get("item", {})
-                        if not ev or ev.get("@type") not in ("Event", "MusicEvent", "SocialEvent"):
-                            continue
-
-                        raw_title = ev.get("name", "").strip()
-                        raw_date  = ev.get("startDate", "")
-                        ev_url    = ev.get("url", venue_url)
-
-                        if not raw_title or not raw_date:
-                            continue
-
-                        # Filtrar sesiones genéricas recurrentes
-                        if any(g in raw_title.lower() for g in GENERIC_BLACKLIST):
-                            continue
-
-                        # Parsear fecha ISO 8601 → YYYY-MM-DD
-                        start_date = raw_date[:10]  # "2026-09-25T22:00:00.000+02:00" → "2026-09-25"
-                        try:
-                            datetime.strptime(start_date, "%Y-%m-%d")
-                        except ValueError:
-                            continue
-
-                        # Limpiar título: quitar sufijos redundantes
-                        title = raw_title
-                        for suffix in [f" - {venue_name}", " - BCM Mallorca", " - Fitz Mallorca",
-                                       " - BCM", " - Fitz"]:
-                            if title.endswith(suffix):
-                                title = title[: -len(suffix)].strip()
-
-                        # Limpiar prefijo de fecha del título si lo lleva
-                        # Ej: "September 25th - JUANY BRAVO" → "JUANY BRAVO"
-                        import re as _re
-                        title = _re.sub(
-                            r"^(?:January|February|March|April|May|June|July|August|September|"
-                            r"October|November|December)\s+\d{1,2}(?:st|nd|rd|th)?\s*[-–]\s*",
-                            "", title
-                        )
-                        title = _re.sub(
-                            r"^(?:Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|"
-                            r"Octubre|Noviembre|Diciembre)\s+\d{1,2}\s*[-–]\s*",
-                            "", title, flags=_re.IGNORECASE
-                        )
-                        title = title.strip()
-                        if not title:
-                            continue
-
-                        venue_events.append({
-                            "source": "fourvenues",
-                            "title": title[:120],
-                            "start_date": start_date,
-                            "municipality": municipality,
-                            "category": "NIGHTLIFE",
-                            "is_free": False,
-                            "price": None,
-                            "website_url": ev_url,
-                        })
-                except Exception:
-                    continue
-
-            # Deduplicar por título+fecha dentro de la misma sala
-            seen = set()
-            for ev in venue_events:
-                key = f"{ev['title'].lower()}|{ev['start_date']}"
-                if key not in seen:
-                    seen.add(key)
-                    events.append(ev)
-
-            print(f"      ✅ {venue_name}: {len(seen)} eventos")
-
-        except Exception as e:
-            print(f"      ❌ Error {venue_name}: {e}")
-
-    print(f"      ✅ fourvenues total: {len(events)} eventos")
-    return events
