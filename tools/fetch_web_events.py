@@ -1365,11 +1365,12 @@ def scrape_faib_atletisme() -> List[Dict]:
 
 
 def scrape_fourvenues() -> List[Dict]:
-    """Fourvenues — BCM Mallorca y Fitz Mallorca. Schema.org JSON-LD."""
+    """Fourvenues — BCM Mallorca, Fitz Mallorca y Amok Mallorca. Schema.org JSON-LD."""
     import re
     VENUES = [
         ("BCM Mallorca",  "https://www.fourvenues.com/es/bcm-mallorca",  "Calvià"),
         ("Fitz Mallorca", "https://www.fourvenues.com/es/fitz-mallorca", "Palma"),
+        ("Amok Mallorca", "https://www.fourvenues.com/es/amok-mallorca", "Palma"),
     ]
     HEADERS_FV = {
         "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -1377,11 +1378,7 @@ def scrape_fourvenues() -> List[Dict]:
         "Accept-Language": "es-ES,es;q=0.9",
         "Referer": "https://www.google.com/",
     }
-    GENERIC_BLACKLIST = [
-        "jueves fitz", "viernes fitz", "sábado fitz", "sabado fitz", "domingo fitz",
-        "thursday fitz", "friday fitz", "saturday fitz", "sunday fitz",
-        "jueves bcm", "viernes bcm", "sábado bcm", "sabado bcm", "domingo bcm",
-    ]
+    GENERIC_BLACKLIST = []
     all_events = []
     for venue_name, url, location in VENUES:
         seen = set()
