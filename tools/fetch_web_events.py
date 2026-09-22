@@ -147,12 +147,17 @@ def detect_category_smart(title: str, description: str = "") -> str:
 
     # 0. Reglas especiales prioritarias (antes de todo)
 
-    # 0a. Venue rule: Es Gremi → CONCERT salvo que sea puro nightlife
+    # 0a. Clubs/discotecas → NIGHTLIFE (antes de venues y artistas)
+    club_keywords = ["masia club", "club:", "discoteca", "nightclub"]
+    if any(kw in t_lower for kw in club_keywords):
+        return "NIGHTLIFE"
+
+    # 0b. Venue rule: Es Gremi → CONCERT salvo que sea puro nightlife
     if "es gremi" in t_lower:
         if not any(w in t_lower for w in ["nightlife", "amok", "rewind", "callejeo", "trip", "crush", "parao"]):
             return "CONCERT"
 
-    # 0b. Lista blanca de artistas → CONCERT
+    # 0c. Lista blanca de artistas → CONCERT
     concert_artists = [
         "davide ranaldi", "homenaje a robe", "roo panes", "abba the new experience",
         "i love u2", "tribut a u2", "this is michael", "y sin embargo", "tribut a sabina",
@@ -162,11 +167,11 @@ def detect_category_smart(title: str, description: str = "") -> str:
     if any(artist in t_lower for artist in concert_artists):
         return "CONCERT"
 
-    # 0c. Musicales infantiles → FAMILY
+    # 0d. Musicales infantiles → FAMILY
     if any(w in t_lower for w in ["la familia addams", "rapunzel el musical"]):
         return "FAMILY"
 
-    # 0d. Corre Vins → SPORT (carrera popular de vinos)
+    # 0e. Corre Vins → SPORT (carrera popular de vinos)
     if "corre vins" in t_lower:
         return "SPORT"
 
