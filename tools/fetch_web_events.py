@@ -145,6 +145,31 @@ def detect_category_smart(title: str, description: str = "") -> str:
     t_lower = title.lower()
     combined = f"{title} {description}".lower()
 
+    # 0. Reglas especiales prioritarias (antes de todo)
+
+    # 0a. Venue rule: Es Gremi → CONCERT salvo que sea puro nightlife
+    if "es gremi" in t_lower:
+        if not any(w in t_lower for w in ["nightlife", "amok", "rewind", "callejeo", "trip", "crush", "parao"]):
+            return "CONCERT"
+
+    # 0b. Lista blanca de artistas → CONCERT
+    concert_artists = [
+        "davide ranaldi", "homenaje a robe", "roo panes", "abba the new experience",
+        "i love u2", "tribut a u2", "this is michael", "y sin embargo", "tribut a sabina",
+        "niña pastori", "sofia ellar", "david navarro", "despistaos", "albert pla",
+        "lamine thior", "gloosito"
+    ]
+    if any(artist in t_lower for artist in concert_artists):
+        return "CONCERT"
+
+    # 0c. Musicales infantiles → FAMILY
+    if any(w in t_lower for w in ["la familia addams", "rapunzel el musical"]):
+        return "FAMILY"
+
+    # 0d. Corre Vins → SPORT (carrera popular de vinos)
+    if "corre vins" in t_lower:
+        return "SPORT"
+
     # 1. Reglas directas prioritarias (título)
 
     # 1a. Deportes específicos (MÁXIMA PRIORIDAD)
@@ -182,11 +207,24 @@ def detect_category_smart(title: str, description: str = "") -> str:
     ]):
         return "CULTURE"
 
-    # Rutas, paseos y visitas culturales (patrones completos)
-    if any(pattern in t_lower for pattern in [
-        "ruta guiada", "ruta cultural", "passeig modernista", "passeig guiat",
-        "passeig cultural", "dones històriques", "visita guiada", "visita cultural"
-    ]):
+    # Rutas y paseos: distinguir cultural vs naturaleza/deporte
+    if any(w in t_lower for w in ["ruta", "passeig", "ruta guiada", "passeig guiat"]):
+        cultural_route_kws = [
+            "històriques", "modernista", "art", "arquitectura", "dones",
+            "patrimoni", "literària", "literaria", "gòtic", "gothic",
+            "cultural", "guiada", "guiat", "historic", "història"
+        ]
+        sport_route_kws = [
+            "senderisme", "senderismo", "muntanya", "montaña", "pedra en sec",
+            "trail", "trekking", "excursió de muntanya", "cims"
+        ]
+        if any(kw in t_lower for kw in cultural_route_kws):
+            return "CULTURE"
+        elif any(kw in t_lower for kw in sport_route_kws):
+            return "SPORT"
+
+    # Visitas culturales
+    if any(pattern in t_lower for pattern in ["visita guiada", "visita cultural"]):
         return "CULTURE"
 
     # Cursos y talleres culturales específicos (evitar cursos deportivos)
@@ -1583,7 +1621,10 @@ def scrape_all_sources() -> List[Dict]:
                         # Si devuelve CULTURE por defecto y no hay keywords culturales, asignar SPORT
                         cat = detect_category_smart(titulo, descripcion)
                         cultural_kws = ["charla", "taller", "conferencia", "conferència", "col·loqui",
-                                        "lectura", "exposici", "teatro", "teatre", "dansa", "danza"]
+                                        "lectura", "exposici", "teatro", "teatre", "dansa", "danza",
+                                        "ruta guiada", "passeig", "fotografia", "fotografía",
+                                        "presentació", "presentacion", "curs d'iniciació", "curs de",
+                                        "llibre", "club de lectura", "microteatre"]
                         titulo_low = titulo.lower()
                         if cat == "CULTURE" and not any(kw in titulo_low for kw in cultural_kws):
                             ev["category"] = "SPORT"
