@@ -174,7 +174,7 @@ def detect_category_smart(title: str, description: str = "") -> str:
             return "FAMILY"
         return "CULTURE"
 
-    # 1f. Actividades culturales específicas (PRECISIÓN MÁXIMA - evitar genéricos)
+    # 1f. Actividades culturales específicas (MÁXIMA PRIORIDAD - antes de diccionarios)
     # Presentaciones de libros (patrones completos)
     if any(pattern in t_lower for pattern in [
         "presentació del llibre", "presentacio de llibre", "presentación del libro",
@@ -182,35 +182,41 @@ def detect_category_smart(title: str, description: str = "") -> str:
     ]):
         return "CULTURE"
 
-    # Rutas y paseos culturales (patrones completos)
+    # Rutas, paseos y visitas culturales (patrones completos)
     if any(pattern in t_lower for pattern in [
-        "ruta guiada", "passeig modernista", "dones històriques"
+        "ruta guiada", "ruta cultural", "passeig modernista", "passeig guiat",
+        "passeig cultural", "dones històriques", "visita guiada", "visita cultural"
     ]):
         return "CULTURE"
 
-    # Fotografía como actividad cultural (evitar cursos deportivos)
-    if any(pattern in t_lower for pattern in ["fotografia", "fotografía"]):
-        # Solo CULTURE si NO es deporte (vela, natació, etc.)
+    # Cursos y talleres culturales específicos (evitar cursos deportivos)
+    if any(pattern in t_lower for pattern in [
+        "curs d'iniciació a la fotografia", "curs de fotografia", "taller de fotografia",
+        "curs d'iniciació", "taller sensorial", "manualitats", "workshop"
+    ]):
+        # Solo si NO es deportivo
         if not any(w in t_lower for w in ["vela", "natació", "natacion", "cursa", "marató", "maratón", "trail", "running", "atletisme"]):
             return "CULTURE"
 
-    # 1g. Otras actividades culturales (conservador)
-    if any(pattern in t_lower for pattern in [
-        "taller sensorial", "visita guiada", "manualitats", "workshop"
-    ]):
-        # Solo si NO es deportivo
-        if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "running", "atletisme"]):
+    # Fotografía como actividad cultural (evitar cursos deportivos)
+    if any(pattern in t_lower for pattern in ["fotografia", "fotografía"]):
+        # Solo CULTURE si NO es deporte
+        if not any(w in t_lower for w in ["vela", "natació", "natacion", "cursa", "marató", "maratón", "trail", "running", "atletisme"]):
             return "CULTURE"
 
-    # 1h. Conciertos y eventos musicales (prioridad alta)
+    # 1g. Conciertos y eventos musicales (prioridad alta - antes de CULTURE genérico)
     if any(pattern in t_lower for pattern in [
         "jazz", "concert", "concierto", "música", "musica",
         "orquestra", "sinfònica", "sinfonica", "recital"
     ]):
         return "CONCERT"
 
-    # 1i. Artistas conocidos (conciertos/cultura)
-    if any(artist in t_lower for artist in ["ainhoa arteta", "joan alcover"]):
+    # 1h. Artistas musicales y de jazz conocidos (AMPLIADO)
+    if any(artist in t_lower for artist in [
+        "ainhoa arteta", "joan alcover", "antonio orozco", "cécile mclorin salvant",
+        "salvant", "chucho valdés", "valdés", "toquinho", "chambao",
+        "silvia pérez cruz", "buika", "miguel poveda", "estrella morente"
+    ]):
         return "CONCERT"
 
     # 1j. Charlas y conferencias
