@@ -29,24 +29,92 @@ FILLER_WORDS = [
     "en el", "en la", "al", "del", "de la", "de", "el", "la",
 ]
 
-def normalize_title(title: str) -> str:
-    """Normalización agresiva: lowercase, sin acentos, sin puntuación, sin palabras de relleno."""
-    t = title.strip().lower()
+# Prefijos a suprimir (antes de normalizar)
+PREFIXES_TO_STRIP = [
+    r"^concierto:\s*",
+    r"^concert:\s*",
+    r"^espectacle:\s*",
+    r"^tributo a:\s*",
+    r"^tribut a:\s*",
+]
 
-    # Remover acentos
+# Sufijos de recinto comunes (regex patterns)
+VENUE_SUFFIXES = [
+    r"\s+en es gremi\s*\(palma\)\s*$",
+    r"\s+en es gremi\s*$",
+    r"\s+en el trui teatre\s*$",
+    r"\s+a santanyí\s*$",
+    r"\s+a alaró\s*$",
+    r"\s+a alcúdia\s*$",
+    r"\s+a palma\s*$",
+    r"\s+en palma\s*$",
+]
+
+# Coletillas descriptivas largas
+DESCRIPTIVE_PATTERNS = [
+    r"\s+por parte de\s+.*$",
+    r"\s+de la mano de\s+.*$",
+    r"\s+organiza\s+.*$",
+]
+
+# Normalizaciones bilingües catalán/castellano
+BILINGUAL_NORMALIZATIONS = {
+    r"\bmúsiques\b": "musicas",
+    r"\bmúsic\b": "musica",
+    r"\bmúsics\b": "musica",
+    r"\bd'": "de ",
+    r"\bde l'": "de ",
+}
+
+def normalize_title(title: str) -> str:
+    """
+    Normalización agresiva mejorada:
+    - Separa palabras pegadas (CamelCase/PascalCase)
+    - Elimina prefijos y sufijos de recintos
+    - Normaliza palabras bilingües catalán/castellano
+    - Elimina coletillas descriptivas
+    - Lowercase, sin acentos, sin puntuación
+    """
+    t = title.strip()
+
+    # 1. Separar palabras pegadas (CamelCase/PascalCase) ANTES de lowercase
+    # Ejemplo: "ArmstrongThe" -> "Armstrong The"
+    t = re.sub(r"([a-z])([A-Z])", r"\1 \2", t)
+    t = re.sub(r"([A-Z]+)([A-Z][a-z])", r"\1 \2", t)
+
+    # 2. Eliminar prefijos específicos
+    for prefix in PREFIXES_TO_STRIP:
+        t = re.sub(prefix, "", t, flags=re.IGNORECASE)
+
+    # 3. Eliminar sufijos de recintos
+    for suffix in VENUE_SUFFIXES:
+        t = re.sub(suffix, "", t, flags=re.IGNORECASE)
+
+    # 4. Eliminar coletillas descriptivas largas
+    for pattern in DESCRIPTIVE_PATTERNS:
+        t = re.sub(pattern, "", t, flags=re.IGNORECASE)
+
+    # 5. Normalizar a lowercase
+    t = t.lower()
+
+    # 6. Normalizaciones bilingües catalán/castellano
+    for pattern, replacement in BILINGUAL_NORMALIZATIONS.items():
+        t = re.sub(pattern, replacement, t)
+
+    # 7. Remover acentos
     t = "".join(
         c for c in unicodedata.normalize("NFD", t)
         if unicodedata.category(c) != "Mn"
     )
 
-    # Remover puntuación (conservar solo letras, números y espacios)
+    # 8. Remover puntuación (conservar solo letras, números y espacios)
     t = re.sub(r"[^a-z0-9\s]", " ", t)
 
-    # Remover palabras de relleno
+    # 9. Remover palabras de relleno
     for filler in FILLER_WORDS:
         t = re.sub(r"\b" + re.escape(filler) + r"\b", "", t)
 
-    # Normalizar espacios múltiples
+    # 10. Normalizar espacios múltiples
     t = re.sub(r"\s+", " ", t).strip()
 
     return t
@@ -94,25 +162,59 @@ def score(doc_id: str, data: dict) -> int:
 
     return points
 
+def get_significant_words(title: str) -> set:
+    """Obtiene conjunto de palabras significativas (longitud >= 3)."""
+    words = title.split()
+    return set(w for w in words if len(w) >= 3)
+
+def count_significant_words(title: str) -> int:
+    """Cuenta palabras significativas (longitud >= 3)."""
+    return len(get_significant_words(title))
+
 def are_duplicates(title1: str, title2: str) -> bool:
     """
     Detecta si dos títulos normalizados son duplicados.
     Criterios:
-    - Fuzzy matching >= 0.82
-    - O contención de subcadena (uno contiene al otro, longitud > 6)
+    1. Fuzzy matching >= 0.82
+    2. Contención de subcadena con >= 3 palabras significativas comunes
+    3. Mismo conjunto de palabras significativas (reordenación)
     """
     if not title1 or not title2:
         return False
 
-    # Fuzzy matching
+    # Criterio 1: Fuzzy matching
     similarity = SequenceMatcher(None, title1, title2).ratio()
     if similarity >= 0.82:
         return True
 
-    # Contención de subcadena (solo si ambos tienen longitud significativa)
-    min_len = min(len(title1), len(title2))
-    if min_len > 6:
-        if title1 in title2 or title2 in title1:
+    # Obtener palabras significativas
+    words1 = get_significant_words(title1)
+    words2 = get_significant_words(title2)
+
+    # Criterio 2: Contención de subcadena
+    # Si uno contiene al otro como substring
+    if title1 in title2:
+        # title1 está contenido en title2
+        # Verificar que title2 (el más largo) tenga >= 3 palabras significativas
+        # O que ambos compartan >= 2 palabras significativas (más flexible)
+        common_words = words1 & words2
+        if len(words2) >= 3 or len(common_words) >= 2:
+            return True
+    elif title2 in title1:
+        # title2 está contenido en title1
+        common_words = words1 & words2
+        if len(words1) >= 3 or len(common_words) >= 2:
+            return True
+
+    # Criterio 3: Mismo conjunto de palabras significativas (orden diferente)
+    # Ejemplo: "sinatra armstrong jazz room" == "jazz room sinatra armstrong"
+    if len(words1) >= 3 and len(words2) >= 3:
+        # Si comparten al menos 3 palabras significativas y una tiene ≤ 2 palabras extra
+        common_words = words1 & words2
+        extra_words1 = words1 - words2
+        extra_words2 = words2 - words1
+
+        if len(common_words) >= 3 and len(extra_words1) <= 2 and len(extra_words2) <= 2:
             return True
 
     return False
@@ -227,5 +329,78 @@ def main():
 
     print(f"\n✅ Limpieza completada. {len(to_delete)} duplicados eliminados.")
 
+def run_tests():
+    """Tests unitarios para verificar la detección de duplicados."""
+    print("🧪 Ejecutando tests unitarios...\n")
+
+    test_cases = [
+        # (title1, title2, expected_duplicate, description)
+        (
+            "Les músiques de Joan Alcover a Santanyí",
+            "Concierto: Las músicas de Joan Alcover",
+            True,
+            "Bilingüe catalán/castellano + sufijo de lugar"
+        ),
+        (
+            "Encuentro de Gigantes de Alcúdia",
+            "Encuentro de Gigantes por parte de la Colla Gegantera d'Alcúdia",
+            True,
+            "Contención con coletilla descriptiva"
+        ),
+        (
+            "The Jazz Room: Tributo a Frank Sinatra y Louis Armstrong en Es Gremi (Palma)",
+            "Tributo a Frank Sinatra y Louis ArmstrongThe Jazz Room",
+            True,
+            "CamelCase pegado + prefijos/sufijos"
+        ),
+        (
+            "Concierto de rock en Es Gremi",
+            "Concierto de jazz en Es Gremi",
+            False,
+            "Diferentes eventos en misma sala (NO duplicado)"
+        ),
+        (
+            "Rata Market en Palma",
+            "Festa Popular en Palma",
+            False,
+            "Eventos distintos en mismo lugar (NO duplicado)"
+        ),
+    ]
+
+    passed = 0
+    failed = 0
+
+    for title1, title2, expected, description in test_cases:
+        norm1 = normalize_title(title1)
+        norm2 = normalize_title(title2)
+        result = are_duplicates(norm1, norm2)
+
+        status = "✅" if result == expected else "❌"
+        if result == expected:
+            passed += 1
+        else:
+            failed += 1
+
+        print(f"{status} Test: {description}")
+        print(f"   Título 1: {title1}")
+        print(f"   Título 2: {title2}")
+        print(f"   Norm 1:   '{norm1}'")
+        print(f"   Norm 2:   '{norm2}'")
+        print(f"   Esperado: {expected} | Resultado: {result}")
+        print()
+
+    print(f"📊 Resultados: {passed} pasados, {failed} fallidos\n")
+
+    if failed > 0:
+        print("❌ Algunos tests fallaron. Revisa la lógica de normalización.")
+        return False
+    else:
+        print("✅ Todos los tests pasaron correctamente!")
+        return True
+
 if __name__ == "__main__":
-    main()
+    # Si se pasa --test, ejecutar solo los tests
+    if "--test" in sys.argv:
+        run_tests()
+    else:
+        main()
