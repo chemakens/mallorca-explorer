@@ -174,22 +174,29 @@ def detect_category_smart(title: str, description: str = "") -> str:
             return "FAMILY"
         return "CULTURE"
 
-    # 1f. Actividades culturales y formativas (AMPLIADO)
+    # 1f. Actividades culturales específicas (PRECISIÓN MÁXIMA - evitar genéricos)
+    # Presentaciones de libros (patrones completos)
     if any(pattern in t_lower for pattern in [
         "presentació del llibre", "presentacio de llibre", "presentación del libro",
-        "presentació llibre", "presentacion libro", "presentación de libro", "llibre",
-        "curs de", "curs d'", "curso de", "curs d'iniciació a la fotografia", "curs de fotografia",
-        "taller sensorial", "ruta guiada", "visita guiada", "passeig modernista", "passeig",
-        "dones històriques"
+        "presentació llibre", "presentacion libro", "presentación de libro"
     ]):
-        # Solo si NO tiene palabras deportivas explícitas
-        if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "carrera deportiva", "running", "atletisme"]):
+        return "CULTURE"
+
+    # Rutas y paseos culturales (patrones completos)
+    if any(pattern in t_lower for pattern in [
+        "ruta guiada", "passeig modernista", "dones històriques"
+    ]):
+        return "CULTURE"
+
+    # Fotografía como actividad cultural (evitar cursos deportivos)
+    if any(pattern in t_lower for pattern in ["fotografia", "fotografía"]):
+        # Solo CULTURE si NO es deporte (vela, natació, etc.)
+        if not any(w in t_lower for w in ["vela", "natació", "natacion", "cursa", "marató", "maratón", "trail", "running", "atletisme"]):
             return "CULTURE"
 
-    # 1g. Talleres y cursos
+    # 1g. Otras actividades culturales (conservador)
     if any(pattern in t_lower for pattern in [
-        "taller", "curs d'iniciació", "curs de fotografia", "fotografia", "manualitats",
-        "workshop"
+        "taller sensorial", "visita guiada", "manualitats", "workshop"
     ]):
         # Solo si NO es deportivo
         if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "running", "atletisme"]):
@@ -375,6 +382,9 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         "academia de pilates", "academia de", "clases de pilates",
         # Traducciones rotas y errores evidentes
         "domingo/sunday", "amanecer partea", "el ritual final nu mallorca",
+        # Falsos eventos (frases completas específicas)
+        "clubes de corredores carreras sociales",
+        "verbenes de mallorcas 2026",
     ]
 
     for event in events:
