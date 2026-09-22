@@ -1,62 +1,6 @@
 [
   {
     "source": "ime_palma",
-    "title": "Ruta Nordic Walking Fira de l'Esport",
-    "description": "",
-    "start_date": "2026-09-20",
-    "end_date": "2026-09-20",
-    "municipality": "Palma",
-    "location": "Palma",
-    "category": "SPORT",
-    "is_free": true,
-    "price": null,
-    "website_url": "https://ime.palma.es/es/-/isla-race-_-fira-de-l-esport?redirect=%2Fes%2Feventos",
-    "id": "web-ime_palma-6c7814cbbdd9"
-  },
-  {
-    "source": "ime_palma",
-    "title": "Fira de l'Esport 50 aniversario Palau Municipal d'Esports Son Moix",
-    "description": "",
-    "start_date": "2026-09-19",
-    "end_date": "2026-09-19",
-    "municipality": "Palma",
-    "location": "Palma",
-    "category": "SPORT",
-    "is_free": true,
-    "price": null,
-    "website_url": "https://ime.palma.es/es/-/fira-de-l-esport-50-aniversario-palau-municipal-d-esports-son-moix?redirect=%2Fes%2Feventos",
-    "id": "web-ime_palma-7da3481333ce"
-  },
-  {
-    "source": "ime_palma",
-    "title": "II Trobada de Música i Ball Mallorquí _ Fira de l'Esport",
-    "description": "",
-    "start_date": "2026-09-19",
-    "end_date": "2026-09-19",
-    "municipality": "Palma",
-    "location": "Palma",
-    "category": "SPORT",
-    "is_free": true,
-    "price": null,
-    "website_url": "https://ime.palma.es/es/-/ii-trobada-de-m%C3%9Asica-y-baile-mallorqu%C3%8Dn-_-fira-de-l-esport?redirect=%2Fes%2Feventos",
-    "id": "web-ime_palma-ce9e2e47c42f"
-  },
-  {
-    "source": "ime_palma",
-    "title": "I Ciutat de Palma de Breaking",
-    "description": "",
-    "start_date": "2026-09-19",
-    "end_date": "2026-09-19",
-    "municipality": "Palma",
-    "location": "Palma",
-    "category": "SPORT",
-    "is_free": true,
-    "price": null,
-    "website_url": "https://ime.palma.es/es/-/i-ciutat-de-palma-de-breaking?redirect=%2Fes%2Feventos",
-    "id": "web-ime_palma-d4a1e0d3c42d"
-  },
-  {
-    "source": "ime_palma",
     "title": "Trofeu Ciutat de Palma de Voleibol 2026",
     "description": "",
     "start_date": "2026-09-26",
@@ -68,20 +12,6 @@
     "price": null,
     "website_url": "https://ime.palma.es/es/-/trofeu-ciutat-de-palma-de-voleibol?redirect=%2Fes%2Feventos",
     "id": "web-ime_palma-026bef6bf69a"
-  },
-  {
-    "source": "ime_palma",
-    "title": "Nordic Walking Salud (Septiembre 2026)",
-    "description": "",
-    "start_date": "2026-09-15",
-    "end_date": "2026-09-15",
-    "municipality": "Palma",
-    "location": "Palma",
-    "category": "SPORT",
-    "is_free": true,
-    "price": null,
-    "website_url": "https://ime.palma.es/es/-/nordic-walking-salu?redirect=%2Fes%2Feventos",
-    "id": "web-ime_palma-2e2714a4a884"
   },
   {
     "source": "ime_palma",

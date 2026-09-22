@@ -57,14 +57,64 @@ MALLORCA_MUNICIPALITIES = {
 }
 
 CATEGORY_KEYWORDS = {
-    "CONCERT": ["concierto", "concert", "música", "music", "recital", "jazz", "rock", "pop", "orquestra", "sinfónica", "banda", "dj", "acústico", "musical", "cantante", "grupo"],
-    "FESTIVAL": ["festival", "feria", "fiesta", "festa", "celebración", "verbena", "carnaval", "vermar", "fires", "festes", "pregó", "pregon", "correguda", "revetla"],
-    "SPORT": ["deporte", "deportivo", "sport", "triatlón", "maratón", "ciclismo", "running", "vela", "regata", "torneo", "campeonato", "pádel", "surf", "sup", "carrera", "natación", "yoga", "pilates"],
-    "CULTURE": ["exposición", "exhibition", "teatro", "theatre", "danza", "dance", "conferencia", "obra", "museo", "arte", "literatura", "cine", "película", "documental", "poesía"],
-    "GASTRONOMY": ["gastronómico", "gastronomic", "cata", "tasting", "culinaria", "degustación", "tapas", "vino", "maridaje", "restaurante", "chef", "rodaballo", "bacalao", "brunch", "cena", "barbacoa", "cocina"],
-    "MARKET": ["mercado", "market", "mercat", "mercadet", "artesanía", "fira", "mercadillo", "rastro", "artesano"],
-    "NIGHTLIFE": ["party", "noche", "night", "discoteca", "club", "tardeo", "dj set", "techno", "house"],
-    "FAMILY": ["familia", "family", "niños", "kids", "children", "infantil", "familiar", "cuentacuentos", "marionetas", "títeres", "campamento"],
+    # 1. CULTURE primero para que charlas/conferencias no caigan en SPORT
+    "CULTURE": [
+        "charla", "conferència", "conferencia", "coloquio", "col·loqui", "lectura", "llibre", "libro",
+        "poesía", "poesia", "literatura", "exposición", "exposició", "exhibition",
+        "teatro", "teatre", "theatre", "danza", "dansa", "dance", "museo", "museu",
+        "arte", "cine", "película", "documental", "visita guiada", "patrimonio",
+    ],
+    "FAMILY": [
+        "infantil", "familiar", "familia", "niños", "nins", "kids", "children",
+        "cuentacuentos", "contacontes", "marionetas", "titelles", "títeres",
+        "espectacle familiar",
+    ],
+    "FESTIVAL": [
+        "festival", "feria", "fira", "fiesta", "festes", "festa", "celebración",
+        "verbena", "revetla", "gegants", "gigantes", "moros i cristians",
+        "sant antoni", "sant sebastià", "fogueró", "reyes magos", "cavalcada",
+        "carnaval", "rua", "rueta",
+    ],
+    "CONCERT": [
+        "concierto", "concert", "música", "musica", "recital", "jazz", "rock", "pop",
+        "orquestra", "sinfónica", "banda de música", "coral", "coro", "acústico",
+        "tributo", "tribute", "cantante", "guitarra",
+    ],
+    "SPORT": [
+        "triatlón", "triatlo", "maratón", "marato", "ciclismo", "running", "trail",
+        "cursa", "carrera popular", "carrera deportiva", "torneo", "campeonato",
+        "pádel", "padel", "natación", "natacio", "vela", "regata", "voleibol",
+        "taekwondo", "halterofilia", "fitness", "yoga", "ioga", "pilates", "caminata", "senderismo", "excursió", "excursion",
+    ],
+    "NIGHTLIFE": [
+        "party", "club", "tardeo", "megatardeo", "dj set", "techno", "house", "reggaeton",
+        "discoteca", "closing party", "opening party",
+    ],
+    "GASTRONOMY": [
+        "gastronómico", "gastronomia", "cata", "tasting", "degustación", "degustacio",
+        "tapas", "tast", "vino", "maridaje", "bodega", "celler", "restaurante", "brunch",
+        "barbacoa", "bbq", "cuina", "cocina", "llampuga",
+    ],
+    "MARKET": [
+        "mercadillo", "mercat de", "mercado de", "rastro", "fira del disc", "market",
+    ],
+}
+
+# Palabras que indican evento fuera de Mallorca
+FOREIGN_ISLAND_PATTERNS = ["ibiza", "eivissa", "menorca", "formentera", "ciutadella"]
+
+# Títulos que siempre van a CULTURE (prioridad máxima, antes que SPORT)
+CULTURE_PRIORITY_PATTERNS = [
+    r"charla", r"charles", r"conferencia", r"lectura",
+    r"club de lectura", r"coloquio", r"col·loqui",
+    r"llibre", r"libro", r"presentació", r"presentación",
+]
+
+# Títulos de sub-eventos genéricos de programas festivos a descartar
+SUBEVENT_BLACKLIST = {
+    "pasacalles", "animación infantil", "refresco popular", "juegos populares",
+    "fin de fiesta con castillo de fuegos artificiales", "animacion infantil",
+    "muestra de baile", "ball de bot", "actuació musical",
 }
 
 # ============================================================================
@@ -92,15 +142,65 @@ def generate_event_id(source: str, title: str, date: str) -> str:
     return f"web-{source}-{hashlib.md5(content.encode()).hexdigest()[:12]}"
 
 def detect_category_smart(title: str, description: str = "") -> str:
-    title_lower = title.lower()
-    desc_lower = description.lower()
+    t_lower = title.lower()
+    combined = f"{title} {description}".lower()
+
+    # 1. Reglas directas prioritarias (título)
+
+    # 1a. Actividades infantiles/tecnológicas (ANTES que actividades culturales)
+    if any(w in t_lower for w in ["lego", "robòtica", "robotica"]):
+        return "FAMILY"
+
+    # 1b. Actividades culturales y formativas
+    if any(pattern in t_lower for pattern in [
+        "presentació del llibre", "presentacio de llibre", "presentación del libro",
+        "presentació llibre", "presentacion libro",
+        "curs de", "curs d'", "curso de",
+        "taller sensorial", "ruta guiada", "visita guiada"
+    ]):
+        # Solo si NO tiene palabras deportivas explícitas ni robótica/lego
+        if not any(w in t_lower for w in ["cursa", "marató", "maratón", "trail", "carrera deportiva", "running", "lego", "robòtica", "robotica"]):
+            return "CULTURE"
+
+    # 1c. Conciertos y eventos musicales (prioridad alta)
+    if any(pattern in t_lower for pattern in [
+        "jazz", "concert", "concierto", "música", "musica",
+        "orquestra", "sinfònica", "sinfonica", "recital"
+    ]):
+        return "CONCERT"
+
+    # 1d. Artistas conocidos (conciertos/cultura)
+    if any(artist in t_lower for artist in ["ainhoa arteta", "joan alcover"]):
+        return "CONCERT"
+
+    # 1e. Charlas y conferencias
+    if any(w in t_lower for w in ["charla", "conferencia", "conferència", "col·loqui", "lectura", "llibre"]):
+        return "CULTURE"
+
+    # 1f. Festivales tradicionales
+    if any(w in t_lower for w in ["gegants", "gigantes", "sant antoni", "moros i cristians", "revetla", "fogueró"]):
+        return "FESTIVAL"
+
+    # 1g. Bandas/artistas específicos
+    if "tierra santa" in t_lower:
+        return "CONCERT"
+    if "candlelight" in t_lower:
+        return "CONCERT"
+
+    # 1h. Deportes (solo si tiene palabras deportivas claras)
+    if any(w in t_lower for w in ["cursa", "triatlón", "triatlo", "maratón", "marató", "torneo", "trofeu", "trofeo",
+                                   "caminata", "senderismo", "excursió", "carrera popular",
+                                   "ruta a peu", "marcha popular", "trail running"]):
+        return "SPORT"
+
+    # 2. Evaluación ordenada por diccionario
     for category, keywords in CATEGORY_KEYWORDS.items():
-        if any(re.search(rf"\b{kw}\b", title_lower) for kw in keywords):
-            return category
-    for category, keywords in CATEGORY_KEYWORDS.items():
-        if any(re.search(rf"\b{kw}\b", desc_lower) for kw in keywords):
-            return category
+        for kw in keywords:
+            if re.search(rf"\b{re.escape(kw)}\b", combined):
+                return category
+
     return "CULTURE"
+
 
 def parse_date_advanced(date_str: str) -> Optional[str]:
     """Convierte fechas relativas y formatos de texto a AAAA-MM-DD estricto."""
@@ -171,14 +271,30 @@ def parse_date_advanced(date_str: str) -> Optional[str]:
 
     return None
 
-def normalize_municipality(location: str) -> Optional[str]:
-    if not location: return None
-    location_lower = location.lower().strip()
-    if location_lower in MALLORCA_MUNICIPALITIES: return location.title()
-    for municipality in MALLORCA_MUNICIPALITIES:
-        if municipality in location_lower: return municipality.title()
-    if "palma" in location_lower: return "Palma"
+# Municipios de Mallorca que contienen referencias a otras islas (falsos positivos)
+FOREIGN_ISLAND_PATTERNS = ["ibiza", "eivissa", "menorca", "ciutadella", "maó", "mahón", "formentera"]
+
+def normalize_municipality(text: str, title: str = "") -> Optional[str]:
+    combined = f"{text} {title}".strip()
+    if not combined:
+        return None
+
+    # Excluir otras islas
+    if re.search(r"\b(ibiza|eivissa|menorca|formentera)\b", combined, re.IGNORECASE):
+        return "FUERA_DE_MALLORCA"
+
+    combined_lower = combined.lower()
+
+    # Buscar municipio con preposiciones o como palabra suelta
+    for muni in MALLORCA_MUNICIPALITIES:
+        pattern = rf"\b(?:a|en|de|d')\s+{re.escape(muni)}\b|\b{re.escape(muni)}\b"
+        if re.search(pattern, combined_lower):
+            if muni == "palma":
+                return "Palma"
+            return muni.title()
+
     return None
+
 
 def extract_price(text: str) -> tuple[bool, Optional[str]]:
     text_lower = text.lower()
@@ -190,12 +306,26 @@ def extract_price(text: str) -> tuple[bool, Optional[str]]:
     return True, None
 
 def _normalize_title(t: str) -> str:
-    t = t.lower().strip()
-    t = re.sub(r"\s*[-–|·]\s*mallorca.*$", "", t)
-    t = re.sub(r"\s*\(.*?\)", "", t)
-    t = re.sub(r"[^\w\s]", "", t)
     import unicodedata
+    t = t.lower().strip()
+    # Eliminar salas y ciudades añadidas al título
+    t = re.sub(r"\s*(?:en|at)\s+(?:es gremi|trui teatre|auditorium|la movida|pueblo español|sala la fornal|intergalactic bar)[^$]*$", "", t)
+    t = re.sub(r"\s*\((?:palma|mallorca|calvià|esporles|ibiza|inca|manacor)\)", "", t)
+    t = re.sub(r"\s*[-–|·]\s*mallorca.*$", "", t)
+    t = re.sub(r"\s+en\s+mallorca.*$", "", t)
+    # Eliminar barrios o subtítulos con preposición
+    t = re.sub(r"\s+en\s+(?:pere garau|santa catalina|el molinar|la lonja|son espanyol|el terreno).*$", "", t)
+    # Eliminar prefijos de pases y marcas
+    t = re.sub(r"\b(?:1[ºª]?|2[ºª]?|primer|segundo)\s+pase\b", "", t)
+    t = re.sub(r"candlelight[:\s]*", "", t, flags=re.IGNORECASE)
+    # Eliminar coletillas de edición, volúmenes y aniversarios
+    t = re.sub(r"\bvol\.?\s*\d+\b", "", t, flags=re.IGNORECASE)
+    t = re.sub(r"\bedici[oó]n\b", "", t, flags=re.IGNORECASE)
+    t = re.sub(r"\b\d+[ºª]?\s*aniversario\b", "", t, flags=re.IGNORECASE)
+    # Limpiar puntuación
+    t = re.sub(r"[^\w\s]", "", t)
     return "".join(c for c in unicodedata.normalize("NFD", t) if unicodedata.category(c) != "Mn").strip()
+
 
 def load_historical_ids(filepath: Path) -> Set[str]:
     if not filepath.exists(): return set()
@@ -206,12 +336,24 @@ def load_historical_ids(filepath: Path) -> Set[str]:
         return set()
 
 def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dict]:
+    from difflib import SequenceMatcher
+
     seen_exact, seen_fuzzy = set(), set()
     unique_events = []
-    TITLE_BLACKLIST = ["secrets night", "secrets mallorca", "pase diario", "day pass"]
+    TITLE_BLACKLIST = [
+        "secrets night", "secrets mallorca", "pase diario", "day pass",
+        "museos y lugares culturales favoritos", "pase de un día en",
+        "academia de pilates", "academia de", "clases de pilates",
+    ]
 
     for event in events:
-        if any(bl in event.get("title", "").lower() for bl in TITLE_BLACKLIST): continue
+        title_low = event.get("title", "").lower().strip()
+        muni = event.get("municipality", "") or ""
+        # Descartar eventos de otras islas
+        if muni == "FUERA_DE_MALLORCA": continue
+        # Descartar sub-eventos genéricos sin municipio preciso
+        if muni in ("", "Mallorca") and title_low in SUBEVENT_BLACKLIST: continue
+        if any(bl in title_low for bl in TITLE_BLACKLIST): continue
 
         parsed_date = parse_date_advanced(event.get("start_date", ""))
         if not parsed_date: continue
@@ -224,9 +366,23 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         title_raw = event["title"].lower().strip()
         exact_key = (title_raw, event["start_date"])
         if exact_key in seen_exact: continue
-        
-        fuzzy_key = (_normalize_title(event["title"])[:60], event["start_date"])  # ✅ FIX: Aumentado de 40 a 60 caracteres
+
+        fuzzy_key = (_normalize_title(event["title"])[:35], event["start_date"])  # ✅ FIX: Aumentado de 40 a 60 caracteres
         if fuzzy_key in seen_fuzzy: continue
+
+        # Deduplicación por similitud difusa: detectar títulos muy similares en la misma fecha
+        normalized_title = _normalize_title(event["title"])
+        is_similar_duplicate = False
+        for existing_event in unique_events:
+            if existing_event["start_date"] == event["start_date"]:
+                existing_normalized = _normalize_title(existing_event["title"])
+                similarity = SequenceMatcher(None, normalized_title, existing_normalized).ratio()
+                if similarity > 0.75:
+                    is_similar_duplicate = True
+                    break
+
+        if is_similar_duplicate:
+            continue
 
         seen_exact.add(exact_key)
         seen_fuzzy.add(fuzzy_key)
@@ -285,48 +441,161 @@ def scrape_firesifestes() -> List[Dict]:
     base_url = "https://firesifestes.es"
     today = datetime.now()
     print("   🔍 Scraping: firesifestes...")
+
+    # URLs con paginación: calendario + eventos-mallorca (3 págs) + ferias-y-fiestas (3 págs)
+    urls_to_scrape = [
+        f"{base_url}/es/calendario/",
+        f"{base_url}/es/eventos-mallorca/",
+        f"{base_url}/es/eventos-mallorca/page/2/",
+        f"{base_url}/es/eventos-mallorca/page/3/",
+        f"{base_url}/es/evento-tipo/ferias-y-fiestas/",
+        f"{base_url}/es/evento-tipo/ferias-y-fiestas/page/2/",
+        f"{base_url}/es/evento-tipo/ferias-y-fiestas/page/3/",
+    ]
+
+    seen_urls = set()
+
     try:
-        api_base = f"{base_url}/wp-json/tribe/events/v1/events"
-        start_dt = today.strftime("%Y-%m-%d")
-        end_date = (today.replace(year=today.year + 1)).strftime("%Y-%m-%d")
-        page_num, per_page = 1, 50
-        while True:
-            params = {"start_date": start_dt, "end_date": end_date, "per_page": per_page, "page": page_num, "status": "publish"}
+        for page_url in urls_to_scrape:
             try:
-                resp = requests.get(api_base, params=params, headers=get_random_headers(), timeout=15)
-                if resp.status_code != 200: break
-                data = resp.json()
-            except Exception: break
-            
-            items = data.get("events", [])
-            if not items: break
+                # Intentar cargar la página y manejar 404 elegantemente
+                try:
+                    response = requests.get(page_url, headers=get_random_headers(), timeout=15)
+                    if response.status_code == 404:
+                        continue  # Página no existe, continuar con la siguiente
+                    response.raise_for_status()
+                    soup = BeautifulSoup(response.content, "html.parser")
+                except requests.exceptions.HTTPError:
+                    continue  # Error HTTP, continuar con la siguiente
 
-            for ev in items:
-                url = ev.get("url", "")
-                title = ev.get("title", "").strip()
-                start_date_raw = ev.get("start_date", "")[:10]
-                if not url or not title or not start_date_raw: continue
+                if not soup:
+                    continue
 
-                venue = ev.get("venue", {}) or {}
-                city = venue.get("city", "") or ""
-                desc_clean = re.sub(r"<[^>]+>", " ", ev.get("description", "") or "")[:300]
-                is_free, price = extract_price(desc_clean + " " + title)
+                # Buscar artículos que NO sean eventos pasados
+                articles = soup.select("article.mec-event-article")
+                future_articles = [a for a in articles if 'mec-past-event' not in a.get('class', [])]
 
-                events.append({
-                    "source": "firesifestes",
-                    "title": title[:100],
-                    "start_date": start_date_raw,
-                    "municipality": normalize_municipality(city + " " + title) or "Mallorca",
-                    "category": detect_category_smart(title, desc_clean),
-                    "is_free": is_free,
-                    "price": price,
-                    "website_url": url,
-                })
-            
-            if page_num >= data.get("total_pages", 1): break
-            page_num += 1
+                for card in future_articles:
+                    try:
+                        # Extraer título
+                        title_elem = card.find(["h2", "h3", "h4"])
+                        if not title_elem:
+                            continue
+
+                        link_elem = title_elem.find("a", href=True)
+                        if not link_elem:
+                            continue
+
+                        title = link_elem.get_text(strip=True)
+                        event_url = link_elem.get("href", "")
+
+                        if not title or len(title) < 3:
+                            continue
+
+                        # Filtrar mercados y mercadillos semanales recurrentes
+                        title_lower = title.lower()
+                        if any(term in title_lower for term in [
+                            "mercado semanal", "mercat semanal", "mercat setmanal",
+                            "mercado tradicional", "mercat tradicional",
+                            "mercat de segona mà", "rastro",
+                            "cada lunes", "cada martes", "cada miércoles", "cada jueves",
+                            "cada viernes", "cada sábado", "cada domingo",
+                            "tots els dilluns", "tots els dimarts", "tots els dimecres",
+                            "tots els dijous", "tots els divendres", "tots els dissabtes",
+                            "mercado dominical", "mercadillo dominical",
+                            "mercat dels dijous", "mercat dels divendres", "mercat dels dissabtes",
+                            "hay mercado", "hi ha mercat",
+                        ]):
+                            continue
+
+                        # Evitar duplicados
+                        if event_url in seen_urls:
+                            continue
+                        seen_urls.add(event_url)
+
+                        # Extraer lugar
+                        place_elem = card.find("div", class_="mec-event-loc-place")
+                        place_text = place_elem.get_text(strip=True) if place_elem else ""
+
+                        # Normalizar municipio
+                        municipality = normalize_municipality(title + " " + place_text)
+                        if municipality == "FUERA_DE_MALLORCA":
+                            continue
+                        if not municipality:
+                            municipality = "Mallorca"
+
+                        # Cargar página del evento para obtener fecha del JSON-LD
+                        event_soup = fetch_soup_requests(event_url, timeout=10)
+                        if not event_soup:
+                            continue
+
+                        # Buscar JSON-LD con datos del evento
+                        start_date = None
+                        scripts = event_soup.find_all("script", type="application/ld+json")
+
+                        for script in scripts:
+                            try:
+                                import json
+                                data = json.loads(script.string)
+
+                                # Manejar tanto objetos simples como @graph
+                                items = data.get("@graph", [data]) if isinstance(data, dict) else [data]
+
+                                for item in items:
+                                    if isinstance(item, dict) and item.get("@type") == "Event":
+                                        start_date = item.get("startDate", "")
+                                        if start_date:
+                                            # startDate puede ser "2026-03-01" o "2026-03-01T19:00:00"
+                                            start_date = start_date.split("T")[0]
+                                            break
+
+                                if start_date:
+                                    break
+
+                            except:
+                                continue
+
+                        if not start_date:
+                            continue
+
+                        # Validar fecha y descartar eventos pasados
+                        try:
+                            event_date = datetime.strptime(start_date, "%Y-%m-%d")
+                            if event_date.date() < today.date():
+                                continue
+                        except:
+                            continue
+
+                        # Extraer todo el texto para análisis
+                        card_text = card.get_text(separator=" ", strip=True)
+
+                        # Detectar categoría
+                        category = detect_category_smart(title, card_text)
+
+                        # Extraer precio
+                        is_free, price = extract_price(card_text)
+
+                        events.append({
+                            "source": "firesifestes",
+                            "title": title[:100],
+                            "start_date": start_date,
+                            "municipality": municipality,
+                            "category": category,
+                            "is_free": is_free,
+                            "price": price,
+                            "website_url": event_url,
+                        })
+
+                    except Exception:
+                        continue
+
+            except Exception:
+                continue
+
         print(f"      ✅ firesifestes: {len(events)} eventos")
-    except Exception: pass
+    except Exception:
+        pass
+
     return events
 
 
@@ -967,6 +1236,72 @@ def scrape_ticketib() -> List[Dict]:
 # ORQUESTADOR PRINCIPAL, HTML Y SERVER
 # ============================================================================
 
+def scrape_faib_atletisme() -> List[Dict]:
+    """FAIB - Federació d'Atletisme de les Illes Balears. HTML estático."""
+    import re
+    URL = "https://www.faib.es/competicions/"
+    HEADERS = {
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "es-ES,es;q=0.9,ca;q=0.8",
+        "Referer": "https://www.google.com/",
+    }
+    MONTH_MAP = {
+        "ene":"01","feb":"02","mar":"03","abr":"04","may":"05","jun":"06",
+        "jul":"07","ago":"08","sep":"09","oct":"10","nov":"11","dic":"12",
+        "gen":"01","set":"09","des":"12",
+    }
+    events = []
+    seen = set()
+    try:
+        resp = requests.get(URL, headers=HEADERS, timeout=12)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.text, "html.parser")
+        now = datetime.now()
+        current_year = now.year
+
+        for row in soup.find_all(["tr", "li", "div", "article"]):
+            text = row.get_text(separator=" ", strip=True)
+            if not text or len(text) < 8:
+                continue
+            match = re.search(
+                r"\b(\d{1,2})\s+(ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic|gen|set|des)\b",
+                text, re.IGNORECASE
+            )
+            if not match:
+                continue
+            day = match.group(1).zfill(2)
+            month = MONTH_MAP.get(match.group(2).lower()[:3])
+            if not month:
+                continue
+            year = current_year if int(month) >= now.month - 1 else current_year + 1
+            date_str = f"{year}-{month}-{day}"
+            title = re.sub(
+                r"\b\d{1,2}\s+(ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic|gen|set|des)\b",
+                "", text, flags=re.IGNORECASE
+            ).strip(" |-|·|/")
+            title = re.sub(r"\s+", " ", title).strip()
+            if not title or len(title) < 4:
+                continue
+            key = (title[:50].lower(), date_str)
+            if key in seen:
+                continue
+            seen.add(key)
+            events.append({
+                "title": title[:120],
+                "date": date_str,
+                "location": "Mallorca",
+                "category": "SPORT",
+                "source": "FAIB Atletisme",
+                "url": URL,
+                "description": "",
+            })
+    except Exception as e:
+        print(f"[FAIB] Error: {e}")
+    print(f"[FAIB] {len(events)} eventos encontrados")
+    return events
+
+
 def scrape_all_sources() -> List[Dict]:
     print("🌐 Iniciando extracción masiva de eventos (Multihilo)...")
 
@@ -993,6 +1328,8 @@ def scrape_all_sources() -> List[Dict]:
         scrape_ime_palma,
         scrape_firesifestes,
         scrape_ticketib,
+        scrape_fourvenues,
+        scrape_faib_atletisme,
     ]
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
@@ -1001,20 +1338,43 @@ def scrape_all_sources() -> List[Dict]:
             try: all_events.extend(future.result())
             except Exception as e: print(f"❌ Fallo en Worker {futures[future]}: {e}")
 
-    # Cargar y re-categorizar la caché exclusiva de The Calendar
-    for file_name in ["thecalendar_events.json"]:
+    # Cargar y categorizar cachés de fuentes dedicadas
+    cache_files = ["thecalendar_events.json", "ime_events_fixed.json", "sports_events.json"]
+    for file_name in cache_files:
         file_path = TOOLS_DIR / file_name
         if file_path.exists():
             with open(file_path, "r", encoding="utf-8") as _f:
                 cache = json.load(_f)
-
                 for ev in cache:
                     titulo = ev.get("title", "")
                     descripcion = ev.get("description", "")
-                    ev["category"] = detect_category_smart(titulo, descripcion)
-
-                all_events.extend(cache)
-                print(f"   ✅ Cache recuperada y re-categorizada: {len(cache)} eventos de {file_name}")
+                    if file_name == "sports_events.json":
+                        # Sports events: detect_category_smart decide libremente
+                        # Si devuelve CULTURE por defecto y no hay keywords culturales, asignar SPORT
+                        cat = detect_category_smart(titulo, descripcion)
+                        cultural_kws = ["charla", "taller", "conferencia", "conferència", "col·loqui",
+                                        "lectura", "exposici", "teatro", "teatre", "dansa", "danza"]
+                        titulo_low = titulo.lower()
+                        if cat == "CULTURE" and not any(kw in titulo_low for kw in cultural_kws):
+                            ev["category"] = "SPORT"
+                        else:
+                            ev["category"] = cat
+                    else:
+                        ev["category"] = detect_category_smart(titulo, descripcion)
+                # Filtrar: eventos fuera de Mallorca y sub-eventos genéricos de fiestas
+                filtered_cache = []
+                for ev in cache:
+                    muni = ev.get("municipality", "") or ""
+                    title_ev = ev.get("title", "").lower().strip()
+                    # Descartar si es de otra isla
+                    if muni == "FOREIGN" or any(f in title_ev for f in FOREIGN_ISLAND_PATTERNS):
+                        continue
+                    # Descartar sub-eventos genéricos de programas festivos
+                    if muni in ("", "Mallorca") and title_ev in SUBEVENT_BLACKLIST:
+                        continue
+                    filtered_cache.append(ev)
+                all_events.extend(filtered_cache)
+                print(f"   ✅ Cache recuperada y categorizada: {len(cache)} eventos de {file_name}")
 
     all_events = deduplicate_events(all_events, historical_ids)
     
@@ -1180,3 +1540,125 @@ if __name__ == "__main__":
             run_review_server(REVIEW_HTML)
     else:
         print("⚠️ No hay eventos para procesar.")
+
+def scrape_fourvenues() -> List[Dict]:
+    """
+    Scraper para Fourvenues (BCM Mallorca y Fitz Mallorca).
+    Método: Schema.org JSON-LD (<script type="application/ld+json"> con @type=ItemList).
+    No requiere Playwright. Headers básicos evitan Cloudflare WAF.
+    """
+    VENUES = [
+        ("BCM Mallorca",  "https://www.fourvenues.com/es/bcm-mallorca",  "Calvià"),
+        ("Fitz Mallorca", "https://www.fourvenues.com/es/fitz-mallorca", "Palma"),
+    ]
+    HEADERS_FV = {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        ),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "es-ES,es;q=0.9",
+        "Referer": "https://www.google.com/",
+    }
+    # Sesiones genéricas recurrentes sin artista — no aportan valor
+    GENERIC_BLACKLIST = [
+        "jueves fitz", "viernes fitz", "sábado fitz", "sabado fitz", "domingo fitz",
+        "thursday fitz", "friday fitz", "saturday fitz", "sunday fitz",
+    ]
+
+    events = []
+    print("   🔍 Scraping: fourvenues (BCM + Fitz)...")
+
+    session = requests.Session()
+    session.headers.update(HEADERS_FV)
+
+    for venue_name, venue_url, municipality in VENUES:
+        try:
+            r = session.get(venue_url, timeout=20, allow_redirects=True)
+            if r.status_code != 200:
+                print(f"      ⚠️ {venue_name}: HTTP {r.status_code}")
+                continue
+
+            soup = BeautifulSoup(r.text, "html.parser")
+            venue_events = []
+
+            for script in soup.find_all("script", type="application/ld+json"):
+                try:
+                    data = json.loads(script.string or "")
+                    if data.get("@type") != "ItemList":
+                        continue
+                    for item in data.get("itemListElement", []):
+                        ev = item.get("item", {})
+                        if not ev or ev.get("@type") not in ("Event", "MusicEvent", "SocialEvent"):
+                            continue
+
+                        raw_title = ev.get("name", "").strip()
+                        raw_date  = ev.get("startDate", "")
+                        ev_url    = ev.get("url", venue_url)
+
+                        if not raw_title or not raw_date:
+                            continue
+
+                        # Filtrar sesiones genéricas recurrentes
+                        if any(g in raw_title.lower() for g in GENERIC_BLACKLIST):
+                            continue
+
+                        # Parsear fecha ISO 8601 → YYYY-MM-DD
+                        start_date = raw_date[:10]  # "2026-09-25T22:00:00.000+02:00" → "2026-09-25"
+                        try:
+                            datetime.strptime(start_date, "%Y-%m-%d")
+                        except ValueError:
+                            continue
+
+                        # Limpiar título: quitar sufijos redundantes
+                        title = raw_title
+                        for suffix in [f" - {venue_name}", " - BCM Mallorca", " - Fitz Mallorca",
+                                       " - BCM", " - Fitz"]:
+                            if title.endswith(suffix):
+                                title = title[: -len(suffix)].strip()
+
+                        # Limpiar prefijo de fecha del título si lo lleva
+                        # Ej: "September 25th - JUANY BRAVO" → "JUANY BRAVO"
+                        import re as _re
+                        title = _re.sub(
+                            r"^(?:January|February|March|April|May|June|July|August|September|"
+                            r"October|November|December)\s+\d{1,2}(?:st|nd|rd|th)?\s*[-–]\s*",
+                            "", title
+                        )
+                        title = _re.sub(
+                            r"^(?:Enero|Febrero|Marzo|Abril|Mayo|Junio|Julio|Agosto|Septiembre|"
+                            r"Octubre|Noviembre|Diciembre)\s+\d{1,2}\s*[-–]\s*",
+                            "", title, flags=_re.IGNORECASE
+                        )
+                        title = title.strip()
+                        if not title:
+                            continue
+
+                        venue_events.append({
+                            "source": "fourvenues",
+                            "title": title[:120],
+                            "start_date": start_date,
+                            "municipality": municipality,
+                            "category": "NIGHTLIFE",
+                            "is_free": False,
+                            "price": None,
+                            "website_url": ev_url,
+                        })
+                except Exception:
+                    continue
+
+            # Deduplicar por título+fecha dentro de la misma sala
+            seen = set()
+            for ev in venue_events:
+                key = f"{ev['title'].lower()}|{ev['start_date']}"
+                if key not in seen:
+                    seen.add(key)
+                    events.append(ev)
+
+            print(f"      ✅ {venue_name}: {len(seen)} eventos")
+
+        except Exception as e:
+            print(f"      ❌ Error {venue_name}: {e}")
+
+    print(f"      ✅ fourvenues total: {len(events)} eventos")
+    return events

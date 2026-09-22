@@ -6,8 +6,18 @@ echo "  MALLORCA EXPLORER — Actualizar Eventos"
 echo "========================================"
 echo ""
 
-# 1. Scraping completo (firesifestes mejorado + todos los demás)
-echo "🌐 Paso 1/4: Scraping completo de eventos..."
+# 1 y 2. Scraping en paralelo de fuentes dedicadas
+echo "🚀 Pasos 1 y 2: Scraping en paralelo (The Calendar + IME Palma)..."
+python3 -u scrape_thecalendar.py &
+PID1=$!
+python3 -u scrape_ime_playwright.py &
+PID2=$!
+wait $PID1 $PID2
+echo "✅ Fuentes dedicadas completadas."
+echo ""
+
+# 3. Scraping general y consolidación
+echo "🌐 Paso 3: Scraping del resto de fuentes y unificación..."
 python3 -u fetch_web_events.py
 echo ""
 
