@@ -1439,7 +1439,9 @@ def scrape_bcm() -> List[Dict]:
 
         # Los eventos son <a href="/es/tickets/slug"> con texto: "DD mes ARTISTA CATEGORIA"
         import re
-        year = datetime.date.today().year
+        from datetime import date as _date
+        today = _date.today()
+        year = today.year
         for a in soup.find_all("a", href=True):
             href = a.get("href", "")
             if not re.match(r"^/es/tickets/[^/]+$", href):
@@ -1454,14 +1456,12 @@ def scrape_bcm() -> List[Dict]:
             if not mes_num:
                 continue
             # Si el mes ya pasó respecto al mes actual, puede ser año siguiente
-            import datetime as dt
-            today = dt.date.today()
             try:
-                fecha = dt.date(year, int(mes_num), int(day))
+                fecha = _date(year, int(mes_num), int(day))
             except ValueError:
                 continue
             if fecha < today:
-                fecha = dt.date(year + 1, int(mes_num), int(day))
+                fecha = _date(year + 1, int(mes_num), int(day))
             # Título: quitar categorías al final (ej: "RESIDENT DJ'S", "INTERNATIONAL")
             title = re.sub(r"\s+(RESIDENT DJ.S|INTERNATIONAL|NATIONAL|SPECIAL GUEST).*$", "", rest, flags=re.IGNORECASE).strip()
             if not title:
@@ -1484,7 +1484,7 @@ def scrape_bcm() -> List[Dict]:
 
 
 def scrape_fitz() -> List[Dict]:
-    """Fitz Mallorca — Scraping desde web propia con Playwright (HTML parsing)."""
+    """Fitz Mallorca — Scraping interceptando respuestas de red (eventos vía API/XHR)."""
     events = []
     url = "https://fitzmallorca.com/events"
     print("   🔍 Scraping: Fitz Mallorca...")
@@ -1494,87 +1494,90 @@ def scrape_fitz() -> List[Dict]:
         "mayo": "05", "junio": "06", "julio": "07", "agosto": "08",
         "septiembre": "09", "octubre": "10", "noviembre": "11", "diciembre": "12",
     }
-    MESES_EN = {
-        "january": "01", "february": "02", "march": "03", "april": "04",
-        "may": "05", "june": "06", "july": "07", "august": "08",
-        "september": "09", "october": "10", "november": "11", "december": "12",
-    }
 
     try:
+        import re
+        from datetime import date as _date
+        api_responses = []
+
+        def on_response(response):
+            ct = response.headers.get("content-type", "")
+            if "json" in ct and response.status == 200:
+                try:
+                    body = response.json()
+                    api_responses.append((response.url, body))
+                except Exception:
+                    pass
+
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
             page = browser.new_page(user_agent=random.choice(USER_AGENTS))
+            page.on("response", on_response)
             page.goto(url, wait_until="networkidle", timeout=60000)
-            page.wait_for_timeout(6000)
+            page.wait_for_timeout(8000)
             html = page.content()
             browser.close()
 
-        soup = BeautifulSoup(html, "html.parser")
-        import re, datetime as dt
-
-        year = dt.date.today().year
         seen = set()
+        today = _date.today()
+        year = today.year
 
-        # Intentar JSON-LD primero (por si lo añaden en el futuro)
-        for script in soup.find_all("script", type="application/ld+json"):
-            try:
-                data = json.loads(script.string or "")
-                items = []
-                if isinstance(data, dict):
-                    if data.get("@type") == "ItemList":
-                        items = data.get("itemListElement", [])
-                    elif data.get("@type") in ("Event", "MusicEvent"):
-                        items = [data]
-                for item in items:
-                    if isinstance(item, dict):
-                        ev = item.get("item", item)
-                        if ev.get("@type") in ("Event", "MusicEvent"):
-                            title = ev.get("name", "").strip()
-                            date_str = ev.get("startDate", "")[:10]
-                            if title and date_str and title not in seen:
-                                seen.add(title)
-                                events.append({
-                                    "title": title[:100], "date": date_str,
-                                    "location": "Palma", "category": "NIGHTLIFE",
-                                    "source": "Fitz Mallorca", "url": url, "description": "",
-                                })
-            except Exception:
-                pass
+        # 1. Intentar extraer de respuestas JSON interceptadas
+        for api_url, body in api_responses:
+            candidates = []
+            if isinstance(body, list):
+                candidates = body
+            elif isinstance(body, dict):
+                for key in ("data", "events", "items", "results", "records"):
+                    if isinstance(body.get(key), list):
+                        candidates = body[key]
+                        break
+            for item in candidates:
+                if not isinstance(item, dict):
+                    continue
+                title = (item.get("title") or item.get("name") or item.get("event_name") or "").strip()
+                date_str = (item.get("date") or item.get("start_date") or item.get("startDate") or
+                            item.get("event_date") or item.get("fecha") or "")
+                if not title or not date_str:
+                    continue
+                date_part = str(date_str)[:10]
+                if title not in seen:
+                    seen.add(title)
+                    ev_url = item.get("url") or item.get("link") or item.get("permalink") or url
+                    events.append({
+                        "title": title[:100], "date": date_part,
+                        "location": "Palma", "category": "NIGHTLIFE",
+                        "source": "Fitz Mallorca", "url": ev_url, "description": "",
+                    })
 
+        # 2. Fallback: parsear links del HTML renderizado
         if not events:
-            # Fallback: buscar fechas con patrón DD mes/month TITULO en texto del HTML
-            all_meses = {**MESES_ES, **MESES_EN}
-            text_blocks = []
-            for el in soup.select("article, .event, [class*='event'], [class*='Event'], li, .card, [class*='card']"):
-                t = " ".join(el.get_text(separator=" ").split())
-                if len(t) > 5:
-                    text_blocks.append((t, el))
-
-            for text, el in text_blocks:
-                m = re.search(r"(\d{1,2})\s+(\w+)\s+(\d{4})?", text, re.IGNORECASE)
+            soup = BeautifulSoup(html, "html.parser")
+            for a in soup.find_all("a", href=True):
+                href = a.get("href", "")
+                if not ("/event" in href or "/events/" in href):
+                    continue
+                text = " ".join(a.get_text(separator=" ").split())
+                m = re.search(r"(\d{1,2})\s+(\w+)", text, re.IGNORECASE)
                 if not m:
                     continue
-                day = m.group(1)
-                mes = m.group(2).lower()
-                yr = int(m.group(3)) if m.group(3) else year
-                mes_num = all_meses.get(mes)
+                day, mes = m.group(1), m.group(2).lower()
+                mes_num = MESES_ES.get(mes)
                 if not mes_num:
                     continue
+                title_raw = re.sub(r"\d{1,2}\s+\w+", "", text).strip()[:80]
+                if not title_raw or title_raw in seen:
+                    continue
                 try:
-                    fecha = dt.date(yr, int(mes_num), int(day))
+                    fecha = _date(year, int(mes_num), int(day))
+                    if fecha < today:
+                        fecha = _date(year + 1, int(mes_num), int(day))
                 except ValueError:
                     continue
-                # Título: texto del elemento sin la fecha
-                title_raw = re.sub(r"\d{1,2}\s+\w+\s*(\d{4})?", "", text).strip()
-                title = re.sub(r"\s+", " ", title_raw)[:80].strip()
-                if not title or title in seen:
-                    continue
-                # Buscar href
-                a_tag = el.find("a", href=True)
-                ev_url = ("https://fitzmallorca.com" + a_tag["href"]) if a_tag else url
-                seen.add(title)
+                seen.add(title_raw)
+                ev_url = ("https://fitzmallorca.com" + href) if href.startswith("/") else href
                 events.append({
-                    "title": title, "date": fecha.isoformat(),
+                    "title": title_raw, "date": fecha.isoformat(),
                     "location": "Palma", "category": "NIGHTLIFE",
                     "source": "Fitz Mallorca", "url": ev_url, "description": "",
                 })
