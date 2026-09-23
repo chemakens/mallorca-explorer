@@ -442,6 +442,10 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         "finca ratxo": "Puigpunyent",
         "mostra calvià": "Calvià",
         "lloseta": "Lloseta",
+        "peguera": "Calvià",
+        "santa ponça": "Calvià",
+        "santa ponsa": "Calvià",
+        "magaluf": "Calvià",
     }
     TITLE_MUNICIPALITY_OVERRIDES = {
         "s'embat": "Calvià",
@@ -451,7 +455,12 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         "far de porto pi": "CULTURE",
         "castell de sant carles": "CULTURE",
         "cata y bebe x candelea": "GASTRONOMY",
+        "cata de vinos y pasteles": "GASTRONOMY",
+        "club de vinos": "GASTRONOMY",
         "roo panes": "CONCERT",
+        "film symphony orchestra": "CONCERT",
+        "aclub sunset": "NIGHTLIFE",
+        "sana-ment": "CULTURE",
     }
 
     for event in events:
