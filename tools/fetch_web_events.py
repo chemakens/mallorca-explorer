@@ -1956,6 +1956,72 @@ def scrape_entradium() -> List[Dict]:
     return events
 
 
+def scrape_bierkoenig() -> List[Dict]:
+    """Bierkönig — eventos de nightlife en Playa de Palma."""
+    events = []
+    url = "https://www.bierkoenig.com/events/"
+    print("   🔍 Scraping: bierkoenig...")
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(user_agent=random.choice(USER_AGENTS))
+            page.goto(url, wait_until="networkidle", timeout=30000)
+            page.wait_for_timeout(3000)
+
+            body_text = page.inner_text("body")
+            browser.close()
+
+        # Parsear eventos con regex: "ARTISTA - DD/MM/YYYY HH:MM"
+        # Ejemplo: "MALIN BROWN - 23/09/2026 15:00"
+        pattern = r"([A-ZÄÖÜ][A-ZÄÖÜ\s&.-]+?)\s+(\d{2}/\d{2}/\d{4})\s+(\d{2}:\d{2})"
+        matches = re.findall(pattern, body_text)
+
+        from datetime import date as _date
+        today = _date.today()
+
+        for match in matches:
+            artist, date_str, time_str = match
+            artist = artist.strip()
+
+            # Filtrar líneas que no son artistas
+            if any(skip in artist for skip in ["EVENTS", "KEINE", "HIGHLIGHTS", "VERPASSEN", "VERANSTALTUNGS", "ENTDECKE"]):
+                continue
+
+            try:
+                # Convertir DD/MM/YYYY a YYYY-MM-DD
+                day, month, year = date_str.split("/")
+                fecha = _date(int(year), int(month), int(day))
+
+                # Filtrar fechas pasadas
+                if fecha < today:
+                    continue
+
+                date_iso = fecha.isoformat()
+
+                events.append({
+                    "source": "bierkoenig",
+                    "title": artist[:100],
+                    "start_date": date_iso,
+                    "start_time": time_str,
+                    "municipality": "Palma",
+                    "location": "Bierkönig",
+                    "category": "NIGHTLIFE",
+                    "is_free": False,
+                    "price": "Consultar web",
+                    "website_url": url,
+                })
+            except (ValueError, IndexError):
+                continue
+
+        print(f"      ✅ bierkoenig: {len(events)} eventos")
+
+    except Exception as e:
+        print(f"      ❌ bierkoenig error: {e}")
+
+    return events
+
+
 def scrape_all_sources() -> List[Dict]:
     print("🌐 Iniciando extracción masiva de eventos (Multihilo)...")
 
@@ -1982,6 +2048,7 @@ def scrape_all_sources() -> List[Dict]:
         scrape_faib_atletisme,
         scrape_amok,
         scrape_entradium,
+        scrape_bierkoenig,
     ]
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
