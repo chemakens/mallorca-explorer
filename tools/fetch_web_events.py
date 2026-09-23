@@ -434,10 +434,31 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         # Falsos eventos (frases completas específicas)
         "clubes de corredores carreras sociales",
         "verbenes de mallorcas 2026",
+        "¿puede cavall blau abrir la granja",
     ]
+
+    # Correcciones de municipio post-scraping
+    MUNICIPALITY_OVERRIDES = {
+        "finca ratxo": "Puigpunyent",
+    }
+    TITLE_MUNICIPALITY_OVERRIDES = {
+        "s'embat": "Calvià",
+        "embat": "Calvià",
+    }
 
     for event in events:
         title_low = event.get("title", "").lower().strip()
+
+        # Aplicar correcciones de municipio conocidas
+        for keyword, muni_override in MUNICIPALITY_OVERRIDES.items():
+            if keyword in title_low:
+                event["municipality"] = muni_override
+                break
+        for keyword, muni_override in TITLE_MUNICIPALITY_OVERRIDES.items():
+            if keyword in title_low and "calvià" in title_low:
+                event["municipality"] = muni_override
+                break
+
         muni = event.get("municipality", "") or ""
         # Descartar eventos de otras islas
         if muni == "FUERA_DE_MALLORCA": continue
