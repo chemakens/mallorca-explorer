@@ -1444,7 +1444,9 @@ def scrape_bcm() -> List[Dict]:
         year = today.year
         for a in soup.find_all("a", href=True):
             href = a.get("href", "")
-            if not re.match(r"^/es/tickets/[^/]+$", href):
+            # Normalizar href: extraer ruta si es URL absoluta
+            href_path = href.replace("https://bcmmallorca.com", "").replace("http://bcmmallorca.com", "")
+            if not re.match(r"^/es/tickets/[^/]+$", href_path):
                 continue
             text = " ".join(a.get_text(separator=" ").split())
             # Buscar patrón: número día + mes en español al inicio
@@ -1466,14 +1468,17 @@ def scrape_bcm() -> List[Dict]:
             title = re.sub(r"\s+(RESIDENT DJ.S|INTERNATIONAL|NATIONAL|SPECIAL GUEST).*$", "", rest, flags=re.IGNORECASE).strip()
             if not title:
                 title = rest.strip()
+            # Construir URL: si ya es absoluta usarla, sino añadir dominio
+            event_url = href if href.startswith("http") else "https://bcmmallorca.com" + href_path
             events.append({
                 "title": title[:100],
-                "date": fecha.isoformat(),
-                "location": "Calvià",
+                "start_date": fecha.isoformat(),
+                "municipality": "Calvià",
                 "category": "NIGHTLIFE",
-                "source": "BCM Mallorca",
-                "url": "https://bcmmallorca.com" + href,
-                "description": "",
+                "source": "bcm",
+                "is_free": False,
+                "price": "Consultar web",
+                "website_url": event_url,
             })
 
         print(f"      ✅ BCM Mallorca: {len(events)} eventos")
@@ -1545,9 +1550,10 @@ def scrape_fitz() -> List[Dict]:
                     seen.add(title)
                     ev_url = item.get("url") or item.get("link") or item.get("permalink") or url
                     events.append({
-                        "title": title[:100], "date": date_part,
-                        "location": "Palma", "category": "NIGHTLIFE",
-                        "source": "Fitz Mallorca", "url": ev_url, "description": "",
+                        "title": title[:100], "start_date": date_part,
+                        "municipality": "Palma", "category": "NIGHTLIFE",
+                        "source": "fitz", "is_free": False, "price": "Consultar web",
+                        "website_url": ev_url,
                     })
 
         # 2. Fallback: parsear links del HTML renderizado
@@ -1577,9 +1583,10 @@ def scrape_fitz() -> List[Dict]:
                 seen.add(title_raw)
                 ev_url = ("https://fitzmallorca.com" + href) if href.startswith("/") else href
                 events.append({
-                    "title": title_raw, "date": fecha.isoformat(),
-                    "location": "Palma", "category": "NIGHTLIFE",
-                    "source": "Fitz Mallorca", "url": ev_url, "description": "",
+                    "title": title_raw, "start_date": fecha.isoformat(),
+                    "municipality": "Palma", "category": "NIGHTLIFE",
+                    "source": "fitz", "is_free": False, "price": "Consultar web",
+                    "website_url": ev_url,
                 })
 
         print(f"      ✅ Fitz Mallorca: {len(events)} eventos")
