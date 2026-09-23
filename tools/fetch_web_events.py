@@ -1707,6 +1707,255 @@ def scrape_amok() -> List[Dict]:
     return events
 
 
+
+# ─────────────────────────────────────────────────────────────
+# ENTRADIUM — Organizadores hardcodeados de Mallorca
+# ─────────────────────────────────────────────────────────────
+ENTRADIUM_ORGANIZERS = [
+    {
+        "slug": "decapolis-discoteca",
+        "name": "Decapolis",
+        "municipality": "Palma",
+        "location": "Discoteca Decapolis",
+        "category": "NIGHTLIFE",
+    },
+    # Añadir más organizadores aquí
+]
+
+def scrape_entradium() -> List[Dict]:
+    """Entradium — barrido general por provincia Baleares + organizadores específicos."""
+    events = []
+    base_url = "https://entradium.com"
+    seen_hrefs = set()  # Deduplicación global entre barrido general y organizadores
+
+    # Palabras clave para filtrar eventos de Baleares/Mallorca
+    BALEARES_KEYWORDS = [
+        "mallorca", "palma", "inca", "manacor", "calvià", "sóller", "alcúdia",
+        "ibiza", "baleares", "menorca", "pollença", "andratx", "artà", "felanitx"
+    ]
+
+    month_map = {
+        "ENE": "01", "FEB": "02", "MAR": "03", "ABR": "04",
+        "MAY": "05", "JUN": "06", "JUL": "07", "AGO": "08",
+        "SEP": "09", "OCT": "10", "NOV": "11", "DIC": "12",
+        "JAN": "01", "APR": "04", "AUG": "08", "DEC": "12",
+    }
+
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(user_agent=random.choice(USER_AGENTS))
+
+            # 1. BARRIDO GENERAL por provincia Baleares
+            print("   🔍 Scraping entradium: barrido general Baleares...")
+            try:
+                province_url = "https://entradium.com/es/events?province_ids=7"
+                page.goto(province_url, wait_until="networkidle", timeout=30000)
+                page.wait_for_timeout(3000)
+
+                # Scroll para cargar eventos lazy
+                for _ in range(3):
+                    page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
+                    page.wait_for_timeout(1500)
+
+                links = page.query_selector_all("a[href*='/events/']")
+
+                for link in links:
+                    href = link.get_attribute("href") or ""
+                    if not href or href in seen_hrefs:
+                        continue
+
+                    # URL absoluta
+                    if href.startswith("/"):
+                        href = base_url + href
+
+                    # Texto del link (contiene fecha, título, venue)
+                    text = (link.inner_text() or "").strip()
+                    if not text:
+                        continue
+
+                    # Filtrar solo eventos de Baleares/Mallorca
+                    text_lower = text.lower()
+                    if not any(keyword in text_lower for keyword in BALEARES_KEYWORDS):
+                        continue
+
+                    seen_hrefs.add(href)
+
+                    # Extraer fecha: formato "10 OCT" o "31 OCT"
+                    date_match = re.search(r"(\d{1,2})\s+([A-Z]{3})", text)
+                    if not date_match:
+                        continue
+
+                    day = date_match.group(1).zfill(2)
+                    month_str = date_match.group(2)
+                    month = month_map.get(month_str)
+                    if not month:
+                        continue
+
+                    from datetime import date as _date
+                    current_year = datetime.now().year
+                    try:
+                        today = _date.today()
+                        fecha = _date(current_year, int(month), int(day))
+                        if fecha < today:
+                            fecha = _date(current_year + 1, int(month), int(day))
+                        date_str = fecha.isoformat()
+                    except ValueError:
+                        continue
+
+                    # Extraer precio
+                    price_match = re.search(r"(\d+[,.]\d+)\s*€|GRATIS|GRATUITO", text, re.IGNORECASE)
+                    if price_match:
+                        raw = price_match.group(0)
+                        if "GRATIS" in raw.upper():
+                            price = "0€"
+                        else:
+                            price = raw.replace(",", ".").replace("€", "").strip() + "€"
+                    else:
+                        price = "Consultar web"
+
+                    # Título: buscar línea que no sea fecha, precio ni venue
+                    lines = [l.strip() for l in text.split("\n") if l.strip()]
+                    title = ""
+                    skip_patterns = re.compile(r"^(\d{1,2}\s+[A-Z]{3}|DESDE|\d+[,.]\d+\s*€|GRATIS)", re.IGNORECASE)
+                    candidates = [l for l in lines if not skip_patterns.match(l)]
+                    # Coger la penúltima si hay más de una (la última suele ser el venue)
+                    if len(candidates) >= 2:
+                        title = candidates[-2]
+                    elif candidates:
+                        title = candidates[-1]
+                    title = re.sub(r"^[\d€.,\s]+", "", title).strip()
+                    if not title or len(title) < 3:
+                        continue
+
+                    # Detectar municipio de las palabras clave en el texto
+                    municipality = "Palma"  # Default
+                    if "inca" in text_lower:
+                        municipality = "Inca"
+                    elif "manacor" in text_lower:
+                        municipality = "Manacor"
+                    elif "calvià" in text_lower or "calvia" in text_lower:
+                        municipality = "Calvià"
+                    elif "sóller" in text_lower or "soller" in text_lower:
+                        municipality = "Sóller"
+                    elif "alcúdia" in text_lower or "alcudia" in text_lower:
+                        municipality = "Alcúdia"
+
+                    events.append({
+                        "source": "entradium",
+                        "title": title[:100],
+                        "start_date": date_str,
+                        "start_time": None,
+                        "municipality": municipality,
+                        "location": None,
+                        "category": "MUSIC",  # Categoría genérica para barrido general
+                        "is_free": price == "0€",
+                        "price": price,
+                        "website_url": href,
+                    })
+
+            except Exception as e:
+                print(f"      ❌ entradium/barrido general: {e}")
+
+            # 2. ORGANIZADORES ESPECÍFICOS
+            for org in ENTRADIUM_ORGANIZERS:
+                slug = org["slug"]
+                url = f"{base_url}/es/organizers/{slug}"
+                print(f"   🔍 Scraping entradium: {org['name']}...")
+
+                try:
+                    page.goto(url, wait_until="networkidle", timeout=30000)
+                    page.wait_for_timeout(2000)
+
+                    links = page.query_selector_all("a[href*='/events/']")
+
+                    for link in links:
+                        href = link.get_attribute("href") or ""
+                        if not href or href in seen_hrefs:
+                            continue
+                        seen_hrefs.add(href)
+
+                        # URL absoluta
+                        if href.startswith("/"):
+                            href = base_url + href
+
+                        # Texto del link (contiene fecha y título)
+                        text = (link.inner_text() or "").strip()
+                        if not text:
+                            continue
+
+                        # Extraer fecha: formato "10 OCT" o "31 OCT"
+                        date_match = re.search(r"(\d{1,2})\s+([A-Z]{3})", text)
+                        if not date_match:
+                            continue
+
+                        day = date_match.group(1).zfill(2)
+                        month_str = date_match.group(2)
+                        month = month_map.get(month_str)
+                        if not month:
+                            continue
+
+                        from datetime import date as _date
+                        current_year = datetime.now().year
+                        try:
+                            today = _date.today()
+                            fecha = _date(current_year, int(month), int(day))
+                            if fecha < today:
+                                fecha = _date(current_year + 1, int(month), int(day))
+                            date_str = fecha.isoformat()
+                        except ValueError:
+                            continue
+
+                        # Extraer precio
+                        price_match = re.search(r"(\d+[,.]\d+)\s*€|GRATIS|GRATUITO", text, re.IGNORECASE)
+                        if price_match:
+                            raw = price_match.group(0)
+                            if "GRATIS" in raw.upper():
+                                price = "0€"
+                            else:
+                                price = raw.replace(",", ".").replace("€", "").strip() + "€"
+                        else:
+                            price = "Consultar web"
+
+                        # Título: buscar línea que no sea fecha, precio ni venue
+                        lines = [l.strip() for l in text.split("\n") if l.strip()]
+                        title = ""
+                        skip_patterns = re.compile(r"^(\d{1,2}\s+[A-Z]{3}|DESDE|\d+[,.]\d+\s*€|GRATIS)", re.IGNORECASE)
+                        candidates = [l for l in lines if not skip_patterns.match(l)]
+                        # Coger la penúltima si hay más de una (la última suele ser el venue)
+                        if len(candidates) >= 2:
+                            title = candidates[-2]
+                        elif candidates:
+                            title = candidates[-1]
+                        title = re.sub(r"^[\d€.,\s]+", "", title).strip()
+                        if not title or len(title) < 3:
+                            continue
+
+                        events.append({
+                            "source": "entradium",
+                            "title": title[:100],
+                            "start_date": date_str,
+                            "start_time": None,
+                            "municipality": org["municipality"],
+                            "location": org["location"],
+                            "category": org["category"],
+                            "is_free": price == "0€",
+                            "price": price,
+                            "website_url": href,
+                        })
+
+                except Exception as e:
+                    print(f"      ❌ entradium/{slug}: {e}")
+
+            browser.close()
+
+    except Exception as e:
+        print(f"      ❌ entradium error global: {e}")
+
+    print(f"      ✅ entradium: {len(events)} eventos")
+    return events
+
+
 def scrape_all_sources() -> List[Dict]:
     print("🌐 Iniciando extracción masiva de eventos (Multihilo)...")
 
@@ -1732,6 +1981,7 @@ def scrape_all_sources() -> List[Dict]:
         scrape_fitz,
         scrape_faib_atletisme,
         scrape_amok,
+        scrape_entradium,
     ]
 
     with concurrent.futures.ThreadPoolExecutor(max_workers=5) as executor:
