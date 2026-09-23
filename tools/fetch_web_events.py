@@ -1646,22 +1646,25 @@ def scrape_amok() -> List[Dict]:
             if not title or len(title) < 3:
                 continue
 
-            # Construir fecha
+            # Construir fecha (ajustar año si la fecha ya pasó)
+            from datetime import date as _date
             month = month_map.get(month_abbr, "01")
             day = day_num.zfill(2)
-            date_str = f"{current_year}-{month}-{day}"
+
+            try:
+                today = _date.today()
+                fecha = _date(current_year, int(month), int(day))
+                if fecha < today:
+                    fecha = _date(current_year + 1, int(month), int(day))
+                date_str = fecha.isoformat()
+            except ValueError:
+                continue
 
             # Evitar duplicados
             key = (date_str, title.lower())
             if key in seen:
                 continue
             seen.add(key)
-
-            # Validar fecha
-            try:
-                datetime.strptime(date_str, "%Y-%m-%d")
-            except:
-                continue
 
             events.append({
                 "source": "amok_mallorca",
@@ -1685,11 +1688,6 @@ def scrape_amok() -> List[Dict]:
 
 def scrape_all_sources() -> List[Dict]:
     print("🌐 Iniciando extracción masiva de eventos (Multihilo)...")
-
-    # Reset historial para evitar filtrado acumulativo
-    approved_path = TOOLS_DIR / "approved_events.json"
-    with open(approved_path, "w", encoding="utf-8") as f:
-        json.dump([], f)
 
     historical_ids = load_historical_ids(APPROVED_EVENTS_FILE)
     if historical_ids:
