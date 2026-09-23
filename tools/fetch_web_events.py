@@ -440,10 +440,18 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
     # Correcciones de municipio post-scraping
     MUNICIPALITY_OVERRIDES = {
         "finca ratxo": "Puigpunyent",
+        "mostra calvià": "Calvià",
+        "lloseta": "Lloseta",
     }
     TITLE_MUNICIPALITY_OVERRIDES = {
         "s'embat": "Calvià",
         "embat": "Calvià",
+    }
+    CATEGORY_OVERRIDES = {
+        "far de porto pi": "CULTURE",
+        "castell de sant carles": "CULTURE",
+        "cata y bebe x candelea": "GASTRONOMY",
+        "roo panes": "CONCERT",
     }
 
     for event in events:
@@ -457,6 +465,12 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         for keyword, muni_override in TITLE_MUNICIPALITY_OVERRIDES.items():
             if keyword in title_low and "calvià" in title_low:
                 event["municipality"] = muni_override
+                break
+
+        # Aplicar correcciones de categoría conocidas
+        for keyword, cat_override in CATEGORY_OVERRIDES.items():
+            if keyword in title_low:
+                event["category"] = cat_override
                 break
 
         muni = event.get("municipality", "") or ""
