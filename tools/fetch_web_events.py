@@ -461,6 +461,20 @@ def deduplicate_events(events: List[Dict], historical_ids: Set[str]) -> List[Dic
         "film symphony orchestra": "CONCERT",
         "aclub sunset": "NIGHTLIFE",
         "sana-ment": "CULTURE",
+        # MUSIC → categoría correcta
+        "22 aniversario": "NIGHTLIFE",
+        "somos magia": "CONCERT",
+        # CULTURE → CONCERT
+        "bach and family": "CONCERT",
+        "variaciones goldberg": "CONCERT",
+        "arena sound": "CONCERT",
+        "poncho k": "CONCERT",
+        "+dmaná": "CONCERT",
+        "las migas": "CONCERT",
+        "williams, zimmer": "CONCERT",
+        "movicanto": "CONCERT",
+        # CONCERT → CULTURE (teatro musical)
+        "familia addams": "CULTURE",
     }
 
     for event in events:
