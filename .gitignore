@@ -24,3 +24,9 @@ scripts/verify-sa-foradada.js
 # Tools - generated files (scripts themselves are tracked)
 tools/review.html
 tools/approved_events.json
+
+# Fotos AETIB temporales
+tools/aetib_photos/
+
+# Backups/scripts sacados de app/src/main/assets/ (v83): no deben ir en el AAB ni bloatear el repo
+tools/backups_assets/

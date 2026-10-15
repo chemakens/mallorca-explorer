@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="https://gpx.studio" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>Ruta a Platja des Coll Baix</name>
+    <desc>Tpo de ruta: Ida y Vuelta 
+Dificultad: Facil
+Duracion: 1´5  Hora </desc>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <wpt lat="39.858321" lon="3.182789">
+    <ele>89.50461219512047</ele>
+    <name>Inicio- Parking </name>
+    <cmt>
+El claro del Torrent des Parangons: Justo antes de afrontar la última cuesta empinada y rota que sube hacia el Collet, la pista cruza una zona más llana cerca del torrente. Muchos senderistas deciden plantar el coche en los pequeños apartaderos de este tramo para evitar los peores baches de la subida final</cmt>
+    <desc>
+El claro del Torrent des Parangons: Justo antes de afrontar la última cuesta empinada y rota que sube hacia el Collet, la pista cruza una zona más llana cerca del torrente. Muchos senderistas deciden plantar el coche en los pequeños apartaderos de este tramo para evitar los peores baches de la subida final</desc>
+    <sym>Parking Area</sym>
+  </wpt>
+  <wpt lat="39.859485" lon="3.184412">
+    <ele>115.22672330330732</ele>
+    <name>El parking clásico (Es Collet del Coll Baix)</name>
+    <cmt>
+
+Es la explanada más cercana para hacer la caminata directa a la playa. El coche se conduce por el Camí de la Muntanya hasta que te encuentras con una cadena que impide continuar a los vehículos</cmt>
+    <desc>
+
+Es la explanada más cercana para hacer la caminata directa a la playa. El coche se conduce por el Camí de la Muntanya hasta que te encuentras con una cadena que impide continuar a los vehículos</desc>
+    <sym>Parking Area</sym>
+  </wpt>
+  <wpt lat="39.859729" lon="3.184903">
+    <ele>128.17558917051144</ele>
+    <name>refugio del Coll baix</name>
+    <cmt>área de descanso y merendero antes de emprender la bajada a la famosa playa virgen. Sin embargo, también se puede alquilar para pasar la noche bajo unas condiciones muy específicas de montaña</cmt>
+    <desc>área de descanso y merendero antes de emprender la bajada a la famosa playa virgen. Sin embargo, también se puede alquilar para pasar la noche bajo unas condiciones muy específicas de montaña</desc>
+    <sym>Lodge</sym>
+  </wpt>
+  <wpt lat="39.862447" lon="3.187235">
+    <ele>1.0273512894697516</ele>
+    <name>platja des coll baix</name>
+    <cmt>es una de las playas vírgenes y salvajes más impresionantes de Mallorca. Situada en la península de Alcúdia, destaca por sus aguas de un azul turquesa eléctrico, su orilla de gravas y guijarros oscuros, y el imponente anfiteatro de acantilados grises de piedra caliza que la custodia</cmt>
+    <desc>es una de las playas vírgenes y salvajes más impresionantes de Mallorca. Situada en la península de Alcúdia, destaca por sus aguas de un azul turquesa eléctrico, su orilla de gravas y guijarros oscuros, y el imponente anfiteatro de acantilados grises de piedra caliza que la custodia</desc>
+    <sym>Beach</sym>
+  </wpt>
+  <wpt lat="0" lon="0">
+    <ele>0</ele>
+    <name> Punta de s&apos;Àguila</name>
+    <cmt>Punta de s&apos;Àguila. Saliente rocoso y cabo natural característico de la costa norte de la Serra de Tramuntana, ubicado entre Banyalbufar y el Port des Canonge. Funciona como hito geográfico visible desde el sendero de la Volta des General, destacando históricamente por ser un punto crítico para la navegación marítima tradicional.
+</cmt>
+    <desc>Punta de s&apos;Àguila. Saliente rocoso y cabo natural característico de la costa norte de la Serra de Tramuntana, ubicado entre Banyalbufar y el Port des Canonge. Funciona como hito geográfico visible desde el sendero de la Volta des General, destacando históricamente por ser un punto crítico para la navegación marítima tradicional.
+</desc>
+    <sym>Information</sym>
+  </wpt>
+  <wpt lat="39.70069" lon="2.543145">
+    <ele>1.6227514009119477</ele>
+    <name>Punta de s&apos;Àguila</name>
+    <cmt>Punta de s&apos;Àguila. Saliente rocoso y cabo natural característico de la costa norte de la Serra de Tramuntana, ubicado entre Banyalbufar y el Port des Canonge. Funciona como hito geográfico visible desde el sendero de la Volta des General, destacando históricamente por ser un punto crítico para la navegación marítima tradicional.
+</cmt>
+    <desc>Punta de s&apos;Àguila. Saliente rocoso y cabo natural característico de la costa norte de la Serra de Tramuntana, ubicado entre Banyalbufar y el Port des Canonge. Funciona como hito geográfico visible desde el sendero de la Volta des General, destacando históricamente por ser un punto crítico para la navegación marítima tradicional.
+</desc>
+    <sym>Information</sym>
+  </wpt>
+  <trk>
+    <name>Ruta a Platja des Coll Baix</name>
+    <trkseg>
+      <trkpt lat="39.862716" lon="3.186961">
+        <ele>0.57</ele>
+      </trkpt>
+      <trkpt lat="39.862552" lon="3.187095">
+        <ele>0.61</ele>
+      </trkpt>
+      <trkpt lat="39.862099" lon="3.187745">
+        <ele>0.97</ele>
+      </trkpt>
+      <trkpt lat="39.861874" lon="3.188341">
+        <ele>2.08</ele>
+      </trkpt>
+      <trkpt lat="39.861874" lon="3.188554">
+        <ele>3.02</ele>
+      </trkpt>
+      <trkpt lat="39.8619" lon="3.188814">
+        <ele>4.07</ele>
+      </trkpt>
+      <trkpt lat="39.862057" lon="3.189093">
+        <ele>1.92</ele>
+      </trkpt>
+      <trkpt lat="39.862044" lon="3.189351">
+        <ele>9.7</ele>
+      </trkpt>
+      <trkpt lat="39.862192" lon="3.189549">
+        <ele>4.14</ele>
+      </trkpt>
+      <trkpt lat="39.862254" lon="3.189828">
+        <ele>4.57</ele>
+      </trkpt>
+      <trkpt lat="39.862316" lon="3.190107">
+        <ele>7.65</ele>
+      </trkpt>
+      <trkpt lat="39.862292" lon="3.190239">
+        <ele>11.76</ele>
+      </trkpt>
+      <trkpt lat="39.862232" lon="3.190246">
+        <ele>16.8</ele>
+      </trkpt>
+      <trkpt lat="39.862133" lon="3.190202">
+        <ele>22.51</ele>
+      </trkpt>
+      <trkpt lat="39.861962" lon="3.189894">
+        <ele>29.9</ele>
+      </trkpt>
+      <trkpt lat="39.86194" lon="3.19">
+        <ele>30.9</ele>
+      </trkpt>
+      <trkpt lat="39.861825" lon="3.190011">
+        <ele>36.02</ele>
+      </trkpt>
+      <trkpt lat="39.861762" lon="3.189947">
+        <ele>38.53</ele>
+      </trkpt>
+      <trkpt lat="39.861664" lon="3.189742">
+        <ele>41.78</ele>
+      </trkpt>
+      <trkpt lat="39.861664" lon="3.189913">
+        <ele>42.78</ele>
+      </trkpt>
+      <trkpt lat="39.861576" lon="3.189988">
+        <ele>47.21</ele>
+      </trkpt>
+      <trkpt lat="39.861495" lon="3.189828">
+        <ele>50.39</ele>
+      </trkpt>
+      <trkpt lat="39.861336" lon="3.189781">
+        <ele>57.44</ele>
+      </trkpt>
+      <trkpt lat="39.861195" lon="3.189687">
+        <ele>63.55</ele>
+      </trkpt>
+      <trkpt lat="39.860932" lon="3.189643">
+        <ele>77.97</ele>
+      </trkpt>
+      <trkpt lat="39.860848" lon="3.189564">
+        <ele>82.08</ele>
+      </trkpt>
+      <trkpt lat="39.860765" lon="3.18943">
+        <ele>86.46</ele>
+      </trkpt>
+      <trkpt lat="39.860721" lon="3.18908">
+        <ele>88.48</ele>
+      </trkpt>
+      <trkpt lat="39.86075" lon="3.188843">
+        <ele>85.61</ele>
+      </trkpt>
+      <trkpt lat="39.860717" lon="3.188513">
+        <ele>86.58</ele>
+      </trkpt>
+      <trkpt lat="39.860684" lon="3.188184">
+        <ele>84.32</ele>
+      </trkpt>
+      <trkpt lat="39.860683" lon="3.187999">
+        <ele>82.92</ele>
+      </trkpt>
+      <trkpt lat="39.860681" lon="3.187778">
+        <ele>83.85</ele>
+      </trkpt>
+      <trkpt lat="39.860655" lon="3.187383">
+        <ele>83.82</ele>
+      </trkpt>
+      <trkpt lat="39.860591" lon="3.187075">
+        <ele>84.82</ele>
+      </trkpt>
+      <trkpt lat="39.86056" lon="3.186638">
+        <ele>88.58</ele>
+      </trkpt>
+      <trkpt lat="39.860429" lon="3.185994">
+        <ele>100.32</ele>
+      </trkpt>
+      <trkpt lat="39.860163" lon="3.185528">
+        <ele>111.49</ele>
+      </trkpt>
+      <trkpt lat="39.860018" lon="3.185207">
+        <ele>116.9</ele>
+      </trkpt>
+      <trkpt lat="39.859951" lon="3.184959">
+        <ele>118.31</ele>
+      </trkpt>
+      <trkpt lat="39.859838" lon="3.184858">
+        <ele>122.39</ele>
+      </trkpt>
+      <trkpt lat="39.859792" lon="3.184759">
+        <ele>123.51</ele>
+      </trkpt>
+      <trkpt lat="39.859748" lon="3.184675">
+        <ele>123.87</ele>
+      </trkpt>
+      <trkpt lat="39.859649" lon="3.184544">
+        <ele>122.04</ele>
+      </trkpt>
+      <trkpt lat="39.85956" lon="3.184515">
+        <ele>119.45</ele>
+      </trkpt>
+      <trkpt lat="39.859444" lon="3.184551">
+        <ele>117.36</ele>
+      </trkpt>
+      <trkpt lat="39.859351" lon="3.184507">
+        <ele>115.13</ele>
+      </trkpt>
+      <trkpt lat="39.859343" lon="3.18432">
+        <ele>112.75</ele>
+      </trkpt>
+      <trkpt lat="39.859264" lon="3.18421">
+        <ele>110.38</ele>
+      </trkpt>
+      <trkpt lat="39.859199" lon="3.18406">
+        <ele>108.44</ele>
+      </trkpt>
+      <trkpt lat="39.859105" lon="3.183927">
+        <ele>105.67</ele>
+      </trkpt>
+      <trkpt lat="39.858972" lon="3.183626">
+        <ele>101.89</ele>
+      </trkpt>
+      <trkpt lat="39.858792" lon="3.183457">
+        <ele>98.5</ele>
+      </trkpt>
+      <trkpt lat="39.858708" lon="3.183299">
+        <ele>97.41</ele>
+      </trkpt>
+      <trkpt lat="39.858659" lon="3.18316">
+        <ele>95.98</ele>
+      </trkpt>
+      <trkpt lat="39.858531" lon="3.183108">
+        <ele>93.89</ele>
+      </trkpt>
+      <trkpt lat="39.85844" lon="3.183045">
+        <ele>92.9</ele>
+      </trkpt>
+      <trkpt lat="39.858359" lon="3.182813">
+        <ele>92.45</ele>
+      </trkpt>
+      <trkpt lat="39.858282" lon="3.182759">
+        <ele>91.21</ele>
+      </trkpt>
+      <trkpt lat="39.858359" lon="3.182813">
+        <ele>92.45</ele>
+      </trkpt>
+      <trkpt lat="39.85844" lon="3.183045">
+        <ele>92.9</ele>
+      </trkpt>
+      <trkpt lat="39.858531" lon="3.183108">
+        <ele>93.89</ele>
+      </trkpt>
+      <trkpt lat="39.858659" lon="3.18316">
+        <ele>95.98</ele>
+      </trkpt>
+      <trkpt lat="39.858708" lon="3.183299">
+        <ele>97.41</ele>
+      </trkpt>
+      <trkpt lat="39.858792" lon="3.183457">
+        <ele>98.5</ele>
+      </trkpt>
+      <trkpt lat="39.858972" lon="3.183626">
+        <ele>101.89</ele>
+      </trkpt>
+      <trkpt lat="39.859105" lon="3.183927">
+        <ele>105.67</ele>
+      </trkpt>
+      <trkpt lat="39.859199" lon="3.18406">
+        <ele>108.44</ele>
+      </trkpt>
+      <trkpt lat="39.859264" lon="3.18421">
+        <ele>110.38</ele>
+      </trkpt>
+      <trkpt lat="39.859343" lon="3.18432">
+        <ele>112.75</ele>
+      </trkpt>
+      <trkpt lat="39.859351" lon="3.184507">
+        <ele>115.13</ele>
+      </trkpt>
+      <trkpt lat="39.859444" lon="3.184551">
+        <ele>117.36</ele>
+      </trkpt>
+      <trkpt lat="39.85956" lon="3.184515">
+        <ele>119.45</ele>
+      </trkpt>
+      <trkpt lat="39.859649" lon="3.184544">
+        <ele>122.04</ele>
+      </trkpt>
+      <trkpt lat="39.859748" lon="3.184675">
+        <ele>123.87</ele>
+      </trkpt>
+      <trkpt lat="39.859792" lon="3.184759">
+        <ele>123.51</ele>
+      </trkpt>
+      <trkpt lat="39.859838" lon="3.184858">
+        <ele>122.39</ele>
+      </trkpt>
+      <trkpt lat="39.859951" lon="3.184959">
+        <ele>118.31</ele>
+      </trkpt>
+      <trkpt lat="39.860018" lon="3.185207">
+        <ele>116.9</ele>
+      </trkpt>
+      <trkpt lat="39.860163" lon="3.185528">
+        <ele>111.49</ele>
+      </trkpt>
+      <trkpt lat="39.860429" lon="3.185994">
+        <ele>100.32</ele>
+      </trkpt>
+      <trkpt lat="39.86056" lon="3.186638">
+        <ele>88.58</ele>
+      </trkpt>
+      <trkpt lat="39.860591" lon="3.187075">
+        <ele>84.82</ele>
+      </trkpt>
+      <trkpt lat="39.860655" lon="3.187383">
+        <ele>83.82</ele>
+      </trkpt>
+      <trkpt lat="39.860681" lon="3.187778">
+        <ele>83.85</ele>
+      </trkpt>
+      <trkpt lat="39.860683" lon="3.187999">
+        <ele>82.92</ele>
+      </trkpt>
+      <trkpt lat="39.860917" lon="3.188039">
+        <ele>70.71</ele>
+      </trkpt>
+      <trkpt lat="39.861087" lon="3.188168">
+        <ele>62.45</ele>
+      </trkpt>
+      <trkpt lat="39.861202" lon="3.188319">
+        <ele>57.47</ele>
+      </trkpt>
+      <trkpt lat="39.861231" lon="3.188536">
+        <ele>57.43</ele>
+      </trkpt>
+      <trkpt lat="39.861345" lon="3.188653">
+        <ele>51.91</ele>
+      </trkpt>
+      <trkpt lat="39.861404" lon="3.188766">
+        <ele>49.54</ele>
+      </trkpt>
+      <trkpt lat="39.861377" lon="3.188847">
+        <ele>51.95</ele>
+      </trkpt>
+      <trkpt lat="39.861426" lon="3.188998">
+        <ele>49.4</ele>
+      </trkpt>
+      <trkpt lat="39.861572" lon="3.189199">
+        <ele>41.2</ele>
+      </trkpt>
+      <trkpt lat="39.861633" lon="3.189279">
+        <ele>40.34</ele>
+      </trkpt>
+      <trkpt lat="39.86181" lon="3.18957">
+        <ele>35.69</ele>
+      </trkpt>
+      <trkpt lat="39.861962" lon="3.189894">
+        <ele>29.9</ele>
+      </trkpt>
+      <trkpt lat="39.862133" lon="3.190202">
+        <ele>22.51</ele>
+      </trkpt>
+      <trkpt lat="39.862232" lon="3.190246">
+        <ele>16.8</ele>
+      </trkpt>
+      <trkpt lat="39.862292" lon="3.190239">
+        <ele>11.76</ele>
+      </trkpt>
+      <trkpt lat="39.862316" lon="3.190107">
+        <ele>7.65</ele>
+      </trkpt>
+      <trkpt lat="39.862254" lon="3.189828">
+        <ele>4.57</ele>
+      </trkpt>
+      <trkpt lat="39.862192" lon="3.189549">
+        <ele>4.14</ele>
+      </trkpt>
+      <trkpt lat="39.862044" lon="3.189351">
+        <ele>9.7</ele>
+      </trkpt>
+      <trkpt lat="39.862057" lon="3.189093">
+        <ele>1.92</ele>
+      </trkpt>
+      <trkpt lat="39.8619" lon="3.188814">
+        <ele>4.07</ele>
+      </trkpt>
+      <trkpt lat="39.861874" lon="3.188554">
+        <ele>3.02</ele>
+      </trkpt>
+      <trkpt lat="39.861874" lon="3.188341">
+        <ele>2.08</ele>
+      </trkpt>
+      <trkpt lat="39.862099" lon="3.187745">
+        <ele>0.97</ele>
+      </trkpt>
+      <trkpt lat="39.862552" lon="3.187095">
+        <ele>0.61</ele>
+      </trkpt>
+      <trkpt lat="39.862716" lon="3.186961">
+        <ele>0.57</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

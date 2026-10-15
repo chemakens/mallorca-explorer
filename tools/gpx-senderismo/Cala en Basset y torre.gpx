@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="https://gpx.studio" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>Cala en Basset y torre</name>
+    <desc>Tipo de Ruta: Circular
+Dificultad: Facil
+Duracion: 2 horas </desc>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <wpt lat="39.585241" lon="2.346925">
+    <ele>25.015244581040722</ele>
+    <name>Parking- Inicio</name>
+    <cmt>Ruta de senderismo a Cala en Basset desde Sant Elm. El itinerario comienza al final del Carrer de na Pòpia, adentrándose rápidamente en un frondoso bosque de pinos dentro del Parque Natural de Sa Dragonera. Recorrido lineal de dificultad baja-moderada con tramos de sendero de tierra y piedra suelta. Ofrece excelentes vistas panorámicas de la costa oeste y del canal de Sa Dragonera.
+</cmt>
+    <desc>Ruta de senderismo a Cala en Basset desde Sant Elm. El itinerario comienza al final del Carrer de na Pòpia, adentrándose rápidamente en un frondoso bosque de pinos dentro del Parque Natural de Sa Dragonera. Recorrido lineal de dificultad baja-moderada con tramos de sendero de tierra y piedra suelta. Ofrece excelentes vistas panorámicas de la costa oeste y del canal de Sa Dragonera.
+</desc>
+    <sym>Parking Area</sym>
+  </wpt>
+  <wpt lat="39.588914" lon="2.34623">
+    <ele>36.76087412954091</ele>
+    <name>Punto pupular para hacer fotos</name>
+    <sym>Information</sym>
+  </wpt>
+  <wpt lat="39.591612" lon="2.346955">
+    <ele>42.05740506816917</ele>
+    <cmt>Punto de observación de Sa Dragonera (Claro del sendero). Ventana natural y apartadero llano en la pista forestal a mitad de camino, poco después de adentrarse en el pinar. Es la primera parada del itinerario que ofrece una visión limpia y cercana de la silueta completa de la isla de Sa Dragonera y del canal des Freu a nivel de camino, antes de iniciar los tramos de desvío o descenso.
+</cmt>
+    <desc>Punto de observación de Sa Dragonera (Claro del sendero). Ventana natural y apartadero llano en la pista forestal a mitad de camino, poco después de adentrarse en el pinar. Es la primera parada del itinerario que ofrece una visión limpia y cercana de la silueta completa de la isla de Sa Dragonera y del canal des Freu a nivel de camino, antes de iniciar los tramos de desvío o descenso.
+</desc>
+    <sym>Binoculars</sym>
+  </wpt>
+  <wpt lat="39.594609" lon="2.348578">
+    <ele>29.28018045025886</ele>
+    <name>Dragonera (faro de la Tramuntana )</name>
+    <cmt>Faro de Tramuntana (Sa Dragonera). Construido en 1910 en el extremo nororiental de la isla para sustituir al antiguo faro de Na Pòpia. Situado a 67 metros sobre el nivel del mar, sirve de guía marítima en el canal des Freu. Actualmente alberga una pequeña exposición sobre la vida de los antiguos fareros y la historia del parque natural.
+</cmt>
+    <desc>Faro de Tramuntana (Sa Dragonera). Construido en 1910 en el extremo nororiental de la isla para sustituir al antiguo faro de Na Pòpia. Situado a 67 metros sobre el nivel del mar, sirve de guía marítima en el canal des Freu. Actualmente alberga una pequeña exposición sobre la vida de los antiguos fareros y la historia del parque natural.
+</desc>
+    <sym>Binoculars</sym>
+  </wpt>
+  <wpt lat="39.595836" lon="2.350953">
+    <ele>80.37745269982298</ele>
+    <name>Torre de Cala en Basse</name>
+    <cmt>Torre de Cala en Basset (Andratx). Torre de defensa costera de planta cilíndrica construida en el año 1583. Situada a unos 80 metros de altitud sobre los acantilados de la Punta de sa Galera, su función principal era vigilar el tráfico marítimo y avisar de incursiones piratas en el canal des Freu de Sa Dragonera. Conserva anexos militares de la Guerra Civil y ofrece una atalaya panorámica excepcional sobre el islote de Sa Dragonera y la cala.
+</cmt>
+    <desc>Torre de Cala en Basset (Andratx). Torre de defensa costera de planta cilíndrica construida en el año 1583. Situada a unos 80 metros de altitud sobre los acantilados de la Punta de sa Galera, su función principal era vigilar el tráfico marítimo y avisar de incursiones piratas en el canal des Freu de Sa Dragonera. Conserva anexos militares de la Guerra Civil y ofrece una atalaya panorámica excepcional sobre el islote de Sa Dragonera y la cala.
+</desc>
+    <sym>Building</sym>
+  </wpt>
+  <wpt lat="39.595904" lon="2.350807">
+    <ele>79.0978523759866</ele>
+    <name>Mirador Panorámico de la Torre de Cala en Basset</name>
+    <cmt>Mirador Panorámico de la Torre de Cala en Basset. Balcón natural situado sobre el acantilado de la Punta de sa Galera, a 80 metros de altitud. Ofrece una perspectiva aérea de la rocosa Cala en Basset en primer plano y una vista frontal limpia del canal des Freu, el islote de Sa Mitjana y la silueta completa de la isla de Sa Dragonera, destacando el Faro de Tramuntana.
+</cmt>
+    <desc>Mirador Panorámico de la Torre de Cala en Basset. Balcón natural situado sobre el acantilado de la Punta de sa Galera, a 80 metros de altitud. Ofrece una perspectiva aérea de la rocosa Cala en Basset en primer plano y una vista frontal limpia del canal des Freu, el islote de Sa Mitjana y la silueta completa de la isla de Sa Dragonera, destacando el Faro de Tramuntana.
+</desc>
+    <sym>Binoculars</sym>
+  </wpt>
+  <wpt lat="39.595771" lon="2.354532">
+    <ele>8.383021908835609</ele>
+    <name>Cala en Basset </name>
+    <cmt>Cala en Basset (Andratx). Ensenada natural y playa virgen de carácter rocoso (compuesta por grava, cantos rodados y bloques calcáreos) situada al noroeste de Sant Elm. Rodeada de pinares y bajo la protección de su histórica torre de defensa, destaca por sus fondos marinos limpios de aguas turquesas muy aptos para el esnórquel. Entorno aislado sin servicios, sombras ni papeleras; el último tramo de sendero a pie presenta un fuerte desnivel de roca suelta.
+</cmt>
+    <desc>Cala en Basset (Andratx). Ensenada natural y playa virgen de carácter rocoso (compuesta por grava, cantos rodados y bloques calcáreos) situada al noroeste de Sant Elm. Rodeada de pinares y bajo la protección de su histórica torre de defensa, destaca por sus fondos marinos limpios de aguas turquesas muy aptos para el esnórquel. Entorno aislado sin servicios, sombras ni papeleras; el último tramo de sendero a pie presenta un fuerte desnivel de roca suelta.
+</desc>
+    <sym>Beach</sym>
+  </wpt>
+  <wpt lat="39.591653" lon="2.347265">
+    <ele>56.00908420620555</ele>
+    <name> Pas d&apos;en Grau (Paso técnico de roca)</name>
+    <cmt>Pas d&apos;en Grau (Andratx). Pequeño paso de montaña y brecha natural tallada sobre el estrato rocoso del acantilado, rodeada de pinos. Se trata de un pasillo inclinado donde el sendero exige caminar con precaución y arrimado a la pared de roca, conectando la zona de s&apos;Algar con el área forestal de Cala en Basset.
+</cmt>
+    <desc>Pas d&apos;en Grau (Andratx). Pequeño paso de montaña y brecha natural tallada sobre el estrato rocoso del acantilado, rodeada de pinos. Se trata de un pasillo inclinado donde el sendero exige caminar con precaución y arrimado a la pared de roca, conectando la zona de s&apos;Algar con el área forestal de Cala en Basset.
+</desc>
+    <sym>Summit</sym>
+  </wpt>
+  <wpt lat="39.589787" lon="2.355318">
+    <ele>55.59714472183604</ele>
+    <name>Can Tomeví</name>
+    <cmt>Can Tomeví (Sant Elm). Antigua finca y paraje forestal tradicional situado en el límite del núcleo urbano de Sant Elm. Este punto marca la transición donde termina el tramo asfaltado de la Avinguda de la Trapa y da comienzo la pista de tierra compacta (Camí de Can Tomeví). Funciona como eje y distribuidor de caminos para las rutas senderistas hacia Cala en Basset, su torre de defensa y el monasterio de La Trapa.
+</cmt>
+    <desc>Can Tomeví (Sant Elm). Antigua finca y paraje forestal tradicional situado en el límite del núcleo urbano de Sant Elm. Este punto marca la transición donde termina el tramo asfaltado de la Avinguda de la Trapa y da comienzo la pista de tierra compacta (Camí de Can Tomeví). Funciona como eje y distribuidor de caminos para las rutas senderistas hacia Cala en Basset, su torre de defensa y el monasterio de La Trapa.
+</desc>
+    <sym>Building</sym>
+  </wpt>
+  <wpt lat="39.590046" lon="2.355742">
+    <ele>61.29346380458496</ele>
+    <name>Intersección GR-221 (Variante La Trapa)</name>
+    <cmt>Intersección GR-221 (Variante La Trapa). Punto de conexión donde el sendero local de Cala en Basset enlaza con el tramo oficial de la Ruta de Pedra en Sec (GR-221). Hito clave de orientación para senderistas que deciden ampliar la excursión hacia las ruinas del antiguo monasterio de La Trapa.
+</cmt>
+    <desc>Intersección GR-221 (Variante La Trapa). Punto de conexión donde el sendero local de Cala en Basset enlaza con el tramo oficial de la Ruta de Pedra en Sec (GR-221). Hito clave de orientación para senderistas que deciden ampliar la excursión hacia las ruinas del antiguo monasterio de La Trapa.
+</desc>
+    <sym>Crossing</sym>
+  </wpt>
+  <wpt lat="39.582989" lon="2.349511">
+    <ele>8.548650319514234</ele>
+    <name>Plaça de Mossèn Sebastià Grau</name>
+    <cmt>Plaça de Mossèn Sebastià Grau (Sant Elm). Plaza pública que sirve de punto logístico y de estacionamiento habitual para el inicio de las excursiones hacia la Torre de Cala en Basset, el Camí de Can Tomeví y las variantes que enlazan con el sendero GR-221 de La Trapa.
+</cmt>
+    <desc>Plaça de Mossèn Sebastià Grau (Sant Elm). Plaza pública que sirve de punto logístico y de estacionamiento habitual para el inicio de las excursiones hacia la Torre de Cala en Basset, el Camí de Can Tomeví y las variantes que enlazan con el sendero GR-221 de La Trapa.
+</desc>
+    <sym>Information</sym>
+  </wpt>
+  <trk>
+    <name>Cala en Basset y torre</name>
+    <trkseg>
+      <trkpt lat="39.585234" lon="2.346927">
+        <ele>26.59</ele>
+      </trkpt>
+      <trkpt lat="39.585514" lon="2.346886">
+        <ele>27.74</ele>
+      </trkpt>
+      <trkpt lat="39.585798" lon="2.346796">
+        <ele>31.05</ele>
+      </trkpt>
+      <trkpt lat="39.586008" lon="2.347154">
+        <ele>27.55</ele>
+      </trkpt>
+      <trkpt lat="39.586258" lon="2.347141">
+        <ele>29.2</ele>
+      </trkpt>
+      <trkpt lat="39.586352" lon="2.347093">
+        <ele>29.8</ele>
+      </trkpt>
+      <trkpt lat="39.586446" lon="2.347008">
+        <ele>31.44</ele>
+      </trkpt>
+      <trkpt lat="39.586522" lon="2.346974">
+        <ele>31.83</ele>
+      </trkpt>
+      <trkpt lat="39.586944" lon="2.346863">
+        <ele>32.7</ele>
+      </trkpt>
+      <trkpt lat="39.587102" lon="2.346784">
+        <ele>34.17</ele>
+      </trkpt>
+      <trkpt lat="39.587365" lon="2.346706">
+        <ele>35.11</ele>
+      </trkpt>
+      <trkpt lat="39.587358" lon="2.346621">
+        <ele>35.52</ele>
+      </trkpt>
+      <trkpt lat="39.587429" lon="2.346614">
+        <ele>35.19</ele>
+      </trkpt>
+      <trkpt lat="39.587637" lon="2.346395">
+        <ele>31.46</ele>
+      </trkpt>
+      <trkpt lat="39.587743" lon="2.346241">
+        <ele>29.15</ele>
+      </trkpt>
+      <trkpt lat="39.587915" lon="2.346307">
+        <ele>29.93</ele>
+      </trkpt>
+      <trkpt lat="39.588132" lon="2.346336">
+        <ele>31.74</ele>
+      </trkpt>
+      <trkpt lat="39.588432" lon="2.346247">
+        <ele>34.48</ele>
+      </trkpt>
+      <trkpt lat="39.588904" lon="2.346226">
+        <ele>34.32</ele>
+      </trkpt>
+      <trkpt lat="39.589207" lon="2.346316">
+        <ele>32.78</ele>
+      </trkpt>
+      <trkpt lat="39.589416" lon="2.346437">
+        <ele>32.41</ele>
+      </trkpt>
+      <trkpt lat="39.589834" lon="2.346678">
+        <ele>27.36</ele>
+      </trkpt>
+      <trkpt lat="39.589989" lon="2.346728">
+        <ele>26.99</ele>
+      </trkpt>
+      <trkpt lat="39.590289" lon="2.346566">
+        <ele>26.09</ele>
+      </trkpt>
+      <trkpt lat="39.590469" lon="2.346547">
+        <ele>25.77</ele>
+      </trkpt>
+      <trkpt lat="39.59057" lon="2.346529">
+        <ele>25.48</ele>
+      </trkpt>
+      <trkpt lat="39.59059" lon="2.346757">
+        <ele>29.53</ele>
+      </trkpt>
+      <trkpt lat="39.59066" lon="2.34677">
+        <ele>30.01</ele>
+      </trkpt>
+      <trkpt lat="39.5907" lon="2.346826">
+        <ele>31.61</ele>
+      </trkpt>
+      <trkpt lat="39.590819" lon="2.346863">
+        <ele>33.38</ele>
+      </trkpt>
+      <trkpt lat="39.590843" lon="2.347002">
+        <ele>37.07</ele>
+      </trkpt>
+      <trkpt lat="39.590972" lon="2.347035">
+        <ele>39.27</ele>
+      </trkpt>
+      <trkpt lat="39.591141" lon="2.347105">
+        <ele>43.5</ele>
+      </trkpt>
+      <trkpt lat="39.591364" lon="2.347088">
+        <ele>45.79</ele>
+      </trkpt>
+      <trkpt lat="39.591587" lon="2.347072">
+        <ele>37.53</ele>
+      </trkpt>
+      <trkpt lat="39.59161" lon="2.347128">
+        <ele>39.79</ele>
+      </trkpt>
+      <trkpt lat="39.591777" lon="2.347256">
+        <ele>36.15</ele>
+      </trkpt>
+      <trkpt lat="39.591849" lon="2.347294">
+        <ele>31.1</ele>
+      </trkpt>
+      <trkpt lat="39.592038" lon="2.347537">
+        <ele>32.83</ele>
+      </trkpt>
+      <trkpt lat="39.592227" lon="2.347779">
+        <ele>32.25</ele>
+      </trkpt>
+      <trkpt lat="39.592311" lon="2.347855">
+        <ele>28.84</ele>
+      </trkpt>
+      <trkpt lat="39.592576" lon="2.348262">
+        <ele>31.88</ele>
+      </trkpt>
+      <trkpt lat="39.592721" lon="2.348413">
+        <ele>33.47</ele>
+      </trkpt>
+      <trkpt lat="39.593021" lon="2.348581">
+        <ele>36.59</ele>
+      </trkpt>
+      <trkpt lat="39.593188" lon="2.348532">
+        <ele>34.41</ele>
+      </trkpt>
+      <trkpt lat="39.593641" lon="2.348554">
+        <ele>29.65</ele>
+      </trkpt>
+      <trkpt lat="39.593806" lon="2.348396">
+        <ele>24.68</ele>
+      </trkpt>
+      <trkpt lat="39.594011" lon="2.348356">
+        <ele>25.28</ele>
+      </trkpt>
+      <trkpt lat="39.594203" lon="2.348492">
+        <ele>29.18</ele>
+      </trkpt>
+      <trkpt lat="39.594395" lon="2.348628">
+        <ele>29.49</ele>
+      </trkpt>
+      <trkpt lat="39.594826" lon="2.349091">
+        <ele>35.33</ele>
+      </trkpt>
+      <trkpt lat="39.59483" lon="2.349326">
+        <ele>36.26</ele>
+      </trkpt>
+      <trkpt lat="39.594835" lon="2.349475">
+        <ele>40.18</ele>
+      </trkpt>
+      <trkpt lat="39.594921" lon="2.349586">
+        <ele>42.15</ele>
+      </trkpt>
+      <trkpt lat="39.59506" lon="2.349596">
+        <ele>41.51</ele>
+      </trkpt>
+      <trkpt lat="39.595176" lon="2.349782">
+        <ele>46.64</ele>
+      </trkpt>
+      <trkpt lat="39.595129" lon="2.349995">
+        <ele>53.49</ele>
+      </trkpt>
+      <trkpt lat="39.595186" lon="2.350037">
+        <ele>55.42</ele>
+      </trkpt>
+      <trkpt lat="39.595177" lon="2.350175">
+        <ele>59.49</ele>
+      </trkpt>
+      <trkpt lat="39.595209" lon="2.350466">
+        <ele>68.09</ele>
+      </trkpt>
+      <trkpt lat="39.595263" lon="2.350541">
+        <ele>69.96</ele>
+      </trkpt>
+      <trkpt lat="39.595376" lon="2.350614">
+        <ele>70.22</ele>
+      </trkpt>
+      <trkpt lat="39.595432" lon="2.350634">
+        <ele>70.1</ele>
+      </trkpt>
+      <trkpt lat="39.595495" lon="2.35071">
+        <ele>72.88</ele>
+      </trkpt>
+      <trkpt lat="39.595565" lon="2.350758">
+        <ele>74.87</ele>
+      </trkpt>
+      <trkpt lat="39.595582" lon="2.350813">
+        <ele>77.1</ele>
+      </trkpt>
+      <trkpt lat="39.595678" lon="2.350918">
+        <ele>80.85</ele>
+      </trkpt>
+      <trkpt lat="39.595696" lon="2.350938">
+        <ele>81.56</ele>
+      </trkpt>
+      <trkpt lat="39.595575" lon="2.351003">
+        <ele>84.02</ele>
+      </trkpt>
+      <trkpt lat="39.595014" lon="2.35119">
+        <ele>93.74</ele>
+      </trkpt>
+      <trkpt lat="39.594917" lon="2.351203">
+        <ele>94.78</ele>
+      </trkpt>
+      <trkpt lat="39.594816" lon="2.351268">
+        <ele>96.31</ele>
+      </trkpt>
+      <trkpt lat="39.594616" lon="2.351713">
+        <ele>100.79</ele>
+      </trkpt>
+      <trkpt lat="39.594341" lon="2.352062">
+        <ele>104.85</ele>
+      </trkpt>
+      <trkpt lat="39.594243" lon="2.352241">
+        <ele>108.07</ele>
+      </trkpt>
+      <trkpt lat="39.594198" lon="2.352299">
+        <ele>108.81</ele>
+      </trkpt>
+      <trkpt lat="39.594066" lon="2.352288">
+        <ele>109.06</ele>
+      </trkpt>
+      <trkpt lat="39.59397" lon="2.352325">
+        <ele>110.01</ele>
+      </trkpt>
+      <trkpt lat="39.59376" lon="2.352341">
+        <ele>112.74</ele>
+      </trkpt>
+      <trkpt lat="39.593637" lon="2.352315">
+        <ele>113.59</ele>
+      </trkpt>
+      <trkpt lat="39.593608" lon="2.352386">
+        <ele>114.48</ele>
+      </trkpt>
+      <trkpt lat="39.593671" lon="2.352481">
+        <ele>113.67</ele>
+      </trkpt>
+      <trkpt lat="39.593608" lon="2.352639">
+        <ele>111.16</ele>
+      </trkpt>
+      <trkpt lat="39.593546" lon="2.35272">
+        <ele>108.34</ele>
+      </trkpt>
+      <trkpt lat="39.593497" lon="2.352813">
+        <ele>105.46</ele>
+      </trkpt>
+      <trkpt lat="39.593475" lon="2.352959">
+        <ele>99.62</ele>
+      </trkpt>
+      <trkpt lat="39.593464" lon="2.35313">
+        <ele>92.78</ele>
+      </trkpt>
+      <trkpt lat="39.593524" lon="2.353266">
+        <ele>87.04</ele>
+      </trkpt>
+      <trkpt lat="39.593597" lon="2.353351">
+        <ele>83.73</ele>
+      </trkpt>
+      <trkpt lat="39.593606" lon="2.353431">
+        <ele>80.64</ele>
+      </trkpt>
+      <trkpt lat="39.59362278245992" lon="2.3534520756473336">
+        <ele>80.09879797989886</ele>
+      </trkpt>
+      <trkpt lat="39.593623" lon="2.353452">
+        <ele>80.09</ele>
+      </trkpt>
+      <trkpt lat="39.593606" lon="2.353431">
+        <ele>80.64</ele>
+      </trkpt>
+      <trkpt lat="39.593569" lon="2.353464">
+        <ele>79.32</ele>
+      </trkpt>
+      <trkpt lat="39.59347" lon="2.353483">
+        <ele>79.26</ele>
+      </trkpt>
+      <trkpt lat="39.593411" lon="2.353534">
+        <ele>78.04</ele>
+      </trkpt>
+      <trkpt lat="39.593337" lon="2.353637">
+        <ele>75.65</ele>
+      </trkpt>
+      <trkpt lat="39.593139" lon="2.353762">
+        <ele>75.26</ele>
+      </trkpt>
+      <trkpt lat="39.592862" lon="2.353978">
+        <ele>74.92</ele>
+      </trkpt>
+      <trkpt lat="39.592697" lon="2.354177">
+        <ele>77.32</ele>
+      </trkpt>
+      <trkpt lat="39.592513" lon="2.354416">
+        <ele>77.49</ele>
+      </trkpt>
+      <trkpt lat="39.592434" lon="2.354678">
+        <ele>75.94</ele>
+      </trkpt>
+      <trkpt lat="39.592513" lon="2.354416">
+        <ele>77.49</ele>
+      </trkpt>
+      <trkpt lat="39.592697" lon="2.354177">
+        <ele>77.32</ele>
+      </trkpt>
+      <trkpt lat="39.592862" lon="2.353978">
+        <ele>74.92</ele>
+      </trkpt>
+      <trkpt lat="39.593139" lon="2.353762">
+        <ele>75.26</ele>
+      </trkpt>
+      <trkpt lat="39.593337" lon="2.353637">
+        <ele>75.65</ele>
+      </trkpt>
+      <trkpt lat="39.593411" lon="2.353534">
+        <ele>78.04</ele>
+      </trkpt>
+      <trkpt lat="39.59347" lon="2.353483">
+        <ele>79.26</ele>
+      </trkpt>
+      <trkpt lat="39.593569" lon="2.353464">
+        <ele>79.32</ele>
+      </trkpt>
+      <trkpt lat="39.593606" lon="2.353431">
+        <ele>80.64</ele>
+      </trkpt>
+      <trkpt lat="39.593735" lon="2.353593">
+        <ele>76.48</ele>
+      </trkpt>
+      <trkpt lat="39.593773" lon="2.353768">
+        <ele>72.52</ele>
+      </trkpt>
+      <trkpt lat="39.593726" lon="2.353951">
+        <ele>65.61</ele>
+      </trkpt>
+      <trkpt lat="39.593794" lon="2.354139">
+        <ele>60.22</ele>
+      </trkpt>
+      <trkpt lat="39.593808" lon="2.354395">
+        <ele>53.48</ele>
+      </trkpt>
+      <trkpt lat="39.593858" lon="2.354581">
+        <ele>49.03</ele>
+      </trkpt>
+      <trkpt lat="39.594018" lon="2.354645">
+        <ele>45.56</ele>
+      </trkpt>
+      <trkpt lat="39.594208" lon="2.354636">
+        <ele>42.64</ele>
+      </trkpt>
+      <trkpt lat="39.59429" lon="2.354633">
+        <ele>41.39</ele>
+      </trkpt>
+      <trkpt lat="39.594381" lon="2.354608">
+        <ele>40.68</ele>
+      </trkpt>
+      <trkpt lat="39.594519" lon="2.35461">
+        <ele>39.37</ele>
+      </trkpt>
+      <trkpt lat="39.59481" lon="2.35487">
+        <ele>32.48</ele>
+      </trkpt>
+      <trkpt lat="39.595071" lon="2.354725">
+        <ele>25.53</ele>
+      </trkpt>
+      <trkpt lat="39.595116" lon="2.354856">
+        <ele>26.23</ele>
+      </trkpt>
+      <trkpt lat="39.595238" lon="2.35494">
+        <ele>27.91</ele>
+      </trkpt>
+      <trkpt lat="39.595335" lon="2.355025">
+        <ele>29.52</ele>
+      </trkpt>
+      <trkpt lat="39.595146" lon="2.355073">
+        <ele>31.06</ele>
+      </trkpt>
+      <trkpt lat="39.595299" lon="2.355176">
+        <ele>33.3</ele>
+      </trkpt>
+      <trkpt lat="39.595376" lon="2.355202">
+        <ele>33.3</ele>
+      </trkpt>
+      <trkpt lat="39.595396" lon="2.355251">
+        <ele>34.3</ele>
+      </trkpt>
+      <trkpt lat="39.595348" lon="2.355293">
+        <ele>35.63</ele>
+      </trkpt>
+      <trkpt lat="39.595502" lon="2.355367">
+        <ele>36.19</ele>
+      </trkpt>
+      <trkpt lat="39.59565" lon="2.355298">
+        <ele>33.65</ele>
+      </trkpt>
+      <trkpt lat="39.595502" lon="2.355367">
+        <ele>36.19</ele>
+      </trkpt>
+      <trkpt lat="39.595348" lon="2.355293">
+        <ele>35.63</ele>
+      </trkpt>
+      <trkpt lat="39.595396" lon="2.355251">
+        <ele>34.3</ele>
+      </trkpt>
+      <trkpt lat="39.595376" lon="2.355202">
+        <ele>33.3</ele>
+      </trkpt>
+      <trkpt lat="39.595299" lon="2.355176">
+        <ele>33.3</ele>
+      </trkpt>
+      <trkpt lat="39.595146" lon="2.355073">
+        <ele>31.06</ele>
+      </trkpt>
+      <trkpt lat="39.595335" lon="2.355025">
+        <ele>29.52</ele>
+      </trkpt>
+      <trkpt lat="39.595238" lon="2.35494">
+        <ele>27.91</ele>
+      </trkpt>
+      <trkpt lat="39.595116" lon="2.354856">
+        <ele>26.23</ele>
+      </trkpt>
+      <trkpt lat="39.595071" lon="2.354725">
+        <ele>25.53</ele>
+      </trkpt>
+      <trkpt lat="39.595121" lon="2.354595">
+        <ele>23.81</ele>
+      </trkpt>
+      <trkpt lat="39.595248" lon="2.35451">
+        <ele>19.83</ele>
+      </trkpt>
+      <trkpt lat="39.595267" lon="2.354476">
+        <ele>18.64</ele>
+      </trkpt>
+      <trkpt lat="39.595234" lon="2.354388">
+        <ele>21.49</ele>
+      </trkpt>
+      <trkpt lat="39.595252" lon="2.354336">
+        <ele>22.14</ele>
+      </trkpt>
+      <trkpt lat="39.595367" lon="2.35441">
+        <ele>18.02</ele>
+      </trkpt>
+      <trkpt lat="39.595508" lon="2.354363">
+        <ele>15</ele>
+      </trkpt>
+      <trkpt lat="39.595602" lon="2.354386">
+        <ele>9.63</ele>
+      </trkpt>
+      <trkpt lat="39.595694" lon="2.354479">
+        <ele>4.14</ele>
+      </trkpt>
+      <trkpt lat="39.595602" lon="2.354386">
+        <ele>9.63</ele>
+      </trkpt>
+      <trkpt lat="39.595508" lon="2.354363">
+        <ele>15</ele>
+      </trkpt>
+      <trkpt lat="39.595367" lon="2.35441">
+        <ele>18.02</ele>
+      </trkpt>
+      <trkpt lat="39.595252" lon="2.354336">
+        <ele>22.14</ele>
+      </trkpt>
+      <trkpt lat="39.595234" lon="2.354388">
+        <ele>21.49</ele>
+      </trkpt>
+      <trkpt lat="39.594957" lon="2.354444">
+        <ele>31.25</ele>
+      </trkpt>
+      <trkpt lat="39.594906" lon="2.35436">
+        <ele>34.54</ele>
+      </trkpt>
+      <trkpt lat="39.594964" lon="2.353982">
+        <ele>43.28</ele>
+      </trkpt>
+      <trkpt lat="39.595077" lon="2.353601">
+        <ele>50.63</ele>
+      </trkpt>
+      <trkpt lat="39.594896" lon="2.353438">
+        <ele>60.75</ele>
+      </trkpt>
+      <trkpt lat="39.594272" lon="2.353542">
+        <ele>73.54</ele>
+      </trkpt>
+      <trkpt lat="39.59405" lon="2.353505">
+        <ele>76.97</ele>
+      </trkpt>
+      <trkpt lat="39.593606" lon="2.353431">
+        <ele>80.64</ele>
+      </trkpt>
+      <trkpt lat="39.593569" lon="2.353464">
+        <ele>79.32</ele>
+      </trkpt>
+      <trkpt lat="39.59347" lon="2.353483">
+        <ele>79.26</ele>
+      </trkpt>
+      <trkpt lat="39.593411" lon="2.353534">
+        <ele>78.04</ele>
+      </trkpt>
+      <trkpt lat="39.593337" lon="2.353637">
+        <ele>75.65</ele>
+      </trkpt>
+      <trkpt lat="39.593139" lon="2.353762">
+        <ele>75.26</ele>
+      </trkpt>
+      <trkpt lat="39.592862" lon="2.353978">
+        <ele>74.92</ele>
+      </trkpt>
+      <trkpt lat="39.592697" lon="2.354177">
+        <ele>77.32</ele>
+      </trkpt>
+      <trkpt lat="39.592513" lon="2.354416">
+        <ele>77.49</ele>
+      </trkpt>
+      <trkpt lat="39.592426" lon="2.354704">
+        <ele>75.78</ele>
+      </trkpt>
+      <trkpt lat="39.592474" lon="2.354742">
+        <ele>74.84</ele>
+      </trkpt>
+      <trkpt lat="39.592278" lon="2.354883">
+        <ele>76</ele>
+      </trkpt>
+      <trkpt lat="39.592083" lon="2.355025">
+        <ele>75.06</ele>
+      </trkpt>
+      <trkpt lat="39.59167" lon="2.355099">
+        <ele>72.2</ele>
+      </trkpt>
+      <trkpt lat="39.591524" lon="2.355035">
+        <ele>70.62</ele>
+      </trkpt>
+      <trkpt lat="39.591329" lon="2.355205">
+        <ele>68.57</ele>
+      </trkpt>
+      <trkpt lat="39.591016" lon="2.355112">
+        <ele>64.7</ele>
+      </trkpt>
+      <trkpt lat="39.590973" lon="2.355057">
+        <ele>64.56</ele>
+      </trkpt>
+      <trkpt lat="39.5909" lon="2.355081">
+        <ele>63.79</ele>
+      </trkpt>
+      <trkpt lat="39.590742" lon="2.355281">
+        <ele>61.72</ele>
+      </trkpt>
+      <trkpt lat="39.59068" lon="2.355314">
+        <ele>61.26</ele>
+      </trkpt>
+      <trkpt lat="39.590495" lon="2.355343">
+        <ele>59.94</ele>
+      </trkpt>
+      <trkpt lat="39.590131" lon="2.355253">
+        <ele>57.2</ele>
+      </trkpt>
+      <trkpt lat="39.589912" lon="2.355096">
+        <ele>54.66</ele>
+      </trkpt>
+      <trkpt lat="39.58938" lon="2.354802">
+        <ele>51.56</ele>
+      </trkpt>
+      <trkpt lat="39.589306" lon="2.354778">
+        <ele>51.11</ele>
+      </trkpt>
+      <trkpt lat="39.589237" lon="2.35483">
+        <ele>50.42</ele>
+      </trkpt>
+      <trkpt lat="39.589025" lon="2.355086">
+        <ele>49.78</ele>
+      </trkpt>
+      <trkpt lat="39.58889" lon="2.355124">
+        <ele>48.54</ele>
+      </trkpt>
+      <trkpt lat="39.588299" lon="2.354844">
+        <ele>43.13</ele>
+      </trkpt>
+      <trkpt lat="39.588105" lon="2.354689">
+        <ele>42.69</ele>
+      </trkpt>
+      <trkpt lat="39.587692" lon="2.354608">
+        <ele>42.67</ele>
+      </trkpt>
+      <trkpt lat="39.587477" lon="2.354548">
+        <ele>41.81</ele>
+      </trkpt>
+      <trkpt lat="39.587347" lon="2.35445">
+        <ele>40.46</ele>
+      </trkpt>
+      <trkpt lat="39.587266" lon="2.35427">
+        <ele>39.58</ele>
+      </trkpt>
+      <trkpt lat="39.587064" lon="2.353906">
+        <ele>36.1</ele>
+      </trkpt>
+      <trkpt lat="39.586992" lon="2.353805">
+        <ele>36.44</ele>
+      </trkpt>
+      <trkpt lat="39.586899" lon="2.353742">
+        <ele>35.67</ele>
+      </trkpt>
+      <trkpt lat="39.586623" lon="2.353663">
+        <ele>34.54</ele>
+      </trkpt>
+      <trkpt lat="39.586394" lon="2.353678">
+        <ele>33.55</ele>
+      </trkpt>
+      <trkpt lat="39.586251" lon="2.353742">
+        <ele>32.79</ele>
+      </trkpt>
+      <trkpt lat="39.586001" lon="2.353888">
+        <ele>31.93</ele>
+      </trkpt>
+      <trkpt lat="39.585827" lon="2.353904">
+        <ele>30.98</ele>
+      </trkpt>
+      <trkpt lat="39.58567" lon="2.353841">
+        <ele>30.79</ele>
+      </trkpt>
+      <trkpt lat="39.585542" lon="2.353766">
+        <ele>30.19</ele>
+      </trkpt>
+      <trkpt lat="39.58536" lon="2.353585">
+        <ele>28.81</ele>
+      </trkpt>
+      <trkpt lat="39.58498" lon="2.353026">
+        <ele>28.67</ele>
+      </trkpt>
+      <trkpt lat="39.584622" lon="2.352603">
+        <ele>25.96</ele>
+      </trkpt>
+      <trkpt lat="39.584317" lon="2.352182">
+        <ele>23.02</ele>
+      </trkpt>
+      <trkpt lat="39.584252" lon="2.352039">
+        <ele>21.62</ele>
+      </trkpt>
+      <trkpt lat="39.584126" lon="2.351587">
+        <ele>19.05</ele>
+      </trkpt>
+      <trkpt lat="39.583862" lon="2.350501">
+        <ele>14.83</ele>
+      </trkpt>
+      <trkpt lat="39.58386" lon="2.350494">
+        <ele>14.81</ele>
+      </trkpt>
+      <trkpt lat="39.584561" lon="2.349975">
+        <ele>17.95</ele>
+      </trkpt>
+      <trkpt lat="39.585417" lon="2.349236">
+        <ele>17.43</ele>
+      </trkpt>
+      <trkpt lat="39.585491" lon="2.349172">
+        <ele>17.3</ele>
+      </trkpt>
+      <trkpt lat="39.585109" lon="2.348426">
+        <ele>12.2</ele>
+      </trkpt>
+      <trkpt lat="39.584976" lon="2.348146">
+        <ele>11.65</ele>
+      </trkpt>
+      <trkpt lat="39.584859" lon="2.347861">
+        <ele>13.52</ele>
+      </trkpt>
+      <trkpt lat="39.584626" lon="2.347291">
+        <ele>22.07</ele>
+      </trkpt>
+      <trkpt lat="39.585003" lon="2.347066">
+        <ele>25.07</ele>
+      </trkpt>
+      <trkpt lat="39.584626" lon="2.347291">
+        <ele>22.07</ele>
+      </trkpt>
+      <trkpt lat="39.584859" lon="2.347861">
+        <ele>13.52</ele>
+      </trkpt>
+      <trkpt lat="39.584976" lon="2.348146">
+        <ele>11.65</ele>
+      </trkpt>
+      <trkpt lat="39.58491" lon="2.348383">
+        <ele>11.33</ele>
+      </trkpt>
+      <trkpt lat="39.584852" lon="2.348504">
+        <ele>11.59</ele>
+      </trkpt>
+      <trkpt lat="39.584728" lon="2.348711">
+        <ele>11.53</ele>
+      </trkpt>
+      <trkpt lat="39.584453" lon="2.348916">
+        <ele>10.98</ele>
+      </trkpt>
+      <trkpt lat="39.58433" lon="2.348848">
+        <ele>9.21</ele>
+      </trkpt>
+      <trkpt lat="39.584092" lon="2.348965">
+        <ele>8.56</ele>
+      </trkpt>
+      <trkpt lat="39.583924" lon="2.34909">
+        <ele>8.83</ele>
+      </trkpt>
+      <trkpt lat="39.583779" lon="2.349199">
+        <ele>9.07</ele>
+      </trkpt>
+      <trkpt lat="39.583482" lon="2.349432">
+        <ele>9.7</ele>
+      </trkpt>
+      <trkpt lat="39.583224" lon="2.349576">
+        <ele>9.55</ele>
+      </trkpt>
+      <trkpt lat="39.583169" lon="2.349481">
+        <ele>9</ele>
+      </trkpt>
+      <trkpt lat="39.583029" lon="2.349527">
+        <ele>8.69</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

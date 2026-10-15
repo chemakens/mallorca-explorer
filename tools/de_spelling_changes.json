@@ -1,0 +1,1298 @@
+[
+ {
+  "path": "/places[2]/tips_de[0]",
+  "before": "Ruckfahrt",
+  "after": "Rückfahrt",
+  "count": 1
+ },
+ {
+  "path": "/places[2]/tips_de[0]",
+  "before": "die Fahre vom Hafen",
+  "after": "die Fähre vom Hafen",
+  "count": 1
+ },
+ {
+  "path": "/places[2]/tips_de[1]",
+  "before": "fullt",
+  "after": "füllt",
+  "count": 1
+ },
+ {
+  "path": "/places[2]/tips_de[2]",
+  "before": "mochten",
+  "after": "möchten",
+  "count": 1
+ },
+ {
+  "path": "/places[2]/tips_de[4]",
+  "before": "fruh",
+  "after": "früh",
+  "count": 1
+ },
+ {
+  "path": "/places[2]/tips_de[4]",
+  "before": "spektakularsten",
+  "after": "spektakulärsten",
+  "count": 1
+ },
+ {
+  "path": "/places[2]/tips_de[4]",
+  "before": "Abhangen",
+  "after": "Abhängen",
+  "count": 1
+ },
+ {
+  "path": "/places[2]/tips_de[4]",
+  "before": "ausserhalb",
+  "after": "außerhalb",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/description_de",
+  "before": "Kuste",
+  "after": "Küste",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/description_de",
+  "before": "naturlicher",
+  "after": "natürlicher",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/description_de",
+  "before": "geschutzter",
+  "after": "geschützter",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/description_de",
+  "before": "smaragdgruner",
+  "after": "smaragdgrüner",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/description_de",
+  "before": "unberuhrt",
+  "after": "unberührt",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/description_de",
+  "before": "Schonheit",
+  "after": "Schönheit",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/description_de",
+  "before": "kront",
+  "after": "krönt",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/description_de",
+  "before": "vervollstandigt",
+  "after": "vervollständigt",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/description_de",
+  "before": "500 Metern Lange",
+  "after": "500 Metern Länge",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/tips_de[1]",
+  "before": "naturlichen",
+  "after": "natürlichen",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/tips_de[1]",
+  "before": "ausser",
+  "after": "außer",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/tips_de[2]",
+  "before": "geniessen",
+  "after": "genießen",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/tips_de[3]",
+  "before": "Fur",
+  "after": "Für",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/tips_de[3]",
+  "before": "Kustenpfades",
+  "after": "Küstenpfades",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/tips_de[3]",
+  "before": "sudlich",
+  "after": "südlich",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/tips_de[3]",
+  "before": "langeres",
+  "after": "längeres",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/tips_de[3]",
+  "before": "ebenso schon ist",
+  "after": "ebenso schön ist",
+  "count": 1
+ },
+ {
+  "path": "/places[5]/tips_de[4]",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/description_de",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/description_de",
+  "before": "gehuteten",
+  "after": "gehüteten",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/description_de",
+  "before": "turkisfarbenem",
+  "after": "türkisfarbenem",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/description_de",
+  "before": "beruhmte",
+  "after": "berühmte",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/description_de",
+  "before": "unberuhrt",
+  "after": "unberührt",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/description_de",
+  "before": "offnen",
+  "after": "öffnen",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/description_de",
+  "before": "Hohlenforscher",
+  "after": "Höhlenforscher",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/description_de",
+  "before": "weissem",
+  "after": "weißem",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[0]",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[0]",
+  "before": "Gelande",
+  "after": "Gelände",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[1]",
+  "before": "Fusse",
+  "after": "Füße",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[1]",
+  "before": "schutzen",
+  "after": "schützen",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[2]",
+  "before": "ausser",
+  "after": "außer",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[2]",
+  "before": "Ihren Mull mit",
+  "after": "Ihren Müll mit",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[3]",
+  "before": "Prufen",
+  "after": "Prüfen",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[3]",
+  "before": "sorgfaltig",
+  "after": "sorgfältig",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[3]",
+  "before": "Felswanden",
+  "after": "Felswänden",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[3]",
+  "before": "Fussen",
+  "after": "Füßen",
+  "count": 1
+ },
+ {
+  "path": "/places[6]/tips_de[4]",
+  "before": "naturliche",
+  "after": "natürliche",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "graugruner",
+  "after": "graugrüner",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "turkisfarben",
+  "after": "türkisfarben",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "uberragt",
+  "after": "überragt",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "beruhmten",
+  "after": "berühmten",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "schonsten",
+  "after": "schönsten",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "hochstem",
+  "after": "höchstem",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "Strande",
+  "after": "Strände",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "aussergewohnlich",
+  "after": "außergewöhnlich",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/description_de",
+  "before": "Bergstrasse",
+  "after": "Bergstraße",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[0]",
+  "before": "Ruckfahrt",
+  "after": "Rückfahrt",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[0]",
+  "before": "offentlichen",
+  "after": "öffentlichen",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[0]",
+  "before": "Barcos Azules Fahre",
+  "after": "Barcos Azules Fähre",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[1]",
+  "before": "fruh",
+  "after": "früh",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[2]",
+  "before": "Kuche",
+  "after": "Küche",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[2]",
+  "before": "fullt",
+  "after": "füllt",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[2]",
+  "before": "familiengeruhrte",
+  "after": "familiengeführte",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[3]",
+  "before": "unerlasslich",
+  "after": "unerlässlich",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[4]",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[4]",
+  "before": "unubersichtlichen",
+  "after": "unübersichtlichen",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[4]",
+  "before": "Bergstrassen",
+  "after": "Bergstraßen",
+  "count": 1
+ },
+ {
+  "path": "/places[28]/tips_de[4]",
+  "before": "Zufahrtsstrasse",
+  "after": "Zufahrtsstraße",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/description_de",
+  "before": "Kuste",
+  "after": "Küste",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/description_de",
+  "before": "Kustenwanderung",
+  "after": "Küstenwanderung",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/description_de",
+  "before": "geschutzten",
+  "after": "geschützten",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/description_de",
+  "before": "turkisfarben",
+  "after": "türkisfarben",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/description_de",
+  "before": "unberuhrten",
+  "after": "unberührten",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/description_de",
+  "before": "vollig",
+  "after": "völlig",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/description_de",
+  "before": "Sudosten",
+  "after": "Südosten",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/description_de",
+  "before": "Strande",
+  "after": "Strände",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/description_de",
+  "before": "aussergewohnlich",
+  "after": "außergewöhnlich",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/tips_de[0]",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/tips_de[0]",
+  "before": "Hohenunterschied",
+  "after": "Höhenunterschied",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/tips_de[2]",
+  "before": "Kustenkalksein",
+  "after": "Küstenkalkstein",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/tips_de[2]",
+  "before": "gefahrlich",
+  "after": "gefährlich",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/tips_de[2]",
+  "before": "Gelande",
+  "after": "Gelände",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/tips_de[3]",
+  "before": "Prufen",
+  "after": "Prüfen",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/tips_de[3]",
+  "before": "Sudostwind",
+  "after": "Südostwind",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/tips_de[3]",
+  "before": "trub",
+  "after": "trüb",
+  "count": 1
+ },
+ {
+  "path": "/places[30]/tips_de[4]",
+  "before": "unberuhrt",
+  "after": "unberührt",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "naturlichen",
+  "after": "natürlichen",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "geschutzten",
+  "after": "geschützten",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "Smaragdgrun",
+  "after": "Smaragdgrün",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "Dunen",
+  "after": "Dünen",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "Turkis",
+  "after": "Türkis",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "beruhmte",
+  "after": "berühmte",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "schonsten",
+  "after": "schönsten",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "Schonheit",
+  "after": "Schönheit",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "gesaumt",
+  "after": "gesäumt",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "Strande",
+  "after": "Strände",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "ausserordentlich",
+  "after": "außerordentlich",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/description_de",
+  "before": "weissem",
+  "after": "weißem",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[0]",
+  "before": "fullt",
+  "after": "füllt",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[1]",
+  "before": "fruih",
+  "after": "früh",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[1]",
+  "before": "konnen",
+  "after": "können",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[2]",
+  "before": "konnen",
+  "after": "können",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[2]",
+  "before": "Prufen",
+  "after": "Prüfen",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[2]",
+  "before": "mochten",
+  "after": "möchten",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[3]",
+  "before": "zuruck",
+  "after": "zurück",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[3]",
+  "before": "Kustenpfad",
+  "after": "Küstenpfad",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[3]",
+  "before": "konnen",
+  "after": "können",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[3]",
+  "before": "kieferngesaumten",
+  "after": "kieferngesäumten",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[4]",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[4]",
+  "before": "Dunen",
+  "after": "Dünen",
+  "count": 1
+ },
+ {
+  "path": "/places[78]/tips_de[4]",
+  "before": "Getranke",
+  "after": "Getränke",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/description_de",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/description_de",
+  "before": "geschutzt",
+  "after": "geschützt",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/description_de",
+  "before": "geschutzte",
+  "after": "geschützte",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/description_de",
+  "before": "Sudosten",
+  "after": "Südosten",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/description_de",
+  "before": "Taschenstrande",
+  "after": "Taschenstrände",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/description_de",
+  "before": "Grosse",
+  "after": "Größe",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[0]",
+  "before": "fruih",
+  "after": "früh",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[0]",
+  "before": "fullt",
+  "after": "füllt",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[0]",
+  "before": "Strandhohe",
+  "after": "Strandhöhe",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[1]",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[1]",
+  "before": "fruih",
+  "after": "früh",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[1]",
+  "before": "moglich",
+  "after": "möglich",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[2]",
+  "before": "Felswande",
+  "after": "Felswände",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[2]",
+  "before": "aussergewohnlich",
+  "after": "außergewöhnlich",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[3]",
+  "before": "Kustenpfades",
+  "after": "Küstenpfades",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[3]",
+  "before": "naturlichen",
+  "after": "natürlichen",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[3]",
+  "before": "nordlich",
+  "after": "nördlich",
+  "count": 1
+ },
+ {
+  "path": "/places[80]/tips_de[3]",
+  "before": "spektakularen",
+  "after": "spektakulären",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/description_de",
+  "before": "geschutzten",
+  "after": "geschützten",
+  "count": 2
+ },
+ {
+  "path": "/places[81]/description_de",
+  "before": "Dunensystemen",
+  "after": "Dünensystemen",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/description_de",
+  "before": "vollstandig",
+  "after": "vollständig",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/description_de",
+  "before": "schonsten",
+  "after": "schönsten",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/description_de",
+  "before": "vollig",
+  "after": "völlig",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/description_de",
+  "before": "langsten",
+  "after": "längsten",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/description_de",
+  "before": "regelmasig",
+  "after": "regelmäßig",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/description_de",
+  "before": "weissem",
+  "after": "weißem",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[0]",
+  "before": "geschutzt",
+  "after": "geschützt",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[0]",
+  "before": "Dunen",
+  "after": "Dünen",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[0]",
+  "before": "vollstandig",
+  "after": "vollständig",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[1]",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[1]",
+  "before": "farbt",
+  "after": "färbt",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[1]",
+  "before": "Mereshorizont",
+  "after": "Meereshorizont",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[2]",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[2]",
+  "before": "verfugbar",
+  "after": "verfügbar",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[4]",
+  "before": "fruh",
+  "after": "früh",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[4]",
+  "before": "fullen",
+  "after": "füllen",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[4]",
+  "before": "ortlichen",
+  "after": "örtlichen",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[4]",
+  "before": "Parkplatze",
+  "after": "Parkplätze",
+  "count": 1
+ },
+ {
+  "path": "/places[81]/tips_de[4]",
+  "before": "Erwaegen",
+  "after": "Erwägen",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/description_de",
+  "before": "Sudostkuste",
+  "after": "Südostküste",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/description_de",
+  "before": "geschutzten",
+  "after": "geschützten",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/description_de",
+  "before": "Turkisfarbe",
+  "after": "Türkisfarbe",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/description_de",
+  "before": "gegenuber",
+  "after": "gegenüber",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/description_de",
+  "before": "aussergewohnlich",
+  "after": "außergewöhnlich",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/tips_de[0]",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/tips_de[1]",
+  "before": "konnen",
+  "after": "können",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/tips_de[1]",
+  "before": "unerlasslich",
+  "after": "unerlässlich",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/tips_de[2]",
+  "before": "Schnorchelausrustung",
+  "after": "Schnorchelausrüstung",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/tips_de[2]",
+  "before": "aussergewohnlich",
+  "after": "außergewöhnlich",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/tips_de[4]",
+  "before": "fruh",
+  "after": "früh",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/tips_de[4]",
+  "before": "fullt",
+  "after": "füllt",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/tips_de[4]",
+  "before": "beruhmten",
+  "after": "berühmten",
+  "count": 1
+ },
+ {
+  "path": "/places[82]/tips_de[4]",
+  "before": "in der Nahe des",
+  "after": "in der Nähe des",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/description_de",
+  "before": "Ostkuste",
+  "after": "Ostküste",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/description_de",
+  "before": "geschutzten",
+  "after": "geschützten",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/description_de",
+  "before": "Gestrupp",
+  "after": "Gestrüpp",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/description_de",
+  "before": "uberhangenden",
+  "after": "überhängenden",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/description_de",
+  "before": "ausgerusteten",
+  "after": "ausgerüsteten",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/description_de",
+  "before": "aussergewohnlich",
+  "after": "außergewöhnlich",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/description_de",
+  "before": "meditertranem",
+  "after": "mediterranem",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/tips_de[2]",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/tips_de[2]",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/tips_de[2]",
+  "before": "Gelande",
+  "after": "Gelände",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/tips_de[3]",
+  "before": "Kustenwanderungen",
+  "after": "Küstenwanderungen",
+  "count": 1
+ },
+ {
+  "path": "/places[84]/tips_de[3]",
+  "before": "Ostkuste",
+  "after": "Ostküste",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "uber",
+  "after": "über",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "Fuhrer",
+  "after": "Führer",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "naturlicher",
+  "after": "natürlicher",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "grunen",
+  "after": "grünen",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "Fischerdufer",
+  "after": "Fischerdörfer",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "Y-formiger",
+  "after": "Y-förmiger",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "gesaumt",
+  "after": "gesäumt",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "Fischerhausern",
+  "after": "Fischerhäusern",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "Fensterlaeden",
+  "after": "Fensterläden",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "sorgfaltig",
+  "after": "sorgfältig",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "getunchten",
+  "after": "getünchten",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/description_de",
+  "before": "aussergewohnlich",
+  "after": "außergewöhnlich",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/tips_de[0]",
+  "before": "mochten",
+  "after": "möchten",
+  "count": 1
+ },
+ {
+  "path": "/places[104]/tips_de[4]",
+  "before": "vollig",
+  "after": "völlig",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "gewunschten",
+  "after": "gewünschten",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "naturlichen",
+  "after": "natürlichen",
+  "count": 2
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "geschutzte",
+  "after": "geschützte",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "vollstandigsten",
+  "after": "vollständigsten",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "Schonheit",
+  "after": "Schönheit",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "Sudosten",
+  "after": "Südosten",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "spektakularsten",
+  "after": "spektakulärsten",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "Strande",
+  "after": "Strände",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/description_de",
+  "before": "aussergewohnlich",
+  "after": "außergewöhnlich",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/tips_de[0]",
+  "before": "fullen",
+  "after": "füllen",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/tips_de[1]",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/tips_de[1]",
+  "before": "Kustenpfad",
+  "after": "Küstenpfad",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/tips_de[1]",
+  "before": "naturlichen",
+  "after": "natürlichen",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/tips_de[3]",
+  "before": "schonsten",
+  "after": "schönsten",
+  "count": 1
+ },
+ {
+  "path": "/places[105]/tips_de[4]",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[140]/description_de",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[140]/description_de",
+  "before": "fuhrt",
+  "after": "führt",
+  "count": 2
+ },
+ {
+  "path": "/places[140]/description_de",
+  "before": "fruhere",
+  "after": "frühere",
+  "count": 1
+ },
+ {
+  "path": "/places[140]/description_de",
+  "before": "Kustenstadtchen",
+  "after": "Küstenstädtchen",
+  "count": 1
+ },
+ {
+  "path": "/places[140]/description_de",
+  "before": "schonsten",
+  "after": "schönsten",
+  "count": 1
+ },
+ {
+  "path": "/places[140]/tips_de[0]",
+  "before": "uber",
+  "after": "über",
+  "count": 2
+ },
+ {
+  "path": "/places[140]/tips_de[1]",
+  "before": "fur",
+  "after": "für",
+  "count": 1
+ },
+ {
+  "path": "/places[140]/tips_de[3]",
+  "before": "fuhrt",
+  "after": "führt",
+  "count": 1
+ },
+ {
+  "path": "/places[140]/tips_de[3]",
+  "before": "nordlichen",
+  "after": "nördlichen",
+  "count": 1
+ }
+]

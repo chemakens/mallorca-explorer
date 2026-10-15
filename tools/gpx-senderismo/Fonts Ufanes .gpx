@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx creator="https://gpx.studio" version="1.1" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd http://www.garmin.com/xmlschemas/GpxExtensions/v3 http://www.garmin.com/xmlschemas/GpxExtensionsv3.xsd http://www.garmin.com/xmlschemas/TrackPointExtension/v1 http://www.garmin.com/xmlschemas/TrackPointExtensionv1.xsd http://www.garmin.com/xmlschemas/PowerExtension/v1 http://www.garmin.com/xmlschemas/PowerExtensionv1.xsd http://www.topografix.com/GPX/gpx_style/0/2 http://www.topografix.com/GPX/gpx_style/0/2/gpx_style.xsd" xmlns:gpxtpx="http://www.garmin.com/xmlschemas/TrackPointExtension/v1" xmlns:gpxx="http://www.garmin.com/xmlschemas/GpxExtensions/v3" xmlns:gpxpx="http://www.garmin.com/xmlschemas/PowerExtension/v1" xmlns:gpx_style="http://www.topografix.com/GPX/gpx_style/0/2">
+  <metadata>
+    <name>Fonts Ufanes </name>
+    <desc>Tipo de Ruta: Circular
+Dificultad: Facil
+Duracion: 1´5 horas </desc>
+    <author>
+      <name>gpx.studio</name>
+      <link href="https://gpx.studio"/>
+    </author>
+  </metadata>
+  <wpt lat="39.792142" lon="2.968446">
+    <ele>47.49956761916593</ele>
+    <name>🥾 Inicio: Parking de las Coves de Campanet (Ruta a ses Fonts Ufanes)</name>
+    <cmt>Punto de partida oficial y zona de estacionamiento gratuito situada junto al acceso de las Coves de Campanet. Desde este aparcamiento se inicia el cómodo sendero señalizado que se adentra en la finca pública de Gabellí Petit para visitar Ses Fonts Ufanes, el espectacular monumento natural de brotes hídricos intermitentes de Mallorca.</cmt>
+    <desc>Punto de partida oficial y zona de estacionamiento gratuito situada junto al acceso de las Coves de Campanet. Desde este aparcamiento se inicia el cómodo sendero señalizado que se adentra en la finca pública de Gabellí Petit para visitar Ses Fonts Ufanes, el espectacular monumento natural de brotes hídricos intermitentes de Mallorca.</desc>
+    <sym>Parking Area</sym>
+  </wpt>
+  <wpt lat="39.798647" lon="2.963612">
+    <ele>56.633479368212825</ele>
+    <name>Punto pular para hacer fotos</name>
+    <sym>Scenic Area</sym>
+  </wpt>
+  <wpt lat="39.805331" lon="2.963099">
+    <ele>72.76446603595392</ele>
+    <name>Talaiot Claper des Doblers </name>
+    <cmt>Yacimiento arqueológico prehistórico situado en el encinar de la finca de Gabellí Petit (Campanet), en la misma zona donde brotan las Fonts Ufanes. Se trata de un talayot de planta cuadrada que conserva su puerta de acceso original, integrado perfectamente como un punto de interés cultural e histórico dentro de las rutas de senderismo de la zona.</cmt>
+    <desc>Yacimiento arqueológico prehistórico situado en el encinar de la finca de Gabellí Petit (Campanet), en la misma zona donde brotan las Fonts Ufanes. Se trata de un talayot de planta cuadrada que conserva su puerta de acceso original, integrado perfectamente como un punto de interés cultural e histórico dentro de las rutas de senderismo de la zona.</desc>
+    <sym>Building</sym>
+  </wpt>
+  <wpt lat="39.804184" lon="2.962225">
+    <ele>75.97488246077717</ele>
+    <name>Fonts Ufanes </name>
+    <cmt>Fenómeno hidrogeológico único en Mallorca situado en un frondoso bosque de encinas (Campanet). Tras lluvias intensas, el agua brota a la superficie de manera espontánea y violenta directamente desde el suelo del encinar, creando un espectáculo natural impresionante y de gran interés paisajístico.</cmt>
+    <desc>Fenómeno hidrogeológico único en Mallorca situado en un frondoso bosque de encinas (Campanet). Tras lluvias intensas, el agua brota a la superficie de manera espontánea y violenta directamente desde el suelo del encinar, creando un espectáculo natural impresionante y de gran interés paisajístico.</desc>
+    <sym>Drinking Water</sym>
+  </wpt>
+  <wpt lat="39.793236" lon="2.963242">
+    <ele>51.374109140422064</ele>
+    <name> Ermita de Sant Miquel</name>
+    <cmt>Histórico templo religioso de estilo gótico primitivo construido en el siglo XIII tras la conquista de Jaime I, situado en el valle de Campanet cerca de ses Fonts Ufanes. Considerada una de las iglesias de repoblación más antiguas de Mallorca, destaca por su planta rectangular, su espadaña del siglo XV y su antiguo cementerio anexo, constituyendo un punto clave de interés cultural y patrimonial en la zona.</cmt>
+    <desc>Histórico templo religioso de estilo gótico primitivo construido en el siglo XIII tras la conquista de Jaime I, situado en el valle de Campanet cerca de ses Fonts Ufanes. Considerada una de las iglesias de repoblación más antiguas de Mallorca, destaca por su planta rectangular, su espadaña del siglo XV y su antiguo cementerio anexo, constituyendo un punto clave de interés cultural y patrimonial en la zona.</desc>
+    <sym>Building</sym>
+  </wpt>
+  <wpt lat="39.79248" lon="2.968517">
+    <ele>57.894915492274045</ele>
+    <name>Coves de Campanet </name>
+    <cmt>Impresionante cavidad subterránea natural situada en el valle de Sant Miquel (Campanet), descubierta de forma casual en 1945. Destaca por la espectacular belleza y finura de sus formaciones de estalactitas y estalagmitas de calcita blanca, y por albergar salas de gran volumen a lo largo de su recorrido turístico. Es además un yacimiento paleontológico clave donde se hallaron restos fósiles del Myotragus balearicus, un mamífero prehistórico extinguido exclusivo de las Baleares.</cmt>
+    <desc>Impresionante cavidad subterránea natural situada en el valle de Sant Miquel (Campanet), descubierta de forma casual en 1945. Destaca por la espectacular belleza y finura de sus formaciones de estalactitas y estalagmitas de calcita blanca, y por albergar salas de gran volumen a lo largo de su recorrido turístico. Es además un yacimiento paleontológico clave donde se hallaron restos fósiles del Myotragus balearicus, un mamífero prehistórico extinguido exclusivo de las Baleares.</desc>
+    <sym>Information</sym>
+  </wpt>
+  <wpt lat="39.801019" lon="2.966245">
+    <ele>57.24661404805951</ele>
+    <name>Torrent de Teló</name>
+    <cmt>Pequeño cauce torrencial de montaña ubicado en la zona de Biniatró (Campanet), en las inmediaciones del Monumento Natural de ses Fonts Ufanes. Forma parte de la red de drenaje kárstico que recoge las aguas pluviales de la ladera del Puig Tomir, integrándose en un entorno forestal protegido de gran valor ecológico y paisajístico ideal para rutas de senderismo secundarias.</cmt>
+    <desc>Pequeño cauce torrencial de montaña ubicado en la zona de Biniatró (Campanet), en las inmediaciones del Monumento Natural de ses Fonts Ufanes. Forma parte de la red de drenaje kárstico que recoge las aguas pluviales de la ladera del Puig Tomir, integrándose en un entorno forestal protegido de gran valor ecológico y paisajístico ideal para rutas de senderismo secundarias.</desc>
+    <sym>Drinking Water</sym>
+  </wpt>
+  <wpt lat="39.801198" lon="2.96148">
+    <ele>82.56718230863285</ele>
+    <name>Panorámica dels camps </name>
+    <cmt>La &quot;Panorámica dels Camps&quot; hace referencia a los claros y miradores naturales que ofrece el itinerario circular de la finca pública de Gabellí Petit, justo el recinto donde se ubica el Monumento Natural de ses Fonts Ufanes.</cmt>
+    <desc>La &quot;Panorámica dels Camps&quot; hace referencia a los claros y miradores naturales que ofrece el itinerario circular de la finca pública de Gabellí Petit, justo el recinto donde se ubica el Monumento Natural de ses Fonts Ufanes.</desc>
+    <sym>Scenic Area</sym>
+  </wpt>
+  <wpt lat="39.794167" lon="2.965171">
+    <ele>48.50190231304255</ele>
+    <name> torrent de Sant Miquel </name>
+    <cmt>Cauce torrencial de montaña que discurre en paralelo al inicio de la ruta, justo a la derecha del camino de entrada a la finca. Es el canal principal encargado de recoger y evacuar el espectacular caudal de agua que brota de las Fonts Ufanes, fluyendo desde Campanet y atravesando la llanura de Sa Pobla hasta desembocar en la Albufera de Mallorca.</cmt>
+    <desc>Cauce torrencial de montaña que discurre en paralelo al inicio de la ruta, justo a la derecha del camino de entrada a la finca. Es el canal principal encargado de recoger y evacuar el espectacular caudal de agua que brota de las Fonts Ufanes, fluyendo desde Campanet y atravesando la llanura de Sa Pobla hasta desembocar en la Albufera de Mallorca.</desc>
+    <sym>Drinking Water</sym>
+  </wpt>
+  <wpt lat="39.79741" lon="2.964232">
+    <ele>52.14953827365015</ele>
+    <name>Siquia </name>
+    <cmt>Canal de agua tradicional de piedra construido en los márgenes del camino de la finca pública de Gabellí Petit. Esta antigua acequia rural sirve para canalizar y distribuir de forma controlada el agua hacia los campos de cultivo y la sínia (noria), formando parte del valioso patrimonio etnográfico e hidráulico que se puede observar durante todo el recorrido arqueológico e hidrogeológico.</cmt>
+    <desc>Canal de agua tradicional de piedra construido en los márgenes del camino de la finca pública de Gabellí Petit. Esta antigua acequia rural sirve para canalizar y distribuir de forma controlada el agua hacia los campos de cultivo y la sínia (noria), formando parte del valioso patrimonio etnográfico e hidráulico que se puede observar durante todo el recorrido arqueológico e hidrogeológico.</desc>
+    <sym>Drinking Water</sym>
+  </wpt>
+  <wpt lat="39.80443" lon="2.962871">
+    <ele>73.72207082723193</ele>
+    <name>Centro d´interpretación de le Fonts Ufanes </name>
+    <cmt>Pequeño espacio informativo y educativo situado dentro de la finca pública de Gabellí Petit. Cuenta con paneles explicativos, maquetas y material audiovisual interactivo que detallan el funcionamiento del acuífero subterráneo del Puig Tomir y explican detalladamente el proceso científico del fenómeno hidrogeológico único de las surgencias de agua.</cmt>
+    <desc>Pequeño espacio informativo y educativo situado dentro de la finca pública de Gabellí Petit. Cuenta con paneles explicativos, maquetas y material audiovisual interactivo que detallan el funcionamiento del acuífero subterráneo del Puig Tomir y explican detalladamente el proceso científico del fenómeno hidrogeológico único de las surgencias de agua.</desc>
+    <sym>Information</sym>
+  </wpt>
+  <wpt lat="39.802622" lon="2.961876">
+    <ele>77.55658928073098</ele>
+    <name> Es Portell</name>
+    <cmt>Histórica barrera de piedra y madera tradicional que delimita el cierre del camino de acceso a la finca pública de Gabellí Petit. Funciona como el paso de control de entrada para los senderistas que acceden al recinto para visitar las Fonts Ufanes.</cmt>
+    <desc>Histórica barrera de piedra y madera tradicional que delimita el cierre del camino de acceso a la finca pública de Gabellí Petit. Funciona como el paso de control de entrada para los senderistas que acceden al recinto para visitar las Fonts Ufanes.</desc>
+    <sym>Building</sym>
+  </wpt>
+  <wpt lat="39.804271" lon="2.962983">
+    <ele>72.89631533019977</ele>
+    <name>Baños Públicos (Fonts Ufanes)</name>
+    <cmt>Módulo de aseos públicos y servicios sanitarios ecológicos adaptados situado de forma integrada dentro de la finca de Gabellí Petit, habitualmente ubicado en las inmediaciones del Centro de Interpretación. Es el único punto higiénico habilitado de la ruta peatonal antes de adentrarse en la zona boscosa del encinar.</cmt>
+    <desc>Módulo de aseos públicos y servicios sanitarios ecológicos adaptados situado de forma integrada dentro de la finca de Gabellí Petit, habitualmente ubicado en las inmediaciones del Centro de Interpretación. Es el único punto higiénico habilitado de la ruta peatonal antes de adentrarse en la zona boscosa del encinar.</desc>
+    <sym>Restroom</sym>
+  </wpt>
+  <wpt lat="39.79212" lon="2.968396">
+    <ele>47.074448766809155</ele>
+    <name>Final-Parking</name>
+    <sym>Parking Area</sym>
+  </wpt>
+  <trk>
+    <name>Fonts Ufanes </name>
+    <trkseg>
+      <trkpt lat="39.792185" lon="2.968212">
+        <ele>47.49</ele>
+      </trkpt>
+      <trkpt lat="39.792321" lon="2.967867">
+        <ele>47.34</ele>
+      </trkpt>
+      <trkpt lat="39.792406" lon="2.96774">
+        <ele>47.44</ele>
+      </trkpt>
+      <trkpt lat="39.792659" lon="2.967393">
+        <ele>47.91</ele>
+      </trkpt>
+      <trkpt lat="39.793019" lon="2.96694">
+        <ele>47.93</ele>
+      </trkpt>
+      <trkpt lat="39.794035" lon="2.965578">
+        <ele>49</ele>
+      </trkpt>
+      <trkpt lat="39.793844" lon="2.965372">
+        <ele>49</ele>
+      </trkpt>
+      <trkpt lat="39.793705" lon="2.965183">
+        <ele>48.92</ele>
+      </trkpt>
+      <trkpt lat="39.793627" lon="2.965101">
+        <ele>49.18</ele>
+      </trkpt>
+      <trkpt lat="39.793591" lon="2.965072">
+        <ele>49.52</ele>
+      </trkpt>
+      <trkpt lat="39.793701" lon="2.964955">
+        <ele>49.38</ele>
+      </trkpt>
+      <trkpt lat="39.793769" lon="2.964923">
+        <ele>49.06</ele>
+      </trkpt>
+      <trkpt lat="39.794018" lon="2.964933">
+        <ele>48.79</ele>
+      </trkpt>
+      <trkpt lat="39.794018" lon="2.964933">
+        <ele>48.79</ele>
+      </trkpt>
+      <trkpt lat="39.794068" lon="2.964935">
+        <ele>48.74</ele>
+      </trkpt>
+      <trkpt lat="39.794181" lon="2.964968">
+        <ele>48.94</ele>
+      </trkpt>
+      <trkpt lat="39.794359" lon="2.965072">
+        <ele>48.95</ele>
+      </trkpt>
+      <trkpt lat="39.794619" lon="2.965277">
+        <ele>48.79</ele>
+      </trkpt>
+      <trkpt lat="39.794846" lon="2.965369">
+        <ele>49</ele>
+      </trkpt>
+      <trkpt lat="39.795263" lon="2.965445">
+        <ele>49.04</ele>
+      </trkpt>
+      <trkpt lat="39.795664" lon="2.965496">
+        <ele>50</ele>
+      </trkpt>
+      <trkpt lat="39.796324" lon="2.965402">
+        <ele>51</ele>
+      </trkpt>
+      <trkpt lat="39.796573" lon="2.965387">
+        <ele>51</ele>
+      </trkpt>
+      <trkpt lat="39.796709" lon="2.965276">
+        <ele>51.99</ele>
+      </trkpt>
+      <trkpt lat="39.796878" lon="2.965072">
+        <ele>52</ele>
+      </trkpt>
+      <trkpt lat="39.797013" lon="2.964802">
+        <ele>52</ele>
+      </trkpt>
+      <trkpt lat="39.797133" lon="2.964486">
+        <ele>52</ele>
+      </trkpt>
+      <trkpt lat="39.797401" lon="2.964122">
+        <ele>52.11</ele>
+      </trkpt>
+      <trkpt lat="39.797488" lon="2.964062">
+        <ele>52.72</ele>
+      </trkpt>
+      <trkpt lat="39.797793" lon="2.963952">
+        <ele>54.01</ele>
+      </trkpt>
+      <trkpt lat="39.79854" lon="2.963598">
+        <ele>56.94</ele>
+      </trkpt>
+      <trkpt lat="39.79854" lon="2.963598">
+        <ele>56.94</ele>
+      </trkpt>
+      <trkpt lat="39.798849" lon="2.963415">
+        <ele>58.58</ele>
+      </trkpt>
+      <trkpt lat="39.800071" lon="2.962456">
+        <ele>66.15</ele>
+      </trkpt>
+      <trkpt lat="39.800217" lon="2.962325">
+        <ele>66.91</ele>
+      </trkpt>
+      <trkpt lat="39.800633" lon="2.961966">
+        <ele>72.69</ele>
+      </trkpt>
+      <trkpt lat="39.801049" lon="2.961606">
+        <ele>81.86</ele>
+      </trkpt>
+      <trkpt lat="39.801174" lon="2.96155">
+        <ele>83.93</ele>
+      </trkpt>
+      <trkpt lat="39.801275" lon="2.961548">
+        <ele>84.29</ele>
+      </trkpt>
+      <trkpt lat="39.8016" lon="2.961658">
+        <ele>82.16</ele>
+      </trkpt>
+      <trkpt lat="39.801754" lon="2.961698">
+        <ele>81.78</ele>
+      </trkpt>
+      <trkpt lat="39.801754" lon="2.961698">
+        <ele>81.78</ele>
+      </trkpt>
+      <trkpt lat="39.8016" lon="2.961658">
+        <ele>82.16</ele>
+      </trkpt>
+      <trkpt lat="39.801275" lon="2.961548">
+        <ele>84.29</ele>
+      </trkpt>
+      <trkpt lat="39.801174" lon="2.96155">
+        <ele>83.93</ele>
+      </trkpt>
+      <trkpt lat="39.801049" lon="2.961606">
+        <ele>81.86</ele>
+      </trkpt>
+      <trkpt lat="39.800633" lon="2.961966">
+        <ele>72.69</ele>
+      </trkpt>
+      <trkpt lat="39.800217" lon="2.962325">
+        <ele>66.91</ele>
+      </trkpt>
+      <trkpt lat="39.800071" lon="2.962456">
+        <ele>66.15</ele>
+      </trkpt>
+      <trkpt lat="39.798849" lon="2.963415">
+        <ele>58.58</ele>
+      </trkpt>
+      <trkpt lat="39.798561" lon="2.963586">
+        <ele>57.05</ele>
+      </trkpt>
+      <trkpt lat="39.798552" lon="2.963591">
+        <ele>57</ele>
+      </trkpt>
+      <trkpt lat="39.798527" lon="2.963606">
+        <ele>56.86</ele>
+      </trkpt>
+      <trkpt lat="39.799757" lon="2.964618">
+        <ele>57.58</ele>
+      </trkpt>
+      <trkpt lat="39.800145" lon="2.964979">
+        <ele>57</ele>
+      </trkpt>
+      <trkpt lat="39.800422" lon="2.965273">
+        <ele>57.07</ele>
+      </trkpt>
+      <trkpt lat="39.800678" lon="2.965586">
+        <ele>57.03</ele>
+      </trkpt>
+      <trkpt lat="39.800741" lon="2.965699">
+        <ele>57.1</ele>
+      </trkpt>
+      <trkpt lat="39.801016" lon="2.966197">
+        <ele>57.4</ele>
+      </trkpt>
+      <trkpt lat="39.801076" lon="2.966511">
+        <ele>58</ele>
+      </trkpt>
+      <trkpt lat="39.801118" lon="2.96658">
+        <ele>58</ele>
+      </trkpt>
+      <trkpt lat="39.801259" lon="2.966636">
+        <ele>58.42</ele>
+      </trkpt>
+      <trkpt lat="39.801622" lon="2.96695">
+        <ele>59</ele>
+      </trkpt>
+      <trkpt lat="39.801699" lon="2.966963">
+        <ele>59</ele>
+      </trkpt>
+      <trkpt lat="39.801777" lon="2.96694">
+        <ele>59.35</ele>
+      </trkpt>
+      <trkpt lat="39.801856" lon="2.966884">
+        <ele>59.94</ele>
+      </trkpt>
+      <trkpt lat="39.80192" lon="2.966795">
+        <ele>60</ele>
+      </trkpt>
+      <trkpt lat="39.801933" lon="2.966763">
+        <ele>60</ele>
+      </trkpt>
+      <trkpt lat="39.801973" lon="2.966669">
+        <ele>60</ele>
+      </trkpt>
+      <trkpt lat="39.802037" lon="2.966313">
+        <ele>60.81</ele>
+      </trkpt>
+      <trkpt lat="39.802257" lon="2.965926">
+        <ele>61.97</ele>
+      </trkpt>
+      <trkpt lat="39.802509" lon="2.965622">
+        <ele>62.66</ele>
+      </trkpt>
+      <trkpt lat="39.80262" lon="2.965544">
+        <ele>62.95</ele>
+      </trkpt>
+      <trkpt lat="39.802833" lon="2.96548">
+        <ele>64</ele>
+      </trkpt>
+      <trkpt lat="39.802958" lon="2.965407">
+        <ele>64</ele>
+      </trkpt>
+      <trkpt lat="39.80316" lon="2.965145">
+        <ele>64</ele>
+      </trkpt>
+      <trkpt lat="39.803339" lon="2.964788">
+        <ele>65.17</ele>
+      </trkpt>
+      <trkpt lat="39.803699" lon="2.964342">
+        <ele>67.19</ele>
+      </trkpt>
+      <trkpt lat="39.80384" lon="2.964002">
+        <ele>68.97</ele>
+      </trkpt>
+      <trkpt lat="39.804075" lon="2.96371">
+        <ele>70.64</ele>
+      </trkpt>
+      <trkpt lat="39.804438" lon="2.963025">
+        <ele>73.36</ele>
+      </trkpt>
+      <trkpt lat="39.805087" lon="2.96316">
+        <ele>73.12</ele>
+      </trkpt>
+      <trkpt lat="39.805372" lon="2.963364">
+        <ele>71.77</ele>
+      </trkpt>
+      <trkpt lat="39.805087" lon="2.96316">
+        <ele>73.12</ele>
+      </trkpt>
+      <trkpt lat="39.804438" lon="2.963025">
+        <ele>73.36</ele>
+      </trkpt>
+      <trkpt lat="39.80431" lon="2.962816">
+        <ele>74.03</ele>
+      </trkpt>
+      <trkpt lat="39.803959" lon="2.962503">
+        <ele>72.73</ele>
+      </trkpt>
+      <trkpt lat="39.803904" lon="2.962408">
+        <ele>73.39</ele>
+      </trkpt>
+      <trkpt lat="39.803656" lon="2.961971">
+        <ele>78.88</ele>
+      </trkpt>
+      <trkpt lat="39.802702" lon="2.962046">
+        <ele>77.31</ele>
+      </trkpt>
+      <trkpt lat="39.802195" lon="2.961886">
+        <ele>79.08</ele>
+      </trkpt>
+      <trkpt lat="39.801905" lon="2.96174">
+        <ele>81.37</ele>
+      </trkpt>
+      <trkpt lat="39.801773" lon="2.961703">
+        <ele>81.74</ele>
+      </trkpt>
+      <trkpt lat="39.8016" lon="2.961658">
+        <ele>82.16</ele>
+      </trkpt>
+      <trkpt lat="39.801275" lon="2.961548">
+        <ele>84.29</ele>
+      </trkpt>
+      <trkpt lat="39.801174" lon="2.96155">
+        <ele>83.93</ele>
+      </trkpt>
+      <trkpt lat="39.801049" lon="2.961606">
+        <ele>81.86</ele>
+      </trkpt>
+      <trkpt lat="39.800633" lon="2.961966">
+        <ele>72.69</ele>
+      </trkpt>
+      <trkpt lat="39.800217" lon="2.962325">
+        <ele>66.91</ele>
+      </trkpt>
+      <trkpt lat="39.800071" lon="2.962456">
+        <ele>66.15</ele>
+      </trkpt>
+      <trkpt lat="39.798849" lon="2.963415">
+        <ele>58.58</ele>
+      </trkpt>
+      <trkpt lat="39.798527" lon="2.963606">
+        <ele>56.86</ele>
+      </trkpt>
+      <trkpt lat="39.797793" lon="2.963952">
+        <ele>54.01</ele>
+      </trkpt>
+      <trkpt lat="39.797488" lon="2.964062">
+        <ele>52.72</ele>
+      </trkpt>
+      <trkpt lat="39.797401" lon="2.964122">
+        <ele>52.11</ele>
+      </trkpt>
+      <trkpt lat="39.797133" lon="2.964486">
+        <ele>52</ele>
+      </trkpt>
+      <trkpt lat="39.797013" lon="2.964802">
+        <ele>52</ele>
+      </trkpt>
+      <trkpt lat="39.796878" lon="2.965072">
+        <ele>52</ele>
+      </trkpt>
+      <trkpt lat="39.796709" lon="2.965276">
+        <ele>51.99</ele>
+      </trkpt>
+      <trkpt lat="39.796573" lon="2.965387">
+        <ele>51</ele>
+      </trkpt>
+      <trkpt lat="39.796324" lon="2.965402">
+        <ele>51</ele>
+      </trkpt>
+      <trkpt lat="39.795664" lon="2.965496">
+        <ele>50</ele>
+      </trkpt>
+      <trkpt lat="39.795263" lon="2.965445">
+        <ele>49.04</ele>
+      </trkpt>
+      <trkpt lat="39.794846" lon="2.965369">
+        <ele>49</ele>
+      </trkpt>
+      <trkpt lat="39.794619" lon="2.965277">
+        <ele>48.79</ele>
+      </trkpt>
+      <trkpt lat="39.794359" lon="2.965072">
+        <ele>48.95</ele>
+      </trkpt>
+      <trkpt lat="39.794181" lon="2.964968">
+        <ele>48.94</ele>
+      </trkpt>
+      <trkpt lat="39.794068" lon="2.964935">
+        <ele>48.74</ele>
+      </trkpt>
+      <trkpt lat="39.793769" lon="2.964923">
+        <ele>49.06</ele>
+      </trkpt>
+      <trkpt lat="39.793701" lon="2.964955">
+        <ele>49.38</ele>
+      </trkpt>
+      <trkpt lat="39.793591" lon="2.965072">
+        <ele>49.52</ele>
+      </trkpt>
+      <trkpt lat="39.793627" lon="2.965101">
+        <ele>49.18</ele>
+      </trkpt>
+      <trkpt lat="39.793705" lon="2.965183">
+        <ele>48.92</ele>
+      </trkpt>
+      <trkpt lat="39.793844" lon="2.965372">
+        <ele>49</ele>
+      </trkpt>
+      <trkpt lat="39.794035" lon="2.965578">
+        <ele>49</ele>
+      </trkpt>
+      <trkpt lat="39.793019" lon="2.96694">
+        <ele>47.93</ele>
+      </trkpt>
+      <trkpt lat="39.792659" lon="2.967393">
+        <ele>47.91</ele>
+      </trkpt>
+      <trkpt lat="39.792406" lon="2.96774">
+        <ele>47.44</ele>
+      </trkpt>
+      <trkpt lat="39.792321" lon="2.967867">
+        <ele>47.34</ele>
+      </trkpt>
+      <trkpt lat="39.792106" lon="2.968412">
+        <ele>47.58</ele>
+      </trkpt>
+    </trkseg>
+  </trk>
+</gpx>

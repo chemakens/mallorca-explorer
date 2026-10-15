@@ -1,0 +1,22 @@
+{
+  "_comment": "Valores finales por ruta que el importador NO debe recalcular (los fija el usuario). Se aplican en import_hiking_gpx.py tras calcular la geometría. Claves por place_id.",
+  "puig-ofre": {
+    "total_distance_km": 13.14,
+    "route_type": "OUT_AND_BACK",
+    "ascent_m": 1200,
+    "descent_m": 1200,
+    "_note": "Subida por el barranco (~4,2 km) hasta el collado + bucle de ~4,7 km por la cima + bajada por el mismo camino (~4,2 km). Se dibuja ida+bucle (~8,94 km); la bajada coincide con la subida y no se dibuja. Distancia total y desnivel ida+vuelta fijados a mano."
+  },
+  "ruta-cala-boquer": {
+    "duration_hours": "2,5 h",
+    "_note": "Duración decidida por el usuario (sobrescribe el 3,5 h del GPX)."
+  },
+  "la-comuna-bunyola": {
+    "duration_hours": "4,5 h",
+    "_note": "Duración decidida por el usuario (sobrescribe el 3 h del GPX)."
+  },
+  "ruta-cala-varques": {
+    "duration_hours": "4 h",
+    "_note": "Duración decidida por el usuario (sobrescribe el 3,5 h del GPX)."
+  }
+}
