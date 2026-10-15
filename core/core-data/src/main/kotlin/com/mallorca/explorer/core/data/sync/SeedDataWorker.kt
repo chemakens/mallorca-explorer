@@ -109,7 +109,7 @@ class SeedDataWorker @AssistedInject constructor(
     }
 
     companion object {
-        const val CURRENT_SEED_VERSION = 400
+        const val CURRENT_SEED_VERSION = 421
 
         // Places removed from seed_data.json that must be deleted from the local DB.
         // Add new IDs here whenever a place is retired from the seed.
@@ -128,6 +128,34 @@ class SeedDataWorker @AssistedInject constructor(
             "gtrentals-motorworld",
             "gem-mirador-sestaca",
             "punta-negra-sant-vicenc",
+            // Duplicados retirados de Firestore y del seed (2026-10-01): 13 gemelos + estudi-miro.
+            "can-prunera",
+            "palau-solleric",
+            "la-seu",
+            "museu-mallorca-cap-de-bou",
+            "son-marroig-deia",
+            "puig-de-maria-pollenca",
+            "puig-de-lofre",
+            "coves-del-drach",
+            "torre-de-ses-animes",
+            "santuari-de-lluc",
+            "far-cap-de-ses-salnes",
+            "es-baluard-interior",
+            "port-de-valldemossa",
+            "estudi-miro",
+            // Duplicados/limpieza v82 (2026-10-02): se conserva la gema o la ficha BEACH correcta.
+            "mirador-ses-animes",      // = gem-torre-verger (gema)
+            "llucalcari",              // = cala-llucalcari (gema); además mal ubicado
+            "cala-mondrago",           // = cala-mondrag (se conserva la playa BEACH)
+            "llaut-cala-sant-vicenc",  // un llaüt es una embarcación, no un lugar
+            "sant-elm",                // = playa-sant-elm (ya existe la playa)
+            // Duplicados v83 (2026-10-02): se conserva la ficha más completa.
+            "castell-dalaro",          // = castell-alaro (se conserva el de HIKING, mucho más completo)
+            "port-de-manacor",         // = porto-cristo (mismo núcleo: Porto Cristo es el puerto de Manacor)
+            // Unificación v87 (2026-10-03): mismo lugar, se conserva la cumbre.
+            "torrent-de-lofre",        // = puig-ofre (Torrent y Puig de l'Ofre son el mismo sitio)
+            // Unificación v89 (2026-10-05): mismo lugar (la cima del Puig de Maria), se conserva puig-de-maria.
+            "pollenca-des-del-puig-de-maria",  // = puig-de-maria (la vista de Pollença desde la cima)
         )
 
         // Itineraries removed from seed_data.json that must be deleted from the local DB.
@@ -137,6 +165,8 @@ class SeedDataWorker @AssistedInject constructor(
             "itin-lrt-tramuntana-oeste",
             "itin-lrt-tramuntana-norte",
             "itin-lrt-sierra-tramuntana",
+            // Fusionado como variante "norte" de itin-sup-portals-vells (alias en NavHost).
+            "itin-sup-portals-vells-nord",
         )
 
         // Events removed from seed_data.json (past events, duplicates) that must be
@@ -167,7 +197,26 @@ class SeedDataWorker @AssistedInject constructor(
         val url: String,
         val source: String = "OTHER",
         val author: String? = null,
+        val source_name: String? = null,
         val heroFocalY: Float? = null,
+        val caption: String? = null,
+        val caption_es: String? = null,
+        val caption_de: String? = null,
+    )
+
+    @Serializable data class SeedBeachFeatures(
+        val surface: String? = null,
+        val shade: Boolean? = null,
+        val showers: Boolean? = null,
+        val food: Boolean? = null,
+        val lifeguard: Boolean? = null,
+        val accessible: Boolean? = null,
+        val parking: Boolean? = null,
+        val pets: String? = null,
+        val pets_note: String? = null,
+        val pets_note_es: String? = null,
+        val pets_note_de: String? = null,
+        val no_services_confirmed: Boolean? = null,
     )
 
     @Serializable data class SeedPlace(
@@ -186,6 +235,8 @@ class SeedDataWorker @AssistedInject constructor(
         val website: String? = null, val phone_number: String? = null,
         val ticket_url: String? = null,
         val gem_access: List<String> = emptyList(),
+        val marker_type: String? = null,
+        val beach_features: SeedBeachFeatures? = null,
     ) {
         fun toEntity(): PlaceEntity {
             val photoImagesJson = Json.encodeToString(
@@ -210,6 +261,10 @@ class SeedDataWorker @AssistedInject constructor(
                 tagsJson = Json.encodeToString(ListSerializer(String.serializer()), tags),
                 website = website, phoneNumber = phone_number,
                 ticketUrl = ticket_url,
+                markerType = marker_type?.uppercase(),
+                beachFeaturesJson = beach_features?.let {
+                    Json.encodeToString(SeedBeachFeatures.serializer(), it)
+                },
                 gemAccessJson = Json.encodeToString(ListSerializer(String.serializer()), gem_access),
                 lastUpdatedEpoch = Instant.now().toEpochMilli(),
             )
@@ -248,6 +303,7 @@ class SeedDataWorker @AssistedInject constructor(
         val note: String = "", val note_es: String = "", val note_de: String = "",
         val distance_from_prev_km: Float = 0f, val conditional: Boolean = false,
         val condition_note: String = "", val condition_note_es: String = "", val condition_note_de: String = "",
+        val type: String = "OTHER",
     )
 
     @Serializable data class SeedPolylinePoint(
@@ -255,9 +311,22 @@ class SeedDataWorker @AssistedInject constructor(
         val lng: Double = 0.0,
     )
 
+    @Serializable data class SeedRouteVariant(
+        val id: String = "",
+        val label: String = "",
+        val label_es: String = "",
+        val label_de: String = "",
+        val polyline_points: List<SeedPolylinePoint> = emptyList(),
+        val distance_km: Float? = null,
+        val difficulty: String? = null,
+        val duration_hours: String? = null,
+        val color: String? = null,
+    )
+
     @Serializable data class SeedItinerary(
         val id: String, val title: String, val description: String = "",
         val category: String, val duration_days: Int = 1,
+        val duration_hours: String? = null,
         val difficulty: String? = null, val cover_photo: SeedPhotoUrl = SeedPhotoUrl(""),
         val total_distance_km: Float? = null,
         val highlights: List<String> = emptyList(),
@@ -271,6 +340,14 @@ class SeedDataWorker @AssistedInject constructor(
         val route_waypoints: List<SeedRouteWaypoint> = emptyList(),
         val route_polyline_points: List<SeedPolylinePoint> = emptyList(),
         val gallery_photos: List<SeedPhotoUrl> = emptyList(),
+        val route_track_reviewed: Boolean = false,
+        val route_variants: List<SeedRouteVariant> = emptyList(),
+        val route_type: String? = null,
+        val ascent_m: Int? = null,
+        val descent_m: Int? = null,
+        val access_warning: String? = null,
+        val access_warning_es: String? = null,
+        val access_warning_de: String? = null,
     ) {
         fun toEntity(): ItineraryEntity {
             val j = Json
@@ -292,6 +369,15 @@ class SeedDataWorker @AssistedInject constructor(
                 routeWaypointsJson = j.encodeToString(ListSerializer(SeedRouteWaypoint.serializer()), route_waypoints),
                 routePolylinePointsJson = j.encodeToString(ListSerializer(SeedPolylinePoint.serializer()), route_polyline_points),
                 galleryPhotosJson = j.encodeToString(ListSerializer(SeedPhotoUrl.serializer()), gallery_photos),
+                routeTrackReviewed = route_track_reviewed,
+                durationHoursText = duration_hours,
+                routeVariantsJson = j.encodeToString(ListSerializer(SeedRouteVariant.serializer()), route_variants),
+                routeType = route_type,
+                ascentM = ascent_m,
+                descentM = descent_m,
+                accessWarning = access_warning,
+                accessWarningEs = access_warning_es,
+                accessWarningDe = access_warning_de,
             )
         }
     }
