@@ -30,3 +30,12 @@ tools/aetib_photos/
 
 # Backups/scripts sacados de app/src/main/assets/ (v83): no deben ir en el AAB ni bloatear el repo
 tools/backups_assets/
+
+# Copias de seguridad del seed y de traducciones (voluminosas, no van al repo)
+tools/seed_data_backup_*.json
+tools/hiking_translations_backup_*.json
+
+# Config local del editor y caches de Python
+.claude/settings.local.json
+__pycache__/
+*.pyc
