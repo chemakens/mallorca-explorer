@@ -75,7 +75,10 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.annotation.DrawableRes
+import androidx.compose.foundation.Image
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
@@ -93,7 +96,9 @@ import com.mallorca.explorer.core.ui.component.PlaceCardSkeleton
 import com.mallorca.explorer.core.domain.model.Event
 import com.mallorca.explorer.core.domain.model.EventCategory
 import com.mallorca.explorer.core.domain.model.Itinerary
+import com.mallorca.explorer.core.domain.model.durationLabel
 import com.mallorca.explorer.core.domain.model.Place
+import com.mallorca.explorer.core.domain.model.localizedName
 import com.mallorca.explorer.core.domain.model.SUPTrafficLight
 import com.mallorca.explorer.core.domain.model.WeatherCondition
 import com.mallorca.explorer.core.domain.model.WeatherSummary
@@ -383,9 +388,9 @@ fun ExploreScreen(
                                 item {
                                     SUPSection(
                                         weather = weather,
-                                        supPlaces = uiState.supPlaces,
+                                        supRoutes = uiState.supRoutes,
                                         locale = uiState.locale,
-                                        onPlaceClick = onPlaceClick,
+                                        onItineraryClick = onItineraryClick,
                                         modifier = Modifier.padding(horizontal = 16.dp),
                                     )
                                 }
@@ -547,13 +552,7 @@ fun ExploreScreen(
 
 @Composable
 private fun RecentPlaceCard(place: Place, locale: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
-    val displayName = when (locale) {
-        "es" -> place.nameEs.ifEmpty { place.name }
-        "de" -> place.nameDe.ifEmpty { place.name }
-        "ru" -> place.nameRu.ifEmpty { place.name }
-        "zh" -> place.nameZh.ifEmpty { place.name }
-        else -> place.name
-    }
+    val displayName = place.localizedName(locale)
     Card(
         modifier = modifier
             .width(120.dp)
@@ -604,6 +603,19 @@ private fun ExploreLoadingSkeleton() {
     }
 }
 
+// Icono ilustrado de cada categoría para la cuadrícula de Explorar (v79).
+// Solo afecta a esta cuadrícula; los emoji (Category.emoji) siguen usándose en el resto de la app.
+@DrawableRes
+private fun Category.gridIconRes(): Int = when (this) {
+    Category.BEACH -> R.drawable.ic_cat_beach
+    Category.HIKING -> R.drawable.ic_cat_hiking
+    Category.CULTURE -> R.drawable.ic_cat_culture
+    Category.GASTRONOMY -> R.drawable.ic_cat_gastronomy
+    Category.TOWN -> R.drawable.ic_cat_town
+    Category.VIEWPOINT -> R.drawable.ic_cat_viewpoint
+    Category.SUP -> R.drawable.ic_cat_sup
+}
+
 @Composable
 private fun CategoryGrid(
     onCategoryClick: (String) -> Unit,
@@ -627,7 +639,12 @@ private fun CategoryGrid(
                                 .background(MaterialTheme.colorScheme.primaryContainer),
                             contentAlignment = Alignment.Center,
                         ) {
-                            Text(cat.emoji, style = MaterialTheme.typography.titleLarge)
+                            Image(
+                                painter = painterResource(cat.gridIconRes()),
+                                contentDescription = categoryLabel(cat),
+                                contentScale = ContentScale.Fit,
+                                modifier = Modifier.size(32.dp),
+                            )
                         }
                         Spacer(Modifier.height(4.dp))
                         Text(categoryLabel(cat), style = MaterialTheme.typography.labelSmall)
@@ -665,14 +682,14 @@ private fun ItineraryCard(itinerary: Itinerary, onClick: () -> Unit, modifier: M
             }
             Column(modifier = Modifier.align(Alignment.BottomStart).padding(12.dp)) {
                 Text(itinerary.title, style = MaterialTheme.typography.labelLarge, fontWeight = FontWeight.Bold, color = Color.White, maxLines = 2)
-                Text("⏱ ${itinerary.durationDays}d · 📍 ${itinerary.places.size} stops", style = MaterialTheme.typography.labelSmall, color = Color.White.copy(alpha = 0.9f))
+                Text("⏱ ${itinerary.durationLabel()} · 📍 ${itinerary.places.size} stops", style = MaterialTheme.typography.labelSmall, color = Color.White.copy(alpha = 0.9f))
             }
         }
     }
 }
 
 @Composable
-private fun SUPSection(weather: WeatherCondition, supPlaces: ImmutableList<Place>, locale: String, onPlaceClick: (String) -> Unit, modifier: Modifier = Modifier) {
+private fun SUPSection(weather: WeatherCondition, supRoutes: ImmutableList<Itinerary>, locale: String, onItineraryClick: (String) -> Unit, modifier: Modifier = Modifier) {
     val windKnots = weather.windKnots
     val light: SUPTrafficLight = when { windKnots > 10f -> SUPTrafficLight.RED; windKnots > 5f -> SUPTrafficLight.YELLOW; else -> SUPTrafficLight.GREEN }
     val cardBg = when (light) { SUPTrafficLight.GREEN -> Color(0xFFE8F5E9); SUPTrafficLight.YELLOW -> Color(0xFFFFFDE7); SUPTrafficLight.RED -> Color(0xFFFFEBEE) }
@@ -704,17 +721,26 @@ private fun SUPSection(weather: WeatherCondition, supPlaces: ImmutableList<Place
                 Text(stringResource(R.string.explore_sup_full_analysis), style = MaterialTheme.typography.labelSmall, color = accentColor.copy(alpha = 0.75f))
             }
         }
-        if (supPlaces.isNotEmpty()) {
+        if (supRoutes.isNotEmpty()) {
+            // Cada zona SUP es ahora una RUTA: tarjeta pequeña con foto que abre el detalle tipo Malgrats.
             LazyRow(horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                items(supPlaces, key = { it.id }) { place ->
-                    Card(modifier = Modifier.width(150.dp).clickable { onPlaceClick(place.id) }, shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant), elevation = CardDefaults.cardElevation(0.dp)) {
-                        Column(modifier = Modifier.padding(10.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
-                            Text("🏄", style = MaterialTheme.typography.bodyLarge)
-                            Text(
-                                (when (locale) { "es" -> place.nameEs.ifEmpty { place.name }; "de" -> place.nameDe.ifEmpty { place.name }; "ru" -> place.nameRu.ifEmpty { place.name }; "zh" -> place.nameZh.ifEmpty { place.name }; else -> place.name }).removePrefix("SUP "),
-                                style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.SemiBold, maxLines = 2,
-                            )
-                            Text(place.municipality, style = MaterialTheme.typography.labelSmall, color = MaterialTheme.colorScheme.onSurfaceVariant)
+                items(supRoutes, key = { it.id }) { route ->
+                    Card(modifier = Modifier.width(160.dp).clickable { onItineraryClick(route.id) }, shape = RoundedCornerShape(12.dp), colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant), elevation = CardDefaults.cardElevation(0.dp)) {
+                        Column(verticalArrangement = Arrangement.spacedBy(0.dp)) {
+                            if (route.coverPhoto.url.isNotEmpty()) {
+                                AsyncImage(
+                                    model = route.coverPhoto.url,
+                                    contentDescription = route.title,
+                                    contentScale = ContentScale.Crop,
+                                    modifier = Modifier.fillMaxWidth().height(90.dp),
+                                )
+                            }
+                            Column(modifier = Modifier.padding(10.dp), verticalArrangement = Arrangement.spacedBy(2.dp)) {
+                                Text(
+                                    "🏄 ${route.title.removePrefix("SUP ")}",
+                                    style = MaterialTheme.typography.labelMedium, fontWeight = FontWeight.SemiBold, maxLines = 2,
+                                )
+                            }
                         }
                     }
                 }

@@ -55,8 +55,21 @@ import java.util.Locale
 fun EventsScreen(
     modifier: Modifier = Modifier,
     viewModel: ExploreViewModel = hiltViewModel(),
+    initialFilter: String? = null,
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
+
+    // Aplicar filtro inicial si se proporciona
+    androidx.compose.runtime.LaunchedEffect(initialFilter) {
+        when (initialFilter) {
+            "tomorrow" -> viewModel.setEventTimeFilter(EventTimeFilter.TOMORROW)
+            "today" -> viewModel.setEventTimeFilter(EventTimeFilter.TODAY)
+            "this_weekend" -> viewModel.setEventTimeFilter(EventTimeFilter.THIS_WEEKEND)
+            "this_week" -> viewModel.setEventTimeFilter(EventTimeFilter.THIS_WEEK)
+            "this_month" -> viewModel.setEventTimeFilter(EventTimeFilter.THIS_MONTH)
+            "next_month" -> viewModel.setEventTimeFilter(EventTimeFilter.NEXT_MONTH)
+        }
+    }
 
     Scaffold(
         topBar = {

@@ -81,6 +81,7 @@ import kotlinx.coroutines.delay
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.core.domain.model.Place
+import com.mallorca.explorer.core.domain.model.localizedName
 import com.mallorca.explorer.core.domain.model.UserTripStop
 import com.mallorca.explorer.core.ui.component.PlaceCard
 
@@ -350,7 +351,7 @@ private fun StopItem(
             }
             Spacer(Modifier.size(10.dp))
             Column(modifier = Modifier.weight(1f)) {
-                Text(stop.place.name, style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
+                Text(stop.place.localizedName(com.mallorca.explorer.core.ui.locale.LocalAppLocale.current), style = MaterialTheme.typography.bodyMedium, fontWeight = FontWeight.Bold)
                 Text(
                     "${stop.place.category.emoji} ${stop.place.category.displayName} · ~${stop.suggestedDurationMinutes / 60}h",
                     style = MaterialTheme.typography.labelSmall,

@@ -72,6 +72,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.LocalHapticFeedback
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
@@ -79,14 +80,25 @@ import kotlinx.coroutines.launch
 import coil.compose.AsyncImagePainter
 import coil.compose.SubcomposeAsyncImage
 import coil.compose.SubcomposeAsyncImageContent
+import com.mallorca.explorer.core.domain.model.BeachFeatures
+import com.mallorca.explorer.core.domain.model.BeachSurface
+import com.mallorca.explorer.core.domain.model.Category
 import com.mallorca.explorer.core.domain.model.Discount
+import com.mallorca.explorer.core.domain.model.PetPolicy
 import com.mallorca.explorer.core.domain.model.Place
+import com.mallorca.explorer.core.domain.model.localizedCaption
+import com.mallorca.explorer.core.domain.model.localizedPetsNote
+import com.mallorca.explorer.core.domain.model.localizedName
+import com.mallorca.explorer.core.domain.model.localizedDescription
+import com.mallorca.explorer.core.domain.model.localizedTips
 import com.mallorca.explorer.core.domain.model.attributionText
 import com.mallorca.explorer.core.domain.model.SUPTrafficLight
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
 import com.mallorca.explorer.core.data.BuildConfig
 import com.mallorca.explorer.core.domain.model.WeatherCondition
 import com.mallorca.explorer.core.domain.model.WindCategory
+import com.mallorca.explorer.core.ui.component.SupConditionsCard
+import com.mallorca.explorer.core.ui.component.buildWindyUrl
 import kotlinx.collections.immutable.ImmutableList
 import kotlinx.collections.immutable.persistentListOf
 import kotlinx.collections.immutable.toImmutableList
@@ -103,6 +115,8 @@ fun PlaceDetailScreen(
     onAddToTrip: () -> Unit,
     modifier: Modifier = Modifier,
     viewModel: PlaceDetailViewModel = hiltViewModel(),
+    // Senderismo: si este lugar tiene una ruta (itinerario), abre su ficha de ruta.
+    onViewRoute: (() -> Unit)? = null,
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
     val scope = rememberCoroutineScope()
@@ -199,6 +213,7 @@ fun PlaceDetailScreen(
                 onFavoriteToggle = viewModel::onFavoriteToggled,
                 onVisitedToggle = viewModel::onVisitedToggled,
                 onAddToTrip = onAddToTrip,
+                onViewRoute = onViewRoute,
                 modifier = Modifier.graphicsLayer { translationX = offsetX.value },
             )
         }
@@ -219,6 +234,7 @@ private fun PlaceDetailContent(
     onFavoriteToggle: () -> Unit,
     onVisitedToggle: () -> Unit = {},
     onAddToTrip: () -> Unit,
+    onViewRoute: (() -> Unit)? = null,
     modifier: Modifier = Modifier,
 ) {
     val context = LocalContext.current
@@ -391,6 +407,24 @@ private fun PlaceDetailContent(
                     }
                 }
             }
+            // Pie de foto (es/en/de): chip arriba-centro, para no tapar los puntos del carrusel
+            // (abajo-centro), la atribución (abajo-dcha), los botones (esquinas) ni el sujeto.
+            place.photoUrls.getOrNull(pagerState.currentPage)?.localizedCaption(locale)?.let { caption ->
+                Text(
+                    text = caption,
+                    color = Color.White,
+                    style = MaterialTheme.typography.labelMedium,
+                    fontWeight = FontWeight.SemiBold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis,
+                    modifier = Modifier
+                        .align(Alignment.TopCenter)
+                        .padding(top = 14.dp, start = 64.dp, end = 64.dp)
+                        .clip(RoundedCornerShape(8.dp))
+                        .background(Color.Black.copy(alpha = 0.45f))
+                        .padding(horizontal = 10.dp, vertical = 4.dp),
+                )
+            }
             // Image attribution overlay
             if (place.photoUrls.isNotEmpty()) {
                 val attribution = place.photoUrls[pagerState.currentPage].attributionText()
@@ -458,6 +492,13 @@ private fun PlaceDetailContent(
                 Text(displayDescription, style = MaterialTheme.typography.bodyMedium)
             }
 
+            // Características de playa (solo playas con datos; sin filtros, solo informativo).
+            val beachFeatures = place.beachFeatures
+            if (place.category == Category.BEACH && beachFeatures != null && beachFeatures.hasAny) {
+                Spacer(Modifier.height(16.dp))
+                BeachFeaturesCard(features = beachFeatures, locale = locale)
+            }
+
             // Hidden gem badge
             if (isHiddenGem) {
                 Spacer(Modifier.height(8.dp))
@@ -505,24 +546,32 @@ private fun PlaceDetailContent(
                 }
             }
 
-            // Beach conditions card (only for beach places with marine data)
-            if (weather != null && (weather.waveHeightM != null || weather.seaTempC != null)) {
+            // Condiciones de playa: SOLO para playas NO-SUP con datos marinos.
+            // Los lugares SUP usan la tarjeta unificada (incluye estos datos sin repetir).
+            if (!isSUPPlace && weather != null && (weather.waveHeightM != null || weather.seaTempC != null)) {
                 Spacer(Modifier.height(16.dp))
                 BeachConditionsCard(weather = weather)
             }
 
-            // SUP traffic light card
+            // Lugar SUP: tarjeta unificada de estado del mar (con botón de mapa de viento dentro),
+            // o tarjeta de carga mientras llega el dato.
             if (isSUPPlace) {
                 Spacer(Modifier.height(16.dp))
                 if (supStatus != null) {
-                    SUPTrafficLightCard(status = supStatus)
+                    SupConditionsCard(
+                        status = supStatus,
+                        airTempC = weather?.tempC,
+                        windMapLat = place.location.latitude,
+                        windMapLng = place.location.longitude,
+                    )
                 } else {
                     SUPLoadingCard()
                 }
             }
 
-            // Botón de mapa de olas (solo para lugares con actividad SUP)
-            if (hasSUPActivity) {
+            // Botón de mapa de viento SOLO para actividad SUP que NO es un lugar SUP con tarjeta
+            // (esos ya lo llevan dentro de la tarjeta unificada).
+            if (hasSUPActivity && !isSUPPlace) {
                 Spacer(Modifier.height(12.dp))
                 OutlinedButton(
                     onClick = {
@@ -594,6 +643,19 @@ private fun PlaceDetailContent(
                 Text(stringResource(R.string.place_get_directions))
             }
 
+            onViewRoute?.let { viewRoute ->
+                Spacer(Modifier.height(8.dp))
+                Button(
+                    onClick = viewRoute,
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.secondary),
+                ) {
+                    Icon(Icons.Outlined.Directions, null)
+                    Spacer(Modifier.size(8.dp))
+                    Text(stringResource(R.string.place_view_route))
+                }
+            }
+
             Spacer(Modifier.height(8.dp))
             Button(
                 onClick = onAddToTrip,
@@ -617,6 +679,113 @@ private fun PlaceDetailContent(
 }
 
 private fun Color(value: Long) = Color(value.toULong())
+
+@Composable
+private fun BeachFeaturesCard(
+    features: BeachFeatures,
+    locale: String,
+    modifier: Modifier = Modifier,
+) {
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(16.dp),
+        elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
+    ) {
+        Column(modifier = Modifier.padding(14.dp), verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Text(
+                stringResource(R.string.beach_features_title),
+                style = MaterialTheme.typography.titleSmall,
+                fontWeight = FontWeight.Bold,
+            )
+            // Tipo de suelo: siempre que haya dato (descriptivo).
+            features.surface?.let { surface ->
+                val surfaceLabel = stringResource(
+                    when (surface) {
+                        BeachSurface.FINE_SAND -> R.string.beach_surface_fine_sand
+                        BeachSurface.SAND -> R.string.beach_surface_sand
+                        BeachSurface.GRAVEL -> R.string.beach_surface_gravel
+                        BeachSurface.PEBBLES -> R.string.beach_surface_pebbles
+                        BeachSurface.ROCK -> R.string.beach_surface_rock
+                        BeachSurface.MIXED -> R.string.beach_surface_mixed
+                    }
+                )
+                BeachFeatureRow("🏖️", stringResource(R.string.beach_feature_surface), surfaceLabel)
+            }
+            if (features.noServicesConfirmed == true) {
+                // Playa sin servicios confirmada: una sola línea de aviso útil.
+                Row(verticalAlignment = Alignment.Top, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("⚠️", style = MaterialTheme.typography.bodyMedium)
+                    Text(
+                        stringResource(R.string.beach_features_no_services),
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            } else {
+                // Solo si son positivos: sombra, duchas, comida.
+                val yes = stringResource(R.string.beach_feature_yes)
+                if (features.shade == true) BeachFeatureRow("⛱️", stringResource(R.string.beach_feature_shade), yes)
+                if (features.showers == true) BeachFeatureRow("🚿", stringResource(R.string.beach_feature_showers), yes)
+                if (features.food == true) BeachFeatureRow("🍽️", stringResource(R.string.beach_feature_food), yes)
+            }
+            // Siempre (positivo o negativo) si hay dato: socorrista, accesibilidad, parking.
+            features.lifeguard?.let { BeachFeatureYesNo("🛟", stringResource(R.string.beach_feature_lifeguard), it) }
+            features.accessible?.let { BeachFeatureYesNo("♿", stringResource(R.string.beach_feature_accessible), it) }
+            features.parking?.let { BeachFeatureYesNo("🅿️", stringResource(R.string.beach_feature_parking), it) }
+            // Mascotas: siempre si hay dato, con aviso de normativa municipal (y nota si la hay).
+            features.pets?.let { policy ->
+                val policyLabel = stringResource(
+                    when (policy) {
+                        PetPolicy.ALLOWED -> R.string.beach_pets_allowed
+                        PetPolicy.PROHIBITED -> R.string.beach_pets_prohibited
+                        PetPolicy.SEASONAL -> R.string.beach_pets_seasonal
+                    }
+                )
+                val note = features.localizedPetsNote(locale)
+                Row(verticalAlignment = Alignment.Top, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                    Text("🐕", style = MaterialTheme.typography.bodyMedium)
+                    Column(modifier = Modifier.weight(1f)) {
+                        Text(
+                            "${stringResource(R.string.beach_feature_pets)}: $policyLabel",
+                            style = MaterialTheme.typography.bodySmall,
+                        )
+                        Text(
+                            buildString {
+                                if (!note.isNullOrBlank()) append(note).append(" · ")
+                                append(stringResource(R.string.beach_pets_check_rules))
+                            },
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        )
+                    }
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun BeachFeatureRow(emoji: String, label: String, value: String) {
+    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(emoji, style = MaterialTheme.typography.bodyMedium)
+        Text(label, style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+        Text(value, style = MaterialTheme.typography.bodySmall, fontWeight = FontWeight.SemiBold)
+    }
+}
+
+@Composable
+private fun BeachFeatureYesNo(emoji: String, label: String, value: Boolean) {
+    Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+        Text(emoji, style = MaterialTheme.typography.bodyMedium)
+        Text(label, style = MaterialTheme.typography.bodySmall, modifier = Modifier.weight(1f))
+        Text(
+            if (value) "✓ ${stringResource(R.string.beach_feature_yes)}" else "✗ ${stringResource(R.string.beach_feature_no)}",
+            style = MaterialTheme.typography.bodySmall,
+            fontWeight = FontWeight.SemiBold,
+            color = if (value) Color(0xFF2E7D32) else Color(0xFFC62828),
+        )
+    }
+}
 
 @Composable
 private fun BeachConditionsCard(
@@ -1243,30 +1412,6 @@ private fun ExplorerCodeOfConductScreen(
     }
 }
 
-private fun Place.localizedName(locale: String) = when (locale) {
-    "es" -> nameEs.ifEmpty { name }
-    "de" -> nameDe.ifEmpty { name }
-    "ru" -> nameRu.ifEmpty { name }
-    "zh" -> nameZh.ifEmpty { name }
-    else -> name
-}
-
-private fun Place.localizedDescription(locale: String) = when (locale) {
-    "es" -> descriptionEs.ifEmpty { description }
-    "de" -> descriptionDe.ifEmpty { description }
-    "ru" -> descriptionRu.ifEmpty { description }
-    "zh" -> descriptionZh.ifEmpty { description }
-    else -> description
-}
-
-private fun Place.localizedTips(locale: String) = when (locale) {
-    "es" -> tipsEs.ifEmpty { tips }
-    "de" -> tipsDe.ifEmpty { tips }
-    "ru" -> tipsRu.ifEmpty { tips }
-    "zh" -> tipsZh.ifEmpty { tips }
-    else -> tips
-}
-
 private fun windCardinal(deg: Int, locale: String): String {
     val i = ((deg + 22.5) / 45).toInt() % 8
     return when (locale) {
@@ -1276,22 +1421,3 @@ private fun windCardinal(deg: Int, locale: String): String {
     }
 }
 
-private fun buildWindyUrl(latitude: Double, longitude: Double): String {
-    return "https://embed.windy.com/embed2.html?" +
-        "lat=$latitude&" +
-        "lon=$longitude&" +
-        "zoom=11&" +
-        "level=surface&" +
-        "overlay=wind&" +
-        "menu=&" +
-        "message=&" +
-        "marker=&" +
-        "calendar=&" +
-        "pressure=&" +
-        "type=map&" +
-        "location=coordinates&" +
-        "detail=&" +
-        "metricWind=km/h&" +
-        "metricTemp=%C2%B0C&" +
-        "radarRange=-1"
-}

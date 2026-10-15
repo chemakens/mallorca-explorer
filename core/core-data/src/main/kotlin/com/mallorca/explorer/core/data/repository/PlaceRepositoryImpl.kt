@@ -31,17 +31,24 @@ class PlaceRepositoryImpl @Inject constructor(
     private val strListSerializer = ListSerializer(String.serializer())
     private fun List<String>.toJson() = json.encodeToString(strListSerializer, this)
 
+    // Los lugares SUP (sup-*) ya no se muestran como ficha propia: cada zona SUP se
+    // representa por su RUTA (itinerario). Por eso se ocultan de los listados, la búsqueda
+    // y los lugares cercanos. getPlaceById NO se filtra: así los stops de los itinerarios
+    // (p. ej. itin-sup-4-calas-sant-vicenc usa sup-sant-vicenc) siguen resolviéndose y un
+    // favorito/enlace antiguo a un sup-* puede redirigirse a su ruta (ver SUP_PLACE_TO_ROUTE).
+    private fun List<Place>.hideSup() = filter { it.category != Category.SUP }
+
     override fun getAllPlaces(): Flow<List<Place>> =
-        placeDao.getAllPlaces().map { entities -> entities.map { it.toDomain() } }
+        placeDao.getAllPlaces().map { entities -> entities.map { it.toDomain() }.hideSup() }
 
     override fun getPlacesByCategory(category: Category): Flow<List<Place>> =
-        placeDao.getPlacesByCategory(category.name).map { entities -> entities.map { it.toDomain() } }
+        placeDao.getPlacesByCategory(category.name).map { entities -> entities.map { it.toDomain() }.hideSup() }
 
     override fun getPlaceById(id: String): Flow<Place?> =
         placeDao.getPlaceById(id).map { it?.toDomain() }
 
     override fun searchPlaces(query: String): Flow<List<Place>> =
-        placeDao.searchPlaces(query).map { entities -> entities.map { it.toDomain() } }
+        placeDao.searchPlaces(query).map { entities -> entities.map { it.toDomain() }.hideSup() }
 
     override fun getNearbyPlaces(center: LatLng, radiusKm: Double): Flow<List<Place>> {
         val latDelta = radiusKm / 111.0
@@ -53,6 +60,7 @@ class PlaceRepositoryImpl @Inject constructor(
             lngMax = center.longitude + lngDelta,
         ).map { entities ->
             entities.map { it.toDomain() }
+                .hideSup()
                 .filter { haversineKm(center, it.location) <= radiusKm }
                 .sortedBy { haversineKm(center, it.location) }
         }

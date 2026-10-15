@@ -28,6 +28,7 @@ import androidx.compose.material.icons.outlined.RadioButtonUnchecked
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.Surface
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.ui.layout.ContentScale
 import coil.compose.AsyncImagePainter
@@ -49,18 +50,29 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
+import androidx.compose.ui.BiasAlignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.platform.LocalConfiguration
+import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.mallorca.explorer.core.domain.model.Itinerary
 import com.mallorca.explorer.core.domain.model.ItineraryStop
+import com.mallorca.explorer.core.domain.model.durationLabel
+import com.mallorca.explorer.core.domain.model.localizedCaption
+import com.mallorca.explorer.core.domain.model.localizedName
+import com.mallorca.explorer.core.domain.model.Category
+import com.mallorca.explorer.core.domain.model.RouteType
+import com.mallorca.explorer.core.domain.model.localizedAccessWarning
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
+import com.mallorca.explorer.core.ui.component.SupConditionsCard
+import com.mallorca.explorer.core.ui.component.labelRes
 import com.mallorca.explorer.core.domain.model.attributionText
 import androidx.compose.ui.res.stringResource
 import com.mallorca.explorer.feature.itinerary.R
@@ -79,6 +91,7 @@ fun ItineraryDetailScreen(
     onPlaceClick: (String) -> Unit,
     onSaveToTrip: () -> Unit,
     onViewOnMap: () -> Unit = {},
+    onWaypointOnMap: (Int) -> Unit = {},
     modifier: Modifier = Modifier,
     viewModel: ItineraryDetailViewModel = hiltViewModel(),
 ) {
@@ -101,6 +114,7 @@ fun ItineraryDetailScreen(
                 itinerary = uiState.itinerary!!,
                 visitedPlaceIds = uiState.visitedPlaceIds,
                 supStatus = uiState.supStatus,
+                airTempC = uiState.weather?.tempC,
                 weatherIsStale = uiState.weatherIsStale,
                 weatherLoadFailed = uiState.weatherLoadFailed,
                 onStopToggle = viewModel::toggleStop,
@@ -108,10 +122,12 @@ fun ItineraryDetailScreen(
                 onPlaceClick = onPlaceClick,
                 onSaveToTrip = handleSaveToTrip,
                 onViewOnMap = onViewOnMap,
+                onWaypointOnMap = onWaypointOnMap,
                 modifier = modifier,
             )
             if (uiState.showQrWelcome) {
                 QrWelcomeSheet(
+                    routeName = uiState.itinerary?.qrEntryPoint?.sourceBeach.orEmpty(),
                     supStatus = uiState.supStatus,
                     onDismiss = viewModel::dismissQrWelcome,
                     onSaveRoute = { viewModel.dismissQrWelcome(); handleSaveToTrip() },
@@ -168,6 +184,7 @@ private fun ItineraryLoadingSkeleton() {
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 private fun QrWelcomeSheet(
+    routeName: String,
     supStatus: SUPWeatherStatus?,
     onDismiss: () -> Unit,
     onSaveRoute: () -> Unit,
@@ -178,7 +195,7 @@ private fun QrWelcomeSheet(
             verticalArrangement = Arrangement.spacedBy(12.dp),
         ) {
             Text(
-                "🏄 Ruta SUP · Cala Sant Vicenç",
+                if (routeName.isBlank()) "🏄 Ruta SUP" else "🏄 Ruta SUP · $routeName",
                 style = MaterialTheme.typography.titleLarge,
                 fontWeight = FontWeight.Bold,
             )
@@ -218,6 +235,7 @@ private fun ItineraryDetailContent(
     itinerary: Itinerary,
     visitedPlaceIds: ImmutableSet<String>,
     supStatus: SUPWeatherStatus? = null,
+    airTempC: Float? = null,
     weatherIsStale: Boolean = false,
     weatherLoadFailed: Boolean = false,
     onStopToggle: (String) -> Unit,
@@ -225,6 +243,7 @@ private fun ItineraryDetailContent(
     onPlaceClick: (String) -> Unit,
     onSaveToTrip: () -> Unit,
     onViewOnMap: () -> Unit,
+    onWaypointOnMap: (Int) -> Unit = {},
     modifier: Modifier = Modifier,
 ) {
     val photos = itinerary.galleryPhotos.ifEmpty {
@@ -238,10 +257,19 @@ private fun ItineraryDetailContent(
             Box(modifier = Modifier.fillMaxWidth().height(260.dp)) {
                 HorizontalPager(state = pagerState, modifier = Modifier.fillMaxSize()) { page ->
                     if (photos.isNotEmpty()) {
+                        // Mismo enfoque que la ficha de lugar: si la foto trae heroFocalY,
+                        // se alinea el recorte vertical a ese punto (0=arriba, 1=abajo); si no, centro.
+                        val heroFocalY = photos[page].heroFocalY
+                        val heroAlignment = if (heroFocalY != null) {
+                            BiasAlignment(horizontalBias = 0f, verticalBias = 2f * heroFocalY - 1f)
+                        } else {
+                            Alignment.Center
+                        }
                         SubcomposeAsyncImage(
                             model = photos[page].url,
                             contentDescription = itinerary.title,
                             contentScale = ContentScale.Crop,
+                            alignment = heroAlignment,
                             modifier = Modifier.fillMaxSize(),
                         ) {
                             when (painter.state) {
@@ -271,6 +299,26 @@ private fun ItineraryDetailContent(
                 ) {
                     Icon(Icons.Outlined.ArrowBack, stringResource(R.string.itinerary_back_cd), tint = Color.White)
                 }
+                // Pie de foto (es/en/de): chip arriba-centro, para no tapar el título (abajo),
+                // los puntos del carrusel (abajo-centro), la atribución (abajo-dcha) ni el sujeto.
+                photos.getOrNull(pagerState.currentPage)
+                    ?.localizedCaption(com.mallorca.explorer.core.ui.locale.LocalAppLocale.current)
+                    ?.let { caption ->
+                        Text(
+                            text = caption,
+                            color = Color.White,
+                            style = MaterialTheme.typography.labelMedium,
+                            fontWeight = FontWeight.SemiBold,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis,
+                            modifier = Modifier
+                                .align(Alignment.TopCenter)
+                                .padding(top = 14.dp, start = 56.dp, end = 56.dp)
+                                .clip(RoundedCornerShape(8.dp))
+                                .background(Color.Black.copy(alpha = 0.45f))
+                                .padding(horizontal = 10.dp, vertical = 4.dp),
+                        )
+                    }
                 // Attribution overlay (AETIB requirement)
                 photos.getOrNull(pagerState.currentPage)?.attributionText()?.let { attribution ->
                     Row(
@@ -314,12 +362,28 @@ private fun ItineraryDetailContent(
                 Column(
                     modifier = Modifier.align(Alignment.BottomStart).padding(16.dp),
                 ) {
+                    // Ruta de senderismo con trazado: una sola vista, puntos de interés y dificultad localizada.
+                    val isHikingRoute = itinerary.category == Category.HIKING && itinerary.routePolylinePoints.isNotEmpty()
                     Text(itinerary.title, style = MaterialTheme.typography.titleLarge, fontWeight = FontWeight.Bold, color = Color.White)
                     Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                        Text("⏱ ${itinerary.durationDays}d", style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f))
-                        val stopCount = if (itinerary.routeWaypoints.isNotEmpty()) itinerary.routeWaypoints.size else itinerary.places.size
-                        Text("📍 $stopCount stops", style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f))
-                        itinerary.difficulty?.let { Text("🥾 ${it.name.lowercase().replaceFirstChar { c -> c.uppercase() }}", style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f)) }
+                        Text("⏱ ${itinerary.durationLabel()}", style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f))
+                        if (isHikingRoute) {
+                            val poi = itinerary.routeWaypoints.count { it.name.isNotBlank() }
+                            Text("📍 " + stringResource(R.string.itinerary_points_of_interest, poi), style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f))
+                        } else {
+                            val stopCount = if (itinerary.routeWaypoints.isNotEmpty()) itinerary.routeWaypoints.size else itinerary.places.size
+                            Text("📍 $stopCount stops", style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f))
+                        }
+                        itinerary.difficulty?.let {
+                            // SUP: sin icono, la dificultad como palabra. Senderismo: 🥾 + dificultad
+                            // localizada (es/en/de). Resto: 🥾 + enum.
+                            val diffText = when {
+                                itinerary.category == Category.SUP -> stringResource(it.labelRes())
+                                isHikingRoute -> "🥾 " + stringResource(it.labelRes())
+                                else -> "🥾 ${it.name.lowercase().replaceFirstChar { c -> c.uppercase() }}"
+                            }
+                            Text(diffText, style = MaterialTheme.typography.bodySmall, color = Color.White.copy(0.9f))
+                        }
                     }
                 }
             }
@@ -331,17 +395,111 @@ private fun ItineraryDetailContent(
                     .verticalScroll(rememberScrollState())
                     .padding(16.dp),
             ) {
-                // ── BLOQUE 1: Alerta climática SUP (solo si es ruta QR con weather_config) ──
-                if (itinerary.isQrLanding) {
+                // ── Senderismo: aviso de acceso (zona con permiso / cerrada) ──
+                val localeLang = LocalConfiguration.current.locales[0].language
+                // Ruta de senderismo con trazado: una sola vista (sin "Día 1" ni barra de progreso).
+                val isHikingRoute = itinerary.category == Category.HIKING && itinerary.routePolylinePoints.isNotEmpty()
+                itinerary.localizedAccessWarning(localeLang)?.let { warn ->
+                    Surface(
+                        shape = RoundedCornerShape(12.dp),
+                        color = MaterialTheme.colorScheme.errorContainer,
+                        modifier = Modifier.fillMaxWidth(),
+                    ) {
+                        Row(Modifier.padding(12.dp), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Text("⚠️", style = MaterialTheme.typography.titleMedium)
+                            Column {
+                                Text(
+                                    stringResource(R.string.itinerary_access_notice),
+                                    style = MaterialTheme.typography.labelLarge,
+                                    fontWeight = FontWeight.Bold,
+                                    color = MaterialTheme.colorScheme.onErrorContainer,
+                                )
+                                Text(warn, style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onErrorContainer)
+                            }
+                        }
+                    }
+                    Spacer(Modifier.height(16.dp))
+                }
+
+                // ── Senderismo: fila de datos clave (distancia · tipo · desnivel ↑/↓) ──
+                if (itinerary.routeType != null || itinerary.ascentM != null) {
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(20.dp),
+                    ) {
+                        itinerary.totalDistanceKm?.let {
+                            RouteFactItem(stringResource(R.string.itinerary_distance), "%.1f km".format(it))
+                        }
+                        itinerary.routeType?.let {
+                            val rt = when (it) {
+                                RouteType.CIRCULAR -> R.string.itinerary_route_type_loop
+                                RouteType.LINEAR -> R.string.itinerary_route_type_oneway
+                                RouteType.OUT_AND_BACK -> R.string.itinerary_route_type_outandback
+                            }
+                            RouteFactItem(stringResource(R.string.itinerary_route_type_label), stringResource(rt))
+                        }
+                        itinerary.ascentM?.let { RouteFactItem(stringResource(R.string.itinerary_ascent), "↑ $it m") }
+                        itinerary.descentM?.let { RouteFactItem(stringResource(R.string.itinerary_descent), "↓ $it m") }
+                    }
+                    Spacer(Modifier.height(16.dp))
+                }
+
+                // ── Botón "Cómo llegar al inicio/salida" (navegación al punto de salida) ──
+                // Senderismo con trazado y rutas SUP: navega al waypoint LAUNCH (o 1er punto del
+                // trazado). Si no hay ni LAUNCH ni polilínea, no se muestra.
+                if (isHikingRoute || itinerary.isSUPRoute) {
+                    val startWp = itinerary.routeWaypoints.firstOrNull { it.role == com.mallorca.explorer.core.domain.model.WaypointRole.LAUNCH }
+                    val startLat = startWp?.lat ?: itinerary.routePolylinePoints.firstOrNull()?.latitude
+                    val startLng = startWp?.lng ?: itinerary.routePolylinePoints.firstOrNull()?.longitude
+                    if (startLat != null && startLng != null) {
+                        val ctx = LocalContext.current
+                        val startName = startWp?.let {
+                            when (localeLang) { "es" -> it.nameEs.ifBlank { it.name }; "de" -> it.nameDe.ifBlank { it.name }; else -> it.name }
+                        }
+                        val startLabel = if (itinerary.isSUPRoute) R.string.itinerary_get_to_start_sup else R.string.itinerary_get_to_start
+                        Button(
+                            onClick = { openDirections(ctx, startLat, startLng) },
+                            modifier = Modifier.fillMaxWidth(),
+                        ) {
+                            Text(stringResource(startLabel))
+                        }
+                        if (!startName.isNullOrBlank()) {
+                            Spacer(Modifier.height(4.dp))
+                            Text(
+                                "📍 $startName",
+                                style = MaterialTheme.typography.labelSmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                        Spacer(Modifier.height(16.dp))
+                    }
+                }
+
+                // ── BLOQUE 1: Estado del mar SUP (tarjeta unificada) ──
+                // Se muestra siempre que la ruta tenga weather_config (isSUPRoute), sin exigir
+                // qr_entry_point. La hoja de bienvenida QR sigue dependiendo solo de isQrLanding.
+                if (itinerary.isSUPRoute) {
+                    val cfg = itinerary.weatherConfig
                     when {
-                        supStatus != null -> SupWeatherAlertCard(
-                            supStatus = supStatus,
-                            tramuntanaNote = itinerary.weatherConfig?.tramuntanaNote ?: "",
-                            tramuntanaNoteEs = itinerary.weatherConfig?.tramuntanaNoteEs ?: "",
-                            tramuntanaNoteDe = itinerary.weatherConfig?.tramuntanaNoteDe ?: "",
-                            caveEntryMaxWaveM = itinerary.weatherConfig?.caveEntryMaxWaveM,
-                            isStale = weatherIsStale,
-                        )
+                        supStatus != null -> {
+                            val loc = LocalConfiguration.current.locales[0].language
+                            val tramuntana = cfg?.let {
+                                when (loc) {
+                                    "de" -> it.tramuntanaNoteDe.ifBlank { it.tramuntanaNoteEs.ifBlank { it.tramuntanaNote } }
+                                    "es" -> it.tramuntanaNoteEs.ifBlank { it.tramuntanaNote }
+                                    else -> it.tramuntanaNote.ifBlank { it.tramuntanaNoteEs }
+                                }
+                            }
+                            SupConditionsCard(
+                                status = supStatus,
+                                airTempC = airTempC,
+                                isStale = weatherIsStale,
+                                tramuntanaText = tramuntana,
+                                caveEntryMaxWaveM = cfg?.caveEntryMaxWaveM,
+                                windMapLat = cfg?.fetchLat,
+                                windMapLng = cfg?.fetchLng,
+                            )
+                        }
                         weatherLoadFailed -> OfflineWeatherWarning()
                     }
                     Spacer(Modifier.height(16.dp))
@@ -383,10 +541,16 @@ private fun ItineraryDetailContent(
                     Spacer(Modifier.height(16.dp))
                 }
 
+                // En rutas SUP no se muestra "paso a paso": ni barra de progreso, ni waypoints
+                // (BLOQUE 2), ni paradas por día (BLOQUE 3). Los waypoints se conservan en los
+                // datos y en el mapa (marcadores + línea). Más adelante se añadirán puntos
+                // importantes desde el KML. Senderismo y demás categorías no cambian.
+                val isSup = itinerary.category == Category.SUP
+
                 // Progress bar
                 val totalStops = itinerary.places.size
                 val visitedCount = visitedPlaceIds.size
-                if (totalStops > 0) {
+                if (totalStops > 0 && !isSup && !isHikingRoute) {
                     Row(
                         modifier = Modifier.fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically,
@@ -406,16 +570,32 @@ private fun ItineraryDetailContent(
                     Spacer(Modifier.height(16.dp))
                 }
 
-                // ── BLOQUE 2: Timeline de ruta SUP (reemplaza stops genéricos si hay waypoints) ──
-                if (itinerary.routeWaypoints.any { it.name.isNotBlank() }) {
-                    Text(stringResource(R.string.itinerary_step_by_step), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
+                // ── BLOQUE 2: Timeline de puntos (oculto en SUP; ver nota arriba) ──
+                // Senderismo: sección "Lugares en el camino" solo con los puntos que tienen
+                // descripción (los puntos sin nota —Inicio, Fuente, etc.— quedan solo como
+                // iconos en el mapa). Resto de categorías: comportamiento previo ("Ruta paso a paso").
+                val isHiking = itinerary.category == Category.HIKING
+                val timelineWaypoints = if (isHiking) {
+                    itinerary.routeWaypoints.filter {
+                        it.note.isNotBlank() || it.noteEs.isNotBlank() || it.noteDe.isNotBlank()
+                    }
+                } else {
+                    itinerary.routeWaypoints
+                }
+                if (!isSup && timelineWaypoints.any { it.name.isNotBlank() }) {
+                    val header = if (isHiking) R.string.itinerary_places_along_way else R.string.itinerary_step_by_step
+                    Text(stringResource(header), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                     Spacer(Modifier.height(10.dp))
-                    SupRouteTimeline(waypoints = itinerary.routeWaypoints)
+                    // Senderismo: al pulsar un punto se abre el mapa centrado en él.
+                    SupRouteTimeline(
+                        waypoints = timelineWaypoints,
+                        onWaypointClick = if (isHikingRoute) onWaypointOnMap else null,
+                    )
                     Spacer(Modifier.height(16.dp))
                 }
 
-                // Stops by day
-                val stopsByDay = itinerary.places.groupBy { it.dayNumber }
+                // Stops by day (oculto en SUP y en rutas de senderismo con trazado)
+                val stopsByDay = if (isSup || isHikingRoute) emptyMap<Int, List<ItineraryStop>>() else itinerary.places.groupBy { it.dayNumber }
                 stopsByDay.entries.sortedBy { it.key }.forEach { (day, stops) ->
                     Text(stringResource(R.string.itinerary_day, day), style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold)
                     Spacer(Modifier.height(8.dp))
@@ -437,6 +617,15 @@ private fun ItineraryDetailContent(
                     itinerary.commercialBlock?.let { block ->
                         Spacer(Modifier.height(8.dp))
                         SupCommercialBlock(block = block)
+                    }
+                }
+
+                // Senderismo: enlace discreto a la ficha de lugar (la ruta conserva su ficha).
+                if (isHikingRoute) {
+                    itinerary.places.firstOrNull()?.place?.id?.let { placeId ->
+                        TextButton(onClick = { onPlaceClick(placeId) }) {
+                            Text(stringResource(R.string.itinerary_view_place))
+                        }
                     }
                 }
 
@@ -501,7 +690,7 @@ private fun TimelineItem(
             ) {
                 Column(modifier = Modifier.weight(1f)) {
                     Text(
-                        "${stop.place.category.emoji} ${stop.place.name}",
+                        "${stop.place.category.emoji} ${stop.place.localizedName(com.mallorca.explorer.core.ui.locale.LocalAppLocale.current)}",
                         style = MaterialTheme.typography.bodyMedium,
                         fontWeight = FontWeight.SemiBold,
                         color = if (isVisited) MaterialTheme.colorScheme.onSurfaceVariant else MaterialTheme.colorScheme.onSurface,
@@ -526,5 +715,32 @@ private fun TimelineItem(
                 }
             }
         }
+    }
+}
+
+@Composable
+private fun RouteFactItem(label: String, value: String) {
+    Column {
+        Text(
+            label,
+            style = MaterialTheme.typography.labelSmall,
+            color = MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+        Text(
+            value,
+            style = MaterialTheme.typography.bodyMedium,
+            fontWeight = FontWeight.Bold,
+        )
+    }
+}
+
+private fun openDirections(context: android.content.Context, lat: Double, lng: Double) {
+    // Navegación turn-by-turn si hay app de mapas; si no, la web de Google Maps.
+    try {
+        context.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("google.navigation:q=$lat,$lng")))
+    } catch (e: android.content.ActivityNotFoundException) {
+        try {
+            context.startActivity(android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse("https://www.google.com/maps/dir/?api=1&destination=$lat,$lng")))
+        } catch (_: Exception) { /* sin app de mapas ni navegador */ }
     }
 }

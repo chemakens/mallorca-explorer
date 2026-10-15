@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="place_view_wave_map">Ver mapa de viento</string>
+
+    <!-- Características de playa -->
+    <string name="beach_features_title">Servicios de la playa</string>
+    <string name="beach_feature_surface">Tipo de suelo</string>
+    <string name="beach_surface_fine_sand">Arena fina</string>
+    <string name="beach_surface_sand">Arena</string>
+    <string name="beach_surface_gravel">Grava</string>
+    <string name="beach_surface_pebbles">Cantos rodados</string>
+    <string name="beach_surface_rock">Roca</string>
+    <string name="beach_surface_mixed">Mixto (arena y roca)</string>
+    <string name="beach_feature_shade">Sombra</string>
+    <string name="beach_feature_showers">Duchas</string>
+    <string name="beach_feature_food">Comida cerca</string>
+    <string name="beach_feature_lifeguard">Socorrista</string>
+    <string name="beach_feature_accessible">Accesible</string>
+    <string name="beach_feature_parking">Aparcamiento</string>
+    <string name="beach_feature_pets">Mascotas</string>
+    <string name="beach_pets_allowed">Permitidas</string>
+    <string name="beach_pets_prohibited">No permitidas</string>
+    <string name="beach_pets_seasonal">Según temporada</string>
+    <string name="beach_pets_check_rules">consulta la normativa municipal vigente</string>
+    <string name="beach_feature_yes">Sí</string>
+    <string name="beach_feature_no">No</string>
+    <string name="beach_features_no_services">Playa sin servicios: lleva agua y sombra.</string>
 </resources>

@@ -141,7 +141,9 @@ class WeatherRepositoryImpl @Inject constructor(
             "&current=wave_height,wave_period,sea_surface_temperature" +
             "&timezone=Europe%2FMadrid"
 
-    private fun Double.round4() = String.format("%.4f", this)
+    // Locale.US fuerza el punto decimal: así la clave de caché es estable en cualquier idioma
+    // del dispositivo (sin él, en es/de salían comas y la clave cambiaba por locale).
+    private fun Double.round4() = String.format(java.util.Locale.US, "%.4f", this)
 
     private fun WeatherCacheEntity.toDomain() = WeatherCondition(
         lat = lat,

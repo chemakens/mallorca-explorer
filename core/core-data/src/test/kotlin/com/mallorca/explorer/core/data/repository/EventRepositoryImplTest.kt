@@ -14,6 +14,7 @@ import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.UnconfinedTestDispatcher
 import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
+import org.junit.Before
 import org.junit.Test
 
 class EventRepositoryImplTest {
@@ -25,6 +26,14 @@ class EventRepositoryImplTest {
     private val prefsDataStore: UserPreferencesDataStore = mockk(relaxUnitFun = true)
 
     private val repo = EventRepositoryImpl(eventDao, eventRemoteDataSource, networkMonitor, prefsDataStore, dispatcher)
+
+    @Before
+    fun setUp() {
+        // trySyncFromFirestore() consulta eventDao.getCount(): si es 0 fuerza la sincronización
+        // aunque el TTL esté fresco. Devolvemos un conteo no vacío para que mande el TTL en los
+        // tests que esperan NO sincronizar; los de TTL expirado sincronizan igual.
+        coEvery { eventDao.getCount() } returns 1
+    }
 
     private val now get() = System.currentTimeMillis()
 
@@ -88,7 +97,7 @@ class EventRepositoryImplTest {
             awaitComplete()
         }
 
-        coVerify(exactly = 1) { eventDao.replaceAll(remote) }
+        coVerify(exactly = 1) { eventDao.upsertAll(remote) }
         coVerify(exactly = 1) { prefsDataStore.setEventsLastSyncedEpoch(any()) }
     }
 
@@ -107,7 +116,7 @@ class EventRepositoryImplTest {
             awaitComplete()
         }
 
-        coVerify(exactly = 0) { eventDao.replaceAll(any()) }
+        coVerify(exactly = 0) { eventDao.upsertAll(any()) }
         coVerify(exactly = 0) { prefsDataStore.setEventsLastSyncedEpoch(any()) }
     }
 
@@ -126,7 +135,7 @@ class EventRepositoryImplTest {
             awaitComplete()
         }
 
-        coVerify(exactly = 0) { eventDao.replaceAll(any()) }
+        coVerify(exactly = 0) { eventDao.upsertAll(any()) }
         coVerify(exactly = 0) { prefsDataStore.setEventsLastSyncedEpoch(any()) }
     }
 

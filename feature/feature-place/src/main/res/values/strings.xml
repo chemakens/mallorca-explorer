@@ -3,6 +3,7 @@
     <string name="place_address_label">Address</string>
     <string name="place_get_directions">Get Directions</string>
     <string name="place_add_to_trip">+ Add to Trip</string>
+    <string name="place_view_route">View route</string>
     <string name="place_buy_ticket">Buy Ticket</string>
     <string name="place_hidden_gem_unlocked">Hidden Gem unlocked</string>
     <string name="place_hidden_gem_protection_message">🌿 This is a secret place. Please don\'t share the exact location online — help keep it hidden for future explorers.</string>
@@ -46,4 +47,28 @@
     <string name="place_share_prefix">Check out this place in Mallorca! 🌴\n</string>
     <string name="place_share_open_in_app">Open in app:</string>
     <string name="place_view_wave_map">View Wave Map</string>
+
+    <!-- Características de playa -->
+    <string name="beach_features_title">Beach services</string>
+    <string name="beach_feature_surface">Surface</string>
+    <string name="beach_surface_fine_sand">Fine sand</string>
+    <string name="beach_surface_sand">Sand</string>
+    <string name="beach_surface_gravel">Gravel</string>
+    <string name="beach_surface_pebbles">Pebbles</string>
+    <string name="beach_surface_rock">Rock</string>
+    <string name="beach_surface_mixed">Mixed (sand and rock)</string>
+    <string name="beach_feature_shade">Shade</string>
+    <string name="beach_feature_showers">Showers</string>
+    <string name="beach_feature_food">Food nearby</string>
+    <string name="beach_feature_lifeguard">Lifeguard</string>
+    <string name="beach_feature_accessible">Accessible</string>
+    <string name="beach_feature_parking">Parking</string>
+    <string name="beach_feature_pets">Pets</string>
+    <string name="beach_pets_allowed">Allowed</string>
+    <string name="beach_pets_prohibited">Not allowed</string>
+    <string name="beach_pets_seasonal">Seasonal</string>
+    <string name="beach_pets_check_rules">check current municipal rules</string>
+    <string name="beach_feature_yes">Yes</string>
+    <string name="beach_feature_no">No</string>
+    <string name="beach_features_no_services">Beach with no services: bring water and shade.</string>
 </resources>

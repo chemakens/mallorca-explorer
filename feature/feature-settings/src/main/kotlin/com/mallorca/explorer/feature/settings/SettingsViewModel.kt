@@ -77,11 +77,20 @@ class SettingsViewModel @Inject constructor(
     }
 
     fun changeLanguage(localeCode: String) {
+        // 1) Fuente única para los textos de DATOS (cambia al instante en toda la app).
         localeSource.setLocale(localeCode)
+        // 2) Persistencia.
         viewModelScope.launch { prefsDataStore.setLocale(localeCode) }
+        // 3) Idioma por app para los RECURSOS (strings.xml):
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            // Android 13+: el sistema recrea la actividad con el idioma elegido.
             val localeManager = context.getSystemService(android.app.LocaleManager::class.java)
             localeManager.applicationLocales = LocaleList.forLanguageTags(localeCode)
+        } else {
+            // Android <13: mirror síncrono que lee MainActivity.attachBaseContext en cold start.
+            // (mismo fichero/clave que app/LocaleOverride; no hay módulo común con Context).
+            context.getSharedPreferences("app_locale_prefs", Context.MODE_PRIVATE)
+                .edit().putString("app_locale", localeCode).apply()
         }
     }
 

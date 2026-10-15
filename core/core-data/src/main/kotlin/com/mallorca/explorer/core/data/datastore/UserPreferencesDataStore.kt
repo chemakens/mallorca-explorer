@@ -42,7 +42,13 @@ class UserPreferencesDataStore @Inject constructor(
     val seedVersion: Flow<Int> = context.dataStore.data.map { it[Keys.SEED_VERSION] ?: 0 }
     val lastSyncEpoch: Flow<Long> = context.dataStore.data.map { it[Keys.LAST_SYNC_EPOCH] ?: 0L }
     val eventsLastSyncedEpoch: Flow<Long> = context.dataStore.data.map { it[Keys.EVENTS_LAST_SYNCED_EPOCH] ?: 0L }
-    val selectedLocale: Flow<String> = context.dataStore.data.map { it[Keys.LOCALE] ?: Locale.getDefault().language }
+    // Si el usuario eligió idioma en Ajustes, se devuelve tal cual (es/en/de). Si no, idioma del
+    // sistema normalizado a es/en/de (cualquier otro → inglés), requisito del proyecto.
+    val selectedLocale: Flow<String> = context.dataStore.data.map {
+        it[Keys.LOCALE] ?: when (Locale.getDefault().language.lowercase()) {
+            "es" -> "es"; "de" -> "de"; else -> "en"
+        }
+    }
     val selectedTheme: Flow<String> = context.dataStore.data.map { it[Keys.THEME] ?: "system" }
     val devMode: Flow<Boolean> = context.dataStore.data.map { it[Keys.DEV_MODE] ?: false }
     val explorerCodeAccepted: Flow<Boolean> = context.dataStore.data.map { it[Keys.EXPLORER_CODE_ACCEPTED] ?: false }

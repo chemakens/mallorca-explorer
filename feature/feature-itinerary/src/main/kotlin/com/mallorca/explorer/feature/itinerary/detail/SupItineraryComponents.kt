@@ -7,6 +7,7 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -44,6 +45,7 @@ import com.mallorca.explorer.core.domain.model.RouteWaypoint
 import com.mallorca.explorer.core.domain.model.SUPTrafficLight
 import com.mallorca.explorer.core.domain.model.SUPWeatherStatus
 import com.mallorca.explorer.core.domain.model.WaypointRole
+import com.mallorca.explorer.core.domain.model.WaypointType
 
 // ─── BLOQUE 1: ALERTA CLIMÁTICA ──────────────────────────────────────────────
 
@@ -80,180 +82,7 @@ fun OfflineWeatherWarning(modifier: Modifier = Modifier) {
     }
 }
 
-@Composable
-fun SupWeatherAlertCard(
-    supStatus: SUPWeatherStatus,
-    tramuntanaNote: String = "",
-    tramuntanaNoteEs: String = "",
-    tramuntanaNoteDe: String = "",
-    caveEntryMaxWaveM: Float? = null,
-    isStale: Boolean = false,
-    modifier: Modifier = Modifier,
-) {
-    val locale = LocalConfiguration.current.locales[0].language
-    val tramuntanaText = when (locale) {
-        "de" -> tramuntanaNoteDe.ifBlank { tramuntanaNoteEs.ifBlank { tramuntanaNote } }
-        "es" -> tramuntanaNoteEs.ifBlank { tramuntanaNote }
-        else -> tramuntanaNote.ifBlank { tramuntanaNoteEs }
-    }
-    val (bgColor, borderColor, textColor) = when (supStatus.trafficLight) {
-        SUPTrafficLight.GREEN  -> Triple(Color(0xFFE8F5E9), Color(0xFF4CAF50), Color(0xFF1B5E20))
-        SUPTrafficLight.YELLOW -> Triple(Color(0xFFFFF8E1), Color(0xFFFFB300), Color(0xFFE65100))
-        SUPTrafficLight.RED    -> Triple(Color(0xFFFFEBEE), Color(0xFFF44336), Color(0xFFB71C1C))
-    }
 
-    AnimatedVisibility(visible = true, enter = fadeIn() + expandVertically()) {
-        Card(
-            modifier = modifier
-                .fillMaxWidth()
-                .border(1.5.dp, borderColor, RoundedCornerShape(16.dp)),
-            shape = RoundedCornerShape(16.dp),
-            colors = CardDefaults.cardColors(containerColor = bgColor),
-            elevation = CardDefaults.cardElevation(0.dp),
-        ) {
-            Column(modifier = Modifier.padding(16.dp), verticalArrangement = Arrangement.spacedBy(10.dp)) {
-
-                // ── Traffic light banner ──
-                Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(10.dp)) {
-                    Text(supStatus.trafficLight.emoji, style = MaterialTheme.typography.headlineSmall)
-                    Column {
-                        Text(
-                            when (supStatus.trafficLight) {
-                                SUPTrafficLight.GREEN -> stringResource(R.string.sup_label_green)
-                                SUPTrafficLight.YELLOW -> stringResource(R.string.sup_label_yellow)
-                                SUPTrafficLight.RED -> stringResource(R.string.sup_label_red)
-                            },
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Bold,
-                            color = textColor,
-                        )
-                        Text(
-                            when (supStatus.trafficLight) {
-                                SUPTrafficLight.GREEN -> stringResource(R.string.sup_detail_green)
-                                SUPTrafficLight.YELLOW -> stringResource(R.string.sup_detail_yellow)
-                                SUPTrafficLight.RED -> stringResource(R.string.sup_detail_red)
-                            },
-                            style = MaterialTheme.typography.bodySmall,
-                            color = textColor.copy(alpha = 0.8f),
-                        )
-                    }
-                }
-
-                // ── Stale data warning ──
-                if (isStale) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(Color(0xFF616161).copy(alpha = 0.12f))
-                            .padding(horizontal = 10.dp, vertical = 6.dp),
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Text("⏱", style = MaterialTheme.typography.bodySmall)
-                        Text(
-                            stringResource(R.string.sup_offline_data_warning),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = Color(0xFF757575),
-                            fontWeight = FontWeight.Medium,
-                        )
-                    }
-                }
-
-                // ── Wind metrics row ──
-                Row(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    WindChip("💨 ${String.format("%.1f", supStatus.windKnots)} kt", textColor, bgColor, borderColor)
-                    WindChip("↗ ${windCardinal(supStatus.windDirectionDeg, LocalContext.current.resources.configuration.locales.get(0).language)}", textColor, bgColor, borderColor)
-                    supStatus.waveHeightM?.let { WindChip("🌊 ${String.format("%.1f", it)} m", textColor, bgColor, borderColor) }
-                    supStatus.seaTempC?.let { WindChip("🌡 ${it.toInt()}°C", textColor, bgColor, borderColor) }
-                }
-
-                // ── Gust warning ──
-                if (supStatus.hasGustWarning) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(Color(0xFFFFF3E0))
-                            .padding(horizontal = 10.dp, vertical = 6.dp),
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Text("⚡", style = MaterialTheme.typography.bodySmall)
-                        Text(
-                            stringResource(R.string.sup_gust_warning_format, supStatus.windGustKnots!!, ((supStatus.windGustKnots!! / supStatus.windKnots - 1) * 100).toInt()),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = Color(0xFFE65100),
-                            fontWeight = FontWeight.Medium,
-                        )
-                    }
-                }
-
-                // ── Cave entry status (if route has a conditional cave) ──
-                caveEntryMaxWaveM?.let { maxWave ->
-                    val caveOk = (supStatus.waveHeightM ?: 0f) <= maxWave &&
-                        supStatus.windKnots <= (supStatus.windKnots.coerceAtMost(8f))
-                    val caveColor = if (caveOk) Color(0xFF1B5E20) else Color(0xFFB71C1C)
-                    val caveBg = if (caveOk) Color(0xFFE8F5E9) else Color(0xFFFFEBEE)
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(caveBg)
-                            .padding(horizontal = 10.dp, vertical = 6.dp),
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalAlignment = Alignment.CenterVertically,
-                    ) {
-                        Text(if (caveOk) "🟢" else "🔴", style = MaterialTheme.typography.bodySmall)
-                        Text(
-                            if (caveOk) stringResource(R.string.sup_cave_ok) 
-                            else stringResource(R.string.sup_cave_warning, maxWave),
-                            style = MaterialTheme.typography.bodySmall,
-                            color = caveColor,
-                            fontWeight = FontWeight.Medium,
-                        )
-                    }
-                }
-
-                // ── Tramuntana warning ──
-                if (tramuntanaText.isNotBlank()) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .clip(RoundedCornerShape(8.dp))
-                            .background(Color(0xFFFFF3E0))
-                            .padding(horizontal = 10.dp, vertical = 6.dp),
-                        horizontalArrangement = Arrangement.spacedBy(6.dp),
-                        verticalAlignment = Alignment.Top,
-                    ) {
-                        Text("⚠", style = MaterialTheme.typography.bodySmall)
-                        Text(
-                            "Tramontana: $tramuntanaText",
-                            style = MaterialTheme.typography.bodySmall,
-                            color = Color(0xFFE65100),
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
-
-@Composable
-private fun WindChip(label: String, textColor: Color, bgColor: Color, borderColor: Color) {
-    Box(
-        modifier = Modifier
-            .clip(RoundedCornerShape(8.dp))
-            .background(bgColor)
-            .border(1.dp, borderColor.copy(alpha = 0.5f), RoundedCornerShape(8.dp))
-            .padding(horizontal = 8.dp, vertical = 4.dp),
-    ) {
-        Text(label, style = MaterialTheme.typography.labelMedium, color = textColor, fontWeight = FontWeight.Medium)
-    }
-}
 
 // ─── BLOQUE 2: TIMELINE DE RUTA (5 pasos) ────────────────────────────────────
 
@@ -261,6 +90,7 @@ private fun WindChip(label: String, textColor: Color, bgColor: Color, borderColo
 fun SupRouteTimeline(
     waypoints: List<RouteWaypoint>,
     modifier: Modifier = Modifier,
+    onWaypointClick: ((Int) -> Unit)? = null,
 ) {
     Column(modifier = modifier, verticalArrangement = Arrangement.spacedBy(0.dp)) {
         waypoints.sortedBy { it.order }.forEachIndexed { idx, wp ->
@@ -268,6 +98,7 @@ fun SupRouteTimeline(
                 waypoint = wp,
                 stepNumber = idx + 1,
                 isLast = idx == waypoints.lastIndex,
+                onClick = onWaypointClick?.let { { it(wp.order) } },
             )
         }
     }
@@ -279,13 +110,35 @@ private fun SupWaypointRow(
     stepNumber: Int,
     isLast: Boolean,
     modifier: Modifier = Modifier,
+    onClick: (() -> Unit)? = null,
 ) {
     val locale = LocalConfiguration.current.locales[0].language
-    val (dotColor, dotEmoji) = when (waypoint.role) {
-        WaypointRole.LAUNCH             -> Color(0xFF2196F3) to "🏄"
-        WaypointRole.WAYPOINT           -> Color(0xFF1976D2) to "📍"
-        WaypointRole.WAYPOINT_CONDITIONAL -> Color(0xFFFF9800) to "🔵"
-        WaypointRole.FINISH             -> Color(0xFF4CAF50) to "🏁"
+    val dotColor = when (waypoint.role) {
+        WaypointRole.LAUNCH             -> Color(0xFF2196F3)
+        WaypointRole.WAYPOINT           -> Color(0xFF1976D2)
+        WaypointRole.WAYPOINT_CONDITIONAL -> Color(0xFFFF9800)
+        WaypointRole.FINISH             -> Color(0xFF4CAF50)
+    }
+    // Icono por TIPO de punto (senderismo); salida/llegada mandan sobre el tipo.
+    val dotEmoji = when (waypoint.type) {
+        WaypointType.START     -> "🚩"
+        WaypointType.END       -> "🏁"
+        WaypointType.PARKING   -> "🅿️"
+        WaypointType.WATER     -> "💧"
+        WaypointType.VIEWPOINT -> "🔭"
+        WaypointType.HERITAGE  -> "🏛️"
+        WaypointType.CAVE      -> "🕳️"
+        WaypointType.BEACH     -> "🏖️"
+        WaypointType.TECHNICAL -> "🧗"
+        WaypointType.WARNING   -> "⚠️"
+        WaypointType.BUS       -> "🚌"
+        WaypointType.PHOTO     -> "📸"
+        WaypointType.SUMMIT    -> "⛰️"
+        WaypointType.OTHER     -> when (waypoint.role) {
+            WaypointRole.LAUNCH -> "🚩"
+            WaypointRole.FINISH -> "🏁"
+            else -> "📍"
+        }
     }
 
     // Select note based on locale
@@ -327,7 +180,10 @@ private fun SupWaypointRow(
 
         // ── Step card ──
         Card(
-            modifier = Modifier.fillMaxWidth().padding(bottom = if (isLast) 0.dp else 8.dp),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = if (isLast) 0.dp else 8.dp)
+                .then(if (onClick != null) Modifier.clickable { onClick() } else Modifier),
             shape = RoundedCornerShape(12.dp),
             colors = CardDefaults.cardColors(
                 containerColor = if (waypoint.conditional) Color(0xFFFFF8E1)
@@ -489,11 +345,3 @@ fun SupCommercialBlock(
     }
 }
 
-private fun windCardinal(deg: Int, locale: String): String {
-    val i = ((deg + 22.5) / 45).toInt() % 8
-    return when (locale) {
-        "es" -> listOf("N", "NE", "E", "SE", "S", "SO", "O", "NO")[i]
-        "de" -> listOf("N", "NO", "O", "SO", "S", "SW", "W", "NW")[i]
-        else -> listOf("N", "NE", "E", "SE", "S", "SW", "W", "NW")[i]
-    }
-}

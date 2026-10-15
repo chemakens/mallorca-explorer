@@ -14,4 +14,16 @@
     <string name="map_go_to_place">Go to place</string>
     <string name="map_route_stop_singular_banner">1 stop · route plotted</string>
     <string name="map_route_stops_banner">%1$d stops · route plotted</string>
+    <string name="map_route_stop_singular_no_line">1 stop</string>
+    <string name="map_route_stops_no_line">%1$d stops</string>
+    <string name="map_route_open_in_maps">Open in maps</string>
+    <string name="map_route_advisory_sup">Indicative route: wind, currents and boat traffic may change the course.</string>
+    <string name="map_route_advisory_hiking">Indicative route: check trail conditions and signage.</string>
+    <!-- Route variants legend -->
+    <string name="map_variants_title">Trail options</string>
+    <string name="map_variant_diff_easy">Easy</string>
+    <string name="map_variant_diff_moderate">Moderate</string>
+    <string name="map_variant_diff_hard">Hard</string>
+    <string name="map_variants_expand_cd">Show trail options</string>
+    <string name="map_variants_collapse_cd">Hide trail options</string>
 </resources>

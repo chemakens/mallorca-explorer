@@ -26,6 +26,10 @@ import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+// El dibujo de la línea SUP ya NO depende del nº de puntos: se controla con la marca
+// explícita Itinerary.routeTrackReviewed (seed: route_track_reviewed), puesta a true en los
+// trazados importados de KML revisados a mano. Ver MapViewModel.drawLine más abajo.
+
 internal fun Category.routeColor(): String = when (this) {
     Category.BEACH -> "#0277BD"
     Category.HIKING -> "#2E7D32"
@@ -35,6 +39,18 @@ internal fun Category.routeColor(): String = when (this) {
     Category.VIEWPOINT -> "#C62828"
     Category.SUP -> "#0288D1"
 }
+
+// Paleta para las variantes de una misma ruta: colores bien diferenciados entre sí y legibles
+// sobre el mapa. Cada variante usa su `color` propio si lo trae; si no, uno de esta paleta por
+// orden. El texto de la leyenda acompaña siempre al color (no se distingue solo por color).
+internal val VARIANT_COLOR_PALETTE: List<String> = listOf(
+    "#1565C0", // azul
+    "#EF6C00", // naranja
+    "#2E7D32", // verde
+    "#6A1B9A", // morado
+    "#00838F", // teal
+    "#C62828", // rojo
+)
 
 @HiltViewModel
 class MapViewModel @Inject constructor(
@@ -51,6 +67,7 @@ class MapViewModel @Inject constructor(
     private val selectedGemId = MutableStateFlow<String?>(null)
     private val activeItineraryId = MutableStateFlow<String?>(null)
     private val previewItineraryId = MutableStateFlow<String?>(null)
+    private val selectedWaypointOrder = MutableStateFlow<Int?>(null)
     private val _searchQuery = MutableStateFlow("")
 
     @OptIn(ExperimentalCoroutinesApi::class)
@@ -89,7 +106,14 @@ class MapViewModel @Inject constructor(
             // When a category is active, the sheet shows ALL places in that category
             // (including hidden gems) so gems like Caló de Moro appear under Beach.
             // When no category is active, the sheet is not shown so normalPlaces suffices.
-            val categorySheetPlaces = if (cat != null) placeList else normalPlaces
+            // Senderismo: ocultar de la lista las fichas que YA tienen ruta (itinerario HIKING
+            // con trazado); su primera parada es la ficha. La ruta aparece como tarjeta aparte.
+            val hikingPlacesWithRoute = allItin
+                .filter { it.category == Category.HIKING && it.routePolylinePoints.isNotEmpty() }
+                .mapNotNull { it.places.firstOrNull()?.place?.id }
+                .toSet()
+            val categorySheetPlaces = (if (cat != null) placeList else normalPlaces)
+                .filterNot { it.id in hikingPlacesWithRoute }
 
             val allItineraryRoutes = allItin.map { itin ->
                 ItineraryRoute(
@@ -118,9 +142,16 @@ class MapViewModel @Inject constructor(
                             .sortedBy { it.order }
                             .map { wp ->
                                 RouteWaypointMarker(
-                                    name = wp.nameEs.ifBlank { wp.name },
+                                    name = wp.name.ifBlank { wp.nameEs },
                                     location = com.mallorca.explorer.core.domain.model.LatLng(wp.lat, wp.lng),
-                                    order = wp.order
+                                    order = wp.order,
+                                    role = wp.role,
+                                    type = wp.type,
+                                    nameEs = wp.nameEs,
+                                    nameDe = wp.nameDe,
+                                    note = wp.note,
+                                    noteEs = wp.noteEs,
+                                    noteDe = wp.noteDe,
                                 )
                             }
                             .toImmutableList()
@@ -130,7 +161,33 @@ class MapViewModel @Inject constructor(
                     },
                     coverPhotoUrl = itin.coverPhoto.url,
                     category = itin.category,
+                    routeType = itin.routeType,
                     durationDays = itin.durationDays,
+                    // SUP: solo dibuja línea si el trazado procede de un KML revisado a mano
+                    // (route_track_reviewed=true); las rutas SUP sin KML se quedan sin línea
+                    // (solo marcadores). Resto de categorías: línea siempre.
+                    drawLine = if (itin.category == Category.SUP) {
+                        itin.routeTrackReviewed && itin.routePolylinePoints.size >= 2
+                    } else {
+                        true
+                    },
+                    // Variantes (>=2): cada una con su color (el suyo propio o uno de la paleta
+                    // por orden). Una sola variante o ninguna → lista vacía → se dibuja la línea
+                    // única de siempre (coords de arriba).
+                    variants = if (itin.hasVariants) {
+                        itin.routeVariants.mapIndexed { idx, v ->
+                            RouteVariantUi(
+                                id = v.id,
+                                color = v.color ?: VARIANT_COLOR_PALETTE[idx % VARIANT_COLOR_PALETTE.size],
+                                coords = v.polylinePoints.toImmutableList(),
+                                distanceKm = v.distanceKm,
+                                difficulty = v.difficulty,
+                                durationHoursText = v.durationHoursText,
+                            )
+                        }.toImmutableList()
+                    } else {
+                        persistentListOf()
+                    },
                 )
             }.toImmutableList()
 
@@ -149,13 +206,15 @@ class MapViewModel @Inject constructor(
         selectedGemId,
         localeSource.locale,
         hiddenGemRepository.getUnlockedGemIds(),
-    ) { state, gemId, locale, unlockedIds ->
+        selectedWaypointOrder,
+    ) { state, gemId, locale, unlockedIds, wpOrder ->
         state.copy(
             selectedGem = gemId?.let { id -> state.hiddenGems.find { it.id == id } },
             locale = locale,
             categorySheetPlaces = state.categorySheetPlaces
                 .filter { "hidden_gem" !in it.subCategories || it.id in unlockedIds }
                 .toImmutableList(),
+            selectedWaypointOrder = wpOrder,
         )
     }
         .stateIn(
@@ -167,13 +226,31 @@ class MapViewModel @Inject constructor(
     fun setLocale(locale: String) = localeSource.setLocale(locale)
     fun onSearchQueryChanged(query: String) { _searchQuery.value = query }
     fun clearSearch() { _searchQuery.value = "" }
-    fun setActiveItinerary(itineraryId: String?) { activeItineraryId.value = itineraryId }
+    fun setActiveItinerary(itineraryId: String?) {
+        activeItineraryId.value = itineraryId
+        selectedWaypointOrder.value = null
+    }
+
+    // Senderismo: punto del mapa pulsado → muestra/oculta su burbuja.
+    fun onWaypointTapped(order: Int) {
+        selectedWaypointOrder.value = if (selectedWaypointOrder.value == order) null else order
+    }
+    fun selectWaypoint(order: Int?) { selectedWaypointOrder.value = order }
+    fun onWaypointDismissed() { selectedWaypointOrder.value = null }
     fun onItineraryMarkerTapped(id: String) { previewItineraryId.value = id }
     fun onPreviewDismissed() { previewItineraryId.value = null }
 
     fun onCategorySelected(category: Category?) {
         activeCategory.value = if (activeCategory.value == category) null else category
         selectedPlaceId.value = null
+        selectedWaypointOrder.value = null
+    }
+
+    // Activa una categoría SIN alternar (para abrir el mapa ya filtrado desde Explorar).
+    fun openCategory(category: Category) {
+        activeCategory.value = category
+        selectedPlaceId.value = null
+        selectedWaypointOrder.value = null
     }
 
     fun onMarkerTapped(placeId: String) {
@@ -191,6 +268,7 @@ class MapViewModel @Inject constructor(
     fun onBottomSheetDismissed() {
         selectedPlaceId.value = null
         selectedGemId.value = null
+        selectedWaypointOrder.value = null
     }
 
     fun onFavoriteToggled(placeId: String) {

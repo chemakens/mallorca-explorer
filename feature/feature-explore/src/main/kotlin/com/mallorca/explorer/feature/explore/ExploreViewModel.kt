@@ -62,7 +62,7 @@ data class ExploreUiState(
     val totalPlaceCount: Int = 0,
     val featuredItineraries: ImmutableList<Itinerary> = persistentListOf(),
     val popularPlaces: ImmutableList<Place> = persistentListOf(),
-    val supPlaces: ImmutableList<Place> = persistentListOf(),
+    val supRoutes: ImmutableList<Itinerary> = persistentListOf(),
     val recentPlaces: ImmutableList<Place> = persistentListOf(),
     val searchResults: ImmutableList<Place> = persistentListOf(),
     val searchQuery: String = "",
@@ -147,9 +147,10 @@ class ExploreViewModel @Inject constructor(
         val allPlaces = places
             .filter { "hidden_gem" !in it.subCategories || it.id in unlockedGemIds }
             .map { p -> p.copy(isVisited = p.id in visitedSet) }
-        val supPlaces = allPlaces.filter { it.subCategories.contains("sup_launch") }
+        // Los lugares SUP ya no se muestran: cada zona SUP se representa por su ruta (itinerario).
+        val supRoutes = itineraries.filter { it.category == Category.SUP }
 
-        var popularPlaces = allPlaces.filter { !it.subCategories.contains("sup_launch") }
+        var popularPlaces = allPlaces.filter { it.category != Category.SUP }
         minRating?.let { min -> popularPlaces = popularPlaces.filter { (it.rating ?: 0f) >= min } }
 
         popularPlaces = if (nearMe && userLoc != null) {
@@ -219,9 +220,12 @@ class ExploreViewModel @Inject constructor(
         ExploreUiState(
             isLoading = false,
             totalPlaceCount = allPlaces.size,
-            featuredItineraries = itineraries.take(6).toImmutableList(),
+            // Se excluyen los itinerarios de senderismo ocultos (solapados) de los destacados.
+            featuredItineraries = itineraries
+                .filterNot { it.id in com.mallorca.explorer.core.domain.model.HIDDEN_HIKING_ITINERARY_IDS }
+                .take(6).toImmutableList(),
             popularPlaces = popularPlaces.toImmutableList(),
-            supPlaces = supPlaces.toImmutableList(),
+            supRoutes = supRoutes.toImmutableList(),
             recentPlaces = recentPlaces.toImmutableList(),
             searchResults = results
                 .filter { "hidden_gem" !in it.subCategories || it.id in unlockedGemIds }

@@ -30,6 +30,19 @@
     <string name="itinerary_save_for_later">Route für später speichern</string>
     <string name="itinerary_not_now">Jetzt nicht</string>
     <string name="itinerary_step_by_step">Schritt-für-Schritt-Route</string>
+    <string name="itinerary_places_along_way">Orte am Weg</string>
+    <string name="itinerary_access_notice">Zugangshinweis</string>
+    <string name="itinerary_route_type_loop">Rundweg</string>
+    <string name="itinerary_route_type_oneway">Einfache Strecke</string>
+    <string name="itinerary_route_type_outandback">Hin- und Rückweg</string>
+    <string name="itinerary_ascent">Aufstieg</string>
+    <string name="itinerary_descent">Abstieg</string>
+    <string name="itinerary_distance">Distanz</string>
+    <string name="itinerary_route_type_label">Typ</string>
+    <string name="itinerary_get_to_start">Anfahrt zum Startpunkt</string>
+    <string name="itinerary_get_to_start_sup">Anfahrt zum Startpunkt</string>
+    <string name="itinerary_view_place">Ort-Details ansehen</string>
+    <string name="itinerary_points_of_interest">%d Sehenswürdigkeiten</string>
     <string name="itinerary_day">Tag %d</string>
     <string name="itinerary_view_on_map">Auf der Karte ansehen</string>
     <string name="itinerary_save_to_trips">In Reisen speichern</string>
@@ -85,6 +98,7 @@
     <string name="place_address_label">Adresse</string>
     <string name="place_get_directions">Wegbeschreibung</string>
     <string name="place_add_to_trip">+ Zur Reise hinzufügen</string>
+    <string name="place_view_route">Route ansehen</string>
     <string name="place_buy_ticket">Ticket kaufen</string>
     <string name="place_hidden_gem_unlocked">Hidden Gem entsperrt</string>
     <string name="place_hidden_gem_protection_message">🌿 Dies ist ein geheimer Ort. Bitte teile den genauen Standort nicht online — hilf uns, ihn für zukünftige Entdecker verborgen zu halten.</string>
@@ -207,6 +221,17 @@
     <string name="map_go_to_place">Zum Ort gehen</string>
     <string name="map_route_stop_singular_banner">1 Stopp · Route eingezeichnet</string>
     <string name="map_route_stops_banner">%1$d Stopps · Route eingezeichnet</string>
+    <string name="map_route_stop_singular_no_line">1 Stopp</string>
+    <string name="map_route_stops_no_line">%1$d Stopps</string>
+    <string name="map_route_open_in_maps">In Karten öffnen</string>
+    <string name="map_route_advisory_sup">Richtwert-Route: Wind, Strömungen und Bootsverkehr können den Verlauf ändern.</string>
+    <string name="map_route_advisory_hiking">Richtwert-Route: Prüfe Wegzustand und Beschilderung.</string>
+    <string name="map_variants_title">Streckenvarianten</string>
+    <string name="map_variant_diff_easy">Leicht</string>
+    <string name="map_variant_diff_moderate">Mittel</string>
+    <string name="map_variant_diff_hard">Schwer</string>
+    <string name="map_variants_expand_cd">Streckenvarianten anzeigen</string>
+    <string name="map_variants_collapse_cd">Streckenvarianten ausblenden</string>
 
     <!-- feature-itinerary (new) -->
     <string name="itinerary_save_offline_body">Speichere diese Route, um sie offline zu nutzen oder morgen zurückzukehren.</string>
@@ -235,4 +260,27 @@
     <string name="onboarding_btn_start">Los geht\'s!</string>
     <string name="onboarding_btn_next">Weiter</string>
     <string name="onboarding_btn_skip">Überspringen</string>
+    <!-- Tarjeta unificada de estado del mar SUP (SupConditionsCard) -->
+    <string name="supc_label_green">Spiegelglattes Meer — Ideal</string>
+    <string name="supc_label_yellow">Vorsicht</string>
+    <string name="supc_label_red">Nicht empfohlen</string>
+    <string name="supc_detail_green">Perfekte Bedingungen für alle Levels</string>
+    <string name="supc_detail_yellow">Mäßige Erfahrung. In Ufernähe bleiben</string>
+    <string name="supc_detail_red">Gefährliche Bedingungen heute</string>
+    <string name="supc_metric_wind">Wind</string>
+    <string name="supc_metric_wave">Wellen</string>
+    <string name="supc_metric_sea">Meer</string>
+    <string name="supc_metric_air">Luft</string>
+    <string name="supc_wind_onshore">Auflandig</string>
+    <string name="supc_wind_offshore">Ablandig</string>
+    <string name="supc_wind_cross">Seitlich</string>
+    <string name="supc_gust_warning">Böen %1$.1f kt (+%2$d%%)</string>
+    <string name="supc_offshore_warning">Ablandiger Wind: treibt dich aufs Meer hinaus. Nicht empfohlen.</string>
+    <string name="supc_cave_ok">Blaue Höhle: Eintrittsbedingungen OK</string>
+    <string name="supc_cave_warning">Blaue Höhle: NICHT betreten heute — Wellengang &gt; %1$sm</string>
+    <string name="supc_stale">Offline-Daten — evtl. älter als 30 Min</string>
+    <string name="supc_wind_map">Windkarte ansehen</string>
+    <string name="route_difficulty_easy">Schwierigkeit: Leicht</string>
+    <string name="route_difficulty_moderate">Schwierigkeit: Mittel</string>
+    <string name="route_difficulty_hard">Schwierigkeit: Schwer</string>
 </resources>

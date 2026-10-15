@@ -14,10 +14,21 @@ import javax.inject.Singleton
  */
 @Singleton
 class LocaleSource @Inject constructor() {
-    private val _locale = MutableStateFlow(Locale.getDefault().language)
+    // Valor inicial: idioma del sistema normalizado a es/en/de (si no, inglés). El valor real
+    // (la elección persistida del usuario) lo fija MallorcaApp al arrancar vía setLocale().
+    private val _locale = MutableStateFlow(normalizeDefault(Locale.getDefault().language))
     val locale: StateFlow<String> = _locale.asStateFlow()
 
     fun setLocale(locale: String) {
         if (_locale.value != locale) _locale.value = locale
+    }
+
+    companion object {
+        /** Normaliza el idioma POR DEFECTO a es/en/de; cualquier otro cae en inglés. */
+        fun normalizeDefault(code: String?): String = when (code?.lowercase()?.take(2)) {
+            "es" -> "es"
+            "de" -> "de"
+            else -> "en"
+        }
     }
 }

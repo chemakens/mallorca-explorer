@@ -53,7 +53,11 @@ class ItineraryListViewModel @Inject constructor(
         itinerariesFlow, placesFlow, hiddenGemRepository.getUnlockedGemIds(),
     ) { itineraries, places, unlockedGemIds ->
         ItineraryListUiState(
-            itineraries = itineraries.toImmutableList(),
+            // Senderismo: se ocultan los itinerarios antiguos solapados (datos intactos, siguen
+            // accesibles por id). El resto de categorías no se filtra.
+            itineraries = itineraries
+                .filterNot { it.category == Category.HIKING && it.id in com.mallorca.explorer.core.domain.model.HIDDEN_HIKING_ITINERARY_IDS }
+                .toImmutableList(),
             places = places
                 .filter { "hidden_gem" !in it.subCategories || it.id in unlockedGemIds }
                 .toImmutableList(),

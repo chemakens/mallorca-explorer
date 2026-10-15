@@ -4,6 +4,7 @@ import app.cash.turbine.test
 import com.mallorca.explorer.core.data.database.dao.WeatherDao
 import com.mallorca.explorer.core.data.database.entity.WeatherCacheEntity
 import com.mallorca.explorer.core.data.network.OpenMeteoApiService
+import com.mallorca.explorer.core.data.network.WindyApiService
 import com.mallorca.explorer.core.data.network.dto.ForecastCurrentDto
 import com.mallorca.explorer.core.data.network.dto.ForecastResponseDto
 import com.mallorca.explorer.core.data.network.dto.MarineCurrentDto
@@ -16,15 +17,25 @@ import kotlinx.coroutines.test.runTest
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Assert.assertNull
+import org.junit.Before
 import org.junit.Test
 
 class WeatherRepositoryImplTest {
 
     private val dispatcher = UnconfinedTestDispatcher()
     private val weatherDao: WeatherDao = mockk(relaxUnitFun = true)
+    private val windyApi: WindyApiService = mockk()
     private val openMeteoApi: OpenMeteoApiService = mockk()
 
-    private val repo = WeatherRepositoryImpl(weatherDao, openMeteoApi, dispatcher)
+    private val repo = WeatherRepositoryImpl(weatherDao, windyApi, openMeteoApi, dispatcher)
+
+    @Before
+    fun setUp() {
+        // Windy se intenta primero para el viento; en estas pruebas lo hacemos fallar para que
+        // el viento provenga de Open-Meteo (así valen las aserciones de windKmh de abajo). El
+        // fallo de Windy se captura dentro del repo y no interrumpe el forecast.
+        coEvery { windyApi.getPointForecast(any()) } throws RuntimeException("windy unavailable")
+    }
 
     private val lat = 39.7000
     private val lng = 2.9000

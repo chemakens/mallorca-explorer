@@ -6,15 +6,21 @@ import com.mallorca.explorer.core.domain.model.WeatherCondition
 import javax.inject.Inject
 
 class GetSUPWeatherStatus @Inject constructor() {
-    operator fun invoke(place: Place, weather: WeatherCondition): SUPWeatherStatus? {
-        val beachFacingDeg = place.subCategories
-            .firstOrNull { it.startsWith("facing:") }
+    /**
+     * [place] puede ser null (itinerario sin paradas): en ese caso, o si la parada no trae
+     * `facing:`, se usa [fallbackFacingDeg] (p. ej. weather_config.beach_facing_deg).
+     * Solo cambia DE DÓNDE sale la orientación; el cálculo del semáforo no se toca.
+     */
+    operator fun invoke(place: Place?, weather: WeatherCondition, fallbackFacingDeg: Int? = null): SUPWeatherStatus? {
+        val beachFacingDeg = place?.subCategories
+            ?.firstOrNull { it.startsWith("facing:") }
             ?.removePrefix("facing:")
             ?.toIntOrNull()
+            ?: fallbackFacingDeg
             ?: return null
 
         return SUPWeatherStatus(
-            placeId = place.id,
+            placeId = place?.id ?: "",
             windKnots = weather.windKnots,
             windKmh = weather.windKmh,
             windDirectionDeg = weather.windDirectionDeg,

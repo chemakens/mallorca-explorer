@@ -1,4 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="place_view_wave_map">Windkarte anzeigen</string>
+
+    <!-- Strandausstattung -->
+    <string name="beach_features_title">Strandausstattung</string>
+    <string name="beach_feature_surface">Untergrund</string>
+    <string name="beach_surface_fine_sand">Feiner Sand</string>
+    <string name="beach_surface_sand">Sand</string>
+    <string name="beach_surface_gravel">Kies</string>
+    <string name="beach_surface_pebbles">Kiesel</string>
+    <string name="beach_surface_rock">Fels</string>
+    <string name="beach_surface_mixed">Gemischt (Sand und Fels)</string>
+    <string name="beach_feature_shade">Schatten</string>
+    <string name="beach_feature_showers">Duschen</string>
+    <string name="beach_feature_food">Essen in der Nähe</string>
+    <string name="beach_feature_lifeguard">Rettungsschwimmer</string>
+    <string name="beach_feature_accessible">Barrierefrei</string>
+    <string name="beach_feature_parking">Parkplatz</string>
+    <string name="beach_feature_pets">Haustiere</string>
+    <string name="beach_pets_allowed">Erlaubt</string>
+    <string name="beach_pets_prohibited">Nicht erlaubt</string>
+    <string name="beach_pets_seasonal">Saisonabhängig</string>
+    <string name="beach_pets_check_rules">geltende kommunale Vorschriften beachten</string>
+    <string name="beach_feature_yes">Ja</string>
+    <string name="beach_feature_no">Nein</string>
+    <string name="beach_features_no_services">Strand ohne Einrichtungen: Wasser und Schatten mitbringen.</string>
 </resources>

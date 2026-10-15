@@ -30,6 +30,19 @@
     <string name="itinerary_save_for_later">Guardar ruta para más tarde</string>
     <string name="itinerary_not_now">Ahora no</string>
     <string name="itinerary_step_by_step">Ruta paso a paso</string>
+    <string name="itinerary_places_along_way">Lugares en el camino</string>
+    <string name="itinerary_access_notice">Aviso de acceso</string>
+    <string name="itinerary_route_type_loop">Circular</string>
+    <string name="itinerary_route_type_oneway">Solo ida</string>
+    <string name="itinerary_route_type_outandback">Ida y vuelta</string>
+    <string name="itinerary_ascent">Desnivel +</string>
+    <string name="itinerary_descent">Desnivel −</string>
+    <string name="itinerary_distance">Distancia</string>
+    <string name="itinerary_route_type_label">Tipo</string>
+    <string name="itinerary_get_to_start">Cómo llegar al inicio</string>
+    <string name="itinerary_get_to_start_sup">Cómo llegar a la salida</string>
+    <string name="itinerary_view_place">Ver ficha del lugar</string>
+    <string name="itinerary_points_of_interest">%d puntos de interés</string>
     <string name="itinerary_day">Día %d</string>
     <string name="itinerary_view_on_map">Ver en el mapa</string>
     <string name="itinerary_save_to_trips">Guardar en viajes</string>
@@ -85,6 +98,7 @@
     <string name="place_address_label">Dirección</string>
     <string name="place_get_directions">Cómo llegar</string>
     <string name="place_add_to_trip">+ Añadir al viaje</string>
+    <string name="place_view_route">Ver ruta</string>
     <string name="place_buy_ticket">Comprar Entrada</string>
     <string name="place_hidden_gem_unlocked">Hidden Gem desbloqueado</string>
     <string name="place_hidden_gem_protection_message">🌿 Este es un lugar secreto. Por favor, no compartas la ubicación exacta online — ayúdanos a mantenerlo escondido para futuros exploradores.</string>
@@ -207,6 +221,17 @@
     <string name="map_go_to_place">Ir al lugar</string>
     <string name="map_route_stop_singular_banner">1 parada · ruta trazada</string>
     <string name="map_route_stops_banner">%1$d paradas · ruta trazada</string>
+    <string name="map_route_stop_singular_no_line">1 parada</string>
+    <string name="map_route_stops_no_line">%1$d paradas</string>
+    <string name="map_route_open_in_maps">Abrir en mapas</string>
+    <string name="map_route_advisory_sup">Ruta orientativa: el viento, las corrientes y el tráfico marítimo pueden cambiar el recorrido.</string>
+    <string name="map_route_advisory_hiking">Ruta orientativa: comprueba el estado del sendero y la señalización.</string>
+    <string name="map_variants_title">Opciones de trazado</string>
+    <string name="map_variant_diff_easy">Fácil</string>
+    <string name="map_variant_diff_moderate">Moderada</string>
+    <string name="map_variant_diff_hard">Difícil</string>
+    <string name="map_variants_expand_cd">Mostrar opciones de trazado</string>
+    <string name="map_variants_collapse_cd">Ocultar opciones de trazado</string>
 
     <!-- feature-itinerary (new) -->
     <string name="itinerary_save_offline_body">Guarda esta ruta para consultarla sin conexión o volver mañana.</string>
@@ -238,4 +263,27 @@
 
     <string name="notification_gem_title">💎 ¡Nuevas gemas ocultas!</string>
     <string name="notification_gem_body">Hemos añadido nuevos lugares secretos en Mallorca. Toca para descubrirlos.</string>
+    <!-- Tarjeta unificada de estado del mar SUP (SupConditionsCard) -->
+    <string name="supc_label_green">Mar Espejo — Ideal</string>
+    <string name="supc_label_yellow">Precaución</string>
+    <string name="supc_label_red">No Recomendado</string>
+    <string name="supc_detail_green">Condiciones perfectas para todos los niveles</string>
+    <string name="supc_detail_yellow">Experiencia moderada. No alejarse de la costa</string>
+    <string name="supc_detail_red">Condiciones peligrosas hoy</string>
+    <string name="supc_metric_wind">Viento</string>
+    <string name="supc_metric_wave">Oleaje</string>
+    <string name="supc_metric_sea">Mar</string>
+    <string name="supc_metric_air">Aire</string>
+    <string name="supc_wind_onshore">Hacia tierra</string>
+    <string name="supc_wind_offshore">Hacia el mar</string>
+    <string name="supc_wind_cross">Lateral</string>
+    <string name="supc_gust_warning">Rachas %1$.1f kt (+%2$d%%)</string>
+    <string name="supc_offshore_warning">Viento de tierra: te empuja mar adentro. No recomendado.</string>
+    <string name="supc_cave_ok">Cueva Azul: condiciones de entrada OK</string>
+    <string name="supc_cave_warning">Cueva Azul: NO entrar hoy — oleaje &gt; %1$sm</string>
+    <string name="supc_stale">Datos sin conexión — pueden tener más de 30 min</string>
+    <string name="supc_wind_map">Ver mapa de viento</string>
+    <string name="route_difficulty_easy">Dificultad: Fácil</string>
+    <string name="route_difficulty_moderate">Dificultad: Moderada</string>
+    <string name="route_difficulty_hard">Dificultad: Difícil</string>
 </resources>

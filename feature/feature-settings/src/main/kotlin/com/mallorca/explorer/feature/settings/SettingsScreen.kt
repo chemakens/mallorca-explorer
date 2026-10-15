@@ -167,7 +167,14 @@ fun SettingsScreen(
                     LanguageCard(
                         language = lang,
                         isSelected = currentLocale == lang.code,
-                        onClick = { viewModel.changeLanguage(lang.code) },
+                        onClick = {
+                            viewModel.changeLanguage(lang.code)
+                            // Android <13: recrea la actividad para aplicar los recursos (strings.xml)
+                            // en el idioma elegido. En 13+ lo hace el sistema (LocaleManager).
+                            if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.TIRAMISU) {
+                                (context as? android.app.Activity)?.recreate()
+                            }
+                        },
                     )
                 }
             }

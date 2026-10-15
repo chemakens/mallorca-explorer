@@ -20,6 +20,8 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.ArrowBack
 import androidx.compose.material.icons.outlined.WorkspacePremium
 import com.mallorca.explorer.core.ui.component.PlaceCard
+import com.mallorca.explorer.core.ui.component.SupRouteCard
+import com.mallorca.explorer.core.domain.model.Category
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -44,6 +46,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import coil.compose.AsyncImage
 import com.mallorca.explorer.core.domain.model.Itinerary
+import com.mallorca.explorer.core.domain.model.durationLabel
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -86,7 +89,13 @@ fun ItineraryListScreen(
                     }
                 }
                 items(uiState.itineraries, key = { it.id }) { itin ->
-                    ItineraryListItem(itinerary = itin, onClick = { onItineraryClick(itin.id) })
+                    // Las rutas SUP usan la tarjeta pequeña con foto (como los antiguos lugares);
+                    // el resto de categorías mantiene la tarjeta hero.
+                    if (itin.category == Category.SUP) {
+                        SupRouteCard(itinerary = itin, onClick = { onItineraryClick(itin.id) })
+                    } else {
+                        ItineraryListItem(itinerary = itin, onClick = { onItineraryClick(itin.id) })
+                    }
                 }
             }
 
@@ -200,7 +209,7 @@ private fun ItineraryListItem(
                 )
                 Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     Text(
-                        "⏱ ${itinerary.durationDays}d",
+                        "⏱ ${itinerary.durationLabel()}",
                         style = MaterialTheme.typography.labelSmall,
                         color = Color.White.copy(alpha = 0.9f),
                     )

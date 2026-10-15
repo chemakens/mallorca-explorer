@@ -28,20 +28,16 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
 import com.mallorca.explorer.core.domain.model.Place
+import com.mallorca.explorer.core.domain.model.localizedName
+import com.mallorca.explorer.core.ui.locale.LocalAppLocale
 @Composable
 fun PlaceCard(
     place: Place,
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
-    locale: String = "en",
+    locale: String = LocalAppLocale.current,
 ) {
-    val displayName = when (locale) {
-        "es" -> place.nameEs.ifEmpty { place.name }
-        "de" -> place.nameDe.ifEmpty { place.name }
-        "ru" -> place.nameRu.ifEmpty { place.name }
-        "zh" -> place.nameZh.ifEmpty { place.name }
-        else -> place.name
-    }
+    val displayName = place.localizedName(locale)
 
     Card(
         modifier = modifier

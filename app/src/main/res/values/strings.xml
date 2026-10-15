@@ -204,6 +204,11 @@
     <string name="map_go_to_place">Go to place</string>
     <string name="map_route_stop_singular_banner">1 stop · route plotted</string>
     <string name="map_route_stops_banner">%1$d stops · route plotted</string>
+    <string name="map_route_stop_singular_no_line">1 stop</string>
+    <string name="map_route_stops_no_line">%1$d stops</string>
+    <string name="map_route_open_in_maps">Open in maps</string>
+    <string name="map_route_advisory_sup">Indicative route: wind, currents and boat traffic may change the course.</string>
+    <string name="map_route_advisory_hiking">Indicative route: check trail conditions and signage.</string>
 
     <!-- feature-itinerary (new) -->
     <string name="itinerary_save_offline_body">Save this route to consult it offline or come back tomorrow.</string>
@@ -235,4 +240,24 @@
 
     <string name="notification_gem_title">💎 New hidden gems!</string>
     <string name="notification_gem_body">We\'ve added new secret spots in Mallorca. Tap to discover them.</string>
+    <!-- Tarjeta unificada de estado del mar SUP (SupConditionsCard) -->
+    <string name="supc_label_green">Flat Sea — Ideal</string>
+    <string name="supc_label_yellow">Caution</string>
+    <string name="supc_label_red">Not Recommended</string>
+    <string name="supc_detail_green">Perfect conditions for all levels</string>
+    <string name="supc_detail_yellow">Moderate experience. Stay close to shore</string>
+    <string name="supc_detail_red">Dangerous conditions today</string>
+    <string name="supc_metric_wind">Wind</string>
+    <string name="supc_metric_wave">Swell</string>
+    <string name="supc_metric_sea">Sea</string>
+    <string name="supc_metric_air">Air</string>
+    <string name="supc_wind_onshore">Onshore</string>
+    <string name="supc_wind_offshore">Offshore</string>
+    <string name="supc_wind_cross">Cross-shore</string>
+    <string name="supc_gust_warning">Gusts %1$.1f kt (+%2$d%%)</string>
+    <string name="supc_offshore_warning">Offshore wind: it pushes you out to sea. Not recommended.</string>
+    <string name="supc_cave_ok">Blue Cave: entry conditions OK</string>
+    <string name="supc_cave_warning">Blue Cave: DO NOT enter today — swell &gt; %1$sm</string>
+    <string name="supc_stale">Offline data — may be more than 30 min old</string>
+    <string name="supc_wind_map">View wind map</string>
 </resources>

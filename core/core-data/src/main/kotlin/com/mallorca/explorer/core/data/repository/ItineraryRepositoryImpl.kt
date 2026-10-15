@@ -12,7 +12,6 @@ import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapLatest
-import kotlinx.coroutines.flow.flowOf
 import timber.log.Timber
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -26,39 +25,48 @@ class ItineraryRepositoryImpl @Inject constructor(
     private val localeSource: LocaleSource,
 ) : ItineraryRepository {
 
+    // Los lugares y TODAS las paradas se cargan UNA sola vez y se cruzan en memoria. Antes se
+    // suscribía placeDao.getAllPlaces() una vez por itinerario (N×371 lugares en RAM a la vez),
+    // lo que agotaba el heap al crecer el nº de itinerarios (cierre OOM al abrir Explorar).
     override fun getAllItineraries(): Flow<List<Itinerary>> =
         localeSource.locale.flatMapLatest { locale ->
-            itineraryDao.getAllItineraries().flatMapLatest { itinEntities ->
-                if (itinEntities.isEmpty()) return@flatMapLatest flowOf(emptyList())
-                combine(itinEntities.map { itin ->
-                    combine(
-                        itineraryDao.getStopsForItinerary(itin.id),
-                        placeDao.getAllPlaces(),
-                    ) { stops, places ->
-                        val placeMap = places.associateBy { it.id }
-                        itin.toDomain(stops.mapNotNull { stop ->
-                            placeMap[stop.placeId]?.let { stop to it.toDomain() }
-                        }, locale)
-                    }
-                }) { it.toList() }
+            combine(
+                itineraryDao.getAllItineraries(),
+                itineraryDao.getAllStops(),
+                placeDao.getAllPlaces(),
+            ) { itinEntities, allStops, places ->
+                if (itinEntities.isEmpty()) return@combine emptyList()
+                val placeMap = places.associateBy { it.id }.mapValues { it.value.toDomain() }
+                val stopsByItin = allStops.groupBy { it.itineraryId }
+                itinEntities.map { itin ->
+                    itin.toDomain(
+                        (stopsByItin[itin.id] ?: emptyList()).mapNotNull { stop ->
+                            placeMap[stop.placeId]?.let { stop to it }
+                        },
+                        locale,
+                    )
+                }
             }
         }
 
     override fun getItinerariesByCategory(category: Category): Flow<List<Itinerary>> =
         localeSource.locale.flatMapLatest { locale ->
-            itineraryDao.getItinerariesByCategory(category.name).flatMapLatest { itinEntities ->
-                if (itinEntities.isEmpty()) return@flatMapLatest flowOf(emptyList())
-                combine(itinEntities.map { itin ->
-                    combine(
-                        itineraryDao.getStopsForItinerary(itin.id),
-                        placeDao.getAllPlaces(),
-                    ) { stops, places ->
-                        val placeMap = places.associateBy { it.id }
-                        itin.toDomain(stops.mapNotNull { stop ->
-                            placeMap[stop.placeId]?.let { stop to it.toDomain() }
-                        }, locale)
-                    }
-                }) { it.toList() }
+            combine(
+                itineraryDao.getItinerariesByCategory(category.name),
+                itineraryDao.getAllStops(),
+                placeDao.getAllPlaces(),
+            ) { itinEntities, allStops, places ->
+                if (itinEntities.isEmpty()) return@combine emptyList()
+                val placeMap = places.associateBy { it.id }.mapValues { it.value.toDomain() }
+                val stopsByItin = allStops.groupBy { it.itineraryId }
+                itinEntities.map { itin ->
+                    itin.toDomain(
+                        (stopsByItin[itin.id] ?: emptyList()).mapNotNull { stop ->
+                            placeMap[stop.placeId]?.let { stop to it }
+                        },
+                        locale,
+                    )
+                }
             }
         }
 

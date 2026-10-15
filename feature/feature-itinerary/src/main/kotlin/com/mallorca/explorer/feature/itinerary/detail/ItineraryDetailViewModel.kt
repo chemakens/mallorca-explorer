@@ -66,8 +66,10 @@ class ItineraryDetailViewModel @Inject constructor(
     ) { itinerary, visited, weather, qrDismissed ->
         val now = System.currentTimeMillis()
         val supPlace = itinerary?.places?.firstOrNull { "sup_launch" in it.place.subCategories }?.place
-        val supStatus = if (itinerary?.isSUPRoute == true && supPlace != null && weather != null)
-            getSUPWeatherStatus(supPlace, weather) else null
+        // Orientación de la costa: del lugar de salida si lo hay; si no (itinerario sin paradas,
+        // p. ej. Malgrats), de weather_config.beach_facing_deg. No cambia el cálculo del semáforo.
+        val supStatus = if (itinerary?.isSUPRoute == true && weather != null)
+            getSUPWeatherStatus(supPlace, weather, fallbackFacingDeg = itinerary.weatherConfig?.beachFacingDeg) else null
         ItineraryDetailUiState(
             itinerary = itinerary,
             visitedPlaceIds = visited.toImmutableSet(),

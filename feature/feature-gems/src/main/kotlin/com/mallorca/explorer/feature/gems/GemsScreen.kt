@@ -48,6 +48,7 @@ import coil.compose.SubcomposeAsyncImageContent
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
 import com.mallorca.explorer.core.domain.model.Place
+import com.mallorca.explorer.core.domain.model.localizedName
 
 private val GemGold = Color(0xFFF9A825)
 private val GemDark = Color(0xFF1A0030)
@@ -209,7 +210,7 @@ private fun UnlockedGemCard(
                 verticalArrangement = Arrangement.spacedBy(4.dp),
             ) {
                 Text(
-                    place.name,
+                    place.localizedName(com.mallorca.explorer.core.ui.locale.LocalAppLocale.current),
                     style = MaterialTheme.typography.titleSmall,
                     fontWeight = FontWeight.Bold,
                     maxLines = 1,

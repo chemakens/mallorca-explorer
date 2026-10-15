@@ -33,6 +33,9 @@ data class Place(
     val website: String? = null,
     val phoneNumber: String? = null,
     val ticketUrl: String? = null,
+    val markerType: MarkerType? = null,
+    // Características opcionales de playa (solo se usan en la ficha de playas). Null = sin datos.
+    val beachFeatures: BeachFeatures? = null,
     val isOfflineCached: Boolean = false,
     val isFavorite: Boolean = false,
     val isVisited: Boolean = false,
@@ -57,3 +60,12 @@ data class OpeningPeriod(
 )
 
 enum class PriceLevel { FREE, BUDGET, MID, EXPENSIVE, PREMIUM }
+
+enum class MarkerType {
+    CHURCH,
+    MONUMENT,
+    ARCHAEOLOGY,
+    CASTLE,
+    LIGHTHOUSE,
+    MUSEUM
+}

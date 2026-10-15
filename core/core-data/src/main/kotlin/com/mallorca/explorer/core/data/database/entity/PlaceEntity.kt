@@ -38,4 +38,7 @@ data class PlaceEntity(
     val lastUpdatedEpoch: Long,
     val ticketUrl: String? = null,
     val gemAccessJson: String = "[]",
+    val markerType: String? = null,
+    // DB v19: características opcionales de playa, serializadas en JSON. Null = sin datos.
+    val beachFeaturesJson: String? = null,
 )

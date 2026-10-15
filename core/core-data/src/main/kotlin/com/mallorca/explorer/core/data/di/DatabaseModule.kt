@@ -18,7 +18,7 @@ object DatabaseModule {
     @Singleton
     fun provideDatabase(@ApplicationContext context: Context): MallorcaDatabase =
         Room.databaseBuilder(context, MallorcaDatabase::class.java, "mallorca_explorer.db")
-            .addMigrations(MallorcaDatabase.MIGRATION_8_9, MallorcaDatabase.MIGRATION_9_10, MallorcaDatabase.MIGRATION_10_11, MallorcaDatabase.MIGRATION_11_12, MallorcaDatabase.MIGRATION_12_13, MallorcaDatabase.MIGRATION_13_14, MallorcaDatabase.MIGRATION_14_15, MallorcaDatabase.MIGRATION_15_16, MallorcaDatabase.MIGRATION_16_17)
+            .addMigrations(MallorcaDatabase.MIGRATION_8_9, MallorcaDatabase.MIGRATION_9_10, MallorcaDatabase.MIGRATION_10_11, MallorcaDatabase.MIGRATION_11_12, MallorcaDatabase.MIGRATION_12_13, MallorcaDatabase.MIGRATION_13_14, MallorcaDatabase.MIGRATION_14_15, MallorcaDatabase.MIGRATION_15_16, MallorcaDatabase.MIGRATION_16_17, MallorcaDatabase.MIGRATION_17_18, MallorcaDatabase.MIGRATION_18_19, MallorcaDatabase.MIGRATION_19_20, MallorcaDatabase.MIGRATION_20_21)
             .fallbackToDestructiveMigration()
             .build()
 

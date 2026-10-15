@@ -22,6 +22,11 @@ interface ItineraryDao {
     @Query("SELECT * FROM itinerary_stops WHERE itineraryId = :itineraryId ORDER BY `order` ASC")
     fun getStopsForItinerary(itineraryId: String): Flow<List<ItineraryStopEntity>>
 
+    // Todas las paradas de todos los itinerarios en una sola consulta (se agrupan por
+    // itineraryId en memoria). Evita suscribir getAllPlaces()/stops una vez por itinerario.
+    @Query("SELECT * FROM itinerary_stops ORDER BY `order` ASC")
+    fun getAllStops(): Flow<List<ItineraryStopEntity>>
+
     @Upsert
     suspend fun upsertAll(itineraries: List<ItineraryEntity>)
 

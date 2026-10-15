@@ -44,15 +44,25 @@ class SearchPlacesTest {
     }
 
     @Test
-    fun `whitespace-only query is trimmed to empty string`() = runTest {
-        every { placeRepository.searchPlaces("") } returns flowOf(emptyList())
-
+    fun `whitespace-only query returns empty without hitting the repository`() = runTest {
+        // Una consulta en blanco (o de <2 caracteres) se corta en el caso de uso: devuelve
+        // lista vacía y NO consulta el repositorio (mismo contrato que la UI, que exige ≥2).
         searchPlaces("   ").test {
             assertEquals(emptyList<Place>(), awaitItem())
             awaitComplete()
         }
 
-        verify(exactly = 1) { placeRepository.searchPlaces("") }
+        verify(exactly = 0) { placeRepository.searchPlaces(any()) }
+    }
+
+    @Test
+    fun `single-character query returns empty without hitting the repository`() = runTest {
+        searchPlaces("c").test {
+            assertEquals(emptyList<Place>(), awaitItem())
+            awaitComplete()
+        }
+
+        verify(exactly = 0) { placeRepository.searchPlaces(any()) }
     }
 
     @Test
